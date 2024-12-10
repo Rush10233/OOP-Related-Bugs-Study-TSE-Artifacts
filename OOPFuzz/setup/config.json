@@ -1,0 +1,7 @@
+{
+    "gcc_path"  :"/home/bjtucs/Desktop/Ming-18811237867/PROJECT/Compiler_Testing/COMPILER/bin/g++-13.2.0",
+    "clang_path":"/home/bjtucs/Desktop/Ming-18811237867/PROJECT/Compiler_Testing/COMPILER/bin/clang++-17.0.1",
+    "mutator_number":4,
+    "active_mutators":[],
+    "use_all_mutators":false
+}
