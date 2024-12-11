@@ -3,7 +3,7 @@ This is the project repository of our TSE research paper: A Comprehensive Study 
 The project is composed of the following 3 folders that record our empirical study result, proof-of-concept application, and bug-finding experiment result respectively.
 
 ### Project Layout Overview
-
+***
 Here are the main useful files:
 ```
 |-- OOP-Related-Bugs-Study
@@ -21,7 +21,7 @@ Here are the main useful files:
 ```
 
 ### About Bug Type Labeling
-
+***
 As shown in the paper, to conduct the bug-type taxonomy, we have manually analyzed 788 bug reports with 100 for pilot analysis and 688 for classification. More specifically, for the remaining 688 reports, the labeling process involves 6 rounds successively, each followed by a meeting between the first 2 authors to discuss the process and solve conflicts.  As a supplement to our paper, we are going to show a detailed statistics form for each of the 6 rounds of labeling below:
 
 |**Round**|**Analyzed Reports**|**Conflicts**|**Phased Kappa**|
