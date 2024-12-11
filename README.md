@@ -1,4 +1,4 @@
-# OOP-Related-Bugs-Study-ICSE25-Artifacts
+# OOP-Related-Bugs-Study-TSE-Artifacts
 This is the project repository of our TSE research paper: A Comprehensive Study of OOP-Related Bugs in C++ Compilers.
 The project is composed of the following 3 folders that record our empirical study result, proof-of-concept application, and bug-finding experiment result respectively.
 
@@ -15,9 +15,9 @@ Here are the main useful files:
         |-- README.md  ## The instructions for building and running the application
     |-- bug triggering inputs/    
         |-- code/    ## The input test code triggering bugs reported via OOPFuzz
-        |-- record.xls    ## The detailed information summary of input tests 
+        |-- record.xlsx    ## The detailed information summary of input tests 
     |-- dataset
-        |-- dataset_TSE.xls    ## The analysis result summary of selected bug reports
+        |-- dataset_TSE.xlsx    ## The analysis result summary of selected bug reports
 ```
 
 ### About Bug Type Labeling
