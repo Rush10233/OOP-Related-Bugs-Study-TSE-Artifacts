@@ -1,0 +1,116 @@
+if (TREE_CODE (result) == CALL_EXPR
+    	  && really_overloaded_fn (orig_fn))
+    	{
+
+    	    {
+    	      /* The non-dependent result of build_new_method_call.  */
+
+    	}
+    
+          result = build_call_vec (TREE_TYPE (result), orig_fn, orig_args);
+
+extern int is_overloaded_fn			(tree) ATTRIBUTE_PURE;
+    extern bool really_overloaded_fn		(tree) ATTRIBUTE_PURE;
+    extern tree dependent_name			(tree);
+
+    extern tree maybe_get_fns			(tree) ATTRIBUTE_PURE;
+    extern tree get_fns				(tree) ATTRIBUTE_PURE;
+    extern tree get_first_fn			(tree) ATTRIBUTE_PURE;
+
+        case CALL_EXPR:
+          {
+    	tree fn = CALL_EXPR_FN (arg);
+
+    	  {
+    	    if (TREE_CODE (fn) == TEMPLATE_ID_EXPR)
+    	      val = iterative_hash_template_arg (TREE_OPERAND (fn, 1), val);
+
+      return NULL_TREE;
+    }
+    
+
+    /* Returns true iff X is an expression for an overloaded function
+       whose type cannot be known without performing overload
+       resolution.  */
+
+      return !TREE_PUBLIC (decl);
+    }
+    
+
+    
+    static bool
+    called_fns_equal (tree t1, tree t2)
+    {
+      /* Core 1321: dependent names are equivalent even if the overload sets
+         are different.  But do compare explicit template arguments.  */
+
+      if (name1 || name2)
+        {
+          tree targs1 = NULL_TREE, targs2 = NULL_TREE;
+
+    	if (KOENIG_LOOKUP_P (t1) != KOENIG_LOOKUP_P (t2))
+    	  return false;
+    
+
+    	  return false;
+    
+    	call_expr_arg_iterator iter1, iter2;
+
+if (TREE_CODE (result) == CALL_EXPR
+    	  && really_overloaded_fn (orig_fn))
+    	{
+
+    	    {
+    	      /* The non-dependent result of build_new_method_call.  */
+
+    	}
+    
+          result = build_call_vec (TREE_TYPE (result), orig_fn, orig_args);
+
+extern int is_overloaded_fn			(tree) ATTRIBUTE_PURE;
+    extern bool really_overloaded_fn		(tree) ATTRIBUTE_PURE;
+    extern tree dependent_name			(tree);
+
+    extern tree maybe_get_fns			(tree) ATTRIBUTE_PURE;
+    extern tree get_fns				(tree) ATTRIBUTE_PURE;
+    extern tree get_first_fn			(tree) ATTRIBUTE_PURE;
+
+        case CALL_EXPR:
+          {
+    	tree fn = CALL_EXPR_FN (arg);
+
+    	  {
+    	    if (TREE_CODE (fn) == TEMPLATE_ID_EXPR)
+    	      val = iterative_hash_template_arg (TREE_OPERAND (fn, 1), val);
+
+      return NULL_TREE;
+    }
+    
+
+    /* Returns true iff X is an expression for an overloaded function
+       whose type cannot be known without performing overload
+       resolution.  */
+
+      return !TREE_PUBLIC (decl);
+    }
+    
+
+    
+    static bool
+    called_fns_equal (tree t1, tree t2)
+    {
+      /* Core 1321: dependent names are equivalent even if the overload sets
+         are different.  But do compare explicit template arguments.  */
+
+      if (name1 || name2)
+        {
+          tree targs1 = NULL_TREE, targs2 = NULL_TREE;
+
+    	if (KOENIG_LOOKUP_P (t1) != KOENIG_LOOKUP_P (t2))
+    	  return false;
+    
+
+    	  return false;
+    
+    	call_expr_arg_iterator iter1, iter2;
+

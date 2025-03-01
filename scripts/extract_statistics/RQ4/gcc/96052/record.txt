@@ -1,0 +1,10 @@
+Commit:	8614106
+./gcc/cp/class.c	3722,3722
+./gcc/cp/class.c	4389,4389
+./gcc/cp/class.c	4394,4397
+./gcc/cp/class.c	4417,4417
+Commit:	a6645a8
+./gcc/cp/class.c	3721,3721
+./gcc/cp/class.c	4388,4388
+./gcc/cp/class.c	4393,4396
+./gcc/cp/class.c	4416,4416

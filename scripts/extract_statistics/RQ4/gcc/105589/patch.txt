@@ -1,0 +1,8 @@
+if (processing_template_decl)
+    	/* The AGGR_INIT_EXPR tweaking below breaks in templates.  */
+    	return build_min (CAST_EXPR, type, NULL_TREE);
+
+if (processing_template_decl)
+    	/* The AGGR_INIT_EXPR tweaking below breaks in templates.  */
+    	return build_min (CAST_EXPR, type, NULL_TREE);
+

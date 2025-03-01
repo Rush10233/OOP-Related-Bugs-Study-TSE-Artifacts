@@ -1,0 +1,4 @@
+// statement. We still do, unless the return type is void, because
+
+          bool OK = getLangOpts().CPlusPlus1y && Dcl->getReturnType()->isVoidType();
+

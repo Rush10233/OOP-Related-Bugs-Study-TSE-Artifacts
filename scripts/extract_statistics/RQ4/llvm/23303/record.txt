@@ -1,0 +1,5 @@
+Commit:	c6daf73
+./clang/lib/Sema/SemaTemplateInstantiate.cpp	978,978
+./clang/lib/Sema/SemaTemplateInstantiate.cpp	1125,1125
+./clang/lib/Sema/SemaTemplateInstantiate.cpp	1127,1132
+./clang/lib/Sema/SemaTemplateInstantiate.cpp	1146,1146

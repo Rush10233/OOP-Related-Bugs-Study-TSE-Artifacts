@@ -1,0 +1,73 @@
+C ObjC C++ ObjC++ Var(warn_cast_qual) Warning
+    Warn about casts which discard qualifiers.
+    
+
+    Wcatch-value
+    C++ ObjC++ Warning Alias(Wcatch-value=, 1, 0)
+    Warn about catch handlers of non-reference type.
+
+    	 recalculate the second conversion sequence.  */
+          for (conversion *t = conv; t; t = next_conversion (t))
+    	if (t->kind == ck_user
+
+    	  {
+    	    tree ftype = TREE_TYPE (TREE_TYPE (t->cand->fn));
+    	    /* A prvalue of non-class type is cv-unqualified.  */
+
+    the type cast is changing the pointer to member type.
+    This warning is enabled by @option{-Wextra}.
+    
+
+    @opindex Wwrite-strings
+    @opindex Wno-write-strings
+    @item -Wwrite-strings
+
+return conv;
+    }
+    
+
+    
+    bool
+    reference_related_p (tree t1, tree t2)
+
+        }
+    
+      bool copy_list_init = false;
+
+      if (expr && BRACE_ENCLOSED_INITIALIZER_P (expr))
+        {
+          maybe_warn_cpp0x (CPP0X_INITIALIZER_LISTS);
+
+    	      from = etype;
+    	      goto skip;
+    	    }
+
+    	}
+          /* Otherwise, if T is a reference type, a prvalue temporary of the type
+    	 referenced by T is copy-list-initialized, and the reference is bound
+
+         (possibly cv-qualified) object to the (possibly cv-qualified) same
+         object type (or a reference to it), to a (possibly cv-qualified) base
+         class of that type (or a reference to it).... */
+
+        {
+
+          /* [dcl.init.ref]
+    
+    	 If the initializer expression
+
+    
+    	the reference is bound to the lvalue result of the conversion
+    	in the second case.  */
+
+    							complain);
+          if (cand)
+    	{
+
+if (!new_second)
+    	      return NULL;
+    	    conv = merge_conversion_sequences (t, new_second);
+    	    return conv;
+    	  }
+        }
+

@@ -1,0 +1,3 @@
+Commit:	0b009e8
+./clang/lib/Sema/SemaTemplateInstantiateDecl.cpp	4993,4994
+./clang/lib/Sema/TreeTransform.h	8974,8974

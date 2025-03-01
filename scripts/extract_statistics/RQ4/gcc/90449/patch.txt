@@ -1,0 +1,41 @@
+Winaccessible-base
+    C++ ObjC++ Var(warn_inaccessible_base) Init(1) Warning
+    Warn when a base is inaccessible in derived due to ambiguity.
+    
+
+    static void maybe_warn_about_inaccessible_bases (tree);
+
+    maybe_warn_about_inaccessible_bases (tree t)
+
+      /* If not checking for warning then return early.  */
+      if (!warn_inaccessible_base)
+        return;
+    
+
+    	warning (OPT_Winaccessible_base, "direct base %qT inaccessible "
+    		 "in %qT due to ambiguity", basetype, t);
+
+    	  warning (OPT_Winaccessible_base, "virtual base %qT inaccessible in "
+    		   "%qT due to ambiguity", basetype, t);
+
+      maybe_warn_about_inaccessible_bases (t);
+
+    -Winaccessible-base @gol
+
+    @item -Winaccessible-base @r{(C++, Objective-C++ only)}
+    @opindex Winaccessible-base
+    @opindex Wno-inaccessible-base
+    Warn when a base class is inaccessible in a class derived from it due to
+    ambiguity.  The warning is enabled by default.  Note the warning for virtual
+    bases is enabled by the @option{-Wextra} option.
+    @smallexample
+    @group
+    struct A @{ int a; @};
+    
+    struct B : A @{ @};
+    
+    struct C : B, A @{ @};
+    @end group
+    @end smallexample
+    
+

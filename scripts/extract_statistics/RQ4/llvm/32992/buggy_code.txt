@@ -1,0 +1,6 @@
+static void ReferenceDllExportedMethods(Sema &S, CXXRecordDecl *Class) {
+
+        // Calling ReferenceDllExportedMethods might cause the current function to
+
+          ReferenceDllExportedMethods(*this, Class);
+

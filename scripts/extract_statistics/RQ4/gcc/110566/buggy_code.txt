@@ -1,0 +1,37 @@
+tree parm_parms = INNERMOST_TEMPLATE_PARMS (DECL_TEMPLATE_PARMS (parm_tmpl));
+      tree arg_parms_full = DECL_TEMPLATE_PARMS (arg_tmpl);
+      tree arg_parms = INNERMOST_TEMPLATE_PARMS (arg_parms_full);
+    
+      gcc_assert (TREE_CODE (parm_parms) == TREE_VEC);
+      gcc_assert (TREE_CODE (arg_parms) == TREE_VEC);
+
+          pargs = coerce_template_parms (arg_parms, pargs, NULL_TREE, tf_none);
+
+inner = build_decl (DECL_SOURCE_LOCATION (decl),
+    			      TYPE_DECL, DECL_NAME (decl), type);
+
+    	  DECL_TEMPLATE_PARMS (decl) = tsubst_template_parms
+    	    (DECL_TEMPLATE_PARMS (orig_decl), args, complain);
+
+    	 parameter, we can assume that it's in the current scope.  In that case
+    	 we might end up adding more levels than needed, but that shouldn't be
+    	 a problem; any args we need to refer to are at the right level.  */
+
+          pargs = add_to_template_args (scope_args, pargs);
+
+          pargs = coerce_template_parms (gen_arg_parms, pargs, NULL_TREE, tf_none);
+
+    	  DECL_TEMPLATE_RESULT (newdecl)
+    	    = build_decl (DECL_SOURCE_LOCATION (olddecl), TYPE_DECL,
+    			  DECL_NAME (olddecl), newtype);
+    	  DECL_ARTIFICIAL (DECL_TEMPLATE_RESULT (newdecl)) = true;
+
+tree parm_parms = INNERMOST_TEMPLATE_PARMS (DECL_TEMPLATE_PARMS (parm_tmpl));
+      tree arg_parms_full = DECL_TEMPLATE_PARMS (arg_tmpl);
+      tree arg_parms = INNERMOST_TEMPLATE_PARMS (arg_parms_full);
+    
+      gcc_assert (TREE_CODE (parm_parms) == TREE_VEC);
+      gcc_assert (TREE_CODE (arg_parms) == TREE_VEC);
+
+          pargs = coerce_template_parms (arg_parms, pargs, NULL_TREE, tf_none);
+

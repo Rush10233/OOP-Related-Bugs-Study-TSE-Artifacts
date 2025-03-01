@@ -1,0 +1,10 @@
+if (DECL_CONSTRUCTOR_P (callee))
+    	      {
+    		loc = EXPR_LOCATION (x);
+
+    		r = cp_build_init_expr (s, r);
+
+    	      }
+    	    x = r;
+    	    break;
+

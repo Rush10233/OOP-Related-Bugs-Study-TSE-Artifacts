@@ -1,0 +1,187 @@
+push_nested_class_guard pncs (DECL_CONTEXT (d));
+    
+
+    /* RAII class to push/pop class scope T; if T is not a class, do nothing.  */
+    
+    struct push_nested_class_guard
+    {
+      bool push;
+      push_nested_class_guard (tree t)
+        : push (t && CLASS_TYPE_P (t))
+      {
+        if (push)
+          push_nested_class (t);
+      }
+      ~push_nested_class_guard ()
+      {
+        if (push)
+          pop_nested_class ();
+      }
+    };
+    
+
+    	  else if (cxx_dialect >= cxx17 && dependent_scope_p (context))
+
+       This can happen when forming a C++17 deduction guide, as in PR96199.  */
+
+      if (cxx_dialect < cxx17)
+
+          else
+    	{
+    	  /* Substitute in the same arguments to rewrite class members into
+    	     references to members of an unknown specialization.  */
+    	  cp_evaluated ev;
+    	  fparms = tsubst_arg_types (fparms, targs, NULL_TREE, complain, ctor);
+    	  fargs = tsubst (fargs, targs, complain, ctor);
+    	  if (ci)
+    	    ci = tsubst_constraint_info (ci, targs, complain, ctor);
+    	}
+
+else if (cxx_dialect >= cxx2a && dependent_scope_p (context))
+    	    {
+    	      /* See maybe_dependent_member_ref.  */
+    	      tree name = TYPE_IDENTIFIER (t);
+    	      tree fullname = name;
+    	      if (instantiates_primary_template_p (t))
+    		fullname = build_nt (TEMPLATE_ID_EXPR, name,
+    				     INNERMOST_TEMPLATE_ARGS (argvec));
+    	      return build_typename_type (context, name, fullname,
+    					  typename_type);
+    	    }
+
+    /* If T is a reference to a dependent member of the current instantiation C and
+       we are trying to refer to that member in a partial instantiation of C,
+       return a SCOPE_REF; otherwise, return NULL_TREE.
+    
+       This can happen when forming a C++20 alias template deduction guide, as in
+       PR96199.  */
+    
+    static tree
+    maybe_dependent_member_ref (tree t, tree args, tsubst_flags_t complain,
+    			    tree in_decl)
+    {
+      if (cxx_dialect < cxx2a)
+        return NULL_TREE;
+    
+      tree ctx = context_for_name_lookup (t);
+      if (!CLASS_TYPE_P (ctx))
+        return NULL_TREE;
+    
+      ctx = tsubst (ctx, args, complain, in_decl);
+      if (dependent_scope_p (ctx))
+        return build_qualified_name (NULL_TREE, ctx, DECL_NAME (t),
+    				 /*template_p=*/false);
+    
+      return NULL_TREE;
+    }
+    
+
+    	if (tree ref = maybe_dependent_member_ref (t, args, complain, in_decl))
+    	  return ref;
+    
+
+          if (tree ref = maybe_dependent_member_ref (t, args, complain, in_decl))
+    	return ref;
+          gcc_fallthrough();
+
+push_nested_class_guard pncs (DECL_CONTEXT (d));
+    
+
+    /* RAII class to push/pop class scope T; if T is not a class, do nothing.  */
+    
+    struct push_nested_class_guard
+    {
+      bool push;
+      push_nested_class_guard (tree t)
+        : push (t && CLASS_TYPE_P (t))
+      {
+        if (push)
+          push_nested_class (t);
+      }
+      ~push_nested_class_guard ()
+      {
+        if (push)
+          pop_nested_class ();
+      }
+    };
+    
+
+if (!is_this_parameter (ob)
+    		&& !is_dummy_object (ob))
+
+          /* See maybe_dependent_member_ref.  */
+          if (dependent_scope_p (qualifying_scope))
+    	{
+    	  if (template_id_p)
+    	    name = build2 (TEMPLATE_ID_EXPR, unknown_type_node, name,
+    			   template_args);
+    	  return build_qualified_name (NULL_TREE, qualifying_scope, name,
+    				       /* ::template */false);
+    	}
+    
+
+else if (!entering_scope
+    		   && cxx_dialect >= cxx17 && dependent_scope_p (context))
+
+          if (class_p)
+    	inner = tsubst_aggr_type (inner, args, complain,
+    				  in_decl, /*entering*/1);
+          else
+    	inner = tsubst (inner, args, complain, in_decl);
+
+else if (cxx_dialect >= cxx20 && dependent_scope_p (context))
+    	    {
+    	      /* See maybe_dependent_member_ref.  */
+    	      tree name = TYPE_IDENTIFIER (t);
+    	      tree fullname = name;
+    	      if (instantiates_primary_template_p (t))
+    		fullname = build_nt (TEMPLATE_ID_EXPR, name,
+    				     INNERMOST_TEMPLATE_ARGS (argvec));
+    	      return build_typename_type (context, name, fullname,
+    					  typename_type);
+    	    }
+
+    /* If T is a reference to a dependent member of the current instantiation C and
+       we are trying to refer to that member in a partial instantiation of C,
+       return a SCOPE_REF; otherwise, return NULL_TREE.
+    
+       This can happen when forming a C++20 alias template deduction guide, as in
+       PR96199.  */
+    
+    static tree
+    maybe_dependent_member_ref (tree t, tree args, tsubst_flags_t complain,
+    			    tree in_decl)
+    {
+      if (cxx_dialect < cxx20)
+        return NULL_TREE;
+    
+      tree ctx = context_for_name_lookup (t);
+      if (!CLASS_TYPE_P (ctx))
+        return NULL_TREE;
+    
+      ctx = tsubst (ctx, args, complain, in_decl);
+      if (dependent_scope_p (ctx))
+        return build_qualified_name (NULL_TREE, ctx, DECL_NAME (t),
+    				 /*template_p=*/false);
+    
+      return NULL_TREE;
+    }
+    
+
+    	if (tree ref = maybe_dependent_member_ref (t, args, complain, in_decl))
+    	  return ref;
+    
+
+          if (tree ref = maybe_dependent_member_ref (t, args, complain, in_decl))
+    	return ref;
+          gcc_fallthrough();
+
+else if (!entering_scope
+    		   && cxx_dialect >= cxx2a && dependent_scope_p (context))
+
+          if (CLASS_TYPE_P (TREE_TYPE (t)))
+    	new_type = tsubst_aggr_type (TREE_TYPE (t), args, complain,
+    				     in_decl, /*entering*/1);
+          else
+    	new_type = tsubst (TREE_TYPE (t), args, complain, in_decl);
+

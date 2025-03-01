@@ -1,0 +1,13 @@
+Commit:	11afe64
+./gcc/cp/semantics.cc	4877,4877
+Commit:	6afa984
+./gcc/cp/except.cc	1287,1287
+./gcc/cp/semantics.cc	5000,5000
+Commit:	4c6afbb
+./gcc/cp/except.c	1297,1299
+./gcc/cp/except.c	1304,1306
+./gcc/cp/except.c	1311,1312
+./gcc/cp/except.c	1315,1316
+./gcc/cp/parser.c	12754,12756
+Commit:	aabc13d
+./gcc/cp/semantics.cc	4943,4943

@@ -1,0 +1,59 @@
+
+      // Iterators
+      child_range children() {
+
+        if (InitExprs.empty()) return child_range();
+        return child_range(&InitExprs[0], &InitExprs[0] + InitExprs.size());
+      }
+
+        return SourceLocation::getFromRawEncoding(LocAndNRVO.Location);
+      }
+    
+
+      /// \brief If this is already the initializer for an array or vector
+      /// element, sets the element index.
+      void setElementIndex(unsigned Index) {
+
+      ///
+      /// \param Args the argument(s) provided for initialization.
+      ///
+
+      InitializationSequence(Sema &S, 
+                             const InitializedEntity &Entity,
+                             const InitializationKind &Kind,
+                             MultiExprArg Args,
+
+      void InitializeFrom(Sema &S, const InitializedEntity &Entity,
+                          const InitializationKind &Kind, MultiExprArg Args,
+
+    
+      ~InitializationSequence();
+    
+
+        return true;
+      };
+    
+
+      // If this is a constructor call, try to optimize it out, and failing that
+      // emit a single loop to initialize all remaining elements.
+
+        CXXConstructorDecl *Ctor = CCE->getConstructor();
+        if (Ctor->isTrivial()) {
+          // If new expression did not specify value-initialization, then there
+
+    
+      // If this is value-initialization, we can usually use memset.
+      ImplicitValueInitExpr IVIE(ElementType);
+
+        if (TryMemsetInitialization())
+          return;
+    
+
+      assert(getContext().hasSameUnqualifiedType(ElementType, Init->getType()) &&
+             "got wrong type of element to initialize");
+    
+
+    
+      // Create the loop blocks.
+      llvm::BasicBlock *EntryBB = Builder.GetInsertBlock();
+

@@ -1,0 +1,4 @@
+return build_min_nt_loc (loc, code, arg1, arg2);
+
+    	return build_min_nt_loc (loc, code, xarg.get_value (), NULL_TREE);
+

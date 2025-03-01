@@ -1,0 +1,18 @@
+
+    	if (DECL_TEMPLATE_PARM_P (t))
+    	  return tsubst_copy (DECL_INITIAL (t), args, complain, in_decl);
+
+    	  return t;
+    
+    	if (tree ref = maybe_dependent_member_ref (t, args, complain, in_decl))
+    	  return ref;
+
+
+    	if (DECL_TEMPLATE_PARM_P (t))
+    	  return tsubst_copy (DECL_INITIAL (t), args, complain, in_decl);
+
+    	  return t;
+    
+    	/* Unfortunately, we cannot just call lookup_name here.
+    	   Consider:
+

@@ -1,0 +1,8 @@
+E = R.get();
+      }
+    
+
+      // FIXME: If the operand is a reference to a variable that's about to go out
+      // of scope, we should treat the operand as an xvalue for this overload
+      // resolution.
+

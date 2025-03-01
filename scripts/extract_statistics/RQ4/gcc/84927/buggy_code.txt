@@ -1,0 +1,18 @@
+CONSTRUCTOR_APPEND_ELT (*p, index, elt);
+
+    	  /* FIXME after GCC 6 branches, make the verify unconditional.  */
+    	  if (CHECKING_P)
+    	    verify_constructor_flags (t);
+    	  else
+    	    recompute_constructor_flags (t);
+
+return (*ctx->values->get (t));
+
+CONSTRUCTOR_APPEND_ELT (*p, index, elt);
+
+    	  /* FIXME after GCC 6 branches, make the verify unconditional.  */
+    	  if (CHECKING_P)
+    	    verify_constructor_flags (t);
+    	  else
+    	    recompute_constructor_flags (t);
+

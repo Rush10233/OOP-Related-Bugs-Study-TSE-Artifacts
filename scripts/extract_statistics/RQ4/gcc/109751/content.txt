@@ -1,0 +1,182 @@
+not_tmpl = DECL_TEMPLATE_RESULT (new_friend);
+    	  new_friend_result_template_info = DECL_TEMPLATE_INFO (not_tmpl);
+    	}
+
+    
+          /* Inside pushdecl_namespace_level, we will push into the
+    	 current namespace. However, the friend function should go
+
+extern bool note_iteration_stmt_body_start	(void);
+    extern void note_iteration_stmt_body_end	(bool);
+    extern void determine_local_discriminator	(tree);
+
+    extern bool fns_correspond			(tree, tree);
+    extern int decls_match				(tree, tree, bool = true);
+    extern bool maybe_version_functions		(tree, tree, bool);
+
+    extern tree lookup_template_variable		(tree, tree, tsubst_flags_t);
+    extern bool uses_template_parms			(tree);
+    extern bool uses_template_parms_level		(tree, int);
+
+    extern bool need_generic_capture		(void);
+    extern tree instantiate_class_template		(tree);
+    extern tree instantiate_template		(tree, tree, tsubst_flags_t);
+
+    }
+    
+    
+
+    
+    /* Returns true if functions FN1 and FN2 have equivalent trailing
+       requires clauses.  */
+
+          return cp_tree_equal (req1, req2);
+        }
+    
+
+      /* Compare only trailing requirements.  */
+      tree reqs1 = get_trailing_function_requirements (newfn);
+      tree reqs2 = get_trailing_function_requirements (oldfn);
+
+    	     are not ambiguous.  */
+    	  else if ((!DECL_FUNCTION_VERSIONED (newdecl)
+    		    && !DECL_FUNCTION_VERSIONED (olddecl))
+
+                       // The functions have the same parameter types.
+    		   && compparms (TYPE_ARG_TYPES (TREE_TYPE (newdecl)),
+    				 TYPE_ARG_TYPES (TREE_TYPE (olddecl)))
+
+              ci = NULL_TREE;
+            }
+          /* C++20 CA378: Remove non-templated constrained functions.  */
+
+          if (ci
+    	  && (block_local
+    	      || (!flag_concepts_ts
+    		  && (!processing_template_decl
+    		      || (friendp && !memtmpl && !funcdef_flag)))))
+    	{
+
+    	  ci = NULL_TREE;
+    	}
+          set_constraints (decl, ci);
+
+        }
+    
+      if (TREE_CODE (type) == METHOD_TYPE)
+
+    
+      tcontext = CP_DECL_CONTEXT (decl);
+    
+
+      /* Ignore the artificial declare reduction functions.  */
+      if (tcontext
+          && TREE_CODE (tcontext) == FUNCTION_DECL
+
+    			::= [<module-name>] <source-name>
+    			::= [<module-name>] <unnamed-type-name>
+    			::= <local-source-name> 
+
+    
+        <local-source-name>	::= L <source-name> <discriminator> */
+    
+
+      else if (DECL_DECLARES_FUNCTION_P (decl))
+        {
+          found = true;
+
+          if (DECL_CONSTRUCTOR_P (decl))
+    	write_special_name_constructor (decl);
+          else if (DECL_DESTRUCTOR_P (decl))
+
+       from its enclosing scope.  */
+    
+    bool
+
+    {
+      tree ci = get_constraints (decl);
+      if (ci)
+        ci = CI_ASSOCIATED_CONSTRAINTS (ci);
+      if (!ci)
+        return false;
+
+      if (depth == 0)
+        return false;
+      return for_each_template_parm (ci, template_parm_outer_level,
+
+    	  not_tmpl = DECL_TEMPLATE_RESULT (new_friend);
+    	  new_friend_result_template_info = DECL_TEMPLATE_INFO (not_tmpl);
+    	}
+    
+          /* Inside pushdecl_namespace_level, we will push into the
+    	 current namespace. However, the friend function should go
+
+      DEMANGLE_COMPONENT_TRANSACTION_SAFE,
+      /* A cloned function.  */
+      DEMANGLE_COMPONENT_CLONE,
+
+      DEMANGLE_COMPONENT_NOEXCEPT,
+      DEMANGLE_COMPONENT_THROW_SPEC,
+    
+
+        case DEMANGLE_COMPONENT_TEMPLATE_NON_TYPE_PARM:
+        case DEMANGLE_COMPONENT_TEMPLATE_TEMPLATE_PARM:
+        case DEMANGLE_COMPONENT_TEMPLATE_PACK_PARM:
+
+          if (left == NULL)
+    	return NULL;
+          break;
+
+    /* <unqualified-name> ::= [<module-name>] <operator-name> [<abi-tags>]
+                          ::= [<module-name>] <ctor-dtor-name> [<abi-tags>]
+                          ::= [<module-name>] <source-name> [<abi-tags>]
+
+    		      ::= [<module-name>] <local-source-name>  [<abi-tags>]
+                          ::= [<module-name>] DC <source-name>+ E [<abi-tags>]
+        <local-source-name>	::= L <source-name> <discriminator> [<abi-tags>]
+
+    {
+      struct demangle_component *ret;
+      char peek;
+
+    
+      if (!d_maybe_module_name (di, &module))
+        return NULL;
+    
+      peek = d_peek_char (di);
+
+      if (IS_DIGIT (peek))
+        ret = d_source_name (di);
+      else if (IS_LOWER (peek))
+
+        ret = d_make_comp (di, DEMANGLE_COMPONENT_MODULE_ENTITY, ret, module);
+      if (d_peek_char (di) == 'B')
+        ret = d_abi_tags (di, ret);
+
+      if (scope)
+        ret = d_make_comp (di, DEMANGLE_COMPONENT_QUAL_NAME, scope, ret);
+    
+
+        case DEMANGLE_COMPONENT_GLOBAL_CONSTRUCTORS:
+        case DEMANGLE_COMPONENT_GLOBAL_DESTRUCTORS:
+        case DEMANGLE_COMPONENT_MODULE_ENTITY:
+
+          d_count_templates_scopes (dpi, d_left (dc));
+          break;
+    
+
+          d_append_char (dpi, ']');
+          return;
+    
+
+        case DEMANGLE_COMPONENT_TEMPLATE_HEAD:
+          {
+    	d_append_char (dpi, '<');
+
+not_tmpl = DECL_TEMPLATE_RESULT (new_friend);
+    	  new_friend_result_template_info = DECL_TEMPLATE_INFO (not_tmpl);
+    	}
+    
+          /* Inside pushdecl_namespace_level, we will push into the
+    	 current namespace. However, the friend function should go
+

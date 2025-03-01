@@ -1,0 +1,111 @@
+45207	crash when undeclared template name with dependent template argument used as type
+45102	Regression: FE crashes in clang::TypeVisitor::Visit()
+47495	Wsizeof-array-div false positive when divisor is sizeof reference type
+48177	clang returns 11 silently without any error
+45787	Please merge 9a7eda1 to 10.0.1
+48384	[Concepts] void f(Constrained decltype(auto)) should be rejected
+45213	"clang-cl gives ""definition with same mangled name"" for lambdas defined as inline const at global scope"
+46908	Access type node must be a valid scalar type (std::destroying_delete_t)
+47555	Inherited constructor unusable for constexpr static member of class template
+47012	__cpp_threadsafe_static_init is not defined
+48462	Macro expansion not performed on argument to __has_cpp_attribute
+44958	Struct with a mutable member can't be used in constant expression even when the member isn't accessed
+46135	Passing an unused reference to an object with automatic storage duration into a consteval function should be an error
+47025	[concepts] ICE on invalid code, in CheckParameterPacksForExpansion, on pack expansions in requires-expression
+47682	Default arguments on declaration in inline namespace ignored
+48545	Access failure to own private inherited constructor for prvalue direct-initialization
+45294	Parser accepts undeclared identifier in pseudodestructor expression, then crashes
+47043	Clang crashes while checking constraints of a concept parameter pack that is missing an ellipsis
+48582	Clang crashes compiling the MSVC standard library
+45033	Assertion failed: !NodePtr->isKnownSentinel() with boost::intrusive_ptr on Windows
+47055	Incorrect codegen for enum with bool underlying type
+47804	"Undeclared identifier causes DeclContext confusion during template instantiation ""declaration not instantiated in this scope""."
+48587	is_constant_evaluated() can incorrectly evaluate to true in the destructor of a non-constexpr variable
+45034	Code compiled with -Ofast fails to find math symbols. (eg `__expf_finite')
+45409	clang-cl crashes when using microsoft-enum-forward-reference in c++20 mode
+46256	[coroutines] coroutines with potentially-throwing 'co_await promise.final_suspend()' expressions should be ill-formed
+44699	Members of nested classes incorrectly shadow template parameters of member functions of the nested class
+48593	[Concepts] ICE on syntax error, in ConvertConstrainedAutoDeclSpecToType
+45063	36-byte segfault: template<class=class a::template b<>
+45420	clang-cl incorrectly interprets /Zp8 flag
+46336	clang assert when using PragmaLoopHint with c++11 attribute.
+47175	[CTAD] User-defined deduction guide not found when argument type is template parameter
+47841	Template argument deduction not allowed in template parameter
+45087	implicit copy construction of recursively empty class object rejected in constant expression evaluation
+46377	Parameter pack not expanded in typedef for function type
+47848	Casting away constness in the drafts [conv.qual] member pointers of DIFFERENT classes should not be similar
+48617	Crash with empty parameter pack on variadic concept as return type constraint
+47216	Ternary operator with vector does not work with Apple Clang
+44723	Defaulted comparisons deleted for class containing class containing class template with user-provided operator<=> with deduced return type
+45534	__builtin_constant_p ignores destructors with side-effects
+46562	Clang fails to parse C++11 attributes for unnamed bit-fields
+45535	__builtin_constant_p with statement expression leaks destructor calls
+46637	fun with auto () -> auto
+47954	"[CWG2126] ""Variable must be initialized by a constant expression"" on std::min/max"
+45589	Short-circuiting in a requires-clause stops working if any overload of `&&`/`||` is visible
+46648	template lambda with default value can't be called if passing argument type doesn't match default value type
+48002	Struct declarated by elaborated type specifier inside another struct.
+47418	Destructor not called when returning object from template class method
+48169	Non-Type Template Parameter Passed to Function Crash
+44822	"Assertion failure in Parser.h:941: !isActive && ""Forgot to call Commit or Revert!"" when using concepts"
+45162	[concepts] requires expression wrongly evaluates to true within a class template
+45699	Unexpanded parameter pack in 'requires clause' crashes the compiler
+46790	deserialization crash on checking concept-related TemplateParameters
+44656	[concepts] __is_convertible_to, requires-clause, and variable template interact poorly
+44938	Assertion failure when compiling `new user-defined-type[size]` appearing in constexpr constructor
+46837	"RecoveryExpr: Invalid header causes an assertion evaluating bool condition in 'if' ""missing lvalue-to-rvalue conv in bool condition"""
+47536	diagnose clang pragma's that set Strict floating point mode if target doesn't support
+44657	Rejects valid code with requires clause accepting bool expression on copy / move
+44939	Support -std=c++20/gnu++20
+45811	"Assertion failed Assertion failed: !hasUninstantiatedDefaultArg() && ""Default argument is not yet instantiated!"""
+44658	Assertion failure in constrained variadic function template of class template
+48431	Cherry pick 1c98f984105e to the 11 release branch.
+44953	"""Declaration may not be in a Comdat"" when using D3DX12 headers and PCH files"
+45219	non-bool expression allowed in requires clause
+46106	Please add a command line flag for disabling warn_inline_namespace_reopened_noninline
+47636	R-value Reference list init causes segfault in CodeGen::tryEmitPrivate
+44671	Assertion failure while parsing deduction guide for class template with constructor constrained with terse syntax
+45267	rejects-valid on escaped newline in pure specifier
+44672	Assertion failure with unexpanded variadic pack in concept definition
+44992	Assertion failure when exporting class containing defaulted operator<=> defined as friend
+46164	[Matrix] Implement compound assignment operators
+47724	wrong calculation for fold expression in constexpr function
+44673	Rejects valid code with constructor accepting constrained auto parameter when the concept name is namespace qualified and has an explicit template argument
+45350	Crash parsing C++20 constexpr stuff
+46192	crash observed while accessing the macro (#define)
+44689	[concepts] ICE when *this appears in trailing requires-clause
+47174	ICE with concepts
+47805	By-value function parameter changes are rolled back prior to destructor call during constant evaluation
+44714	[CodeComplete][Concepts] Crash finding overloads of constrained auto function
+48606	Clang rejects creation of struct with mutable member during constant evaluation
+45520	'nodiscard' can be applied to function pointers
+47176	Crash parsing friend constexpr function with noexcept(true) specifier
+44721	Defaulted comparison operator with built-in type as member in same namespace as comparison operator template rejected
+45088	Compound requirement type constraint uses decltype(E) instead of decltype((E))
+45521	[c++17] can't implicitly cast lvalue to rvalue with this cast kind
+46516	ICE in Sema/SemaDecl.cpp
+47861	Lifetime of temporaries inconsistently extending when optiimzations are enabled
+45096	Conditional jump or move depends on uninitialised value
+47248	auto type of variables can not compile
+44571	clang fails to set strictfp function attribute
+47870	unreachable executed with CTAD in return type
+44751	Assertion failure in class template with function with terse concept syntax where concept has decltype(previous_deduced_parameter) as explicit concept argument
+47250	clang does not expect requires expression
+44613	Assertion failure with requires clause that mentions function parameter in class template
+47893	Rewritten comparison expression is not checked for SFINAE
+44761	"Overload resolution ignores ""rewritten candidate"" tiebreaker when functions are constrained"
+45115	concepts-related information does not propogated through precompiled headers
+45566	[coroutines] coroutine frame layout doesn't reuse storage for local variables with non-overlapping lifetimes
+46640	Destroying operator delete for templates
+47270	clang crashes on not finding a destructor during pch deserialization
+44614	Assertion failure with requires clause put after function parameters that mentions any variable
+44786	Weirdness resolving builtin <=> when overload is visible to template definition
+45133	ICE with union member change in constexpr during function call to initialize union member
+46642	-Wuninitialized diagnostic missing for operator-> usage
+47372	lambda static invoker does not inherit calling convention attribute from operator()
+44615	-fconcepts-ts causes incorrect name lookup for non-type template parameter
+44809	Constraint ignored in function template of class template when using terse syntax with a multi-argument concept
+45142	Segfault from pseudodestructor with template alias
+45624	clang fails to detect using an object before it is initialized
+46784	"Regression in coroutines between clang 10 and clang 11 with compiler crash in -O2 -g (""broken function"")"
+44627	Reversed candidate operator is not found by argument dependent lookup

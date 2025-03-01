@@ -1,0 +1,15 @@
+/// that appear in constant initializers to their evaluated values.
+      llvm::DenseMap<const MaterializeTemporaryExpr*, APValue>
+
+      if (MayCreate)
+        return &MaterializedTemporaryValues[E];
+
+      llvm::DenseMap<const MaterializeTemporaryExpr *, APValue>::iterator I =
+          MaterializedTemporaryValues.find(E);
+      return I == MaterializedTemporaryValues.end() ? nullptr : &I->second;
+
+      llvm::Constant *&Slot = MaterializedGlobalTemporaryMap[E];
+      if (Slot)
+
+      Slot = GV;
+

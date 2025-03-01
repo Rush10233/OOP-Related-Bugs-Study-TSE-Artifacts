@@ -1,0 +1,16 @@
+return TREE_CODE (init) != STRING_CST && initializer_zerop (init);
+    
+      if (TREE_CODE (init) != CONSTRUCTOR)
+
+    
+      if (TREE_CODE (type) == ARRAY_TYPE)
+        {
+
+return TREE_CODE (init) != STRING_CST && initializer_zerop (init);
+    
+      if (TREE_CODE (init) != CONSTRUCTOR)
+
+    
+      if (TREE_CODE (type) == ARRAY_TYPE)
+        {
+

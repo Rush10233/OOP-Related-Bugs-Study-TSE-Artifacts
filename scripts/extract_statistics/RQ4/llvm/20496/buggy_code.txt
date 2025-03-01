@@ -1,0 +1,4 @@
+return CheckIncrementDecrementOperand(S, PR.get(), VK, OpLoc,
+
+        resultType = CheckIncrementDecrementOperand(*this, Input.get(), VK, OpLoc,
+

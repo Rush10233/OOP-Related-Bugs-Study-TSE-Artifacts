@@ -1,0 +1,2 @@
+cx_check_missing_mem_inits (DECL_CONTEXT (fun), body, true);
+

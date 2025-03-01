@@ -1,0 +1,10 @@
+Commit:	53010a0
+Commit:	4343671
+Commit:	0efae19
+./clang/lib/Sema/SemaDecl.cpp	3257,3258
+./clang/lib/Sema/SemaDecl.cpp	3426,3430
+./clang/lib/Sema/SemaDecl.cpp	3432,3432
+./clang/lib/Sema/SemaDecl.cpp	9313,9315
+./clang/lib/Sema/SemaDecl.cpp	9317,9317
+./clang/lib/Sema/SemaDecl.cpp	9319,9321
+./clang/lib/Sema/SemaDecl.cpp	9323,9326

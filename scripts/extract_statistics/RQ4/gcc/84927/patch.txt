@@ -1,0 +1,28 @@
+{
+    	  CONSTRUCTOR_APPEND_ELT (*p, index, elt);
+    	  /* Adding an element might change the ctor's flags.  */
+    	  TREE_CONSTANT (ctx->ctor) = constant_p;
+    	  TREE_SIDE_EFFECTS (ctx->ctor) = side_effects_p;
+    	}
+
+    	  verify_constructor_flags (t);
+
+if (tree *p = ctx->values->get (t))
+    	return *p;
+          else
+    	{
+    	  if (!ctx->quiet)
+    	    error ("%qE is not a constant expression", t);
+    	  *non_constant_p = true;
+    	}
+          break;
+
+{
+    	  CONSTRUCTOR_APPEND_ELT (*p, index, elt);
+    	  /* Adding an element might change the ctor's flags.  */
+    	  TREE_CONSTANT (ctx->ctor) = constant_p;
+    	  TREE_SIDE_EFFECTS (ctx->ctor) = side_effects_p;
+    	}
+
+    	  verify_constructor_flags (t);
+

@@ -1,0 +1,8 @@
+/* Remember current #pragma pack value.  */
+          TYPE_PRECISION (t) = maximum_field_alignment;
+    
+
+    	CLASSTYPE_NON_AGGREGATE (t) = 1;
+    
+          /* Fix up any variants we've already built.  */
+

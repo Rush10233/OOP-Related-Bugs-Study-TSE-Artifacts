@@ -1,0 +1,4 @@
+gcc_assert (TREE_CODE (x) == COMPONENT_REF);
+
+gcc_assert (TREE_CODE (x) == COMPONENT_REF);
+

@@ -1,0 +1,8 @@
+/* Whether this overload was introduced by a using decl.  */
+      bool using_p () const
+      {
+
+      }
+      bool hidden_p () const
+      {
+

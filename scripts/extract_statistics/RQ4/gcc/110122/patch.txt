@@ -1,0 +1,64 @@
+for (tree cur = current_nonlambda_class_type ();
+    	   cur != NULL_TREE;
+    	   cur = get_containing_scope (cur))
+    	{
+    	  if (!CLASS_TYPE_P (cur))
+    	    continue;
+    
+    	  tree ti = CLASSTYPE_TEMPLATE_INFO (cur);
+    	  if (!ti || arg_depth > TMPL_ARGS_DEPTH (TI_ARGS (ti)))
+    	    break;
+    
+
+    	    return cur;
+    	}
+
+          if (PRIMARY_TEMPLATE_P (gen_tmpl))
+    	arglist = coerce_template_parms (parmlist, arglist, gen_tmpl, complain);
+
+for (tree cur = current_nonlambda_class_type ();
+    	   cur != NULL_TREE;
+    	   cur = get_containing_scope (cur))
+    	{
+    	  if (!CLASS_TYPE_P (cur))
+    	    continue;
+    
+    	  tree ti = CLASSTYPE_TEMPLATE_INFO (cur);
+    	  if (!ti || arg_depth > TMPL_ARGS_DEPTH (TI_ARGS (ti)))
+    	    break;
+    
+
+    	    return cur;
+    	}
+
+          if (PRIMARY_TEMPLATE_P (gen_tmpl))
+    	arglist = coerce_template_parms (parmlist, arglist, gen_tmpl, complain);
+
+&& (DECL_TEMPLOID_INSTANTIATION (fun) || DECL_DEFAULTED_FN (fun))
+
+          if (DECL_TEMPLOID_INSTANTIATION (fun))
+    	instantiate_decl (fun, /*defer_ok*/false, /*expl_inst*/false);
+          else
+    	synthesize_method (fun);
+
+          && (DECL_TEMPLOID_INSTANTIATION (*tp) || DECL_DEFAULTED_FN (*tp))
+
+          if (DECL_TEMPLOID_INSTANTIATION (*tp))
+    	instantiate_decl (*tp, /*defer_ok*/false, /*expl_inst*/false);
+          else
+    	synthesize_method (*tp);
+
+&& (DECL_TEMPLOID_INSTANTIATION (fun) || DECL_DEFAULTED_FN (fun))
+
+          if (DECL_TEMPLOID_INSTANTIATION (fun))
+    	instantiate_decl (fun, /*defer_ok*/false, /*expl_inst*/false);
+          else
+    	synthesize_method (fun);
+
+          && (DECL_TEMPLOID_INSTANTIATION (*tp) || DECL_DEFAULTED_FN (*tp))
+
+          if (DECL_TEMPLOID_INSTANTIATION (*tp))
+    	instantiate_decl (*tp, /*defer_ok*/false, /*expl_inst*/false);
+          else
+    	synthesize_method (*tp);
+

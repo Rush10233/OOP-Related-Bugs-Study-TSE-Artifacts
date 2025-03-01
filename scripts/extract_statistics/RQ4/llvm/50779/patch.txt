@@ -1,0 +1,5 @@
+return CheckForImmediateInvocation(MaybeBindToTemporary(TheCall),
+                                               FnDecl);
+
+      return CheckForImmediateInvocation(MaybeBindToTemporary(TheCall), Method);
+

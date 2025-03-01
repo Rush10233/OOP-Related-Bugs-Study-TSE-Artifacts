@@ -1,0 +1,3 @@
+Commit:	18b8841
+./gcc/cp/decl2.c	5502,5505
+./gcc/diagnostic.c	1175,1201

@@ -1,0 +1,51 @@
+if (!len)
+        return;
+    
+
+        {
+
+          tree to_type = NULL_TREE;
+          tree to_using = NULL_TREE;
+          tree marker = NULL_TREE;
+    
+
+    	{
+
+    	    {
+
+    	    }
+    
+
+    	    {
+
+    	      next = OVL_CHAIN (next);
+    	    }
+    
+    	  if (TREE_CODE (next) == USING_DECL)
+    	    {
+
+    	      next = strip_using_decl (next);
+
+    		{
+    		  to_using = next;
+
+    		}
+
+    	    }
+    
+
+    	}
+    
+          if (to_using)
+
+    	    current = stat_hack (current, to_type);
+    	}
+    
+
+    	{
+
+    	}
+        }
+    
+      while (store++ < len)
+

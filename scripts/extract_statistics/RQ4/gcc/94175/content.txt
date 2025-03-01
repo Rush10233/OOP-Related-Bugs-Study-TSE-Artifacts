@@ -1,0 +1,47 @@
+if (is_empty_class (TREE_TYPE (arg))
+    	    && simple_empty_class_p (TREE_TYPE (arg), arg, INIT_EXPR))
+    	  {
+
+    	    tree t = build0 (EMPTY_CLASS_EXPR, TREE_TYPE (arg));
+    	    arg = build2 (COMPOUND_EXPR, TREE_TYPE (t), arg, t);
+    	    CALL_EXPR_ARG (function, i) = arg;
+
+    {
+      if (TREE_CODE (op) == COMPOUND_EXPR)
+        return simple_empty_class_p (type, TREE_OPERAND (op, 1), code);
+
+      return
+        (TREE_CODE (op) == EMPTY_CLASS_EXPR
+         || code == MODIFY_EXPR
+
+    
+    	else if (simple_empty_class_p (TREE_TYPE (op0), op1, code))
+    	  {
+
+    	    /* Remove any copies of empty classes.  Also drop volatile
+    	       variables on the RHS to avoid infinite recursion from
+    	       gimplify_expr trying to load the value.  */
+
+    	    gimplify_expr (&TREE_OPERAND (*expr_p, 0), pre_p, post_p,
+    			   is_gimple_lvalue, fb_lvalue);
+    	    *expr_p = TREE_OPERAND (*expr_p, 0);
+
+    	  }
+    	
+    
+
+    	      || TREE_CODE (TREE_OPERAND (*expr_p, 0)) == MODIFY_EXPR))
+    	{
+    	  expr_p = &TREE_OPERAND (*expr_p, 0);
+    	  /* Avoid going through the INIT_EXPR case, which can
+    	     degrade INIT_EXPRs into AGGR_INIT_EXPRs.  */
+    	  goto modify_expr_case;
+
+       the initializer has void type, it's doing something more complicated.  */
+    #define SIMPLE_TARGET_EXPR_P(NODE)				\
+      (TREE_CODE (NODE) == TARGET_EXPR				\
+
+       && !VOID_TYPE_P (TREE_TYPE (TARGET_EXPR_INITIAL (NODE))))
+    
+    /* True if EXPR expresses direct-initialization of a TYPE.  */
+

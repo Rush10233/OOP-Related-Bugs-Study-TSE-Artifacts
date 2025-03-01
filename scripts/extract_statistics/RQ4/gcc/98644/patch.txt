@@ -1,0 +1,30 @@
+/* T has TREE_CONSTANT set but has been deemed not a valid C++ constant
+       expression.  Return a version of T that has TREE_CONSTANT cleared.  */
+    
+    static tree
+    mark_non_constant (tree t)
+    {
+      gcc_checking_assert (TREE_CONSTANT (t));
+    
+      /* This isn't actually constant, so unset TREE_CONSTANT.
+         Don't clear TREE_CONSTANT on ADDR_EXPR, as the middle-end requires
+         it to be set if it is invariant address, even when it is not
+         a valid C++ constant expression.  Wrap it with a NOP_EXPR
+         instead.  */
+      if (EXPR_P (t) && TREE_CODE (t) != ADDR_EXPR)
+        t = copy_node (t);
+      else if (TREE_CODE (t) == CONSTRUCTOR)
+        t = build1 (VIEW_CONVERT_EXPR, TREE_TYPE (t), t);
+      else
+        t = build_nop (TREE_TYPE (t), t);
+      TREE_CONSTANT (t) = false;
+      return t;
+    }
+    
+
+        r = mark_non_constant (r);
+
+          if (TREE_OVERFLOW_P (t)
+    	  || (!processing_template_decl && TREE_CONSTANT (t)))
+    	t = mark_non_constant (t);
+

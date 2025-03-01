@@ -1,0 +1,10 @@
+&& (cp_lexer_next_token_is_not (parser->lexer, CPP_SEMICOLON)
+    	  || decl_specifiers.type != error_mark_node))
+        {
+
+          decl = cp_parser_init_declarator (parser,
+
+    				        &decl_specifiers,
+    				        checks,
+    				        /*function_definition_allowed_p=*/true,
+

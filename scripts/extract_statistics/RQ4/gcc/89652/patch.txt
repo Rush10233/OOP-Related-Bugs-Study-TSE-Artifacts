@@ -1,0 +1,24 @@
+vec<tree> *save_exprs;
+
+    	  auto_vec<tree, 10> save_exprs;
+
+    	  unsigned int i;
+    	  tree save_expr;
+    	  FOR_EACH_VEC_ELT (save_exprs, i, save_expr)
+    	    ctx_with_save_exprs.values->remove (save_expr);
+
+      auto_vec<tree, 10> save_exprs;
+
+          unsigned int i;
+          tree save_expr;
+          FOR_EACH_VEC_ELT (save_exprs, i, save_expr)
+    	new_ctx.values->remove (save_expr);
+          save_exprs.truncate (0);
+
+      unsigned int i;
+      tree save_expr;
+      FOR_EACH_VEC_ELT (save_exprs, i, save_expr)
+        new_ctx.values->remove (save_expr);
+
+    	    ctx->save_exprs->safe_push (t);
+

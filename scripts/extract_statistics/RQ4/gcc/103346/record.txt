@@ -1,0 +1,5 @@
+Commit:	0bdd226
+./gcc/cp/pt.cc	17341,17367
+./gcc/cp/pt.cc	17369,17369
+./gcc/cp/pt.cc	17376,17376
+./gcc/cp/pt.cc	21639,21644

@@ -1,0 +1,77 @@
+m_category_regex.SetOptionWasSet();
+
+                        if (error.Success())
+                            m_category_language.SetOptionWasSet();
+
+Obj->template getSectionContentsAsArray<Elf_Word>(&Sec));
+
+bool canFullyTypeCheckRedeclaration(ValueDecl *NewD, ValueDecl *OldD,
+                                          QualType NewT, QualType OldT);
+
+            canFullyTypeCheckRedeclaration(New, Old, NewDeclaredReturnType,
+                                           OldDeclaredReturnType)) {
+
+        // If the types are imprecise (due to dependent constructs in friends or
+        // local extern declarations), it's OK if they differ. We'll check again
+        // during instantiation.
+        if (!canFullyTypeCheckRedeclaration(New, Old, NewQType, OldQType))
+
+    
+    /// Determines if we can perform a correct type check for \p D as a
+    /// redeclaration of \p PrevDecl. If not, we can generally still perform a
+    /// best-effort check.
+    ///
+    /// \param NewD The new declaration.
+    /// \param OldD The old declaration.
+    /// \param NewT The portion of the type of the new declaration to check.
+    /// \param OldT The portion of the type of the old declaration to check.
+    bool Sema::canFullyTypeCheckRedeclaration(ValueDecl *NewD, ValueDecl *OldD,
+                                              QualType NewT, QualType OldT) {
+      if (!NewD->getLexicalDeclContext()->isDependentContext())
+        return true;
+    
+      // For dependently-typed local extern declarations and friends, we can't
+      // perform a correct type check in general until instantiation:
+      //
+      //   int f();
+      //   template<typename T> void g() { T f(); }
+      //
+      // (valid if g() is only instantiated with T = int).
+      if (NewT->isDependentType() &&
+          (NewD->isLocalExternDecl() || NewD->getFriendObjectKind()))
+        return false;
+    
+      // Similarly, if the previous declaration was a dependent local extern
+      // declaration, we don't really know its type yet.
+      if (OldT->isDependentType() && OldD->isLocalExternDecl())
+        return false;
+    
+      return true;
+    }
+    
+
+      if (!D->getLexicalDeclContext()->isDependentContext())
+        return true;
+    
+      // Don't chain dependent friend function definitions until instantiation, to
+      // permit cases like
+
+      //   void func();
+      //   template<typename T> class C1 { friend void func() {} };
+      //   template<typename T> class C2 { friend void func() {} };
+
+      // ... which is valid if only one of C1 and C2 is ever instantiated.
+
+      // FIXME: This need only apply to function definitions. For now, we proxy
+      // this by checking for a file-scope function. We do not want this to apply
+      // to friend declarations nominating member functions, because that gets in
+      // the way of access checks.
+      if (D->getFriendObjectKind() && D->getDeclContext()->isFileContext())
+        return false;
+    
+      auto *VD = dyn_cast<ValueDecl>(D);
+      auto *PrevVD = dyn_cast<ValueDecl>(PrevDecl);
+      return !VD || !PrevVD ||
+             canFullyTypeCheckRedeclaration(VD, PrevVD, VD->getType(),
+                                            PrevVD->getType());
+

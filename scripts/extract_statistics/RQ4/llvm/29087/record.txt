@@ -1,0 +1,5 @@
+Commit:	dc2917b
+./clang/lib/Sema/SemaExprCXX.cpp	4419,4419
+./clang/lib/Sema/SemaExprCXX.cpp	4421,4421
+./clang/lib/Sema/SemaExprCXX.cpp	4455,4455
+./clang/lib/Sema/SemaExprCXX.cpp	4457,4457

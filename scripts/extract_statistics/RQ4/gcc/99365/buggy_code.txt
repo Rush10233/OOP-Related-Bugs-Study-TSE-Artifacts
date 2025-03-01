@@ -1,0 +1,49 @@
+tparm = do_auto_deduction (tparm, arg, a, complain, adc_unify);
+
+      if (flag_concepts)
+        if (NON_ERROR (PLACEHOLDER_TYPE_CONSTRAINTS (auto_node)))
+          {
+    	if (processing_template_decl)
+    	  /* In general we can't check satisfaction until we know all
+    	     template arguments.  */
+    	  return type;
+
+    	if ((context == adc_return_type || context == adc_variable_type)
+    	    && current_function_decl
+    	    && DECL_TEMPLATE_INFO (current_function_decl))
+    	  outer_targs = DECL_TI_ARGS (current_function_decl);
+
+    	tree full_targs = add_to_template_args (outer_targs, targs);
+    	if (!constraints_satisfied_p (auto_node, full_targs))
+              {
+                if (complain & tf_warning_or_error)
+                  {
+    		auto_diagnostic_group d;
+                    switch (context)
+                      {
+                      case adc_unspecified:
+    		  case adc_unify:
+                        error("placeholder constraints not satisfied");
+                        break;
+                      case adc_variable_type:
+    		  case adc_decomp_type:
+                        error ("deduced initializer does not satisfy "
+                               "placeholder constraints");
+                        break;
+                      case adc_return_type:
+                        error ("deduced return type does not satisfy "
+                               "placeholder constraints");
+                        break;
+                      case adc_requirement:
+    		    error ("deduced expression type does not satisfy "
+                               "placeholder constraints");
+                        break;
+                      }
+    		diagnose_constraints (input_location, auto_node, full_targs);
+                  }
+                return error_mark_node;
+              }
+          }
+
+      if (context == adc_unify)
+

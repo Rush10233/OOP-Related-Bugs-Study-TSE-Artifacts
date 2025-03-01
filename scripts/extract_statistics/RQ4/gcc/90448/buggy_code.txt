@@ -1,0 +1,28 @@
+bool callee_copies;
+    	  tree base = NULL_TREE;
+    
+    	  callee_copies = reference_callee_copied (args_so_far_pnt, arg);
+    
+    	  /* If we're compiling a thunk, pass through invisible references
+    	     instead of making a copy.  */
+    	  if (call_from_thunk_p
+    	      || (callee_copies
+    		  && !TREE_ADDRESSABLE (type)
+    		  && (base = get_base_address (args[i].tree_value))
+    		  && TREE_CODE (base) != SSA_NAME
+    		  && (!DECL_P (base) || MEM_P (DECL_RTL (base)))))
+
+bool callee_copies;
+    	  tree base = NULL_TREE;
+    
+    	  callee_copies = reference_callee_copied (args_so_far_pnt, arg);
+    
+    	  /* If we're compiling a thunk, pass through invisible references
+    	     instead of making a copy.  */
+    	  if (call_from_thunk_p
+    	      || (callee_copies
+    		  && !TREE_ADDRESSABLE (type)
+    		  && (base = get_base_address (args[i].tree_value))
+    		  && TREE_CODE (base) != SSA_NAME
+    		  && (!DECL_P (base) || MEM_P (DECL_RTL (base)))))
+

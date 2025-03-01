@@ -1,0 +1,8 @@
+fail = !INDIRECT_TYPE_P (base_return);
+          if (!fail)
+    	{
+
+    
+    	  base_return = TREE_TYPE (base_return);
+    	  over_return = TREE_TYPE (over_return);
+

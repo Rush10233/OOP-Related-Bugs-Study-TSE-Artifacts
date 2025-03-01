@@ -1,0 +1,92 @@
+tree parm, arg;
+      int variadic_p = 0;
+    
+
+    
+      nparms = TREE_VEC_LENGTH (parm_parms);
+      nargs = TREE_VEC_LENGTH (arg_parms);
+
+    	scope_args = TI_ARGS (tinfo);
+          pargs = add_to_template_args (scope_args, pargs);
+    
+
+          if (pargs != error_mark_node)
+    	{
+    	  tree targs = make_tree_vec (nargs);
+
+tree inner = decl;
+          if (TREE_CODE (decl) == TEMPLATE_DECL)
+    	{
+
+    	  DECL_TEMPLATE_RESULT (decl) = inner;
+    	  DECL_ARTIFICIAL (inner) = true;
+
+    	}
+    
+          /* Attach the TPI to the decl.  */
+
+    	}
+        }
+    
+
+      hash_map_safe_put<hm_ggc> (defaulted_ttp_cache, otmpl, ntmpl);
+      return ntmpl;
+    }
+
+    	 OUTER_ARGS are not the right outer levels in this case, as they are
+    	 the args we're building up for PARM, and for the coercion we want the
+    	 args for ARG.  If DECL_CONTEXT isn't set for a template template
+
+          tree ctx = DECL_CONTEXT (arg_tmpl);
+          if (!ctx && DECL_TEMPLATE_TEMPLATE_PARM_P (arg_tmpl))
+    	ctx = current_scope ();
+          tree scope_args = NULL_TREE;
+          if (tree tinfo = get_template_info (ctx))
+    	scope_args = TI_ARGS (tinfo);
+
+    
+
+          if (pargs != error_mark_node)
+    	{
+    	  tree targs = make_tree_vec (nargs);
+
+    	return NULL_TREE;
+        }
+    
+
+      /* Look for more and more general templates.  */
+      while (DECL_LANG_SPECIFIC (decl) && DECL_TEMPLATE_INFO (decl))
+        {
+
+    
+          if (TREE_CODE (olddecl) == TEMPLATE_DECL)
+    	{
+
+    	  // First create a copy (ttargs) of tsubst_args with an
+    	  // additional level for the template template parameter's own
+    	  // template parameters (ttparms).
+
+    	  TREE_VALUE (TREE_CHAIN (ttparms)) = make_tree_vec (0);
+    	  // All done.
+    	  DECL_TEMPLATE_PARMS (newdecl) = ttparms;
+
+    	}
+    
+          if (TYPE_STRUCTURAL_EQUALITY_P (TREE_TYPE (olddecl)))
+
+tree parm, arg;
+      int variadic_p = 0;
+    
+
+    
+      nparms = TREE_VEC_LENGTH (parm_parms);
+      nargs = TREE_VEC_LENGTH (arg_parms);
+
+    	scope_args = TI_ARGS (tinfo);
+          pargs = add_to_template_args (scope_args, pargs);
+    
+
+          if (pargs != error_mark_node)
+    	{
+    	  tree targs = make_tree_vec (nargs);
+

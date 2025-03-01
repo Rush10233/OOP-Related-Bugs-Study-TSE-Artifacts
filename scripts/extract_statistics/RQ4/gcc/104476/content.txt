@@ -1,0 +1,158 @@
+old_decl = bval;
+          else if (TREE_CODE (bval) == USING_DECL
+    	       && OVL_P (target_decl))
+
+          else if (OVL_P (target_decl)
+    	       && OVL_P (target_bval))
+    	old_decl = bval;
+
+if (via_using && iter.using_p ()
+    	  /* Except handle inherited constructors specially.  */
+    	  && ! DECL_CONSTRUCTOR_P (fn))
+
+    
+          /* [over.load] Member function declarations with the
+    	 same name and the same parameter types cannot be
+
+          if (via_using)
+    	/* Defer to the local function.  */
+    	return false;
+
+    	{
+
+    	  current_fns = iter.remove_node (current_fns);
+    	  continue;
+    	}
+
+    	  : access_public_node);
+    }
+    
+
+    /* Process the USING_DECL, which is a member of T.  */
+    
+    static void
+    handle_using_decl (tree using_decl, tree t)
+    {
+      tree decl = USING_DECL_DECLS (using_decl);
+    
+      gcc_assert (!processing_template_decl && decl);
+    
+
+      if (old_value)
+        {
+          old_value = OVL_FIRST (old_value);
+
+    	old_value = NULL_TREE;
+        }
+    
+      if (! old_value)
+        ;
+      else if (is_overloaded_fn (old_value))
+        {
+
+        }
+      else if (!DECL_ARTIFICIAL (old_value))
+        {
+
+        }
+    
+      iloc_sentinel ils (DECL_SOURCE_LOCATION (using_decl));
+
+    
+      /* Make type T see field decl FDECL with access ACCESS.  */
+
+        {
+          /* C++20 using enum can import non-inherited enumerators into class
+    	 scope.  We implement that by making a copy of the CONST_DECL for which
+    	 CONST_DECL_USING_P is true.  */
+          gcc_assert (TREE_CODE (decl) == CONST_DECL);
+    
+
+          tree copy = copy_decl (decl);
+          DECL_CONTEXT (copy) = t;
+          DECL_ARTIFICIAL (copy) = true;
+
+        {
+          tree x;
+    
+          for (x = TYPE_FIELDS (t); x; x = DECL_CHAIN (x))
+
+    	  {
+    	    DECL_IN_AGGR_P (x) = false;
+    	    if (DECL_VIRTUAL_P (x))
+
+    	 lookup not to fail or recurse into bases.  This isn't added
+    	 to the template decl list so we drop this at instantiation
+    	 time.  */
+
+    
+          TYPE_SIZE (t) = bitsize_zero_node;
+          TYPE_SIZE_UNIT (t) = size_zero_node;
+
+    extern tree get_vtable_decl			(tree, int);
+    extern bool add_method				(tree, tree, bool);
+    extern tree declared_access			(tree);
+
+    extern tree currently_open_class		(tree);
+    extern tree currently_open_derived_class	(tree);
+    extern tree outermost_open_class		(void);
+
+    
+    /* in name-lookup.cc */
+    extern tree strip_using_decl                    (tree);
+
+    
+    /* Tell the binding oracle what kind of binding we are looking for.  */
+    
+
+    				    cp_binding_level *lvl,
+    				    bool look_within_fields,
+    				    enum lookup_name_fuzzy_kind kind);
+    
+    /* ADL lookup of NAME.  FNS is the result of regular lookup, and we
+       don't add duplicates to it.  ARGS is the vector of call
+
+      return ok;
+    }
+    
+
+    
+
+    diagnose_name_conflict (tree decl, tree bval)
+    {
+      if (TREE_CODE (decl) == TREE_CODE (bval)
+
+    	       && DECL_DEPENDENT_P (bval))
+    	return true;
+          else if (TREE_CODE (decl) == USING_DECL
+
+    	       && OVL_P (target_bval))
+
+    	old_decl = bval;
+          else if (TREE_CODE (bval) == USING_DECL
+
+    	       && OVL_P (target_decl))
+
+          else if (OVL_P (target_decl)
+    	       && OVL_P (target_bval))
+
+    	old_decl = bval;
+    
+          if (old_decl && binding->scope == class_binding_level)
+
+        }
+    
+      if (TREE_CODE (decl) == USING_DECL)
+
+        DECL_IGNORED_P (decl) = 1;
+    
+      /* Check for bare parameter packs in the non-static data member
+
+      /* Enter the DECL into the scope of the class, if the class
+         isn't a closure (whose fields are supposed to be unnamed).  */
+      else if (CLASSTYPE_LAMBDA_EXPR (current_class_type)
+
+    	   || pushdecl_class_level (decl))
+        add = true;
+    
+

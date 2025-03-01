@@ -1,0 +1,16 @@
+tree field0 = TREE_OPERAND (arg0, 1);
+    		    tree field1 = TREE_OPERAND (arg1, 1);
+    
+
+    			|| !operand_equal_p (DECL_FIELD_BIT_OFFSET (field0),
+    					     DECL_FIELD_BIT_OFFSET (field1),
+    					     flags))
+
+tree field0 = TREE_OPERAND (arg0, 1);
+    		    tree field1 = TREE_OPERAND (arg1, 1);
+    
+
+    			|| !operand_equal_p (DECL_FIELD_BIT_OFFSET (field0),
+    					     DECL_FIELD_BIT_OFFSET (field1),
+    					     flags))
+

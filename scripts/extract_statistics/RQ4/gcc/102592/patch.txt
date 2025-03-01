@@ -1,0 +1,115 @@
+: _M_pathname(_S_convert(__detail::__string_from_range(__first, __last)))
+
+    	_M_append(_S_convert(__detail::__string_from_range(__first, __last)));
+
+    	_M_concat(_S_convert(__detail::__string_from_range(__first, __last)));
+
+: _M_pathname(_S_convert(__detail::__string_from_range(__first, __last)))
+
+    	_M_append(_S_convert(__detail::__string_from_range(__first, __last)));
+
+    	_M_concat(_S_convert(__detail::__string_from_range(__first, __last)));
+
+#if __cpp_lib_concepts
+      template<typename _Iter>
+        constexpr bool __is_contiguous = std::contiguous_iterator<_Iter>;
+    #else
+      template<typename _Iter>
+        constexpr bool __is_contiguous = is_pointer_v<_Iter>;
+    #endif
+    
+    #if !defined _GLIBCXX_FILESYSTEM_IS_WINDOWS && defined _GLIBCXX_USE_CHAR8_T
+      // For POSIX treat char8_t sequences as char without encoding conversions.
+      template<typename _EcharT>
+        using __unified_u8_t
+          = __conditional_t<is_same_v<_EcharT, char8_t>, char, _EcharT>;
+    #else
+      template<typename _EcharT>
+        using __unified_u8_t = _EcharT;
+    #endif
+    
+
+      // either a basic_string_view<C> or basic_string<C> containing the
+
+        inline basic_string_view<_CharT>
+
+        noexcept
+
+        inline basic_string_view<_CharT>
+
+        noexcept
+
+      // Return the effective range of an NTCTS.
+
+        auto
+
+          // Remove a level of normal/safe iterator indirection, or decay an array.
+          using _Iter = decltype(std::__niter_base(__source));
+          using value_type = typename iterator_traits<_Iter>::value_type;
+    
+          if constexpr (__is_contiguous<_Iter>)
+    	return basic_string_view<value_type>{&*__source};
+
+    	  basic_string<__unified_u8_t<value_type>> __str;
+
+      template<typename _Source>
+        struct __source_value_type_impl
+        {
+          using type
+    	= typename __safe_iterator_traits<decay_t<_Source>>::value_type;
+        };
+    
+      template<typename _CharT, typename _Traits, typename _Alloc>
+        struct __source_value_type_impl<basic_string<_CharT, _Traits, _Alloc>>
+        {
+          using type = _CharT;
+        };
+    
+      template<typename _CharT, typename _Traits>
+        struct __source_value_type_impl<basic_string_view<_CharT, _Traits>>
+        {
+          using type = _CharT;
+        };
+    
+      // The value type of a Source parameter's effective range.
+      template<typename _Source>
+        using __source_value_t = typename __source_value_type_impl<_Source>::type;
+
+      template<typename _Tp, typename _Val = __source_value_t<_Tp>>
+
+      template<typename _Tp, typename _Val = __source_value_t<_Tp>>
+
+      // Create a basic_string<C> or basic_string_view<C> from an iterator range.
+
+          static_assert(__is_encoded_char<_EcharT>); // C++17 [fs.req]/3
+
+          if constexpr (__is_contiguous<_InputIterator>)
+
+    	  if (auto __len = __last - __first) [[__likely__]]
+    	    return basic_string_view<_EcharT>(&*__first, __len);
+    	  return basic_string_view<_EcharT>();
+
+    	{
+    	  // Conversion requires contiguous characters, so create a string.
+    	  return basic_string<__unified_u8_t<_EcharT>>(__first, __last);
+    	}
+
+        // basic_string_view<value_type> from a basic_string<C> or
+        // basic_string_view<C>, for an encoded character type C,
+
+          _S_convert(_Tp __str)
+
+    	if constexpr (is_same_v<_Tp, typename _Tp::value_type>)
+    	  return __str; // No conversion needed.
+    #if !defined _GLIBCXX_FILESYSTEM_IS_WINDOWS && defined _GLIBCXX_USE_CHAR8_T
+    	else if constexpr (is_same_v<_Tp, std::u8string>)
+    	  // Calling _S_convert<char8_t> will return a u8string_view that
+    	  // refers to __str and would dangle after this function returns.
+    	  // Return a string_type instead, to avoid dangling.
+    	  return string_type(_S_convert(std::u8string_view(__str)));
+    #endif
+
+        // _S_convert_loc converts a range of char to string_type, using the
+        // supplied locale for encoding conversions.
+    
+

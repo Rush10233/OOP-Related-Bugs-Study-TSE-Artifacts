@@ -1,0 +1,8 @@
+if (cp_type_quals (base_return) != cp_type_quals (over_return))
+    	    fail = 1;
+    
+    	  if (TYPE_REF_P (base_return)
+    	      && (TYPE_REF_IS_RVALUE (base_return)
+    		  != TYPE_REF_IS_RVALUE (over_return)))
+    	    fail = 1;
+

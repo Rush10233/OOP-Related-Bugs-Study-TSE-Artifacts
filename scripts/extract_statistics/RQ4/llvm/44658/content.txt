@@ -1,0 +1,17 @@
+Sema::ContextRAII savedContext(*this, Decl);
+      LocalInstantiationScope Scope(*this);
+    
+      // If this is not an explicit specialization - we need to get the instantiated
+      // version of the template arguments and add them to scope for the
+      // substitution.
+      if (Decl->isTemplateInstantiation()) {
+        InstantiatingTemplate Inst(*this, Decl->getPointOfInstantiation(),
+            InstantiatingTemplate::ConstraintsCheck{}, Decl->getPrimaryTemplate(),
+
+        if (Inst.isInvalid())
+          return true;
+
+        if (addInstantiatedParametersToScope(
+                *this, Decl, Decl->getPrimaryTemplate()->getTemplatedDecl(),
+                Scope, MLTAL))
+

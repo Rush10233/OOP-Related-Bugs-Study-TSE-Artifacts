@@ -1,0 +1,10 @@
+if (S.DiagnoseUseOfDecl(FoundDecl, CastLoc))
+          return ExprError();
+
+        S.CheckMemberOperatorAccess(CastLoc, From, /*arg*/ nullptr, FoundDecl);
+        if (S.DiagnoseUseOfDecl(FoundDecl, CastLoc))
+          return ExprError();
+    
+
+          assert(FD && "no conversion function for user-defined conversion seq");
+

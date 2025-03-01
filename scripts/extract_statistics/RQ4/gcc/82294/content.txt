@@ -1,0 +1,386 @@
+
+    static bool
+    categorize_ctor_elements_1 (const_tree ctor, HOST_WIDE_INT *p_nz_elts,
+
+    			    HOST_WIDE_INT *p_init_elts, bool *p_complete)
+    {
+      unsigned HOST_WIDE_INT idx;
+
+      tree value, purpose, elt_type;
+    
+      /* Whether CTOR is a valid constant initializer, in accordance with what
+
+      bool const_p = const_from_elts_p ? true : TREE_STATIC (ctor);
+    
+      nz_elts = 0;
+
+      init_elts = 0;
+      num_fields = 0;
+      elt_type = NULL_TREE;
+
+    	{
+    	case CONSTRUCTOR:
+    	  {
+
+    
+
+    
+    	    nz_elts += mult * nz;
+
+     	    init_elts += mult * ic;
+    
+    	    if (const_from_elts_p && const_p)
+
+    	case REAL_CST:
+    	case FIXED_CST:
+    	  if (!initializer_zerop (value))
+
+    	  init_elts += mult;
+    	  break;
+    
+    	case STRING_CST:
+    	  nz_elts += mult * TREE_STRING_LENGTH (value);
+
+    	  init_elts += mult * TREE_STRING_LENGTH (value);
+    	  break;
+    
+    	case COMPLEX_CST:
+    	  if (!initializer_zerop (TREE_REALPART (value)))
+
+    	  if (!initializer_zerop (TREE_IMAGPART (value)))
+
+    	  break;
+    
+    	case VECTOR_CST:
+
+    	      {
+    		tree v = VECTOR_CST_ELT (value, i);
+    		if (!initializer_zerop (v))
+
+    		init_elts += mult;
+    	      }
+    	  }
+
+    	  {
+    	    HOST_WIDE_INT tc = count_type_elements (elt_type, false);
+    	    nz_elts += mult * tc;
+
+    	    init_elts += mult * tc;
+    
+    	    if (const_from_elts_p && const_p)
+
+        *p_complete = false;
+    
+      *p_nz_elts += nz_elts;
+
+      *p_init_elts += init_elts;
+    
+      return const_p;
+
+    /* Examine CTOR to discover:
+       * how many scalar fields are set to nonzero values,
+         and place it in *P_NZ_ELTS;
+
+       * how many scalar fields in total are in CTOR,
+         and place it in *P_ELT_COUNT.
+       * whether the constructor is complete -- in the sense that every
+
+    
+    bool
+    categorize_ctor_elements (const_tree ctor, HOST_WIDE_INT *p_nz_elts,
+
+    			  HOST_WIDE_INT *p_init_elts, bool *p_complete)
+    {
+      *p_nz_elts = 0;
+
+      *p_init_elts = 0;
+      *p_complete = true;
+    
+
+    }
+    
+    /* TYPE is initialized by a constructor with NUM_ELTS elements, the last
+
+      return count_type_elements (type, true) == num_elts;
+    }
+    
+
+    
+    static int
+    mostly_zeros_p (const_tree exp)
+    {
+      if (TREE_CODE (exp) == CONSTRUCTOR)
+        {
+
+          bool complete_p;
+    
+
+          return !complete_p || nz_elts < init_elts / 4;
+        }
+    
+
+    {
+      if (TREE_CODE (exp) == CONSTRUCTOR)
+        {
+
+          bool complete_p;
+    
+
+          return nz_elts == 0;
+        }
+    
+
+    extern unsigned HOST_WIDE_INT highest_pow2_factor (const_tree);
+    
+    extern bool categorize_ctor_elements (const_tree, HOST_WIDE_INT *,
+
+    
+    extern void expand_operands (tree, tree, rtx, rtx*, rtx*,
+    			     enum expand_modifier);
+
+          {
+    	struct gimplify_init_ctor_preeval_data preeval_data;
+    	HOST_WIDE_INT num_ctor_elements, num_nonzero_elements;
+
+    	bool cleared, complete_p, valid_const_initializer;
+
+    
+    	/* Aggregate types must lower constructors to initialization of
+    	   individual elements.  The exception is that a CONSTRUCTOR node
+
+    	   can only do so if it known to be a valid constant initializer.  */
+    	valid_const_initializer
+    	  = categorize_ctor_elements (ctor, &num_nonzero_elements,
+
+    				      &num_ctor_elements, &complete_p);
+    
+    	/* If a const aggregate variable is being initialized, then it
+
+    	    && num_nonzero_elements > 1
+    	    && TREE_READONLY (object)
+    	    && VAR_P (object)
+
+    	  {
+    	    if (notify_temp_creation)
+    	      return GS_ERROR;
+
+    	       is so large as to make individual moves inefficient.  */
+    	    if (size > 0
+    		&& num_nonzero_elements > 1
+
+    		&& (size < num_nonzero_elements
+    		    || !can_move_by_pieces (size, align)))
+    	      {
+
+
+    static bool
+    categorize_ctor_elements_1 (const_tree ctor, HOST_WIDE_INT *p_nz_elts,
+
+    			    HOST_WIDE_INT *p_init_elts, bool *p_complete)
+    {
+      unsigned HOST_WIDE_INT idx;
+
+      tree value, purpose, elt_type;
+    
+      /* Whether CTOR is a valid constant initializer, in accordance with what
+
+      bool const_p = const_from_elts_p ? true : TREE_STATIC (ctor);
+    
+      nz_elts = 0;
+
+      init_elts = 0;
+      num_fields = 0;
+      elt_type = NULL_TREE;
+
+    	{
+    	case CONSTRUCTOR:
+    	  {
+
+    
+
+    
+    	    nz_elts += mult * nz;
+
+     	    init_elts += mult * ic;
+    
+    	    if (const_from_elts_p && const_p)
+
+    	case REAL_CST:
+    	case FIXED_CST:
+    	  if (!initializer_zerop (value))
+
+    	  init_elts += mult;
+    	  break;
+    
+    	case STRING_CST:
+    	  nz_elts += mult * TREE_STRING_LENGTH (value);
+
+    	  init_elts += mult * TREE_STRING_LENGTH (value);
+    	  break;
+    
+    	case COMPLEX_CST:
+    	  if (!initializer_zerop (TREE_REALPART (value)))
+
+    	  if (!initializer_zerop (TREE_IMAGPART (value)))
+
+    	  break;
+    
+    	case VECTOR_CST:
+
+    	      {
+    		tree v = VECTOR_CST_ELT (value, i);
+    		if (!initializer_zerop (v))
+
+    		init_elts += mult;
+    	      }
+    	  }
+
+    	  {
+    	    HOST_WIDE_INT tc = count_type_elements (elt_type, false);
+    	    nz_elts += mult * tc;
+
+    	    init_elts += mult * tc;
+    
+    	    if (const_from_elts_p && const_p)
+
+        *p_complete = false;
+    
+      *p_nz_elts += nz_elts;
+
+      *p_init_elts += init_elts;
+    
+      return const_p;
+
+    /* Examine CTOR to discover:
+       * how many scalar fields are set to nonzero values,
+         and place it in *P_NZ_ELTS;
+
+       * how many scalar fields in total are in CTOR,
+         and place it in *P_ELT_COUNT.
+       * whether the constructor is complete -- in the sense that every
+
+    
+    bool
+    categorize_ctor_elements (const_tree ctor, HOST_WIDE_INT *p_nz_elts,
+
+    			  HOST_WIDE_INT *p_init_elts, bool *p_complete)
+    {
+      *p_nz_elts = 0;
+
+      *p_init_elts = 0;
+      *p_complete = true;
+    
+
+    }
+    
+    /* TYPE is initialized by a constructor with NUM_ELTS elements, the last
+
+      return count_type_elements (type, true) == num_elts;
+    }
+    
+
+    
+    static int
+    mostly_zeros_p (const_tree exp)
+    {
+      if (TREE_CODE (exp) == CONSTRUCTOR)
+        {
+
+          bool complete_p;
+    
+
+          return !complete_p || nz_elts < init_elts / 4;
+        }
+    
+
+    {
+      if (TREE_CODE (exp) == CONSTRUCTOR)
+        {
+
+          bool complete_p;
+    
+
+          return nz_elts == 0;
+        }
+    
+
+    extern unsigned HOST_WIDE_INT highest_pow2_factor (const_tree);
+    
+    extern bool categorize_ctor_elements (const_tree, HOST_WIDE_INT *,
+
+    
+    extern void expand_operands (tree, tree, rtx, rtx*, rtx*,
+    			     enum expand_modifier);
+
+          {
+    	struct gimplify_init_ctor_preeval_data preeval_data;
+    	HOST_WIDE_INT num_ctor_elements, num_nonzero_elements;
+
+    	bool cleared, complete_p, valid_const_initializer;
+
+    
+    	/* Aggregate types must lower constructors to initialization of
+    	   individual elements.  The exception is that a CONSTRUCTOR node
+
+    	   can only do so if it known to be a valid constant initializer.  */
+    	valid_const_initializer
+    	  = categorize_ctor_elements (ctor, &num_nonzero_elements,
+
+    				      &num_ctor_elements, &complete_p);
+    
+    	/* If a const aggregate variable is being initialized, then it
+
+    	    && num_nonzero_elements > 1
+    	    && TREE_READONLY (object)
+    	    && VAR_P (object)
+
+    	  {
+    	    if (notify_temp_creation)
+    	      return GS_ERROR;
+
+    	       is so large as to make individual moves inefficient.  */
+    	    if (size > 0
+    		&& num_nonzero_elements > 1
+
+    		&& (size < num_nonzero_elements
+    		    || !can_move_by_pieces (size, align)))
+    	      {
+
+tree compound_stmt;
+      int destroy_temps;
+      tree try_block = NULL_TREE;
+
+      bool is_global;
+      tree obase = base;
+      bool xvalue = false;
+
+    
+    	  if (e)
+    	    {
+
+    		{
+    		  tree field = size_int (num_initialized_elts);
+
+    		  CONSTRUCTOR_APPEND_ELT (const_vec, field, e);
+    		}
+    	    }
+
+tree compound_stmt;
+      int destroy_temps;
+      tree try_block = NULL_TREE;
+
+      bool is_global;
+      tree obase = base;
+      bool xvalue = false;
+
+    
+    	  if (e)
+    	    {
+
+    		{
+    		  tree field = size_int (num_initialized_elts);
+
+    		  CONSTRUCTOR_APPEND_ELT (const_vec, field, e);
+    		}
+    	    }
+

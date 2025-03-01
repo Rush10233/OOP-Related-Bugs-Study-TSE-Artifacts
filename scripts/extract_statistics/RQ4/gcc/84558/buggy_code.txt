@@ -1,0 +1,30 @@
+eltinit = (cxx_eval_constant_expression
+    		     (&new_ctx, eltinit, lval,
+    		      non_constant_p, overflow_p));
+
+    	  from the first iteration to all others if it is a constant
+    	  initializer that doesn't require relocations.  */
+
+    	  && (initializer_constant_valid_p (eltinit, TREE_TYPE (eltinit))
+    	      == null_pointer_node))
+
+eltinit = (cxx_eval_constant_expression
+    		     (&new_ctx, eltinit, lval,
+    		      non_constant_p, overflow_p));
+
+    	  from the first iteration to all others if it is a constant
+    	  initializer that doesn't require relocations.  */
+
+    	  && (initializer_constant_valid_p (eltinit, TREE_TYPE (eltinit))
+    	      == null_pointer_node))
+
+eltinit = (cxx_eval_constant_expression
+    		     (&new_ctx, eltinit, lval,
+    		      non_constant_p, overflow_p));
+
+    	  from the first iteration to all others if it is a constant
+    	  initializer that doesn't require relocations.  */
+
+    	  && (initializer_constant_valid_p (eltinit, TREE_TYPE (eltinit))
+    	      == null_pointer_node))
+

@@ -1,0 +1,39 @@
+}
+    }
+    
+
+    /* Extract element INDEX consisting of CHARS_PER_ELT chars from
+       STRING_CST STRING.  */
+    
+
+    	}
+        }
+    
+
+      VERIFY_CONSTANT (nelts);
+      if ((lval
+           ? !tree_int_cst_le (index, nelts)
+
+    		     bool *non_constant_p, bool *overflow_p)
+    {
+      tree elttype = TREE_TYPE (atype);
+      verify_ctor_sanity (ctx, atype);
+      vec<constructor_elt, va_gc> **p = &CONSTRUCTOR_ELTS (ctx->ctor);
+      bool pre_init = false;
+
+          pre_init = true;
+        }
+    
+
+      for (i = 0; i < max; ++i)
+        {
+          tree idx = build_int_cst (size_type_node, i);
+
+    	case ARRAY_REF:
+    	  tree nelts, ary;
+    	  ary = TREE_OPERAND (probe, 0);
+
+    	  VERIFY_CONSTANT (nelts);
+    	  gcc_assert (TREE_CODE (nelts) == INTEGER_CST
+    		      && TREE_CODE (TREE_OPERAND (probe, 1)) == INTEGER_CST);
+

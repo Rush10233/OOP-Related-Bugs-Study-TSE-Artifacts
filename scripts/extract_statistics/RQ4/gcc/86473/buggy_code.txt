@@ -1,0 +1,12 @@
+/* Tell cp_parser_lookup_name that there was an object, even though it's
+           type-dependent.  */
+        parser->context->object_type = unknown_type_node;
+
+         to a template-id, so we save it here.  */
+      scope = parser->scope;
+
+          if (object_type == unknown_type_node)
+    	/* The object is type-dependent, so we can't look anything up; we used
+    	   this to get the DR 141 behavior.  */
+    	object_type = NULL_TREE;
+

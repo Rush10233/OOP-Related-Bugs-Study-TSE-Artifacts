@@ -1,0 +1,2 @@
+return FriendDecl::Create(Context, CurContext, LocStart, TSInfo, FriendLoc);
+

@@ -1,0 +1,12 @@
+up for expressions that involve 'this' in a member function
+    	 template.  */
+    
+
+    	/* When comparing hash table entries, only an exact match is
+    	   good enough; we don't want to replace 'this' with the
+    	   version from another function.  But be more flexible
+
+    	return false;
+    
+          if (same_type_p (TREE_TYPE (t1), TREE_TYPE (t2)))
+

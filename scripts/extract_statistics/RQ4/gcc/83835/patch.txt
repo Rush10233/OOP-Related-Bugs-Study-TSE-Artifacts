@@ -1,0 +1,8 @@
+else if (TREE_CODE (arg) == TARGET_EXPR)
+    	    TARGET_EXPR_DIRECT_INIT_P (arg) = true;
+    
+
+else if (TREE_CODE (arg) == TARGET_EXPR)
+    	    TARGET_EXPR_DIRECT_INIT_P (arg) = true;
+    
+

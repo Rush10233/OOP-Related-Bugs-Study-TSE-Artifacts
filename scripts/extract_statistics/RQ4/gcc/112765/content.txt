@@ -1,0 +1,24 @@
+build_x_modify_expr sets it and it must not be reset
+    	   here.  */
+    	if (warning_suppressed_p (t, OPT_Wparentheses))
+
+    
+    	RETURN (r);
+          }
+
+    void
+    maybe_warn_unparenthesized_assignment (tree t, tsubst_flags_t complain)
+    {
+
+    
+      if ((complain & tf_warning)
+          && warn_parentheses
+
+        {
+          /* This inhibits warnings in maybe_warn_unparenthesized_assignment
+    	 and c_common_truthvalue_conversion.  */
+
+        }
+    
+      if (TREE_CODE (expr) == OFFSET_REF
+

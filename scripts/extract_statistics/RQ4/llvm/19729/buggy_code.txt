@@ -1,0 +1,60 @@
+unsigned NumArgsToCheck = Args.size();
+
+      if (Args.size() != NumParams)
+        // Use default arguments for missing arguments
+        NumArgsToCheck = NumParams;
+
+      for (unsigned i = FirstParam; i != NumArgsToCheck; i++) {
+
+        ParmVarDecl *Param;
+
+          // Pass the argument
+          Param = 0;
+          if (FDecl && i < FDecl->getNumParams())
+            Param = FDecl->getParamDecl(i);
+    
+
+          
+
+          assert(FDecl && "can't use default arguments without a known callee");
+          Param = FDecl->getParamDecl(i);
+
+        // Add default arguments, if any.
+
+          OperatorNew->getType()->getAs<FunctionProtoType>();
+        VariadicCallType CallType =
+          Proto->isVariadic() ? VariadicFunction : VariadicDoesNotApply;
+
+      // FindAllocationOverload can change the passed in arguments, so we need to
+      // copy them back.
+      if (!PlaceArgs.empty())
+        std::copy(AllocArgs.begin() + 1, AllocArgs.end(), PlaceArgs.data());
+    
+
+    /// FindAllocationOverload - Find an fitting overload for the allocation
+    /// function in the specified scope.
+
+        MarkFunctionReferenced(StartLoc, FnDecl);
+        // The first argument is size_t, and the first parameter must be size_t,
+        // too. This is checked on declaration and can be assumed. (It can't be
+        // asserted on, though, since invalid decls are left in there.)
+        // Watch out for variadic allocator function.
+        unsigned NumArgsInFnDecl = FnDecl->getNumParams();
+        for (unsigned i = 0; (i < Args.size() && i < NumArgsInFnDecl); ++i) {
+          InitializedEntity Entity = InitializedEntity::InitializeParameter(Context,
+                                                           FnDecl->getParamDecl(i));
+    
+          if (!Diagnose && !CanPerformCopyInitialization(Entity, Owned(Args[i])))
+            return true;
+    
+          ExprResult Result
+            = PerformCopyInitialization(Entity, SourceLocation(), Owned(Args[i]));
+          if (Result.isInvalid())
+            return true;
+    
+          Args[i] = Result.takeAs<Expr>();
+        }
+    
+        Operator = FnDecl;
+    
+

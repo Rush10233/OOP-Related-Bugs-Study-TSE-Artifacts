@@ -1,0 +1,7 @@
+if (DECL_NONSTATIC_MEMBER_FUNCTION_P (OVL_CURRENT (fns)))
+    	    {
+    	      /* Found a non-static member.  Capture this.  */
+    	      lambda_expr_this_capture (lam, true);
+    	      break;
+    	    }
+

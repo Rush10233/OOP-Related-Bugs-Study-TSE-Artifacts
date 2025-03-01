@@ -1,0 +1,8 @@
+if (DECL_CONSTRUCTOR_P (r) || DECL_DESTRUCTOR_P (r))
+    	  {
+    	    maybe_retrofit_in_chrg (r);
+
+    	    /* If this is an instantiation of a member template, clone it.
+    	       If it isn't, that'll be handled by
+    	       clone_constructors_and_destructors.  */
+

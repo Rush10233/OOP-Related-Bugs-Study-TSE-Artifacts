@@ -1,0 +1,102 @@
+def err_qualified_friend_no_match : Error<
+      "friend declaration of %0 does not match any declaration in %1">;
+
+      bool CheckFunctionTemplateSpecialization(
+          FunctionDecl *FD, TemplateArgumentListInfo *ExplicitTemplateArgs,
+          LookupResult &Previous, bool QualifiedFriend = false);
+
+      // Skip friends and local extern declarations unless they're the first
+      // declaration of the entity.
+      if ((D->isLocalExternDecl() || D->getFriendObjectKind()) &&
+          D != D->getCanonicalDecl())
+        return true;
+    
+
+      if (New->getDeclName() && AddToScope)
+        PushOnScopeChains(New, S);
+
+      unsigned DiagMsg =
+        IsLocalFriend ? diag::err_no_matching_local_friend :
+        NewFD->getFriendObjectKind() ? diag::err_qualified_friend_no_match :
+        diag::err_member_decl_does_not_match;
+
+          //
+          // FIXME: We should only do this if the scope specifier names the
+          // innermost enclosing namespace; otherwise the fixit changes the
+          // meaning of the code.
+
+          // The declaration is visible to argument-dependent lookup if either
+          // it's ordinarily visible or declared as a friend in an associated
+          // class.
+          bool Visible = false;
+          for (D = D->getMostRecentDecl(); D;
+               D = cast_or_null<NamedDecl>(D->getPreviousDecl())) {
+            if (D->getIdentifierNamespace() & Decl::IDNS_Ordinary) {
+              if (isVisible(D)) {
+                Visible = true;
+                break;
+              }
+            } else if (D->getFriendObjectKind()) {
+              auto *RD = cast<CXXRecordDecl>(D->getLexicalDeclContext());
+              if (AssociatedClasses.count(RD) && isVisible(D)) {
+                Visible = true;
+
+          if (Visible)
+            Result.insert(Underlying);
+
+      // C++ [temp.friend]p1:
+      //   For a friend function declaration that is not a template declaration:
+      //    -- if the name of the friend is a qualified or unqualified template-id,
+      //       [...], otherwise
+      //    -- if the name of the friend is a qualified-id and a matching
+      //       non-template function is found in the specified class or namespace,
+      //       the friend declaration refers to that function, otherwise,
+      //    -- if the name of the friend is a qualified-id and a matching function
+      //       template is found in the specified class or namespace, the friend
+      //       declaration refers to the deduced specialization of that function
+      //       template, otherwise
+      //    -- the name shall be an unqualified-id [...]
+      // If we get here for a qualified friend declaration, we've just reached the
+      // third bullet. If the type of the friend is dependent, skip this lookup
+      // until instantiation.
+      if (New->getFriendObjectKind() && New->getQualifier() &&
+          !New->getType()->isDependentType()) {
+        LookupResult TemplateSpecResult(LookupResult::Temporary, Old);
+        TemplateSpecResult.addAllDecls(Old);
+        if (CheckFunctionTemplateSpecialization(New, nullptr, TemplateSpecResult,
+                                                /*QualifiedFriend*/true)) {
+          New->setInvalidDecl();
+          return Ovl_Overload;
+        }
+    
+        Match = TemplateSpecResult.getAsSingle<FunctionDecl>();
+        return Ovl_Match;
+      }
+    
+
+    ///
+    /// \param QualifiedFriend whether this is a lookup for a qualified friend
+    /// declaration with no explicit template argument list that might be
+    /// befriending a function template specialization.
+
+        LookupResult &Previous, bool QualifiedFriend) {
+
+      // For a qualified friend declaration (with no explicit marker to indicate
+      // that a template specialization was intended), note all (template and
+      // non-template) candidates.
+      if (QualifiedFriend && Candidates.empty()) {
+        Diag(FD->getLocation(), diag::err_qualified_friend_no_match)
+            << FD->getDeclName() << FDLookupContext;
+        // FIXME: We should form a single candidate list and diagnose all
+        // candidates at once, to get proper sorting and limiting.
+        for (auto *OldND : Previous) {
+          if (auto *OldFD = dyn_cast<FunctionDecl>(OldND->getUnderlyingDecl()))
+            NoteOverloadCandidate(OldND, OldFD, FD->getType(), false);
+        }
+        FailedCandidates.NoteCandidates(*this, FD->getLocation());
+        return true;
+      }
+    
+
+          Candidates.begin(), Candidates.end(), FailedCandidates, FD->getLocation(),
+

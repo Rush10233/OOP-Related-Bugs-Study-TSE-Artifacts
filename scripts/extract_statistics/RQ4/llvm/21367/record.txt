@@ -1,0 +1,6 @@
+Commit:	50d634b
+./clang/lib/Parse/ParseDecl.cpp	4530,4530
+./clang/lib/Parse/ParseDecl.cpp	4534,4534
+./clang/lib/Parse/ParseDecl.cpp	4538,4538
+./clang/lib/Parse/ParseDecl.cpp	4618,4618
+./clang/lib/Parse/ParseDecl.cpp	4813,4813

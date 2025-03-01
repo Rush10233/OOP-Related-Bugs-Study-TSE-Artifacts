@@ -1,0 +1,69 @@
+#define DECL_MODULE_KEYED_DECLS_P(NODE)			\
+      (DECL_LANG_SPECIFIC (TREE_CHECK2(NODE,FUNCTION_DECL,VAR_DECL))\
+       ->u.base.module_keyed_decls_p)
+
+      unsigned concept_p : 1;                  /* applies to vars and functions */
+
+      /* The following apply to VAR, FUNCTION, TYPE, CONCEPT, & NAMESPACE
+
+      unsigned module_purview_p : 1;	   // in named-module purview
+      unsigned module_attach_p : 1;		   // attached to named module
+      unsigned module_import_p : 1;     	   /* from an import */
+      unsigned module_entity_p : 1;		   /* is in the entitity ary &
+    					      hash.  */
+      /* VAR_DECL or FUNCTION_DECL has keyed decls.     */
+      unsigned module_keyed_decls_p : 1;
+    
+      /* 12 spare bits.  */
+
+      if (VAR_OR_FUNCTION_DECL_P (t))
+        WB (lang->u.base.module_keyed_decls_p);
+
+      if (VAR_OR_FUNCTION_DECL_P (t))
+        RB (lang->u.base.module_keyed_decls_p);
+
+      if (VAR_OR_FUNCTION_DECL_P (inner)
+          && DECL_LANG_SPECIFIC (inner)
+
+      if (VAR_OR_FUNCTION_DECL_P (inner)
+          && DECL_LANG_SPECIFIC (inner)
+
+    		if (TREE_CODE (scope) == VAR_DECL
+    		    && DECL_MODULE_KEYED_DECLS_P (scope))
+    		  {
+    		    mk = MK_keyed;
+    		    break;
+    		  }
+
+    	    gcc_checking_assert (TREE_CODE (scope) == VAR_DECL);
+
+    	    if (mk == MK_keyed)
+    	      {
+    		if (DECL_LANG_SPECIFIC (name)
+    		    && VAR_OR_FUNCTION_DECL_P (name)
+    		    && DECL_MODULE_KEYED_DECLS_P (name))
+    		  if (auto *set = keyed_table->get (name))
+    		    if (key.index < set->length ())
+    		      {
+    			existing = (*set)[key.index];
+    			if (existing)
+    			  {
+    			    gcc_checking_assert
+    			      (DECL_IMPLICIT_TYPEDEF_P (existing));
+    			    if (inner != decl)
+    			      existing
+    				= CLASSTYPE_TI_TEMPLATE (TREE_TYPE (existing));
+    			  }
+    		      }
+    	      }
+    	    else if (is_attached
+    		     && !(state->is_module () || state->is_partition ()))
+
+      // FIXME: For now just deal with lambdas attached to var decls.
+      // This might be sufficient?
+      if (TREE_CODE (ctx) != VAR_DECL)
+
+    	pushclass (type);
+
+    	popclass ();
+

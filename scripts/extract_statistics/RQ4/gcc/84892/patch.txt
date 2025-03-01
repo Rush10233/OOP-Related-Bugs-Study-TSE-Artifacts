@@ -1,0 +1,3 @@
+tree this_class = class_of_this_parm (fntype);
+          if (!TYPE_READONLY (this_class))
+

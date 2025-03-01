@@ -1,0 +1,84 @@
+sub = build3 (COMPONENT_REF, inner_type, dest, field_index,
+    			      NULL_TREE);
+    
+
+    		complete_p = false;
+    	      else
+    		CONSTRUCTOR_ELTS (init)->ordered_remove (idx--);
+
+    	  && (!TYPE_DOMAIN (TREE_TYPE (local->field))
+    	      || !TYPE_MAX_VALUE (TYPE_DOMAIN (TREE_TYPE (local->field)))))
+    	{
+
+    	  /* Given a non-empty initialization, this field had better
+    	     be last.  Given a flexible array member, the next field
+    	     on the chain is a TYPE_DECL of the enclosing struct.  */
+    	  const_tree next = DECL_CHAIN (local->field);
+    	  gcc_assert (!fieldsize || !next || TREE_CODE (next) != FIELD_DECL);
+    	}
+          else
+    	fieldsize = tree_to_uhwi (DECL_SIZE_UNIT (local->field));
+
+sub = build3 (COMPONENT_REF, inner_type, dest, field_index,
+    			      NULL_TREE);
+    
+
+    		complete_p = false;
+    	      else
+    		{
+
+    	  && (!TYPE_DOMAIN (TREE_TYPE (local->field))
+    	      || !TYPE_MAX_VALUE (TYPE_DOMAIN (TREE_TYPE (local->field)))))
+    	{
+
+    	  /* Given a non-empty initialization, this field had better
+    	     be last.  Given a flexible array member, the next field
+    	     on the chain is a TYPE_DECL of the enclosing struct.  */
+    	  const_tree next = DECL_CHAIN (local->field);
+    	  gcc_assert (!fieldsize || !next || TREE_CODE (next) != FIELD_DECL);
+    	}
+          else
+    	fieldsize = tree_to_uhwi (DECL_SIZE_UNIT (local->field));
+
+sub = build3 (COMPONENT_REF, inner_type, dest, field_index,
+    			      NULL_TREE);
+    
+
+    		complete_p = false;
+    	      else
+    		{
+
+    	  && (!TYPE_DOMAIN (TREE_TYPE (local->field))
+    	      || !TYPE_MAX_VALUE (TYPE_DOMAIN (TREE_TYPE (local->field)))))
+    	{
+
+    	  /* Given a non-empty initialization, this field had better
+    	     be last.  Given a flexible array member, the next field
+    	     on the chain is a TYPE_DECL of the enclosing struct.  */
+    	  const_tree next = DECL_CHAIN (local->field);
+    	  gcc_assert (!fieldsize || !next || TREE_CODE (next) != FIELD_DECL);
+    	}
+          else
+    	fieldsize = tree_to_uhwi (DECL_SIZE_UNIT (local->field));
+
+sub = build3 (COMPONENT_REF, inner_type, dest, field_index,
+    			      NULL_TREE);
+    
+
+    		complete_p = false;
+    	      else
+    		{
+
+    	  && (!TYPE_DOMAIN (TREE_TYPE (local->field))
+    	      || !TYPE_MAX_VALUE (TYPE_DOMAIN (TREE_TYPE (local->field)))))
+    	{
+
+    	  /* Given a non-empty initialization, this field had better
+    	     be last.  Given a flexible array member, the next field
+    	     on the chain is a TYPE_DECL of the enclosing struct.  */
+    	  const_tree next = DECL_CHAIN (local->field);
+    	  gcc_assert (!fieldsize || !next || TREE_CODE (next) != FIELD_DECL);
+    	}
+          else
+    	fieldsize = tree_to_uhwi (DECL_SIZE_UNIT (local->field));
+

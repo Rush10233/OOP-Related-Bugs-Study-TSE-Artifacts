@@ -1,0 +1,272 @@
+
+          if (init && TREE_CODE (init) != TREE_VEC)
+    	{
+    	  init_code = store_init_value (decl, init, cleanups, flags);
+    
+    	  if (DECL_INITIAL (decl)
+
+          tree guard = (tree)data;
+          tree tcleanup = TARGET_EXPR_CLEANUP (*stmt_p);
+    
+
+    	{
+    	  tcleanup = build2 (TRY_CATCH_EXPR, void_type_node, tcleanup, guard);
+    	  /* Tell honor_protect_cleanup_actions to handle this as a separate
+
+        {
+          tree rinit = (TREE_CODE (init) == INIT_EXPR
+    		    ? TREE_OPERAND (init, 1) : NULL_TREE);
+
+    	{
+    	  /* Stick simple initializers in DECL_INITIAL so that
+    	     -Wno-init-self works (c++/34772).  */
+    	  DECL_INITIAL (decl) = rinit;
+    
+    	  if (warn_init_self && TYPE_REF_P (type))
+
+    }
+    
+    
+
+    /* The recursive part of split_nonconstant_init.  DEST is an lvalue
+       expression to which INIT should be assigned.  INIT is a CONSTRUCTOR.
+       Return true if the whole of the value was initialized by the
+       generated statements.  */
+    
+    static bool
+
+    {
+      unsigned HOST_WIDE_INT idx, tidx = HOST_WIDE_INT_M1U;
+      tree field_index, value;
+
+    	  if (nested)
+    	    /* Also clean up the whole array if something later in an enclosing
+    	       init-list throws.  */
+
+    	  return true;
+    	}
+          /* FALLTHRU */
+
+    		sub = build3 (COMPONENT_REF, inner_type, dest, field_index,
+    			      NULL_TREE);
+    
+
+    		      /* For flexible array member with initializer we
+    			 can't remove the initializer, because only the
+    			 initializer determines how many elements the
+
+    		      code = build2 (INIT_EXPR, inner_type, sub, value);
+    		    }
+    		  code = build_stmt (input_location, EXPR_STMT, code);
+    		  add_stmt (code);
+
+    		}
+    
+    	      num_split_elts++;
+
+        init = TARGET_EXPR_INITIAL (init);
+      if (TREE_CODE (init) == CONSTRUCTOR)
+        {
+
+          init = cp_fully_fold_init (init);
+          code = push_stmt_list ();
+
+    	init = NULL_TREE;
+
+          code = pop_stmt_list (code);
+          if (VAR_P (dest) && !is_local_temp (dest))
+    	{
+
+int, tsubst_flags_t);
+    extern tree get_temp_regvar			(tree, tree);
+    extern tree build_vec_init			(tree, tree, tree, bool, int,
+
+    extern tree build_delete			(location_t, tree, tree,
+    						 special_function_kind,
+    						 int, int, tsubst_flags_t);
+
+    extern bool vla_type_p				(tree);
+    extern tree build_array_copy			(tree);
+    extern tree build_vec_init_expr			(tree, tree, tsubst_flags_t);
+
+    extern void diagnose_non_constexpr_vec_init	(tree);
+    extern tree hash_tree_cons			(tree, tree, tree);
+    extern tree hash_tree_chain			(tree, tree);
+
+    
+    	  /* If we're only initializing a single object, guard the
+    	     destructors of any temporaries used in its initializer with
+
+    	  if (cleanup && TREE_CODE (type) != ARRAY_TYPE)
+    	    wrap_temporary_cleanups (init, cleanup);
+    
+
+    tree
+    build_vec_init (tree base, tree maxindex, tree init,
+    		bool explicit_value_init_p,
+
+    {
+      tree rval;
+      tree base2 = NULL_TREE;
+
+      tree stmt_expr;
+      tree compound_stmt;
+      int destroy_temps;
+      HOST_WIDE_INT num_initialized_elts = 0;
+      bool is_global;
+      tree obase = base;
+
+      current_stmt_tree ()->stmts_are_full_exprs_p = 0;
+      rval = get_temp_regvar (ptype, base);
+      base = get_temp_regvar (ptype, rval);
+
+    
+      /* If initializing one array from another, initialize element by
+         element.  We rely upon the below calls to do the argument
+
+      if (flag_exceptions && TYPE_HAS_NONTRIVIAL_DESTRUCTOR (type)
+          && from_array != 2)
+        {
+
+        }
+    
+      /* Should we try to create a constant initializer?  */
+
+    
+    	  num_initialized_elts++;
+    
+    	  if (digested)
+    	    one_init = build2 (INIT_EXPR, type, baseref, elt);
+    	  else if (TREE_CODE (elt) == VEC_INIT_EXPR)
+
+    	  else if (MAYBE_CLASS_TYPE_P (type) || TREE_CODE (type) == ARRAY_TYPE)
+    	    one_init = build_aggr_init (baseref, elt, 0, complain);
+    	  else
+
+    
+    	  if (one_init)
+    	    finish_expr_stmt (one_init);
+    
+    	  one_init = cp_build_unary_op (PREINCREMENT_EXPR, base, false,
+    					complain);
+
+    	    }
+    	}
+    
+
+          current_stmt_tree ()->stmts_are_full_exprs_p = 1;
+          if (elt_init && !errors)
+    	elt_init = build2 (COMPOUND_EXPR, void_type_node, elt_init, decr);
+
+          finish_for_stmt (for_stmt);
+        }
+    
+      /* The value of the array initialization is the array itself, RVAL
+         is a pointer to the first element.  */
+      finish_stmt_expr_expr (rval, stmt_expr);
+
+       means VEC_INIT_EXPR_SLOT).  */
+    
+    tree
+
+    {
+      iloc_sentinel ils = EXPR_LOCATION (vec_init);
+    
+
+      int from_array = (init && TREE_CODE (TREE_TYPE (init)) == ARRAY_TYPE);
+      return build_vec_init (target, NULL_TREE, init,
+    			 VEC_INIT_EXPR_VALUE_INIT (vec_init),
+
+    }
+    
+    /* Give a helpful diagnostic for a non-constexpr VEC_INIT_EXPR in a context
+
+       generated statements.  */
+    
+    static bool
+
+    {
+      unsigned HOST_WIDE_INT idx, tidx = HOST_WIDE_INT_M1U;
+      tree field_index, value;
+
+    	    }
+    
+    	  /* For an array, we only need/want a single cleanup region rather
+
+    	  tree code = build_vec_init (dest, NULL_TREE, init, false, 1,
+
+    	  add_stmt (code);
+    	  return true;
+    	}
+          /* FALLTHRU */
+
+    	  if (!array_type_p)
+    	    inner_type = TREE_TYPE (field_index);
+    
+
+    	  if (TREE_CODE (value) == CONSTRUCTOR)
+    	    {
+
+    		      /* For flexible array member with initializer we
+    			 can't remove the initializer, because only the
+    			 initializer determines how many elements the
+
+    		  num_split_elts++;
+    		}
+    	    }
+
+    	  else if (!initializer_constant_valid_p (value, inner_type))
+    	    {
+    	      tree code;
+    
+    	      /* Mark element for removal.  */
+    	      CONSTRUCTOR_ELT (init, idx)->index = NULL_TREE;
+
+    		}
+    	      else
+    		{
+    		  /* We may need to add a copy constructor call if
+    		     the field has [[no_unique_address]].  */
+    		  if (unsafe_return_slot_p (sub))
+
+          init = cp_fully_fold_init (init);
+          code = push_stmt_list ();
+    
+
+    
+
+    	init = NULL_TREE;
+    
+          for (tree f : flags)
+    	{
+    	  /* See maybe_push_temp_cleanup.  */
+    	  tree d = f;
+    	  tree i = boolean_false_node;
+
+    	  add_stmt (build2 (MODIFY_EXPR, TREE_TYPE (d), d, i));
+    	}
+          release_tree_vector (flags);
+
+/* Gimplify initialization from an AGGR_INIT_EXPR.  */
+    
+    static void
+
+    {
+      tree from = TREE_OPERAND (*expr_p, 1);
+      tree to = TREE_OPERAND (*expr_p, 0);
+
+      if (TREE_CODE (from) == TARGET_EXPR && TARGET_EXPR_INITIAL (from))
+        from = TARGET_EXPR_INITIAL (from);
+    
+      /* Look through any COMPOUND_EXPRs, since build_compound_expr pushes them
+         inside the TARGET_EXPR.  */
+      for (t = from; t; )
+
+    	 LHS of an assignment might also be involved in the RHS, as in bug
+    	 25979.  */
+        case INIT_EXPR:
+
+          if (TREE_CODE (*expr_p) != INIT_EXPR)
+    	return GS_OK;
+          /* Fall through.  */
+

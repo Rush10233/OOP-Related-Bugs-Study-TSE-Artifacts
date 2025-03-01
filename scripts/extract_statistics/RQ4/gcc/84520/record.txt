@@ -1,0 +1,6 @@
+Commit:	59f743e
+./gcc/cp/lambda.c	672,672
+Commit:	d36a19c
+./gcc/cp/lambda.c	765,765
+Commit:	a68f6ea
+./gcc/cp/lambda.c	720,720

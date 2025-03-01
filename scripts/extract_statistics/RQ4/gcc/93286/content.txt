@@ -1,0 +1,72 @@
+if (t == void_list_node)
+    	  return t;
+    
+
+    	purpose = TREE_PURPOSE (t);
+    	if (purpose)
+    	  {
+
+          {
+    	tree type1 = tsubst (TRAIT_EXPR_TYPE1 (t), args,
+    			     complain, in_decl);
+
+    	RETURN (finish_trait_expr (TRAIT_EXPR_KIND (t), type1, type2));
+          }
+    
+
+if (t == void_list_node)
+    	  return t;
+    
+
+    	purpose = TREE_PURPOSE (t);
+    	if (purpose)
+    	  {
+
+          {
+    	tree type1 = tsubst (TRAIT_EXPR_TYPE1 (t), args,
+    			     complain, in_decl);
+
+    	RETURN (finish_trait_expr (TRAIT_EXPR_LOCATION (t),
+    				   TRAIT_EXPR_KIND (t), type1, type2));
+          }
+
+tsubst_flags_t);
+    extern tree tsubst (tree, tree, tsubst_flags_t, tree);
+    extern tree tsubst_copy_and_build		(tree, tree, tsubst_flags_t,
+
+    extern tree tsubst_expr                         (tree, tree, tsubst_flags_t,
+                                                     tree, bool);
+    extern tree tsubst_pack_expansion		(tree, tree, tsubst_flags_t, tree);
+
+          && is_attribute_p ("omp declare simd", name))
+        return true;
+    
+
+      /* An attribute pack is clearly dependent.  */
+      if (args && PACK_EXPANSION_P (args))
+        return true;
+
+      return new_specs;
+    }
+    
+
+    /* Take the tree structure T and replace template parameters used
+       therein with the argument vector ARGS.  IN_DECL is an associated
+       decl for diagnostics.  If an error occurs, returns ERROR_MARK_NODE.
+
+          }
+    
+        case TREE_LIST:
+
+    
+        case TREE_BINFO:
+          /* We should never be tsubsting a binfo.  */
+
+          }
+    
+        case TREE_LIST:
+
+    
+        case COMPONENT_REF:
+          {
+

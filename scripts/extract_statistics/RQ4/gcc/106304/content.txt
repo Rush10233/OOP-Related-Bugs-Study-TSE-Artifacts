@@ -1,0 +1,16 @@
+{
+      return (cxx_dialect >= cxx20
+    	  && id_equal (DECL_NAME (fndecl), "__dynamic_cast")
+
+    }
+    
+    /* Often, we have an expression in the form of address + offset, e.g.
+
+    			       NULL_TREE));
+    	      dcast_fn = (build_library_fn_ptr
+    			  (fn_name, fn_type, ECF_LEAF | ECF_PURE | ECF_NOTHROW));
+
+    	      pop_abi_namespace (flags);
+    	      dynamic_cast_node = dcast_fn;
+    	    }
+

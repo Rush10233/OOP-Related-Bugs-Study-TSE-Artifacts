@@ -1,0 +1,3 @@
+assert(Lookup.size() == 1);
+            FieldDecl *Pattern = cast<FieldDecl>(Lookup[0]);
+

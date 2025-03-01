@@ -1,0 +1,8 @@
+tsubst_flags_t arg_complain = complain & (~tf_no_cleanup);
+          if (!conversion_warning)
+    	arg_complain &= ~tf_warning;
+
+          val = convert_like_with_context (conv, arg, fn, i - is_method,
+    				       arg_complain);
+          val = convert_for_arg_passing (type, val, arg_complain);
+

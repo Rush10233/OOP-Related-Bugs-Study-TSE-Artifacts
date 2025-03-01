@@ -1,0 +1,5 @@
+Commit:	811b763
+./gcc/cp/parser.c	7757,7759
+./gcc/cp/parser.c	23628,23629
+./gcc/cp/parser.c	28343,28346
+./gcc/testsuite/g++.dg/lookup/this1.C	7,7

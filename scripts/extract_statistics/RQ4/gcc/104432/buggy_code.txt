@@ -1,0 +1,42 @@
+&& DECL_MEMBER_TEMPLATE_P (DECL_TI_TEMPLATE (fn))
+    	      && dependent_type_p (DECL_CONTEXT (fn)))
+
+    	      /* FIXME: We're not prepared to fully instantiate "inside-out"
+    		 partial instantiations such as A<T>::f<int>().  So instead
+    		 use the selected template, not the specialization.  */
+
+       NEWFNS is a lookup set of member functions from a specialization of that
+       class template.  Return the subset of NEWFNS which are specializations of
+       a function from OLDFNS.  */
+
+    filter_memfn_lookup (tree oldfns, tree newfns)
+
+    	     a dependent USING_DECL to its instantiation seems
+    	     tricky.  */
+
+          else if (TREE_CODE (fn) == TEMPLATE_DECL)
+    	/* A member function template.  */
+    	visible_set.add (fn);
+          else if (TREE_CODE (fn) == FUNCTION_DECL)
+    	{
+    	  if (DECL_TEMPLATE_INFO (fn))
+    	    /* A non-template member function.  */
+    	    visible_set.add (DECL_TI_TEMPLATE (fn));
+    	  else
+    	    /* A non-template member function from a non-template base,
+    	       injected via a using-decl.  */
+    	    visible_set.add (fn);
+    	}
+
+    	gcc_unreachable ();
+
+      auto visible_p = [&visible_set] (tree fn) {
+        if (TREE_CODE (fn) == FUNCTION_DECL
+    	&& !DECL_TEMPLATE_INFO (fn))
+
+        else if (DECL_TEMPLATE_INFO (fn))
+
+          gcc_unreachable ();
+
+    	    = filter_memfn_lookup (fns, BASELINK_FUNCTIONS (baselink));
+

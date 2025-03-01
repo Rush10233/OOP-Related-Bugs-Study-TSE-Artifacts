@@ -1,0 +1,6 @@
+// If a class is incomplete, do not parse entities inside it.
+
+          return nullptr;
+        }
+        if (!D.getDeclSpec().isFriendSpecified()) {
+

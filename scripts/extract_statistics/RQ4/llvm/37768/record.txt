@@ -1,0 +1,9 @@
+Commit:	b45fd5c
+./clang/lib/Parse/ParseDecl.cpp	3272,3278
+./clang/lib/Parse/ParseExprCXX.cpp	2508,2511
+./clang/lib/Parse/ParseExprCXX.cpp	2558,2562
+./clang/lib/Sema/SemaDeclCXX.cpp	2066,2066
+./clang/lib/Sema/SemaDeclCXX.cpp	2068,2079
+./clang/lib/Sema/SemaDeclCXX.cpp	5994,5995
+./clang/lib/Sema/SemaDeclCXX.cpp	5997,5997
+./clang/test/CXX/class/class.mem/p14.cpp	12,14

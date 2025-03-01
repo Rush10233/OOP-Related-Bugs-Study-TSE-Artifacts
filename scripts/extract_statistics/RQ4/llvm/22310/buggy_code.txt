@@ -1,0 +1,62 @@
+bool OnlyListConstructors, bool InitListSyntax) {
+
+          //   However, when considering the argument of a constructor or
+          //   user-defined conversion function that is a candidate:
+          //    -- by 13.3.1.3 when invoked for the copying/moving of a temporary
+          //       in the second step of a class copy-initialization,
+          //    -- by 13.3.1.7 when passing the initializer list as a single
+          //       argument or when the initializer list has exactly one elementand
+          //       a conversion to some class X or reference to (possibly
+          //       cv-qualified) X is considered for the first parameter of a
+          //       constructor of X, or
+          //    -- by 13.3.1.4, 13.3.1.5, or 13.3.1.6 in all cases,
+          //   only standard conversion sequences and ellipsis conversion sequences
+          //   are considered.
+          if ((CopyInitializing || (InitListSyntax && Args.size() == 1)) &&
+              Constructor->isCopyOrMoveConstructor())
+
+      // C++14 DR 1467 [over.match.list]p1:
+
+      // C++11 [over.match.list]p1:
+      //   When objects of non-aggregate type T are list-initialized, overload
+      //   resolution selects the constructor in two phases:
+      //
+
+                                              /*OnlyListConstructor=*/true,
+                                              InitListSyntax);
+
+                                            /*OnlyListConstructors=*/false,
+                                            InitListSyntax);
+
+      // C++14 DR1467 [dcl.init.list]p3:
+
+      // - Otherwise, If T is an aggregate, [...] (continue below).
+      if (S.getLangOpts().CPlusPlus14 && InitList->getNumInits() == 1) {
+
+        //     initialized from that element; if a narrowing conversion is required
+        //     to convert the element to T, the program is ill-formed.
+        //
+        // C++14 DR1467:
+        //   - Otherwise, if the initializer list has a single element of type E
+        //     [...references are handled above...], the object or reference is
+
+      // List-initialization sequence L1 is a better conversion sequence than
+      // list-initialization sequence L2 if L1 converts to std::initializer_list<X>
+      // for some X and L2 does not.
+      if (Result == ImplicitConversionSequence::Indistinguishable &&
+          !ICS1.isBad()) {
+        if (ICS1.isStdInitializerListElement() &&
+            !ICS2.isStdInitializerListElement())
+          return ImplicitConversionSequence::Better;
+        if (!ICS1.isStdInitializerListElement() &&
+            ICS2.isStdInitializerListElement())
+          return ImplicitConversionSequence::Worse;
+      }
+    
+
+        //    - if the initializer list has one element, the implicit conversion
+        //      sequence is the one required to convert the element to the
+        //      parameter type.
+
+        if (NumInits == 1)
+

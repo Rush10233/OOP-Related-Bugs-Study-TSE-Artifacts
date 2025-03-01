@@ -1,0 +1,62 @@
+auto_deduction_context
+    						 = adc_unspecified,
+    						 tree = NULL_TREE,
+
+    extern tree type_uses_auto			(tree);
+    extern tree type_uses_auto_or_concept		(tree);
+    extern void append_type_to_template_for_access_check (tree, tree, tree,
+
+          else if (tree a = type_uses_auto (t))
+    	{
+    	  t = do_auto_deduction (t, arg, a, complain, adc_unify, args,
+
+    	  if (t == error_mark_node)
+    	    return error_mark_node;
+    	}
+
+    		     the template.  */
+    		  argvec = (coerce_template_parms
+    			    (DECL_TEMPLATE_PARMS (gen_tmpl),
+
+    		if (argvec == error_mark_node)
+    		  RETURN (error_mark_node);
+    		hash = spec_hasher::hash (gen_tmpl, argvec);
+
+    	  if (tree a = type_uses_auto (tparm))
+    	    {
+    	      tparm = do_auto_deduction (tparm, arg, a,
+
+    	      if (tparm == error_mark_node)
+    		return 1;
+    	    }
+
+       adc_requirement contexts to communicate the necessary template arguments
+       to satisfaction.  OUTER_TARGS is ignored in other contexts.
+    
+
+    
+    tree
+    do_auto_deduction (tree type, tree init, tree auto_node,
+
+    {
+      if (init == error_mark_node)
+        return error_mark_node;
+
+    					/*return*/true)))
+        init = r;
+    
+
+        /* C++17 class template argument deduction.  */
+
+    
+      if (init == NULL_TREE || TREE_TYPE (init) == NULL_TREE)
+        /* Nothing we can do with this, even in deduction context.  */
+
+    		}
+    	    }
+    
+
+    
+          /* HACK: Compensate for callers not always communicating all levels of
+    	 outer template arguments by filling in the outermost missing levels
+

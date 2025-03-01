@@ -1,0 +1,42 @@
+if (!flag_concepts)
+        return true;
+    
+
+      if (!flag_concepts)
+        return true;
+    
+
+    	 An explicit instantiation that names a class template
+    	 specialization is also an explicit instantiation of the same
+    	 kind (declaration or definition) of each of its members (not
+    	 including members inherited from base classes and members
+    	 that are templates) that has not been previously explicitly
+    	 specialized in the translation unit containing the explicit
+    	 instantiation, provided that the associated constraints, if
+    	 any, of that member are satisfied by the template arguments
+    	 of the explicit instantiation.  */
+
+    	&& DECL_TEMPLATE_INSTANTIATION (fld)
+    	&& constraints_satisfied_p (fld))
+
+if (!flag_concepts)
+        return true;
+    
+
+      if (!flag_concepts)
+        return true;
+    
+
+    	 An explicit instantiation that names a class template
+    	 specialization is also an explicit instantiation of the same
+    	 kind (declaration or definition) of each of its members (not
+    	 including members inherited from base classes and members
+    	 that are templates) that has not been previously explicitly
+    	 specialized in the translation unit containing the explicit
+    	 instantiation, provided that the associated constraints, if
+    	 any, of that member are satisfied by the template arguments
+    	 of the explicit instantiation.  */
+
+    	&& DECL_TEMPLATE_INSTANTIATION (fld)
+    	&& constraints_satisfied_p (fld))
+

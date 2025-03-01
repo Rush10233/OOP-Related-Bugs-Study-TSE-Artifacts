@@ -1,0 +1,32 @@
+tsi_delink (&iter);
+    	}
+          tree dtor = build_cleanup (retval);
+
+          tree cond = build3 (COND_EXPR, void_type_node, current_retval_sentinel,
+    			  dtor, void_node);
+          tree cleanup = build_stmt (loc, CLEANUP_STMT,
+
+      tree var;
+      tree result;
+      hash_table<nofree_ptr_hash <tree_node> > visited;
+
+    };
+    
+    /* Helper function for walk_tree, used by finalize_nrv below.  */
+
+         thrown.  */
+      else if (TREE_CODE (*tp) == CLEANUP_STMT
+    	   && CLEANUP_DECL (*tp) == dp->var)
+
+      /* Replace the DECL_EXPR for the NRV with an initialization of the
+         RESULT_DECL, if needed.  */
+      else if (TREE_CODE (*tp) == DECL_EXPR
+
+    
+      data.var = var;
+      data.result = result;
+
+      cp_walk_tree (tp, finalize_nrv_r, &data, 0);
+    }
+    
+

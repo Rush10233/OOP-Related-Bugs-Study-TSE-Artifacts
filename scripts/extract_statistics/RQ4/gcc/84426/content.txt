@@ -1,0 +1,69 @@
+if (method == error_mark_node)
+        return false;
+    
+      gcc_assert (!DECL_EXTERN_C_P (method));
+    
+
+      /* Check to see if we've already got this method.  */
+      for (ovl_iterator iter (current_fns); iter; ++iter)
+        {
+
+    
+      current_fns = ovl_insert (method, current_fns, via_using);
+    
+
+    
+      *slot = current_fns;
+    
+
+    member_vec_linear_search (vec<tree, va_gc> *member_vec, tree name)
+    {
+      for (int ix = member_vec->length (); ix--;)
+        if (tree binding = (*member_vec)[ix])
+
+    
+      return NULL_TREE;
+    }
+
+    }
+    
+    /* Find the slot containing overloads called 'NAME'.  If there is no
+
+    
+    tree *
+
+    {
+      bool complete_p = COMPLETE_TYPE_P (klass);
+
+      vec<tree, va_gc> *member_vec = CLASSTYPE_MEMBER_VEC (klass);
+      if (!member_vec)
+        {
+
+    	break;
+        }
+    
+
+      if (complete_p)
+        {
+
+          vec_safe_reserve_exact (member_vec, 1);
+
+          member_vec->quick_insert (ix, NULL_TREE);
+
+        }
+
+      CLASSTYPE_MEMBER_VEC (klass) = member_vec;
+    
+
+        {
+          /* Install the marker prefix.  */
+          *slot = ovl_make (conv_op_marker, NULL_TREE);
+
+    extern tree search_anon_aggr (tree, tree);
+    extern tree get_class_binding_direct (tree, tree, int type_or_fns = -1);
+    extern tree get_class_binding (tree, tree, int type_or_fns = -1);
+
+    extern void resort_type_member_vec (void *, void *,
+    				    gt_pointer_operator, void *);
+    extern void set_class_bindings (tree, unsigned extra = 0);
+

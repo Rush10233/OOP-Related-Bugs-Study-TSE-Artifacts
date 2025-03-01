@@ -1,0 +1,8 @@
+}
+      else if ((flags & TFF_SCOPE) && TREE_CODE (scope) == FUNCTION_DECL)
+        {
+
+          pp_cxx_colon_colon (pp);
+        }
+    }
+

@@ -1,0 +1,26 @@
+{
+    	    op = cplus_expand_constant (op);
+    	    if (TREE_CODE (op) == PTRMEM_CST)
+    	      {
+    		if (!ctx->quiet)
+    		  error_at (loc, "%qE is not a constant expression when the "
+    			    "class %qT is still incomplete", op,
+    			    PTRMEM_CST_CLASS (op));
+    		*non_constant_p = true;
+    		return t;
+    	      }
+    	  }
+
+{
+    	    op = cplus_expand_constant (op);
+    	    if (TREE_CODE (op) == PTRMEM_CST)
+    	      {
+    		if (!ctx->quiet)
+    		  error_at (loc, "%qE is not a constant expression when the "
+    			    "class %qT is still incomplete", op,
+    			    PTRMEM_CST_CLASS (op));
+    		*non_constant_p = true;
+    		return t;
+    	      }
+    	  }
+

@@ -1,0 +1,32 @@
+return compparms (parms1, parms2);
+    }
+    
+
+    /* Compare two candidates for overloading as described in
+       [over.match.best].  Return values:
+    
+
+    	return winner;
+        }
+    
+
+      /* or, if not that,
+         F1 is a non-template function and F2 is a template function
+         specialization.  */
+
+return compparms (parms1, parms2);
+    }
+    
+
+    /* Compare two candidates for overloading as described in
+       [over.match.best].  Return values:
+    
+
+    	return winner;
+        }
+    
+
+      /* or, if not that,
+         F1 is a non-template function and F2 is a template function
+         specialization.  */
+

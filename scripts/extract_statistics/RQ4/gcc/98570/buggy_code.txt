@@ -1,0 +1,48 @@
+$(MAKE) RUNTESTFLAGS="$(RUNTESTFLAGS) --extra_opts,--param,ggc-min-heapsize=0,--param,ggc-min-expand=0" \
+
+/* Nonzero if we are inside eq_specializations, which affects
+       comparison of PARM_DECLs in cp_tree_equal and alias specializations
+       in structrual_comptypes.  */
+
+      comparing_specializations++;
+
+      comparing_specializations--;
+
+      if (!TYPE_P (t) || !typedef_variant_p (t))
+
+          /* Don't treat an alias template specialization with dependent
+    	 arguments as equivalent to its underlying type when used as a
+    	 template argument; we need them to be distinct so that we
+    	 substitute into the specialization arguments at instantiation
+    	 time.  And aliases can't be equivalent without being ==, so
+    	 we don't need to look any deeper.
+    
+             During partial ordering, however, we need to treat them normally so
+             that we can order uses of the same alias with different
+             cv-qualification (79960).  */
+          if (!partial_order
+    	  && (TYPE_ALIAS_P (nt) || TYPE_ALIAS_P (ot)))
+    	return false;
+          else
+    	return same_type_p (ot, nt);
+
+    	    if (TYPE_DECL_ALIAS_P (r))
+    	      /* An alias template specialization can be dependent
+    		 even if its underlying type is not.  */
+    	      TYPE_DEPENDENT_P_VALID (TREE_TYPE (r)) = false;
+
+    	  && DECL_CONTEXT (t1) != DECL_CONTEXT (t2)
+    	  /* Module duplicate checking can have t1 = new, t2 =
+    	     existing, and they should be considered matching at this
+    	     point.  */
+    	  && !(DECL_CONTEXT (t1) == map_context_from
+    	       && DECL_CONTEXT (t2) == map_context_to))
+
+      if (comparing_specializations)
+
+      if (strict == COMPARE_STRICT && comparing_specializations
+          && (t1 != TYPE_CANONICAL (t1) || t2 != TYPE_CANONICAL (t2)))
+        /* If comparing_specializations, treat dependent aliases as distinct.  */
+        strict = COMPARE_STRUCTURAL;
+    
+

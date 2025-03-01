@@ -1,0 +1,9 @@
+if (TREE_CODE (fns) == OVERLOAD && OVL_USED (fns))
+    	  continue;
+    
+
+/* Skip inherited constructors.  */
+          if (iter.using_p ())
+    	continue;
+    
+

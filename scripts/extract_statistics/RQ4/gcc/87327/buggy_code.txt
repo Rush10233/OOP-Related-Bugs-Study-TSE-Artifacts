@@ -1,0 +1,6 @@
+return cxx_eval_constant_expression (ctx, DECL_VALUE_EXPR (t),
+    					     lval, non_constant_p, overflow_p);
+
+return cxx_eval_constant_expression (ctx, DECL_VALUE_EXPR (t),
+    					     lval, non_constant_p, overflow_p);
+

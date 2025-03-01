@@ -1,0 +1,12 @@
+	60082   [clang] Recursive initialization causes front-end to seg fault
+0	60513   [Clang] using in combination of __declspec(align()) and static_assert doesn't work as expected.
+1	64088   ICE with dynamic_cast and multiple inheritance: Shouldn't query vtable linkage without key function
+2	61004   clang crash with constexpr = delete
+3	61238   clang rejects default constexpr operator of a templated type when instantiated with non-constexpr comparable object
+4	62102   [clang] Invalid cast assertion in clang::Sema::PrintInstantiationStack()
+5	62174   Clang will ignore using declarations from qualified name lookups when handling declarators
+6	67495   Clang: Crash on capturing invalid structured binding declaration in lambda expression (regression from 44f2baa3804a62)
+7	64088   ICE with dynamic_cast and multiple inheritance: Shouldn't query vtable linkage without key function
+8	64923   [C++] Side effect get removed if the return type of a unary operator is std::nullptr_t
+9	68024   Dependent value passed to function object passed to auto template parameter causes: Assertion isa<T>(CanonicalType) failed
+10	73666   C++20: Deduction guides ignored for class type placeholder template argument

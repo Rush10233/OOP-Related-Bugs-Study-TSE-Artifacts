@@ -1,0 +1,8 @@
+/* We didn't complain above about a currently open class, but now we
+    
+    	     complete.  But still don't complain in a template.  */
+
+    	      && !complete_type_or_maybe_complain (object_type, object,
+    						   complain))
+    	    return error_mark_node;
+

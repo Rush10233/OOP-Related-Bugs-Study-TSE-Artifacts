@@ -1,0 +1,65 @@
+static tree
+    build_parameter_mapping (tree expr, tree args, tree decl)
+    {
+
+      if (decl)
+        {
+          gcc_assert (TREE_CODE (decl) == TEMPLATE_DECL);
+
+        }
+      else if (current_template_parms)
+        {
+          /* TODO: This should probably be the only case, but because the
+    	 point of declaration of concepts is currently set after the
+    	 initializer, the template parameter lists are not available
+    	 when normalizing concept definitions, hence the case above.  */
+
+        }
+    
+
+      tree map = map_arguments (parms, args);
+      return map;
+    }
+
+    extern void clear_satisfaction_cache		();
+    extern bool* lookup_subsumption_result          (tree, tree);
+    extern bool save_subsumption_result             (tree, tree, bool);
+
+    extern bool equivalent_constraints              (tree, tree);
+    extern bool equivalently_constrained            (tree, tree);
+    extern bool subsumes_constraints                (tree, tree);
+
+    
+    struct find_template_parameter_info
+    {
+
+      {}
+    
+      hash_set<tree> visited;
+      hash_set<tree> parms;
+
+      int max_depth;
+    };
+    
+
+          WALK_SUBTREE (TREE_TYPE (t));
+          break;
+    
+
+        default:
+          break;
+        }
+
+      return 0;
+    }
+    
+
+    
+    tree
+
+    {
+
+      for_each_template_parm (t, keep_template_parm, &ftpi, &ftpi.visited,
+    			  /*include_nondeduced*/true, any_template_parm_r);
+      tree list = NULL_TREE;
+

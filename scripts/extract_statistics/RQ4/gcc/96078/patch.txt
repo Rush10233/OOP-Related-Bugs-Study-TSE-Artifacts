@@ -1,0 +1,44 @@
+/* Return DECL that alias is aliasing.  */
+      inline tree get_alias_target_tree ();
+    
+
+    /* Return the DECL (or identifier) that alias is aliasing.  Unlike the above,
+       this works whether or not the alias has been analyzed already.  */
+    
+    inline tree
+    symtab_node::get_alias_target_tree ()
+    {
+      if (alias_target)
+        return alias_target;
+      return get_alias_target ()->decl;
+    }
+    
+
+    	  tree tdecl = node->get_alias_target_tree ();
+    	  if (!tdecl || !DECL_P (tdecl)
+    	      || !lookup_attribute ("flatten", DECL_ATTRIBUTES (tdecl)))
+    	    warning_at (DECL_SOURCE_LOCATION (decl), OPT_Wattributes,
+    			"%<flatten%> attribute is ignored on aliases");
+
+/* Return DECL that alias is aliasing.  */
+      inline tree get_alias_target_tree ();
+    
+
+    /* Return the DECL (or identifier) that alias is aliasing.  Unlike the above,
+       this works whether or not the alias has been analyzed already.  */
+    
+    inline tree
+    symtab_node::get_alias_target_tree ()
+    {
+      if (alias_target)
+        return alias_target;
+      return get_alias_target ()->decl;
+    }
+    
+
+    	  tree tdecl = node->get_alias_target_tree ();
+    	  if (!tdecl || !DECL_P (tdecl)
+    	      || !lookup_attribute ("flatten", DECL_ATTRIBUTES (tdecl)))
+    	    warning_at (DECL_SOURCE_LOCATION (decl), OPT_Wattributes,
+    			"%<flatten%> attribute is ignored on aliases");
+

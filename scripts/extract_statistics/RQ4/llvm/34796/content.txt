@@ -1,0 +1,58 @@
+
+      // In almost all cases, it's a weak definition.
+      auto *First = VD->getFirstDecl();
+
+        return InlineVariableDefinitionKind::Weak;
+    
+      // If there's a file-context declaration in this translation unit, it's a
+      // non-discardable definition.
+      for (auto *D : VD->redecls())
+
+          return InlineVariableDefinitionKind::Strong;
+    
+      // If we've not seen one yet, we don't know.
+
+TemplateSpecializationKind TSK = Var->getTemplateSpecializationKind();
+    
+      bool OdrUseContext = isOdrUseContext(SemaRef);
+
+      bool NeedDefinition =
+
+    
+      VarTemplateSpecializationDecl *VarSpec =
+          dyn_cast<VarTemplateSpecializationDecl>(Var);
+
+      // instantiations of variable templates, except for those that could be used
+      // in a constant expression.
+      if (NeedDefinition && isTemplateInstantiation(TSK)) {
+
+    
+        if (TryInstantiating && !isa<VarTemplateSpecializationDecl>(Var)) {
+          if (Var->getPointOfInstantiation().isInvalid()) {
+            // This is a modification of an existing AST node. Notify listeners.
+            if (ASTMutationListener *L = SemaRef.getASTMutationListener())
+              L->StaticDataMemberInstantiated(Var);
+
+            // Don't bother trying to instantiate it again, unless we might need
+    
+            TryInstantiating = false;
+
+    
+          // Do not instantiate specializations that are still type-dependent.
+          if (IsNonDependent) {
+
+              // Do not defer instantiations of variables which could be used in a
+              // constant expression.
+              SemaRef.InstantiateVariableDefinition(PointOfInstantiation, Var);
+
+        return;
+    
+      // C++11 [temp.explicit]p10:
+
+      //   have the effect of suppressing the implicit instantiation of the entity
+      //   to which they refer.
+
+        return;
+    
+      // Make sure to pass the instantiated variable to the consumer at the end.
+

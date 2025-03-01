@@ -1,0 +1,8 @@
+
+      /* P1009: Array size deduction in new-expressions.  */
+      const bool array_p = TREE_CODE (type) == ARRAY_TYPE;
+
+        {
+          /* This means we have 'new T[]()'.  */
+          if ((*init)->is_empty ())
+

@@ -1,0 +1,15 @@
+Commit:	43bd97c
+./clang/lib/Sema/SemaTemplateInstantiateDecl.cpp	3389,3400
+Commit:	9eb5a41
+./clang/lib/Sema/SemaDecl.cpp	4147,4148
+./clang/lib/Sema/SemaDeclCXX.cpp	6217,6217
+./clang/lib/Sema/SemaDeclCXX.cpp	6219,6219
+./clang/lib/Sema/SemaDeclCXX.cpp	6226,6226
+./clang/lib/Sema/SemaDeclCXX.cpp	6228,6228
+./clang/lib/Sema/SemaDeclCXX.cpp	6236,6236
+./clang/lib/Sema/SemaDeclCXX.cpp	6249,6249
+./clang/test/CodeGenCXX/cxx0x-delegating-ctors.cpp	5,5
+./clang/test/CodeGenCXX/cxx0x-delegating-ctors.cpp	8,8
+./clang/test/CodeGenCXX/eh.cpp	162,162
+./clang/test/CodeGenCXX/eh.cpp	275,275
+./clang/test/CodeGenCXX/eh.cpp	395,396

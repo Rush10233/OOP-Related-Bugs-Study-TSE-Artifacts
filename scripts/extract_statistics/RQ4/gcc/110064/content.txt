@@ -1,0 +1,8 @@
+to zero.  */
+    	  if ((complain & tf_warning)
+    	      && !cp_unevaluated_operand
+
+    	    warning (OPT_Wmissing_field_initializers,
+    		     "missing initializer for member %qD", field);
+    
+

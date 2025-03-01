@@ -1,0 +1,93 @@
+traditional rendering of offsetof as a macro.  Return the folded result.  */
+
+    fold_offsetof_1 (tree expr, enum tree_code ctx)
+
+          return TREE_OPERAND (expr, 0);
+
+          base = fold_offsetof_1 (TREE_OPERAND (expr, 0), code);
+
+          base = fold_offsetof_1 (TREE_OPERAND (expr, 0), code);
+
+          return fold_offsetof_1 (t);
+
+    
+    /* Likewise, but convert it to the return type of offsetof.  */
+    
+    tree
+    fold_offsetof (tree expr)
+    {
+      return convert (size_type_node, fold_offsetof_1 (expr));
+    }
+    
+
+    extern tree fold_offsetof_1 (tree, tree_code ctx = ERROR_MARK);
+    extern tree fold_offsetof (tree);
+
+    	ret = fold_convert_loc (loc, TREE_TYPE (expr), fold_offsetof_1 (op0));
+
+    	  ret = fold_convert_loc (location, argtype, fold_offsetof_1 (arg));
+
+    		return fold_convert (TREE_TYPE (x), fold_offsetof_1 (op0));
+
+traditional rendering of offsetof as a macro.  Return the folded result.  */
+
+    fold_offsetof_1 (tree expr, enum tree_code ctx)
+
+          return TREE_OPERAND (expr, 0);
+
+          base = fold_offsetof_1 (TREE_OPERAND (expr, 0), code);
+
+          base = fold_offsetof_1 (TREE_OPERAND (expr, 0), code);
+
+          return fold_offsetof_1 (t);
+
+    
+    /* Likewise, but convert it to the return type of offsetof.  */
+    
+    tree
+    fold_offsetof (tree expr)
+    {
+      return convert (size_type_node, fold_offsetof_1 (expr));
+    }
+    
+
+    extern tree fold_offsetof_1 (tree, tree_code ctx = ERROR_MARK);
+    extern tree fold_offsetof (tree);
+
+    	ret = fold_convert_loc (loc, TREE_TYPE (expr), fold_offsetof_1 (op0));
+
+    	  ret = fold_convert_loc (location, argtype, fold_offsetof_1 (arg));
+
+    		return fold_convert (TREE_TYPE (x), fold_offsetof_1 (op0));
+
+traditional rendering of offsetof as a macro.  Return the folded result.  */
+
+    fold_offsetof_1 (tree expr, enum tree_code ctx)
+
+          return TREE_OPERAND (expr, 0);
+
+          base = fold_offsetof_1 (TREE_OPERAND (expr, 0), code);
+
+          base = fold_offsetof_1 (TREE_OPERAND (expr, 0), code);
+
+          return fold_offsetof_1 (t);
+
+    
+    /* Likewise, but convert it to the return type of offsetof.  */
+    
+    tree
+    fold_offsetof (tree expr)
+    {
+      return convert (size_type_node, fold_offsetof_1 (expr));
+    }
+    
+
+    extern tree fold_offsetof_1 (tree, tree_code ctx = ERROR_MARK);
+    extern tree fold_offsetof (tree);
+
+    	ret = fold_convert_loc (loc, TREE_TYPE (expr), fold_offsetof_1 (op0));
+
+    	  ret = fold_convert_loc (location, argtype, fold_offsetof_1 (arg));
+
+    		return fold_convert (TREE_TYPE (x), fold_offsetof_1 (op0));
+

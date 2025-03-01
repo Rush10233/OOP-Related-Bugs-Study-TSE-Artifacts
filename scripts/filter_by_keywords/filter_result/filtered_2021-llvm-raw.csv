@@ -1,0 +1,17 @@
+	Issue ID	Title
+0	50369	Initializing shared_ptr with make_shared should not call destructor
+1	50497	ICE with lambda capture & typeid of polymorphic class
+2	51484	Consteval returning struct/class causes frontend error.
+3	51547	ICE attempting to deduce array of class template in new-expression
+4	51862	[clang] After 7d2d5a3a6d7, Assertion failed: (getContext().hasSameUnqualifiedType(E->getType(), E->getArg(0)->getType())), function EmitCXXConstructExpr, file clang/lib/CodeGen/CGExprCXX.cpp, line 616
+5	49002	Incorrect computation of trivially copyable for class with user-declared move assignment operator, defined as deleted
+6	51440	clang9 and clang10 got LLVM error: out of memory on compiling std::get<> calls with undefined sanitizer
+7	48656	"front end crash when using variadic concepts requirement with ""or"" statement (trunk/11)"
+8	50779	regression Clang >= 11 rejects consteval subscript operator use
+9	51079	constinit thread_local not destroyed when type incomplete at odr-use
+10	50263	Default comparison is not a use of private field
+11	50561	Concepts overload check not considered?
+12	52537	operator== is not emitted when != is used with templates/member variables involved.
+13	51874	[C++20] Wrongly worded warning on defaulted-as-deleted operator!=
+14	50591	wrong comparison category/crash involving user-defined conversions to builtin types
+15	50181	const clang::ArrayType *clang::Type::castAsArrayTypeUnsafe() const: Assertion `isa<ArrayType>(CanonicalType)' failed.

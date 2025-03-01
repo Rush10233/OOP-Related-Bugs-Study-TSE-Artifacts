@@ -1,0 +1,13 @@
+void Sema::completeExprArrayBound(Expr *E) {
+      if (DeclRefExpr *DRE = dyn_cast<DeclRefExpr>(E->IgnoreParens())) {
+        if (VarDecl *Var = dyn_cast<VarDecl>(DRE->getDecl())) {
+
+            auto *Def = Var->getDefinition();
+
+            }
+    
+
+            if (Def) {
+              DRE->setDecl(Def);
+              QualType T = Def->getType();
+

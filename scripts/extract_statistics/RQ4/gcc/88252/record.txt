@@ -1,0 +1,13 @@
+Commit:	91bb571
+./gcc/cp/cp-tree.h	446,446
+./gcc/cp/cp-tree.h	5866,5870
+./gcc/cp/pt.c	157,158
+./gcc/cp/pt.c	5804,5815
+./gcc/cp/pt.c	6295,6297
+./gcc/cp/pt.c	21721,21721
+./gcc/cp/pt.c	21744,21747
+./gcc/cp/pt.c	21784,21794
+./gcc/cp/pt.c	22083,22084
+./gcc/cp/pt.c	22753,22753
+./gcc/cp/pt.c	23452,23452
+./gcc/cp/pt.c	28498,28500

@@ -1,0 +1,8 @@
+suppress_warning (r, OPT_Wparentheses);
+
+      if (REFERENCE_REF_P (t))
+        t = TREE_OPERAND (t, 0);
+
+          tree inner = REFERENCE_REF_P (expr) ? TREE_OPERAND (expr, 0) : *expr;
+          suppress_warning (inner, OPT_Wparentheses);
+

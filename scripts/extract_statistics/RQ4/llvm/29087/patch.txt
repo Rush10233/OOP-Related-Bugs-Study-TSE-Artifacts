@@ -1,0 +1,14 @@
+if (isa<FunctionTemplateDecl>(ND->getUnderlyingDecl()))
+
+            // UsingDecl itself is not a constructor
+            if (isa<UsingDecl>(ND))
+              continue;
+            auto *Constructor = cast<CXXConstructorDecl>(ND->getUnderlyingDecl());
+
+            if (isa<FunctionTemplateDecl>(ND->getUnderlyingDecl()))
+              continue;
+            // UsingDecl itself is not a constructor
+            if (isa<UsingDecl>(ND))
+
+            auto *Constructor = cast<CXXConstructorDecl>(ND->getUnderlyingDecl());
+

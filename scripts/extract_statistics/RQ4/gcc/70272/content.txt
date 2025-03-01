@@ -1,0 +1,16 @@
+initialize_vtbl_ptrs (current_class_ptr);
+          finish_compound_stmt (compound_stmt);
+    
+
+    	{
+    	  /* Insert a cleanup to let the back end know that the object is dead
+    	     when we exit the destructor, either normally or via exception.  */
+
+initialize_vtbl_ptrs (current_class_ptr);
+          finish_compound_stmt (compound_stmt);
+    
+
+    	{
+    	  /* Insert a cleanup to let the back end know that the object is dead
+    	     when we exit the destructor, either normally or via exception.  */
+

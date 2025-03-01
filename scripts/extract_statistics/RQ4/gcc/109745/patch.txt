@@ -1,0 +1,48 @@
+/* T is the initializer of a constexpr variable.  Set CONSTRUCTOR_MUTABLE_POISON
+       for any CONSTRUCTOR within T that contains (directly or indirectly) a mutable
+       member, thereby poisoning it so it can't be copied to another a constexpr
+       variable or read during constexpr evaluation.  */
+    
+    static void
+    poison_mutable_constructors (tree t)
+    {
+      if (TREE_CODE (t) != CONSTRUCTOR)
+        return;
+    
+      if (cp_has_mutable_p (TREE_TYPE (t)))
+        {
+          CONSTRUCTOR_MUTABLE_POISON (t) = true;
+    
+          if (vec<constructor_elt, va_gc> *elts = CONSTRUCTOR_ELTS (t))
+    	for (const constructor_elt &ce : *elts)
+    	  poison_mutable_constructors (ce.value);
+        }
+    }
+    
+
+          poison_mutable_constructors (value);
+
+/* T is the initializer of a constexpr variable.  Set CONSTRUCTOR_MUTABLE_POISON
+       for any CONSTRUCTOR within T that contains (directly or indirectly) a mutable
+       member, thereby poisoning it so it can't be copied to another a constexpr
+       variable or read during constexpr evaluation.  */
+    
+    static void
+    poison_mutable_constructors (tree t)
+    {
+      if (TREE_CODE (t) != CONSTRUCTOR)
+        return;
+    
+      if (cp_has_mutable_p (TREE_TYPE (t)))
+        {
+          CONSTRUCTOR_MUTABLE_POISON (t) = true;
+    
+          if (vec<constructor_elt, va_gc> *elts = CONSTRUCTOR_ELTS (t))
+    	for (const constructor_elt &ce : *elts)
+    	  poison_mutable_constructors (ce.value);
+        }
+    }
+    
+
+          poison_mutable_constructors (value);
+

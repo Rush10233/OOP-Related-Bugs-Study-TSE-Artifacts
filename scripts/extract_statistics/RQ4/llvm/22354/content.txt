@@ -1,0 +1,86 @@
+/// ActOnLambdaExpr - This is called when the body of a lambda expression
+      /// was successfully completed.
+      ExprResult ActOnLambdaExpr(SourceLocation StartLoc, Stmt *Body,
+
+    
+      /// \brief Define the "body" of the conversion from a lambda object to a
+      /// function pointer.
+
+    static bool isTrackedVar(const VarDecl *vd, const DeclContext *dc) {
+      if (vd->isLocalVarDecl() && !vd->hasGlobalStorage() &&
+          !vd->isExceptionVariable() && !vd->isInitCapture() &&
+
+        QualType ty = vd->getType();
+        return ty->isScalarType() || ty->isVectorType() || ty->isRecordType();
+      }
+
+            Context.adjustDeducedFunctionResultType(
+                FD, SubstAutoType(ResultType.getType(), Context.VoidTy));
+          }
+
+        }
+    
+        // The only way to be included in UndefinedButUsed is if there is an
+
+    }
+    
+    /// \brief Create a field within the lambda class for the variable
+
+      CXXRecordDecl *Lambda = LSI->Lambda;
+    
+      // Build the non-static data member.
+
+      Field->setImplicit(true);
+      Field->setAccess(AS_private);
+      Lambda->addDecl(Field);
+    }
+    
+    /// \brief Capture the given variable in the lambda.
+    static bool captureInLambda(LambdaScopeInfo *LSI,
+                                VarDecl *Var, 
+
+      }
+    
+      // Capture this variable in the lambda.
+
+    
+      // Compute the type of a reference to this captured variable.
+      if (ByRef)
+
+      // Add the capture.
+      if (BuildAndDiagnose)
+        LSI->addCapture(Var, /*IsBlock=*/false, ByRef, RefersToCapturedVariable, 
+
+    
+      return true;
+    }
+    
+
+    
+      DeclContext *DC = CurContext;
+      const unsigned MaxFunctionScopesIndex = FunctionScopeIndexToStopAt 
+
+      }
+    
+    
+
+    
+      // Capture global variables if it is required to use private copy of this
+      // variable.
+
+      // the variable.
+      CaptureType = Var->getType();
+      DeclRefType = CaptureType.getNonReferenceType();
+
+      bool Explicit = (Kind != TryCapture_Implicit);
+      unsigned FunctionScopesIndex = MaxFunctionScopesIndex;
+      do {
+
+        FunctionScopesIndex--;
+        DC = ParentDC;
+        Explicit = false;
+
+    
+      // Walk back down the scope stack, (e.g. from outer lambda to inner lambda)
+      // computing the type of the capture at each step, checking type-specific 
+

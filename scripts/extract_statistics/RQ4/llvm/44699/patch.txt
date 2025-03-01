@@ -1,0 +1,71 @@
+/// Introduces zero or more scopes for parsing. The scopes will all be exited
+      /// when the object is destroyed.
+      class MultiParseScope {
+        Parser &Self;
+        unsigned NumScopes = 0;
+    
+        MultiParseScope(const MultiParseScope&) = delete;
+    
+      public:
+        MultiParseScope(Parser &Self) : Self(Self) {}
+        void Enter(unsigned ScopeFlags) {
+          Self.EnterScope(ScopeFlags);
+          ++NumScopes;
+        }
+        void Exit() {
+          while (NumScopes) {
+            Self.ExitScope();
+            --NumScopes;
+          }
+        }
+        ~MultiParseScope() {
+          Exit();
+        }
+      };
+    
+
+      /// Re-enter the template scopes for a declaration that might be a template.
+      unsigned ReenterTemplateScopes(MultiParseScope &S, Decl *D);
+    
+
+        explicit LexedMethod(Parser *P, Decl *MD) : Self(P), D(MD) {}
+
+            : Self(P), Method(M), ExceptionSpecTokens(nullptr) {}
+
+            : TopLevelClass(TopLevelClass), IsInterface(IsInterface),
+              TagOrTemplate(TagOrTemplate) {}
+
+      // In ParseCXXInlineMethods.cpp.
+      struct ReenterTemplateScopeRAII;
+      struct ReenterClassScopeRAII;
+    
+
+      bool ParseTemplateParameters(MultiParseScope &TemplateScopes, unsigned Depth,
+
+      /// Get the entity corresponding to this scope.
+      DeclContext *getEntity() const {
+        return isTemplateParamScope() ? nullptr : Entity;
+      }
+    
+      /// Get the DeclContext in which to continue unqualified lookup after a
+      /// lookup in this scope.
+      DeclContext *getLookupEntity() const { return Entity; }
+    
+      void setEntity(DeclContext *E) {
+        assert(!isTemplateParamScope() &&
+               "entity associated with template param scope");
+        Entity = E;
+      }
+      void setLookupEntity(DeclContext *E) { Entity = E; }
+
+      /// Enter a template parameter scope, after it's been associated with a particular
+      /// DeclContext. Causes lookup within the scope to chain through enclosing contexts
+      /// in the correct order.
+      void EnterTemplatedContext(Scope *S, DeclContext *DC);
+    
+
+      unsigned ActOnReenterTemplateScope(Decl *Template,
+                                         llvm::function_ref<Scope *()> EnterScope);
+
+      // A declaration is templated if it is a template or a template pattern, or
+

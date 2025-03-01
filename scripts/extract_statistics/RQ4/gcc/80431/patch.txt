@@ -1,0 +1,6 @@
+/* In an NSDMI build_base_path defers building conversions to morally
+    	 virtual bases, and we handle it here.  */
+          tree basetype = TREE_TYPE (*t);
+          *t = convert_to_base (TREE_OPERAND (*t, 0), basetype,
+    			    /*check_access=*/false, /*nonnull=*/true,
+

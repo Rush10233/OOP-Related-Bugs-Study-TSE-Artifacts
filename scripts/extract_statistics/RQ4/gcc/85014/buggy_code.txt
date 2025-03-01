@@ -1,0 +1,2 @@
+scope = context_for_name_lookup (decl);
+

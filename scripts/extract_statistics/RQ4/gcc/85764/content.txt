@@ -1,0 +1,56 @@
+&& current_class_type
+          && LAMBDA_TYPE_P (current_class_type)
+          && lambda_function (current_class_type)
+
+        return CLASSTYPE_LAMBDA_EXPR (current_class_type);
+    
+      return NULL_TREE;
+
+      return fn;
+    }
+    
+
+    
+    tree
+    nonlambda_method_basetype (void)
+    {
+      if (!current_class_ref)
+        return NULL_TREE;
+    
+
+      if (!type || !LAMBDA_TYPE_P (type))
+        return type;
+    
+
+    }
+    
+    /* Like current_scope, but looking through lambdas.  */
+
+&& current_class_type
+          && LAMBDA_TYPE_P (current_class_type)
+          && lambda_function (current_class_type)
+
+        return CLASSTYPE_LAMBDA_EXPR (current_class_type);
+    
+      return NULL_TREE;
+
+      return fn;
+    }
+    
+
+    
+    tree
+    nonlambda_method_basetype (void)
+    {
+      if (!current_class_ref)
+        return NULL_TREE;
+    
+
+      if (!type || !LAMBDA_TYPE_P (type))
+        return type;
+    
+
+    }
+    
+    /* Like current_scope, but looking through lambdas.  */
+

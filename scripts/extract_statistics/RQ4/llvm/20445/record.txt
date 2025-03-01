@@ -1,0 +1,11 @@
+Commit:	d86c901
+./clang/lib/Sema/SemaExprCXX.cpp	1187,1194
+./clang/lib/Sema/SemaExprCXX.cpp	1484,1485
+./clang/lib/Sema/TreeTransform.h	347,347
+./clang/lib/Sema/TreeTransform.h	2861,2861
+./clang/lib/Sema/TreeTransform.h	2881,2881
+./clang/lib/Sema/TreeTransform.h	2883,2883
+./clang/lib/Sema/TreeTransform.h	2887,2887
+./clang/lib/Sema/TreeTransform.h	2910,2910
+./clang/lib/Sema/TreeTransform.h	2915,2915
+./clang/lib/Sema/TreeTransform.h	8182,8182

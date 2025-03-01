@@ -1,0 +1,4 @@
+Commit:	e4b0b6e
+./clang/lib/Sema/SemaDeclCXX.cpp	8322,8322
+./clang/lib/Sema/SemaDeclCXX.cpp	8332,8332
+./clang/lib/Sema/SemaDeclCXX.cpp	8447,8452

@@ -1,0 +1,10 @@
+if ((op == POSTINCREMENT_EXPR
+           || op == POSTDECREMENT_EXPR)
+          /* With -fpermissive non_dep could be operator++().  */
+          && (!flag_permissive || nargs != expected_nargs))
+
+if ((op == POSTINCREMENT_EXPR
+           || op == POSTDECREMENT_EXPR)
+          /* With -fpermissive non_dep could be operator++().  */
+          && (!flag_permissive || nargs != expected_nargs))
+

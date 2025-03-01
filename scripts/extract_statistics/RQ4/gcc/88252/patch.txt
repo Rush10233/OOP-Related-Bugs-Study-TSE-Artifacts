@@ -1,0 +1,59 @@
+static int maybe_adjust_types_for_deduction (tree, unification_kind_t,
+    					     tree*, tree*, tree);
+
+    	/* Class template.  */;
+
+    /* Returns true iff PARM is a forwarding reference in the context of
+       template argument deduction for TMPL.  */
+    
+    static bool
+    forwarding_reference_p (tree parm, tree tmpl)
+    {
+      /* [temp.deduct.call], "A forwarding reference is an rvalue reference to a
+         cv-unqualified template parameter ..."  */
+      if (TYPE_REF_P (parm)
+          && TYPE_REF_IS_RVALUE (parm)
+          && TREE_CODE (TREE_TYPE (parm)) == TEMPLATE_TYPE_PARM
+          && cp_type_quals (TREE_TYPE (parm)) == TYPE_UNQUALIFIED)
+        {
+          parm = TREE_TYPE (parm);
+          /* [temp.deduct.call], "... that does not represent a template parameter
+    	 of a class template (during class template argument deduction)."  */
+          if (tmpl
+    	  && deduction_guide_p (tmpl)
+    	  && DECL_ARTIFICIAL (tmpl))
+    	{
+    	  /* Since the template parameters of a synthesized guide consist of
+    	     the template parameters of the class template followed by those of
+    	     the constructor (if any), we can tell if PARM represents a template
+    	     parameter of the class template by comparing its index with the
+    	     arity of the class template.  */
+    	  tree ctmpl = CLASSTYPE_TI_TEMPLATE (TREE_TYPE (TREE_TYPE (tmpl)));
+    	  if (TEMPLATE_TYPE_IDX (parm)
+    	      < TREE_VEC_LENGTH (DECL_INNERMOST_TEMPLATE_PARMS (ctmpl)))
+    	    return false;
+    	}
+          return true;
+        }
+      return false;
+    }
+    
+
+    maybe_adjust_types_for_deduction (tree tparms,
+    				  unification_kind_t strict,
+
+          if (forwarding_reference_p (*parm, TPARMS_PRIMARY_TEMPLATE (tparms))
+
+      /* [temp.deduct.call], "If P is a forwarding reference and the argument is
+         an lvalue, the type 'lvalue reference to A' is used in place of A for
+         type deduction."  */
+      if (forwarding_reference_p (*parm, TPARMS_PRIMARY_TEMPLATE (tparms))
+
+          arg_strict |= maybe_adjust_types_for_deduction (tparms, strict,
+    						      &parm, &arg, arg_expr);
+
+      sub_strict |= maybe_adjust_types_for_deduction (tparms, strict,
+    						  &parm, &arg, NULL_TREE);
+
+    		  (tparms, DEDUCE_CALL, &elttype, &type, elt);
+

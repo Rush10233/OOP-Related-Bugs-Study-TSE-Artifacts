@@ -1,0 +1,3 @@
+/* Look up the NAME to see if it unambiguously refers to the TYPE
+         and set KEY_REDUNDANT if so.  */
+

@@ -1,0 +1,56 @@
+/* CTYPE is a type constructed from BODY.  Return true if some
+       bases/fields are uninitialized, and complain if COMPLAIN.  */
+
+    cx_check_missing_mem_inits (tree ctype, tree body, bool complain)
+
+      unsigned nelts = 0;
+    
+      if (body)
+        {
+          if (TREE_CODE (body) != CONSTRUCTOR)
+    	return false;
+          nelts = CONSTRUCTOR_NELTS (body);
+        }
+      tree field = TYPE_FIELDS (ctype);
+
+      /* Iterate over the CONSTRUCTOR, checking any missing fields don't
+         need an explicit initialization.  */
+      bool bad = false;
+      for (unsigned i = 0; i <= nelts; ++i)
+
+          tree index = NULL_TREE;
+          if (i < nelts)
+
+    
+
+    	  if (TREE_CODE (field) != FIELD_DECL)
+    	    continue;
+    	  if (DECL_C_BIT_FIELD (field) && !DECL_NAME (field))
+
+    	  if (DECL_ARTIFICIAL (field))
+    	    continue;
+    	  if (ANON_AGGR_TYPE_P (TREE_TYPE (field)))
+    	    {
+    	      /* Recurse to check the anonummous aggregate member.  */
+    	      bad |= cx_check_missing_mem_inits
+    		(TREE_TYPE (field), NULL_TREE, complain);
+    	      if (bad && !complain)
+    		return true;
+    	      continue;
+    	    }
+
+    
+          if (ANON_AGGR_TYPE_P (TREE_TYPE (index)))
+    	{
+    	  /* Check the anonymous aggregate initializer is valid.  */
+    	  bad |= cx_check_missing_mem_inits
+    	    (TREE_TYPE (index), CONSTRUCTOR_ELT (body, i)->value, complain);
+    	  if (bad && !complain)
+    	    return true;
+    	}
+
+          && cx_check_missing_mem_inits (DECL_CONTEXT (fun),
+    				     massaged, !DECL_GENERATED_P (fun)))
+
+    	    cx_check_missing_mem_inits (DECL_CONTEXT (fun), body, true);
+

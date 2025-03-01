@@ -1,0 +1,8 @@
+}
+    	      /* Changing active member.  */
+    	      vec_safe_truncate (CONSTRUCTOR_ELTS (*valp), 0);
+
+    	    }
+    
+    	  for (idx = 0;
+

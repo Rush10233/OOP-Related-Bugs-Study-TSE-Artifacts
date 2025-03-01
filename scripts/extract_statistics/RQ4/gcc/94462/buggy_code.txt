@@ -1,0 +1,4 @@
+&& DECL_ARTIFICIAL (olddecl))
+
+          gcc_assert (!DECL_HIDDEN_FRIEND_P (olddecl));
+

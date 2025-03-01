@@ -1,0 +1,24 @@
+TREE_SIDE_EFFECTS (t) = TREE_SIDE_EFFECTS (non_dep);
+    
+      for (i = 0; i < length; i++)
+
+    
+      va_end (p);
+      return convert_from_reference (t);
+
+        non_dep = TREE_OPERAND (non_dep, 0);
+      TREE_TYPE (t) = TREE_TYPE (non_dep);
+      TREE_SIDE_EFFECTS (t) = TREE_SIDE_EFFECTS (non_dep);
+
+      return convert_from_reference (t);
+    }
+    
+
+          /* Build an expression for "object + offset" where offset is the
+    	 value stored in the pointer-to-data-member.  */
+          ptype = build_pointer_type (type);
+
+          datum = cp_build_fold_indirect_ref (datum);
+          if (datum == error_mark_node)
+    	return error_mark_node;
+

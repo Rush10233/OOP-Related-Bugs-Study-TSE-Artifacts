@@ -1,0 +1,18 @@
+llvm::makeArrayRef(Inits, NumInits))) {
+
+      ExprResult TransformInitializer(Expr *Init, bool NotCopyInit);
+
+                                                            bool NotCopyInit) {
+
+        return TransformInitializer(ILE->getSubExpr(), NotCopyInit);
+
+      // If this is copy-initialization, we only need to reconstruct
+
+      if (!NotCopyInit && !(Construct && Construct->isListInitialization()))
+
+        return TransformInitializer(Construct->getArg(0), NotCopyInit);
+
+                                      /*IsCall*/true, NewArgs, &ArgChanged))
+
+        NewInit = getDerived().TransformInitializer(OldInit, true);
+

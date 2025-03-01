@@ -1,0 +1,346 @@
+(tree, tree, tree);
+    extern tree copied_binfo			(tree, tree);
+    extern tree original_binfo			(tree, tree);
+
+    extern bool any_dependent_bases_p (tree = current_nonlambda_class_type ());
+    extern bool maybe_check_overriding_exception_spec (tree, tree);
+    
+
+      bool is_non_constant_init;
+      int ctor_dtor_or_conv_p;
+      bool friend_p = cp_parser_friend_p (decl_specifiers);
+
+      tree pushed_scope = NULL_TREE;
+      bool range_for_decl_p = false;
+      bool saved_default_arg_ok_p = parser->default_arg_ok_p;
+
+        = cp_parser_declarator (parser, CP_PARSER_DECLARATOR_NAMED,
+    			    flags, &ctor_dtor_or_conv_p,
+    			    /*parenthesized_p=*/NULL,
+
+      /* Gather up the deferred checks.  */
+      stop_deferring_access_checks ();
+    
+
+    
+    		  tree save_ccp = current_class_ptr;
+    		  tree save_ccr = current_class_ref;
+
+    		    /* DR 1207: 'this' is in scope after the cv-quals.  */
+    		    inject_this_parameter (current_class_type, cv_quals);
+    
+
+      const char *errstr;
+    };
+    
+
+       of that class.
+    
+       [class.member.lookup]:If the resulting set of declarations are not all
+
+    
+       This function checks that T contains no non-static members.  */
+    
+
+    shared_member_p (tree t)
+    {
+
+          || TREE_CODE (t) == CONST_DECL)
+
+      if (is_overloaded_fn (t))
+        {
+          for (ovl_iterator iter (get_fns (t)); iter; ++iter)
+    	{
+    	  tree decl = strip_using_decl (*iter);
+
+    	  if (DECL_NONSTATIC_MEMBER_FUNCTION_P (decl))
+
+    	}
+
+        }
+
+    }
+    
+    /* Routine to see if the sub-object denoted by the binfo PARENT can be
+
+        {
+          /* See if any of the functions are non-static members.  */
+          /* If so, the expression may be relative to 'this'.  */
+
+    	  && current_class_ptr
+    	  && DERIVED_FROM_P (qualifying_class,
+    			     current_nonlambda_class_type ()))
+
+parser->allow_non_integral_constant_expression_p);
+      cp_debug_print_flag (file, "Seen non-constant expression",
+    			      parser->non_integral_constant_expression_p);
+
+      cp_debug_print_flag (file, "In unbraced linkage specification",
+    			      parser->in_unbraced_linkage_specification_p);
+      cp_debug_print_flag (file, "Parsing a declarator",
+
+       location_t *, tree *);
+    static cp_declarator *cp_parser_declarator
+      (cp_parser *, cp_parser_declarator_kind, cp_parser_flags, int *, bool *,
+
+    static cp_declarator *cp_parser_direct_declarator
+
+    static enum tree_code cp_parser_ptr_operator
+      (cp_parser *, tree *, cp_cv_quals *, tree *);
+    static cp_cv_quals cp_parser_cv_qualifier_seq_opt
+
+      parser->non_integral_constant_expression_p = false;
+    
+      /* Local variable names are not forbidden.  */
+
+    
+      /* We are not processing an `extern "C"' declaration.  */
+      parser->in_unbraced_linkage_specification_p = false;
+
+    	  /* Recognize the `this' keyword.  */
+    	case RID_THIS:
+    	  cp_lexer_consume_token (parser->lexer);
+
+    	    {
+    	      error_at (token->location,
+    			"%<this%> may not be used in this context");
+
+    		      template <int N> struct A {
+    			int a[B<N>::i];
+    		      };
+
+    		   is accepted.  At template-instantiation time, we
+    		   will check that B<N>::i is actually a constant.  */
+    		return decl;
+    	      }
+    	    /* Check to see if DECL is a local variable in a context
+    	       where that is forbidden.  */
+
+    		&& local_variable_p (decl))
+    	      {
+    		error_at (id_expression.get_location (),
+
+    cp_parser_lambda_body (cp_parser* parser, tree lambda_expr)
+    {
+      bool nested = (current_function_decl != NULL_TREE);
+
+      bool in_function_body = parser->in_function_body;
+    
+      /* The body of a lambda-expression is not a subexpression of the enclosing
+
+      vec<tree> omp_privatization_save;
+      save_omp_privatization_clauses (omp_privatization_save);
+      /* Clear this in case we're in the middle of a default argument.  */
+
+      parser->in_function_body = true;
+    
+      {
+
+    					 /*ctor_dtor_or_conv_p=*/NULL,
+    					 /*parenthesized_p=*/NULL,
+    					 /*member_p=*/false,
+
+          /* Parse the attributes.  */
+          attributes = cp_parser_attributes_opt (parser);
+          /* Parse the asm-specification.  */
+
+    				/*ctor_dtor_or_conv_p=*/NULL,
+    				/*parenthesized_p=*/NULL,
+    				/*member_p=*/false,
+
+          if (declares_class_or_enum & 2)
+    	cp_parser_check_for_definition_in_return_type (declarator,
+    						       decl_specifiers.type,
+
+        = cp_parser_declarator (parser, CP_PARSER_DECLARATOR_NAMED,
+    			    flags, &ctor_dtor_or_conv_p,
+    			    /*parenthesized_p=*/NULL,
+
+      /* Gather up the deferred checks.  */
+      stop_deferring_access_checks ();
+    
+
+    
+       MEMBER_P is true iff this declarator is a member-declarator.
+    
+
+    
+    static cp_declarator *
+    cp_parser_declarator (cp_parser* parser,
+    		      cp_parser_declarator_kind dcl_kind,
+    		      cp_parser_flags flags,
+    		      int* ctor_dtor_or_conv_p,
+    		      bool* parenthesized_p,
+
+    {
+      cp_declarator *declarator;
+      enum tree_code code;
+
+    					 /*ctor_dtor_or_conv_p=*/NULL,
+    					 /*parenthesized_p=*/NULL,
+    					 /*member_p=*/false,
+
+    
+          /* If we are parsing an abstract-declarator, we must handle the
+    	 case where the dependent declarator is absent.  */
+
+    						   CPP_OPEN_PAREN);
+          declarator = cp_parser_direct_declarator (parser, dcl_kind,
+    						flags, ctor_dtor_or_conv_p,
+
+        }
+    
+      if (gnu_attributes && declarator && declarator != cp_error_declarator)
+
+       of ambiguity we prefer an abstract declarator, as per
+       [dcl.ambig.res].
+       The parser flags FLAGS is used to control type-specifier parsing.
+
+       as for cp_parser_declarator.  */
+    
+    static cp_declarator *
+    cp_parser_direct_declarator (cp_parser* parser,
+    			     cp_parser_declarator_kind dcl_kind,
+    			     cp_parser_flags flags,
+    			     int* ctor_dtor_or_conv_p,
+
+    {
+      cp_token *token;
+      cp_declarator *declarator = NULL;
+
+    		  tree attrs;
+    		  bool memfn = (member_p || (pushed_scope
+    					     && CLASS_TYPE_P (pushed_scope)));
+
+    
+    		  is_declarator = true;
+    
+
+    		     return type, so are not those of the declared
+    		     function.  */
+    		  parser->default_arg_ok_p = false;
+
+    		}
+    
+    	      /* Remove the function parms from scope.  */
+
+    		= cp_parser_declarator (parser, dcl_kind, flags,
+    					ctor_dtor_or_conv_p,
+    					/*parenthesized_p=*/NULL,
+
+    	      parser->in_type_id_in_expr_p = saved_in_type_id_in_expr_p;
+    	      first = false;
+    	      /* Expect a `)'.  */
+
+    			    CP_PARSER_FLAGS_NONE, NULL,
+    			    /*parenthesized_p=*/NULL,
+    			    /*member_p=*/false,
+
+      /* Check to see if there really was a declarator.  */
+      if (!cp_parser_parse_definitely (parser))
+        abstract_declarator = NULL;
+
+    					 /*ctor_dtor_or_conv_p=*/NULL,
+    					 parenthesized_p,
+    					 /*member_p=*/false,
+
+          parser->default_arg_ok_p = saved_default_arg_ok_p;
+          /* After the declarator, allow more attributes.  */
+          decl_specifiers.attributes
+
+    {
+      tree default_argument = NULL_TREE;
+      bool saved_greater_than_is_operator_p;
+
+      bool non_constant_p, is_direct_init;
+    
+      /* Make sure that PARSER->GREATER_THAN_IS_OPERATOR_P is
+
+      /* Local variable names (and the `this' keyword) may not
+         appear in a default argument.  */
+      saved_local_variables_forbidden_p = parser->local_variables_forbidden_p;
+
+      /* Parse the assignment-expression.  */
+      if (template_parm_p)
+        push_deferring_access_checks (dk_no_deferred);
+
+    	      cp_declarator *declarator;
+    	      tree asm_specification;
+    	      int ctor_dtor_or_conv_p;
+
+    
+    	      /* Parse the declarator.  */
+    	      declarator
+
+    					&ctor_dtor_or_conv_p,
+    					/*parenthesized_p=*/NULL,
+    					/*member_p=*/true,
+
+    
+    	      /* If something went wrong parsing the declarator, make sure
+    		 that we at least consume some tokens.  */
+
+    				       /*ctor_dtor_or_conv_p=*/NULL,
+    				       /*parenthesized_p=*/NULL,
+    				       /*member_p=*/false,
+
+    
+      /* Restore the saved message.  */
+      parser->type_definition_forbidden_message = saved_message;
+
+    static void
+    cp_parser_late_parsing_default_args (cp_parser *parser, tree fn)
+    {
+
+      tree parm, parmdecl;
+    
+      /* While we're parsing the default args, we might (due to the
+
+      /* Local variable names (and the `this' keyword) may not appear
+         in a default argument.  */
+      saved_local_variables_forbidden_p = parser->local_variables_forbidden_p;
+
+    
+      push_defarg_context (fn);
+    
+
+    					    &ctor_dtor_or_conv_p,
+    					    /*parenthesized_p=*/NULL,
+    					    /*member_p=*/true,
+
+    		      peek = cp_lexer_peek_token (parser->lexer);
+    		      if (cp_parser_error_occurred (parser))
+    			break;
+
+    					&ctor_dtor_or_conv_p,
+    					/*parenthesized_p=*/NULL,
+    					/*member_p=*/false,
+
+    	    }
+    
+    	  /* Look for attributes that apply to the ivar.  */
+
+          /* Parse the declarator.  */
+          declarator = cp_parser_declarator (parser, CP_PARSER_DECLARATOR_NAMED,
+    					 CP_PARSER_FLAGS_NONE,
+
+    
+          /* Look for attributes that apply to the ivar.  */
+          attributes = cp_parser_attributes_opt (parser);
+
+    					 /*ctor_dtor_or_conv_p=*/NULL,
+    					 /*parenthesized_p=*/NULL,
+    					 /*member_p=*/false,
+
+          attributes = cp_parser_attributes_opt (parser);
+          asm_specification = cp_parser_asm_specification_opt (parser);
+    
+
+         been seen that makes the expression non-constant.  */
+      bool non_integral_constant_expression_p;
+    
+
+    
+      /* TRUE if the declaration we are parsing is part of a
+         linkage-specification of the form `extern string-literal
+

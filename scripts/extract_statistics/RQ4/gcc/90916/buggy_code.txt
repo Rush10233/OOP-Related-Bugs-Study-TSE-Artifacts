@@ -1,0 +1,10 @@
+if (DECL_TEMPLATE_INFO (fn) && DECL_TI_TEMPLATE (fn) == tmpl
+    	      /* using-declarations can add base methods to the method vec,
+    		 and we don't want those here.  */
+    	      && DECL_CONTEXT (fn) == class_specialization)
+    	    return fn;
+
+if (tree ti = (TREE_CODE (fn) == TYPE_DECL && !TYPE_DECL_ALIAS_P (fn)
+    			 ? TYPE_TEMPLATE_INFO (TREE_TYPE (fn))
+    			 : DECL_TEMPLATE_INFO (fn)))
+

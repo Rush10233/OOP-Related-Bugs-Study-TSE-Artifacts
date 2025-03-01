@@ -1,0 +1,5 @@
+/* Unshare the result unless it's a CONSTRUCTOR in which case it's already
+         unshared.  */
+
+      if (r == t || TREE_CODE (r) == CONSTRUCTOR)
+

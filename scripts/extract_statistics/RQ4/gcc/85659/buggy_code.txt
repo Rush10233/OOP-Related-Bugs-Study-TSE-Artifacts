@@ -1,0 +1,28 @@
+if ((TREE_CODE (val) == INDIRECT_REF
+    	   && allows_mem)
+
+    	  || is_inout)
+
+    	  if ((! allows_mem && MEM_P (op))
+
+if ((TREE_CODE (val) == INDIRECT_REF
+    	   && allows_mem)
+
+    	  || is_inout)
+
+    	  if ((! allows_mem && MEM_P (op))
+
+if ((TREE_CODE (val) == INDIRECT_REF
+    	   && allows_mem)
+
+    	  || is_inout)
+
+    	  if ((! allows_mem && MEM_P (op))
+
+if ((TREE_CODE (val) == INDIRECT_REF
+    	   && allows_mem)
+
+    	  || is_inout)
+
+    	  if ((! allows_mem && MEM_P (op))
+

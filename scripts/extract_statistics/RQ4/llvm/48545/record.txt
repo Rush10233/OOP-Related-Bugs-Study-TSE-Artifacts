@@ -1,0 +1,5 @@
+Commit:	6962bd6
+./clang/lib/Sema/SemaInit.cpp	6541,6542
+./clang/lib/Sema/SemaInit.cpp	6545,6545
+./clang/lib/Sema/SemaInit.cpp	6549,6549
+./clang/lib/Sema/SemaInit.cpp	6554,6554

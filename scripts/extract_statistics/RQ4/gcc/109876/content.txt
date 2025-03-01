@@ -1,0 +1,78 @@
+cp_finish_decl (tree decl, tree init, bool init_const_expr_p,
+    		tree asmspec_tree, int flags)
+    {
+      vec<tree, va_gc> *cleanups = NULL;
+      const char *asmspec = NULL;
+      int was_readonly = 0;
+
+      /* Parameters are handled by store_parm_decls, not cp_finish_decl.  */
+      gcc_assert (TREE_CODE (decl) != PARM_DECL);
+    
+
+      if (type == error_mark_node)
+        return;
+    
+
+    	  if (decl_maybe_constant_var_p (decl)
+    	      /* FIXME setting TREE_CONSTANT on refs breaks the back end.  */
+    	      && !TYPE_REF_P (type))
+
+    	}
+          /* This is handled mostly by gimplify.cc, but we have to deal with
+    	 not warning about int x = x; as it is a GCC extension to turn off
+
+    	  && !warning_enabled_at (DECL_SOURCE_LOCATION (decl), OPT_Winit_self))
+    	suppress_warning (decl, OPT_Winit_self);
+        }
+
+    
+      if (flag_openmp
+          && TREE_CODE (decl) == FUNCTION_DECL
+
+    		  && value_expr == error_mark_node))
+    	    return true;
+    	}
+
+          return false;
+    
+        case DYNAMIC_CAST_EXPR:
+
+cp_finish_decl (tree decl, tree init, bool init_const_expr_p,
+    		tree asmspec_tree, int flags)
+    {
+      vec<tree, va_gc> *cleanups = NULL;
+      const char *asmspec = NULL;
+      int was_readonly = 0;
+
+      /* Parameters are handled by store_parm_decls, not cp_finish_decl.  */
+      gcc_assert (TREE_CODE (decl) != PARM_DECL);
+    
+
+      if (type == error_mark_node)
+        return;
+    
+
+    	  if (decl_maybe_constant_var_p (decl)
+    	      /* FIXME setting TREE_CONSTANT on refs breaks the back end.  */
+    	      && !TYPE_REF_P (type))
+
+    	}
+          /* This is handled mostly by gimplify.cc, but we have to deal with
+    	 not warning about int x = x; as it is a GCC extension to turn off
+
+    	  && !warning_enabled_at (DECL_SOURCE_LOCATION (decl), OPT_Winit_self))
+    	suppress_warning (decl, OPT_Winit_self);
+        }
+
+    
+      if (flag_openmp
+          && TREE_CODE (decl) == FUNCTION_DECL
+
+          else if (TYPE_REF_P (TREE_TYPE (expression)))
+    	/* FIXME cp_finish_decl doesn't fold reference initializers.  */
+    	return true;
+
+          return false;
+    
+        case DYNAMIC_CAST_EXPR:
+

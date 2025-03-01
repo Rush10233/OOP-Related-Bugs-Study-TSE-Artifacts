@@ -1,0 +1,18 @@
+/* As is an array with dependent bound.  */
+
+        return reshape_init_class (type, d, first_initializer_p, complain);
+
+        return reshape_init_array (type, d, first_initializer_p, complain);
+
+        return reshape_init_vector (type, d, complain);
+
+    	  && CONSTRUCTOR_NELTS (val)
+    	  /* As in reshape_init_r, a non-aggregate or array-of-dependent-bound
+    	     type gets a single initializer.  */
+    	  && CP_AGGREGATE_TYPE_P (ftype)
+    	  && !(TREE_CODE (ftype) == ARRAY_TYPE
+    	       && uses_template_parms (TYPE_DOMAIN (ftype))))
+
+/* True if reshape_init built this CONSTRUCTOR to undo the brace elision
+       of another CONSTRUCTOR.  This flag is used during C++20 aggregate
+

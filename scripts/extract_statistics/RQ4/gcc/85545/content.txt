@@ -1,0 +1,78 @@
+tree conv;
+      if (TREE_TYPE (expr) == type)
+        conv = expr;
+
+        {
+          /* Avoid wrapping a PTRMEM_CST in NOP_EXPR.  */
+          conv = copy_node (expr);
+          TREE_TYPE (conv) = type;
+        }
+
+      else
+        {
+          conv = fold_convert (type, expr);
+
+      tree ptrmem_type;
+      tree member;
+    
+
+      /* This code is a stripped down version of
+         build_class_member_access_expr.  It does not work to use that
+         routine directly because it expects the object to be of class
+
+    	{
+    	  if (same_type_p (to_type, pfn_type))
+    	    return pfn;
+
+    	    return build_reinterpret_cast (to_type, pfn, 
+                                               complain);
+    	}
+
+          /* Just adjust the DELTA field.  */
+          gcc_assert  (same_type_ignoring_top_level_qualifiers_p
+    		   (TREE_TYPE (delta), ptrdiff_type_node));
+
+          return build_ptrmemfunc1 (to_type, delta, npfn);
+        }
+    
+
+conv = copy_node (expr);
+          TREE_TYPE (conv) = type;
+        }
+
+      else
+        {
+          conv = fold_convert (type, expr);
+
+      tree ptrmem_type;
+      tree member;
+    
+
+      /* This code is a stripped down version of
+         build_class_member_access_expr.  It does not work to use that
+         routine directly because it expects the object to be of class
+
+    	{
+    	  if (same_type_p (to_type, pfn_type))
+    	    return pfn;
+
+    	    return build_reinterpret_cast (to_type, pfn, 
+                                               complain);
+    	}
+
+          /* Just adjust the DELTA field.  */
+          gcc_assert  (same_type_ignoring_top_level_qualifiers_p
+    		   (TREE_TYPE (delta), ptrdiff_type_node));
+
+          return build_ptrmemfunc1 (to_type, delta, npfn);
+        }
+    
+
+tree conv;
+      if (TREE_TYPE (expr) == type)
+        conv = expr;
+
+        {
+          /* Avoid wrapping a PTRMEM_CST in NOP_EXPR.  */
+          conv = copy_node (expr);
+

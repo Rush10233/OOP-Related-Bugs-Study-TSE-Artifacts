@@ -1,0 +1,85 @@
+if (*non_constant_p)
+    	break;
+          /* Adjust the type of the result to the type of the temporary.  */
+          r = adjust_temp_type (TREE_TYPE (t), r);
+
+    	  if (*non_constant_p)
+    	    break;
+
+/* Cleanups that need to be evaluated at the end of CLEANUP_POINT_EXPR.  */
+      vec<tree> *cleanups;
+
+      constexpr_global_ctx () : constexpr_ops_count (0), cleanups (NULL) {}
+
+      /* SAVE_EXPRs and TARGET_EXPR_SLOT vars of TARGET_EXPRs that we've seen
+         within the current LOOP_EXPR.  NULL if we aren't inside a loop.  */
+
+    	  /* Track the callee's evaluated SAVE_EXPRs and TARGET_EXPRs so that
+    	     we can forget their values after the call.  */
+
+    	  /* Forget the saved values of the callee's SAVE_EXPRs and
+    	     TARGET_EXPRs.  */
+
+          /* Forget saved values of SAVE_EXPRs and TARGET_EXPRs.  */
+
+      /* Forget saved values of SAVE_EXPRs and TARGET_EXPRs.  */
+
+          /* Avoid evaluating a TARGET_EXPR more than once.  */
+          if (tree *p = ctx->global->values.get (TARGET_EXPR_SLOT (t)))
+    	{
+    	  if (lval)
+    	    return TARGET_EXPR_SLOT (t);
+    	  r = *p;
+    	  break;
+    	}
+
+          if (TARGET_EXPR_CLEANUP (t) && !CLEANUP_EH_ONLY (t))
+    	ctx->global->cleanups->safe_push (TARGET_EXPR_CLEANUP (t));
+          r = unshare_constructor (r);
+          ctx->global->values.put (TARGET_EXPR_SLOT (t), r);
+          if (ctx->save_exprs)
+    	ctx->save_exprs->safe_push (TARGET_EXPR_SLOT (t));
+
+    	return TARGET_EXPR_SLOT (t);
+
+          if (TREE_OPERAND (t, 0) == NULL_TREE)
+    	{
+    	  r = void_node;
+    	  break;
+    	}
+          /* FALLTHRU */
+        case NON_LVALUE_EXPR:
+
+        case CLEANUP_POINT_EXPR:
+          {
+    	auto_vec<tree, 2> cleanups;
+    	vec<tree> *prev_cleanups = ctx->global->cleanups;
+    	ctx->global->cleanups = &cleanups;
+    	r = cxx_eval_constant_expression (ctx, TREE_OPERAND (t, 0),
+    					  lval,
+    					  non_constant_p, overflow_p,
+    					  jump_target);
+    	ctx->global->cleanups = prev_cleanups;
+    	unsigned int i;
+    	tree cleanup;
+    	/* Evaluate the cleanups.  */
+    	FOR_EACH_VEC_ELT_REVERSE (cleanups, i, cleanup)
+    	  cxx_eval_constant_expression (ctx, cleanup, false,
+    					non_constant_p, overflow_p,
+    					jump_target);
+          }
+          break;
+    
+
+      auto_vec<tree, 16> cleanups;
+      global_ctx.cleanups = &cleanups;
+    
+
+      unsigned int i;
+      tree cleanup;
+      /* Evaluate the cleanups.  */
+      FOR_EACH_VEC_ELT_REVERSE (cleanups, i, cleanup)
+        cxx_eval_constant_expression (&ctx, cleanup, false,
+    				  &non_constant_p, &overflow_p);
+    
+

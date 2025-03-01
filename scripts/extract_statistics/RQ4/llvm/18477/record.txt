@@ -1,0 +1,6 @@
+Commit:	2c6b449
+./clang/include/clang/Sema/Sema.h	971,971
+./clang/include/clang/Sema/Sema.h	4653,4654
+./clang/lib/Parse/ParseCXXInlineMethods.cpp	534,534
+./clang/lib/Sema/SemaDeclCXX.cpp	2346,2352
+./clang/lib/Sema/SemaTemplateInstantiate.cpp	2139,2146

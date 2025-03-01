@@ -1,0 +1,109 @@
+{
+          tree field_init;
+          constructor_elt *old_cur = d->cur;
+
+    
+
+          if (d->cur->index)
+    	{
+    	  if (d->cur->index == error_mark_node)
+
+    		}
+    	    }
+    	  else if (TREE_CODE (d->cur->index) == IDENTIFIER_NODE)
+
+    	  else
+    	    {
+    	      if (complain & tf_error)
+
+    		  break;
+    	      gcc_assert (aafield);
+    	      field = aafield;
+
+    	    }
+    	}
+    
+
+    	   assumed to correspond to no elements of the initializer list.  */
+    	goto continue_;
+    
+
+          if (field_init == error_mark_node)
+    	return error_mark_node;
+    
+
+    	     to handle initialization of arrays and similar.  */
+    	  else if (COMPOUND_LITERAL_P (stripped_init))
+    	    gcc_assert (!BRACE_ENCLOSED_INITIALIZER_P (stripped_init));
+
+    	  /* A CONSTRUCTOR of the target's type is a previously
+    	     digested initializer.  */
+    	  else if (same_type_ignoring_top_level_qualifiers_p (type, init_type))
+
+NULL_TREE, complain);
+    }
+    
+
+    /* Subroutine of reshape_init_r, processes the initializers for classes
+       or union. Parameters are the same of reshape_init_r.  */
+    
+
+    
+          if (direct_desig)
+    	{
+
+    
+
+    
+    	     "If the element is an anonymous union member and the initializer
+    	     list is a brace-enclosed designated- initializer-list, the element
+    	     is initialized by the designated-initializer-list { D }, where D
+    	     is the designated- initializer-clause naming a member of the
+    	     anonymous union member."  */
+
+    	}
+          else
+    	field_init = reshape_init_r (TREE_TYPE (field), d,
+
+{
+          tree field_init;
+          constructor_elt *old_cur = d->cur;
+
+    
+
+          if (d->cur->index)
+    	{
+    	  if (d->cur->index == error_mark_node)
+
+    		}
+    	    }
+    	  else if (TREE_CODE (d->cur->index) == IDENTIFIER_NODE)
+
+    	  else
+    	    {
+    	      if (complain & tf_error)
+
+    		  break;
+    	      gcc_assert (aafield);
+    	      field = aafield;
+
+    	    }
+    	}
+    
+
+    	   assumed to correspond to no elements of the initializer list.  */
+    	goto continue_;
+    
+
+          if (field_init == error_mark_node)
+    	return error_mark_node;
+    
+
+    	     to handle initialization of arrays and similar.  */
+    	  else if (COMPOUND_LITERAL_P (stripped_init))
+    	    gcc_assert (!BRACE_ENCLOSED_INITIALIZER_P (stripped_init));
+
+    	  /* A CONSTRUCTOR of the target's type is a previously
+    	     digested initializer.  */
+    	  else if (same_type_ignoring_top_level_qualifiers_p (type, init_type))
+

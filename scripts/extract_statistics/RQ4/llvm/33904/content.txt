@@ -1,0 +1,41 @@
+OverloadCandidateSet &CandidateSet,
+                          TemplateArgumentListInfo *ExplicitTemplateArgs = nullptr,
+                          bool SuppressUserConversions = false,
+
+      void AddMethodCandidate(DeclAccessPair FoundDecl,
+                              QualType ObjectType,
+                              Expr::Classification ObjectClassification,
+
+        ArgExprs.append(Args.begin(), Args.end());
+        UnresolvedSet<8> Decls;
+        Decls.append(UME->decls_begin(), UME->decls_end());
+
+        AddFunctionCandidates(Decls, ArgExprs, CandidateSet, TemplateArgs,
+                              /*SuppressUsedConversions=*/false,
+
+      } else {
+        FunctionDecl *FD = nullptr;
+        if (auto MCE = dyn_cast<MemberExpr>(NakedFn))
+
+                                     OverloadCandidateSet& CandidateSet,
+                                     TemplateArgumentListInfo *ExplicitTemplateArgs,
+                                     bool SuppressUserConversions,
+
+      for (UnresolvedSetIterator F = Fns.begin(), E = Fns.end(); F != E; ++F) {
+        NamedDecl *D = F.getDecl()->getUnderlyingDecl();
+        if (FunctionDecl *FD = dyn_cast<FunctionDecl>(D)) {
+
+          if (isa<CXXMethodDecl>(FD) && !cast<CXXMethodDecl>(FD)->isStatic()) {
+            QualType ObjectType;
+            Expr::Classification ObjectClassification;
+
+            AddMethodCandidate(cast<CXXMethodDecl>(FD), F.getPair(),
+                               cast<CXXMethodDecl>(FD)->getParent(), ObjectType,
+
+                               SuppressUserConversions, PartialOverloading);
+          } else {
+
+                                 SuppressUserConversions, PartialOverloading);
+          }
+        } else {
+

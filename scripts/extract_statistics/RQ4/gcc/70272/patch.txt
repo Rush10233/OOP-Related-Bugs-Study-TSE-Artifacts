@@ -1,0 +1,8 @@
+if (flag_lifetime_dse
+    	  /* Clobbering an empty base is harmful if it overlays real data.  */
+    	  && !is_empty_class (current_class_type))
+
+if (flag_lifetime_dse
+    	  /* Clobbering an empty base is harmful if it overlays real data.  */
+    	  && !is_empty_class (current_class_type))
+

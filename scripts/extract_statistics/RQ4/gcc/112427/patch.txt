@@ -1,0 +1,18 @@
+{
+          tree x = va_arg (p, tree);
+          TREE_OPERAND (t, i) = x;
+          if (x && !TYPE_P (x))
+    	TREE_SIDE_EFFECTS (t) |= TREE_SIDE_EFFECTS (x);
+        }
+
+      if (argvec)
+        for (tree x : *argvec)
+          if (x && !TYPE_P (x))
+    	TREE_SIDE_EFFECTS (t) |= TREE_SIDE_EFFECTS (x);
+
+          datum = cp_convert (ptype, datum, complain);
+          if (!processing_template_decl)
+    	datum = build2 (POINTER_PLUS_EXPR, ptype,
+    			datum, convert_to_ptrofftype (component));
+          datum = cp_fully_fold (datum);
+

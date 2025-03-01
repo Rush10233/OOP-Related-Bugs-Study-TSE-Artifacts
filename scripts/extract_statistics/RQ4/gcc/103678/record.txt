@@ -1,0 +1,7 @@
+Commit:	14f3398
+./gcc/cp/parser.cc	26538,26538
+./gcc/cp/parser.cc	26548,26548
+./gcc/cp/parser.cc	26550,26554
+./gcc/cp/parser.cc	26561,26562
+./gcc/cp/parser.cc	26568,26568
+./gcc/cp/parser.cc	26572,26572

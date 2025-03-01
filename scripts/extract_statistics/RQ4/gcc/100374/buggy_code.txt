@@ -1,0 +1,26 @@
+tree freq = get_trailing_function_requirements (fn);
+    	      tree dreq = get_trailing_function_requirements (decl);
+
+    		  freq = tsubst_constraint (freq, fargs, complain, fn);
+
+          TEMPLATE_PARMS_CONSTRAINTS (parms) = treqs;
+
+      tree constraint = TEMPLATE_PARM_CONSTRAINTS (t);
+
+      constraint = tsubst_constraint (constraint, args, complain, NULL_TREE);
+
+      TEMPLATE_PARM_CONSTRAINTS (r) = constraint;
+
+tree freq = get_trailing_function_requirements (fn);
+    	      tree dreq = get_trailing_function_requirements (decl);
+
+    		  freq = tsubst_constraint (freq, fargs, complain, fn);
+
+          TEMPLATE_PARMS_CONSTRAINTS (parms) = treqs;
+
+      tree constraint = TEMPLATE_PARM_CONSTRAINTS (t);
+
+      constraint = tsubst_constraint (constraint, args, complain, NULL_TREE);
+
+      TEMPLATE_PARM_CONSTRAINTS (r) = constraint;
+

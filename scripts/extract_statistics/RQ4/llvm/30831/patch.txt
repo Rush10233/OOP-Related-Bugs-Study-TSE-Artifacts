@@ -1,0 +1,16 @@
+/// Return true if the iterator is non-singular.
+          bool isValid() const { return TST; }
+    
+
+            : SugaredIterator(TST),
+
+                  (TST->isSugared() && !TST->isTypeAlias())
+                      ? GetTemplateSpecializationType(Context, TST->desugar())
+                      : nullptr) {}
+
+          if (DesugaredIterator.isValid())
+
+          return DesugaredIterator.isValid() && !DesugaredIterator.isEnd();
+
+          assert(DesugaredIterator.isValid() &&
+

@@ -1,0 +1,48 @@
+&& (!(DECL_P (tree_strip_any_location_wrapper (current.lhs))
+    		|| (TREE_CODE (current.lhs) == NON_LVALUE_EXPR
+    		    && DECL_P (tree_strip_any_location_wrapper
+    					    (TREE_OPERAND (current.lhs, 0)))))
+
+    	{
+    	  val = invert_truthvalue_loc (location, arg);
+    	  if (obvalue_p (val))
+    	    val = non_lvalue_loc (location, val);
+    	  return val;
+    	}
+
+&& (!(DECL_P (tree_strip_any_location_wrapper (current.lhs))
+    		|| (TREE_CODE (current.lhs) == NON_LVALUE_EXPR
+    		    && DECL_P (tree_strip_any_location_wrapper
+    					    (TREE_OPERAND (current.lhs, 0)))))
+
+    	{
+    	  val = invert_truthvalue_loc (location, arg);
+    	  if (obvalue_p (val))
+    	    val = non_lvalue_loc (location, val);
+    	  return val;
+    	}
+
+&& (!(DECL_P (tree_strip_any_location_wrapper (current.lhs))
+    		|| (TREE_CODE (current.lhs) == NON_LVALUE_EXPR
+    		    && DECL_P (tree_strip_any_location_wrapper
+    					    (TREE_OPERAND (current.lhs, 0)))))
+
+    	{
+    	  val = invert_truthvalue_loc (location, arg);
+    	  if (obvalue_p (val))
+    	    val = non_lvalue_loc (location, val);
+    	  return val;
+    	}
+
+&& (!(DECL_P (tree_strip_any_location_wrapper (current.lhs))
+    		|| (TREE_CODE (current.lhs) == NON_LVALUE_EXPR
+    		    && DECL_P (tree_strip_any_location_wrapper
+    					    (TREE_OPERAND (current.lhs, 0)))))
+
+    	{
+    	  val = invert_truthvalue_loc (location, arg);
+    	  if (obvalue_p (val))
+    	    val = non_lvalue_loc (location, val);
+    	  return val;
+    	}
+

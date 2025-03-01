@@ -1,0 +1,9 @@
+Parser* Self;
+
+        // Stash the exception-specification tokens in the late-pased method.
+        LateMethod->ExceptionSpecTokens = FTI.ExceptionSpecTokens;
+        FTI.ExceptionSpecTokens = nullptr;
+    
+        // Push tokens for each parameter.  Those that do not have
+        // defaults will be NULL.
+

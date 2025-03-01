@@ -1,0 +1,19 @@
+Instruction::BinaryOps OuterOpcode = I.getOpcode(); // op
+      Instruction::BinaryOps InnerOpcode = Op0->getOpcode(); // op'
+    
+      // Does "X op' Y" always equal "Y op' X"?
+      bool InnerCommutative = Instruction::isCommutative(InnerOpcode);
+    
+
+        // Does the instruction have the form "(A op' B) op (A op' D)" or, in the
+        // commutative case, "(A op' B) op (C op' A)"?
+        if (A == C || (InnerCommutative && A == D)) {
+
+            return BinaryOperator::Create(InnerOpcode, A, RHS);
+        }
+    
+
+        // Does the instruction have the form "(A op' B) op (C op' B)" or, in the
+        // commutative case, "(A op' B) op (B op' D)"?
+        if (B == D || (InnerCommutative && B == C)) {
+

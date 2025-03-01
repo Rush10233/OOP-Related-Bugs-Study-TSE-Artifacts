@@ -1,0 +1,80 @@
+old_decl = bval;
+
+continue;
+
+          else if (flag_new_inheriting_ctors
+    	       && DECL_INHERITED_CTOR (fn))
+
+    	  /* Remove the inherited constructor.  */
+
+      tree name = DECL_NAME (using_decl);
+      tree access = declared_access (using_decl);
+      tree flist = NULL_TREE;
+      tree old_value;
+
+      old_value = lookup_member (t, name, /*protect=*/0, /*want_type=*/false,
+    			     tf_warning_or_error);
+
+      cp_emit_debug_info_for_using (decl, t);
+    
+      if (is_overloaded_fn (decl))
+        flist = decl;
+    
+
+          if (flist)
+    	/* It's OK to use functions from a base when there are functions with
+    	   the same name already present in the current class.  */;
+          else
+    	{
+    	  error_at (DECL_SOURCE_LOCATION (using_decl), "%qD invalid in %q#T "
+    		    "because of local method %q#D with same name",
+    		    using_decl, t, old_value);
+    	  inform (DECL_SOURCE_LOCATION (old_value),
+    		  "local method %q#D declared here", old_value);
+    	  return;
+    	}
+
+      if (flist)
+        for (tree f : ovl_range (flist))
+          {
+    	add_method (t, f, true);
+    	alter_access (t, f, access);
+          }
+      else if (USING_DECL_UNRELATED_P (using_decl))
+
+          auto cas = make_temp_override (current_access_specifier);
+          set_current_access_from_decl (using_decl);
+
+          /* We need to add the target functions of USING_DECLS, so that
+    	 they can be found when the using declaration is not
+    	 instantiated yet.  */
+
+    	if (TREE_CODE (x) == USING_DECL)
+    	  {
+    	    tree fn = strip_using_decl (x);
+      	    if (OVL_P (fn))
+    	      for (lkp_iterator iter (fn); iter; ++iter)
+    		add_method (t, *iter, true);
+    	  }
+    	else if (DECL_DECLARES_FUNCTION_P (x))
+
+          tree ass_op = build_lang_decl (USING_DECL, assign_op_identifier,
+    				     NULL_TREE);
+          DECL_CONTEXT (ass_op) = t;
+          USING_DECL_SCOPE (ass_op) = t;
+          DECL_DEPENDENT_P (ass_op) = true;
+          DECL_ARTIFICIAL (ass_op) = true;
+          DECL_CHAIN (ass_op) = TYPE_FIELDS (t);
+          TYPE_FIELDS (t) = ass_op;
+
+    static void diagnose_name_conflict (tree, tree);
+
+    /* Diagnose a name conflict between DECL and BVAL.  */
+
+    static void
+
+    	old_decl = bval;
+
+        /* For now, ignore class-scope USING_DECLS, so that debugging
+           backends do not see them. */
+

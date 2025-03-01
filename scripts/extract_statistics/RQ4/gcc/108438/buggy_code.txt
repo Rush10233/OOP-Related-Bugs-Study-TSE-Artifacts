@@ -1,0 +1,2 @@
+cp_parser_require (parser, CPP_GREATER, RT_GREATER);
+

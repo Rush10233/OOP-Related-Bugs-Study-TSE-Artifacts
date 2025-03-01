@@ -1,0 +1,4 @@
+/* A dependent base could make a member inaccessible in the current
+    	 class.  */
+          && !any_dependent_bases_p ()
+

@@ -1,0 +1,4 @@
+Commit:	b2353e5
+./gcc/cp/constexpr.c	2382,2397
+./gcc/cp/constexpr.c	2898,2898
+./gcc/cp/constexpr.c	3483,3495

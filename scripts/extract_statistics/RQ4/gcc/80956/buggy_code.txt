@@ -1,0 +1,6 @@
+/* Build up the initializer_list object.  */
+    	totype = complete_type (totype);
+
+    	      error ("declaration of std::initializer_list does not match "
+    		     "#include <initializer_list>, isn't a template");
+

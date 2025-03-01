@@ -1,0 +1,121 @@
+
+    /* Try to make EXP suitable to be used as the initializer for a base subobject,
+       and return whether we were successful.  EXP must have already been cleared
+
+    
+    static bool
+    make_base_init_ok (tree exp)
+
+        /* A trivial copy is OK.  */
+        return true;
+      if (!AGGR_INIT_VIA_CTOR_P (exp))
+
+        return true;
+      tree fn = cp_get_callee_fndecl_nofold (exp);
+      if (DECL_BASE_CONSTRUCTOR_P (fn))
+
+      return true;
+    }
+    
+
+    
+
+    
+
+    unsafe_return_slot_p (tree t)
+    {
+      /* Check empty bases separately, they don't have fields.  */
+      if (is_empty_base_ref (t))
+
+    
+      STRIP_NOPS (t);
+      if (TREE_CODE (t) == ADDR_EXPR)
+
+      if (!CLASS_TYPE_P (TREE_TYPE (t)))
+        /* The middle-end will do the right thing for scalar types.  */
+        return false;
+
+    }
+    
+
+    
+    static bool
+
+    {
+      /* Copy elision only happens with a TARGET_EXPR.  */
+      if (TREE_CODE (exp) != TARGET_EXPR)
+        return false;
+      tree init = TARGET_EXPR_INITIAL (exp);
+      /* build_compound_expr pushes COMPOUND_EXPR inside TARGET_EXPR.  */
+      while (TREE_CODE (init) == COMPOUND_EXPR)
+        init = TREE_OPERAND (init, 1);
+      if (TREE_CODE (init) == COND_EXPR)
+        {
+          /* We'll end up copying from each of the arms of the COND_EXPR directly
+
+          if (tree op = TREE_OPERAND (init, 1))
+
+    	  return true;
+
+        }
+      return (TREE_CODE (init) == AGGR_INIT_EXPR
+    	  && !AGGR_INIT_VIA_CTOR_P (init));
+    }
+    
+
+    /* True IFF the result of the conversion C is a prvalue.  */
+    
+    static bool
+
+    		    /* See unsafe_copy_elision_p.  */
+    		    || unsafe_return_slot_p (fa));
+    
+
+          bool eliding_temp = (TREE_CODE (arg) == TARGET_EXPR && !unsafe);
+    
+          /* [class.copy]: the copy constructor is implicitly defined even if the
+
+    extern bool is_list_ctor			(tree);
+    extern void validate_conversion_obstack		(void);
+    extern void mark_versions_used			(tree);
+
+    extern bool cp_warn_deprecated_use		(tree, tsubst_flags_t = tf_warning_or_error);
+    extern void cp_warn_deprecated_use_scopes	(tree);
+    extern tree get_function_version_dispatcher	(tree);
+
+    		    sub = build3 (COMPONENT_REF, inner_type, dest, field_index,
+    				  NULL_TREE);
+    
+
+    		  if (unsafe_return_slot_p (sub))
+    		    {
+
+    		      releasing_vec args = make_tree_vector_single (value);
+    		      code = build_special_member_call
+
+    			 LOOKUP_NORMAL, tf_warning_or_error);
+    		    }
+    		  else
+
+    		  code = build_stmt (input_location, EXPR_STMT, code);
+    		  code = maybe_cleanup_point_expr_void (code);
+    		  add_stmt (code);
+
+sub = build3 (COMPONENT_REF, inner_type, dest, field_index,
+    				  NULL_TREE);
+    
+
+    		  if (unsafe_return_slot_p (sub))
+    		    {
+
+    		      releasing_vec args = make_tree_vector_single (value);
+    		      code = build_special_member_call
+    			(sub, complete_ctor_identifier, &args, inner_type,
+    			 LOOKUP_NORMAL, tf_warning_or_error);
+    		    }
+    		  else
+
+    		  code = build_stmt (input_location, EXPR_STMT, code);
+    		  code = maybe_cleanup_point_expr_void (code);
+    		  add_stmt (code);
+

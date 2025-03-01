@@ -1,0 +1,24 @@
+
+      // Variables that have initialization with side-effects are required.
+      if (VD->getInit() && VD->getInit()->HasSideEffects(*this) &&
+
+        return true;
+    
+      // Likewise, variables with tuple-like bindings are required if their
+
+// Global named register variables (GNU extension) are never emitted.
+        if (VD->getStorageClass() == SC_Register)
+          return false;
+
+      } else if (const FunctionDecl *FD = dyn_cast<FunctionDecl>(D)) {
+        // We never need to emit an uninstantiated function template.
+        if (FD->getTemplatedKind() == FunctionDecl::TK_FunctionTemplate)
+
+        return true;
+    
+      // Variables that have initialization with side-effects are required.
+
+        return true;
+    
+      return false;
+

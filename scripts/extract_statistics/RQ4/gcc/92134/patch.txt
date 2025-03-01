@@ -1,0 +1,4 @@
+if (decl_spec_seq_has_spec_p (declspecs, ds_constinit))
+        flags |= LOOKUP_CONSTINIT;
+    
+

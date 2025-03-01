@@ -1,0 +1,58 @@
+extern tree calculate_bases                     (tree, tsubst_flags_t);
+
+    extern tree calculate_direct_bases              (tree, tsubst_flags_t);
+
+    	{
+    	  gcc_assert (parm_pack == pattern);
+    	  if (BASES_DIRECT (parm_pack))
+    	    return calculate_direct_bases (tsubst_expr (BASES_TYPE (parm_pack),
+    							args, complain,
+    							in_decl, false),
+    					   complain);
+    	  else
+    	    return calculate_bases (tsubst_expr (BASES_TYPE (parm_pack),
+    						 args, complain, in_decl,
+    						 false), complain);
+    	}
+
+       of type.  */
+
+    calculate_direct_bases (tree type, tsubst_flags_t complain)
+
+      if (!complete_type_or_maybe_complain (type, NULL_TREE, complain)
+          || !NON_UNION_CLASS_TYPE_P (type))
+
+      vec<tree, va_gc> *vector = make_tree_vector ();
+      vec<tree, va_gc> *base_binfos = BINFO_BASE_BINFOS (TYPE_BINFO (type));
+      tree binfo;
+      unsigned i;
+
+        if (BINFO_VIRTUAL_P (binfo))
+          vec_safe_push (vector, binfo);
+
+        if (!BINFO_VIRTUAL_P (binfo))
+          vec_safe_push (vector, binfo);
+
+      tree bases_vec = make_tree_vec (vector->length ());
+
+        TREE_VEC_ELT (bases_vec, i) = BINFO_TYPE ((*vector)[i]);
+    
+      release_tree_vector (vector);
+
+        vec_safe_push (*data, BINFO_TYPE (binfo));
+
+      vec<tree, va_gc> *vector = make_tree_vector ();
+
+    calculate_bases (tree type, tsubst_flags_t complain)
+
+      if (!complete_type_or_maybe_complain (type, NULL_TREE, complain)
+          || !NON_UNION_CLASS_TYPE_P (type))
+        return make_tree_vec (0);
+    
+      vec<tree, va_gc> *vector = make_tree_vector ();
+
+          vec<tree, va_gc> *vbase_bases
+    	= calculate_bases_helper (BINFO_TYPE (binfo));
+
+          bases_vec = make_tree_vec (vector->length () - 1);
+

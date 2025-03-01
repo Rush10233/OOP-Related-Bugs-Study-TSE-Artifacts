@@ -1,0 +1,2 @@
+if (CLASSTYPE_AS_BASE (optype) == type)
+

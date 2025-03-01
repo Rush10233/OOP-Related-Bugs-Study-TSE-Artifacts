@@ -1,0 +1,10 @@
+if (cxx_dialect < cxx20
+
+    	    pedwarn (loc, 0, "explicit by-copy capture of %<this%> redundant "
+    		     "with by-copy capture default");
+
+if (cxx_dialect < cxx20
+
+    	    pedwarn (loc, 0, "explicit by-copy capture of %<this%> redundant "
+    		     "with by-copy capture default");
+

@@ -1,0 +1,7 @@
+/* DR 1813:
+    	     ...has at most one base class subobject of any given type...  */
+    	  else if (CLASSTYPE_REPEATED_BASE_P (t))
+    	    CLASSTYPE_NON_STD_LAYOUT (t) = 1;
+
+    	       members.  FIXME This was reworded in DR 1813.  */
+

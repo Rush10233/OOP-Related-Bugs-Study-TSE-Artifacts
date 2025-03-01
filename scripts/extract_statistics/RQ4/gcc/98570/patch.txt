@@ -1,0 +1,64 @@
+$(MAKE) RUNTESTFLAGS="$(RUNTESTFLAGS) --extra_opts,--param,ggc-min-heapsize=0,--param,ggc-min-expand=0,--param,hash-table-verification-limit=10000" \
+
+      ++processing_template_decl;
+
+      --processing_template_decl;
+
+/* Nonzero if we are inside spec_hasher::equal, which affects
+       comparison of PARM_DECLs in cp_tree_equal.  */
+
+    /* Nonzero if we want different dependent aliases to compare as unequal.
+       FIXME we should always do this except during deduction/ordering.  */
+    extern int comparing_dependent_aliases;
+    
+
+      comparing_dependent_aliases++;
+
+      comparing_dependent_aliases--;
+
+    int comparing_dependent_aliases;
+
+      ++comparing_dependent_aliases;
+
+      --comparing_dependent_aliases;
+
+      if (t == error_mark_node)
+        return NULL_TREE;
+      gcc_assert (TYPE_P (t));
+    
+      if (!typedef_variant_p (t))
+
+      /* DR 1558: Don't treat an alias template specialization with dependent
+         arguments as equivalent to its underlying type when used as a template
+         argument; we need them to be distinct so that we substitute into the
+         specialization arguments at instantiation time.  And aliases can't be
+         equivalent without being ==, so we don't need to look any deeper.
+    
+         During partial ordering, however, we need to treat them normally so we can
+         order uses of the same alias with different cv-qualification (79960).  */
+      auto cso = make_temp_override (comparing_dependent_aliases);
+      if (!partial_order)
+        ++comparing_dependent_aliases;
+    
+
+          return same_type_p (ot, nt);
+
+      if (tree d = dependent_alias_template_spec_p (TREE_TYPE (r), nt_opaque))
+        {
+          /* An alias template specialization can be dependent
+    	 even if its underlying type is not.  */
+          TYPE_DEPENDENT_P (d) = true;
+          TYPE_DEPENDENT_P_VALID (d) = true;
+          /* Sometimes a dependent alias spec is equivalent to its expansion,
+    	 sometimes not.  So always use structural_comptypes.  */
+          SET_TYPE_STRUCTURAL_EQUALITY (d);
+        }
+    
+
+    	  && DECL_CONTEXT (t1) != DECL_CONTEXT (t2))
+
+      /* Suppress typename resolution under spec_hasher::equal in place of calling
+         push_to_top_level there.  */
+
+      if (comparing_dependent_aliases)
+

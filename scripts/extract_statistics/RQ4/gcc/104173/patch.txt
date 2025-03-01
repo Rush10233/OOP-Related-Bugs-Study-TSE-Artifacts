@@ -1,0 +1,9 @@
+if (tree temp = unary_complex_lvalue (ADDR_EXPR, object))
+        {
+          temp = cp_build_fold_indirect_ref (temp);
+          if (!lvalue_p (object) && lvalue_p (temp))
+    	/* Preserve rvalueness.  */
+    	temp = move (temp);
+          object = temp;
+        }
+

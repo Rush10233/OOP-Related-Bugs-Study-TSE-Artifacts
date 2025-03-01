@@ -1,0 +1,24 @@
+if (!decl || TREE_CODE (decl) != FIELD_DECL)
+
+          /* Like in cxx_eval_store_expression, omit entries for empty fields.  */
+          bool no_slot = TREE_CODE (type) == RECORD_TYPE && is_empty_field (index);
+          if (no_slot)
+    	new_ctx = *ctx;
+          else
+    	init_subob_ctx (ctx, new_ctx, index, value);
+
+          else if (no_slot)
+    	changed = true;
+
+if (!decl || TREE_CODE (decl) != FIELD_DECL)
+
+          /* Like in cxx_eval_store_expression, omit entries for empty fields.  */
+          bool no_slot = TREE_CODE (type) == RECORD_TYPE && is_empty_field (index);
+          if (no_slot)
+    	new_ctx = *ctx;
+          else
+    	init_subob_ctx (ctx, new_ctx, index, value);
+
+          else if (no_slot)
+    	changed = true;
+

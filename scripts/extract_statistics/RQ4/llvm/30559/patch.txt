@@ -1,0 +1,4 @@
+// Skip function template not specialized yet.
+            if (FD->getTemplatedKind() == FunctionDecl::TK_FunctionTemplate)
+              return;
+

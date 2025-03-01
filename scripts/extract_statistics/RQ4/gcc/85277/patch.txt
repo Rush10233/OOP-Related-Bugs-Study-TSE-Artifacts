@@ -1,0 +1,15 @@
+while (TREE_CODE (expr) == COMPONENT_REF
+    	     || TREE_CODE (expr) == COMPOUND_EXPR)
+    	expr = TREE_OPERAND (expr, 1);
+    
+          if (DECL_P (expr))
+
+    	  inform (DECL_SOURCE_LOCATION (expr), "declared here");
+
+          else
+    	error ("cannot apply %<offsetof%> to member function");
+
+        warning_at (loc, OPT_Winvalid_offsetof, "offsetof within "
+    		"non-standard-layout type %qT is conditionally-supported",
+    		TREE_TYPE (TREE_TYPE (object_ptr)));
+

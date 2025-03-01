@@ -1,0 +1,3 @@
+Commit:	47f4274
+./gcc/cp/constexpr.c	2913,2913
+./gcc/cp/constexpr.c	2915,2915

@@ -1,0 +1,9 @@
+BaseExpr = new (Context) CXXThisExpr(Loc, BaseExprType,/*isImplicit=*/true);
+      }
+    
+      // Check the use of this member.
+
+        return ExprError();
+    
+      if (FieldDecl *FD = dyn_cast<FieldDecl>(MemberDecl))
+

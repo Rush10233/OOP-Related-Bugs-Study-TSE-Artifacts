@@ -1,0 +1,2 @@
+FieldDecl *Pattern = cast<FieldDecl>(Lookup.front());
+

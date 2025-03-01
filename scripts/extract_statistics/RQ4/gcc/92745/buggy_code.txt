@@ -1,0 +1,27 @@
+/* For a nested compound literal, there is no need to reshape since
+    
+    	     digest_init.  */
+    	  else if (COMPOUND_LITERAL_P (init)
+    		   /* Similarly, a CONSTRUCTOR of the target's type is a
+    		      previously digested initializer.  */
+    		   || same_type_ignoring_top_level_qualifiers_p (type,
+    								 init_type))
+
+/* For a nested compound literal, there is no need to reshape since
+    
+    	     digest_init.  */
+    	  else if (COMPOUND_LITERAL_P (stripped_init)
+    		   /* Similarly, a CONSTRUCTOR of the target's type is a
+    		      previously digested initializer.  */
+    		   || same_type_ignoring_top_level_qualifiers_p (type,
+    								 init_type))
+
+/* For a nested compound literal, there is no need to reshape since
+    
+    	     digest_init.  */
+    	  else if (COMPOUND_LITERAL_P (stripped_init)
+    		   /* Similarly, a CONSTRUCTOR of the target's type is a
+    		      previously digested initializer.  */
+    		   || same_type_ignoring_top_level_qualifiers_p (type,
+    								 init_type))
+

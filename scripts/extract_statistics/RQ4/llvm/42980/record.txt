@@ -1,0 +1,5 @@
+Commit:	638933a
+./clang/include/clang/AST/DeclCXX.h	2558,2558
+./clang/include/clang/AST/DeclCXX.h	2560,2560
+./clang/include/clang/AST/DeclCXX.h	2601,2601
+./clang/include/clang/AST/DeclCXX.h	2604,2604

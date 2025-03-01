@@ -1,0 +1,64 @@
+def err_conv_function_to_function : Error<
+      "conversion function cannot convert to a function type">;
+    def err_conv_function_with_complex_decl : Error<
+
+    def err_conv_function_redeclared : Error<
+      "conversion function cannot be redeclared">;
+    def warn_conv_to_self_not_used : Warning<
+
+      /// EndLoc - If valid, the place where this chunck ends.
+      SourceLocation EndLoc;
+    
+
+      struct TypeInfoCommon {
+        AttributeList *AttrList;
+      };
+
+                                              SourceLocation Loc) {
+        DeclaratorChunk I;
+        I.Kind          = MemberPointer;
+
+        I.Mem.TypeQuals = TypeQuals;
+        I.Mem.AttrList  = nullptr;
+        new (I.Mem.ScopeMem.Mem) CXXScopeSpec(SS);
+
+        return DeclTypeInfo[i];
+      }
+    
+
+      void DropFirstTypeObject() {
+        assert(!DeclTypeInfo.empty() && "No type chunks to drop.");
+        DeclTypeInfo.front().destroy();
+
+          // Sema will have to catch (syntactically invalid) pointers into global
+          // scope. It has to catch pointers into namespace scope anyway.
+          D.AddTypeInfo(DeclaratorChunk::getMemberPointer(SS,DS.getTypeQualifiers(),
+
+                        DS.getAttributes(),
+                        /* Don't replace range end. */SourceLocation());
+          return;
+
+      return Context.getFunctionType(Context.VoidTy, None, EPI);
+    }
+    
+
+    /// CheckConversionDeclarator - Called by ActOnDeclarator to check the
+    /// well-formednes of the conversion function declarator @p D with
+    /// type @p R. If there are any errors in the declarator, this routine
+
+        SC = SC_None;
+      }
+    
+
+    
+      if (D.getDeclSpec().hasTypeSpecifier() && !D.isInvalidType()) {
+        // Conversion functions don't have return types, but the parser will
+
+      // Diagnose "&operator bool()" and other such nonsense.  This
+      // is actually a gcc extension which we don't support.
+      if (Proto->getReturnType() != ConvType) {
+
+        ConvType = Proto->getReturnType();
+      }
+    
+

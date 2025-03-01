@@ -1,0 +1,2 @@
+if (!LoopVar->isInvalidDecl() && Kind != BFRK_Check)
+

@@ -1,0 +1,5 @@
+Commit:	4377656
+./clang/include/clang/Sema/TypoCorrection.h	253,254
+./clang/lib/Parse/ParseExpr.cpp	438,438
+./clang/lib/Sema/SemaLookup.cpp	4457,4461
+./clang/lib/Sema/SemaLookup.cpp	4464,4464

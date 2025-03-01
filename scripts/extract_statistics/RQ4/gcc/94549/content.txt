@@ -1,0 +1,26 @@
+{
+      gcc_assert (DECL_P (t));
+    
+
+        t = strip_inheriting_ctors (t);
+    
+      /* Update the declaration for diagnostics.  */
+
+satisfy_declaration_constraints (tree t, subst_info info)
+    {
+      gcc_assert (DECL_P (t));
+
+    
+
+    
+      /* Update the declaration for diagnostics.  */
+      info.in_decl = t;
+
+          /* The initial parameter mapping is the complete set of
+    	 template arguments substituted into the declaration.  */
+          args = TI_ARGS (ti);
+
+        }
+      else
+        {
+

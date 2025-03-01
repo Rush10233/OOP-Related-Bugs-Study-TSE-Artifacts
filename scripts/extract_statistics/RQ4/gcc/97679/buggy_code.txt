@@ -1,0 +1,6 @@
+aggregate initialization guide.  */
+
+    	    ci = tsubst_constraint_info (ci, tsubst_args, complain, ctor);
+
+    	    ci = tsubst_constraint_info (ci, targs, complain, ctor);
+

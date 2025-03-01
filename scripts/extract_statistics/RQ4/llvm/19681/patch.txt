@@ -1,0 +1,47 @@
+WantObjCSuper(false), IsObjCIvarLookup(false),
+            IsAddressOfOperand(false) {}
+
+      bool IsAddressOfOperand;
+
+        return AllowNonTypes &&
+               CorrectionCandidateCallback::ValidateCandidate(candidate);
+
+        Validator.IsAddressOfOperand = isAddressOfOperand;
+
+          if (getLangOpts().CPlusPlus && ND->isCXXClassMember()) {
+            CXXRecordDecl *Record = nullptr;
+            if (Corrected.getCorrectionSpecifier()) {
+              const Type *Ty = Corrected.getCorrectionSpecifier()->getAsType();
+              Record = Ty->getAsCXXRecordDecl();
+            }
+            if (!Record)
+              Record = cast<CXXRecordDecl>(
+                  ND->getDeclContext()->getRedeclContext());
+            R.setNamingClass(Record);
+          }
+
+        DefaultValidator.IsAddressOfOperand = IsAddressOfOperand;
+        assert((!CCC || CCC->IsAddressOfOperand == IsAddressOfOperand) &&
+               "Typo correction callback misconfigured");
+
+      bool HasNonType = false;
+      bool HasStaticMethod = false;
+      bool HasNonStaticMethod = false;
+      for (Decl *D : candidate) {
+        if (FunctionTemplateDecl *FTD = dyn_cast<FunctionTemplateDecl>(D))
+          D = FTD->getTemplatedDecl();
+        if (CXXMethodDecl *Method = dyn_cast<CXXMethodDecl>(D)) {
+          if (Method->isStatic())
+            HasStaticMethod = true;
+          else
+            HasNonStaticMethod = true;
+        }
+        if (!isa<TypeDecl>(D))
+          HasNonType = true;
+
+      if (IsAddressOfOperand && HasNonStaticMethod && !HasStaticMethod &&
+          !candidate.getCorrectionSpecifier())
+        return false;
+    
+      return WantTypeSpecifiers || HasNonType;
+

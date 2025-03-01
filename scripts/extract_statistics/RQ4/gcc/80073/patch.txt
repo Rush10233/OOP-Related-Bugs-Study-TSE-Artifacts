@@ -1,0 +1,4 @@
+/* An aggregate can't have virtual base classes.  */
+          CLASSTYPE_NON_AGGREGATE (ref) = true;
+    
+

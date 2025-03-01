@@ -1,0 +1,11 @@
+tsubst_flags_t complain = tf_warning_or_error;
+    
+
+    	  tree binfo = TYPE_BINFO (TREE_TYPE (object));
+    	  tree dtor_fn = lookup_fnfields (binfo,
+
+    	  if (!mark_used (dtor_fn)
+    	      || !perform_or_defer_access_check (binfo, dtor_fn,
+    						 dtor_fn, complain))
+    	    return error_mark_node;
+

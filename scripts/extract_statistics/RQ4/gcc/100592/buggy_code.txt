@@ -1,0 +1,5 @@
+return lookup_template_class (t, TREE_OPERAND (fullname, 1),
+    				  NULL_TREE, context,
+    				  /*entering_scope=*/0,
+    				  complain | tf_user);
+

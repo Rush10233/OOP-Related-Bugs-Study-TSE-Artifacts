@@ -1,0 +1,5 @@
+TemplateArgs, SourceRange());
+
+        MultiLevelTemplateArgumentList MLTAL(
+            *Decl->getTemplateSpecializationArgs());
+

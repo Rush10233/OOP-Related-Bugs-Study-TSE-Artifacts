@@ -1,0 +1,22 @@
+if (D->getDeclContext() && D->getDeclContext()->isDependentContext())
+
+        // Skip function templates
+        if (cast<FunctionDecl>(D)->getDescribedFunctionTemplate() ||
+            cast<FunctionDecl>(D)->isLateTemplateParsed())
+          return;
+    
+
+        // Skip variable templates
+        if (cast<VarDecl>(D)->getDescribedVarTemplate())
+          return;
+        LLVM_FALLTHROUGH;
+
+        // Skip function templates
+        if (cast<FunctionDecl>(D)->getDescribedFunctionTemplate() ||
+            cast<FunctionDecl>(D)->isLateTemplateParsed())
+          return;
+    
+
+        if (cast<FunctionDecl>(D)->isLateTemplateParsed())
+          return;
+

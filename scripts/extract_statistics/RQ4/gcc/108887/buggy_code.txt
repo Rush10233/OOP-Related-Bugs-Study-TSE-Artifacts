@@ -1,0 +1,34 @@
+/* As an GCC extension we allow redefinition of the function.  The
+         semantics when both copies of bodies differ is not well defined.
+         We replace the old body with new body so in unit at a time mode
+         we always use new body, while in normal mode we may end up with
+         old body inlined into some functions and new body expanded and
+         inlined in others.  */
+      void reset (void);
+    
+
+       body for expanding the function but this is difficult to do.  */
+
+    cgraph_node::reset (void)
+
+      /* If process is set, then we have already begun whole-unit analysis.
+         This is *not* testing for whether we've already emitted the function.
+         That case can be sort-of legitimately seen with real function redefinition
+         errors.  I would argue that the front end should never present us with
+         such a case, but don't enforce that for now.  */
+      gcc_assert (!process);
+    
+
+      inlined_to = NULL;
+      memset (&rtl, 0, sizeof (rtl));
+
+      remove_callees ();
+
+      /* If this is already an alias, remove the alias, because the real
+
+        if (symtab_node *n = symtab_node::get (*slot))
+          if (n->cpp_implicit_alias)
+
+    	  n->remove ();
+    	  *slot = NULL_TREE;
+

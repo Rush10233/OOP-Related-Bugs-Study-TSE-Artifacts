@@ -1,0 +1,220 @@
+108262	Spurious [Wignored-attributes] on vector intrinsic types, even in constexpr contexts
+108282	[12/13 Regression] Disabled template method using requires-clause still viable through requires-expression
+108275	pointer to member field is not checked for accessibility inside a template argument
+108302	void fn (uint8_t auto... args); leads to internal compiler error: Segmentation fault
+108313	smth strange with libcpp/system.h: abort() redefinition
+108319	Problem with std::__cxx11::basic_string<char>
+108333	[10/11/12/13/trunk Regression] no_unique_address and direct-non-list-initialization is rejected
+108266	[13 Regression] ICE during cxx_eval_constant_expression on IMPLICIT_CONV_EXPR since r13-4564
+108361	Assembly code that is never called emitted on x86_64
+108364	Construction from prvalue erroneously uses move-constructor
+108285	[13 Regression] error: conversion from ‘long double’ to ‘double’ may change value [-Werror=float-conversion] since r13-3291-g16ec267063c8ce60
+108437	[13 Regression] ICE in build_min_non_dep_op_overload, at cp/tree.cc:3710
+108496	[13 Regression] NRV ICE since r13-4469
+108488	segfault with -fmodules-ts and class-scope friend declaration first in uninstantiated template
+108513	[13 Regression] Bad initializer-list construction of std::vector
+108504	[13 Regression] ICE in cp_lexer_handle_early_pragma, at cp/parser.cc:675
+108503	[13 Regression] ICE in get_array_or_vector_nelts, at cp/constexpr.cc:4119
+108570	[concept] GCC tries to instantiate additional unneeded operator.
+108586	Using std::array instead of a plain array results in different (worse?) code in array zero initialization
+108587	`decltype(x) x;` in struct declaration causes "changes meaning of" error
+108479	ICE in type_memfn_rqual, at cp/typeck.cc:10994
+108597	[11/12/13 Regression] internal compiler error with -Wduplicated-cond
+108559	[13 Regression] A new crash with using a simple class, inheritance and a function
+108627	A new crash with using a simple class, inheritance and a function (version 2)
+108613	[12/13 Regression] GCC12 internal compiler error on __int128_t in type_traits header
+108579	[13 Regression] Requires-expression that checks constructor on non-template constructor of template class got rejected
+108676	template parameters are misprinted in function signature
+108683	Move Occurs when initializing an aggregate base
+108576	False positive for -Werror=return-type
+108646	nonnull attribute does not detect variables that are NULL being passed
+108525	[13 Regression] ICE in write_method_parms with static on lambda with ... argument
+108717	Greek letters not accepted as part of identifier in user-defined literal operators without a space
+108698	[13 Regression] decltype ((T() + ‘excess_precision_expr’ not supported by dump_expr<expression error>)) median(ndarray<T>) [with T = double]’: since r13-3290-g98e341130f87984a
+108286	[12 Regression] OpenMP Target directive causes internal compiler error
+108755	ICE in use_thunk at cp/method.cc:317
+108829	[12 Regression] internal compiler error: in is_capture_proxy, at cp/lambda.cc:272
+108897	Comparing pointer to field in rvalue class is not considered constant expression
+108913	GCC 12.1.0 h8300 ICE building libstdc++
+108966	Inheriting consteval constructor makes it constexpr in the derived class
+108606	[13 Regression] ICE in potential_constant_expression_1 with friend function declaration inside a local class of a generic/templated lambda
+109001	“no declaration matches” for complicated non-type template parameters
+108702	[13 Regression] ICE in get_partitioning_class, at symtab.cc:2096 since r13-4161-g32d16fe9d7e347bc
+108550	[10/11/12 Regression] the type 'const auto' of 'constexpr' variable is not literal
+109042	[13 Regression] ICE in emit_support_tinfo_1, at cp/rtti.cc:1584
+108526	[13 Regression] ICE in start_preparsed_function with static on generic lambdas inside a template
+108706	[13 Regression] Indefinite recursion when compiling gcc/testsuite/g++.dg/cpp23/static-operator-call5.C w/ -g
+109070	ICE in class template member function overloads distinguished by non-functionally-equivalent constraints and return type
+108971	[13 Regression] ICE in tree_profiling, at tree-profile.cc:724
+108542	[13 Regression] ICE in instantiate_type, at cp/class.cc:8833
+108972	[13 Regression] ICE: tree check: expected tree that contains 'decl common' structure, have 'error_mark' in compare_lambda_template_head, at cp/lambda.cc:1551 since r13-3601-g2b0e81d5cc2f7e1d
+109168	bogus error: 'X' is not a valid template argument of type 'Y' because 'X' is not a variable
+109172	[10/11/12/13 Regression] g++ calls a private destructor with the keyword throw after the try-block
+109185	ICE in get_partitioning_class, at symtab.cc:2096
+109204	Compiler emits unknows assembly instruction with -O3 level
+109039	[12 Regression] Miscompilation with no_unique_address and bitfields
+109222	Confusing error for declaring an enum class with unknown type
+109235	nodiscard attribute on class not copied to the constructors
+109177	Call to C++ function marked unavailable gets diagnosed twice
+109295	deducing brace-enclosed initializer list using import <initializer_list> fails to compile
+109291	type alias template rejects pack
+109309	Untranslated text in diagnostic
+109320	[13 Regression] ICE in coerce_template_parameter_pack, at cp/pt.cc:8795
+109321	[13 Regression] ICE in iterative_hash_template_arg, at cp/pt.cc:1727
+108887	[13 Regression] ICE in process_function_and_variable_attributes since r13-3601
+109307	[13 Regression] constructors fails typecheck on initializer list assignment
+109338	`S<a_concept<int> auto>` isn't valid C++20
+109337	c++2a test concepts4.C passes when it should fail
+109382	Error inside virtual function of class template does not show point of instantiation/use, only shows where the function is defined.
+109300	[13 Regression] ICE in cp_finish_decl, at cp/decl.cc:8279 since r13-6380-gd3d205ab44088616
+109397	[concepts] Unexpected "satisfaction of atomic constraint ... depends on itself"
+109421	Compilation takes a long time for struct that contains a large default-initialized array
+109425	mismatched argument pack lengths while expanding
+109459	static_assert with operator""s causes internal compiler error
+109468	assign to default with three way comparison causes internal compiler error
+109277	[13 Regression] type_traits:1417:30: error: invalid use of incomplete type ‘class v8::internal::WasmArray’
+109420	[13 Regression] lookup of 'struct T::X' at instantiation time does not ignore non-type bindings of 'X' since r13-6098-g46711ff8e60d64
+109523	List-initializing constructor of std::vector is selected erroneously
+109514	[13 regression] -Werror=dangling-pointer false positive on fheroes-1.0.3 (lambdas)
+109538	Spurious -Werror=dangling-reference false positive
+109319	[12 Regression] ICE in build_min_non_dep_op_overload, at cp/tree.cc:3793 since r12-5510
+109357	[12 Regression] internal compiler error in cp/constexpr.cc:1685
+109556	[13/14 Regression] internal compiler error: in iterative_hash_template_arg, at cp/pt.cc:1927
+109630	internal compiler error: in final_scan_insn_1, at final.c:3078 6480 | }, to attach another half /tmp/ccdNSTWA.out
+109278	a note without a warning
+109633	segfault using cout after set with simple prog from cppreference.com
+109531	[13/14 Regression] Checking ICE with hash table checking failed: equal operator returns true for a pair of values with a different hash value since r13-3292-gc2565a31c1622a
+109669	Internal Compiler Error when zero-initializing std::array
+109159	[10/11/12 Regression] explicit constructor is used in copy-initialization
+109663	False positive? Converting from initializer list would use explicit constructor
+108607	[12 Regression] ICE in potential_constant_expression_1, at cp/constexpr.cc:10003
+109649	[13/14 Regression] GCC accepts invalid inaccessible friend declaration of member function
+108365	[10 Regression] Wrong code with -O0
+108474	static structured binding undefined reference
+109096	__has_unique_object_representations does not account for unnamed bitfield
+109164	wrong code with thread_local reference, loops and -ftree-pre
+109724	[10 regression] Huge memory usage when building qtwebengine's SkOpAngle.cpp since r10-11201-g051f78a5c1d699
+109731	g++ evaluates delete expressions more than once
+109730	[12/13/14 regression] ICE in contains_struct_check since r12-9441-g94569d91bd4c60
+109723	[14 regression] ICE in instantiate_decl, at cp/pt.cc:27066 when building opencv-4.7.0 since r14-283-g95d4c0d2e6318a
+109658	[14 Regression] ICE when building aria2-1.36.0 (internal compiler error: in instantiate_decl, at cp/pt.cc:27095) since r14-283-g95d4c0d2e6318a
+109645	[14 Regression] ICE in instantiate_decl, at cp/pt.cc:27097 since r14-283-g95d4c0d2e6318a
+109757	Conversion from lvalue to rvalue without error
+109782	erroneous error "'auto' parameter not permitted in this context" for generic lambda in tparam list
+109785	ICE in begin_maybe_infinite_loop
+109160	[Valid code] Constraint on deduced NTTP from method call causes ICE/Segfault.
+108303	lookup fails with requires clause on non-template friend function of a class template
+109803	[12 Regression] ICE with type defined in lambda inside generic lambda inside function template
+109752	[13 regression] ICE in check_complete_insertion, at hash-table.h:578 since r13-4937
+109651	[13 Regression] ICE in lookup_template_class since r14-11-g2245459c85a3f4
+109745	[13 Regression] Incorrect code generated with -O1 when having a constexpr object modifying a mutable member
+109850	ICE compiling ccache 4.8
+109872	[12 Regression] ICE on valid C++ code
+109774	template function causes Spurious dangling reference warning while non-template does not
+109888	GCC 13 Fails to Compile Code with Explicit Constructor for std::array in Template Class
+109884	__builtin_Xq returns _Float128 instead of __float128
+109937	Spurious ambiguous overload error when class with explicit template ctor is assigned to from an braced-init-list initializing an aggregate
+109975	error: '(((int*)(&<anonymous>.X::a)) != 0)' is not a constant expression
+109991	stack-use-after-scope
+109981	ICE encountered while generating header units in the given sequence in a script
+110005	Writable strings seem too greedy in overload resolution
+110037	GCC accepts private member access of enclosing class through friend function of inner class
+109864	explicit constructor considered during overload resolution leads to ambiguity
+110056	ICE on trying to generate header unit for 'execution'
+110078	[13 regression] Excessive memory usage constructing std::variant from a high-index alternative.
+110097	Error invalid use of non-static member function
+109923	Template friend function defined in a template class becomes a friend of all instantiations, not one
+110140	Vector extensions cause false conflict in template argument deduction
+110160	g++ rejects concept as cyclical with non-matching function signature
+110191	Alias template in function parameter does not match the nested type it refers to
+110225	[14 regression] many ICEs after r14-1624-g28db36e2cfca1b
+110257	[13 Regression] Excessive compilation time and memory consumption
+110296	ICE in gsi_replace, at gimple-iterator.cc:437 during GIMPLE pass: widening_mul
+108773	[13 Regression] ICE in gimplify_var_or_parm_decl, at gimplify.cc:3058 compiling ceph since r13-4563-g1e1847612d7f169f
+110321	Double precision comaprison does not seem to work well when -std=c++17 option is selected
+110330	GCC does not diagnose ambiguous function introduced from base class
+110346	[C++26] P2752R3 - Static storage for braced initializers
+110102	[13 regression] initializer_list ctors of containers skip Allocator_traits::construct, copies move-only type
+110164	Improve diagnostic for incomplete standard library types due to missing include
+110383	Missed optimiztion: Default operator== with trivial struct can be replaced with bcmp
+110397	types may not be defined in parameter types leads to ICE with -fdump-tree-original (or no -quiet when invoking cc1plus directly)
+110395	GCOV stuck in an infinite loop with large std::array
+109554	Compiler generates incorrect code when the function declared with returned parameterm but no 'return' in its body
+110437	SIGILL when return missing in a C++ function with a condition
+110175	[GCC][Crash] GCC Crash on valid code
+110477	-fexcess-precision=standard not applied consistently
+110463	[13/14 Regression] Mutable subobject is usable in a constant expression
+110185	[14 Regression]: Tens of c++ testsuite crashes for cris-elf with r14-1624-g28db36e2cfca1b
+110596	Documentation: typo in the docs for -Wnrvo
+110523	[14 Regression] ICE in redeclare_class_template, at cp/pt.cc:6391 on json-3.11.2
+110604	template argument deduction failed with decltype(lambda)
+110580	[14 Regression] gcc fails to typecheck nix-2.16.1 source: error: invalid initialization of reference of type
+110636	boost::geometry compile error with std::set.
+110468	[12/13/14 regression] Internal compiler error in nothrow_spec_p
+110648	Missed optimization for small returned optional leads to redundant memory accesses
+110344	[C++26] P2738R1 - constexpr cast from void*
+110441	c++17: temporary causes static member function call to confuse required copy elision
+110690	invalid use of member 'S::m' in static member function
+110685	problem with volatile
+110687	problem with class template
+110122	[13/14 Regression] using an aggregate with a member variable with a user defined copy constructor in a class NTTP causes capture and use of the `this` pointer in a generic lambda to produce the following error "-copy ctor- used before its definition"
+110535	Internal error when performing a surrogate call with unsatisfied constraints
+110064	spurious missing initializer for member for anonymous
+110745	Improve printing of base classes
+110765	[13 regression] constraints on parameters of derived type in CRTP base
+110771	[14 regression] g++.dg/gomp/pr58567.C fails after r14-2655-g92d1425ca78040
+110804	[13 regression] eliminate_stmt ICE on aarch64
+108960	clear tf_partial et al in instantiate_template
+110810	[12/13/14 Regression] ICE in check_noexcept_r, at cp/except.cc:1068
+110524	[C++20] ICE with use of function template name with no prior declaration in decltype
+110828	union constexpr dtor not constexpr when used in member array
+110824	Gcc crashing on a lambda capture
+110837	ICE on non-friend default operator overloading
+110890	std::is_array and std::extent incorrectly choose a partial specialization when the size of an array exceeds INT32_MAX
+110904	__is_convertible incorrectly reports non-referenceable function prototypes as convertible
+110920	variably-length array declarations as parameters for C compatibility
+110925	Unnecessary dynamic initialization in trivial cases
+109761	[11/12 Regression] Nested class destructor's noexcept specification incorrectly considered as too loose compared to the outer class
+109181	requires expression type requirement rejects valid type when it is a nested member template
+110967	c++20 coroutine does not support SIMD avx2 and avx512
+108468	[11 Regression] ICE in most_specialized_partial_spec/builtin_guide_p in C++20 mode
+109678	[13/14 Regression] exponential time behavior on std::variant
+110127	-fimplicit-constexpr leads to extremely slow and memory intensive compilation
+111016	Confusing "used in its own initializer" for non-dependent ad-hoc constraint
+110927	GCC fails to parse dependent type in concept through partial specialization
+110197	[13 Regression] Empty constexpr object constructor erronously claims out of range access
+110566	[13 Regression] ICE when instantiating function template with template template parameter with 2 or more auto parameters with a dependent member template, ICE in tsubst, at cp/pt.cc:16135
+110798	[12 Regression] The reusult of sizeof operator followed with an 'unsigned typedef-ed generic integer' type is alway 4 bytes（except char）
+111105	[12/13/14 regression] __attribute__((malloc)) can no longer name a C++ member function
+111103	gcc accepts bad type syntax
+111169	ICE on auto with may_alias attribute
+111174	G++ allows redeclaring function parameters as functions
+111220	ICE with std::integral in template
+111173	G++ allows constinit functions
+111274	ice in fixup_blocks_walker with -O1 and -fopenmp
+110291	[11/12/13/14 Regression] constraint on friend operator template causes bizarre duplication of RHS template parameter that is passed to the requires expression
+111363	internal compiler error when mistype type of operator<=>
+109666	[12 Regression] Segmentation fault with std::array
+111423	bogus Wsubobject-linkage when using CRTP with an invisible base, template template parameters, and concepts
+111447	Program crashes when an include is present in global module fragment
+108347	Incorrect error: ambiguous template instantiation
+111392	Implement omp::decl attribute support for C++
+108591	void{} does not error out in 12.1
+111455	[14 Regression] Using incorrect cast operator on integer_pack
+111493	[concepts] multidimensional subscript operator inside requires is broken
+108736	[concepts] multidimensional subscript operator inside requires with variable template arguments is broken
+111596	ICE on iostream as argument
+109506	[11/12 regression] -fchecking=2 causes some template constructor not be instantiated when used with NSDMI
+111651	Specific syntax with C++ 20 designated initializers and coroutines breaks
+110913	internal compiler error when I pass temporary vector of string to co_await target function
+111662	Rejects valid: cv-qualifiers are not removed from function parameters of variadic templated function types
+109887	Different mangled name for template specialization for clang and gcc
+111712	Syntax error when passing function parameter as NTTP in requires-clause
+111742	Misaligned generated code with MI using aligned virtual base
+111759	__FLT_HAS_INFINITY__ has value 1 even when -ffinite-math-only is used.
+111771	Incorrect "is used uninitialized" warning, as if zero-initialization didn't propagate through user-provided default constructors
+109751	[13/14 Regression] boost iterator_interface fails concept check starting in gcc-13
+111831	friend with requires keyword compilation error
+111660	[14 Regression] Compilation of constexpr function returning enum takes exponential time with -std=c++2a since r14-4140-g6851e3423c2b5e
+111929	[14 Regression] in decompose, at wide-int.h:1049 since r14-4793-gdad311874ac3b3
+112275	target_clones breaks exception handling

@@ -1,0 +1,36 @@
+}
+    	  else
+    	    {
+
+    	      tree substed = NULL_TREE;
+
+    		{
+    		  /* First instatiate in template context, in case we still
+    		     depend on undeduced template parameters.  */
+
+args = INNERMOST_TEMPLATE_ARGS (args);
+        }
+    
+
+      for (t = DECL_TEMPLATE_SPECIALIZATIONS (main_tmpl); t; t = TREE_CHAIN (t))
+        {
+          tree spec_args;
+
+args = INNERMOST_TEMPLATE_ARGS (args);
+        }
+    
+
+      for (t = DECL_TEMPLATE_SPECIALIZATIONS (main_tmpl); t; t = TREE_CHAIN (t))
+        {
+          tree spec_args;
+
+}
+    	  else
+    	    {
+
+    	      tree substed = NULL_TREE;
+
+    		{
+    		  /* First instatiate in template context, in case we still
+    		     depend on undeduced template parameters.  */
+

@@ -1,0 +1,154 @@
+26001	"[clang-cl] error: ""asm operand has incomplete type"" on boost::atomic"
+26050	missing diagnostic for shadowing non-type template parameter with various kinds of entity
+26137	Let Wdelete-non-virtual-dtor also fire on explicit destructor calls, not just on destructor calls via delete
+26297	Clang incorrectly rejects pointers-to-incomplete-classes as covariant return types when dropping cv-qualifiers
+26298	msvc exceptions crash clang.exe
+26354	regression: Compilation hangs with -O2 -mavx for certain input (valid code)
+26257	"Assertion `!Parents.empty() && ""Found node that is not in the parent map.""' failed in ast matcher"
+26362	clang 3.8.0.rc1 fails to build with gcc 4.8.1
+26349	Digit separators as only characters in significand or exponent of floating point constants can trigger assertions
+25989	can't cast an auto lambda with implicit void return type to function pointer
+26599	Assertion failed: ((E->getType()->isAnyPointerType() || E->getType()->isBlockPointerType() || E->getType()->isObjCQualifiedIdType() || E->getType()->isNullPtrType())), function EvalAddr, file ../../tools/clang/lib/SemaChecking.cpp:5938
+26605	FreeBSD projects/clang380-import for TARGET_ARCH=powerpc : clang 3.8.0 sometimes mishandles va_list overflow_arg_area vs. reg_save_area
+26738	clang-cl fails to compile atlctrlw.h header from WTL
+26490	clang-cl.exe from 3.9.0/32bit crashes compiling Qt 5 source qtbase/src/widgets/graphicsview/qgraphicsscenelinearindex.cpp
+26893	sizeof non-static member of struct nested within class template (-std=c++11)
+26714	Implement Generalizing the Range-Based For Loop (P0184R0)
+27080	"lambda + ""get"" function call with explicit template parameter + duplicate ""return"" = backtrace (no ""using std""): #include <memory> int main () { []() { return get<0> (0); return 0; }; }"
+27129	Template alias crashes template diffing
+26841	[accepts-invalid] Member template inside a local class
+27351	"Regression(r266160): Assertion failed: NumOffsetIndices != MaxOffsetIndices && ""too many offset indices"""
+27445	"Assertion failed: Layout && ""Unable to find record layout information for type"" due to PCH re-entrancy into CodeGen"
+26448	Ternary operator: Incorrect value category
+27155	Template argument deduction for base class fails
+27535	"Regression(r267691): Assertion failed: ((ND->isUsed(false) || !isa<VarDecl>(ND) || !E->getLocation().isValid()) && ""Should not use decl without marking it used!"") while buildling Chromium on OS X"
+27549	Incorrect mangling and linking with C++ language linkage
+27576	Clang compiler segmentation fault
+27367	Regression(266415): clang-cl can't parse vs2015 com headers any more
+27015	clang crashes when compiling generic lambda with template parameter
+27601	[regression] libstdc++4.9 get tuple element by type broke by [267453]: Refactor traversal of bases in deduction of template parameters from base classes of an argument to use CXXRecordDecl::forallBases.
+27342	Segfault with function SFINAE in valid code
+26748	clang-cl fails to compile atlctrlw.h header from WTL (delayed template instantiation)
+26935	[ms][dll] Defining a dllimport function should cause it to be exported
+27811	[ms] clang-cl emits scalar deleting ctor and vtable for templates with dllimported instantiation declaration
+27810	[ms] clang-cl emits definitions for methods of inner classes of template classes of the template has a dllimported instantiation declaration
+27984	Regression(271381:271441; very likely r271408): Assertion failed: BaseTy, file C:\b\build\slave\CrWinAsan\build\src\third_party\llvm\lib\CodeGen\AsmPrinter\CodeViewDebug.cpp, line 9 while building boringssl
+27989	Subexpression not valid in a constant expression even when it is valid
+28047	clang crashes on valid C++ code: Assertion `parmDepth < FunctionTypeDepth.getDepth()' failed
+28052	"Regression(271926:271970): link.exe says ""fatal error LNK1103: debugging information corrupt; recompile module"" when linking e.g. re2c in a chromium win build with debug info"
+28060	clang crashes on valid C++11 code: Assertion `Lookup.size() == 1' failed
+28080	clang-cl does not accept incomplete type in exception specification
+27507	lambda capture this by value [commit 263921] makes clang segfault
+28100	clang crashes on valid C++11 code: Assertion `!SpecInfo->isExplicitSpecialization()' failed
+27047	clang crashes on valid C++11 code
+28023	"clang crashes on C++ code with shadowed template parameter: Assertion `Access != AS_none && ""Access specifier is AS_none inside a record decl""' failed"
+27941	Clang segfaults when considering non-special defaulted assignment operator.
+27491	compiler response file isn't used when command line is close to response file limit
+28195	Clang allows ambiguous derived-to-base pointer conversion.
+28072	Compilation of a function in a large C++ project with -flto leads to bitcode files that can't be linked together with llvm-link
+28360	clang-cl crash on an overload resolution + template deduction
+28096	Clang++ selects wrong constructor in return statement (lvalue instead of rvalue)
+28388	Regression(270823:273743): Crash on invalid if
+28394	out-of-line declaration of C++17 inline variables should make definition non-discardable
+28494	"clang crashes on invalid C++14 code with __make_integer_seq: Assertion `isa<FunctionTemplateDecl>(Template) && ""Only function templates are possible here""' failed"
+26511	ICE using (I think) inherited constructor template in a local class
+28623	"segmentation fault on invalid code with ""clang++ -std=c++11"" on x86_64-linux-gnu"
+28595	some elements of the free array captured in lambda expression can't be destructed when exception happens
+28651	clang crashes on C++ code invoking __builtin_alloca with undeclared identifier
+26586	Clang crashes with internal compiler error when compiling a simple program with templates
+28683	clang fails to properly handle a certain template definition involving pointers to member functions
+27994	"clang crashes on valid C++11 code: Assertion `!isNull() && ""Cannot retrieve a NULL type pointer""' failed"
+26725	Regression for assignment of generic zero-capture lambda expressions
+27666	Regression(r268727): clang-cl crashes parsing qos2.h
+28364	Compiler crash
+26499	[testcase attached] Compiler crash while compiling 'aseprite'
+26724	ICE on complex lambda calls
+29136	[windows/arm] extraneous C++ object destructor call added when objects are passed by value
+29099	Clang crashes when parsing lambda with try catch and undefined identifiers
+29151	clang-cl assertion failed: MemoMap.count(UselessPad) || MemoMap[UselessPad] == nullptr
+28978	Assertion in setImplicitMoveConstructorIsDeleted() fails
+28470	constexpr if statement not taking explicit operator bool
+30401	GCC 6.2 / LLVM 3.9 name mangling discrepancy for function with argument whose template argument involves an ABI tag.
+30301	[3.9.1 Merge] r280190 - PR12298 et al: don't recursively instantiate a template specialization from within the instantiation of that same specialization.
+28499	Crashes on the boost XML parser
+28885	Regression concerning inheriting constructor
+30449	Segfault when move-assigning a std::map with an aligned Key
+30440	crash on valid c++ code on x86_64-linux-gnu with -std=c++14 (void {anonymous}::CXXNameMangler::mangleFunctionParam(const clang::ParmVarDecl*): Assertion `parmDepth < FunctionTypeDepth.getDepth()' failed.)
+28264	[codeview] Symbol records larger than 64KB need to be truncated or otherwise handled
+26276	Some invalid fold expressions incorrectly accepted
+30336	Front end crash while compiling file
+30831	Parser segmentation fault
+30844	Using override on a overridden destructor produces an error
+30873	Merge r281286 into the 3.9 branch
+28366	crash
+30536	building clang 4.0 by itself failed
+31050	False positive warning of -Waddress-of-packed-member
+29087	"Assertion `isa<X>(Val) && ""cast<Ty>() argument of incompatible type!""' failed from EvaluateUnaryTypeTrait in lib/Sema/SemaExprCXX.cpp"
+31174	Merge r287999 into 3.9.x branch
+31210	builtin recognition needs to cope with exception specification mismatches in c++1z
+31244	Calling a noexcept function pointer is not noexcept.
+26970	clang 3.8.0 for powerpc64 vs. FreeBSD buildworld: error: invalid float ABI 'soft float is not supported for ppc64'
+30944	Different behaviour for simple hello-World program in -std=c++14 resp -std=c++1z
+27132	Need MSVC manging for __unaligned qualifiers
+30586	Clang-cl Friend class error: elaborated type refers to a type alias
+28795	clang cannot compile lambda functions that are defined in template functions and have default arguments
+30566	clang asserts when compiling lambda with a initialized capture
+31390	segfault on build with -std=c++1z
+31429	Clang crashes compiling simple hello world code
+31441	Ternary operator w/implicit conversion doesn't like const/non-const mismatches in C++1z
+30361	clang segfaults when compiling template member function that calls destructor
+31447	Assertion failed when compiling declaration of vfprintf in -std=c++1z mode
+30974	Segmentation fault
+30306	"clang crashes on valid C++ code: Assertion `!Cleanup.exprNeedsCleanups() && ""Unaccounted cleanups in function""' failed"
+31297	[[deprecated]] warning doesn't work on templates
+30636	an impossible case for -Wimplicit-fallthrough and [[clang::fallthrough]]
+28425	Compile failure with enum and ternary operator
+28676	-Wshadow doesn't warn on shadowed 'using' statements. Gcc does.
+27037	CV qualifier check is unexpectedly skipped on a method pointer call
+28105	"clang crashes on C++ code with invalid default argument for constructor: Assertion `Val && ""isa<> used on a null pointer""' failed"
+30305	Inheriting constructors import special members -- Causes runtime slicing
+26962	Default template arguments and friend declarations don't mix
+27027	Block scope operator function ignored by lookup for infix notation
+31504	REGRESSION: Including <float.h> causes build failures on darwin when darwin's /usr/include/float.h is present (pre-Lion)
+27244	clang C++ error passing an std::function to std::stable_sort with --std=c++14
+28460	Wdelete-non-virtual-dtor doesn't work with std::unique_ptr
+31405	Itanium ABI: debug assertion in template mangling with declype return
+27085	scalar/vector operations lead to division by zero
+29134	clang-cl doesn't consider __assume() when emitting [-Wreturn-type] warnings
+28337	Static constexpr arrays can not be dereferenced when declared inside class template.
+30595	extraneous const qualifier allowed in malformed conversion function
+26134	VarDecl::checkInitIsIce() !Init->isValueDependent Assertion failure
+28250	clang-cl does not consider __m128 to be a struct type
+27468	Incorrect value for __cpp_range_based_for with -std=c++1z
+30592	void() incorrectly rejected as non-constant expression
+30723	"false positive for ""-Wzero-length-array"""
+31222	Produce warning when a derived class shadows a field of the base class with `-Wshadow`
+26048	Missing diagnostic for overloaded names in anonymous unions
+29097	[PCH/Modules] missing update records for default member initializers
+30559	clang crashes on valid C++11 code: Assertion `ParamIter != FD->param_end()' failed
+26182	Associated namespaces of local classes in ADL
+28039	Local classes must have an associated namespace since C++14
+26086	Unused arguments of alias template used in default template arguments are not checked
+27427	Segmentation fault during semantic analysis of a nested class that inherits from a template type parameter
+29122	"constexpr auto causes Assertion failed: (!V->hasBrokenDebugInfo() && ""Module contains invalid debug info""), function doFinalization, file /Users/thakis/src/llvm-rw/lib/IR/Verifier.cpp, line 4435."
+28258	"clang crashes with -std=c++11 on code invoking a deleted default constructor: Assertion `(data().DefaultedMoveConstructorIsDeleted || needsOverloadResolutionForMoveConstructor()) && ""move constructor should not be deleted""' failed"
+31201	Implement -Wint-in-bool-context
+25992	Cannot call std::string::~string explicitly
+28598	Assigning a gsl::span<const int> to a gsl::span<int> const causes segmentation fault during compilation.
+30441	Different symbols export with g++ and clang
+28184	"clang crashes on valid C++ code having ternary expression with throw: Assertion `getOperand(0)->getType() == cast<PointerType>(getOperand(1)->getType())->getElementType() && ""Ptr must be a pointer to Val type!""' failed"
+27457	"Possible regression: ""invalid explicitly-specified argument"" on enum value as template parameter"
+26249	Poor diagnostic when anonymous enum with underlying type is declared in a struct and the underlying type isn't known
+28064	"clang crashes on valid C++11 code: Assertion `isa<LabelDecl>(D) && ""declaration not instantiated in this scope""' failed"
+30738	two-phase name lookup not implemented for fold-expressions
+27637	creating object of abstract class allowed in all versions of clang++
+28263	'conversion function will never be used' for a virtual casting operator
+26457	In std=g++11, conversion using P::operator const std::string fails
+26769	Template template parameter in member initializer list is not recognized
+27147	Clang++ incorrectly treats T::T as T
+27746	Dependent template name not recognized as dependent
+27918	Incomplete initializer when using metafunction in trailing return type
+28050	Deprecated (legacy) string literal conversion to 'char *' causes strange overloading resolution
+28811	nullptr conversion to bool should not be true
+30479	alignas and packed attribute not obeyed
+30518	Parameter pack expansion doesn't work properly when used to define argument list

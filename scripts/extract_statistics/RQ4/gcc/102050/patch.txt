@@ -1,0 +1,6 @@
+
+          if (sufficient_parms_p (FUNCTION_FIRST_USER_PARMTYPE (decl)))
+
+    
+          if (is_list_ctor (decl))
+

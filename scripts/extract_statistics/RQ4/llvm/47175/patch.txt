@@ -1,0 +1,34 @@
+CXXUnresolvedConstructExpr(QualType T, TypeSourceInfo *TSI,
+                                 SourceLocation LParenLoc, ArrayRef<Expr *> Args,
+                                 SourceLocation RParenLoc);
+
+          : Expr(CXXUnresolvedConstructExprClass, Empty), TSI(nullptr) {
+
+                                                QualType T, TypeSourceInfo *TSI,
+
+      auto ToType = importChecked(Err, E->getType());
+
+          Importer.getToContext(), ToType, ToTypeSourceInfo, ToLParenLoc,
+
+    CXXUnresolvedConstructExpr::CXXUnresolvedConstructExpr(QualType T,
+                                                           TypeSourceInfo *TSI,
+
+        : Expr(CXXUnresolvedConstructExprClass, T,
+
+        const ASTContext &Context, QualType T, TypeSourceInfo *TSI, SourceLocation LParenLoc,
+
+      return new (Mem)
+          CXXUnresolvedConstructExpr(T, TSI, LParenLoc, Args, RParenLoc);
+
+      if (Ty->isDependentType() || CallExpr::hasAnyTypeDependentArguments(Exprs)) {
+        // FIXME: CXXUnresolvedConstructExpr does not model list-initialization
+        // directly. We work around this by dropping the locations of the braces.
+        SourceRange Locs = ListInitialization
+                               ? SourceRange()
+                               : SourceRange(LParenOrBraceLoc, RParenOrBraceLoc);
+        return CXXUnresolvedConstructExpr::Create(Context, Ty.getNonReferenceType(),
+                                                  TInfo, Locs.getBegin(), Exprs,
+                                                  Locs.getEnd());
+      }
+    
+

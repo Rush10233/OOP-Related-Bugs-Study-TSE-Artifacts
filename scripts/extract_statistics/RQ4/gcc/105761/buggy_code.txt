@@ -1,0 +1,57 @@
+if (!DECL_UNIQUE_FRIEND_P (old_result))
+    	    DECL_UNIQUE_FRIEND_P (new_result) = false;
+
+    	  if (new_defines_function
+    	      && DECL_TEMPLATE_INFO (olddecl)
+    	      && DECL_UNIQUE_FRIEND_P (DECL_TEMPLATE_RESULT
+    				       (DECL_TI_TEMPLATE (olddecl))))
+    	    /* Don't copy template info from a non-template friend declaration
+    	       in a class template (PR105761).  */;
+    	  else if (DECL_TEMPLATE_INFO (newdecl))
+
+    	      DECL_TEMPLATE_INFO (newdecl) = DECL_TEMPLATE_INFO (olddecl);
+
+    	 friend void f<int>(int, double);
+
+if (DECL_TEMPLATE_INFO (newdecl))
+
+    	  DECL_TEMPLATE_INFO (newdecl) = DECL_TEMPLATE_INFO (olddecl);
+
+if (DECL_TEMPLATE_INFO (newdecl))
+
+    	  DECL_TEMPLATE_INFO (newdecl) = DECL_TEMPLATE_INFO (olddecl);
+
+if (!DECL_UNIQUE_FRIEND_P (old_result))
+    	    DECL_UNIQUE_FRIEND_P (new_result) = false;
+
+    	  if (new_defines_function
+    	      && DECL_TEMPLATE_INFO (olddecl)
+    	      && DECL_UNIQUE_FRIEND_P (DECL_TEMPLATE_RESULT
+    				       (DECL_TI_TEMPLATE (olddecl))))
+    	    /* Don't copy template info from a non-template friend declaration
+    	       in a class template (PR105761).  */;
+    	  else if (DECL_TEMPLATE_INFO (newdecl))
+
+    	      DECL_TEMPLATE_INFO (newdecl) = DECL_TEMPLATE_INFO (olddecl);
+
+    	 friend void f<int>(int, double);
+
+if (DECL_TEMPLATE_INFO (newdecl))
+
+    	  DECL_TEMPLATE_INFO (newdecl) = DECL_TEMPLATE_INFO (olddecl);
+
+if (!DECL_UNIQUE_FRIEND_P (old_result))
+    	    DECL_UNIQUE_FRIEND_P (new_result) = false;
+
+    	  if (new_defines_function
+    	      && DECL_TEMPLATE_INFO (olddecl)
+    	      && DECL_UNIQUE_FRIEND_P (DECL_TEMPLATE_RESULT
+    				       (DECL_TI_TEMPLATE (olddecl))))
+    	    /* Don't copy template info from a non-template friend declaration
+    	       in a class template (PR105761).  */;
+    	  else if (DECL_TEMPLATE_INFO (newdecl))
+
+    	      DECL_TEMPLATE_INFO (newdecl) = DECL_TEMPLATE_INFO (olddecl);
+
+    	 friend void f<int>(int, double);
+

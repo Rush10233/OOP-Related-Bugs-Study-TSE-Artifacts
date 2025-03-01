@@ -1,0 +1,5 @@
+S.CheckMemberOperatorAccess(CastLoc, From, /*arg*/ nullptr, FoundDecl);
+    
+
+          assert(FD && "FIXME: aggregate initialization from init list");
+

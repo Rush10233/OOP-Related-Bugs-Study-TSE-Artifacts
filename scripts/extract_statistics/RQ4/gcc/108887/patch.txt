@@ -1,0 +1,45 @@
+/* Undo any definition or use of the symbol.  */
+      void reset (void);
+    
+
+       body for expanding the function but this is difficult to do.
+    
+       This is also used to cancel C++ mangling aliases, which can be for
+       functions or variables.  */
+
+    symtab_node::reset (void)
+
+      remove_from_same_comdat_group ();
+    
+      if (cgraph_node *cn = dyn_cast <cgraph_node *> (this))
+        {
+          /* If process is set, then we have already begun whole-unit analysis.
+    	 This is *not* testing for whether we've already emitted the function.
+    	 That case can be sort-of legitimately seen with real function
+    	 redefinition errors.  I would argue that the front end should never
+    	 present us with such a case, but don't enforce that for now.  */
+          gcc_assert (!cn->process);
+    
+          memset (&cn->rtl, 0, sizeof (cn->rtl));
+          cn->inlined_to = NULL;
+          cn->remove_callees ();
+        }
+
+      /* If this is already an alias, cancel the alias, because the real
+
+        {
+          if (symtab_node *n = symtab_node::get (*slot))
+
+    	  if (n->cpp_implicit_alias)
+    	    /* Actually removing the node isn't safe if other code is already
+    	       holding a pointer to it, so just neutralize it.  */
+    	    n->reset ();
+
+          else
+    	/* analyze_functions might have already removed the alias from the
+    	   symbol table if it's internal.  */
+    	gcc_checking_assert (!TREE_PUBLIC (*slot));
+    
+          *slot = NULL_TREE;
+        }
+

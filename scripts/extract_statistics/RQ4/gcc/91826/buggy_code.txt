@@ -1,0 +1,54 @@
+/* Returns true if ROOT (a namespace, class, or function) encloses
+       CHILD.  CHILD may be either a class type or a namespace.  */
+
+      gcc_assert ((TREE_CODE (root) == NAMESPACE_DECL
+    	       || TREE_CODE (root) == FUNCTION_DECL
+    	       || CLASS_TYPE_P (root)));
+      gcc_assert ((TREE_CODE (child) == NAMESPACE_DECL
+    	       || CLASS_TYPE_P (child)));
+
+      /* The global namespace encloses everything.  */
+
+      /* Search until we reach namespace scope.  */
+
+      if (TREE_CODE (root) == NAMESPACE_DECL)
+        return is_nested_namespace (root, child);
+
+      return false;
+
+/* Returns true if ROOT (a namespace, class, or function) encloses
+       CHILD.  CHILD may be either a class type or a namespace.  */
+
+      gcc_assert ((TREE_CODE (root) == NAMESPACE_DECL
+    	       || TREE_CODE (root) == FUNCTION_DECL
+    	       || CLASS_TYPE_P (root)));
+      gcc_assert ((TREE_CODE (child) == NAMESPACE_DECL
+    	       || CLASS_TYPE_P (child)));
+
+      /* The global namespace encloses everything.  */
+
+      /* Search until we reach namespace scope.  */
+
+      if (TREE_CODE (root) == NAMESPACE_DECL)
+        return is_nested_namespace (root, child);
+
+      return false;
+
+/* Returns true if ROOT (a namespace, class, or function) encloses
+       CHILD.  CHILD may be either a class type or a namespace.  */
+
+      gcc_assert ((TREE_CODE (root) == NAMESPACE_DECL
+    	       || TREE_CODE (root) == FUNCTION_DECL
+    	       || CLASS_TYPE_P (root)));
+      gcc_assert ((TREE_CODE (child) == NAMESPACE_DECL
+    	       || CLASS_TYPE_P (child)));
+
+      /* The global namespace encloses everything.  */
+
+      /* Search until we reach namespace scope.  */
+
+      if (TREE_CODE (root) == NAMESPACE_DECL)
+        return is_nested_namespace (root, child);
+
+      return false;
+

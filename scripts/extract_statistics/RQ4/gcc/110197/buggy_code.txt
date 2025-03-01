@@ -1,0 +1,22 @@
+if (is_really_empty_class (elem_type, /*ignore_vptr*/false))
+        return build_constructor (elem_type, NULL);
+      else if (CP_AGGREGATE_TYPE_P (elem_type))
+
+          /* Like in cxx_eval_store_expression, omit entries for empty fields.  */
+          bool no_slot = TREE_CODE (type) == RECORD_TYPE && is_empty_field (index);
+
+          if (new_ctx.ctor != ctx->ctor)
+
+          if (new_ctx.ctor != ctx->ctor)
+
+if (is_really_empty_class (elem_type, /*ignore_vptr*/false))
+        return build_constructor (elem_type, NULL);
+      else if (CP_AGGREGATE_TYPE_P (elem_type))
+
+          /* Like in cxx_eval_store_expression, omit entries for empty fields.  */
+          bool no_slot = TREE_CODE (type) == RECORD_TYPE && is_empty_field (index);
+
+          if (new_ctx.ctor != ctx->ctor)
+
+          if (new_ctx.ctor != ctx->ctor)
+

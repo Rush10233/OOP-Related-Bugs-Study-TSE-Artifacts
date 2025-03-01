@@ -1,0 +1,10 @@
+tree a = CALL_EXPR_ARG (x, 0);
+    		bool return_this = targetm.cxx.cdtor_returns_this ();
+    		if (return_this)
+    		  a = cp_save_expr (a);
+    		tree s = build_fold_indirect_ref_loc (loc, a);
+
+    		if (return_this)
+    		  r = build2_loc (loc, COMPOUND_EXPR, TREE_TYPE (x), r,
+    				  fold_convert_loc (loc, TREE_TYPE (x), a));
+

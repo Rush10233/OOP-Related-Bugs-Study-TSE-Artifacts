@@ -1,0 +1,4 @@
+Commit:	eb59264
+./gcc/cp/typeck.c	5315,5317
+./gcc/cp/typeck.c	5320,5320
+Commit:	e3238b4

@@ -1,0 +1,2 @@
+gcc_checking_assert (VAR_P (get_base_address (t)));
+

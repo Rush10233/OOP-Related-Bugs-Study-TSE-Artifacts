@@ -1,0 +1,48 @@
+bool
+    is_empty_field (tree decl)
+    {
+
+        return false;
+    
+      bool r = (is_empty_class (TREE_TYPE (decl))
+
+      FOR_EACH_CONSTRUCTOR_ELT (v, i, index, value)
+        {
+          tree orig_value = value;
+
+          int pos_hint = -1;
+          if (new_ctx.ctor != ctx->ctor)
+    	{
+
+    	  gcc_assert (is_empty_class (TREE_TYPE (TREE_TYPE (index))));
+    	  changed = true;
+    	}
+
+          else
+    	{
+    	  if (TREE_CODE (type) == UNION_TYPE
+
+bool
+    is_empty_field (tree decl)
+    {
+
+        return false;
+    
+      bool r = (is_empty_class (TREE_TYPE (decl))
+
+      FOR_EACH_CONSTRUCTOR_ELT (v, i, index, value)
+        {
+          tree orig_value = value;
+
+          int pos_hint = -1;
+          if (new_ctx.ctor != ctx->ctor)
+    	{
+
+    	  gcc_assert (is_empty_class (TREE_TYPE (TREE_TYPE (index))));
+    	  changed = true;
+    	}
+
+          else
+    	{
+    	  if (TREE_CODE (type) == UNION_TYPE
+

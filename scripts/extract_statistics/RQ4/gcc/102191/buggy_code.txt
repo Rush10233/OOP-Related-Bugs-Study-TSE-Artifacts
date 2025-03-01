@@ -1,0 +1,26 @@
+CLEANUP_EH_ONLY (*tp) = 1;
+
+Otherwise, returns NULL_TREE.  */
+
+      else if (TREE_CODE (*tp) == LABEL_EXPR)
+
+/* COMPOUND_STMT is the STATEMENT_LIST for the current function body.  If
+       current_retval_sentinel was set in this function, wrap the body in a
+       CLEANUP_STMT to destroy the return value on throw.  */
+
+      /* If need_retval_cleanup set current_retval_sentinel, wrap the function body
+         in a CLEANUP_STMT to handle destroying the return value.  */
+      if (!DECL_CONSTRUCTOR_P (current_function_decl)
+
+    
+          /* Add a DECL_EXPR for current_retval_sentinel.  */
+
+          tree decl_expr = build_stmt (loc, DECL_EXPR, current_retval_sentinel);
+           (&iter, decl_expr, TSI_SAME_STMT);
+
+      if (function_body)
+        maybe_splice_retval_cleanup (compound_stmt);
+    
+
+CLEANUP_EH_ONLY (*tp) = 1;
+

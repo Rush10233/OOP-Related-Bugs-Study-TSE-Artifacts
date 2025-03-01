@@ -1,0 +1,8 @@
+body = massage_constexpr_body (fun, body);
+    	  require_potential_rvalue_constant_expression (body);
+    	  if (DECL_CONSTRUCTOR_P (fun))
+
+    	}
+        }
+    }
+

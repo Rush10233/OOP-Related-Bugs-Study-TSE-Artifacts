@@ -1,0 +1,8 @@
+// If there wasn't explicit visibility there, and this is a
+      // specialization of a class template, check for visibility
+      // on the pattern.
+
+    
+      // Use the most recent declaration.
+      if (!IsMostRecent && !isa<NamespaceDecl>(ND)) {
+

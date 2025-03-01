@@ -1,0 +1,57 @@
+V, ConvertType(E->getType())->getPointerTo(
+                V->getType()->getPointerAddressSpace()));
+
+if (!CE->isListInitialization() || CE->isStdInitListInitialization()) {
+
+        if (CE->isStdInitListInitialization()) {
+          // We implicitly created a std::initializer_list<T> for the first argument
+          // of a constructor of type U in an expression of the form U{a, b, c}.
+          // Strip all the semantic gunk off the initializer list.
+          auto *SILE =
+              cast<CXXStdInitializerListExpr>(CE->getArg(0)->IgnoreImplicit());
+          auto *ILE = cast<InitListExpr>(SILE->getSubExpr()->IgnoreImplicit());
+          mangleInitListElements(ILE);
+        } else {
+          for (auto *E : CE->arguments())
+            mangleExpression(E);
+        }
+
+      if (Node->isStdInitListInitialization())
+        /* Nothing to do; braces are part of creating the std::initializer_list. */;
+      else if (Node->isListInitialization())
+
+      if (Node->isStdInitListInitialization())
+        /* See above. */;
+      else if (Node->isListInitialization())
+
+      if (E->isListInitialization() && !E->isStdInitListInitialization())
+
+      if (E->isListInitialization() && !E->isStdInitListInitialization())
+
+    /// \param InitListSyntax Is this list-initialization?
+    /// \param IsInitListCopy Is this non-list-initialization resulting from a
+    ///                       list-initialization from {x} where x is the same
+    ///                       type as the entity?
+
+                                             bool IsListInit = false,
+                                             bool IsInitListCopy = false) {
+      assert((!IsListInit || (Args.size() == 1 && isa<InitListExpr>(Args[0]))) &&
+             "IsListInit must come with a single initializer list argument.");
+
+      bool AllowExplicit = Kind.AllowExplicit() || IsListInit;
+
+      if (IsListInit) {
+
+        Sequence.SetOverloadFailure(IsListInit ?
+
+      if (IsListInit && !Kind.AllowExplicit() && CtorDecl->isExplicit()) {
+
+      Sequence.AddConstructorInitializationStep(
+          CtorDecl, Best->FoundDecl.getAccess(), DestType, HadMultipleCandidates,
+          IsListInit | IsInitListCopy, AsInitializerList);
+
+            Expr *InitAsExpr = InitList->getInit(0);
+            TryConstructorInitialization(S, Entity, Kind, InitAsExpr, DestType,
+                                         Sequence, /*InitListSyntax*/ false,
+                                         /*IsInitListCopy*/ true);
+

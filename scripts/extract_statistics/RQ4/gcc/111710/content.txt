@@ -1,0 +1,116 @@
+(DECL_LANG_SPECIFIC (DECL_MODULE_CHECK (NODE))->u.base.module_entity_p)
+    
+    /* DECL that has attached decls for ODR-relatedness.  */
+
+    
+    /* Whether this is an exported DECL.  Held on any decl that can appear
+       at namespace scope (function, var, type, template, const or
+
+      unsigned friend_or_tls : 1;		   /* var, fn, type or template */
+      unsigned unknown_bound_p : 1;		   /* var */
+      unsigned odr_used : 1;		   /* var or fn */
+
+      unsigned var_declared_inline_p : 1;	   /* var */
+      unsigned dependent_init_p : 1;	   /* var */
+    
+
+         decls.  */
+
+    };
+    
+    /* True for DECL codes which have template info and access.  */
+
+         want to mark them as in module purview.  */
+      WB (lang->u.base.module_purview_p && !header_module_p ());
+      WB (lang->u.base.module_attach_p);
+
+      switch (lang->u.base.selector)
+        {
+        default:
+
+      RB (lang->u.base.dependent_init_p);
+      RB (lang->u.base.module_purview_p);
+      RB (lang->u.base.module_attach_p);
+
+      switch (lang->u.base.selector)
+        {
+        default:
+
+          install_entity (decl, dep);
+        }
+    
+
+          && DECL_MODULE_KEYED_DECLS_P (inner)
+          && !is_key_order ())
+        {
+
+      bool installed = install_entity (existing);
+      bool is_new = existing == decl;
+    
+
+          && DECL_MODULE_KEYED_DECLS_P (inner))
+        {
+          /* Read and maybe install the attached entities.  */
+
+          return NULL_TREE;
+        }
+    
+
+      dump (dumper::TREE) && dump ("Read tree:%d %C:%N", tag, TREE_CODE (t), t);
+    
+      if (TREE_CODE (existing) == INTEGER_CST && !TREE_OVERFLOW (existing))
+
+    	      if (tree scope
+    		  = LAMBDA_EXPR_EXTRA_SCOPE (CLASSTYPE_LAMBDA_EXPR
+    					     (TREE_TYPE (decl))))
+
+    
+    	    if (RECORD_OR_UNION_TYPE_P (ctx))
+    	      {
+
+    	    gcc_checking_assert (LAMBDA_TYPE_P (TREE_TYPE (inner)));
+    	    tree scope = LAMBDA_EXPR_EXTRA_SCOPE (CLASSTYPE_LAMBDA_EXPR
+    						  (TREE_TYPE (inner)));
+
+    	    auto *root = keyed_table->get (scope);
+    	    unsigned ix = root->length ();
+    	    /* If we don't find it, we'll write a really big number
+
+    		}
+    	    }
+    	}
+
+          else
+    	switch (TREE_CODE (container))
+    	  {
+    	  default:
+    	    gcc_unreachable ();
+    
+    	  case NAMESPACE_DECL:
+
+    	      kind = "unique";
+    	    else
+    	      {
+
+      if (!modules_p ())
+        return;
+    
+
+        return;
+    
+
+      if (!keyed_table)
+        keyed_table = new keyed_map_t (EXPERIMENT (1, 400));
+    
+
+      if (cp_lexer_next_token_is (parser->lexer, CPP_COLON))
+        {
+          if (type)
+
+          bases = cp_parser_base_clause (parser);
+          if (type)
+
+        }
+      else
+        bases = NULL_TREE;
+

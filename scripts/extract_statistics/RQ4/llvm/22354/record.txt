@@ -1,0 +1,3 @@
+Commit:	5b39524
+./clang/include/clang/Sema/Sema.h	4797,4798
+./clang/lib/Analysis/UninitializedValues.cpp	39,39

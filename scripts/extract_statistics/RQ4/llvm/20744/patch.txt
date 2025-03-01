@@ -1,0 +1,10 @@
+SourceLocation KWEndLoc = Tok.getEndLoc().getLocWithOffset(-1);
+
+          if (auto *DeclAsFunction = dyn_cast<FunctionDecl>(FnD)) {
+            DeclAsFunction->setRangeEnd(KWEndLoc);
+          }
+
+          if (auto *DeclAsFunction = dyn_cast<FunctionDecl>(FnD)) {
+            DeclAsFunction->setRangeEnd(KWEndLoc);
+          }
+

@@ -1,0 +1,10 @@
+} else if (auto *VIE = dyn_cast<ImplicitValueInitExpr>(expr)) {
+        // This happens during template instantiation when we see an InitListExpr
+        // that we've already checked once.
+        assert(SemaRef.Context.hasSameType(VIE->getType(), ElemType) &&
+               "found implicit initialization for the wrong type");
+        if (!VerifyOnly)
+          UpdateStructuredListElement(StructuredList, StructuredIndex, expr);
+        ++Index;
+        return;
+

@@ -1,0 +1,6 @@
+Commit:	de2c586
+./clang/lib/AST/ExprConstant.cpp	3052,3053
+./clang/lib/AST/ExprConstant.cpp	3058,3058
+./clang/lib/AST/ExprConstant.cpp	5463,5478
+./clang/lib/AST/ExprConstant.cpp	5549,5549
+./clang/lib/AST/ExprConstant.cpp	5636,5636

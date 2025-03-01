@@ -1,0 +1,75 @@
+}
+      else
+        {
+
+          /* We build up the list in reverse order, and reverse it later if
+    	 necessary.  */
+          TREE_CHAIN (decl) = b->names;
+
+    		tree old, tree decl, bool is_friend)
+    {
+      tree to_val = decl;
+
+    
+      gcc_assert (level->kind == sk_namespace ? !binding
+    	      : level->kind != sk_class && !slot);
+      if (old == error_mark_node)
+        old = NULL_TREE;
+    
+
+      if (old && TREE_CODE (old) == TYPE_DECL && DECL_ARTIFICIAL (old))
+        {
+
+          to_type = old;
+          old = NULL_TREE;
+        }
+
+    
+          to_val = ovl_insert (decl, old);
+        }
+      else if (!old)
+        ;
+      else if (TREE_CODE (old) != TREE_CODE (decl))
+        /* Different kinds of decls conflict.  */
+        goto conflict;
+      else if (TREE_CODE (old) == TYPE_DECL)
+        {
+
+    	/* Two type decls to the same type.  Do nothing.  */
+    	return old;
+          else
+
+          to_val = NULL_TREE;
+        }
+    
+
+      if (to_val)
+        {
+          if (level->kind != sk_namespace
+
+    	  add_decl_to_level (level, to_add);
+    	}
+    
+
+    	{
+
+    			       && DECL_ARTIFICIAL (to_type));
+    
+    	  tree type = TREE_TYPE (to_type);
+
+    	{
+    	  if (STAT_HACK_P (*slot))
+    	    {
+
+    	      STAT_DECL (*slot) = to_val;
+    	    }
+    	  else if (to_type)
+
+    	}
+          else
+    	{
+
+    	  binding->value = to_val;
+    	}
+        }
+

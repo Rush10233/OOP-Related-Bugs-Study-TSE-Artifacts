@@ -1,0 +1,16 @@
+|LOOKUP_NONVIRTUAL
+    				|LOOKUP_DESTRUCTOR,
+    				0, tf_warning_or_error);
+
+          if (expr != error_mark_node
+    	  && TYPE_HAS_NONTRIVIAL_DESTRUCTOR (type))
+    	finish_eh_cleanup (expr);
+
+|LOOKUP_NONVIRTUAL
+    				|LOOKUP_DESTRUCTOR,
+    				0, tf_warning_or_error);
+
+          if (expr != error_mark_node
+    	  && TYPE_HAS_NONTRIVIAL_DESTRUCTOR (type))
+    	finish_eh_cleanup (expr);
+

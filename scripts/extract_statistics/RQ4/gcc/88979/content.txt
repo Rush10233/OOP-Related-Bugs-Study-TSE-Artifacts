@@ -1,0 +1,45 @@
+static tree cp_parser_global_scope_opt
+      (cp_parser *, bool);
+    static bool cp_parser_constructor_declarator_p
+
+    static tree cp_parser_function_definition_from_specifiers_and_declarator
+      (cp_parser *, cp_decl_specifier_seq *, tree, const cp_declarator *);
+    static tree cp_parser_function_definition_after_declarator
+
+    	= (!found_decl_spec
+    	   && constructor_possible_p
+    	   && (cp_parser_constructor_declarator_p
+
+    
+          /* If we don't have a DECL_SPEC yet, then we must be looking at
+    	 a type-specifier.  */
+
+    		    tree decl
+    		      = cp_parser_lookup_name_simple (parser, unqualified_name,
+    						      token->location);
+
+    		      flags &= ~CP_PARSER_FLAGS_TYPENAME_OPTIONAL;
+    		  }
+    	      }
+
+    
+    /* Returns TRUE if the upcoming token sequence is the start of a
+       constructor declarator or C++17 deduction guide.  If FRIEND_P is true, the
+
+    
+    static bool
+
+    {
+      bool constructor_p;
+      bool outside_class_specifier_p;
+
+    	    = parser->num_template_parameter_lists;
+    	  parser->num_template_parameter_lists = 0;
+    
+
+    	  cp_parser_type_specifier (parser,
+
+    				    /*decl_specs=*/NULL,
+    				    /*is_declarator=*/true,
+    				    /*declares_class_or_enum=*/NULL,
+

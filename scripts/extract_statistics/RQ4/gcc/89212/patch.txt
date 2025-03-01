@@ -1,0 +1,14 @@
+if (null_member_pointer_value_p (t))
+    	  {
+    	    gcc_assert (same_type_p (type, TREE_TYPE (t)));
+    	    RETURN (t);
+    	  }
+    
+
+if (null_member_pointer_value_p (t))
+    	  {
+    	    gcc_assert (same_type_p (type, TREE_TYPE (t)));
+    	    RETURN (t);
+    	  }
+    
+

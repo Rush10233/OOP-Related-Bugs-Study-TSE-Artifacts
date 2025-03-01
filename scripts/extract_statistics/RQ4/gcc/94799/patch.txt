@@ -1,0 +1,74 @@
+(cp_parser *, bool, bool, bool, bool, bool = false);
+
+    	  else if (TREE_CODE (id) == TEMPLATE_ID_EXPR)
+    	    error_at (location_of (id),
+    		      "%qE in namespace %qE does not name a template type",
+    		      TREE_OPERAND (id, 0), parser->scope);
+
+    	  else if (TREE_CODE (id) == TEMPLATE_ID_EXPR)
+    	    error_at (location_of (id),
+    		      "%qE in %q#T does not name a template type",
+    		      TREE_OPERAND (id, 0), parser->scope);
+
+        = (!template_keyword_p
+           && (cp_parser_global_scope_opt (parser,
+    				       /*current_scope_valid_p=*/false)
+    	   != NULL_TREE));
+    
+
+    					    declarator_p,
+    					    template_keyword_p)
+
+    
+
+    				     bool is_declaration,
+    				     bool template_keyword_p /* = false */)
+
+          if (template_keyword_p)
+
+    	  tree scope = (parser->scope ? parser->scope
+    			: parser->context->object_type);
+    	  if (scope && TYPE_P (scope)
+    	      && (!CLASS_TYPE_P (scope)
+    		  || (check_dependency_p && dependent_type_p (scope))))
+    	    {
+    	      /* We're optimizing away the call to cp_parser_lookup_name, but
+    		 we still need to do this.  */
+    	      parser->context->object_type = NULL_TREE;
+    	      return identifier;
+    	    }
+
+      /* If the lookup failed and we got the 'template' keyword, believe it.  */
+      if (decl == error_mark_node && template_keyword_p
+          && processing_template_decl)
+        return identifier;
+    
+
+{
+          tree type = TREE_TYPE (postfix_expression);
+          /* If we don't have a (type-dependent) object of class type, use
+    	 typeof to figure out the type of the object.  */
+          if (type == NULL_TREE)
+    	type = finish_typeof (postfix_expression);
+          parser->context->object_type = type;
+        }
+
+         to a template-id, so we save it here.  Consider object scope too,
+         so that make_typename_type below can use it (cp_parser_template_name
+         considers object scope also).  This may happen with code like
+    
+           p->template A<T>::a()
+    
+          where we first want to look up A<T>::a in the class of the object
+          expression, as per [basic.lookup.classref].  */
+      scope = parser->scope ? parser->scope : parser->context->object_type;
+
+cp_token *token = cp_lexer_peek_token (parser->lexer);
+
+      tree scope = parser->scope ? parser->scope : parser->context->object_type;
+
+      const bool typename_p = (typename_keyword_p
+    			   && parser->scope
+    			   && TYPE_P (parser->scope)
+    			   && dependent_type_p (parser->scope));
+

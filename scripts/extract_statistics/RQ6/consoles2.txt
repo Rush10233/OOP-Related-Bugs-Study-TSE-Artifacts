@@ -1,0 +1,605 @@
+19452
+
+
+32172
+0	1	2	271	4	19	86	
+-disable-free	-mdisable-fp-elim	-fuse-init-array	-std=c++1z	-main-file-name	
+28039
+11	1	14	57433	
+-std=c++14	-std=c++11	
+34796
+11	1	14	12	
+-std=c++14	-std=c++1z	-std=c++11	
+36810
+
+-fvisibility=hidden	
+32898
+
+
+48545
+2	1	
+
+19993
+0	47058	1	3.4	64	11	19	86	
+-disable-free	-mdisable-fp-elim	-fuse-init-array	-main-file-name	-std=c++11	
+38671
+11	
+-std=c++11	
+30305
+
+
+21351
+
+
+27941
+
+
+73666
+
+-std=c++20
+19681
+
+
+23629
+11	14	
+-std=c++14	-std=c++11	
+47176
+
+
+20496
+5.3.2	1	11	5.3.1	5	3290	
+-std=c++11	
+30844
+
+
+31222
+
+
+42581
+
+
+28337
+
+
+40323
+0	
+
+44361
+0	1	10.0.0	421	3	10	19	86	
+-disable-free	-fgnuc-version=421	-fno-split-dwarf-inlining	-faddrsig	-fno-rounding-math	-main-file-name	
+42276
+86	1	
+-fms-compatibility	
+27155
+
+
+44671
+2	86	0	120026	
+-fno-crash-diagnostics	-std=c++2a	
+23303
+
+
+24289
+0	1	11	2	2.25	19	86	3.6	195	
+-coverage-file	-disable-free	-mdisable-fp-elim	-fuse-init-array	-main-file-name	-std=c++11	
+37265
+
+
+28096
+
+
+37172
+
+
+33904
+1	22	17	
+-fsyntax-only	-std=c++1y	
+50779
+
+
+44809
+
+
+47270
+0	17	1	1638648	5	
+-std=c++17	-fallow-pch-with-compiler-errors	-fno-validate-pch	
+42211
+56452518	
+
+34970
+
+
+18876
+
+
+48687
+
+
+22591
+0	
+-fno-inline	
+49020
+
+
+35039
+
+
+20744
+
+
+27027
+
+
+20930
+6	15	17	5	
+-Weverything	
+51484
+20	
+-std=c++20	
+68024
+
+-std=c++26
+30559
+0	1	3.7.0	4.0	11	2	4.0.0	216	19	86	
+-disable-free	-coverage-notes-file	-mdisable-fp-elim	-fuse-init-array	-main-file-name	-std=c++11	
+37903
+
+
+26182
+
+
+42513
+2	8	
+-O2	
+19808
+03	
+-std=c++03	
+30595
+
+
+22354
+3.5	14	
+-std=c++14	
+42961
+
+
+30586
+
+
+18544
+204	0	1	166	11	3.5	2.23.52.20130808	2006.08.03	19	86	
+-std=gnu++11	-disable-free	-main-file-name	-mdisable-fp-elim	
+43232
+3	4	
+-Wmissing-braces	
+36747
+17	
+-std=c++17	-Wbinding-in-condition	
+37918
+
+
+47555
+
+
+19104
+
+
+31701
+2	14	
+
+37631
+0620	
+
+53354
+
+-std=c++20
+24730
+0	1	166	11	19	86	2.25.1	3.7	
+-coverage-file	-disable-free	-mdisable-fp-elim	-fuse-init-array	-main-file-name	-std=c++11	
+20259
+
+
+42778
+14	17	
+-std=gnu++17	
+18477
+
+
+22465
+
+
+36055
+2	0	1	
+-Werror	-std=c++1z	
+22855
+11	
+-std=c++11	
+19195
+204	0	84	1	11	2	2.23.52.20130808	3.5.0	86	19	
+-disable-free	-main-file-name	-mdisable-fp-elim	-std=c++11	
+18542
+0	80	1	3.5	86	2006.08.03	2.23.52.20130808	19	175	
+-fsyntax-only	-disable-free	-main-file-name	-mdisable-fp-elim	
+27811
+2	27810	60	
+-O2	
+40395
+3	17	
+-std=c++17	-ftemplate-depth=3	-fsyntax-only	-fms-extensions	
+47805
+
+
+62102
+
+-fsyntax-only -std=c++20
+22075
+11	
+-std=c++11	
+19741
+1	3.4	
+-std=c++1y	-stdlib=libc++	
+34644
+17	
+-std=c++17	
+28394
+
+
+33189
+
+
+28105
+0	3.9	1	3.9.0	2	147	19	86	
+-coverage-file	-disable-free	-mdisable-fp-elim	-fuse-init-array	-main-file-name	
+19010
+1	
+--std=c++1y	
+21942
+
+
+43390
+
+-fno-sanitize-trap=cfi	-fuse-ld=lld	-fsanitize=cfi	-fvisibility=hidden	-fsanitize-recover=cfi	-flto	
+33158
+
+
+23828
+
+
+44658
+2	0	
+-std=c++2a	
+22056
+
+
+47175
+17	
+-std=c++17	
+42111
+
+
+25731
+
+
+37768
+
+
+36181
+188536	
+-fdelayed-template-parsing	
+40238
+
+
+20227
+1	
+-Wno-unused-variable	-std=c++1y	
+23802
+3.6.1	1	132	11	2.25	19	86	85	
+-disable-free	-mdisable-fp-elim	-fuse-init-array	-main-file-name	-std=c++11	
+47861
+11	2	16	
+
+42980
+
+
+25689
+
+
+31639
+
+
+34402
+
+
+60082
+
+
+19178
+
+
+22877
+11	28991043	
+-fsanitize=address	-std=c++11	
+45087
+
+
+19352
+
+
+23186
+11	1	
+-std=c++11	
+28885
+11	1	3.8	3.9	
+-std=c++11	
+29087
+0	3.9	272	1	11	4.0.0	19	86	
+-coverage-file	-disable-free	-mdisable-fp-elim	-fuse-init-array	-main-file-name	-std=c++11	
+20445
+11	
+-std=c++11	
+19172
+
+
+32992
+
+
+30831
+
+
+38205
+
+
+44699
+
+
+18746
+21440602	
+
+35655
+
+
+33471
+1	
+-std=c++1y	
+51547
+0	17	
+-fno-crash-diagnostics	-std=c++17
+46790
+2	1	0	
+-std=c++2a	
+52970
+
+
+28064
+0	3.9	1	3.9.0	154	11	2	02	19	86	
+-disable-free	-mdisable-fp-elim	-fuse-init-array	-main-file-name	-std=c++11	
+24921
+
+
+30361
+
+
+35027
+
+-std=c++17
+42205
+0	8	9.0.0	1	38004	3	2	4	19	86	
+-disable-free	-Weffc++	-mdisable-fp-elim	-faddrsig	-fuse-init-array	-main-file-name	-split-dwarf-file	-O3	
+41677
+
+
+49724
+
+
+62174
+
+-std=c++20
+37556
+2	
+-std=c++2a	
+28060
+0	163	3.9	1	3.8	3.9.0	11	2	6	19	86	
+-disable-free	-mdisable-fp-elim	-fuse-init-array	-main-file-name	-std=c++11	
+27047
+0	3.9	1	3.9.0	11	2	93	3.5.0	86	19	118	
+-disable-free	-mdisable-fp-elim	-fuse-init-array	-main-file-name	-std=c++11	
+22307
+
+
+26841
+
+
+31852
+
+
+43519
+
+
+18551
+
+
+18506
+11	1	
+-std=c++11	
+20771
+2	686	
+-O2	
+23514
+
+
+22793
+
+
+19876
+
+
+20268
+
+
+20671
+0	20351	25	19190	3.5	15	20619	
+
+23931
+0	1	3.7.0	64	11	2	19	3.7	
+-coverage-file	-disable-free	-mdisable-fp-elim	-fuse-init-array	-fno-signed-char	-main-file-name	-std=c++11	
+23942
+
+
+19879
+
+
+21969
+1	
+
+20346
+
+
+23215
+
+
+28460
+11	
+-std=c++11	
+40858
+
+-Wshadow-all	
+42126
+0	17	80	1	39148	19	86	7.0.0	7	
+-disable-free	-Wno-incompatible-library-redeclaration	-mdisable-fp-elim	-fuse-init-array	-main-file-name	-split-dwarf-file	
+48656
+11	20	
+-std=c++20	
+20716
+1	
+-fsyntax-only	-fms-compatibility	
+19240
+
+
+19066
+
+
+32990
+3.2	
+-Od	
+64088
+
+-g0
+32673
+5.0	0	5.0.0	1.63.0	1	3	67947	19	86	
+-disable-free	-fansi-escape-codes	-mdisable-fp-elim	-std=gnu++1z	-fuse-init-array	-main-file-name	
+56864
+
+-std=c++20
+53012
+
+
+21332
+
+
+26134
+11	
+-std=gnu++11	
+26893
+
+
+28195
+
+
+22396
+
+
+25661
+3.4	11	3.5	686	86	
+-std=c++11	
+22017
+11	1	18841109	0	
+-std=gnu++11	
+41607
+
+
+41192
+
+
+23421
+9	1	3.7.0	215	463	11	19	86	2.17.50	66	
+-std=c++11	
+35832
+
+
+38257
+
+
+28023
+0	3.9	1	3.9.0	240	2	19	86	
+-coverage-file	-disable-free	-mdisable-fp-elim	-fuse-init-array	-main-file-name	
+19748
+
+
+42694
+20	17	
+
+22566
+
+
+21367
+03	
+-std=c++03	
+22310
+
+
+28978
+14	
+-std=c++14	
+19729
+11	
+-std=c++11	
+22673
+
+
+22763
+11	2	809	
+-std=c++11	
+27994
+0	3.9	1	3.8	3.9.0	144	11	2	19	86	
+-coverage-file	-disable-free	-mdisable-fp-elim	-fuse-init-array	-main-file-name	-std=c++11	
+40313
+
+
+40682
+
+
+22924
+11	
+-std=c++11	
+64923
+
+-std=c++20 -O1
+21803
+13910958	
+-fsyntax-only	
+18852
+
+
+19902
+
+
+20208
+
+
+18608
+1	
+-fixit!	
+19767
+11	
+-std=c++11	
+41743
+17	
+-std=c++17	-Wrange-loop-analysis	
+50590
+
+
+44673
+9	
+
+50561
+

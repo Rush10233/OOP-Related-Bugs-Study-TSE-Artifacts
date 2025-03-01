@@ -1,0 +1,8 @@
+&& !DECL_DELETED_FN (decl)
+
+&& !DECL_DELETED_FN (decl)
+
+&& !DECL_DELETED_FN (decl)
+
+&& !DECL_DELETED_FN (decl)
+

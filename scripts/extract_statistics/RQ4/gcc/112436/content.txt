@@ -1,0 +1,90 @@
+static void initialize_handler_parm (tree, tree);
+    static tree do_allocate_exception (tree);
+    static tree wrap_cleanups_r (tree *, int *, void *);
+
+    
+    /* Sets up all the global eh stuff that needs to be initialized at the
+       start of compilation.  */
+
+    
+      if (decl)
+        {
+
+    	decl = error_mark_node;
+    
+          type = prepare_eh_type (TREE_TYPE (decl));
+
+        warning_at (loc, 0,
+    		"throwing NULL, which has integral, not pointer type");
+    
+
+    
+      if (! doing_eh ())
+        return error_mark_node;
+
+       Return the zero on failure and nonzero on success. FROM can be
+       the expr or decl from whence TYPE came, if available.  */
+    
+
+    {
+      /* Check complete.  */
+
+      if (!type)
+
+    
+      /* Or a pointer or ref to one, or cv void *.  */
+
+      if (is_ptr || TYPE_REF_P (type))
+        {
+          tree core = TREE_TYPE (type);
+    
+          if (is_ptr && VOID_TYPE_P (core))
+    	/* OK */;
+
+        }
+
+    }
+    
+    /* If IS_THROW is true return truth-value if T is an expression admissible
+
+       for its type plus rvalue reference type is also not admissible.  */
+    
+    static bool
+
+    {
+      tree expr = is_throw ? t : NULL_TREE;
+      tree type = TREE_TYPE (t);
+    
+      /* C++11 [except.handle] The exception-declaration shall not denote
+
+         type.  */
+    
+      /* 15.1/4 [...] The type of the throw-expression shall not be an
+
+    	    restrictions on type matching mentioned in 15.3, the operand
+    	    of throw is treated exactly as a function argument in a call
+    	    (5.2.2) or the operand of a return statement.  */
+
+        return false;
+    
+      tree nonref_type = non_reference (type);
+
+      /* 10.4/3 An abstract class shall not be used as a parameter type,
+    	    as a function return type or as type of an explicit
+    	    conversion.  */
+
+        return false;
+      else if (!is_throw
+    	   && TYPE_REF_P (type)
+    	   && TYPE_REF_IS_RVALUE (type))
+        {
+
+          return false;
+        }
+      else if (variably_modified_type_p (type, NULL_TREE))
+        {
+
+          return false;
+        }
+    
+

@@ -1,0 +1,7 @@
+DECL is accessible.  Checking this is necessary only when the class
+    	 is dependent, for otherwise add_friend will already have added the
+    	 class to SCOPE's DECL_BEFRIENDING_CLASSES.  */
+
+    	if (dependent_type_p (fctx)
+    	    && protected_accessible_p (decl, fctx, type, otype))
+

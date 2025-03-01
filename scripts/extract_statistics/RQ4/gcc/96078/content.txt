@@ -1,0 +1,48 @@
+/* Return node that alias is aliasing.  */
+      inline symtab_node *get_alias_target (void);
+    
+
+      /* Set section for symbol and its aliases.  */
+      void set_section (const char *section);
+    
+
+      return ref->referred;
+    }
+    
+
+    /* Return next reachable static symbol with initializer after the node.  */
+    
+    inline symtab_node *
+
+          if (node->alias
+    	  && lookup_attribute ("flatten", DECL_ATTRIBUTES (decl)))
+    	{
+
+    	}
+          if (DECL_PRESERVE_P (decl))
+    	node->mark_force_output ();
+
+/* Return node that alias is aliasing.  */
+      inline symtab_node *get_alias_target (void);
+    
+
+      /* Set section for symbol and its aliases.  */
+      void set_section (const char *section);
+    
+
+      return ref->referred;
+    }
+    
+
+    /* Return next reachable static symbol with initializer after the node.  */
+    
+    inline symtab_node *
+
+          if (node->alias
+    	  && lookup_attribute ("flatten", DECL_ATTRIBUTES (decl)))
+    	{
+
+    	}
+          if (DECL_PRESERVE_P (decl))
+    	node->mark_force_output ();
+

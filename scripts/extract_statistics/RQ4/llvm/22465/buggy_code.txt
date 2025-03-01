@@ -1,0 +1,39 @@
+V, ConvertType(E->getType())->getPointerTo());
+
+if (!CE->isListInitialization()) {
+
+        for (auto *E : CE->arguments())
+          mangleExpression(E);
+
+      if (Node->isListInitialization())
+
+      if (Node->isListInitialization())
+
+      if (E->isListInitialization())
+
+      if (E->isListInitialization())
+
+    /// If InitListSyntax is true, this is list-initialization of a non-aggregate
+    /// class type.
+
+                                             bool InitListSyntax = false) {
+      assert((!InitListSyntax || (Args.size() == 1 && isa<InitListExpr>(Args[0]))) &&
+             "InitListSyntax must come with a single initializer list argument.");
+
+      bool AllowExplicit = Kind.AllowExplicit() || InitListSyntax;
+
+      if (InitListSyntax) {
+
+        Sequence.SetOverloadFailure(InitListSyntax ?
+
+      if (InitListSyntax && !Kind.AllowExplicit() && CtorDecl->isExplicit()) {
+
+      Sequence.AddConstructorInitializationStep(CtorDecl,
+                                                Best->FoundDecl.getAccess(),
+                                                DestType, HadMultipleCandidates,
+                                                InitListSyntax, AsInitializerList);
+
+            Expr *InitListAsExpr = InitList;
+            TryConstructorInitialization(S, Entity, Kind, InitListAsExpr, DestType,
+                                         Sequence, /*InitListSyntax*/true);
+

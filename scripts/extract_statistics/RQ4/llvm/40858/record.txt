@@ -1,0 +1,6 @@
+Commit:	7f9d5d6
+./clang/docs/ReleaseNotes.rst	74,74
+./clang/include/clang/Basic/DiagnosticSemaKinds.td	428,428
+./clang/lib/Sema/SemaDecl.cpp	7494,7494
+./clang/lib/Sema/SemaDecl.cpp	7543,7545
+./clang/lib/Sema/SemaDeclCXX.cpp	869,870

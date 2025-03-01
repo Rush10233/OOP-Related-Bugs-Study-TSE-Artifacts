@@ -1,0 +1,6 @@
+if (obj_arg && !error_operand_p (call))
+    	    call = build2 (INIT_EXPR, void_type_node, obj_arg, call);
+
+if (obj_arg && !error_operand_p (call))
+    	    call = build2 (INIT_EXPR, void_type_node, obj_arg, call);
+

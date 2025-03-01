@@ -1,0 +1,20 @@
+int depth = 0;
+
+          tree parms = DECL_TEMPLATE_PARMS (decl);
+          depth = TREE_INT_CST_LOW (TREE_PURPOSE (parms));
+
+          depth = TMPL_PARMS_DEPTH (current_template_parms);
+
+      tree parms = find_template_parameters (expr, depth);
+
+    extern tree find_template_parameters		(tree, int);
+
+      explicit find_template_parameter_info (int d)
+        : max_depth (d)
+
+    /* Returns a list of unique template parameters found within T.  */
+
+    find_template_parameters (tree t, int depth)
+
+      find_template_parameter_info ftpi (depth);
+

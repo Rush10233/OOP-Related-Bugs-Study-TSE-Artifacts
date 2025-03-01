@@ -1,0 +1,3 @@
+Commit:	08223f7
+./gcc/cp/name-lookup.c	3082,3087
+./gcc/testsuite/ChangeLog	32,32

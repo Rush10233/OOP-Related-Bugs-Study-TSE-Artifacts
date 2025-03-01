@@ -1,0 +1,8 @@
+
+
+        TypeSourceInfo *NewDI =
+            Args.getNumLevels()
+                ? SemaRef.SubstType(OldDI, Args, OldParam->getLocation(),
+                                    OldParam->getDeclName())
+                : OldDI;
+

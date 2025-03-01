@@ -1,0 +1,22 @@
+if (DIType Deriv = DD->resolve(DTy.getTypeDerivedFrom()))
+          return isUnsignedDIType(DD, Deriv);
+
+MainFileID = createFileIDForMemBuffer(Buffer, Kind);
+
+      FileID createFileIDForMemBuffer(const llvm::MemoryBuffer *Buffer,
+
+                                      int LoadedID = 0, unsigned LoadedOffset = 0,
+                                     SourceLocation IncludeLoc = SourceLocation()) {
+
+        ToID = ToSM.createFileIDForMemBuffer(ToBuf,
+                                        FromSLoc.getFile().getFileCharacteristic());
+
+      FileID FID = CSM.createFileIDForMemBuffer(CBuf);
+
+      FileID FID = SourceMgr.createFileIDForMemBuffer(SB);
+
+      FileID FID = SourceMgr.createFileIDForMemBuffer(Buf);
+
+        SourceMgr.createFileIDForMemBuffer(Buffer, FileCharacter, ID,
+                                           BaseOffset + Offset, IncludeLoc);
+

@@ -1,0 +1,20 @@
+if (DECL_BIT_FIELD_TYPE (field))
+    	  {
+    	    offset = size_binop (PLUS_EXPR, bit_position (field),
+    				 DECL_SIZE (field));
+    	    offset = size_binop (CEIL_DIV_EXPR, offset, bitsize_unit_node);
+    	    offset = fold_convert (sizetype, offset);
+    	  }
+    	else
+    	  offset = size_binop (PLUS_EXPR, byte_position (field), size);
+
+if (DECL_BIT_FIELD_TYPE (field))
+    	  {
+    	    offset = size_binop (PLUS_EXPR, bit_position (field),
+    				 DECL_SIZE (field));
+    	    offset = size_binop (CEIL_DIV_EXPR, offset, bitsize_unit_node);
+    	    offset = fold_convert (sizetype, offset);
+    	  }
+    	else
+    	  offset = size_binop (PLUS_EXPR, byte_position (field), size);
+

@@ -1,0 +1,8 @@
+Commit:	7da0bca
+./gcc/cp/constexpr.c	1027,1027
+./gcc/cp/constexpr.c	1834,1834
+./gcc/cp/constexpr.c	1865,1867
+./gcc/cp/constexpr.c	4193,4193
+./gcc/cp/constexpr.c	4237,4239
+./gcc/cp/constexpr.c	4259,4261
+./gcc/cp/constexpr.c	4619,4619

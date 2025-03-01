@@ -1,0 +1,16 @@
+case TRUTH_ORIF_EXPR:
+        case TRUTH_AND_EXPR:
+        case TRUTH_OR_EXPR:
+
+    	warn_logical_operator (loc, code, boolean_type_node,
+    			       code_orig_arg1, arg1,
+    			       code_orig_arg2, arg2);
+
+case TRUTH_ORIF_EXPR:
+        case TRUTH_AND_EXPR:
+        case TRUTH_OR_EXPR:
+
+    	warn_logical_operator (loc, code, boolean_type_node,
+    			       code_orig_arg1, arg1,
+    			       code_orig_arg2, arg2);
+

@@ -1,0 +1,43 @@
+tree
+
+    extern tree unshare_constructor			(tree);
+
+      /* Used to hold a copy of the compound literal in a template.  */
+      tree orig_cl = NULL_TREE;
+    
+      if (processing_template_decl)
+
+          const bool dependent_p
+    	= (instantiation_dependent_expression_p (compound_literal)
+    	   || dependent_type_p (type));
+          if (dependent_p)
+    	/* We're about to return, no need to copy.  */
+    	orig_cl = compound_literal;
+          else
+    	/* We're going to need a copy.  */
+    	orig_cl = unshare_constructor (compound_literal);
+          TREE_TYPE (orig_cl) = type;
+
+          TREE_HAS_CONSTRUCTOR (orig_cl) = 1;
+
+          CONSTRUCTOR_IS_DEPENDENT (orig_cl) = dependent_p;
+
+    	CONSTRUCTOR_C99_COMPOUND_LITERAL (orig_cl) = 1;
+          /* If the compound literal is dependent, we're done for now.  */
+          if (dependent_p)
+    	return orig_cl;
+          /* Otherwise, do go on to e.g. check narrowing.  */
+
+      compound_literal = digest_init_flags (type, compound_literal,
+    					LOOKUP_NORMAL | LOOKUP_NO_NARROWING,
+
+      /* If we're in a template, return the original compound literal.  */
+      if (orig_cl)
+        {
+          if (!VECTOR_TYPE_P (type))
+    	return get_target_expr_sfinae (orig_cl, complain);
+          else
+    	return orig_cl;
+        }
+    
+

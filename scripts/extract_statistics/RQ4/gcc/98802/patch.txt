@@ -1,0 +1,22 @@
+initializer.  Set ANY_DGUIDES_P if we find a non-implicit deduction
+       guide.  */
+
+    deduction_guides_for (tree tmpl, bool &any_dguides_p, tsubst_flags_t complain)
+
+          guides = deduction_guides_for (TI_TEMPLATE (tinfo), any_dguides_p,
+    				     complain);
+
+          else
+    	any_dguides_p = true;
+
+      bool any_dguides_p = false;
+      tree cands = deduction_guides_for (tmpl, any_dguides_p, complain);
+
+      if (!any_dguides_p)
+        if (tree guide = maybe_aggr_guide (tmpl, init, args))
+          cands = lookup_add (guide, cands);
+
+if (!any_dguides_p)
+        if (tree guide = maybe_aggr_guide (tmpl, init, args))
+          cands = lookup_add (guide, cands);
+

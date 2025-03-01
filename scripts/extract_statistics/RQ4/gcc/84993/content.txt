@@ -1,0 +1,86 @@
+return error_mark_node;
+    }
+    
+
+    /* If the current scope isn't allowed to access DECL along
+       BASETYPE_PATH, give an error.  The most derived class in
+       BASETYPE_PATH is the one used to qualify DECL. DIAG_DECL is
+
+    
+      if (!accessible_p (basetype_path, decl, true))
+        {
+
+          if (complain & tf_error)
+
+          return false;
+        }
+    
+
+    class access_failure_info
+    {
+     public:
+
+    
+
+      void maybe_suggest_accessor (bool const_p) const;
+
+    
+     private:
+      bool m_was_inaccessible;
+      tree m_basetype_path;
+
+    };
+    
+
+    extern bool enforce_access			(tree, tree, tree,
+    						 tsubst_flags_t,
+    						 access_failure_info *afi = NULL);
+
+    }
+    
+    /* Record that an access failure occurred on BASETYPE_PATH attempting
+
+    
+    void
+    access_failure_info::record_access_failure (tree basetype_path,
+
+    {
+      m_was_inaccessible = true;
+      m_basetype_path = basetype_path;
+
+    }
+    
+    /* If an access failure was recorded, then attempt to locate an
+
+    
+
+    {
+
+    
+      tree accessor
+
+      if (!accessor)
+
+    
+      /* The accessor must itself be accessible for it to be a reasonable
+         suggestion.  */
+      if (!accessible_p (m_basetype_path, accessor, true))
+
+    
+
+      pretty_printer pp;
+
+      inform (&richloc, "field %q#D can be accessed via %q#D",
+
+    }
+    
+    /* This function is called by the parser to process a class member
+
+    		/* Try again at instantiation time.  */
+    		goto dependent;
+    	      if (complain & tf_error)
+
+    	      return error_mark_node;
+    	    }
+    	  if (member == error_mark_node)
+

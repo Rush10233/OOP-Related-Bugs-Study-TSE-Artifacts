@@ -1,0 +1,72 @@
+C C++ Var(warn_ignored_attributes) Init(1) Warning
+    Warn whenever attributes are ignored.
+    
+
+    Wincompatible-pointer-types
+    C ObjC Var(warn_incompatible_pointer_types) Init(1) Warning
+    Warn when there is a conversion between pointers that have incompatible types.
+
+    static int layout_conflict_p (tree, tree, splay_tree, int);
+    static int splay_tree_compare_integer_csts (splay_tree_key k1,
+    					    splay_tree_key k2);
+
+    static bool type_requires_array_cookie (tree);
+    static bool base_derived_from (tree, tree);
+    static int empty_base_at_nonzero_offset_p (tree, tree, splay_tree);
+
+       subobjects of U.  */
+    
+    static void
+
+    {
+      int i;
+      vec<tree, va_gc> *vbases;
+      tree basetype;
+      tree binfo;
+      tree base_binfo;
+    
+
+      /* If there are no repeated bases, nothing can be ambiguous.  */
+      if (!CLASSTYPE_REPEATED_BASE_P (t))
+        return;
+
+          basetype = BINFO_TYPE (base_binfo);
+    
+          if (!uniquely_derived_from_p (basetype, t))
+
+        }
+    
+      /* Check for ambiguous virtual bases.  */
+
+    	basetype = BINFO_TYPE (binfo);
+    
+    	if (!uniquely_derived_from_p (basetype, t))
+
+          }
+    }
+    
+
+        error ("size of type %qT is too large (%qE bytes)", t, TYPE_SIZE_UNIT (t));
+    
+      /* Warn about bases that can't be talked about due to ambiguity.  */
+
+    
+      /* Now that we're done with layout, give the base fields the real types.  */
+      for (field = TYPE_FIELDS (t); field; field = DECL_CHAIN (field))
+
+    -Wignored-qualifiers  -Wignored-attributes  -Wincompatible-pointer-types @gol
+    -Wimplicit  -Wimplicit-fallthrough  -Wimplicit-fallthrough=@var{n} @gol
+    -Wimplicit-function-declaration  -Wimplicit-int @gol
+
+    -Winit-self  -Winline  -Wno-int-conversion  -Wint-in-bool-context @gol
+    -Wno-int-to-pointer-cast  -Winvalid-memory-model  -Wno-invalid-offsetof @gol
+    -Winvalid-pch  -Wlarger-than=@var{byte-size} @gol
+
+    which is enabled by optimizations in most targets.  The precision of
+    the warnings depends on the optimization options used.
+    
+
+    @item -Winit-self @r{(C, C++, Objective-C and Objective-C++ only)}
+    @opindex Winit-self
+    @opindex Wno-init-self
+

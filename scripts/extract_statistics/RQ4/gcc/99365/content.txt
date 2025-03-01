@@ -1,0 +1,30 @@
+
+    	  if (tree a = type_uses_auto (tparm))
+    	    {
+
+    	      if (tparm == error_mark_node)
+    		return 1;
+    	    }
+
+      return make_constrained_placeholder_type (type, con, args);
+    }
+    
+
+    /* Build and return a concept definition. Like other templates, the
+       CONCEPT_DECL node is wrapped by a TEMPLATE_DECL.  This returns the
+       the TEMPLATE_DECL. */
+
+        }
+    
+      /* Check any placeholder constraints against the deduced type. */
+
+    
+
+    
+
+    
+
+        targs = add_to_template_args (outer_targs, targs);
+      else if (processing_template_decl)
+        targs = add_to_template_args (current_template_args (), targs);
+

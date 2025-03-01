@@ -1,0 +1,7 @@
+Commit:	dca2770
+./gcc/cp/lambda.c	1098,1099
+./gcc/cp/lambda.c	1140,1144
+./gcc/cp/lambda.c	1146,1147
+./gcc/cp/lambda.c	1149,1151
+./gcc/cp/pt.c	18886,18887
+./gcc/cp/pt.c	18893,18901

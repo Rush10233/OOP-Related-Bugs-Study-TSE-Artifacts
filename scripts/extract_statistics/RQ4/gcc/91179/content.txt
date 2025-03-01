@@ -1,0 +1,24 @@
+Also implies COMMON.  */
+      int short_compare = 0;
+    
+
+      /* Nonzero means set RESULT_TYPE to the common type of the args.  */
+      int common = 0;
+    
+
+    		}
+    	      else
+    		{
+
+    		  if (compare_tree_int (const_op1, TYPE_PRECISION (type0)) >= 0
+    		      && (complain & tf_warning)
+    		      && c_inhibit_evaluation_warnings == 0)
+
+    					   shorten == -1);
+    	}
+    
+
+          /* Comparison operations are shortened too but differently.
+    	 They identify themselves by setting short_compare = 1.  */
+    
+

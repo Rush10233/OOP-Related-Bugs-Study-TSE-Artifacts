@@ -1,0 +1,11 @@
+Commit:	caedf79
+./clang/include/clang/AST/ExprCXX.h	3430,3431
+./clang/include/clang/AST/ExprCXX.h	3434,3434
+./clang/include/clang/AST/ExprCXX.h	3440,3440
+./clang/lib/AST/ASTImporter.cpp	7548,7548
+./clang/lib/AST/ComputeDependence.cpp	714,715
+./clang/lib/AST/ExprCXX.cpp	1319,1319
+./clang/lib/AST/ExprCXX.cpp	1323,1324
+./clang/lib/AST/ExprCXX.cpp	1339,1339
+./clang/lib/AST/ExprCXX.cpp	1342,1342
+./clang/lib/Sema/SemaExprCXX.cpp	1416,1425

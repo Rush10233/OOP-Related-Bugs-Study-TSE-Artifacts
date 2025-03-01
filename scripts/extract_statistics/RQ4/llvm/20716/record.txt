@@ -1,0 +1,3 @@
+Commit:	4627679
+./clang/include/clang/AST/DeclTemplate.h	239,239
+./clang/lib/Sema/SemaDecl.cpp	155,155

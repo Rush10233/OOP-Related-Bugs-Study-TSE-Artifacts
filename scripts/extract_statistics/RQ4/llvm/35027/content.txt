@@ -1,0 +1,30 @@
+case Decl::Namespace:
+        EmitDeclContext(cast<NamespaceDecl>(D));
+        break;
+
+      case Decl::CXXRecord:
+        if (DebugInfo) {
+          if (auto *ES = D->getASTContext().getExternalSource())
+
+        EmitOMPThreadPrivateDecl(cast<OMPThreadPrivateDecl>(D));
+        break;
+    
+      case Decl::OMPDeclareReduction:
+        EmitOMPDeclareReduction(cast<OMPDeclareReductionDecl>(D));
+        break;
+
+if (ErrorCount)
+        return;
+    
+      // If -compressed-debug-sections is specified, we need to compress
+      // .debug_* sections. Do it right now because it changes the size of
+      // output sections.
+
+                      InX::Dynamic},
+                     [](SyntheticSection *SS) { SS->finalizeContents(); });
+    
+
+      // Some architectures use small displacements for jump instructions.
+      // It is linker's responsibility to create thunks containing long
+      // jump instructions if jump targets are too far. Create thunks.
+

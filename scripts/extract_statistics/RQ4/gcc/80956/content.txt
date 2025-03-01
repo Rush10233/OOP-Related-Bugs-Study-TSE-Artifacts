@@ -1,0 +1,16 @@
+if (array == error_mark_node)
+    	  return error_mark_node;
+    
+
+    	field = next_initializable_field (TYPE_FIELDS (totype));
+    	CONSTRUCTOR_APPEND_ELT (vec, field, array);
+    	field = next_initializable_field (DECL_CHAIN (field));
+
+    	      && init_list_identifier == DECL_NAME (TYPE_NAME (type))
+    	      && !CLASSTYPE_TEMPLATE_INFO (type))
+    	    {
+
+    	      return error_mark_node;
+    	    }
+    	}
+

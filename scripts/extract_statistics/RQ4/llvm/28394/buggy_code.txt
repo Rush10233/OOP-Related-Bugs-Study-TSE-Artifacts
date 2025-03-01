@@ -1,0 +1,7 @@
+
+
+      GVALinkage StrongLinkage = GVA_StrongExternal;
+      if (VD->isInline())
+
+            !Context.isMSStaticDataMemberInlineDefinition(VD))
+

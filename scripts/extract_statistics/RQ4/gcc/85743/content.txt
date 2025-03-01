@@ -1,0 +1,70 @@
+the information in the TEMPLATE_ID_EXPR.  */
+    	  SET_DECL_IMPLICIT_INSTANTIATION (decl);
+    
+
+    	  DECL_TEMPLATE_INFO (decl) = build_template_info (fns, args);
+    
+    	  for (t = TYPE_ARG_TYPES (TREE_TYPE (decl)); t; t = TREE_CHAIN (t))
+
+      if (loc == UNKNOWN_LOCATION)
+        loc = input_location;
+    
+
+      if (processing_template_decl)
+        {
+          /* In a template, it is invalid to write "f()" or "f(3)" if no
+
+    	    if (idk == CP_ID_KIND_UNQUALIFIED
+    		|| idk == CP_ID_KIND_TEMPLATE_ID)
+    	      {
+
+    		  {
+    		    if (!args->is_empty ())
+    		      {
+
+    	}
+          /* Parse the arguments.  */
+          arguments = cp_parser_enclosed_template_argument_list (parser);
+
+        }
+    
+      /* Set the location to be of the form:
+
+    	 a function-template.  */
+          gcc_assert ((DECL_FUNCTION_TEMPLATE_P (templ)
+    		   || TREE_CODE (templ) == OVERLOAD
+
+    		   || BASELINK_P (templ)));
+    
+          template_id = lookup_template_function (templ, arguments);
+
+    	}
+        }
+    
+
+      /* Look up the name.  */
+      decl = cp_parser_lookup_name (parser, identifier,
+    				tag_type,
+
+    	if (TREE_CODE (*iter) == TEMPLATE_DECL)
+    	  found = true;
+    
+
+          if (!found)
+    	{
+    	  /* The name does not name a template.  */
+
+    	}
+        }
+    
+      return decl;
+    }
+    
+
+          return t;
+    
+        case OVERLOAD:
+          /* We must have marked any lookups as persistent.  */
+          gcc_assert (!OVL_LOOKUP_P (t) || OVL_USED_P (t));
+          return t;
+

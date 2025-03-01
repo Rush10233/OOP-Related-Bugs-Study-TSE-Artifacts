@@ -1,0 +1,3 @@
+return (TREE_CODE (ovl) == USING_DECL
+    	    || (TREE_CODE (ovl) == OVERLOAD && OVL_USING_P (ovl)));
+

@@ -1,0 +1,8 @@
+
+          base_off = wioff.to_uhwi ();
+          unsigned HOST_WIDE_INT fieldoff = 0;
+
+    				  &fieldoff);
+          HOST_WIDE_INT cstoff;
+          if (!base_off.is_constant (&cstoff))
+

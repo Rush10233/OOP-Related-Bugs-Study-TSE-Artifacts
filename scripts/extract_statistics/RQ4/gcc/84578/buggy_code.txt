@@ -1,0 +1,33 @@
+tree nelts;
+      if (TREE_CODE (TREE_TYPE (ary)) == ARRAY_TYPE)
+        {
+          if (TYPE_DOMAIN (TREE_TYPE (ary)))
+    	nelts = array_type_nelts_top (TREE_TYPE (ary));
+          else
+    	nelts = size_zero_node;
+        }
+      else if (VECTOR_TYPE_P (TREE_TYPE (ary)))
+        nelts = size_int (TYPE_VECTOR_SUBPARTS (TREE_TYPE (ary)));
+      else
+        gcc_unreachable ();
+    
+      /* For VLAs, the number of elements won't be an integer constant.  */
+      nelts = cxx_eval_constant_expression (ctx, nelts, false, non_constant_p,
+    					overflow_p);
+
+      unsigned HOST_WIDE_INT max = tree_to_uhwi (array_type_nelts_top (atype));
+
+    	  if (TREE_CODE (TREE_TYPE (ary)) == ARRAY_TYPE)
+    	    {
+    	      if (TYPE_DOMAIN (TREE_TYPE (ary)))
+    		nelts = array_type_nelts_top (TREE_TYPE (ary));
+    	      else
+    		nelts = size_zero_node;
+    	    }
+    	  else if (VECTOR_TYPE_P (TREE_TYPE (ary)))
+    	    nelts = size_int (TYPE_VECTOR_SUBPARTS (TREE_TYPE (ary)));
+    	  else
+    	    gcc_unreachable ();
+    	  nelts = cxx_eval_constant_expression (ctx, nelts, false,
+    						non_constant_p, overflow_p);
+

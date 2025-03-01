@@ -1,0 +1,42 @@
+/* If T is a CONSTRUCTOR or an expression that has a CONSTRUCTOR node as a
+       subexpression, return an unshared copy of T.  Otherwise return T.  */
+    
+
+    unshare_constructor (tree t)
+    {
+      tree ctor = walk_tree (&t, find_constructor, NULL, NULL);
+
+    extern vec<tree> cx_error_context               (void);
+    extern tree fold_sizeof_expr			(tree);
+    extern void clear_cv_and_fold_caches		(void);
+
+    
+    /* In cp-ubsan.c */
+    extern void cp_ubsan_maybe_instrument_member_call (tree);
+
+    	  return error_mark_node;
+          }
+    
+
+        {
+
+          /* Mark the expression as a compound literal.  */
+
+          /* And as instantiation-dependent.  */
+
+          if (fcl_context == fcl_c99)
+
+        }
+    
+      type = complete_type (type);
+
+          if (type == error_mark_node)
+    	return error_mark_node;
+        }
+
+    					complain);
+
+      if (TREE_CODE (compound_literal) == CONSTRUCTOR)
+        {
+          TREE_HAS_CONSTRUCTOR (compound_literal) = true;
+

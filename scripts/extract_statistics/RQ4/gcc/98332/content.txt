@@ -1,0 +1,32 @@
+vec<constructor_elt, va_gc> *v = CONSTRUCTOR_ELTS (n);
+          constructor_elt *ce;
+          for (HOST_WIDE_INT i = 0; vec_safe_iterate (v, i, &ce); ++i)
+
+    	  ptrs.safe_push (&ce->value);
+        }
+      return t;
+
+    	  eltinit = cxx_eval_constant_expression (&new_ctx, eltinit, lval,
+    						  non_constant_p, overflow_p);
+    	}
+
+    	break;
+          if (new_ctx.ctor != ctx->ctor)
+    	{
+
+vec<constructor_elt, va_gc> *v = CONSTRUCTOR_ELTS (n);
+          constructor_elt *ce;
+          for (HOST_WIDE_INT i = 0; vec_safe_iterate (v, i, &ce); ++i)
+
+    	  ptrs.safe_push (&ce->value);
+        }
+      return t;
+
+    	  eltinit = cxx_eval_constant_expression (&new_ctx, eltinit, lval,
+    						  non_constant_p, overflow_p);
+    	}
+
+    	break;
+          if (new_ctx.ctor != ctx->ctor)
+    	{
+

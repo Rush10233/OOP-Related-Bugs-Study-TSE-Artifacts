@@ -1,0 +1,18 @@
+if (value_dependent_expression_p (value_expr)
+    	      /* __PRETTY_FUNCTION__ inside a template function is dependent
+    		 on the name of the function.  */
+    	      || (DECL_PRETTY_FUNCTION_P (expression)
+    		  /* It might be used in a template, but not a template
+    		     function, in which case its DECL_VALUE_EXPR will be
+    		     "top level".  */
+    		  && value_expr == error_mark_node))
+
+if (value_dependent_expression_p (value_expr)
+    	      /* __PRETTY_FUNCTION__ inside a template function is dependent
+    		 on the name of the function.  */
+    	      || (DECL_PRETTY_FUNCTION_P (expression)
+    		  /* It might be used in a template, but not a template
+    		     function, in which case its DECL_VALUE_EXPR will be
+    		     "top level".  */
+    		  && value_expr == error_mark_node))
+

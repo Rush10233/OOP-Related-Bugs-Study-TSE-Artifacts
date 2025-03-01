@@ -1,0 +1,32 @@
+///
+      /// If \p ForDefinition is \c false, explicit specializations will be treated
+      /// as if they were implicit instantiations. This will then find the pattern
+      /// corresponding to non-definition portions of the declaration, such as
+      /// default arguments and the exception specification.
+      FunctionDecl *
+      getTemplateInstantiationPattern(bool ForDefinition = true) const;
+
+    FunctionDecl *
+    FunctionDecl::getTemplateInstantiationPattern(bool ForDefinition) const {
+
+        if (ForDefinition &&
+            !clang::isTemplateInstantiation(Info->getTemplateSpecializationKind()))
+
+      if (ForDefinition &&
+          !clang::isTemplateInstantiation(getTemplateSpecializationKind()))
+
+        while (!ForDefinition || !Primary->isMemberSpecialization()) {
+
+    
+        FunctionDecl *Pattern = FD->getTemplateInstantiationPattern(
+            /*ForDefinition*/ false);
+        if (addInstantiatedParametersToScope(*this, FD, Pattern, Local,
+                                             TemplateArgs))
+          return true;
+    
+
+      // FIXME: We can't use getTemplateInstantiationPattern(false) in general
+      // here, because for a non-defining friend declaration in a class template,
+      // we don't store enough information to map back to the friend declaration in
+      // the template.
+

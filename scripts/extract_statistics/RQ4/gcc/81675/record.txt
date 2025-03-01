@@ -1,0 +1,5 @@
+Commit:	04f9150
+./gcc/cp/ChangeLog	1,1
+./gcc/cp/cp-gimplify.c	2302,2308
+Commit:	7e27191
+./gcc/cp/cp-gimplify.c	2281,2287

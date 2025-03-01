@@ -1,0 +1,41 @@
+&& DERIVED_FROM_P (type, optype))
+
+    						 base_kind *, tsubst_flags_t);
+
+       discovered.
+
+    	     base_kind *kind_ptr, tsubst_flags_t complain)
+
+          data.repeated_base = CLASSTYPE_REPEATED_BASE_P (t);
+
+static tree cxx_fold_indirect_ref (const constexpr_ctx *, location_t, tree, tree,
+    				   bool * = NULL);
+
+          new_obj = cxx_fold_indirect_ref (ctx, loc, DECL_CONTEXT (fun), new_obj);
+
+    	  if (empty_base)
+    	    *empty_base = true;
+
+    		       tree op0, bool *empty_base /* = NULL*/)
+
+/* Also handle conversion to an empty base class, which
+    	 is represented with a NOP_EXPR.  */
+          if (is_empty_class (type)
+    	  && CLASS_TYPE_P (optype)
+    	  && DERIVED_FROM_P (type, optype))
+    	{
+    	  *empty_base = true;
+    	  return op;
+    	}
+
+/* Also handle conversion to an empty base class, which
+    	 is represented with a NOP_EXPR.  */
+          if (is_empty_class (type)
+    	  && CLASS_TYPE_P (optype)
+    	  && DERIVED_FROM_P (type, optype))
+    	{
+    	  if (empty_base)
+    	    *empty_base = true;
+    	  return op;
+    	}
+

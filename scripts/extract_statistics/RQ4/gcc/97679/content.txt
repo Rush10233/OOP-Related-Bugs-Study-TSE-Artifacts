@@ -1,0 +1,24 @@
+/* Returns a C++17 class deduction guide template based on the constructor
+       CTOR.  As a special case, CTOR can be a RECORD_TYPE for an implicit default
+       guide, REFERENCE_TYPE for an implicit copy/move guide, or TREE_LIST for an
+
+    
+    static tree
+    build_deduction_guide (tree type, tree ctor, tree outer_args, tsubst_flags_t complain)
+
+    	  if (fparms == error_mark_node)
+    	    ok = false;
+    	  if (ci)
+
+    
+    	  /* Parms are to have DECL_CHAIN tsubsted, which would be skipped if
+    	     cp_unevaluated_operand.  */
+
+    	  fparms = tsubst_arg_types (fparms, targs, NULL_TREE, complain, ctor);
+    	  fargs = tsubst (fargs, targs, complain, ctor);
+    	  if (ci)
+
+    	}
+    
+          --processing_template_decl;
+

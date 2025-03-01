@@ -1,0 +1,62 @@
+themselves, such as 1/0.  Call this function to check for that
+       condition.
+
+        case NOP_EXPR:
+          if (REINTERPRET_CAST_P (t))
+    	{
+    	  if (!ctx->quiet)
+    	    error_at (EXPR_LOC_OR_LOC (t, input_location),
+    		      "a reinterpret_cast is not a constant expression");
+    	  *non_constant_p = true;
+    	  return t;
+    	}
+          /* FALLTHROUGH.  */
+
+    
+
+    	    if (!same_type_ignoring_top_level_qualifiers_p (type, TREE_TYPE (op))
+    		&& !can_convert_qual (type, op))
+    	      op = cplus_expand_constant (op);
+    	    return cp_fold_convert (type, op);
+
+    
+
+    
+
+    
+
+          REINTERPRET_CAST_P (in NOP_EXPR)
+
+    /* Nonzero if this NOP_EXPR is a reinterpret_cast.  Such conversions
+       are not constexprs.  Other NOP_EXPRs are.  */
+    #define REINTERPRET_CAST_P(NODE)		\
+      TREE_LANG_FLAG_0 (NOP_EXPR_CHECK (NODE))
+    
+
+    /* Build a NOP_EXPR to TYPE, but mark it as a reinterpret_cast so that
+       constexpr evaluation knows to reject it.  */
+    
+    static tree
+    build_nop_reinterpret (tree type, tree expr)
+    {
+      tree ret = build_nop (type, expr);
+      if (ret != expr)
+        REINTERPRET_CAST_P (ret) = true;
+      return ret;
+    }
+    
+
+          return build_nop_reinterpret (type, expr);
+
+          return build_nop_reinterpret (type, expr);
+
+          return build_nop_reinterpret (type, expr);
+
+          return build_nop_reinterpret (type, expr);
+
+      expr = cp_convert (type, expr, complain);
+      if (TREE_CODE (expr) == NOP_EXPR)
+        /* Mark any nop_expr that created as a reintepret_cast.  */
+        REINTERPRET_CAST_P (expr) = true;
+      return expr;
+

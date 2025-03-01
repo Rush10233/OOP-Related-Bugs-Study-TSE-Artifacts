@@ -1,0 +1,9 @@
+tree tmpl = TREE_OPERAND (t, 0);
+
+    	tmpl = tsubst_copy (tmpl, args, complain, in_decl);
+
+    	if (variable_template_p (tmpl))
+    	  return lookup_template_variable (tmpl, targs);
+    	else
+    	  return lookup_template_function (tmpl, targs);
+

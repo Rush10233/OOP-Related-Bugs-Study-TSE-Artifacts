@@ -1,0 +1,4 @@
+if (!type || !CLASS_TYPE_P (type) || !uses_template_parms (type))
+
+if (!type || !CLASS_TYPE_P (type) || !uses_template_parms (type))
+

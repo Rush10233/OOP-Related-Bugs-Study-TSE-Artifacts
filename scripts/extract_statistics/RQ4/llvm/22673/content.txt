@@ -1,0 +1,31 @@
+S.CheckConstructorAccess(CastLoc, Constructor,
+                                 InitializedEntity::InitializeTemporary(Ty),
+                                 Constructor->getAccess());
+
+    
+        ExprResult Result = S.BuildCXXConstructExpr(
+            CastLoc, Ty, cast<CXXConstructorDecl>(Method),
+
+      case CK_UserDefinedConversion: {
+        assert(!From->getType()->isPointerType() && "Arg can't have pointer type!");
+    
+
+        // Create an implicit call expr that calls it.
+        CXXConversionDecl *Conv = cast<CXXConversionDecl>(Method);
+        ExprResult Result = S.BuildCXXMemberCallExpr(From, FoundDecl, Conv,
+
+                                          CK_UserDefinedConversion, Result.get(),
+                                          nullptr, Result.get()->getValueKind());
+    
+        return S.MaybeBindToTemporary(Result.get());
+      }
+      }
+
+          FunctionDecl *FD = ICS.UserDefined.ConversionFunction;
+          CastKind CastKind;
+          QualType BeforeToType;
+
+          if (const CXXConversionDecl *Conv = dyn_cast<CXXConversionDecl>(FD)) {
+            CastKind = CK_UserDefinedConversion;
+    
+

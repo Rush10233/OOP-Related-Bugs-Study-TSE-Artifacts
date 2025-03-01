@@ -1,0 +1,3 @@
+/* Deduce it from the non-type argument.  */
+    	      tree atype = TREE_TYPE (arg);
+

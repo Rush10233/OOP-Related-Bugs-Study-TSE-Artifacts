@@ -1,0 +1,35 @@
+/* Now that we've saved expr, build the real null test.  */
+
+        {
+          tree zero = cp_convert (TREE_TYPE (expr), nullptr_node, complain);
+          null_test = build2_loc (input_location, NE_EXPR, boolean_type_node,
+    			      expr, zero);
+          /* This is a compiler generated comparison, don't emit
+    	 e.g. -Wnonnull-compare warning for it.  */
+          TREE_NO_WARNING (null_test) = 1;
+        }
+
+        {
+          expr = fold_build3_loc (input_location, COND_EXPR, target_type, null_test,
+    			      expr, build_zero_cst (target_type));
+          /* Avoid warning for the whole conditional expression (in addition
+    	 to NULL_TEST itself -- see above) in case the result is used in
+    	 a nonnull context that the front end -Wnonnull checks.  */
+          TREE_NO_WARNING (expr) = 1;
+        }
+
+    static tree ifnonnull (tree, tree, tsubst_flags_t);
+
+    static tree
+    ifnonnull (tree test, tree result, tsubst_flags_t complain)
+
+      tree cond = build2 (NE_EXPR, boolean_type_node, test,
+    		      cp_convert (TREE_TYPE (test), nullptr_node, complain));
+
+      return build3 (COND_EXPR, TREE_TYPE (result), cond, result,
+    		 cp_convert (TREE_TYPE (result), nullptr_node, complain));
+
+    	  return ifnonnull (expr, expr1, complain);
+
+    	  return ifnonnull (expr, result, complain);
+

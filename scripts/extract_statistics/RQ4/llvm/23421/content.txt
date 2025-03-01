@@ -1,0 +1,16 @@
+setRParenLoc(Range.getEnd());
+      }
+    
+
+    };
+    
+    class DeducedTypeLoc
+
+          getUnderlyingType(), Loc);
+    }
+    
+
+    void ElaboratedTypeLoc::initializeLocal(ASTContext &Context, 
+                                            SourceLocation Loc) {
+      setElaboratedKeywordLoc(Loc);
+

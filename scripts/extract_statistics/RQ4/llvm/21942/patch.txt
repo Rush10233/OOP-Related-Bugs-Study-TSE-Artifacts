@@ -1,0 +1,82 @@
+HasImplicitReturnZero(false), EndRangeLoc(NameInfo.getEndLoc()),
+
+    def Explicit : InheritableAttr {
+      let Spellings = [];
+    }
+    
+
+    def Final : InheritableAttr { 
+      let Spellings = [];
+    }
+    
+
+    def Override : InheritableAttr { 
+      let Spellings = [];
+    }
+    
+
+        NumBases(0), NumVBases(0), Bases(), VBases(),
+      Definition(D), FirstFriend(0) {
+
+      if (MD->hasAttr<FinalAttr>())
+
+      if (MD->getParent()->hasAttr<FinalAttr>())
+
+      if (CVS.isFinalSpecified())
+        Record->addAttr(new (Context) FinalAttr(CVS.getFinalLoc(), Context));
+      if (CVS.isExplicitSpecified())
+        Record->addAttr(new (Context) ExplicitAttr(CVS.getExplicitLoc(), Context));
+
+      if (CXXBaseDecl->hasAttr<FinalAttr>()) {
+
+      if (MD->hasAttr<OverrideAttr>() && !HasOverriddenMethods) {
+
+      if (MD->getParent()->hasAttr<ExplicitAttr>() && !isa<CXXDestructorDecl>(MD) &&
+          HasOverriddenMethods && !MD->hasAttr<OverrideAttr>()) {
+
+      if (!Old->hasAttr<FinalAttr>())
+
+          MD->addAttr(new (Context) OverrideAttr(VS.getOverrideLoc(), Context));
+
+          MD->addAttr(new (Context) FinalAttr(VS.getFinalLoc(), Context));
+
+/// \param EPI Extra information about the function type. Usually this will
+      /// be taken from an existing function with the same prototype.
+      ///
+      /// \returns A suitable function type, if there are no errors. The
+      /// unqualified type will always be a FunctionProtoType.
+
+                                 const FunctionProtoType::ExtProtoInfo &EPI);
+
+    
+        for (FunctionDecl::param_iterator I = FD->param_begin(),
+                                          E = FD->param_end();
+             I != E; ++I)
+          (*I)->dropAttrs();
+
+                                          Proto->getExtProtoInfo());
+
+    
+      InstantiateAttrs(TemplateArgs, OldParm, NewParm);
+    
+
+                                     const FunctionProtoType::ExtProtoInfo &EPI) {
+
+                                        const FunctionProtoType::ExtProtoInfo &EPI);
+
+                                                       T->getExtProtoInfo());
+
+      const FunctionProtoType *exprFunctionType = E->getFunctionType();
+
+                                              exprFunctionType->getExtProtoInfo());
+
+        const FunctionProtoType::ExtProtoInfo &EPI) {
+      return SemaRef.BuildFunctionType(T, ParamTypes,
+
+                                       EPI);
+
+D->dropAttr<DLLImportAttr>();
+      D->dropAttr<DLLExportAttr>();
+
+      if (FunctionDecl *FD = dyn_cast<FunctionDecl>(D))
+

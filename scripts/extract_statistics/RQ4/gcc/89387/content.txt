@@ -1,0 +1,8 @@
+fns = TREE_OPERAND (fns, 0);
+    
+    	for (lkp_iterator iter (fns); iter; ++iter)
+
+    	      && DECL_NONSTATIC_MEMBER_FUNCTION_P (*iter))
+    	    {
+    	      /* Found a non-static member.  Capture this.  */
+

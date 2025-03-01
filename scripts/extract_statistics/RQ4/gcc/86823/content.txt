@@ -1,0 +1,16 @@
+is_declaration,
+    				   tag_type,
+    				   &is_identifier);
+
+      if (templ == error_mark_node || is_identifier)
+
+    
+      /* Since we're going to preserve any side-effects from this parse, set up a
+         firewall to protect our callers from cp_parser_commit_to_tentative_parse
+         in the template arguments.  */
+      tentative_firewall firewall (parser);
+
+    
+      /* If we find the sequence `[:' after a template-name, it's probably
+         a digraph-typo for `< ::'. Substitute the tokens and check if we can
+

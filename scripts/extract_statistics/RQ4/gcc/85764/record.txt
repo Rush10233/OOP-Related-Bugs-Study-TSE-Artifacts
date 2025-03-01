@@ -1,0 +1,12 @@
+Commit:	c0c8c91
+./gcc/cp/lambda.c	887,887
+./gcc/cp/lambda.c	952,953
+./gcc/cp/lambda.c	958,958
+./gcc/cp/lambda.c	962,962
+./gcc/cp/lambda.c	966,975
+Commit:	946d79a
+./gcc/cp/lambda.c	887,887
+./gcc/cp/lambda.c	952,953
+./gcc/cp/lambda.c	958,958
+./gcc/cp/lambda.c	962,962
+./gcc/cp/lambda.c	966,975

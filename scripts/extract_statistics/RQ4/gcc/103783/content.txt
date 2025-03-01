@@ -1,0 +1,32 @@
+/* True if the defining declarations of the two candidates have equivalent
+       parameters.  */
+    
+
+    cand_parms_match (z_candidate *c1, z_candidate *c2)
+    {
+      tree fn1 = c1->fn;
+
+          fn1 = DECL_TEMPLATE_RESULT (t1);
+          fn2 = DECL_TEMPLATE_RESULT (t2);
+        }
+
+    }
+    
+    /* Compare two candidates for overloading as described in
+
+/* True if the defining declarations of the two candidates have equivalent
+       parameters.  */
+    
+
+    cand_parms_match (z_candidate *c1, z_candidate *c2)
+    {
+      tree fn1 = c1->fn;
+
+          fn1 = DECL_TEMPLATE_RESULT (t1);
+          fn2 = DECL_TEMPLATE_RESULT (t2);
+        }
+
+    }
+    
+    /* Compare two candidates for overloading as described in
+

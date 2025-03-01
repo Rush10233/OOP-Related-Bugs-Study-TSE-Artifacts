@@ -1,0 +1,6 @@
+Commit:	a578b17
+./gcc/cp/decl2.cc	5807,5808
+./gcc/cp/decl2.cc	5810,5810
+Commit:	8c9c92f
+./gcc/cp/decl2.cc	5802,5803
+./gcc/cp/decl2.cc	5805,5805

@@ -1,0 +1,79 @@
+	Issue ID	Title
+0	18770	ICE/Crash constructing or using structure with member array.
+1	18477	lambda capturing confused when instantiating a class with a default initializer
+2	21437	Members declared later in a class appear to be unavailable in noexcept expressions
+3	21737	imprecise debug info for class initializer list (hurting asan reports)
+4	20346	Strange diagnostic on struct initializer in template
+5	19195	crash on valid codegen'ing member class template with in-class initialized member
+6	21045	Built-in __is_constructible interferes with definition of struct __is_constructible {};
+7	19052	clang 3.4 and trunk segfaults on lambda which uses static object of sorrounding function
+8	19339	generalized lambda capture in uniform initialization failed to compile
+9	20760	"Assertion `!isTokenSpecial() && ""Should consume special tokens with Consume*Token""' failed."
+10	21493	Compilation error when initializing in an agreggate containing a deleted copy constructor using initializer list from a template function
+11	18653	Abort after class declaration as template argument
+12	21755	In-class initialization with template function call fails to compile
+13	19655	thread_local accessor function for 'primitive' variable in anonymous namespace has wrong linkage
+14	19623	Assertion with template alias and debug info
+15	19010	Empty base of class with trivial default constructor is not initialized in constant expression
+16	19828	"Assertion failed: isa<X>(Val) && ""cast<Ty>() argument of incompatible type!"", file ..\include\llvm/Support/Casting.h, line 237"
+17	20826	compiled code crash in std::string destructor in lambda capture on PPC 32
+18	20371	Crash when parameterizing a const auto variable
+19	18635	clang crashes in llvm::Module::getNamedValue on thread_local std::unique_ptr<int>
+20	18924	"Assertion failed: NextFieldOffset <= RecordSize && ""Size mismatch!"" at lib\CodeGen\CGRecordLayoutBuilder.cpp:909"
+21	19346	adding zero to null pointer rejected in constant expressions
+22	19876	Generic lambdas used within NSDMI's cause crash when they capture 'this'
+23	18839	"Variable declaration treated as definition in direct linkage-specification having ""C++"" as string-literal"
+24	20351	"MS ABI: ""Assertion failed: (EST != EST_Unevaluated && EST != EST_Uninstantiated), function isNothrow"" on innocuous code"
+25	18997	std::cout << std::endl crashes under Windows
+26	19204	Compiler fail to reject wrong type when std::enable_if is used variadic template.
+27	21128	Allow a pseudo-destructor call on a pointer to a forward declared ObjC class
+28	19411	Block scope function declaration in class member function definition ignores linkage specification
+29	20771	"Regression(rr216439): ""Stored value type does not match pointer operand type!"""
+30	19352	getLocation() points to the wrong position for FriendDecls
+31	19878	variadic template arguments deduction
+32	21787	__has_trivial_constructor is true for lambdas
+33	20398	clang C++11 wrong number of template parameters using aliases with template parameter pack
+34	18506	Pointer to member cast in static_cast causes assertion
+35	20121	-Wreturn-type fails to diagnose when a lambda contains a noreturn destructor temporary
+36	22056	Designated initializer with 'this' as array index crashes GCC and clang
+37	22055	Crash on invalid: Assertion failed: (Access == AS_private || Access == AS_protected)
+38	21125	enable_if diagnostics don't work well with enable_if_t
+39	21180	clang does not delete default-constructor of lambdas
+40	18674	Assertion failed: ParseAssignmentExpression went over the default arg tokens
+41	18844	MS ABI: Incorrect this adjustment in base dtor when dtor is in non-primary vftable
+42	18678	Invalid code generated with the -fno-elide-constructors flag
+43	19879	aggregate initialization uses value initialization rather than initialization from {} for subobjects with no initializer
+44	19681	crash on invalid in Sema::CheckAddressOfMemberAccess
+45	19207	With -std=c++11, setjmp and sigsetjmp lose returns_twice attribute
+46	18845	MS ABI: Incorrect this adjustment in base dtor when dtor is in non-primary vftable
+47	19025	[MS ABI] template arguments of variable template specializations not included in mangled name
+48	21212	template instantiation of classes in class contexts fails for fields with in-class initializers
+49	19427	clang does not diagnose declaration of name inside class scope
+50	20833	Crash on invalid
+51	20120	Compiler crash triggered upon parsing template var use (C++1y)
+52	19729	List initialization of placement parameter produces spurious complaint regarding deleted copy/move constructors
+53	22072	Regression/crash for noexcept
+54	20430	Improper decaying of pointers to arrays as template parameters
+55	19240	Assertion failed: VFTableLayouts.count(id) == 0, file ..\tools\clang\lib\AST\VTableBuilder.cpp, line 3288
+56	18530	Crash in variable template code when performing error recovery
+57	18852	Spelling correction to non-static member functions with qualification
+58	21907	using declaration in template with more than one parameter fails
+59	22075	Poor diagnostics emitted when override appears before const in a method declaration
+60	20445	Clang doesn't emit ctor call from template instantiations if it needs to perform initializer_list conversion
+61	19741	clang incorrectly rejects constexpr constructor which modified member variable in its body
+62	18746	rejects-valid on a constexpr member function of a class template with a deduced return type and no return statements
+63	19415	"clang crashes Assertion failed: (!Failed && ""Making a constexpr member const shouldn't fail""), function ActOnCXXMemberDeclarator, file SemaDeclCXX.cpp, line 1970."
+64	21803	wordsmith viable conversion error message for function return type
+65	19902	Clang-cl gives 'definition of dllimport static field not allowed' while cl does not
+66	21942	"final and ""override"" specifiers are not recognized for some methods of class templates"
+67	19713	-Wunused-function complains (spammily) about static constexpr functions
+68	21925	"Assertion ""Failed to get the state for a TypoExpr!"""
+69	20195	code compiles with g++-4.9.0, but not clang-3.4.2
+70	18719	crash on valid, lambda inside function template
+71	18542	crash defining method of undefined class inside an incomplete type
+72	19066	0-sized vftable in the presence of virtual inheritance
+73	19748	Parse error after a cast of a variable with the same name as an existing struct in a ternary operator
+74	20459	Dependent template-id parsing fails to match angle brackets in certain comma delimited contexts
+75	21531	crash on parameter pack in switch case
+76	18859	cv-qualifications not ignored in enum-base
+77	19936	Templates, multiple declarations, decltype and operator overloading

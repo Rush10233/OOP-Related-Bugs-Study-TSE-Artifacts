@@ -1,0 +1,80 @@
+Although intermediate results may be negative (as in a[3] - 2) the final
+         result cannot be.  */
+      HOST_WIDE_INT adjust = 0;
+
+          /* If the offset is comple-time constant, use it to compute a more
+
+    	adjust += tree_to_shwi (convert (ssizetype, adj));
+
+          const_tree adj = TREE_OPERAND (oper, 1);
+
+    	adjust += tree_to_shwi (adj);
+
+      if ((addr_expr || !POINTER_TYPE_P (TREE_TYPE (oper)))
+
+          unsigned HOST_WIDE_INT bytes_avail = 0;
+
+    	  bytes_avail = tree_to_uhwi (DECL_SIZE_UNIT (oper));
+
+          else if (TYPE_SIZE_UNIT (TREE_TYPE (oper))
+    	       && tree_fits_uhwi_p (TYPE_SIZE_UNIT (TREE_TYPE (oper))))
+
+    	     as the optimistic estimate of the available space in it.  */
+    	  bytes_avail = tree_to_uhwi (TYPE_SIZE_UNIT (TREE_TYPE (oper)));
+
+          else if (var_decl)
+    	{
+    	  /* Constructing into a buffer provided by the flexible array
+    	     member of a declared object (which is permitted as a G++
+    	     extension).  If the array member has been initialized,
+    	     determine its size from the initializer.  Otherwise,
+    	     the array size is zero.  */
+    	  bytes_avail = 0;
+    
+    	  if (tree init = find_field_init (oper, DECL_INITIAL (var_decl)))
+    	    bytes_avail = tree_to_uhwi (TYPE_SIZE_UNIT (TREE_TYPE (init)));
+    	}
+          else
+
+    	  /* Bail if neither the size of the object nor its type is known.  */
+    	  return;
+
+          tree_code oper_code = TREE_CODE (TREE_TYPE (oper));
+
+    	  /* Avoid diagnosing flexible array members (which are accepted
+    	     as an extension and diagnosed with -Wpedantic) and zero-length
+    	     arrays (also an extension).
+    	     Overflowing construction in one-element arrays is diagnosed
+    	     only at level 2.  */
+    	  if (bytes_avail == 0 && !var_decl)
+    	    return;
+    
+    	  tree nelts = array_type_nelts_top (TREE_TYPE (oper));
+
+          /* The size of the buffer can only be adjusted down but not up.  */
+          gcc_checking_assert (0 <= adjust);
+    
+
+          if (bytes_avail < static_cast<unsigned HOST_WIDE_INT>(adjust))
+
+    	bytes_avail -= adjust;
+
+          unsigned HOST_WIDE_INT bytes_need;
+
+    	bytes_need = tree_to_uhwi (size);
+
+    	  bytes_need = tree_to_uhwi (nelts)
+    	    * tree_to_uhwi (TYPE_SIZE_UNIT (type));
+
+    	bytes_need = tree_to_uhwi (TYPE_SIZE_UNIT (type));
+
+    			  type, tree_to_uhwi (nelts), bytes_need,
+    			  TREE_TYPE (oper),
+    			  bytes_avail);
+
+    			  type, bytes_need, TREE_TYPE (oper),
+    			  bytes_avail);
+
+    			type, bytes_need, TREE_TYPE (oper),
+    			bytes_avail);
+

@@ -1,0 +1,4 @@
+if ((complain & tf_warning) && !processing_template_decl)
+
+if ((complain & tf_warning) && !processing_template_decl)
+

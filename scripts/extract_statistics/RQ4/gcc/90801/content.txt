@@ -1,0 +1,73 @@
+static bool
+    split_nonconstant_init_1 (tree dest, tree init)
+    {
+
+      tree field_index, value;
+      tree type = TREE_TYPE (dest);
+      tree inner_type = NULL;
+
+    	      if (!split_nonconstant_init_1 (sub, value))
+    		complete_p = false;
+    	      else
+
+    	    }
+    	  else if (!initializer_constant_valid_p (value, inner_type))
+    	    {
+
+    
+    	      /* Mark element for removal.  */
+    	      CONSTRUCTOR_ELT (init, idx)->index = NULL_TREE;
+
+    
+    	      if (TREE_CODE (field_index) == RANGE_EXPR)
+    		{
+
+    	      num_split_elts++;
+    	    }
+    	}
+
+    	{
+    	  /* Perform the delayed ordered removal of non-constant elements
+    	     we split out.  */
+
+    	    if (CONSTRUCTOR_ELT (init, idx)->index == NULL_TREE)
+    	      ;
+    	    else
+    	      {
+
+    		++tidx;
+    	      }
+    	  vec_safe_truncate (CONSTRUCTOR_ELTS (init), tidx);
+
+static bool
+    split_nonconstant_init_1 (tree dest, tree init)
+    {
+
+      tree field_index, value;
+      tree type = TREE_TYPE (dest);
+      tree inner_type = NULL;
+
+    	      if (!split_nonconstant_init_1 (sub, value))
+    		complete_p = false;
+    	      else
+
+    	      num_split_elts++;
+    	    }
+    	  else if (!initializer_constant_valid_p (value, inner_type))
+    	    {
+    	      tree code;
+    	      tree sub;
+    
+
+    
+    	      if (TREE_CODE (field_index) == RANGE_EXPR)
+    		{
+
+    	      num_split_elts++;
+    	    }
+    	}
+
+          break;
+    
+        case VECTOR_TYPE:
+

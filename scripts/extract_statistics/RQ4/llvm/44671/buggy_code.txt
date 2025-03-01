@@ -1,0 +1,9 @@
+// Does "X op' (Y op Z)" always equal "(X op' Y) op (X op' Z)"?
+      bool LeftDistributes = LeftDistributesOverRight(InnerOpcode, OuterOpcode);
+      // Does "(X op Y) op' Z" always equal "(X op' Z) op (Y op' Z)"?
+      bool RightDistributes = RightDistributesOverLeft(OuterOpcode, InnerOpcode);
+
+      if (LeftDistributes)
+
+      if (RightDistributes)
+

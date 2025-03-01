@@ -1,0 +1,6 @@
+if (*init
+          /* If ARRAY_P, we have to deduce the array bound.  For C++20 paren-init,
+    	 we have to process the parenthesized-list.  But don't do it for (),
+    	 which is value-initialization, and INIT should stay empty.  */
+          && (array_p || (cxx_dialect >= cxx20 && nelts && !(*init)->is_empty ())))
+

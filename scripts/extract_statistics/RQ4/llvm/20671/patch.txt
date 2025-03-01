@@ -1,0 +1,121 @@
+// If we're performing recursive template instantiation, create our own
+      // queue of pending implicit instantiations that we will instantiate later,
+      // while we're still within our own instantiation context.
+      //
+      // it marks vtables used in late parsed templates as used.
+      SavePendingLocalImplicitInstantiationsRAII
+          SavedPendingLocalImplicitInstantiations(*this);
+      std::unique_ptr<SavePendingInstantiationsAndVTableUsesRAII>
+          SavePendingInstantiationsAndVTableUses;
+      if (Recursive) {
+        SavePendingInstantiationsAndVTableUses.reset(
+            new SavePendingInstantiationsAndVTableUsesRAII(*this));
+      }
+    
+
+          assert(!Recursive);
+
+/// \brief All the overriding destructors seen during a class definition
+      /// (there could be multiple due to nested classes) that had their exception
+      /// spec checks delayed, plus the overridden destructor.
+      llvm::SmallVector<std::pair<const CXXDestructorDecl*,
+                                  const CXXDestructorDecl*>, 2>
+          DelayedDestructorExceptionSpecChecks;
+    
+
+      /// \brief Build an exception spec for destructors that don't have one.
+      ///
+      /// C++11 says that user-defined destructors with no exception spec get one
+      /// that looks as if the destructor was implicitly declared.
+      void AdjustDestructorExceptionSpec(CXXRecordDecl *ClassDecl,
+                                         CXXDestructorDecl *Destructor);
+    
+
+            CXXRecordDecl *Record = cast<CXXRecordDecl>(DC);
+
+            CXXDestructorDecl *NewDD = CXXDestructorDecl::Create(Context, Record,
+
+            NewFD = NewDD;
+
+    
+            // If the class is complete, then we now create the implicit exception
+            // specification. If the class is incomplete or dependent, we can't do
+            // it yet.
+            if (getLangOptions().CPlusPlus0x && !Record->isDependentType() &&
+                Record->getDefinition() && !Record->isBeingDefined() &&
+                R->getAs<FunctionProtoType>()->getExceptionSpecType() == EST_None) {
+              AdjustDestructorExceptionSpec(Record, NewDD);
+            }
+    
+
+              // Adjust user-defined destructor exception spec.
+              if (getLangOptions().CPlusPlus0x &&
+                  CXXRecord->hasUserDeclaredDestructor())
+                AdjustDestructorExceptionSpec(CXXRecord,CXXRecord->getDestructor());
+    
+
+    
+        // Now that the record is complete, do any delayed exception spec checks
+        // we were missing.
+        if (!DelayedDestructorExceptionSpecChecks.empty()) {
+          const CXXDestructorDecl *Dtor =
+                  DelayedDestructorExceptionSpecChecks.back().first;
+          if (Dtor->getParent() == Record) {
+            CheckOverridingFunctionExceptionSpec(Dtor,
+                DelayedDestructorExceptionSpecChecks.back().second);
+            DelayedDestructorExceptionSpecChecks.pop_back();
+          }
+        }
+    
+
+                       LookupDestructor(cast<CXXRecordDecl>(BaseType->getDecl())));
+
+    
+
+                      LookupDestructor(cast<CXXRecordDecl>(BaseType->getDecl())));
+
+    
+
+                      LookupDestructor(cast<CXXRecordDecl>(RecordTy->getDecl())));
+
+          ComputeDefaultedDtorExceptionSpec(ClassDecl); 
+
+    void Sema::AdjustDestructorExceptionSpec(CXXRecordDecl *classDecl,
+                                             CXXDestructorDecl *destructor) {
+      // C++11 [class.dtor]p3:
+      //   A declaration of a destructor that does not have an exception-
+      //   specification is implicitly considered to have the same exception-
+      //   specification as an implicit declaration.
+      const FunctionProtoType *dtorType = destructor->getType()->
+                                            getAs<FunctionProtoType>();
+      if (dtorType->hasExceptionSpec())
+        return;
+    
+      ImplicitExceptionSpecification exceptSpec =
+          ComputeDefaultedDtorExceptionSpec(classDecl);
+    
+      // Replace the destructor's type.
+      FunctionProtoType::ExtProtoInfo epi;
+      epi.ExceptionSpecType = exceptSpec.getExceptionSpecType();
+      epi.NumExceptions = exceptSpec.size();
+      epi.Exceptions = exceptSpec.data();
+      QualType ty = Context.getFunctionType(Context.VoidTy, 0, 0, epi);
+    
+      destructor->setType(ty);
+    
+      // FIXME: If the destructor has a body that could throw, and the newly created
+      // spec doesn't allow exceptions, we should emit a warning, because this
+      // change in behavior can break conforming C++03 programs at runtime.
+      // However, we don't have a body yet, so it needs to be done somewhere else.
+    }
+    
+
+      if (getLangOptions().CPlusPlus0x && New->getParent()->isBeingDefined() &&
+          isa<CXXDestructorDecl>(New)) {
+        // The destructor might be updated once the definition is finished. So
+        // remember it and check later.
+        DelayedDestructorExceptionSpecChecks.push_back(std::make_pair(
+          cast<CXXDestructorDecl>(New), cast<CXXDestructorDecl>(Old)));
+        return false;
+      }
+

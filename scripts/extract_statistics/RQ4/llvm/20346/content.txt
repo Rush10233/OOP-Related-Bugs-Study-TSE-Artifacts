@@ -1,0 +1,8 @@
+assert(SemaRef.getLangOpts().CPlusPlus &&
+               "non-aggregate records are only possible in C++");
+        // C++ initialization is handled later.
+
+      }
+    
+      // FIXME: Need to handle atomic aggregate types with implicit init lists.
+

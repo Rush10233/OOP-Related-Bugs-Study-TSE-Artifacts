@@ -1,0 +1,6 @@
+Commit:	45b12f1
+./clang/lib/CodeGen/CodeGenModule.cpp	4193,4193
+./clang/lib/CodeGen/CodeGenModule.cpp	4200,4204
+./clang/lib/CodeGen/CodeGenModule.cpp	4217,4220
+./clang/lib/CodeGen/CodeGenModule.cpp	4279,4283
+./clang/lib/CodeGen/CodeGenModule.cpp	4287,4288

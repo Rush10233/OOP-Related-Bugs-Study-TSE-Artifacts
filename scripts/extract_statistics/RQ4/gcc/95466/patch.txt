@@ -1,0 +1,14 @@
+tree aref;
+
+      aref = build_vtbl_ref (cp_build_fold_indirect_ref (instance_ptr), idx);
+
+    	 OBJ_TYPE_REF_EXPR is ptr->vptr[N] and OBJ_TYPE_REF_OBJECT is ptr.  But
+    	 we can't be sure of finding OBJ_TYPE_REF_OBJECT in OBJ_TYPE_REF_EXPR
+    	 if the latter has been optimized, so we use a COMPOUND_EXPR below.  */
+
+      if (!op)
+        /* No change.  */;
+      else if (fn && TREE_CODE (fn) == OBJ_TYPE_REF)
+        *opp = cp_build_compound_expr (op, *opp, tf_none);
+      else
+

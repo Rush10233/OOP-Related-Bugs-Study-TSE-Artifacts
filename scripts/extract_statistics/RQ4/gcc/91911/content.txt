@@ -1,0 +1,72 @@
+int level;
+      int index;
+      template_parm_level_and_index (t, &level, &index);
+
+        return 0;
+    
+      if (TREE_CODE (t) == BOUND_TEMPLATE_TEMPLATE_PARM)
+
+    		&& VAR_HAD_UNKNOWN_BOUND (t)
+    		&& type != error_mark_node)
+    	      type = strip_array_domain (type);
+
+    	    /* Substituting the type might have recursively instantiated this
+    	       same alias (c++/86171).  */
+    	    if (gen_tmpl && DECL_ALIAS_TEMPLATE_P (gen_tmpl)
+
+          }
+    
+        case TEMPLATE_TYPE_PARM:
+
+        case TEMPLATE_TEMPLATE_PARM:
+        case BOUND_TEMPLATE_TEMPLATE_PARM:
+        case TEMPLATE_PARM_INDEX:
+
+    		 of a constrained placeholder.  */;
+    	    else if (TREE_CODE (t) == TEMPLATE_TYPE_PARM
+    		     && !PLACEHOLDER_TYPE_CONSTRAINTS_INFO (t)
+    		     && (arg = TEMPLATE_TYPE_PARM_INDEX (t),
+    			 r = TEMPLATE_PARM_DESCENDANTS (arg))
+    		     && (TEMPLATE_PARM_LEVEL (r)
+
+    		TYPE_REFERENCE_TO (r) = NULL_TREE;
+    
+                    if (TREE_CODE (t) == TEMPLATE_TYPE_PARM)
+
+    		    /* Propagate constraints on placeholders since they are
+    		       only instantiated during satisfaction.  */
+
+    
+    		if (TREE_CODE (r) == TEMPLATE_TEMPLATE_PARM)
+    		  /* We have reduced the level of the template
+
+    }
+    
+    /* Returns a type which represents 'auto' or 'decltype(auto)'.  We use a
+
+    
+    static tree
+
+    {
+      tree au = cxx_make_type (TEMPLATE_TYPE_PARM);
+      TYPE_NAME (au) = build_decl (input_location, TYPE_DECL, name, au);
+      TYPE_STUB_DECL (au) = TYPE_NAME (au);
+      TEMPLATE_TYPE_PARM_INDEX (au) = build_template_parm_index
+
+      if (set_canonical)
+        TYPE_CANONICAL (au) = canonical_type_parameter (au);
+      DECL_ARTIFICIAL (TYPE_NAME (au)) = 1;
+
+      return make_auto_1 (auto_identifier, true);
+    }
+    
+
+    
+    tree
+    make_template_placeholder (tree tmpl)
+    {
+
+      CLASS_PLACEHOLDER_TEMPLATE (t) = tmpl;
+      /* Our canonical type depends on the placeholder.  */
+      TYPE_CANONICAL (t) = canonical_type_parameter (t);
+

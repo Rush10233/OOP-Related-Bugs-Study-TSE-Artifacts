@@ -1,0 +1,5 @@
+Commit:	ae51f5b
+./clang/lib/Parse/ParseDeclCXX.cpp	3322,3322
+./clang/lib/Parse/ParseDeclCXX.cpp	3325,3326
+./clang/lib/Sema/SemaTemplateInstantiate.cpp	1683,1687
+./clang/lib/Sema/SemaTemplateInstantiateDecl.cpp	3252,3252

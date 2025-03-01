@@ -1,0 +1,4 @@
+op = cplus_expand_constant (op);
+
+op = cplus_expand_constant (op);
+

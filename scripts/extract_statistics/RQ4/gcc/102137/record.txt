@@ -1,0 +1,3 @@
+Commit:	fe548eb
+./gcc/cp/init.cc	2022,2026
+./gcc/cp/pt.cc	26584,26585

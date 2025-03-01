@@ -1,0 +1,47 @@
+bool shouldLinkDependentDeclWithPrevious(Decl *D, Decl *OldDecl);
+
+    /// \brief Checks if the new declaration declared in dependent context must be
+    /// put in the same redeclaration chain as the specified declaration.
+    ///
+    /// \param D Declaration that is checked.
+    /// \param PrevDecl Previous declaration found with proper lookup method for the
+    ///                 same declaration name.
+    /// \returns True if D must be added to the redeclaration chain which PrevDecl
+    ///          belongs to.
+    ///
+    bool Sema::shouldLinkDependentDeclWithPrevious(Decl *D, Decl *PrevDecl) {
+      // Any declarations should be put into redeclaration chains except for
+      // friend declaration in a dependent context that names a function in
+      // namespace scope.
+      //
+      // This allows to compile code like:
+      //
+      //       void func();
+      //       template<typename T> class C1 { friend void func() { } };
+      //       template<typename T> class C2 { friend void func() { } };
+      //
+      // This code snippet is a valid code unless both templates are instantiated.
+      return !(D->getLexicalDeclContext()->isDependentContext() &&
+               D->getDeclContext()->isFileContext() &&
+               D->getFriendObjectKind() != Decl::FOK_None);
+    }
+    
+
+          if (shouldLinkDependentDeclWithPrevious(NewFD, OldDecl)) {
+            // This needs to happen first so that 'inline' propagates.
+            NewFD->setPreviousDeclaration(cast<FunctionDecl>(OldDecl));
+            if (isa<CXXMethodDecl>(NewFD))
+              NewFD->setAccess(OldDecl->getAccess());
+          } else {
+            Redeclaration = false;
+          }
+
+          // We can't look at FD->getPreviousDecl() because it may not have been set
+          // if we're in a dependent context. If we get this far with a non-empty
+          // Previous set, we must have a valid previous declaration of this
+          // function.
+          if (!Previous.empty()) {
+
+            Diag(Previous.getRepresentativeDecl()->getLocation(),
+                 diag::note_previous_declaration);
+

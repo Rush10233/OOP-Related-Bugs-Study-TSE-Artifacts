@@ -1,0 +1,11 @@
+Commit:	f8ab35a
+./clang/lib/CodeGen/CGDebugInfo.cpp	3177,3177
+./clang/lib/CodeGen/CGDebugInfo.cpp	3181,3181
+./clang/lib/CodeGen/CGDebugInfo.cpp	4092,4092
+./clang/lib/CodeGen/CGDebugInfo.cpp	4118,4118
+./clang/lib/CodeGen/CGDebugInfo.cpp	4178,4178
+./clang/lib/CodeGen/CGDebugInfo.h	648,648
+Commit:	223ed70
+./clang/lib/CodeGen/CGDebugInfo.cpp	1830,1849
+./clang/lib/CodeGen/CGDebugInfo.cpp	1854,1855
+./clang/test/CodeGenCXX/debug-info-template-member.cpp	33,33

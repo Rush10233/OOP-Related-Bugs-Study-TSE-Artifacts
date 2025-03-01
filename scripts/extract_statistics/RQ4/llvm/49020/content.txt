@@ -1,0 +1,40 @@
+SFINAEFailure;
+    def note_previous_field_init : Note<
+      "previous initialization for field %0 is here">;
+
+    
+    // Declarations.
+    def ext_plain_complex : ExtWarn<
+
+                               InitListExpr *IList, QualType ElemType,
+                               unsigned &Index,
+                               InitListExpr *StructuredList,
+
+      void CheckComplexType(const InitializedEntity &Entity,
+                            InitListExpr *IList, QualType DeclType,
+                            unsigned &Index,
+
+                                              QualType ElemType,
+                                              unsigned &Index,
+                                              InitListExpr *StructuredList,
+
+      Expr *expr = IList->getInit(Index);
+    
+      if (ElemType->isReferenceType())
+
+        CheckImplicitInitList(Entity, IList, ElemType, Index, StructuredList,
+                              StructuredIndex);
+        ++StructuredIndex;
+
+      } else {
+        if (!VerifyOnly) {
+          // We cannot initialize this element, so let PerformCopyInitialization
+
+        unsigned OldIndex = Index;
+        IList->setInit(OldIndex, DIE->getInit());
+    
+
+    
+        // Restore the designated initializer expression in the syntactic
+        // form of the initializer list.
+

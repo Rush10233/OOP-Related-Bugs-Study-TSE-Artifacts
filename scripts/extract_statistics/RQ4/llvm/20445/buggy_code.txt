@@ -1,0 +1,28 @@
+// Determine whether we've already built the initializer.
+      bool HaveCompleteInit = false;
+      if (Initializer && isa<CXXConstructExpr>(Initializer) &&
+          !isa<CXXTemporaryObjectExpr>(Initializer))
+        HaveCompleteInit = true;
+      else if (Initializer && isa<ImplicitValueInitExpr>(Initializer))
+        HaveCompleteInit = true;
+    
+
+            llvm::makeArrayRef(Inits, NumInits)) &&
+          !HaveCompleteInit) {
+
+      ExprResult TransformInitializer(Expr *Init, bool CXXDirectInit);
+
+                                                            bool CXXDirectInit) {
+
+        return TransformInitializer(ILE->getSubExpr(), CXXDirectInit);
+
+      // If this is not a direct-initializer, we only need to reconstruct
+
+      if (!CXXDirectInit && !(Construct && Construct->isListInitialization()))
+
+        return TransformInitializer(Construct->getArg(0), CXXDirectInit);
+
+                         /*IsCall*/true, NewArgs, &ArgChanged))
+
+        NewInit = getDerived().TransformExpr(OldInit);
+

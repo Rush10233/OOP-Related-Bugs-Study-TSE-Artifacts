@@ -1,0 +1,86 @@
+/// Match a specified integer value or vector of all elements of that value.
+    struct specific_intval {
+      uint64_t Val;
+      specific_intval(uint64_t V) : Val(V) {}
+    
+      template<typename ITy>
+      bool match(ITy *V) {
+        ConstantInt *CI = dyn_cast<ConstantInt>(V);
+        if (!CI && V->getType()->isVectorTy())
+          if (const auto *C = dyn_cast<Constant>(V))
+            CI = dyn_cast_or_null<ConstantInt>(C->getSplatValue());
+    
+        if (CI && CI->getBitWidth() <= 64)
+          return CI->getZExtValue() == Val;
+    
+        return false;
+      }
+    };
+    
+    /// Match a specific integer value or vector with all elements equal to the
+    /// value.
+    inline specific_intval m_SpecificInt(uint64_t V) { return specific_intval(V); }
+    
+
+      unsigned AS = PtrTy->getAddressSpace();
+
+      // Compute the (pointer) type returned by the GEP instruction.
+      Type *LastType = GetElementPtrInst::getIndexedType(PtrTy, Ops.slice(1));
+      Type *GEPTy = PointerType::get(LastType, AS);
+      if (VectorType *VT = dyn_cast<VectorType>(Ops[0]->getType()))
+        GEPTy = VectorType::get(GEPTy, VT->getNumElements());
+    
+      if (isa<UndefValue>(Ops[0]))
+
+    
+        Type *Ty = PtrTy->getElementType();
+        if (Q.DL && Ty->isSized()) {
+          Value *P;
+          uint64_t C;
+          uint64_t TyAllocSize = Q.DL->getTypeAllocSize(Ty);
+          // getelementptr P, N -> P if P points to a type of zero size.
+          if (TyAllocSize == 0)
+
+    
+          // The following transforms are only safe if the ptrtoint cast
+          // doesn't truncate the pointers.
+          if (Ops[1]->getType()->getScalarSizeInBits() ==
+              Q.DL->getPointerSizeInBits(AS)) {
+            auto PtrToIntOrZero = [GEPTy](Value *P) -> Value * {
+              if (match(P, m_Zero()))
+                return Constant::getNullValue(GEPTy);
+              Value *Temp;
+              if (match(P, m_PtrToInt(m_Value(Temp))))
+                return Temp;
+              return nullptr;
+            };
+    
+            // getelementptr V, (sub P, V) -> P if P points to a type of size 1.
+            if (TyAllocSize == 1 &&
+                match(Ops[1], m_Sub(m_Value(P), m_PtrToInt(m_Specific(Ops[0])))))
+              if (Value *R = PtrToIntOrZero(P))
+                return R;
+    
+            // getelementptr V, (ashr (sub P, V), C) -> Q
+            // if P points to a type of size 1 << C.
+            if (match(Ops[1],
+                      m_AShr(m_Sub(m_Value(P), m_PtrToInt(m_Specific(Ops[0]))),
+                             m_ConstantInt(C))) &&
+                TyAllocSize == 1ULL << C)
+              if (Value *R = PtrToIntOrZero(P))
+                return R;
+    
+            // getelementptr V, (sdiv (sub P, V), C) -> Q
+            // if P points to a type of size C.
+            if (match(Ops[1],
+                      m_SDiv(m_Sub(m_Value(P), m_PtrToInt(m_Specific(Ops[0]))),
+                             m_SpecificInt(TyAllocSize))))
+              if (Value *R = PtrToIntOrZero(P))
+                return R;
+          }
+
+ErrorOr<Module *> MOrErr = parseBitcodeFile(MemBuf.get(), getGlobalContext());
+
+if (Temp->getType() == GEPTy)
+                  return Temp;
+

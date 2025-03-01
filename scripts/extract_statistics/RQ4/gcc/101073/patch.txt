@@ -1,0 +1,4 @@
+/* We used to shortcut trivial constructor/op= here, but nowadays
+         we can only get a trivial function here with -fno-elide-constructors.  */
+      gcc_checking_assert (!trivial_fn_p (fun) || !flag_elide_constructors);
+

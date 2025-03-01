@@ -1,0 +1,37 @@
+/* Return the number of elements for TYPE (which is an ARRAY_TYPE or
+       a VECTOR_TYPE).  */
+    
+    static tree
+    get_array_or_vector_nelts (const constexpr_ctx *ctx, tree type,
+    			   bool *non_constant_p, bool *overflow_p)
+    {
+      tree nelts;
+      if (TREE_CODE (type) == ARRAY_TYPE)
+        {
+          if (TYPE_DOMAIN (type))
+    	nelts = array_type_nelts_top (type);
+          else
+    	nelts = size_zero_node;
+        }
+      else if (VECTOR_TYPE_P (type))
+        nelts = size_int (TYPE_VECTOR_SUBPARTS (type));
+      else
+        gcc_unreachable ();
+    
+      /* For VLAs, the number of elements won't be an integer constant.  */
+      nelts = cxx_eval_constant_expression (ctx, nelts, false,
+    					non_constant_p, overflow_p);
+      return nelts;
+    }
+    
+
+      tree nelts = get_array_or_vector_nelts (ctx, TREE_TYPE (ary), non_constant_p,
+    					  overflow_p);
+
+      tree nelts = get_array_or_vector_nelts (ctx, atype, non_constant_p,
+    					  overflow_p);
+      unsigned HOST_WIDE_INT max = tree_to_uhwi (nelts);
+
+    	  nelts = get_array_or_vector_nelts (ctx, TREE_TYPE (ary),
+    					     non_constant_p, overflow_p);
+

@@ -1,0 +1,40 @@
+	Issue ID	Title
+0	47555	Inherited constructor unusable for constexpr static member of class template
+1	48545	Access failure to own private inherited constructor for prvalue direct-initialization
+2	45294	Parser accepts undeclared identifier in pseudodestructor expression, then crashes
+3	48587	is_constant_evaluated() can incorrectly evaluate to true in the destructor of a non-constexpr variable
+4	44699	Members of nested classes incorrectly shadow template parameters of member functions of the nested class
+5	45063	36-byte segfault: template<class=class a::template b<>
+6	45087	implicit copy construction of recursively empty class object rejected in constant expression evaluation
+7	47848	Casting away constness in the drafts [conv.qual] member pointers of DIFFERENT classes should not be similar
+8	44723	Defaulted comparisons deleted for class containing class containing class template with user-provided operator<=> with deduced return type
+9	45534	__builtin_constant_p ignores destructors with side-effects
+10	45535	__builtin_constant_p with statement expression leaks destructor calls
+11	44958	Struct with a mutable member can't be used in constant expression even when the member isn't accessed
+12	47804	"Undeclared identifier causes DeclContext confusion during template instantiation ""declaration not instantiated in this scope""."
+13	48384	[Concepts] void f(Constrained decltype(auto)) should be rejected
+14	46908	Access type node must be a valid scalar type (std::destroying_delete_t)
+15	48002	Struct declarated by elaborated type specifier inside another struct.
+16	47418	Destructor not called when returning object from template class method
+17	45420	clang-cl incorrectly interprets /Zp8 flag
+18	45162	[concepts] requires expression wrongly evaluates to true within a class template
+19	44938	Assertion failure when compiling `new user-defined-type[size]` appearing in constexpr constructor
+20	48593	[Concepts] ICE on syntax error, in ConvertConstrainedAutoDeclSpecToType
+21	46256	[coroutines] coroutines with potentially-throwing 'co_await promise.final_suspend()' expressions should be ill-formed
+22	44658	Assertion failure in constrained variadic function template of class template
+23	47175	[CTAD] User-defined deduction guide not found when argument type is template parameter
+24	47841	Template argument deduction not allowed in template parameter
+25	45409	clang-cl crashes when using microsoft-enum-forward-reference in c++20 mode
+26	44671	Assertion failure while parsing deduction guide for class template with constructor constrained with terse syntax
+27	47012	__cpp_threadsafe_static_init is not defined
+28	44992	Assertion failure when exporting class containing defaulted operator<=> defined as friend
+29	46562	Clang fails to parse C++11 attributes for unnamed bit-fields
+30	44673	Rejects valid code with constructor accepting constrained auto parameter when the concept name is namespace qualified and has an explicit template argument
+31	46377	Parameter pack not expanded in typedef for function type
+32	45033	Assertion failed: !NodePtr->isKnownSentinel() with boost::intrusive_ptr on Windows
+33	47805	By-value function parameter changes are rolled back prior to destructor call during constant evaluation
+34	48606	Clang rejects creation of struct with mutable member during constant evaluation
+35	46637	fun with auto () -> auto
+36	46648	template lambda with default value can't be called if passing argument type doesn't match default value type
+37	45589	Short-circuiting in a requires-clause stops working if any overload of `&&`/`||` is visible
+38	48169	Non-Type Template Parameter Passed to Function Crash

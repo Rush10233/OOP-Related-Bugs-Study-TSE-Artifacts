@@ -1,0 +1,2 @@
+Commit:	e34f88c
+./gcc/testsuite/g++.dg/cpp2a/explicit16.C	2,2

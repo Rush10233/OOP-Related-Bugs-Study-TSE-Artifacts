@@ -1,0 +1,54 @@
+public:
+        enum CandidateSetKind {
+          /// Normal lookup.
+          CSK_Normal,
+          /// Lookup for candidates for a call using operator syntax. Candidates
+          /// that have no parameters of class type will be skipped unless there
+          /// is a parameter of (reference to) enum type and the corresponding
+          /// argument is of the same enum type.
+          CSK_Operator
+        };
+    
+      private:
+
+        CandidateSetKind Kind;
+
+        OverloadCandidateSet(SourceLocation Loc, CandidateSetKind CSK)
+            : Loc(Loc), Kind(CSK), NumInlineSequences(0) {}
+
+        CandidateSetKind getKind() const { return Kind; }
+
+                                                SourceLocation Loc,
+
+      void ArgumentDependentLookup(DeclarationName Name, SourceLocation Loc,
+                                   ArrayRef<Expr *> Args, ADLResult &Functions);
+
+      OverloadCandidateSet CandidateSet(Loc, OverloadCandidateSet::CSK_Normal);
+
+            OverloadCandidateSet OCS(R.getNameLoc(),
+                                     OverloadCandidateSet::CSK_Normal);
+
+            OverloadCandidateSet OCS(NameLoc, OverloadCandidateSet::CSK_Normal);
+
+      OverloadCandidateSet Candidates(StartLoc, OverloadCandidateSet::CSK_Normal);
+
+      OverloadCandidateSet CandidateSet(QuestionLoc,
+                                        OverloadCandidateSet::CSK_Operator);
+
+        : FailedCandidateSet(Kind.getLocation(), OverloadCandidateSet::CSK_Normal) {
+
+      OverloadCandidateSet CandidateSet(Loc, OverloadCandidateSet::CSK_Normal);
+
+      OverloadCandidateSet CandidateSet(Loc, OverloadCandidateSet::CSK_Normal);
+
+      //        functions are ignored.
+
+      Functions.append(Operators.begin(), Operators.end());
+
+      OverloadCandidateSet OCS(RD->getLocation(), OverloadCandidateSet::CSK_Normal);
+
+    void Sema::ArgumentDependentLookup(DeclarationName Name, SourceLocation Loc,
+                                       ArrayRef<Expr *> Args, ADLResult &Result) {
+
+          if (!isa<FunctionDecl>(D) && !isa<FunctionTemplateDecl>(D))
+

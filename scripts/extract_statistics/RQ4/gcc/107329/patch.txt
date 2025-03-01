@@ -1,0 +1,32 @@
+/* Similar to if (target_expr_needs_replace) replace_decl, but TP is the
+       TARGET_EXPR_INITIAL, and this also updates *_SLOT.  We need this extra
+       replacement when cp_folding TARGET_EXPR to preserve the invariant that
+       AGGR_INIT_EXPR_SLOT agrees with the enclosing TARGET_EXPR_SLOT.  */
+    
+    bool
+    maybe_replace_decl (tree *tp, tree decl, tree replacement)
+    {
+      if (!*tp || !VOID_TYPE_P (TREE_TYPE (*tp)))
+        return false;
+      tree t = *tp;
+      while (TREE_CODE (t) == COMPOUND_EXPR)
+        t = TREE_OPERAND (t, 1);
+      if (TREE_CODE (t) == AGGR_INIT_EXPR)
+        replace_decl (&AGGR_INIT_EXPR_SLOT (t), decl, replacement);
+      else if (TREE_CODE (t) == VEC_INIT_EXPR)
+        replace_decl (&VEC_INIT_EXPR_SLOT (t), decl, replacement);
+      else
+        replace_decl (tp, decl, replacement);
+      return true;
+    }
+    
+
+    	 that case, strip it in favor of this one.  */
+
+    	  cp_walk_tree (&TARGET_EXPR_CLEANUP (stmt), cp_fold_r, data, NULL);
+
+    	      tree sub = TARGET_EXPR_INITIAL (init);
+    	      maybe_replace_decl (&sub, TARGET_EXPR_SLOT (init),
+    				  TARGET_EXPR_SLOT (stmt));
+    	      init = sub;
+

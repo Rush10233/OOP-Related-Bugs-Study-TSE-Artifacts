@@ -1,0 +1,6 @@
+conversion.  If KIND is ck_ambig, true if the context is
+
+          CONSTRUCTOR_IS_DIRECT_INIT (expr) = false;
+
+    	    && !CONSTRUCTOR_IS_DIRECT_INIT (expr)
+

@@ -1,0 +1,47 @@
+tree to_type = NULL_TREE;
+
+          /* Slide the tdef out of the way.  We'll undo this below, if
+    	 we're pushing a matching tdef.  */
+
+      else if (to_type && TREE_CODE (decl) == TYPE_DECL)
+        {
+          /* We thought we wanted to slide an artificial typedef out of
+    	 the way, to make way for another typedef.  That's not always
+    	 what we want to do.  */
+          if (!DECL_ARTIFICIAL (decl))
+    	; /* Slide.  */
+          else if (same_type_p (TREE_TYPE (to_type), TREE_TYPE (decl)))
+    	/* Two artificial decls to same type.  Do nothing.  */
+    	return to_type;
+          else
+    	goto conflict;
+        }
+
+      else if (TREE_CODE (decl) == TYPE_DECL && DECL_ARTIFICIAL (decl))
+        {
+          /* Slide DECL into the type slot.  */
+          to_type = decl;
+          to_val = old;
+        }
+
+          if (DECL_ARTIFICIAL (decl))
+    	{
+    	  /* Slide DECL into the type slot instead.  */
+    	  to_type = decl;
+    	  to_val = old;
+    	}
+          else if (same_type_p (TREE_TYPE (old), TREE_TYPE (decl)))
+
+          if (to_type == (slot ? MAYBE_STAT_TYPE (*slot) : binding->type))
+    	to_type = NULL_TREE;
+    
+          if (to_type)
+
+    	  gcc_checking_assert (TREE_CODE (to_type) == TYPE_DECL
+
+    	      if (to_type)
+    		STAT_TYPE (*slot) = to_type;
+
+    	  if (to_type)
+    	    binding->type = to_type;
+

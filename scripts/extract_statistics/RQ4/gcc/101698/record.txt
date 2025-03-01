@@ -1,0 +1,8 @@
+Commit:	54d1992
+./gcc/cp/pt.c	16142,16142
+Commit:	48b8d5e
+./gcc/cp/pt.c	15429,15429
+Commit:	e60f712
+./gcc/cp/pt.c	16420,16420
+Commit:	ad8161e
+./gcc/cp/pt.cc	16473,16473

@@ -1,0 +1,14 @@
+// We can get here in two different ways:
+        //  1) We're performing value-initialization, and should zero-initialize
+        //     the object, or
+        //  2) We're performing default-initialization of an object with a trivial
+        //     constexpr default constructor, in which case we should start the
+        //     lifetimes of all the base subobjects (there can be no data member
+        //     subobjects in this case) per [basic.life]p1.
+        // Either way, ZeroInitialization is appropriate.
+        return ZeroInitialization(E);
+
+        // See RecordExprEvaluator::VisitCXXConstructExpr for explanation.
+        ImplicitValueInitExpr VIE(Type);
+        return EvaluateInPlace(*Value, Info, Subobject, &VIE);
+

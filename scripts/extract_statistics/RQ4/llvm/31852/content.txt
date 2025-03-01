@@ -1,0 +1,67 @@
+{
+                    case 'w':
+                        m_category_regex.SetCurrentValue(option_arg);
+
+                        break;
+                    case 'l':
+                        error = m_category_language.SetValueFromString(option_arg);
+
+                        break;
+                    default:
+                        error.SetErrorStringWithFormat ("unrecognized option '%c'", short_option);
+
+const Elf_Sym *Sym =
+              Obj->template getEntry<Elf_Sym>(*Symtab, Sec.sh_info);
+          auto Data = errorOrDefault(
+
+          DictScope D(W, "Group");
+          StringRef Name = errorOrDefault(Obj->getSectionName(&Sec));
+          W.printNumber("Name", Name, Sec.sh_name);
+
+FunctionDecl *NewFD, LookupResult &Previous,
+                                    bool IsMemberSpecialization);
+      bool shouldLinkDependentDeclWithPrevious(Decl *D, Decl *OldDecl);
+
+      void CheckMain(FunctionDecl *FD, const DeclSpec &D);
+      void CheckMSVCRTEntryPoint(FunctionDecl *FD);
+      Attr *getImplicitCodeSegOrSectionAttrForFunction(const FunctionDecl *FD, bool IsDefinition);
+
+                 ? New->getTypeSourceInfo()->getType()->castAs<FunctionType>()
+                 : NewType)->getReturnType();
+        if (!Context.hasSameType(OldDeclaredReturnType, NewDeclaredReturnType) &&
+
+          QualType ResQT;
+          if (NewDeclaredReturnType->isObjCObjectPointerType() &&
+              OldDeclaredReturnType->isObjCObjectPointerType())
+
+        if (OldQTypeForComparison == NewQType)
+          return MergeCompatibleFunctionDecls(New, Old, S, MergeTypeWithOld);
+    
+
+          return false;
+    
+        // Fall through for conflicting redeclarations and redefinitions.
+      }
+
+      }
+      return nullptr;
+    }
+
+    /// Checks if the new declaration declared in dependent context must be
+    /// put in the same redeclaration chain as the specified declaration.
+    ///
+
+    ///          belongs to.
+    ///
+    bool Sema::shouldLinkDependentDeclWithPrevious(Decl *D, Decl *PrevDecl) {
+
+      //
+
+      //
+
+      //
+
+    }
+    
+    namespace MultiVersioning {
+

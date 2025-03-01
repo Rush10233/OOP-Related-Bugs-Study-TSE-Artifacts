@@ -1,0 +1,160 @@
+/// OverloadCandidateSet - A set of overload candidates, used in C++
+      /// overload resolution (C++ 13.3).
+      class OverloadCandidateSet {
+
+        SmallVector<OverloadCandidate, 16> Candidates;
+        llvm::SmallPtrSet<Decl *, 16> Functions;
+    
+
+        llvm::BumpPtrAllocator ConversionSequenceAllocator;
+    
+        SourceLocation Loc;
+
+    
+        unsigned NumInlineSequences;
+        char InlineSpace[16 * sizeof(ImplicitConversionSequence)];
+
+        void destroyCandidates();
+    
+      public:
+
+        ~OverloadCandidateSet() { destroyCandidates(); }
+    
+        SourceLocation getLocation() const { return Loc; }
+
+    
+        /// \brief Determine when this overload candidate will be new to the
+        /// overload set.
+
+                                        SourceLocation OpLoc, ArrayRef<Expr *> Args,
+                                        OverloadCandidateSet& CandidateSet);
+      void AddArgumentDependentLookupCandidates(DeclarationName Name,
+
+                                                ArrayRef<Expr *> Args,
+                                    TemplateArgumentListInfo *ExplicitTemplateArgs,
+                                                OverloadCandidateSet& CandidateSet,
+
+                                                        bool AllowStringTemplate);
+      bool isKnownName(StringRef name);
+    
+
+    
+      void LookupVisibleDecls(Scope *S, LookupNameKind Kind,
+                              VisibleDeclConsumer &Consumer,
+
+    
+      // Build an overload candidate set based on the functions we find.
+      SourceLocation Loc = Fn->getExprLoc();
+
+    
+      // FIXME: What if we're calling something that isn't a function declaration?
+      // FIXME: What if we're calling a pseudo-destructor?
+
+        NamedDecl *ND = Corrected.getCorrectionDecl();
+        if (ND) {
+          if (Corrected.isOverloaded()) {
+
+            OverloadCandidateSet::iterator Best;
+            for (TypoCorrection::decl_iterator CD = Corrected.begin(),
+                                            CDEnd = Corrected.end();
+
+              S.getScopeForContext(S.CurContext), NULL, CCC)) {
+        if (NamedDecl *ND = Corrected.getCorrectionDecl()) {
+          if (Corrected.isOverloaded()) {
+
+            OverloadCandidateSet::iterator Best;
+            for (TypoCorrection::decl_iterator CD = Corrected.begin(),
+                                               CDEnd = Corrected.end();
+
+    
+      R.suppressDiagnostics();
+    
+
+      for (LookupResult::iterator Alloc = R.begin(), AllocEnd = R.end();
+           Alloc != AllocEnd; ++Alloc) {
+        // Even member operator new/delete are implicitly treated as
+
+    static bool FindConditionalOverload(Sema &Self, ExprResult &LHS, ExprResult &RHS,
+                                        SourceLocation QuestionLoc) {
+      Expr *Args[2] = { LHS.get(), RHS.get() };
+
+      Self.AddBuiltinOperatorCandidates(OO_Conditional, QuestionLoc, Args,
+                                        CandidateSet);
+    
+
+                                                   const InitializationKind &Kind,
+                                                   MultiExprArg Args,
+                                                   bool TopLevelOfInitList)
+
+      InitializeFrom(S, Entity, Kind, Args, TopLevelOfInitList);
+    }
+    
+
+      // Only consider constructors and constructor templates. Per
+      // C++0x [dcl.init]p16, second bullet to class types, this initialization
+      // is direct-initialization.
+
+      LookupCopyAndMoveConstructors(S, CandidateSet, Class, CurInitExpr);
+    
+      bool HadMultipleCandidates = (CandidateSet.size() > 1);
+
+        return;
+    
+      // Find constructors which would have been considered.
+
+      LookupCopyAndMoveConstructors(
+          S, CandidateSet, cast<CXXRecordDecl>(Record->getDecl()), CurInitExpr);
+    
+
+      }
+    }
+    
+    NamedDecl *Sema::LookupSingleName(Scope *S, DeclarationName Name,
+                                      SourceLocation Loc,
+                                      LookupNameKind NameKind,
+
+      //        unqualified lookup of operator@ in the context of the
+      //        expression according to the usual rules for name lookup in
+      //        unqualified function calls (3.4.2) except that all member
+
+      DeclarationName OpName = Context.DeclarationNames.getCXXOperatorName(Op);
+      LookupResult Operators(*this, OpName, SourceLocation(), LookupOperatorName);
+      LookupName(Operators, S);
+    
+      assert(!Operators.isAmbiguous() && "Operator lookup cannot be ambiguous");
+
+    }
+    
+    Sema::SpecialMemberOverloadResult *Sema::LookupSpecialMember(CXXRecordDecl *RD,
+
+      // Now we perform lookup on the name we computed earlier and do overload
+      // resolution. Lookup is only performed directly into the class since there
+      // will always be a (possibly implicit) declaration to shadow any others.
+
+      DeclContext::lookup_result R = RD->lookup(Name);
+      assert(!R.empty() &&
+             "lookup for a constructor or assignment operator was empty");
+
+      Old = New;
+    }
+    
+
+      // Find all of the associated namespaces and classes based on the
+      // arguments we have.
+      AssociatedNamespaceSet AssociatedNamespaces;
+
+                                         AssociatedNamespaces,
+                                         AssociatedClasses);
+    
+      // C++ [basic.lookup.argdep]p3:
+      //   Let X be the lookup set produced by unqualified lookup (3.4.1)
+      //   and let Y be the lookup set produced by argument dependent
+
+          if (isa<UsingShadowDecl>(D))
+            D = cast<UsingShadowDecl>(D)->getTargetDecl();
+    
+
+            continue;
+    
+          Result.insert(D);
+

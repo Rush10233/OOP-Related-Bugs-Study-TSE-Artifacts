@@ -1,0 +1,28 @@
+// If we're performing recursive template instantiation, create our own
+      // queue of pending implicit instantiations that we will instantiate later,
+      // while we're still within our own instantiation context.
+      SavePendingLocalImplicitInstantiationsRAII
+          SavedPendingLocalImplicitInstantiations(*this);
+      std::unique_ptr<SavePendingInstantiationsAndVTableUsesRAII>
+          SavePendingInstantiationsAndVTableUses;
+      if (Recursive) {
+        SavePendingInstantiationsAndVTableUses.reset(
+            new SavePendingInstantiationsAndVTableUsesRAII(*this));
+      }
+    
+
+NewFD = CXXDestructorDecl::Create(Context,
+                                              cast<CXXRecordDecl>(DC),
+
+                        LookupDestructor(cast<CXXRecordDecl>(BaseType->getDecl())));
+
+      
+
+                        LookupDestructor(cast<CXXRecordDecl>(BaseType->getDecl())));
+
+      
+
+                        LookupDestructor(cast<CXXRecordDecl>(RecordTy->getDecl())));
+
+       ComputeDefaultedDtorExceptionSpec(ClassDecl); 
+

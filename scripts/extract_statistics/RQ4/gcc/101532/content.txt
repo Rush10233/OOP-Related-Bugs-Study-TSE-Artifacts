@@ -1,0 +1,32 @@
+used_types_insert (DECL_CONTEXT (decl));
+    
+      if (TREE_CODE (decl) == FUNCTION_DECL
+
+          && !maybe_instantiate_noexcept (decl, complain))
+        return false;
+    
+
+used_types_insert (DECL_CONTEXT (decl));
+    
+      if (TREE_CODE (decl) == FUNCTION_DECL
+
+          && !maybe_instantiate_noexcept (decl, complain))
+        return false;
+    
+
+used_types_insert (DECL_CONTEXT (decl));
+    
+      if (TREE_CODE (decl) == FUNCTION_DECL
+
+          && !maybe_instantiate_noexcept (decl, complain))
+        return false;
+    
+
+used_types_insert (DECL_CONTEXT (decl));
+    
+      if (TREE_CODE (decl) == FUNCTION_DECL
+
+          && !maybe_instantiate_noexcept (decl, complain))
+        return false;
+    
+

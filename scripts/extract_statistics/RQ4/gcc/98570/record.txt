@@ -1,0 +1,12 @@
+Commit:	5c3d388
+./gcc/cp/Make-lang.in	227,227
+Commit:	bec5dba
+./gcc/cp/cp-tree.h	5452,5454
+./gcc/cp/module.cc	14804,14804
+./gcc/cp/module.cc	14979,14979
+./gcc/cp/pt.c	6519,6519
+./gcc/cp/pt.c	9186,9200
+./gcc/cp/pt.c	14906,14909
+./gcc/cp/tree.c	3850,3855
+./gcc/cp/typeck.c	1486,1486
+./gcc/cp/typeck.c	1522,1526

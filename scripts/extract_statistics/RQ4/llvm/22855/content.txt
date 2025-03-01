@@ -1,0 +1,250 @@
+ThreadSafetyHandler &Handler,
+                                 BeforeSet **Bset);
+    
+
+    /// \brief Helper function that returns a LockKind required for the given level
+    /// of access.
+    LockKind getLockKindFromAccessKind(AccessKind AK);
+
+    #include <sstream>
+    #include <utility>
+    #include <vector>
+
+    
+    // Key method definition
+    ThreadSafetyHandler::~ThreadSafetyHandler() {}
+    
+
+    class TILPrinter :
+      public til::PrettyPrinter<TILPrinter, llvm::raw_ostream> {};
+    
+
+        Handler.handleInvalidLockExp(Kind, Loc);
+    }
+    
+    /// \brief A set of CapabilityInfo objects, which are compiled from the
+    /// requires attributes on a function.
+    class CapExprSet : public SmallVector<CapabilityExpr, 4> {
+
+      }
+    };
+    
+    class ThreadSafetyAnalyzer;
+
+    
+
+    class BeforeSet {
+    private:
+      typedef SmallVector<const ValueDecl*, 4>  BeforeVect;
+
+      BeforeMap BMap;
+      CycleMap  CycMap;
+    };
+
+    
+
+    typedef llvm::ImmutableMap<const NamedDecl*, unsigned> LocalVarContext;
+    class LocalVariableMap;
+    
+
+    /// \brief Class which implements the core thread safety analysis routines.
+    class ThreadSafetyAnalyzer {
+      friend class BuildLockset;
+
+    
+      llvm::BumpPtrAllocator Bpa;
+      threadSafety::til::MemRegionRef Arena;
+
+    
+      void runAnalysis(AnalysisDeclContext &AC);
+    };
+
+    
+    //
+    BeforeSet::BeforeInfo* BeforeSet::insertAttrExprs(const ValueDecl* Vd,
+
+      return nullptr;
+    }
+    
+
+    template <typename Ty>
+    class has_arg_iterator_range {
+      typedef char yes[1];
+
+    public:
+      static const bool value = sizeof(test<Ty>(nullptr)) == sizeof(yes);
+    };
+
+    
+    static StringRef ClassifyDiagnostic(const CapabilityAttr *A) {
+      return A->getName();
+
+      }
+    }
+    
+
+      if (isa<CXXNullPtrLiteralExpr>(E) || isa<GNUNullExpr>(E)) {
+        TCond = false;
+        return true;
+
+                CapDiagKind);
+    }
+    
+
+    /// \brief We use this class to visit different types of expressions in
+    /// CFGBlocks, and build up the lockset.
+    /// An expression may cause us to add or remove locks from the lockset, or else
+
+      void VisitCXXConstructExpr(CXXConstructExpr *Exp);
+      void VisitDeclStmt(DeclStmt *S);
+    };
+
+    
+    /// \brief Warn if the LSet does not contain a lock sufficient to protect access
+    /// of at least the passed in AccessKind.
+
+    
+    
+    // Return true if block B never continues to its successors.
+
+      if (B->hasNoReturnElement())
+        return true;
+      if (B->empty())
+
+    /// We traverse the blocks in the CFG, compute the set of mutexes that are held
+    /// at the end of each block, and issue warnings for thread safety violations.
+    /// Each block in the CFG is traversed exactly once.
+
+      if (!*BSet)
+        *BSet = new BeforeSet;
+      ThreadSafetyAnalyzer Analyzer(Handler, *BSet);
+      Analyzer.runAnalysis(AC);
+    }
+    
+
+    
+    /// \brief Helper function that returns a LockKind required for the given level
+    /// of access.
+
+      switch (AK) {
+        case AK_Read :
+          return LK_Shared;
+
+      }
+      llvm_unreachable("Unknown AccessKind");
+    }
+
+    #include <algorithm>
+    #include <climits>
+    #include <vector>
+
+    
+    // From ThreadSafetyUtil.h
+
+      switch (CE->getStmtClass()) {
+        case Stmt::IntegerLiteralClass:
+          return cast<IntegerLiteral>(CE)->getValue().toString(10, true);
+
+      }
+    }
+    
+    // Return true if E is a variable that points to an incomplete Phi node.
+
+      return false;
+    }
+    
+    typedef SExprBuilder::CallingContext CallingContext;
+    
+    
+
+      return Scfg;
+    }
+    
+
+      const MemberExpr *ME = dyn_cast<MemberExpr>(E->IgnoreParenCasts());
+      return ME ? ME->isArrow() : false;
+    }
+
+      return SelfVar;
+    }
+    
+
+      if (auto *V = dyn_cast<til::Variable>(E))
+        return V->clangDecl();
+      if (auto *Ph = dyn_cast<til::Phi>(E))
+
+      return 0;
+    }
+    
+
+      auto *VD = getValueDeclFromSExpr(E);
+      if (VD && VD->getType()->isPointerType())
+        return true;
+
+      return false;
+    }
+    
+    // Grab the very first declaration of virtual method D
+
+      while (true) {
+        D = D->getCanonicalDecl();
+        CXXMethodDecl::method_iterator I = D->begin_overridden_methods(),
+
+    
+    
+    // if E is a til::Variable, update its clangDecl.
+
+      if (!E)
+        return;
+      if (til::Variable *V = dyn_cast<til::Variable>(E)) {
+
+      TILPrinter::print(Scfg, llvm::errs());
+    }
+    */
+
+    
+    #include "clang/Analysis/Analyses/ThreadSafetyTIL.h"
+    #include "clang/Analysis/Analyses/ThreadSafetyTraverse.h"
+
+    
+
+      switch (Op) {
+        case UOP_Minus:    return "-";
+        case UOP_BitNot:   return "~";
+
+      return "";
+    }
+    
+
+      switch (Op) {
+        case BOP_Mul:      return "*";
+        case BOP_Div:      return "/";
+
+    
+    // If E is a variable, then trace back through any aliases or redundant
+    // Phi nodes to find the canonical definition.
+
+      while (true) {
+        if (auto *V = dyn_cast<Variable>(E)) {
+          if (V->kind() == Variable::VK_Let) {
+
+    // If E is a variable, then trace back through any aliases or redundant
+    // Phi nodes to find the canonical definition.
+    // The non-const version will simplify incomplete Phi nodes.
+
+      while (true) {
+        if (auto *V = dyn_cast<Variable>(E)) {
+          if (V->kind() != Variable::VK_Let)
+
+    // Trace the arguments of an incomplete Phi node to see if they have the same
+    // canonical definition.  If so, mark the Phi node as redundant.
+    // getCanonicalVal() will recursively call simplifyIncompletePhi().
+
+      assert(Ph && Ph->status() == Phi::PH_Incomplete);
+    
+      // eliminate infinite recursion -- assume that this node is not redundant.
+
+        computeNodeID(Block, &BasicBlock::PostDominatorNode);
+      }
+    }
+

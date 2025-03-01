@@ -1,0 +1,134 @@
+
+      /* Remember whether the expression of this atomic constraint belongs to
+         a concept definition by inspecting in_decl, which should always be set
+         in this case either by norm_info::update_context (when recursing into a
+         concept-id during normalization) or by normalize_concept_definition
+         (when starting out with a concept-id).  */
+      if (info.in_decl && concept_definition_p (info.in_decl))
+        ATOMIC_CONSTR_EXPR_FROM_CONCEPT_P (atom) = true;
+    
+
+    /* Build a new template argument vector corresponding to the parameter
+       mapping of the atomic constraint T, using arguments from ARGS.  */
+
+    static tree
+    get_mapped_args (tree t, tree args)
+
+      tree map = ATOMIC_CONSTR_MAP (t);
+    
+
+      /* Determine the depth of the resulting argument vector.  */
+      int depth;
+      if (ATOMIC_CONSTR_EXPR_FROM_CONCEPT_P (t))
+        /* The expression of this atomic constraint comes from a concept definition,
+           whose template depth is always one, so the resulting argument vector
+           will also have depth one.  */
+        depth = 1;
+      else
+        /* Otherwise, the expression of this atomic constraint comes from
+           the context of the constrained entity, whose template depth is that
+           of ARGS.  */
+        depth = TMPL_ARGS_DEPTH (args);
+
+      auto_vec< vec<tree> > lists (depth);
+      lists.quick_grow_cleared (depth);
+
+    	list.safe_grow_cleared (index + 1, /*exact=*/false);
+
+      args = make_tree_vec (lists.length ());
+
+      if (TMPL_ARGS_HAVE_MULTIPLE_LEVELS (args)
+          && TMPL_ARGS_DEPTH (args) == 1)
+        {
+          /* Get rid of the redundant outer TREE_VEC.  */
+          tree level = TMPL_ARGS_LEVEL (args, 1);
+          ggc_free (args);
+          args = level;
+        }
+    
+
+      args = get_mapped_args (t, args);
+
+    	diagnose_atomic_constraint (t, args, result, info);
+
+        diagnose_atomic_constraint (t, args, result, info);
+
+    /* Diagnose a substitution failure in the atomic constraint T using ARGS.  */
+
+    diagnose_atomic_constraint (tree t, tree args, tree result, sat_info info)
+
+          ATOMIC_CONSTR_EXPR_FROM_CONCEPT_P (in ATOMIC_CONSTR)
+
+    /* Whether the expression for this atomic constraint belongs to a
+       concept definition.  */
+    #define ATOMIC_CONSTR_EXPR_FROM_CONCEPT_P(NODE) \
+      TREE_LANG_FLAG_1 (ATOMIC_CONSTR_CHECK (NODE))
+    
+
+
+      /* Remember whether the expression of this atomic constraint belongs to
+         a concept definition by inspecting in_decl, which should always be set
+         in this case either by norm_info::update_context (when recursing into a
+         concept-id during normalization) or by normalize_concept_definition
+         (when starting out with a concept-id).  */
+      if (info.in_decl && concept_definition_p (info.in_decl))
+        ATOMIC_CONSTR_EXPR_FROM_CONCEPT_P (atom) = true;
+    
+
+    /* Build a new template argument vector corresponding to the parameter
+       mapping of the atomic constraint T, using arguments from ARGS.  */
+
+    static tree
+    get_mapped_args (tree t, tree args)
+
+      tree map = ATOMIC_CONSTR_MAP (t);
+    
+
+      /* Determine the depth of the resulting argument vector.  */
+      int depth;
+      if (ATOMIC_CONSTR_EXPR_FROM_CONCEPT_P (t))
+        /* The expression of this atomic constraint comes from a concept definition,
+           whose template depth is always one, so the resulting argument vector
+           will also have depth one.  */
+        depth = 1;
+      else
+        /* Otherwise, the expression of this atomic constraint comes from
+           the context of the constrained entity, whose template depth is that
+           of ARGS.  */
+        depth = TMPL_ARGS_DEPTH (args);
+
+      auto_vec< vec<tree> > lists (depth);
+      lists.quick_grow_cleared (depth);
+
+    	list.safe_grow_cleared (index + 1, /*exact=*/false);
+
+      args = make_tree_vec (lists.length ());
+
+      if (TMPL_ARGS_HAVE_MULTIPLE_LEVELS (args)
+          && TMPL_ARGS_DEPTH (args) == 1)
+        {
+          /* Get rid of the redundant outer TREE_VEC.  */
+          tree level = TMPL_ARGS_LEVEL (args, 1);
+          ggc_free (args);
+          args = level;
+        }
+    
+
+      args = get_mapped_args (t, args);
+
+    	diagnose_atomic_constraint (t, args, result, info);
+
+        diagnose_atomic_constraint (t, args, result, info);
+
+    /* Diagnose a substitution failure in the atomic constraint T using ARGS.  */
+
+    diagnose_atomic_constraint (tree t, tree args, tree result, sat_info info)
+
+          ATOMIC_CONSTR_EXPR_FROM_CONCEPT_P (in ATOMIC_CONSTR)
+
+    /* Whether the expression for this atomic constraint belongs to a
+       concept definition.  */
+    #define ATOMIC_CONSTR_EXPR_FROM_CONCEPT_P(NODE) \
+      TREE_LANG_FLAG_1 (ATOMIC_CONSTR_CHECK (NODE))
+    
+

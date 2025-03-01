@@ -1,0 +1,33 @@
+/* FUN is a constexpr constructor with massaged body BODY.  Return true
+       if some bases/fields are uninitialized, and complain if COMPLAIN.  */
+
+    cx_check_missing_mem_inits (tree fun, tree body, bool complain)
+
+      bool bad;
+      tree field;
+      unsigned i, nelts;
+      tree ctype;
+    
+      if (TREE_CODE (body) != CONSTRUCTOR)
+        return false;
+    
+      nelts = CONSTRUCTOR_NELTS (body);
+      ctype = DECL_CONTEXT (fun);
+      field = TYPE_FIELDS (ctype);
+
+      bad = false;
+      for (i = 0; i <= nelts; ++i)
+
+          tree index;
+          if (i == nelts)
+    	index = NULL_TREE;
+          else
+
+    	  if (TREE_CODE (field) != FIELD_DECL
+    	      || (DECL_C_BIT_FIELD (field) && !DECL_NAME (field))
+    	      || DECL_ARTIFICIAL (field))
+
+          && cx_check_missing_mem_inits (fun, massaged, !DECL_GENERATED_P (fun)))
+
+    	    cx_check_missing_mem_inits (fun, body, true);
+

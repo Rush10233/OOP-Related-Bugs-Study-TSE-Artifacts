@@ -1,0 +1,60 @@
+DECL_CONTEXT (ass_op) = t;
+
+    		    /* We only need to look at the first function,
+    		       because all the fns share the attribute we're
+    		       concerned with (all member fns or all local
+    		       fns).  */
+
+    		    if (!((TREE_CODE (fn) == USING_DECL && DECL_DEPENDENT_P (fn))
+    			  || DECL_FUNCTION_MEMBER_P (fn)
+    			  || DECL_LOCAL_FUNCTION_P (fn)))
+
+    	      && (TREE_CODE (first_fn) == USING_DECL
+    		  || (TREE_CODE (first_fn) == FUNCTION_DECL
+    		      && DECL_FUNCTION_MEMBER_P (first_fn)
+    		      && !shared_member_p (decl))))
+
+DECL_CONTEXT (ass_op) = t;
+
+    		    /* We only need to look at the first function,
+    		       because all the fns share the attribute we're
+    		       concerned with (all member fns or all local
+    		       fns).  */
+
+    		    if (!((TREE_CODE (fn) == USING_DECL && DECL_DEPENDENT_P (fn))
+    			  || DECL_FUNCTION_MEMBER_P (fn)
+    			  || DECL_LOCAL_FUNCTION_P (fn)))
+
+    	      && (TREE_CODE (first_fn) == USING_DECL
+    		  || (TREE_CODE (first_fn) == FUNCTION_DECL
+    		      && DECL_FUNCTION_MEMBER_P (first_fn)
+    		      && !shared_member_p (decl))))
+
+/* Also add a USING_DECL for operator=.  We know there'll be (at
+    	 least) one, but we don't know the signature(s).  We want name
+    	 lookup not to fail or recurse into bases.  This isn't added
+    	 to the template decl list so we drop this at instantiation
+    	 time.  */
+          tree ass_op = build_lang_decl (USING_DECL, assign_op_identifier,
+    				     NULL_TREE);
+          USING_DECL_SCOPE (ass_op) = t;
+          DECL_DEPENDENT_P (ass_op) = true;
+          DECL_ARTIFICIAL (ass_op) = true;
+          DECL_CHAIN (ass_op) = TYPE_FIELDS (t);
+          TYPE_FIELDS (t) = ass_op;
+    
+
+/* Also add a USING_DECL for operator=.  We know there'll be (at
+    	 least) one, but we don't know the signature(s).  We want name
+    	 lookup not to fail or recurse into bases.  This isn't added
+    	 to the template decl list so we drop this at instantiation
+    	 time.  */
+          tree ass_op = build_lang_decl (USING_DECL, assign_op_identifier,
+    				     NULL_TREE);
+          USING_DECL_SCOPE (ass_op) = t;
+          DECL_DEPENDENT_P (ass_op) = true;
+          DECL_ARTIFICIAL (ass_op) = true;
+          DECL_CHAIN (ass_op) = TYPE_FIELDS (t);
+          TYPE_FIELDS (t) = ass_op;
+    
+

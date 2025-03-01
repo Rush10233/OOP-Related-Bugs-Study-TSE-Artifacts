@@ -1,0 +1,15 @@
+Commit:	0ef416e
+./gcc/cp/cp-gimplify.cc	252,253
+./gcc/cp/cp-gimplify.cc	953,953
+./gcc/cp/cp-gimplify.cc	959,959
+./gcc/cp/cp-gimplify.cc	970,970
+./gcc/cp/cp-gimplify.cc	1004,1004
+./gcc/cp/cp-gimplify.cc	1079,1079
+./gcc/cp/cp-gimplify.cc	1083,1083
+./gcc/cp/cp-gimplify.cc	1099,1100
+./gcc/cp/cp-gimplify.cc	2361,2362
+./gcc/cp/init.cc	4371,4372
+./gcc/cp/init.cc	4586,4587
+./gcc/cp/tree.cc	788,789
+./gcc/cp/typeck2.cc	577,577
+./gcc/cp/typeck2.cc	579,579

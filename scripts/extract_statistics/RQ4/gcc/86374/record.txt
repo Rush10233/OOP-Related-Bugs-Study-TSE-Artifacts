@@ -1,0 +1,6 @@
+Commit:	b2272b1
+./gcc/cp/parser.c	15976,15976
+./gcc/cp/parser.c	15982,15984
+./gcc/cp/pt.c	9371,9372
+Commit:	dbb0d4f
+./gcc/cp/pt.c	9376,9377

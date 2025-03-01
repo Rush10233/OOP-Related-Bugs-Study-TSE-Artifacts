@@ -1,0 +1,3 @@
+if (Self.RequireCompleteType(OpRange.getBegin(), SrcClass, 0) ||
+          !Self.IsDerivedFrom(SrcClass, DestClass, Paths)) {
+

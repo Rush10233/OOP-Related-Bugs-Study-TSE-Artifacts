@@ -1,0 +1,6 @@
+DECL_SIZE (decl) = CLASSTYPE_SIZE (basetype);
+      DECL_SIZE_UNIT (decl) = CLASSTYPE_SIZE_UNIT (basetype);
+
+DECL_SIZE (decl) = CLASSTYPE_SIZE (basetype);
+      DECL_SIZE_UNIT (decl) = CLASSTYPE_SIZE_UNIT (basetype);
+

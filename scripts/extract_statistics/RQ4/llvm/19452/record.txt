@@ -1,0 +1,12 @@
+Commit:	688866b
+./clang/include/clang/Sema/Overload.h	705,705
+./clang/include/clang/Sema/Sema.h	2280,2280
+./clang/include/clang/Sema/Sema.h	2594,2597
+./clang/lib/Sema/SemaCodeComplete.cpp	3836,3836
+./clang/lib/Sema/SemaExpr.cpp	1857,1857
+./clang/lib/Sema/SemaExpr.cpp	4009,4009
+./clang/lib/Sema/SemaExprCXX.cpp	1856,1856
+./clang/lib/Sema/SemaExprCXX.cpp	4306,4306
+./clang/lib/Sema/SemaInit.cpp	4414,4414
+./clang/lib/Sema/SemaInit.cpp	4948,4948
+./clang/lib/Sema/SemaInit.cpp	5056,5056

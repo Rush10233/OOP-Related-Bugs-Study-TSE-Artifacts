@@ -1,0 +1,8 @@
+else if (TREE_CODE (decl_or_origin) == IMPORTED_DECL)
+
+else if (TREE_CODE (decl_or_origin) == IMPORTED_DECL)
+
+else if (TREE_CODE (decl_or_origin) == IMPORTED_DECL)
+
+else if (TREE_CODE (decl_or_origin) == IMPORTED_DECL)
+

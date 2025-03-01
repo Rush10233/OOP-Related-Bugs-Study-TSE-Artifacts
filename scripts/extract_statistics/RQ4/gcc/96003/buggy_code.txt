@@ -1,0 +1,3 @@
+expr = fold_build3_loc (input_location, COND_EXPR, target_type, null_test, expr,
+    			    build_zero_cst (target_type));
+

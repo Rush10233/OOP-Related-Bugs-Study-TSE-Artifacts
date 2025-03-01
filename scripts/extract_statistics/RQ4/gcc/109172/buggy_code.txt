@@ -1,0 +1,4 @@
+tree dtor_fn = lookup_fnfields (TYPE_BINFO (TREE_TYPE (object)),
+
+    	  mark_used (dtor_fn);
+

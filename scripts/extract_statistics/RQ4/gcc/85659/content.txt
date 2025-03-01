@@ -1,0 +1,88 @@
+
+          generating_concat_p = 0;
+    
+
+    	  || (DECL_P (val)
+    	      && (allows_mem || REG_P (DECL_RTL (val)))
+    	      && ! (REG_P (DECL_RTL (val))
+    		    && GET_MODE (DECL_RTL (val)) != TYPE_MODE (type)))
+    	  || ! allows_reg
+
+    	{
+    	  op = expand_expr (val, NULL_RTX, VOIDmode,
+    			    !allows_reg ? EXPAND_MEMORY : EXPAND_WRITE);
+
+    
+    	  if (! allows_reg && !MEM_P (op))
+    	    error ("output number %d not directly addressable", i);
+
+    	      || GET_CODE (op) == CONCAT)
+    	    {
+    	      rtx old_op = op;
+
+
+          generating_concat_p = 0;
+    
+
+    	  || (DECL_P (val)
+    	      && (allows_mem || REG_P (DECL_RTL (val)))
+    	      && ! (REG_P (DECL_RTL (val))
+    		    && GET_MODE (DECL_RTL (val)) != TYPE_MODE (type)))
+    	  || ! allows_reg
+
+    	{
+    	  op = expand_expr (val, NULL_RTX, VOIDmode,
+    			    !allows_reg ? EXPAND_MEMORY : EXPAND_WRITE);
+
+    
+    	  if (! allows_reg && !MEM_P (op))
+    	    error ("output number %d not directly addressable", i);
+
+    	      || GET_CODE (op) == CONCAT)
+    	    {
+    	      rtx old_op = op;
+
+
+          generating_concat_p = 0;
+    
+
+    	  || (DECL_P (val)
+    	      && (allows_mem || REG_P (DECL_RTL (val)))
+    	      && ! (REG_P (DECL_RTL (val))
+    		    && GET_MODE (DECL_RTL (val)) != TYPE_MODE (type)))
+    	  || ! allows_reg
+
+    	{
+    	  op = expand_expr (val, NULL_RTX, VOIDmode,
+    			    !allows_reg ? EXPAND_MEMORY : EXPAND_WRITE);
+
+    
+    	  if (! allows_reg && !MEM_P (op))
+    	    error ("output number %d not directly addressable", i);
+
+    	      || GET_CODE (op) == CONCAT)
+    	    {
+    	      rtx old_op = op;
+
+
+          generating_concat_p = 0;
+    
+
+    	  || (DECL_P (val)
+    	      && (allows_mem || REG_P (DECL_RTL (val)))
+    	      && ! (REG_P (DECL_RTL (val))
+    		    && GET_MODE (DECL_RTL (val)) != TYPE_MODE (type)))
+    	  || ! allows_reg
+
+    	{
+    	  op = expand_expr (val, NULL_RTX, VOIDmode,
+    			    !allows_reg ? EXPAND_MEMORY : EXPAND_WRITE);
+
+    
+    	  if (! allows_reg && !MEM_P (op))
+    	    error ("output number %d not directly addressable", i);
+
+    	      || GET_CODE (op) == CONCAT)
+    	    {
+    	      rtx old_op = op;
+

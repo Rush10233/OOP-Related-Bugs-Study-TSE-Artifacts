@@ -1,0 +1,15 @@
+Commit:	fd07a29
+./gcc/cp/cp-tree.h	1776,1778
+./gcc/cp/cp-tree.h	2890,2890
+./gcc/cp/cp-tree.h	2894,2894
+./gcc/cp/cp-tree.h	2896,2904
+./gcc/cp/module.cc	5667,5668
+./gcc/cp/module.cc	5741,5742
+./gcc/cp/module.cc	7874,7875
+./gcc/cp/module.cc	8175,8176
+./gcc/cp/module.cc	10487,10492
+./gcc/cp/module.cc	10792,10792
+./gcc/cp/module.cc	11077,11097
+./gcc/cp/module.cc	18987,18989
+./gcc/cp/parser.cc	27681,27681
+./gcc/cp/parser.cc	27684,27684

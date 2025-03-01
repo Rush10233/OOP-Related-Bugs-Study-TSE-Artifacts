@@ -1,0 +1,16 @@
+size of the type (usually 1) for computing nvsize.  */
+    	  size = TYPE_SIZE_UNIT (TREE_TYPE (field));
+    
+
+    	if (tree_int_cst_lt (result, offset))
+    	  result = offset;
+          }
+
+size of the type (usually 1) for computing nvsize.  */
+    	  size = TYPE_SIZE_UNIT (TREE_TYPE (field));
+    
+
+    	if (tree_int_cst_lt (result, offset))
+    	  result = offset;
+          }
+

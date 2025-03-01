@@ -1,0 +1,122 @@
+LAMBDA_EXPR_MUTABLE_P (in LAMBDA_EXPR)
+          DECL_FINAL_P (in FUNCTION_DECL)
+          QUALIFIED_NAME_IS_TEMPLATE (in SCOPE_REF)
+          CONSTRUCTOR_IS_DEPENDENT (in CONSTRUCTOR)
+          TINFO_USED_TEMPLATE_ID (in TEMPLATE_INFO)
+          PACK_EXPANSION_SIZEOF_P (in *_PACK_EXPANSION)
+
+      (DECLTYPE_TYPE_CHECK (NODE))->type_common.string_flag
+    
+    /* These flags indicate that we want different semantics from normal
+
+    #define DECLTYPE_FOR_LAMBDA_CAPTURE(NODE) \
+      TREE_LANG_FLAG_0 (DECLTYPE_TYPE_CHECK (NODE))
+    #define DECLTYPE_FOR_LAMBDA_PROXY(NODE) \
+      TREE_LANG_FLAG_2 (DECLTYPE_TYPE_CHECK (NODE))
+    #define DECLTYPE_FOR_REF_CAPTURE(NODE) \
+
+    extern tree instantiate_decl			(tree, bool, bool);
+    extern int comp_template_parms			(const_tree, const_tree);
+    extern bool builtin_pack_fn_p			(tree);
+
+    extern bool template_parameter_pack_p           (const_tree);
+    extern bool function_parameter_pack_p		(const_tree);
+    extern bool function_parameter_expanded_from_pack_p (tree, tree);
+
+      tree type;
+      bool is_this = is_this_parameter (tree_strip_nop_conversions (expr));
+    
+
+        {
+          tree auto_node = make_auto ();
+    
+
+    	type = build_reference_type (type);
+          type = do_auto_deduction (type, expr, auto_node);
+        }
+
+      else
+        {
+          type = non_reference (unlowered_expr_type (expr));
+
+      name = get_identifier (buf);
+    
+      if (variadic)
+
+    
+      /* Make member variable.  */
+      member = build_decl (input_location, FIELD_DECL, name, type);
+
+    }
+    
+    /* Determines if the expression or type T uses any parameter packs.  */
+
+    uses_parameter_packs (tree t)
+    {
+      tree parameter_packs = NULL_TREE;
+
+      ppd.type_pack_expansion_p = false;
+      cp_walk_tree (&t, &find_parameter_packs_r, &ppd, ppd.visited);
+      delete ppd.visited;
+
+    }
+    
+    /* Turn ARG, which may be an expression, type, or a TREE_LIST
+
+          ARGUMENT_PACK_SELECT_INDEX (aps) = index;
+        }
+    
+      /* Substitute into the PATTERN with the (possibly altered)
+         arguments.  */
+      if (pattern == in_decl)
+
+    				      /*function_p*/false,
+    				      /*integral_constant_expression*/false);
+    
+    	--cp_unevaluated_operand;
+    	--c_inhibit_evaluation_warnings;
+    
+    	if (DECLTYPE_FOR_LAMBDA_CAPTURE (t))
+    	  type = lambda_capture_field_type (type,
+
+    					    DECLTYPE_FOR_REF_CAPTURE (t));
+    	else if (DECLTYPE_FOR_LAMBDA_PROXY (t))
+    	  type = lambda_proxy_type (type);
+
+      return t;
+    }
+    
+
+    /* T is a LAMBDA_EXPR.  Generate a new LAMBDA_EXPR for the current
+       instantiation context.  Instantiating a pack expansion containing a lambda
+       might result in multiple lambdas all based on the same lambda in the
+
+      tree oldfn = lambda_function (t);
+      in_decl = oldfn;
+    
+      tree r = build_lambda_expr ();
+    
+      LAMBDA_EXPR_LOCATION (r)
+        = LAMBDA_EXPR_LOCATION (t);
+      LAMBDA_EXPR_DEFAULT_CAPTURE_MODE (r)
+
+    	  gcc_assert (TREE_CODE (init) == TREE_VEC
+    		      && TREE_VEC_LENGTH (init) == len);
+    	  for (int i = 0; i < len; ++i)
+
+    	}
+          else
+    	{
+
+    
+    	  if (id_equal (DECL_NAME (field), "__this"))
+    	    LAMBDA_EXPR_THIS_CAPTURE (r) = field;
+
+        }
+      else
+        {
+
+          tree parms = build_tree_list (NULL_TREE, type);
+          tree tparms;
+    
+

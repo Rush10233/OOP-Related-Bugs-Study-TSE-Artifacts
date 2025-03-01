@@ -1,0 +1,6 @@
+if (op == POSTINCREMENT_EXPR
+          || op == POSTDECREMENT_EXPR)
+
+if (op == POSTINCREMENT_EXPR
+          || op == POSTDECREMENT_EXPR)
+

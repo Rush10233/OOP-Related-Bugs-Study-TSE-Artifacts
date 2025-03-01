@@ -1,0 +1,16 @@
+tree
+    build_explicit_specifier (tree expr, tsubst_flags_t complain)
+    {
+
+      if (instantiation_dependent_expression_p (expr))
+        /* Wait for instantiation, tsubst_function_decl will handle it.  */
+        return expr;
+
+    tree
+    build_noexcept_spec (tree expr, tsubst_flags_t complain)
+    {
+
+      if (TREE_CODE (expr) != DEFERRED_NOEXCEPT
+          && !value_dependent_expression_p (expr))
+        {
+

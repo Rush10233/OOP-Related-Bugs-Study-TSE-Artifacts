@@ -1,0 +1,56 @@
+tree saved_cas = current_access_specifier;
+          if (TREE_PRIVATE (TYPE_NAME (enumtype)))
+    	current_access_specifier = access_private_node;
+          else if (TREE_PROTECTED (TYPE_NAME (enumtype)))
+    	current_access_specifier = access_protected_node;
+          else
+    	current_access_specifier = access_public_node;
+    
+
+    
+          current_access_specifier = saved_cas;
+
+    static void set_current_access_from_decl (tree);
+
+    /* Set CURRENT_ACCESS_SPECIFIER based on the protection of DECL.  */
+    
+    static void
+    set_current_access_from_decl (tree decl)
+    {
+      if (TREE_PRIVATE (decl))
+        current_access_specifier = access_private_node;
+      else if (TREE_PROTECTED (decl))
+        current_access_specifier = access_protected_node;
+      else
+        current_access_specifier = access_public_node;
+    }
+    
+
+tree saved_cas = current_access_specifier;
+          if (TREE_PRIVATE (TYPE_NAME (enumtype)))
+    	current_access_specifier = access_private_node;
+          else if (TREE_PROTECTED (TYPE_NAME (enumtype)))
+    	current_access_specifier = access_protected_node;
+          else
+    	current_access_specifier = access_public_node;
+    
+
+    
+          current_access_specifier = saved_cas;
+
+    static void set_current_access_from_decl (tree);
+
+    /* Set CURRENT_ACCESS_SPECIFIER based on the protection of DECL.  */
+    
+    static void
+    set_current_access_from_decl (tree decl)
+    {
+      if (TREE_PRIVATE (decl))
+        current_access_specifier = access_private_node;
+      else if (TREE_PROTECTED (decl))
+        current_access_specifier = access_protected_node;
+      else
+        current_access_specifier = access_public_node;
+    }
+    
+

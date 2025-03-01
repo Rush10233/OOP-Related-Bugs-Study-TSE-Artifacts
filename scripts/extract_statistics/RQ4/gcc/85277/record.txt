@@ -1,0 +1,9 @@
+Commit:	68a8efe
+./gcc/cp/semantics.c	4046,4050
+./gcc/cp/semantics.c	4052,4054
+./gcc/cp/semantics.c	4072,4074
+./gcc/testsuite/g++.dg/ext/builtin-offsetof1.C	2,2
+./gcc/testsuite/g++.dg/ext/builtin-offsetof1.C	9,9
+./gcc/testsuite/g++.dg/other/offsetof3.C	15,15
+./gcc/testsuite/g++.dg/other/offsetof5.C	12,12
+./gcc/testsuite/g++.dg/other/offsetof5.C	19,19

@@ -1,0 +1,8 @@
+else if (TREE_CODE (function) == OFFSET_REF
+    		 || TREE_CODE (function) == DOTSTAR_EXPR
+    		 || TREE_CODE (function) == MEMBER_REF)
+
+else if (TREE_CODE (function) == OFFSET_REF
+    		 || TREE_CODE (function) == DOTSTAR_EXPR
+    		 || TREE_CODE (function) == MEMBER_REF)
+

@@ -1,0 +1,19 @@
+gcc_assert (identifier_p (fns) || TREE_CODE (fns) == OVERLOAD);
+
+    		if (identifier_p (postfix_expression))
+
+      /* If DECL is dependent, and refers to a function, then just return
+         its name; we will look it up again during template instantiation.  */
+      if (DECL_FUNCTION_TEMPLATE_P (decl) || !DECL_P (decl))
+        {
+          tree scope = ovl_scope (decl);
+          if (TYPE_P (scope) && dependent_type_p (scope))
+    	return identifier;
+        }
+    
+
+          /* An OVERLOAD will always be a non-dependent overload set; an
+    	 overload set from function scope will just be represented with an
+    	 IDENTIFIER_NODE, and from class scope with a BASELINK.  */
+          gcc_assert (!uses_template_parms (t));
+

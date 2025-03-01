@@ -1,0 +1,20 @@
+c && c->kind != ck_identity;
+
+    	  /* List-initialization is OK.  */
+    	case ck_aggr:
+
+else if (CONSTRUCTOR_IS_DESIGNATED_INIT (init_list)
+    	   && !CP_AGGREGATE_TYPE_P (totype))
+        {
+          if (complain & tf_error)
+    	error ("designated initializers cannot be used with a "
+    	       "non-aggregate type %qT", totype);
+          return;
+        }
+
+      else if (BRACE_ENCLOSED_INITIALIZER_P (expr)
+    	   && CONSTRUCTOR_IS_DESIGNATED_INIT (expr)
+    	   && !CP_AGGREGATE_TYPE_P (type))
+        error_at (loc, "designated initializers cannot be used with a "
+    	      "non-aggregate type %qT", type);
+

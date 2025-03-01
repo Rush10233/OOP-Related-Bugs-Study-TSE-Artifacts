@@ -1,0 +1,24 @@
+getDeclName().getCXXOverloadedOperator() == OO_Array_New ||
+             getDeclName().getCXXOverloadedOperator() == OO_Array_Delete);
+    
+
+    
+      const FunctionProtoType *proto = getType()->castAs<FunctionProtoType>();
+      if (proto->getNumArgs() != 2 || proto->isVariadic()) return false;
+
+    
+      if (isa<CXXRecordDecl>(getDeclContext()))
+        return false;
+
+    
+      const FunctionProtoType *FPT = getType()->castAs<FunctionProtoType>();
+      if (FPT->getNumArgs() > 2 || FPT->isVariadic())
+
+        return 0;
+      if (isa<CXXRecordDecl>(getDeclContext()))
+        return 0;
+
+    
+      if (getNumParams() != 2 || isVariadic() ||
+          !Ctx.hasSameType(getType()->castAs<FunctionProtoType>()->getArgType(1),
+

@@ -1,0 +1,6 @@
+Commit:	6e5084b
+./gcc/cp/pt.c	28074,28074
+Commit:	88eae4f
+./gcc/cp/pt.c	26523,26523
+Commit:	6c7e43f
+./gcc/cp/pt.c	27379,27379

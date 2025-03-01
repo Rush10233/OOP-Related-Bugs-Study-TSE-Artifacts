@@ -1,0 +1,2 @@
+if (const CXXMethodDecl *MD = dyn_cast<CXXMethodDecl>(Fn)) {
+

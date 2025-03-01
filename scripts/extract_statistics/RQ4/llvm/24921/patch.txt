@@ -1,0 +1,21 @@
+TemplateArgs = std::move(NewArgs);
+
+      llvm::SmallDenseMap<FunctionDecl *, TemplateArgumentListInfo, 8>
+          ConvertedTemplateArgs;
+    
+
+          TemplateArgumentListInfo Args;
+          if (ExplicitTemplateArgs)
+            Args = *ExplicitTemplateArgs;
+    
+
+                  ExplicitTemplateArgs ? &Args : nullptr, FT, Specialization, Info)) {
+
+          if (ExplicitTemplateArgs)
+            ConvertedTemplateArgs[Specialization] = std::move(Args);
+
+      FD->setFunctionTemplateSpecialization(
+          Specialization->getPrimaryTemplate(), TemplArgs, /*InsertPos=*/nullptr,
+          SpecInfo->getTemplateSpecializationKind(),
+          ExplicitTemplateArgs ? &ConvertedTemplateArgs[Specialization] : nullptr);
+

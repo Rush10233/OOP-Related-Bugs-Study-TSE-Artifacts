@@ -1,0 +1,42 @@
+variable with automatic storage duration defined outside that
+    		 lambda-expression, where the reference would be an
+    		 odr-use.  */
+
+    	      if (flags & tf_error)
+    		{
+    		  tree cap = DECL_CAPTURED_VARIABLE (t);
+    		  error ("lambda capture of %qE is not a constant expression",
+    			 cap);
+
+    		    inform (input_location, "because it is used as a glvalue");
+    		}
+    	      return false;
+
+variable with automatic storage duration defined outside that
+    		 lambda-expression, where the reference would be an
+    		 odr-use.  */
+
+    	      if (flags & tf_error)
+    		{
+    		  tree cap = DECL_CAPTURED_VARIABLE (t);
+    		  error ("lambda capture of %qE is not a constant expression",
+    			 cap);
+
+    		    inform (input_location, "because it is used as a glvalue");
+    		}
+    	      return false;
+
+variable with automatic storage duration defined outside that
+    		 lambda-expression, where the reference would be an
+    		 odr-use.  */
+
+    	      if (flags & tf_error)
+    		{
+    		  tree cap = DECL_CAPTURED_VARIABLE (t);
+    		  error ("lambda capture of %qE is not a constant expression",
+    			 cap);
+
+    		    inform (input_location, "because it is used as a glvalue");
+    		}
+    	      return false;
+

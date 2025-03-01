@@ -1,0 +1,6 @@
+Commit:	c886562
+./gcc/cp/except.cc	1325,1325
+./gcc/cp/except.cc	1327,1327
+Commit:	e5139d1
+./gcc/cp/except.cc	1310,1310
+./gcc/cp/except.cc	1312,1312

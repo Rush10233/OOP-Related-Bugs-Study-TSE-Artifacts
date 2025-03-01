@@ -1,0 +1,3 @@
+Commit:	361a822
+./clang/lib/Sema/SemaTemplateInstantiate.cpp	966,968
+./clang/test/CXX/class/class.compare/class.spaceship/p1.cpp	230,230

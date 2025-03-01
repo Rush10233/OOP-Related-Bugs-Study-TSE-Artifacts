@@ -1,0 +1,15 @@
+Commit:	addf51d
+./clang/lib/Sema/SemaExpr.cpp	4167,4167
+./clang/lib/Sema/SemaExpr.cpp	4169,4171
+./clang/lib/Sema/SemaExpr.cpp	4174,4174
+./clang/lib/Sema/SemaExpr.cpp	4178,4178
+./clang/lib/Sema/SemaExpr.cpp	4187,4191
+./clang/lib/Sema/SemaExpr.cpp	4212,4212
+./clang/lib/Sema/SemaExpr.cpp	4223,4224
+./clang/lib/Sema/SemaExprCXX.cpp	1417,1417
+./clang/lib/Sema/SemaExprCXX.cpp	1419,1421
+./clang/lib/Sema/SemaExprCXX.cpp	1687,1691
+./clang/lib/Sema/SemaExprCXX.cpp	1835,1836
+./clang/lib/Sema/SemaExprCXX.cpp	1882,1904
+./clang/test/SemaCXX/cxx0x-initializer-constructor.cpp	1,1
+./clang/test/SemaCXX/cxx0x-initializer-constructor.cpp	307,307

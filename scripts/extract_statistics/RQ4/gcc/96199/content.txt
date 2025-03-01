@@ -1,0 +1,174 @@
+if (tree *p = hash_map_safe_get (normalized_map, tmpl))
+          return *p;
+    
+
+      tree args = generic_targs_for (tmpl);
+      tree ci = get_constraints (decl);
+      tree norm = get_normalized_constraints_from_info (ci, args, tmpl, diag);
+
+      return is_auto (t) && PLACEHOLDER_TYPE_CONSTRAINTS (t);
+    }
+    
+
+    #if CHECKING_P
+    namespace selftest {
+      extern void run_cp_tests (void);
+
+    					 complain, in_decl);
+    	  if (argvec == error_mark_node)
+    	    r = error_mark_node;
+
+    	    {
+    	      /* See maybe_dependent_member_ref.  */
+    	      tree name = TYPE_IDENTIFIER (t);
+
+       we are trying to refer to that member in a partial instantiation of C,
+       return a SCOPE_REF; otherwise, return NULL_TREE.
+    
+
+    
+    static tree
+    maybe_dependent_member_ref (tree t, tree args, tsubst_flags_t complain,
+    			    tree in_decl)
+    {
+
+        return NULL_TREE;
+    
+      tree ctx = context_for_name_lookup (t);
+
+    	  fargs = tsubst (fargs, tsubst_args, complain, ctor);
+    	  current_template_parms = save_parms;
+    	}
+
+    
+          --processing_template_decl;
+          if (!ok)
+
+complain, in_decl);
+    	  if (argvec == error_mark_node)
+    	    r = error_mark_node;
+
+    	  else
+    	    {
+    	      r = lookup_template_class (t, argvec, in_decl, context,
+
+      return init;
+    }
+    
+
+    /* Like tsubst, but deals with expressions.  This function just replaces
+       template parms; to finish processing the resultant expression, use
+       tsubst_copy_and_build or tsubst_expr.  */
+
+    	if (args == NULL_TREE)
+    	  return scalar_constant_value (t);
+    
+
+    	/* Unfortunately, we cannot just call lookup_name here.
+    	   Consider:
+    
+
+          return t;
+    
+        case VAR_DECL:
+
+        case FUNCTION_DECL:
+          if (DECL_LANG_SPECIFIC (t) && DECL_TEMPLATE_INFO (t))
+    	r = tsubst (t, args, complain, in_decl);
+
+if (tree *p = hash_map_safe_get (normalized_map, tmpl))
+          return *p;
+    
+
+      tree args = generic_targs_for (tmpl);
+      tree ci = get_constraints (decl);
+      tree norm = get_normalized_constraints_from_info (ci, args, tmpl, diag);
+
+      return is_auto (t) && PLACEHOLDER_TYPE_CONSTRAINTS (t);
+    }
+    
+
+    #if CHECKING_P
+    namespace selftest {
+      extern void run_cp_tests (void);
+
+if (INDIRECT_REF_P (ob))
+    	  {
+    	    ob = TREE_OPERAND (ob, 0);
+
+    	      {
+    		dump_expr (pp, ob, flags | TFF_EXPR_IN_PARENS);
+    		if (TYPE_REF_P (TREE_TYPE (ob)))
+
+          if (IDENTIFIER_CONV_OP_P (name))
+    	name = make_conv_op_name (optype);
+    
+
+          if (name == complete_dtor_identifier)
+    	/* Treat as-if non-dependent below.  */
+    	dependent_p = false;
+
+complain, in_decl);
+    	  if (argvec == error_mark_node)
+    	    r = error_mark_node;
+
+    	    {
+    	      /* See maybe_dependent_member_ref.  */
+    	      tree name = TYPE_IDENTIFIER (t);
+
+    	  class_p = true;
+    	  inner = TREE_TYPE (inner);
+    	}
+
+        }
+      --processing_template_decl;
+      if (inner == error_mark_node)
+
+complain, in_decl);
+    	  if (argvec == error_mark_node)
+    	    r = error_mark_node;
+
+    	  else
+    	    {
+    	      r = lookup_template_class (t, argvec, in_decl, context,
+
+      return init;
+    }
+    
+
+    /* Like tsubst, but deals with expressions.  This function just replaces
+       template parms; to finish processing the resultant expression, use
+       tsubst_copy_and_build or tsubst_expr.  */
+
+    	if (args == NULL_TREE)
+    	  return scalar_constant_value (t);
+    
+
+    	/* Unfortunately, we cannot just call lookup_name here.
+    	   Consider:
+    
+
+          return t;
+    
+        case VAR_DECL:
+
+        case FUNCTION_DECL:
+          if (DECL_LANG_SPECIFIC (t) && DECL_TEMPLATE_INFO (t))
+    	r = tsubst (t, args, complain, in_decl);
+
+complain, in_decl);
+    	  if (argvec == error_mark_node)
+    	    r = error_mark_node;
+
+    	    {
+    	      /* See maybe_dependent_member_ref.  */
+    	      tree name = TYPE_IDENTIFIER (t);
+
+        {
+          tree new_type;
+          ++processing_template_decl;
+
+          --processing_template_decl;
+          if (new_type == error_mark_node)
+    	return error_mark_node;
+

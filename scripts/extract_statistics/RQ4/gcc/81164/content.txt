@@ -1,0 +1,48 @@
+extern tree dfs_walk_once (tree, tree (*) (tree, void *),
+    			   tree (*) (tree, void *), void *);
+    extern tree binfo_via_virtual			(tree, tree);
+
+    extern tree build_baselink			(tree, tree, tree, tree);
+    extern tree adjust_result_of_qualified_name_lookup
+    						(tree, tree, tree);
+
+    	      return NULL_TREE;
+    	    }
+    	}
+
+    	{
+    	  error ("cannot inherit constructors from indirect base %qT", scope);
+    	  return NULL_TREE;
+
+      return NULL_TREE;
+    }
+    
+
+    /* BINFO is a base binfo in the complete type BINFO_TYPE (HERE).
+       Find the equivalent binfo within whatever graph HERE is located.
+       This is the inverse of original_binfo.  */
+
+extern tree dfs_walk_once (tree, tree (*) (tree, void *),
+    			   tree (*) (tree, void *), void *);
+    extern tree binfo_via_virtual			(tree, tree);
+
+    extern tree build_baselink			(tree, tree, tree, tree);
+    extern tree adjust_result_of_qualified_name_lookup
+    						(tree, tree, tree);
+
+    	      return NULL_TREE;
+    	    }
+    	}
+
+    	{
+    	  error ("cannot inherit constructors from indirect base %qT", scope);
+    	  return NULL_TREE;
+
+      return NULL_TREE;
+    }
+    
+
+    /* BINFO is a base binfo in the complete type BINFO_TYPE (HERE).
+       Find the equivalent binfo within whatever graph HERE is located.
+       This is the inverse of original_binfo.  */
+

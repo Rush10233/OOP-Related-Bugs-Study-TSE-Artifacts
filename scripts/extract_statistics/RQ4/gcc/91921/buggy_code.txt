@@ -1,0 +1,6 @@
+warning_at (location_of (base_fndecl),
+    			  OPT_Woverloaded_virtual,
+    			  "%qD was hidden", base_fndecl);
+    	      warning_at (location_of (fns),
+    			  OPT_Woverloaded_virtual, "  by %qD", fns);
+

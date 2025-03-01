@@ -1,0 +1,11 @@
+&& DECL_CONV_FN_P (t->cand->fn))
+
+/* Returns nonzero if T1 is reference-related to T2.  */
+
+      else if (CLASS_TYPE_P (from) && !related_p
+    	   && !(flags & LOOKUP_NO_CONVERSION))
+
+          z_candidate *cand = build_user_type_conversion_1 (rto, expr, flags,
+
+gcc_assert (maybe_valid_p || conv->bad_p);
+

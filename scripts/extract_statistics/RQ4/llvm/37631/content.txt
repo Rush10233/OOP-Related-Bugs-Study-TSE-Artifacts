@@ -1,0 +1,21 @@
+def err_deduction_guide_specialized : Error<"deduction guide cannot be "
+      "%select{explicitly instantiated|explicitly specialized}0">;
+    def err_deduction_guide_template_not_deducible : Error<
+
+    
+    // C++1y deduced return types
+    def err_auto_fn_deduction_failure : Error<
+
+          Member->setInvalidDecl();
+        }
+    
+
+        Member->setAccess(AS);
+    
+        // If we have declared a member function template or static data member
+        // template, set the access of the templated declaration as well.
+
+      }
+    
+      if (VS.isOverrideSpecified())
+

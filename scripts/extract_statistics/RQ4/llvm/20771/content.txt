@@ -1,0 +1,54 @@
+}
+    };
+    
+
+    /// m_ConstantInt - Match a ConstantInt and bind to its value.  This does not
+    /// match ConstantInts wider than 64-bits.
+    inline bind_const_intval_ty m_ConstantInt(uint64_t &V) { return V; }
+
+    static Value *SimplifyGEPInst(ArrayRef<Value *> Ops, const Query &Q, unsigned) {
+      // The type of the GEP pointer operand.
+      PointerType *PtrTy = cast<PointerType>(Ops[0]->getType()->getScalarType());
+
+    
+      // getelementptr P -> P.
+      if (Ops.size() == 1)
+        return Ops[0];
+    
+
+        return UndefValue::get(GEPTy);
+    
+      if (Ops.size() == 2) {
+        // getelementptr P, 0 -> P.
+        if (match(Ops[1], m_Zero()))
+          return Ops[0];
+
+            return Ops[0];
+
+        }
+      }
+    
+
+if (!MemBuf)
+        return nullptr;
+    
+
+      if (std::error_code EC = MOrErr.getError()) {
+        errMsg = EC.message();
+        return nullptr;
+
+    
+      TargetMachine *target = march->createTargetMachine(TripleStr, CPU, FeatureStr,
+                                                         options);
+      M->setDataLayout(target->getSubtargetImpl()->getDataLayout());
+    
+      std::unique_ptr<object::IRObjectFile> IRObj(
+
+return Constant::getNullValue(GEPTy);
+              Value *Temp;
+              if (match(P, m_PtrToInt(m_Value(Temp))))
+
+              return nullptr;
+            };
+    
+

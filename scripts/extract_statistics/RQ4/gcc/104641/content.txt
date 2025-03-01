@@ -1,0 +1,76 @@
+(build_target_expr and friends) */
+      tf_norm = 1 << 11,		 /* Build diagnostic information during
+    				    constraint normalization.  */
+
+      /* Convenient substitution flags combinations.  */
+      tf_warning_or_error = tf_warning | tf_error
+    };
+
+        }
+      if (!want_template && TREE_CODE (t) != TYPE_DECL)
+        {
+
+        }
+    
+      if (!check_accessibility_of_qualified_id (t, /*object_type=*/NULL_TREE,
+    					    context, complain))
+        return error_mark_node;
+    
+
+      if (want_template)
+        {
+          t = lookup_template_class (t, TREE_OPERAND (fullname, 1),
+
+    		&& VAR_HAD_UNKNOWN_BOUND (t)
+    		&& type != error_mark_node)
+    	      type = strip_array_domain (type);
+
+    	    /* Substituting the type might have recursively instantiated this
+    	       same alias (c++/86171).  */
+    	    if (gen_tmpl && DECL_ALIAS_TEMPLATE_P (gen_tmpl)
+
+      bool fndecl_type = (complain & tf_fndecl_type);
+      complain &= ~tf_fndecl_type;
+    
+
+      if (type
+          && code != TYPENAME_TYPE
+          && code != TEMPLATE_TYPE_PARM
+
+    	      return error_mark_node;
+    	  }
+    
+
+    	if (f == error_mark_node)
+    	  return f;
+    	if (TREE_CODE (f) == TYPE_DECL)
+
+        case CONVERT_EXPR:
+        case NOP_EXPR:
+          {
+
+    	tree op0 = tsubst_copy (TREE_OPERAND (t, 0), args, complain, in_decl);
+    	return build1 (code, type, op0);
+          }
+
+    	tree type;
+    	tree op, r = NULL_TREE;
+    
+
+    	if (integral_constant_expression_p
+    	    && !cast_valid_in_integral_constant_expression_p (type))
+    	  {
+
+    	vec<constructor_elt, va_gc> *n;
+    	constructor_elt *ce;
+    	unsigned HOST_WIDE_INT idx;
+    	bool process_index_p;
+            int newlen;
+            bool need_copy_p = false;
+    	tree r;
+    
+
+    	if (type == error_mark_node)
+    	  RETURN (error_mark_node);
+    
+

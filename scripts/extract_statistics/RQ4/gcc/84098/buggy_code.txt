@@ -1,0 +1,6 @@
+else if (DECL_CLASS_TEMPLATE_P (t)
+
+    	    /* A closure type for a lambda in a default argument for a
+    	       member template.  Ignore it; it will be instantiated with
+    	       the default argument.  */;
+

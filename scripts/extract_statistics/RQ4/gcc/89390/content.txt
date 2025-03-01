@@ -1,0 +1,74 @@
+else
+    	{
+    	  name_hint hint;
+
+    	    hint = suggest_alternative_in_scoped_enum (name, scope);
+    	  if (const char *suggestion = hint.suggestion ())
+    	    {
+
+tree object_scope;
+    	tree scope;
+    	bool done;
+
+    
+    	/* Consume the `~' token.  */
+    	cp_lexer_consume_token (parser->lexer);
+
+    	  }
+    	gcc_assert (!scope || TYPE_P (scope));
+    
+
+    	/* If the name is of the form "X::~X" it's OK even if X is a
+    	   typedef.  */
+
+    	if (scope
+    	    && token->type == CPP_NAME
+    	    && (cp_lexer_peek_nth_token (parser->lexer, 2)->type
+
+    		    && constructor_name_p (token->u.value, scope))))
+    	  {
+    	    cp_lexer_consume_token (parser->lexer);
+
+    	  }
+    
+    	/* ~auto means the destructor of whatever the object is.  */
+    	if (cp_parser_is_keyword (token, RID_AUTO))
+    	  {
+    	    if (cxx_dialect < cxx14)
+
+    		       "%<~auto%> only available with "
+    		       "-std=c++14 or -std=gnu++14");
+    	    cp_lexer_consume_token (parser->lexer);
+
+    	  }
+    
+    	/* If there was an explicit qualification (S::~T), first look
+
+    		type_decl = cp_parser_identifier (parser);
+    		if (type_decl != error_mark_node)
+    		  type_decl = build_nt (BIT_NOT_EXPR, type_decl);
+
+    	      }
+    	  }
+    	/* If an error occurred, assume that the name of the
+
+    	if (declarator_p && scope && !check_dtor_name (scope, type_decl))
+    	  {
+    	    if (!cp_parser_uncommitted_to_tentative_parse_p (parser))
+
+    			"declaration of %<~%T%> as member of %qT",
+    			type_decl, scope);
+    	    cp_parser_simulate_error (parser);
+
+    	    && !DECL_IMPLICIT_TYPEDEF_P (type_decl)
+    	    && !DECL_SELF_REFERENCE_P (type_decl)
+    	    && !cp_parser_uncommitted_to_tentative_parse_p (parser))
+
+    		    "typedef-name %qD used as destructor declarator",
+    		    type_decl);
+    
+
+          }
+    
+        case CPP_KEYWORD:
+

@@ -1,0 +1,197 @@
+/// to be used while performing partial ordering of function templates.
+        unsigned ExplicitCallArguments;
+    
+        union {
+          DeductionFailureInfo DeductionFailure;
+    
+
+        SmallVector<OverloadCandidate, 16> Candidates;
+        llvm::SmallPtrSet<Decl *, 16> Functions;
+    
+
+        llvm::BumpPtrAllocator SlabAllocator;
+    
+        SourceLocation Loc;
+
+        /// from the slab allocator.
+        /// FIXME: It would probably be nice to have a SmallBumpPtrAllocator
+        /// instead.
+
+        template <typename T>
+        T *slabAllocate(unsigned N) {
+          // It's simpler if this doesn't need to consider alignment.
+
+        SourceLocation getLocation() const { return Loc; }
+        CandidateSetKind getKind() const { return Kind; }
+    
+        /// \brief Determine when this overload candidate will be new to the
+        /// overload set.
+        bool isNewCandidate(Decl *F) {
+
+      void AddMethodCandidate(DeclAccessPair FoundDecl,
+                              QualType ObjectType,
+                              Expr::Classification ObjectClassification,
+
+                              OverloadCandidateSet& CandidateSet,
+                              bool SuppressUserConversion = false);
+      void AddMethodCandidate(CXXMethodDecl *Method,
+                              DeclAccessPair FoundDecl,
+                              CXXRecordDecl *ActingContext, QualType ObjectType,
+                              Expr::Classification ObjectClassification,
+
+                              OverloadCandidateSet& CandidateSet,
+                              bool SuppressUserConversions = false,
+                              bool PartialOverloading = false,
+
+                                     TemplateArgumentListInfo *ExplicitTemplateArgs,
+                                      QualType ObjectType,
+                                      Expr::Classification ObjectClassification,
+                                      ArrayRef<Expr *> Args,
+                                      OverloadCandidateSet& CandidateSet,
+                                      bool SuppressUserConversions = false,
+
+      EnableIfAttr *CheckEnableIf(FunctionDecl *Function, ArrayRef<Expr *> Args,
+                                  bool MissingImplicitThis = false);
+    
+
+      ///
+
+      ///
+
+    
+
+      ///
+
+      ///
+
+    
+      /// Returns whether the given function's address can be taken or not,
+      /// optionally emitting a diagnostic if the address can't be taken.
+
+                                SourceLocation Loc);
+    
+      void checkCall(NamedDecl *FDecl, const FunctionProtoType *Proto,
+
+                     VariadicCallType CallType);
+    
+      bool CheckObjCString(Expr *Arg);
+
+    }
+    
+    /// Handles the checks for format strings, non-POD arguments to vararg
+
+    void Sema::checkCall(NamedDecl *FDecl, const FunctionProtoType *Proto,
+
+      // FIXME: We should check as much as we can in the template definition.
+      if (CurContext->isDependentContext())
+        return;
+
+            CheckArgumentWithTypeTag(I, Args.data());
+        }
+      }
+
+    }
+    
+    /// CheckConstructorCall - Check a constructor call for correctness and safety
+
+                                    SourceLocation Loc) {
+      VariadicCallType CallType =
+        Proto->isVariadic() ? VariadicConstructor : VariadicDoesNotApply;
+
+    }
+    
+    /// CheckFunctionCall - Check a direct function call for various correctness
+
+                                                      TheCall->getCallee());
+      Expr** Args = TheCall->getArgs();
+      unsigned NumArgs = TheCall->getNumArgs();
+
+      if (IsMemberOperatorCall) {
+        // If this is a call to a member operator, hide the first argument
+        // from checkCall.
+        // FIXME: Our choice of AST representation here is less than ideal.
+
+        ++Args;
+        --NumArgs;
+
+                IsMemberFunction, TheCall->getRParenLoc(),
+                TheCall->getCallee()->getSourceRange(), CallType);
+    
+
+      VariadicCallType CallType =
+          Method->isVariadic() ? VariadicMethod : VariadicDoesNotApply;
+    
+
+                CallType);
+    
+      return false;
+
+        CallType = VariadicFunction;
+      }
+    
+
+                llvm::makeArrayRef(TheCall->getArgs(), TheCall->getNumArgs()),
+                /*IsMemberFunction=*/false, TheCall->getRParenLoc(),
+                TheCall->getCallee()->getSourceRange(), CallType);
+
+    bool Sema::CheckOtherCall(CallExpr *TheCall, const FunctionProtoType *Proto) {
+      VariadicCallType CallType = getVariadicCallType(/*FDecl=*/nullptr, Proto,
+                                                      TheCall->getCallee());
+
+                llvm::makeArrayRef(TheCall->getArgs(), TheCall->getNumArgs()),
+                /*IsMemberFunction=*/false, TheCall->getRParenLoc(),
+                TheCall->getCallee()->getSourceRange(), CallType);
+
+      }
+    
+      // See if this is a deleted function.
+      if (FunctionDecl *FD = dyn_cast<FunctionDecl>(D)) {
+        if (FD->isDeleted()) {
+          auto *Ctor = dyn_cast<CXXConstructorDecl>(FD);
+
+        if (getLangOpts().CUDA && !CheckCUDACall(Loc, FD))
+          return true;
+    
+
+          return true;
+      }
+    
+      // [OpenMP 4.0], 2.15 declare reduction Directive, Restrictions
+
+        return true;
+      }
+    
+      DiagnoseAvailabilityOfDecl(*this, D, Loc, UnknownObjCClass,
+                                 ObjCPropertyAccess);
+    
+
+            << Attr->getCond()->getSourceRange() << Attr->getMessage();
+        return;
+      }
+    }
+    
+    /// ActOnCallExpr - Handle a call to Fn with the specified array of arguments.
+
+      CXXMemberCallExpr *CE =
+        new (Context) CXXMemberCallExpr(Context, ME, None, ResultType, VK,
+                                        Exp.get()->getLocEnd());
+
+      return CE;
+    }
+    
+
+        if (CXXMethodDecl *M = dyn_cast<CXXMethodDecl>(Cand->getUnderlyingDecl())) {
+          if (SM == CXXCopyAssignment || SM == CXXMoveAssignment)
+            AddMethodCandidate(M, Cand, RD, ThisTy, Classification,
+                               llvm::makeArrayRef(&Arg, NumArgs), OCS, true);
+          else if (CtorInfo)
+            AddOverloadCandidate(CtorInfo.Constructor, CtorInfo.FoundDecl,
+
+          if (SM == CXXCopyAssignment || SM == CXXMoveAssignment)
+            AddMethodTemplateCandidate(
+                Tmpl, Cand, RD, nullptr, ThisTy, Classification,
+
+          else if (CtorInfo)
+            AddTemplateOverloadCandidate(
+                CtorInfo.ConstructorTmpl, CtorInfo.FoundDecl, nullptr,
+

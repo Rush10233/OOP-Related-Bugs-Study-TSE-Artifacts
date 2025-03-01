@@ -1,0 +1,16 @@
+
+          /* Don't bother folding a void condition, since it can't produce a
+    	 constant value.  Also, some statement-level uses of COND_EXPR leave
+    	 one of the branches NULL, so folding would crash.  */
+          if (VOID_TYPE_P (TREE_TYPE (x)))
+    	return x;
+    
+
+
+          /* Don't bother folding a void condition, since it can't produce a
+    	 constant value.  Also, some statement-level uses of COND_EXPR leave
+    	 one of the branches NULL, so folding would crash.  */
+          if (VOID_TYPE_P (TREE_TYPE (x)))
+    	return x;
+    
+

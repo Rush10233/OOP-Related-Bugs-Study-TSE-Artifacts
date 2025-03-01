@@ -1,0 +1,9 @@
+Commit:	f39c3b8
+./clang/include/clang/AST/ExprCXX.h	970,971
+./clang/include/clang/Basic/DiagnosticSemaKinds.td	6216,6218
+./clang/lib/AST/Expr.cpp	2988,2989
+./clang/lib/Sema/SemaDeclCXX.cpp	3733,3734
+./clang/lib/Sema/SemaDeclCXX.cpp	3737,3740
+./clang/lib/Sema/SemaDeclCXX.cpp	3742,3745
+./clang/lib/Sema/SemaDeclCXX.cpp	8582,8597
+./clang/lib/Sema/SemaDeclCXX.cpp	8665,8667

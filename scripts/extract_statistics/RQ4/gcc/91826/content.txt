@@ -1,0 +1,102 @@
+return ancestor == descendant;
+    }
+    
+
+    
+    bool
+    is_ancestor (tree root, tree child)
+    {
+
+    
+
+      if (root == global_namespace)
+        return true;
+    
+
+      while (TREE_CODE (child) != NAMESPACE_DECL)
+        {
+          /* If we've reached the ROOT, it encloses CHILD.  */
+          if (root == child)
+    	return true;
+
+          /* Go out one level.  */
+          if (TYPE_P (child))
+    	child = TYPE_NAME (child);
+          child = CP_DECL_CONTEXT (child);
+        }
+    
+
+    
+
+    }
+    
+    /* Enter the class or namespace scope indicated by T suitable for name
+
+return ancestor == descendant;
+    }
+    
+
+    
+    bool
+    is_ancestor (tree root, tree child)
+    {
+
+    
+
+      if (root == global_namespace)
+        return true;
+    
+
+      while (TREE_CODE (child) != NAMESPACE_DECL)
+        {
+          /* If we've reached the ROOT, it encloses CHILD.  */
+          if (root == child)
+    	return true;
+
+          /* Go out one level.  */
+          if (TYPE_P (child))
+    	child = TYPE_NAME (child);
+          child = CP_DECL_CONTEXT (child);
+        }
+    
+
+    
+
+    }
+    
+    /* Enter the class or namespace scope indicated by T suitable for name
+
+return ancestor == descendant;
+    }
+    
+
+    
+    bool
+    is_ancestor (tree root, tree child)
+    {
+
+    
+
+      if (root == global_namespace)
+        return true;
+    
+
+      while (TREE_CODE (child) != NAMESPACE_DECL)
+        {
+          /* If we've reached the ROOT, it encloses CHILD.  */
+          if (root == child)
+    	return true;
+
+          /* Go out one level.  */
+          if (TYPE_P (child))
+    	child = TYPE_NAME (child);
+          child = CP_DECL_CONTEXT (child);
+        }
+    
+
+    
+
+    }
+    
+    /* Enter the class or namespace scope indicated by T suitable for name
+

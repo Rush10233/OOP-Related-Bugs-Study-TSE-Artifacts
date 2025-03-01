@@ -1,0 +1,10 @@
+"call to pure virtual member function %0; overrides of %0 in subclasses are "
+      "not available in the %select{constructor|destructor}1 of %2">;
+
+      bool IsVirtualCall = MD->isVirtual() && !ME->hasQualifier();
+
+      if (!E->hasQualifier()) {
+
+        if (isa<CXXThisExpr>(MemExpr->getBase()->IgnoreParenCasts())) {
+          Diag(MemExpr->getLocStart(), 
+

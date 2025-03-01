@@ -1,0 +1,4 @@
+!VD->evaluateValue())
+
+if (VD->getInit() && VD->getInit()->HasSideEffects(*this))
+

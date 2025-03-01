@@ -1,0 +1,24 @@
+bitsize_int (BITS_PER_UNIT)));
+          SET_TYPE_ALIGN (base_t, rli->record_align);
+          TYPE_USER_ALIGN (base_t) = TYPE_USER_ALIGN (t);
+
+    
+          /* Copy the non-static data members of T. This will include its
+    	 direct non-virtual bases & vtable.  */
+
+bitsize_int (BITS_PER_UNIT)));
+          SET_TYPE_ALIGN (base_t, rli->record_align);
+          TYPE_USER_ALIGN (base_t) = TYPE_USER_ALIGN (t);
+
+    
+          /* Copy the non-static data members of T. This will include its
+    	 direct non-virtual bases & vtable.  */
+
+bitsize_int (BITS_PER_UNIT)));
+          SET_TYPE_ALIGN (base_t, rli->record_align);
+          TYPE_USER_ALIGN (base_t) = TYPE_USER_ALIGN (t);
+
+    
+          /* Copy the fields from T.  */
+          next_field = &TYPE_FIELDS (base_t);
+

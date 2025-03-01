@@ -1,0 +1,3 @@
+Commit:	1826095
+./clang/test/CXX/cpp/cpp.module/p2.cpp	16,17
+./clang/test/CXX/cpp/cpp.module/p2.cpp	19,19

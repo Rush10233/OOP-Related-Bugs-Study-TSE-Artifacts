@@ -1,0 +1,7 @@
+Commit:	8618f9e
+./gcc/cp/parser.c	18416,18417
+./gcc/cp/parser.c	18457,18461
+./gcc/cp/parser.c	18471,18471
+./gcc/cp/parser.c	18475,18478
+./gcc/cp/parser.c	18484,18484
+./gcc/cp/parser.c	18486,18488

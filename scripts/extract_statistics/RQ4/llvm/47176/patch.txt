@@ -1,0 +1,18 @@
+Parser *Self;
+
+          // FIXME: Per [class.mem]p6, all exception-specifications at class scope
+          // should be delayed, including those for non-members (eg, friend
+          // declarations). But only applying this to member declarations is
+          // consistent with what other implementations do.
+
+        // Push tokens for each parameter. Those that do not have defaults will be
+        // NULL. We need to track all the parameters so that we can push them into
+        // scope for later parameters and perhaps for the exception specification.
+
+    
+        // Stash the exception-specification tokens in the late-pased method.
+        if (FTI.getExceptionSpecType() == EST_Unparsed) {
+          LateMethod->ExceptionSpecTokens = FTI.ExceptionSpecTokens;
+          FTI.ExceptionSpecTokens = nullptr;
+        }
+

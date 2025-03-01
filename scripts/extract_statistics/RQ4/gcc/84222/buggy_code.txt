@@ -1,0 +1,33 @@
+warn_deprecated_use (type, NULL_TREE);
+
+    	warn_deprecated_use (type, NULL_TREE);
+
+    	    arg_types = grokparms (declarator->u.function.parameters,
+    				   &parms);
+
+    		warn_deprecated_use (deptype, NULL_TREE);
+
+    	warn_deprecated_use (type, NULL_TREE);
+
+warn_deprecated_use (type, NULL_TREE);
+
+    	warn_deprecated_use (type, NULL_TREE);
+
+    	    arg_types = grokparms (declarator->u.function.parameters,
+    				   &parms);
+
+    		warn_deprecated_use (deptype, NULL_TREE);
+
+    	warn_deprecated_use (type, NULL_TREE);
+
+warn_deprecated_use (type, NULL_TREE);
+
+    	warn_deprecated_use (type, NULL_TREE);
+
+    	    arg_types = grokparms (declarator->u.function.parameters,
+    				   &parms);
+
+    		warn_deprecated_use (deptype, NULL_TREE);
+
+    	warn_deprecated_use (type, NULL_TREE);
+

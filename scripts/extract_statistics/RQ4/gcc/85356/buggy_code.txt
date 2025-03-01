@@ -1,0 +1,9 @@
+maybe_instantiate_noexcept (new_decl);
+      maybe_instantiate_noexcept (old_decl);
+
+      if (!processing_template_decl && TREE_CODE (expr) != DEFERRED_NOEXCEPT)
+
+      if (processing_template_decl)
+
+    	  spec = build_noexcept_spec (noex, tf_warning_or_error);
+

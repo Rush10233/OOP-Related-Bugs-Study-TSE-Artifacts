@@ -1,0 +1,58 @@
+/* We don't treat zero-width bitfields as making a class
+    	   non-empty.  */
+    	;
+
+    	/* Empty data members also don't make a class non-empty.  */
+    	CLASSTYPE_CONTAINS_EMPTY_CLASS_P (t) = 1;
+          else
+
+    
+      /* This routine should only be used for empty classes.  */
+      gcc_assert (is_empty_class (type));
+
+    
+      /* This is an empty base class.  We first try to put it at offset
+         zero.  */
+      tree offset = size_zero_node;
+
+        {
+          /* That didn't work.  Now, we move forward from the next
+    	 available spot in the class.  */
+
+    	}
+        }
+    
+
+        {
+          rli->record_align = MAX (rli->record_align, CLASSTYPE_ALIGN (type));
+          if (warn_packed)
+
+/* We don't treat zero-width bitfields as making a class
+    	   non-empty.  */
+    	;
+
+    	/* Empty data members also don't make a class non-empty.  */
+    	CLASSTYPE_CONTAINS_EMPTY_CLASS_P (t) = 1;
+          else
+
+    
+      /* This routine should only be used for empty classes.  */
+      gcc_assert (is_empty_class (type));
+
+    
+      /* This is an empty base class.  We first try to put it at offset
+         zero.  */
+      tree offset = size_zero_node;
+
+        {
+          /* That didn't work.  Now, we move forward from the next
+    	 available spot in the class.  */
+
+    	}
+        }
+    
+
+        {
+          rli->record_align = MAX (rli->record_align, CLASSTYPE_ALIGN (type));
+          if (warn_packed)
+

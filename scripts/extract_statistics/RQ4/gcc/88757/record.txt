@@ -1,0 +1,2 @@
+Commit:	6770fa5
+./gcc/testsuite/g++.dg/cpp2a/typename10.C	14,14

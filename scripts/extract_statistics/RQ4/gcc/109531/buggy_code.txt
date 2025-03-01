@@ -1,0 +1,42 @@
+case BOUND_TEMPLATE_TEMPLATE_PARM:
+
+    		if (code == BOUND_TEMPLATE_TEMPLATE_PARM)
+    		  {
+    		    tree tinfo = TYPE_TEMPLATE_INFO (t);
+    		    /* We might need to substitute into the types of non-type
+    		       template parameters.  */
+    		    tree tmpl = tsubst (TI_TEMPLATE (tinfo), args,
+    					complain, in_decl);
+    		    if (tmpl == error_mark_node)
+    		      return error_mark_node;
+    		    tree argvec = tsubst (TI_ARGS (tinfo), args,
+    					  complain, in_decl);
+    		    if (argvec == error_mark_node)
+    		      return error_mark_node;
+    
+    		    TEMPLATE_TEMPLATE_PARM_TEMPLATE_INFO (r)
+    		      = build_template_info (tmpl, argvec);
+    		  }
+    
+
+case BOUND_TEMPLATE_TEMPLATE_PARM:
+
+    		if (code == BOUND_TEMPLATE_TEMPLATE_PARM)
+    		  {
+    		    tree tinfo = TYPE_TEMPLATE_INFO (t);
+    		    /* We might need to substitute into the types of non-type
+    		       template parameters.  */
+    		    tree tmpl = tsubst (TI_TEMPLATE (tinfo), args,
+    					complain, in_decl);
+    		    if (tmpl == error_mark_node)
+    		      return error_mark_node;
+    		    tree argvec = tsubst (TI_ARGS (tinfo), args,
+    					  complain, in_decl);
+    		    if (argvec == error_mark_node)
+    		      return error_mark_node;
+    
+    		    TEMPLATE_TEMPLATE_PARM_TEMPLATE_INFO (r)
+    		      = build_template_info (tmpl, argvec);
+    		  }
+    
+

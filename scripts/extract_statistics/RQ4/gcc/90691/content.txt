@@ -1,0 +1,164 @@
+
+    static tree
+    cxx_eval_binary_expression (const constexpr_ctx *ctx, tree t,
+
+    			    bool *non_constant_p, bool *overflow_p)
+    {
+      tree r = NULL_TREE;
+
+      else if (code == SPACESHIP_EXPR)
+        {
+          r = genericize_spaceship (type, lhs, rhs);
+
+    					overflow_p);
+        }
+    
+
+    	  r = unshare_expr_without_location (r);
+    	  protected_set_expr_location (r, EXPR_LOCATION (t));
+    	}
+
+        }
+    
+
+      gcc_checking_assert (r == t
+    		       || CONVERT_EXPR_P (t)
+    		       || TREE_CODE (t) == VIEW_CONVERT_EXPR
+
+      comp = fold_build2 (EQ_EXPR, boolean_type_node, op0, op1);
+      r = fold_build3 (COND_EXPR, type, comp, eq, r);
+    
+
+      return r;
+    }
+    
+
+/* If inside SWITCH_EXPR.  */
+      constexpr_switch_state *css_state;
+    
+
+      bool quiet;
+      /* Whether we are strictly conforming to constant expression rules or
+         trying harder to get a constant value.  */
+      bool strict;
+      /* Whether __builtin_is_constant_evaluated () should be true.  */
+      bool manifestly_const_eval;
+
+    };
+    
+    /* A table of all constexpr calls that have been evaluated by the
+
+       is parms, TYPE is result.  */
+    
+    static tree
+
+    {
+      tree copy;
+      bool existed;
+
+        }
+      else if (*slot == NULL_TREE)
+        {
+
+          /* We've already used the function itself, so make a copy.  */
+          copy = build_tree_list (NULL, NULL);
+          tree saved_body = DECL_SAVED_TREE (fundef->decl);
+
+    
+      /* We can't defer instantiating the function any longer.  */
+      if (!DECL_INITIAL (fun)
+
+          && DECL_TEMPLOID_INSTANTIATION (fun))
+        {
+          location_t save_loc = input_location;
+
+    	  gcc_assert (at_eof >= 2 && ctx->quiet);
+    	  *non_constant_p = true;
+    	}
+
+    	{
+    	  tree body, parms, res;
+    	  releasing_vec ctors;
+    
+    	  /* Reuse or create a new unshared copy of this function's body.  */
+    	  body = TREE_PURPOSE (copy);
+    	  parms = TREE_VALUE (copy);
+    	  res = TREE_TYPE (copy);
+
+    		    }
+    	    }
+    	}
+
+    
+          if (result == error_mark_node)
+    	*non_constant_p = true;
+
+    				  bool strict = true,
+    				  bool manifestly_const_eval = false,
+    				  bool constexpr_dtor = false,
+
+    {
+      auto_timevar time (TV_CONSTEXPR);
+    
+
+      constexpr_global_ctx global_ctx;
+      constexpr_ctx ctx = { &global_ctx, NULL, NULL, NULL, NULL, NULL,
+    			allow_non_constant, strict,
+
+    
+      tree type = initialized_type (t);
+      tree r = t;
+
+      auto_vec<tree, 16> cleanups;
+      global_ctx.cleanups = &cleanups;
+    
+
+      r = cxx_eval_constant_expression (&ctx, r,
+    				    false, &non_constant_p, &overflow_p);
+    
+
+       Otherwise, if T does not have TREE_CONSTANT set, returns T.
+       Otherwise, returns a version of T without TREE_CONSTANT.
+       MANIFESTLY_CONST_EVAL is true if T is manifestly const-evaluated
+
+    
+    static GTY((deletable)) hash_map<tree, tree> *cv_cache;
+    
+    tree
+
+    {
+      tree r;
+    
+
+        return t;
+    
+      if (manifestly_const_eval)
+
+    
+      if (cv_cache == NULL)
+        cv_cache = hash_map<tree, tree>::create_ggc (101);
+
+    	  r = unshare_expr_without_location (r);
+    	  protected_set_expr_location (r, EXPR_LOCATION (t));
+    	}
+
+        }
+    
+      r = cxx_eval_outermost_constant_expr (t, true, true, false, false, decl);
+
+    extern tree cxx_constant_value			(tree, tree = NULL_TREE);
+    extern void cxx_constant_dtor			(tree, tree);
+    extern tree cxx_constant_init			(tree, tree = NULL_TREE);
+
+    extern tree maybe_constant_init			(tree, tree = NULL_TREE, bool = false);
+    extern tree fold_non_dependent_expr		(tree,
+    						 tsubst_flags_t = tf_warning_or_error,
+
+          else
+    	return f;
+        }
+
+    
+      return c_fully_fold (x, /*for_init*/false, /*maybe_constp*/NULL);
+    }
+

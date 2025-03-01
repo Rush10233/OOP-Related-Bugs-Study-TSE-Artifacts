@@ -1,0 +1,66 @@
+static bool isUnsignedDIType(DwarfDebug *DD, DIType Ty) {
+      DIDerivedType DTy(Ty);
+      if (DTy.isDerivedType()) {
+
+        // FIXME: Enums without a fixed underlying type have unknown signedness
+        // here, leading to incorrectly emitted constants.
+        assert(DTy.getTag() == dwarf::DW_TAG_enumeration_type);
+
+FileID createMainFileIDForMemBuffer(const llvm::MemoryBuffer *Buffer,
+                                 SrcMgr::CharacteristicKind Kind = SrcMgr::C_User) {
+        assert(MainFileID.isInvalid() && "MainFileID already set!");
+
+        return MainFileID;
+      }
+    
+
+      ///
+      /// This does no caching of the buffer and takes ownership of the
+      /// MemoryBuffer, so only pass a MemoryBuffer to this once.
+
+                          SrcMgr::CharacteristicKind FileCharacter = SrcMgr::C_User,
+
+        return createFileID(createMemBufferContentCache(Buffer), IncludeLoc,
+                            FileCharacter, LoadedID, LoadedOffset);
+      }
+
+        llvm::MemoryBuffer *ToBuf
+          = llvm::MemoryBuffer::getMemBufferCopy(FromBuf->getBuffer(),
+                                                 FromBuf->getBufferIdentifier());
+
+      }
+    
+    
+
+      llvm::MemoryBuffer *CBuf =
+      llvm::MemoryBuffer::getMemBufferCopy(LBuf->getBuffer(),
+                                           LBuf->getBufferIdentifier());
+
+    
+      // Translate the offset into the file.
+      unsigned Offset = D.getLoc().getPointer()  - LBuf->getBufferStart();
+
+      llvm::MemoryBuffer *SB =
+        llvm::MemoryBuffer::getMemBufferCopy(Predefines, "<built-in>");
+      assert(SB && "Cannot create predefined source buffer");
+
+      assert(!FID.isInvalid() && "Could not create FileID for predefines?");
+      setPredefinesFileID(FID);
+    
+
+    
+      llvm::MemoryBuffer *Buf =
+        llvm::MemoryBuffer::getNewMemBuffer(RequestLen, "<scratch space>");
+
+      BufferStartLoc = SourceMgr.getLocForStartOfFile(FID);
+      CurBuffer = const_cast<char*>(Buf->getBufferStart());
+      BytesUsed = 1;
+
+    
+        llvm::MemoryBuffer *Buffer
+          = llvm::MemoryBuffer::getMemBuffer(Blob.drop_back(1), Name);
+
+        break;
+      }
+    
+

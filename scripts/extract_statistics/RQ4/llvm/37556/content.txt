@@ -1,0 +1,8 @@
+// typedef (C++ [dcl.typedef]p4).
+        if (Previous.isSingleTagDecl())
+          Previous.clear();
+
+      }
+    
+      SemaRef.CheckFunctionDeclaration(/*Scope*/ nullptr, Function, Previous,
+

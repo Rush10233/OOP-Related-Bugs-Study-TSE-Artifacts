@@ -1,0 +1,16 @@
+{
+    	  arg = cp_build_indirect_ref (arg, RO_NULL, complain);
+    	  val = build2 (MODIFY_EXPR, TREE_TYPE (to), to, arg);
+
+    	}
+          else
+    	{
+
+{
+    	  arg = cp_build_indirect_ref (arg, RO_NULL, complain);
+    	  val = build2 (MODIFY_EXPR, TREE_TYPE (to), to, arg);
+
+    	}
+          else
+    	{
+

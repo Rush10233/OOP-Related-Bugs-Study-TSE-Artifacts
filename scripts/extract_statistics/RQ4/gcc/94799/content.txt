@@ -1,0 +1,129 @@
+static cp_expr cp_parser_unqualified_id
+      (cp_parser *, bool, bool, bool, bool);
+    static tree cp_parser_nested_name_specifier_opt
+
+    static tree cp_parser_nested_name_specifier
+      (cp_parser *, bool, bool, bool, bool);
+    static tree cp_parser_qualifying_entity
+
+    	    error_at (location_of (id),
+    		      "%qE in namespace %qE does not name a template type",
+    		      id, parser->scope);
+
+    	  else
+    	    error_at (location_of (id),
+    		      "%qE in namespace %qE does not name a type",
+
+    	    error_at (location_of (id),
+    		      "%qE in %q#T does not name a template type",
+    		      id, parser->scope);
+
+    	  else
+    	    error_at (location_of (id),
+    		      "%qE in %q#T does not name a type",
+
+    
+      /* Look for the optional `::' operator.  */
+      global_scope_p
+
+      /* Look for the optional nested-name-specifier.  */
+      nested_name_specifier_p
+        = (cp_parser_nested_name_specifier_opt (parser,
+    					    /*typename_keyword_p=*/false,
+    					    check_dependency_p,
+    					    /*type_p=*/false,
+
+           != NULL_TREE);
+
+      /* If there is a nested-name-specifier, then we are looking at
+         the first qualified-id production.  */
+      if (nested_name_specifier_p)
+
+    				     bool typename_keyword_p,
+    				     bool check_dependency_p,
+    				     bool type_p,
+
+    {
+      bool success = false;
+      cp_token_position start = 0;
+
+          tree new_scope;
+          tree old_scope;
+          tree saved_qualifying_scope;
+    
+          /* Spot cases that cannot be the beginning of a
+    	 nested-name-specifier.  */
+
+    	 first time through the loop.  */
+          if (success)
+    	template_keyword_p = cp_parser_optional_template_keyword (parser);
+    
+          /* Save the old scope since the name lookup we are about to do
+    	 might destroy it.  */
+
+    	 no point in doing name-lookup, so we just return IDENTIFIER.
+    	 But, if the qualifying scope is non-dependent then we can
+    	 (and must) do name-lookup normally.  */
+
+    	{
+
+    	}
+        }
+    
+
+    				/*ambiguous_decls=*/NULL,
+    				token->location);
+    
+
+      decl = strip_using_decl (decl);
+    
+      /* If DECL is a template, then the name was a template-name.  */
+
+}
+    
+      if (dependent_p)
+
+    
+      /* Assume this expression is not a pseudo-destructor access.  */
+      pseudo_destructor_p = false;
+
+        }
+    
+      /* PARSER->SCOPE can be cleared when parsing the template-arguments
+
+      if (scope == error_mark_node)
+        return error_mark_node;
+    
+
+    	decl = lookup_name_real (name, prefer_type_arg (tag_type, is_template),
+    				 /*nonclass=*/0,
+    				 /*block_p=*/true, is_namespace, 0);
+          parser->object_scope = object_type;
+          parser->qualifying_scope = NULL_TREE;
+        }
+
+bool enum_ok)
+    {
+      tree decl;
+      tree identifier = NULL_TREE;
+    
+      /* All class-names start with an identifier.  */
+
+      if (token->type != CPP_NAME && token->type != CPP_TEMPLATE_ID)
+        {
+          cp_parser_error (parser, "expected class-name");
+
+    
+          where we first want to look up A<T>::a in the class of the object
+          expression, as per [basic.lookup.classref].  */
+
+      if (scope == error_mark_node)
+        return error_mark_node;
+    
+      /* Any name names a type if we're following the `typename' keyword
+         in a qualified name where the enclosing scope is type-dependent.  */
+
+      /* Handle the common case (an identifier, but not a template-id)
+         efficiently.  */
+      if (token->type == CPP_NAME
+

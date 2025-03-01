@@ -1,0 +1,27 @@
+QualType ConvType =
+          GetTypeFromParser(D.getName().ConversionFunctionId, &ConvTSI);
+    
+
+        // Conversion functions don't have return types, but the parser will
+        // happily parse something like:
+        //
+
+        //
+        // The return type will be changed later anyway.
+        Diag(D.getIdentifierLoc(), diag::err_conv_function_return_type)
+
+          << SourceRange(D.getIdentifierLoc());
+        D.setInvalidType();
+
+      }
+    
+      const FunctionProtoType *Proto = R->getAs<FunctionProtoType>();
+
+        R = Context.getFunctionType(ConvType, None, Proto->getExtProtoInfo());
+    
+      // C++0x explicit conversion operators.
+
+    }
+    
+    /// ActOnConversionDeclarator - Called by ActOnDeclarator to complete
+

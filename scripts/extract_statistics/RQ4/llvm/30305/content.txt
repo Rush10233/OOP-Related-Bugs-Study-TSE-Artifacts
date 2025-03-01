@@ -1,0 +1,32 @@
+
+    def note_ovl_candidate_inherited_constructor : Note<
+        "constructor from base class %0 inherited here">;
+
+    def note_ovl_candidate_illegal_constructor : Note<
+        "candidate %select{constructor|template}0 ignored: "
+        "instantiation %select{takes|would take}0 its own class type by value">;
+
+    
+        /// This candidate was not viable because its OpenCL extension is disabled.
+        ovl_fail_ext_disabled,
+
+      };
+    
+      /// OverloadCandidate - A single candidate in an overload set (C++ 13.3).
+
+        }
+      }
+    
+
+      if (EnableIfAttr *FailedAttr = CheckEnableIf(Function, Args)) {
+        Candidate.Viable = false;
+        Candidate.FailureKind = ovl_fail_enable_if;
+
+      case ovl_fail_ext_disabled:
+        return DiagnoseOpenCLExtensionDisabled(S, Cand);
+    
+
+      case ovl_fail_addr_not_available: {
+        bool Available = checkAddressOfCandidateIsAvailable(S, Cand->Function);
+        (void)Available;
+

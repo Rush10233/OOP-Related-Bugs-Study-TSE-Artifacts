@@ -1,0 +1,8 @@
+if (TREE_CODE (aggr) == VAR_DECL)
+    	/* Initializing a local variable, don't add anything.  */
+    	return true;
+
+if (TREE_CODE (aggr) == VAR_DECL)
+    	/* Initializing a local variable, don't add anything.  */
+    	return true;
+

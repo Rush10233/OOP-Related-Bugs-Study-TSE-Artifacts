@@ -1,0 +1,4 @@
+Commit:	e498483
+./gcc/cp/class.cc	6448,6448
+Commit:	20d790a
+./gcc/cp/class.cc	6479,6479

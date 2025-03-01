@@ -1,0 +1,16 @@
+if (!Result.isUninit())
+          return true;
+    
+
+      }
+    
+      const FunctionDecl *Definition = 0;
+
+        if (HadZeroInit)
+          return true;
+    
+
+      }
+    
+      const FunctionDecl *Definition = 0;
+

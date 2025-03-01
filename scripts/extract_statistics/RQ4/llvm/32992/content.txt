@@ -1,0 +1,29 @@
+}
+    }
+    
+
+      Attr *ClassAttr = getDLLAttr(Class);
+      if (!ClassAttr)
+        return;
+
+        return;
+    
+      for (Decl *Member : Class->decls()) {
+
+        auto *MD = dyn_cast<CXXMethodDecl>(Member);
+        if (!MD)
+          continue;
+
+    
+    void Sema::referenceDLLExportedClassMethods() {
+      if (!DelayedDllExportClasses.empty()) {
+
+        // be called again, so use a local copy of DelayedDllExportClasses.
+        SmallVector<CXXRecordDecl *, 4> WorkList;
+        std::swap(DelayedDllExportClasses, WorkList);
+        for (CXXRecordDecl *Class : WorkList)
+
+      }
+    }
+    
+

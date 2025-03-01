@@ -1,0 +1,2 @@
+if (!type || uses_template_parms (type))
+

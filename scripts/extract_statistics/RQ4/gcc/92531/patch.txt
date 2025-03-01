@@ -1,0 +1,8 @@
+else if (t == error_mark_node)
+        dependent_p = false;
+      else
+
+else if (t == error_mark_node)
+        dependent_p = false;
+      else
+

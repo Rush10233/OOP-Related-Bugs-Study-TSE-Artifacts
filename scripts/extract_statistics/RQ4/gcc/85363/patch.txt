@@ -1,0 +1,12 @@
+/* Handle both CALL_EXPRs and AGGR_INIT_EXPRs.  */
+      tree decl = cp_get_callee_fndecl_nofold (call);
+
+      bool nothrow = decl && TREE_NOTHROW (decl);
+      tree callee = cp_get_callee (call);
+      if (callee)
+        nothrow |= TYPE_NOTHROW_P (TREE_TYPE (TREE_TYPE (callee)));
+      else if (TREE_CODE (call) == CALL_EXPR
+    	   && internal_fn_flags (CALL_EXPR_IFN (call)) & ECF_NOTHROW)
+
+      if (TREE_CODE (*tp) == CALL_EXPR || TREE_CODE (*tp) == AGGR_INIT_EXPR)
+

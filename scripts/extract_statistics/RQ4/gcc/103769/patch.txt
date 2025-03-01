@@ -1,0 +1,4 @@
+result = build_distinct_type_copy (t);
+
+result = build_distinct_type_copy (t);
+

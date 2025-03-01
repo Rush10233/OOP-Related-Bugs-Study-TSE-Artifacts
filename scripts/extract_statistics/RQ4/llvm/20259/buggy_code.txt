@@ -1,0 +1,12 @@
+
+
+      bool FriendSawTagOutsideEnclosingNamespace = false;
+
+              F.erase();
+              FriendSawTagOutsideEnclosingNamespace = true;
+
+        
+
+        New->setObjectOfFriendDecl(!FriendSawTagOutsideEnclosingNamespace &&
+                                   getLangOpts().MicrosoftExt);
+

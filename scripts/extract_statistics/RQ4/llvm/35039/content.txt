@@ -1,0 +1,8 @@
+commonExpr = commonRes.get();
+        }
+    
+
+        opaqueValue = new (Context) OpaqueValueExpr(commonExpr->getExprLoc(),
+                                                    commonExpr->getType(),
+                                                    commonExpr->getValueKind(),
+

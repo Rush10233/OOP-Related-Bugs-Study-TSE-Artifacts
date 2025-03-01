@@ -1,0 +1,10 @@
+case TEMPLATE_TYPE_PARM:
+          if (template_placeholder_p (*tp))
+    	WALK_SUBTREE (CLASS_PLACEHOLDER_TEMPLATE (*tp));
+          /* Fall through.  */
+
+case TEMPLATE_TYPE_PARM:
+          if (template_placeholder_p (*tp))
+    	WALK_SUBTREE (CLASS_PLACEHOLDER_TEMPLATE (*tp));
+          /* Fall through.  */
+

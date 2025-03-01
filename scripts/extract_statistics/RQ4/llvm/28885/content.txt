@@ -1,0 +1,8 @@
+if (D->hasTypename())
+        Out << "typename ";
+      D->getQualifier()->print(Out, Policy);
+
+      Out << *D;
+    }
+    
+

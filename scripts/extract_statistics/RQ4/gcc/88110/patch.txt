@@ -1,0 +1,3 @@
+if (TREE_CODE (obj) != ADDR_EXPR
+    	    || !DECL_P (get_base_address (TREE_OPERAND (obj, 0))))
+

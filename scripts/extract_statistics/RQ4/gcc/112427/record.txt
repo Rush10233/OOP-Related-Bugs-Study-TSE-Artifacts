@@ -1,0 +1,3 @@
+Commit:	6665a85
+./gcc/cp/tree.cc	3604,3604
+./gcc/cp/typeck2.cc	2381,2381

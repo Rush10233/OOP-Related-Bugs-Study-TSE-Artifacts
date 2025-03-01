@@ -1,0 +1,15 @@
+if (CONSTRUCTOR_NELTS (expr) == 1
+    	  && !CONSTRUCTOR_IS_DESIGNATED_INIT (expr))
+
+    	      && !CONSTRUCTOR_IS_DESIGNATED_INIT (expr)
+
+    	  && !CONSTRUCTOR_IS_DESIGNATED_INIT (arg)
+
+          /* But not if it's a designated init.  */
+          && !d->cur->index
+
+          if (try_list_ctor && CONSTRUCTOR_NELTS (init) == 1
+    	  && !CONSTRUCTOR_IS_DESIGNATED_INIT (init))
+
+          && !CONSTRUCTOR_IS_DESIGNATED_INIT (stripped_init)
+

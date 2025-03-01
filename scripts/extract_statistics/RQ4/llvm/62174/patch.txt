@@ -1,0 +1,10 @@
+static bool isUsingDeclNotAtClassScope(NamedDecl *D) {
+      if (D->getDeclContext()->isFileContext())
+        return false;
+    
+
+    /// Removes using shadow declarations not at class scope from the lookup
+    /// results.
+
+        if (isUsingDeclNotAtClassScope(F.next()))
+

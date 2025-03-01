@@ -1,0 +1,20 @@
+}
+    
+      /* In a lambda within a template, wait until instantiation
+
+      if (context == containing_function
+
+        return decl;
+    
+      if (lambda_expr && VAR_P (decl)
+
+}
+    
+      /* In a lambda within a template, wait until instantiation
+
+      if (context == containing_function
+
+        return decl;
+    
+      if (lambda_expr && VAR_P (decl)
+

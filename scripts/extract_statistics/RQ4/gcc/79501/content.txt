@@ -1,0 +1,55 @@
+
+      if (deduction_guide_p (decl))
+        {
+          tree type = TREE_TYPE (DECL_NAME (decl));
+          if (in_namespace == NULL_TREE
+    	  && CP_DECL_CONTEXT (decl) != CP_TYPE_CONTEXT (type))
+
+    	  inform (location_of (type), "  declared here");
+    	  return NULL_TREE;
+    	}
+
+          if (funcdef_flag)
+    	error_at (location,
+    		  "deduction guide %qD must not have a function body", decl);
+
+      storage_class = declspecs->storage_class;
+      if (storage_class == sc_static)
+        staticp = 1 + (decl_context == FIELD);
+
+    
+      if (virtualp)
+        {
+
+          rval = error_mark_node;
+        }
+    
+
+        rval = build_baselink (rval_binfo, basetype_path, rval,
+    			   (IDENTIFIER_CONV_OP_P (name)
+    			   ? TREE_TYPE (name): NULL_TREE));
+
+}
+    }
+    
+
+    /* Declarators [gram.dcl.decl] */
+    
+    /* Parse an init-declarator.
+
+    
+      if (function_declarator_p (declarator))
+        {
+
+    
+          if (!member_p && !cp_parser_error_occurred (parser))
+    	warn_about_ambiguous_parse (decl_specifiers, declarator);
+
+    		  goto out;
+    		}
+    
+
+    	      if (declares_class_or_enum & 2)
+    		cp_parser_check_for_definition_in_return_type
+    					    (declarator, decl_specifiers.type,
+

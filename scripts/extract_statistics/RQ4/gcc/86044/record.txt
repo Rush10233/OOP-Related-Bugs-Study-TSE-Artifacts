@@ -1,0 +1,11 @@
+Commit:	cc3bae3
+./gcc/cp/constexpr.c	5426,5446
+./gcc/cp/cp-tree.h	7723,7723
+./gcc/cp/except.c	1131,1135
+./gcc/testsuite/g++.dg/cpp0x/constexpr-noexcept.C	13,13
+./gcc/testsuite/g++.dg/cpp0x/constexpr-noexcept3.C	5,5
+./gcc/testsuite/g++.dg/cpp0x/constexpr-noexcept4.C	2,3
+./gcc/testsuite/g++.dg/cpp0x/constexpr-noexcept4.C	12,13
+./gcc/testsuite/g++.dg/cpp0x/inh-ctor32.C	171,171
+./gcc/testsuite/g++.dg/cpp0x/inh-ctor32.C	203,203
+./gcc/testsuite/g++.dg/cpp0x/inh-ctor32.C	208,208

@@ -1,0 +1,16 @@
+if (TREE_CODE (member) == COMPONENT_REF)
+        {
+          tree aggr = TREE_OPERAND (member, 0);
+
+          if (TREE_CODE (aggr) != COMPONENT_REF)
+    	/* Normal member initialization.  */
+    	member = TREE_OPERAND (member, 1);
+
+if (TREE_CODE (member) == COMPONENT_REF)
+        {
+          tree aggr = TREE_OPERAND (member, 0);
+
+          if (TREE_CODE (aggr) != COMPONENT_REF)
+    	/* Normal member initialization.  */
+    	member = TREE_OPERAND (member, 1);
+

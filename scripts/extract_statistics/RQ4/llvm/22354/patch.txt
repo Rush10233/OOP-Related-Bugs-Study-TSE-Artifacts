@@ -1,0 +1,57 @@
+Scope *CurScope);
+    
+      /// \brief Complete a lambda-expression having processed and attached the
+      /// lambda body.
+      ExprResult BuildLambdaExpr(SourceLocation StartLoc, SourceLocation EndLoc,
+                                 sema::LambdaScopeInfo *LSI);
+
+          !vd->isImplicit() && vd->getDeclContext() == dc) {
+
+        } else if (getLangOpts().CPlusPlus11 && isLambdaCallOperator(FD)) {
+          auto *LSI = getCurLambda();
+          if (LSI->HasImplicitReturnType) {
+            deduceClosureReturnType(*LSI);
+    
+            // C++11 [expr.prim.lambda]p4:
+            //   [...] if there are no return statements in the compound-statement
+            //   [the deduced type is] the type void
+            QualType RetType =
+                LSI->ReturnType.isNull() ? Context.VoidTy : LSI->ReturnType;
+    
+            // Update the return type to the deduced type.
+            const FunctionProtoType *Proto =
+                FD->getType()->getAs<FunctionProtoType>();
+            FD->setType(Context.getFunctionType(RetType, Proto->getParamTypes(),
+                                                Proto->getExtProtoInfo()));
+          }
+
+    /// being captured.
+    static void addAsFieldToClosureType(Sema &S, LambdaScopeInfo *LSI, VarDecl *Var,
+                                        QualType FieldType, QualType DeclRefType,
+                                        SourceLocation Loc,
+                                        bool RefersToCapturedVariable) {
+
+      if (BuildAndDiagnose)
+        addAsFieldToClosureType(S, LSI, Var, CaptureType, DeclRefType, Loc,
+                                RefersToCapturedVariable);
+
+                        Loc, EllipsisLoc, CaptureType, /*CopyExpr=*/nullptr);
+
+    bool Sema::tryCaptureVariable(
+        VarDecl *Var, SourceLocation ExprLoc, TryCaptureKind Kind,
+        SourceLocation EllipsisLoc, bool BuildAndDiagnose, QualType &CaptureType,
+        QualType &DeclRefType, const unsigned *const FunctionScopeIndexToStopAt) {
+      // An init-capture is notionally from the context surrounding its
+      // declaration, but its parent DC is the lambda class.
+      DeclContext *VarDC = Var->getDeclContext();
+      if (Var->isInitCapture())
+        VarDC = VarDC->getParent();
+
+      // If the variable is declared in the current context, there is no need to
+      // capture it.
+      if (VarDC == DC) return true;
+
+      bool Nested = false;
+
+      } while (!VarDC->Equals(DC));
+

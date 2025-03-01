@@ -1,0 +1,6 @@
+CallExpr *TopCall = TopBind ? dyn_cast<CallExpr>(TopBind->getSubExpr()) : 0;
+      if (TopCall)
+        E = TopCall;
+      else
+        TopBind = 0;
+

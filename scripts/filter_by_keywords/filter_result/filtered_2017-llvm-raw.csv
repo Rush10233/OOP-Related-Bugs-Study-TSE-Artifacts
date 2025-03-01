@@ -1,0 +1,50 @@
+	Issue ID	Title
+0	32673	Segmentation fault with class template argument deduction and variadic template class with variadic constructor and variadic inheritance
+1	32696	C++1z class template argument deduction fails for variadic constructors.
+2	32172	Segmentation fault with structured bindings inside for-loop inside template class
+3	31931	"[Windows] Incorrect name mangling for ""vbase destructor""."
+4	32467	Assertion failure with deducing template parameters for tuple constructor (C++17)
+5	31639	diagnose_if triggers an assertion failure when disabling a constructor.
+6	32557	thread_local data member of a class template is constructed on each access when the argument is a local structure
+7	33778	Destructor not generated for std::function<void()>
+8	31701	ICE when initializing a const class with a class static variable template
+9	34266	[maybe regression]: undefined behavior due to misaligned access to aligned lambda
+10	33168	"Assertion `isa<X>(Val) && ""cast<Ty>() argument of incompatible type!""' failed with template destructor error"
+11	32638	Compiler crash (segmentation fault) on well-formed generic lambda with `noexcept(noexcept(...))` specifier
+12	32000	Cannot mangle swiftcall convention in MS C++ ABI
+13	35697	"Regression(r313729): Assertion `!Old || Old->getCachedLinkage() == D->getCachedLinkage()' failed for external ""C"" function definition"
+14	34368	Const-qualified derived object can call a non-const base member-function.
+15	35019	class type template parameter deduction from constructor taking a pointer to member function is broken (works in gcc)
+16	33189	Clang crashes on template destructor declaration
+17	33696	clang accepts lambda expression in template argument
+18	35027	Clang fails to compile inline variable in class template
+19	32822	clang crashes with arrays of std::complex
+20	32974	Cannot deduce the noexcept constant from a function type
+21	34970	Class template argument deduction mishandles std::optional
+22	31831	clang-cl does not evaluate arguments left-to-right in initializer-list constructor call
+23	31507	Call to friend function template of a class template considered ambiguous
+24	34644	extern template turns constexpr into non-constexpr
+25	34982	[coroutines] assertion failure diagnosing bad coroutine await_suspend function
+26	33314	Clang emits a useless warning with class template deduction
+27	31514	Segfault when evaluating alias template in class template specialization.
+28	33158	Constant expression cast to virtual base crashes
+29	31692	"After r291318: Assertion failed: (it != OpaqueRValues.end() && ""no mapping for opaque value!""), function getOpaqueRValueMapping, file tools/clang/lib/CodeGen/CodeGenFunction.h, line 2008."
+30	31638	diagnose_if generates duplicate diagnostics
+31	34858	clang-cl crash with constexpr ctor
+32	32955	Crash in infinite loop trying to find a proper constructor
+33	31606	regression, using parent constructor enables illegal implicit casts
+34	34942	Implement __has_unique_object_representations for C++17
+35	34668	P0704R1 implementation is too permissive
+36	34984	[coroutines] accepts-invalid and codegen crash on missing await_resume function
+37	32990	clang emits inline copy of complete object destructor for dllimport classes with virtual bases
+38	35146	dllexported classes don't emit typeinfo (often enough) in the itanium ABI
+39	32992	Static const members in base classes are not dllexported
+40	35466	Type deduction failure for explicit conversion operator with auto type
+41	31783	"Assertion failed: !A->getDeducedType().isNull() && ""cannot request the size of an undeduced or dependent auto type"", file llvm\tools\clang\lib\AST\ASTContext.cpp, line 1884"
+42	34754	"static data member ""unresolved external symbol"" if constexpr is used in its definition"
+43	34402	Code completion shows implicitly deleted copy constructor
+44	31815	spurious Wunused-lambda-capture warning?
+45	34520	user defined deduction guide isn't found in case of nested template class
+46	32891	Internal Compiler Error on wrong c++1z code
+47	35039	Crash with GNU's ?: operator when guaranteed copy elision (c++17) is enabled
+48	35028	Clang does not use the strictest alignas in templates

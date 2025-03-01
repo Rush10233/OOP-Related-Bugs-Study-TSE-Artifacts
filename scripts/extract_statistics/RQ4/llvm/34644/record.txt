@@ -1,0 +1,9 @@
+Commit:	3f0e056
+./clang/lib/Sema/SemaExpr.cpp	14827,14828
+./clang/lib/Sema/SemaExpr.cpp	14847,14847
+./clang/lib/Sema/SemaExpr.cpp	14854,14854
+./clang/lib/Sema/SemaExpr.cpp	14873,14873
+./clang/lib/Sema/SemaTemplateInstantiateDecl.cpp	4362,4362
+./clang/lib/Sema/SemaTemplateInstantiateDecl.cpp	4365,4365
+./clang/test/CodeGenCXX/dllimport-members.cpp	839,839
+./clang/test/CodeGenCXX/dllimport-members.cpp	864,864

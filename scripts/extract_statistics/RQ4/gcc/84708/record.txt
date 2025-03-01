@@ -1,0 +1,4 @@
+Commit:	9a25c5c
+./gcc/cp/lambda.c	760,762
+./gcc/cp/lambda.c	764,769
+./gcc/cp/lambda.c	776,778

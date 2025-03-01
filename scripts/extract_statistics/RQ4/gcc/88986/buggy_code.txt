@@ -1,0 +1,5 @@
+if (!MAYBE_CLASS_TYPE_P (context))
+
+    	tree ctx = tsubst_aggr_type (TYPE_CONTEXT (t), args, complain,
+    				     in_decl, /*entering_scope=*/1);
+

@@ -1,0 +1,6 @@
+that's an error.  Likewise if the type is already being defined:
+         this can happen, eg, when it's defined from within an expression 
+         (c++/84605).  */
+      if (type != error_mark_node
+          && (COMPLETE_TYPE_P (type) || TYPE_BEING_DEFINED (type)))
+

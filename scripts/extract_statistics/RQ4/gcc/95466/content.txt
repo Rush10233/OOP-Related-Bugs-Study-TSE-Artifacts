@@ -1,0 +1,28 @@
+tree
+    build_vfn_ref (tree instance_ptr, tree idx)
+    {
+
+    
+
+    
+      /* When using function descriptors, the address of the
+         vtable entry is treated as a function pointer.  */
+
+        {
+          /* Virtual function call: Sanitize the use of the object pointer in the
+    	 OBJ_TYPE_REF, since the vtable reference will SEGV otherwise (95221).
+
+          opp = &OBJ_TYPE_REF_EXPR (fn);
+          op = OBJ_TYPE_REF_OBJECT (fn);
+        }
+      else
+        {
+
+      op = cp_ubsan_maybe_instrument_vptr (EXPR_LOCATION (stmt), op,
+    				       TREE_TYPE (TREE_TYPE (op)),
+    				       true, UBSAN_MEMBER_CALL);
+
+        *opp = op;
+    }
+    
+

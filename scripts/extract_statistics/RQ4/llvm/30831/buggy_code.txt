@@ -1,0 +1,13 @@
+bool UseDesugaredIterator;
+
+            : UseDesugaredIterator(TST->isSugared() && !TST->isTypeAlias()),
+              SugaredIterator(TST),
+
+                  GetTemplateSpecializationType(Context, TST->desugar())) {}
+
+          if (UseDesugaredIterator)
+
+          return UseDesugaredIterator && !DesugaredIterator.isEnd();
+
+          assert(UseDesugaredIterator &&
+

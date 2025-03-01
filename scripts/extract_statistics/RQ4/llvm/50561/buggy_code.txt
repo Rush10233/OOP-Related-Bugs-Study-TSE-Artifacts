@@ -1,0 +1,2 @@
+HasConstrainedParameters = TTP->hasTypeConstraint();
+

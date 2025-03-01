@@ -1,0 +1,6 @@
+const ValueDecl *D =
+                HandleMemberPointerAccess(Info, BE, ThisVal, false);
+            if (!D)
+              return false;
+            Member = dyn_cast<CXXMethodDecl>(D);
+

@@ -1,0 +1,7 @@
+// C++11 [expr.static.cast]p3:
+
+      // C++11 [expr.static.cast]p3:
+
+        if (CStyle)
+          return TC_NotApplicable;
+

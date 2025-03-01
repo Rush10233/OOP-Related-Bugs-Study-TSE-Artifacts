@@ -1,0 +1,3 @@
+Commit:	ae27ce5
+./gcc/cp/method.c	1422,1425
+./gcc/cp/method.c	1506,1506

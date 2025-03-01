@@ -1,0 +1,12 @@
+else if (copy_fn_p (fn)
+    	       && constraints_satisfied_p (fn))
+
+          else if (move_fn_p (fn)
+    	       && constraints_satisfied_p (fn))
+
+          else if (copy_fn_p (fn)
+    	       && constraints_satisfied_p (fn))
+
+          else if (move_fn_p (fn)
+    	       && constraints_satisfied_p (fn))
+

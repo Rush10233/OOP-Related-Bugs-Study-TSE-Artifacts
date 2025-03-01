@@ -1,0 +1,32 @@
+&overload, complain);
+    		}
+    	      else
+
+    	    }
+    	}
+        }
+
+    	      return error_mark_node;
+    	    }
+    	  index_exp = idx;
+
+    	}
+    
+          if (TREE_CODE (TREE_TYPE (index_exp)) == ARRAY_TYPE)
+
+&overload, complain);
+    		}
+    	      else
+
+    	    }
+    	}
+        }
+
+    	      return error_mark_node;
+    	    }
+    	  index_exp = idx;
+
+    	}
+    
+          if (TREE_CODE (TREE_TYPE (index_exp)) == ARRAY_TYPE)
+

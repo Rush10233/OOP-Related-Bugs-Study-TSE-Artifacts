@@ -1,0 +1,7 @@
+// Add template arguments from a variable template instantiation.
+        if (VarTemplateSpecializationDecl *Spec =
+                dyn_cast<VarTemplateSpecializationDecl>(D)) {
+
+        if (ClassTemplateSpecializationDecl *Spec
+              = dyn_cast<ClassTemplateSpecializationDecl>(Ctx)) {
+

@@ -1,0 +1,5 @@
+Commit:	bbeae14
+./clang/lib/Sema/SemaDecl.cpp	1824,1824
+./clang/lib/Sema/SemaDecl.cpp	1830,1830
+./clang/lib/Sema/SemaDecl.cpp	1834,1834
+./clang/lib/Sema/SemaDecl.cpp	6381,6384

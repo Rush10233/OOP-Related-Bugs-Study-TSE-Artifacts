@@ -1,0 +1,39 @@
+for (unsigned i = 0; i < len; ++i)
+    	      TREE_VEC_ELT (targs, i) = NULL_TREE;
+    
+
+    	  unsigned ndlen = 0;
+    	  unsigned j;
+    	  for (unsigned i = 0; i < len; ++i)
+
+    	  TREE_VALUE (current_template_parms) = gtparms;
+    
+    	  j = 0;
+
+    	  for (unsigned i = 0; i < natparms; ++i)
+    	    {
+    	      tree elt = TREE_VEC_ELT (atparms, i);
+    	      if (ftpi.found (elt))
+
+    	    }
+    	  gcc_checking_assert (j == nusedatparms);
+    
+
+    	  /* Now rewrite the non-deduced parms of f.  */
+    	  for (unsigned i = 0; ndlen && i < len; ++i)
+    	    if (TREE_VEC_ELT (targs, i) == NULL_TREE)
+    	      {
+    		--ndlen;
+    		unsigned index = j++;
+    		tree oldlist = TREE_VEC_ELT (ftparms, i);
+    		tree list = rewrite_tparm_list (oldlist, index, level,
+    						targs, i, complain);
+
+    
+      /* We don't fail on an undeduced targ the second time through (like
+         get_partial_spec_bindings) because we're going to try defaults.  */
+
+    
+      /* Maybe add in default template args.  This seems like a flaw in the
+         specification in terms of partial specialization, since it says the
+

@@ -1,0 +1,6 @@
+Commit:	29f86ee
+./gcc/cp/parser.c	23872,23875
+./gcc/cp/pt.c	8090,8092
+Commit:	6caec77
+./gcc/cp/parser.c	24047,24050
+./gcc/cp/pt.c	8130,8132

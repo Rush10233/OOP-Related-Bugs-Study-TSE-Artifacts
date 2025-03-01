@@ -1,0 +1,37 @@
+if (type == error_mark_node)
+        return error_mark_node;
+    
+
+    
+      if (context == adc_decomp_type
+          && auto_node == type
+
+int flags /* = LOOKUP_NORMAL */,
+    		   tree tmpl /* = NULL_TREE */)
+    {
+
+        return error_mark_node;
+    
+      if (init && type_dependent_expression_p (init)
+
+         auto_node.  */
+      complain &= ~tf_partial;
+    
+
+      /* In C++23, we must deduce the type to int&& for code like
+           decltype(auto) f(int&& x) { return (x); }
+         or
+
+    	}
+        }
+    
+
+        return error_mark_node;
+    
+      tree targs;
+      if (context == adc_decomp_type
+          && auto_node == type
+          && TREE_CODE (TREE_TYPE (init)) == ARRAY_TYPE)
+        {
+          /* [dcl.struct.bind]/1 - if decomposition declaration has no ref-qualifiers
+

@@ -1,0 +1,30 @@
+&& DECL_NONSTATIC_MEMBER_FUNCTION_P (decl)
+          && copy_fn_p (decl))
+        {
+
+    	{
+    	  auto_diagnostic_group d;
+    	  tree ctx = DECL_CONTEXT (decl);
+
+        }
+    }
+    
+
+    /* Report a diagnostic message (an error or a warning) as specified by
+       DC.  This function is *the* subroutine in terms of which front-ends
+       should implement their specific diagnostic handling modules.  The
+
+          && diagnostic->kind == DK_WARNING)
+        diagnostic->kind = DK_ERROR;
+    
+
+    
+      if (diagnostic->kind != DK_NOTE && diagnostic->kind != DK_ICE)
+        diagnostic_check_max_errors (context);
+
+    extern json::value *json_from_expanded_location (diagnostic_context *context,
+    						 location_t loc);
+    
+
+    #endif /* ! GCC_DIAGNOSTIC_H */
+

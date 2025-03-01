@@ -1,0 +1,2 @@
+if (processing_template_decl)
+

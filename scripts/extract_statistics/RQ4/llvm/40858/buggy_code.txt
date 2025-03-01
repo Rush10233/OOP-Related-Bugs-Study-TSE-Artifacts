@@ -1,0 +1,13 @@
+- ...
+
+              "type alias in %2}1">,
+
+      SDK_Using
+
+      return isa<VarDecl>(ShadowedDecl) || isa<FieldDecl>(ShadowedDecl)
+                 ? ShadowedDecl
+                 : nullptr;
+
+    
+        auto *BD = BindingDecl::Create(Context, DC, B.NameLoc, B.Name);
+

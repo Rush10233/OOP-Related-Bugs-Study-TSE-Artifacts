@@ -1,0 +1,18 @@
+bool (*IsPlausibleResult)(QualType)) {
+      SourceLocation Loc = E.get()->getExprLoc();
+      SourceRange Range = E.get()->getSourceRange();
+      UnresolvedSet<4> Overloads;
+    
+
+      if (!ForceComplain) return false;
+    
+      bool IsMV = IsCPUDispatchCPUSpecificMultiVersion(E.get());
+
+              << BaseType << int(IsArrow) << BaseExpr.get()->getSourceRange()
+              << FixItHint::CreateReplacement(OpLoc, "->");
+    
+
+          // Recurse as an -> access.
+          IsArrow = true;
+          return LookupMemberExpr(S, R, BaseExpr, IsArrow, OpLoc, SS,
+

@@ -1,0 +1,17 @@
+|| uses_template_parms (type))
+
+          if (dependent_type_p (tmp))
+    	/* This is a partial instantiation, try again when full.  */
+    	add_stmt (build_min (TAG_DEFN, tmp));
+          else if (CLASS_TYPE_P (tmp))
+
+/* Local class, need to look through the whole definition.  */
+    	for (tree bb : BINFO_BASE_BINFOS (TYPE_BINFO (t)))
+    	  cp_walk_tree (&BINFO_TYPE (bb), &find_parameter_packs_r,
+    			ppd, ppd->visited);
+
+/* Local class, need to look through the whole definition.  */
+    	for (tree bb : BINFO_BASE_BINFOS (TYPE_BINFO (t)))
+    	  cp_walk_tree (&BINFO_TYPE (bb), &find_parameter_packs_r,
+    			ppd, ppd->visited);
+

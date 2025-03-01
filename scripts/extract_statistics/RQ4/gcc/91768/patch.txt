@@ -1,0 +1,75 @@
+extern bool dependentish_scope_p		(tree);
+
+      else if (TREE_CODE (templ) == TYPE_DECL
+    	   && TREE_CODE (TREE_TYPE (templ)) == TYPENAME_TYPE)
+        {
+          /* Some type template in dependent scope.  */
+          tree &name = TYPENAME_TYPE_FULLNAME (TREE_TYPE (templ));
+          name = build_min_nt_loc (combined_loc,
+    			       TEMPLATE_ID_EXPR,
+    			       name, arguments);
+          template_id = templ;
+        }
+
+      tree scope = (parser->scope ? parser->scope
+    		: parser->context->object_type);
+
+      /* 13.3 [temp.names] A < is interpreted as the delimiter of a
+        template-argument-list if it follows a name that is not a
+        conversion-function-id and
+        - that follows the keyword template or a ~ after a nested-name-specifier or
+        in a class member access expression, or
+        - for which name lookup finds the injected-class-name of a class template
+        or finds any declaration of a template, or
+        - that is an unqualified name for which name lookup either finds one or
+        more functions or finds nothing, or
+        - that is a terminal name in a using-declarator (9.9), in a declarator-id
+        (9.3.4), or in a type-only context other than a nested-name-specifier
+        (13.8).  */
+    
+
+          /* Look through an overload set for any templates.  */
+
+          /* "an unqualified name for which name lookup either finds one or more
+    	 functions or finds nothing".  */
+
+    	  && !scope
+
+    	      || TREE_CODE (decl) == FUNCTION_DECL
+    	      /* Name lookup found nothing.  */
+    	      || decl == error_mark_node)
+
+          /* "in a type-only context" */
+          if (!found && scope
+    	  && tag_type != none_type
+    	  && dependentish_scope_p (scope)
+    	  && cp_parser_nth_token_starts_template_argument_list_p (parser, 1))
+    	found = true;
+    
+
+          else if (decl == error_mark_node)
+    	/* Repeat the lookup at instantiation time.  */
+    	decl = identifier;
+
+    
+          /* If we know we're looking for a type (e.g. A in p->A::x),
+    	 mock up a typename.  */
+          if (!decl && object_type && tag_type != none_type
+    	  && dependentish_scope_p (object_type))
+    	{
+    	  tree type = build_typename_type (object_type, name, name,
+    					   typename_type);
+    	  decl = TYPE_NAME (type);
+    	}
+    
+
+    /* True if we might find more declarations in SCOPE during instantiation than
+       we can when parsing the template.  */
+    
+    bool
+    dependentish_scope_p (tree scope)
+    {
+      return dependent_scope_p (scope) || any_dependent_bases_p (scope);
+    }
+    
+

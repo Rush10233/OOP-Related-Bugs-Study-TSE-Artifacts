@@ -1,0 +1,8 @@
+obj = cxx_eval_constant_expression (ctx, obj, lval, non_constant_p,
+    					    overflow_p);
+    	/* We expect something in the form of &x.D.2103.D.2094; get x. */
+
+    	  {
+    	    if (!ctx->quiet)
+    	      error_at (cp_expr_loc_or_loc (t, input_location),
+

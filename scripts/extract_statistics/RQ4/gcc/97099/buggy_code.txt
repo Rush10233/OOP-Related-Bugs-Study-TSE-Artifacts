@@ -1,0 +1,11 @@
+"%<gnu_inline%> attribute");
+
+          /* Core issue #226 (C++0x): 
+    
+
+          if ((cxx_dialect != cxx98) 
+
+              && !check_default_tmpl_args (nt, DECL_TEMPLATE_PARMS (newdecl), 
+
+    	 	  "may not have default template arguments");
+

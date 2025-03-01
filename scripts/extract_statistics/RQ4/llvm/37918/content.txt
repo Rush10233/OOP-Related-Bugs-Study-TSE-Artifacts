@@ -1,0 +1,8 @@
+// If OpenMP is enabled and threadprivates must be generated like TLS, delay
+      // codegen for global variables, because they may be marked as threadprivate.
+      if (LangOpts.OpenMP && LangOpts.OpenMPUseTLS &&
+
+        return false;
+    
+      return true;
+

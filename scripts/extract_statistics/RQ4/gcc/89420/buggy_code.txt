@@ -1,0 +1,4 @@
+if (processing_template_decl && value_dependent_expression_p (expr))
+
+      expr = instantiate_non_dependent_expr (expr);
+

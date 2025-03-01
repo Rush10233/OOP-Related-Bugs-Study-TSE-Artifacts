@@ -1,0 +1,4 @@
+Commit:	cb13308
+./gcc/cp/typeck2.c	1607,1610
+Commit:	b613608
+./gcc/cp/typeck2.c	1543,1546

@@ -1,0 +1,6 @@
+&& TYPE_HAS_DEFAULT_CONSTRUCTOR (totype)
+    	    && !processing_template_decl)
+
+&& TYPE_HAS_DEFAULT_CONSTRUCTOR (totype)
+    	    && !processing_template_decl)
+

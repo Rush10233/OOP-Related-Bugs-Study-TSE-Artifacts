@@ -1,0 +1,24 @@
+/* If we're compiling -fsyntax-only pretend that this
+    		 function has been written out so that we don't try to
+    		 expand it again.  */
+    	      if (flag_syntax_only)
+    		TREE_ASM_WRITTEN (decl) = 1;
+
+        return false;
+
+/* If we're compiling -fsyntax-only pretend that this
+    		 function has been written out so that we don't try to
+    		 expand it again.  */
+    	      if (flag_syntax_only)
+    		TREE_ASM_WRITTEN (decl) = 1;
+
+        return false;
+
+/* If we're compiling -fsyntax-only pretend that this
+    		 function has been written out so that we don't try to
+    		 expand it again.  */
+    	      if (flag_syntax_only)
+    		TREE_ASM_WRITTEN (decl) = 1;
+
+        return false;
+

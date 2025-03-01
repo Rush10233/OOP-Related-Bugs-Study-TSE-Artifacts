@@ -1,0 +1,2 @@
+if (code == ERROR_MARK || target == cp_error_declarator)
+

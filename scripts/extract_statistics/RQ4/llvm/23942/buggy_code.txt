@@ -1,0 +1,4 @@
+IntegerLiteral *IL;
+        if ((IL = dyn_cast<IntegerLiteral>(Init)) && IL->getValue() == 0 &&
+            Context.getCanonicalType(IL->getType()) == Context.IntTy)
+

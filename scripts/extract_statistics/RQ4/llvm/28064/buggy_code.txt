@@ -1,0 +1,10 @@
+FunctionDecl *getTemplateInstantiationPattern() const;
+
+    FunctionDecl *FunctionDecl::getTemplateInstantiationPattern() const {
+
+        if (!clang::isTemplateInstantiation(Info->getTemplateSpecializationKind()))
+
+      if (!clang::isTemplateInstantiation(getTemplateSpecializationKind()))
+
+        while (!Primary->isMemberSpecialization()) {
+

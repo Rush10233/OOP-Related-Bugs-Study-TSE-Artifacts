@@ -1,0 +1,46 @@
+bool list_init_p = false;
+
+          list_init_p = true;
+
+      /* Prune explicit deduction guides in copy-initialization context (but
+         not copy-list-initialization).  */
+
+      if (!list_init_p && (flags & LOOKUP_ONLYCONVERTING))
+
+      if (call == error_mark_node)
+
+          if (complain & tf_warning_or_error)
+    	{
+    	  error ("class template argument deduction failed:");
+
+    	  ++cp_unevaluated_operand;
+    	  call = build_new_function_call (cands, &args,
+    					  complain | tf_decltype);
+    	  --cp_unevaluated_operand;
+
+    	  if (elided)
+    	    inform (input_location, "explicit deduction guides not considered "
+    		    "for copy-initialization");
+    	}
+          return error_mark_node;
+        }
+      /* [over.match.list]/1: In copy-list-initialization, if an explicit
+         constructor is chosen, the initialization is ill-formed.  */
+      else if (flags & LOOKUP_ONLYCONVERTING)
+        {
+          tree fndecl = cp_get_callee_fndecl_nofold (call);
+          if (fndecl && DECL_NONCONVERTING_P (fndecl))
+    	{
+    	  if (complain & tf_warning_or_error)
+    	    {
+    	      // TODO: Pass down location from cp_finish_decl.
+    	      error ("class template argument deduction for %qT failed: "
+    		     "explicit deduction guide selected in "
+    		     "copy-list-initialization", type);
+    	      inform (DECL_SOURCE_LOCATION (fndecl),
+    		      "explicit deduction guide declared here");
+    
+    	    }
+    	  return error_mark_node;
+    	}
+

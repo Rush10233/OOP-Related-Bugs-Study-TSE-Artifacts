@@ -1,0 +1,9 @@
+/* Defer virtual destructors so that thunks get the right
+    	 linkage.  */
+          if (DECL_VIRTUAL_P (decl) && !at_eof)
+    	{
+    	  note_vague_linkage_fn (decl);
+    	  return true;
+    	}
+    
+

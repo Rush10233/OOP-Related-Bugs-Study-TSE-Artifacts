@@ -1,0 +1,59 @@
+CorrectionCandidateCallback()
+          : WantTypeSpecifiers(true), WantExpressionKeywords(true),
+            WantCXXNamedCasts(true), WantRemainingKeywords(true),
+
+    
+      virtual ~CorrectionCandidateCallback() {}
+    
+
+      // Temporary hack for the one case where a CorrectTypoContext enum is used
+      // when looking up results.
+      bool IsObjCIvarLookup;
+
+    };
+    
+    /// @brief Simple template class for restricting typo correction candidates
+
+    
+        if (isa<TypeDecl>(ND))
+          return WantTypeSpecifiers;
+
+      }
+    
+     private:
+
+        SourceLocation TemplateKWLoc;
+        CastExpressionIdValidator Validator(isTypeCast != NotTypeCast,
+                                            isTypeCast != IsTypeCast);
+
+        Name.setIdentifier(&II, ILoc);
+        Res = Actions.ActOnIdExpression(getCurScope(), ScopeSpec, TemplateKWLoc,
+                                        Name, Tok.is(tok::l_paren),
+
+            }
+          }
+          R.addDecl(ND);
+
+    
+          AcceptableWithRecovery =
+              isa<ValueDecl>(ND) || isa<FunctionTemplateDecl>(ND);
+
+        // If this name wasn't predeclared and if this is not a function
+        // call, diagnose the problem.
+        CorrectionCandidateCallback DefaultValidator;
+
+        if (DiagnoseEmptyLookup(S, SS, R, CCC ? *CCC : DefaultValidator))
+          return ExprError();
+    
+
+        return WantTypeSpecifiers || WantExpressionKeywords || WantCXXNamedCasts ||
+               WantRemainingKeywords || WantObjCSuper;
+    
+
+      }
+    
+
+    }
+    
+    FunctionCallFilterCCC::FunctionCallFilterCCC(Sema &SemaRef, unsigned NumArgs,
+

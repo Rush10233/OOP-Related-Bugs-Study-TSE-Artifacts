@@ -1,0 +1,30 @@
+/* Handle designated initializers, as an extension.  */
+
+    	    field = get_class_binding (type, d->cur->index);
+
+          field_init = reshape_init_r (TREE_TYPE (field), d,
+    				   /*first_initializer_p=*/NULL_TREE,
+    				   complain);
+
+/* The designated field F is initialized from this one element:
+    	     Temporarily clear the designator so a recursive reshape_init_class
+    	     doesn't try to find it again in F, and adjust d->end so we don't
+    	     try to use the next initializer to initialize another member of F.
+
+    	     Note that we don't want these changes if we found the designator
+    	     inside an anon aggr above; we leave them alone to implement:
+
+    	  auto end_ = make_temp_override (d->end, d->cur + 1);
+    	  auto idx_ = make_temp_override (d->cur->index, NULL_TREE);
+    	  field_init = reshape_init_r (TREE_TYPE (field), d,
+    				       /*first_initializer_p=*/NULL_TREE,
+    				       complain);
+
+/* Handle designated initializers, as an extension.  */
+
+    	    field = get_class_binding (type, d->cur->index);
+
+          field_init = reshape_init_r (TREE_TYPE (field), d,
+    				   /*first_initializer_p=*/NULL_TREE,
+    				   complain);
+

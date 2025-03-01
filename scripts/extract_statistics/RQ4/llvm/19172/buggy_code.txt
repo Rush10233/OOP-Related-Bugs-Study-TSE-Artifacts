@@ -1,0 +1,10 @@
+MethodVFTableLocationsTy::const_iterator vtable_indices_begin() const {
+        return MethodVFTableLocations.begin();
+      }
+    
+      MethodVFTableLocationsTy::const_iterator vtable_indices_end() const {
+        return MethodVFTableLocations.end();
+
+        NewMethodLocations.insert(Builder.vtable_indices_begin(),
+                                  Builder.vtable_indices_end());
+

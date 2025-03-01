@@ -1,0 +1,46 @@
+"")
+    
+    (define_expand "load_macho_picbase"
+
+            (unspec [(match_operand 0 "")]
+                       UNSPEC_LD_MPIC))]
+      "(DEFAULT_ABI == ABI_DARWIN) && flag_pic"
+
+      DONE;
+    })
+    
+
+    		    (pc)] UNSPEC_LD_MPIC))]
+      "(DEFAULT_ABI == ABI_DARWIN) && flag_pic"
+    {
+
+      [(set_attr "type" "branch")
+       (set_attr "cannot_copy" "yes")])
+    
+    (define_expand "macho_correct_pic"
+      [(set (match_operand 0 "")
+    	(plus (match_operand 1 "")
+
+      [(set_attr "length" "8")])
+    
+    (define_expand "reload_macho_picbase"
+
+            (unspec [(match_operand 0 "")]
+                       UNSPEC_RELD_MPIC))]
+      "(DEFAULT_ABI == ABI_DARWIN) && flag_pic"
+
+      DONE;
+    })
+    
+
+    		    (pc)] UNSPEC_RELD_MPIC))]
+      "(DEFAULT_ABI == ABI_DARWIN) && flag_pic"
+    {
+
+      [(set_attr "type" "branch")
+       (set_attr "cannot_copy" "yes")])
+    
+    ;; We need to restore the PIC register, at the site of nonlocal label.
+    
+    (define_insn_and_split "nonlocal_goto_receiver"
+

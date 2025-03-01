@@ -1,0 +1,8 @@
+side effect associated with any single compound assignment
+    	     operator. -- end note ]  */
+    	  lhs = cp_stabilize_reference (lhs);
+
+    	  if (rhs == error_mark_node)
+    	    return error_mark_node;
+    	  rhs = stabilize_expr (rhs, &init);
+

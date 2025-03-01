@@ -1,0 +1,4 @@
+if (depth_ok && !non_constant_args && ctx->strict)
+
+if (depth_ok && !non_constant_args && ctx->strict)
+

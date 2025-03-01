@@ -1,0 +1,6 @@
+else if (UNSCOPED_ENUM_P (qscope)
+    	   && !TYPE_FUNCTION_SCOPE_P (qscope))
+
+else if (UNSCOPED_ENUM_P (qscope)
+    	   && !TYPE_FUNCTION_SCOPE_P (qscope))
+

@@ -1,0 +1,34 @@
+/* True if reshape_init built this sub-CONSTRUCTOR to undo the brace elision
+       of the original CONSTRUCTOR.  This flag is used during C++20 aggregate
+       CTAD.  */
+    #define CONSTRUCTOR_BRACES_ELIDED_P(NODE) \
+      (CONSTRUCTOR_CHECK (NODE)->base.protected_flag)
+    
+
+          /* As is an array with dependent bound, which we can see
+    	 during C++20 aggregate CTAD.  */
+
+      bool braces_elided_p = false;
+
+          braces_elided_p = true;
+
+      tree new_init;
+
+        new_init = reshape_init_class (type, d, first_initializer_p, complain);
+
+        new_init = reshape_init_array (type, d, first_initializer_p, complain);
+
+        new_init = reshape_init_vector (type, d, complain);
+
+    
+      if (braces_elided_p
+          && TREE_CODE (new_init) == CONSTRUCTOR)
+        CONSTRUCTOR_BRACES_ELIDED_P (new_init) = true;
+    
+      return new_init;
+
+    	  && CONSTRUCTOR_BRACES_ELIDED_P (val))
+
+/* True if reshape_init built this sub-CONSTRUCTOR to undo the brace elision
+       of the original CONSTRUCTOR.  This flag is used during C++20 aggregate
+

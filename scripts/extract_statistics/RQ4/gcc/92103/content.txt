@@ -1,0 +1,184 @@
+
+        template<typename _Iter>
+          concept __iter_without_nested_types = !__iter_with_nested_types<_Iter>;
+      } // namespace __detail
+    
+      template<typename _Iterator>
+        requires __detail::__iter_with_nested_types<_Iterator>
+        struct __iterator_traits<_Iterator, void>
+        {
+
+          using iterator_category = typename _Iterator::iterator_category;
+          using value_type	      = typename _Iterator::value_type;
+          using difference_type   = typename _Iterator::difference_type;
+
+          using reference	      = typename _Iterator::reference;
+        };
+    
+
+    	      && __detail::__cpp17_input_iterator<_Iterator>
+        struct __iterator_traits<_Iterator, void>
+        {
+
+          using value_type
+    	= typename indirectly_readable_traits<_Iterator>::value_type;
+          using difference_type
+    	= typename incrementable_traits<_Iterator>::difference_type;
+
+        };
+    
+      template<typename _Iterator>
+        requires __detail::__iter_without_nested_types<_Iterator>
+    	      && __detail::__cpp17_iterator<_Iterator>
+        struct __iterator_traits<_Iterator, void>
+        {
+
+          using iterator_category = output_iterator_tag;
+          using value_type	      = void;
+
+          using pointer	      = void;
+          using reference	      = void;
+        };
+
+          using difference_type = iter_difference_t<_It>;
+        };
+    
+      template<input_iterator _It, typename _Sent>
+        struct iterator_traits<common_iterator<_It, _Sent>>
+        {
+
+          using iterator_concept = conditional_t<forward_iterator<_It>,
+    	    forward_iterator_tag, input_iterator_tag>;
+          using iterator_category = __detail::__clamp_iter_cat<
+    	typename iterator_traits<_It>::iterator_category,
+    	forward_iterator_tag, input_iterator_tag>;
+          using value_type = iter_value_t<_It>;
+          using difference_type = iter_difference_t<_It>;
+
+          using reference = iter_reference_t<_It>;
+        };
+    
+
+
+      for (t = DECL_TEMPLATE_SPECIALIZATIONS (main_tmpl); t; t = TREE_CHAIN (t))
+        {
+
+    
+
+          if (outer_args)
+    	{
+    	  /* Substitute in the template args from the enclosing class.  */
+    	  ++processing_template_decl;
+
+    	  --processing_template_decl;
+
+    	}
+
+    
+
+          if (spec_args)
+    	{
+    	  if (outer_args)
+
+              /* Keep the candidate only if the constraints are satisfied,
+                 or if we're not compiling with concepts.  */
+              if (!flag_concepts
+
+                {
+
+                  TREE_TYPE (list) = TREE_TYPE (t);
+                }
+    	}
+
+
+      for (t = DECL_TEMPLATE_SPECIALIZATIONS (main_tmpl); t; t = TREE_CHAIN (t))
+        {
+
+    
+
+          if (outer_args)
+    	{
+    	  /* Substitute in the template args from the enclosing class.  */
+    	  ++processing_template_decl;
+
+    	  --processing_template_decl;
+
+    	}
+
+    
+
+          if (spec_args)
+    	{
+    	  if (outer_args)
+
+              /* Keep the candidate only if the constraints are satisfied,
+                 or if we're not compiling with concepts.  */
+              if (!flag_concepts
+
+                {
+
+                  TREE_TYPE (list) = TREE_TYPE (t);
+                }
+    	}
+
+
+        template<typename _Iter>
+          concept __iter_without_nested_types = !__iter_with_nested_types<_Iter>;
+      } // namespace __detail
+    
+      template<typename _Iterator>
+        requires __detail::__iter_with_nested_types<_Iterator>
+        struct __iterator_traits<_Iterator, void>
+        {
+
+          using iterator_category = typename _Iterator::iterator_category;
+          using value_type	      = typename _Iterator::value_type;
+          using difference_type   = typename _Iterator::difference_type;
+
+          using reference	      = typename _Iterator::reference;
+        };
+    
+
+    	      && __detail::__cpp17_input_iterator<_Iterator>
+        struct __iterator_traits<_Iterator, void>
+        {
+
+          using value_type
+    	= typename indirectly_readable_traits<_Iterator>::value_type;
+          using difference_type
+    	= typename incrementable_traits<_Iterator>::difference_type;
+
+        };
+    
+      template<typename _Iterator>
+        requires __detail::__iter_without_nested_types<_Iterator>
+    	      && __detail::__cpp17_iterator<_Iterator>
+        struct __iterator_traits<_Iterator, void>
+        {
+
+          using iterator_category = output_iterator_tag;
+          using value_type	      = void;
+
+          using pointer	      = void;
+          using reference	      = void;
+        };
+
+          using difference_type = iter_difference_t<_It>;
+        };
+    
+      template<input_iterator _It, typename _Sent>
+        struct iterator_traits<common_iterator<_It, _Sent>>
+        {
+
+          using iterator_concept = conditional_t<forward_iterator<_It>,
+    	    forward_iterator_tag, input_iterator_tag>;
+          using iterator_category = __detail::__clamp_iter_cat<
+    	typename iterator_traits<_It>::iterator_category,
+    	forward_iterator_tag, input_iterator_tag>;
+          using value_type = iter_value_t<_It>;
+          using difference_type = iter_difference_t<_It>;
+
+          using reference = iter_reference_t<_It>;
+        };
+    
+

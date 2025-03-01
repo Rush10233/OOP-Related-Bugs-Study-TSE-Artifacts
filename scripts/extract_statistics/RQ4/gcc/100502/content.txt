@@ -1,0 +1,42 @@
+{
+    	  /* Look up the member.  */
+    	  access_failure_info afi;
+
+    	  member = lookup_member (access_path, name, /*protect=*/1,
+    				  /*want_type=*/false, complain,
+    				  &afi);
+
+    	  afi.maybe_suggest_accessor (TYPE_READONLY (object_type));
+    	  if (member == NULL_TREE)
+    	    {
+
+{
+          if (DECL_FUNCTION_MEMBER_P (supplicant))
+    	context = DECL_CONTEXT (supplicant);
+
+          else
+    	context = NULL_TREE;
+        }
+
+    	  && friend_accessible_p (DECL_CONTEXT (scope), decl, type, otype))
+    	return 1;
+          /* Perhaps SCOPE is a friend function defined inside a class from which
+
+          if (tree fctx = DECL_FRIEND_CONTEXT (scope))
+
+    	  return 1;
+        }
+    
+
+{
+    	  /* Look up the member.  */
+    	  access_failure_info afi;
+
+    	  member = lookup_member (access_path, name, /*protect=*/1,
+    				  /*want_type=*/false, complain,
+    				  &afi);
+
+    	  afi.maybe_suggest_accessor (TYPE_READONLY (object_type));
+    	  if (member == NULL_TREE)
+    	    {
+

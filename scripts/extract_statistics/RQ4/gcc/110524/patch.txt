@@ -1,0 +1,6 @@
+if (!identifier_p (fn))
+    	fn = OVL_NAME (fn);
+
+if (!identifier_p (fn))
+    	fn = OVL_NAME (fn);
+

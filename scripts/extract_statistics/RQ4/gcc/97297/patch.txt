@@ -1,0 +1,9 @@
+= cp_parser_lookup_name (parser, unqualified_name,
+    					       none_type,
+    					       /*is_template=*/false,
+    					       /*is_namespace=*/false,
+    					       /*check_dependency=*/false,
+    					       /*ambiguous_decls=*/NULL,
+    					       token->location);
+    
+

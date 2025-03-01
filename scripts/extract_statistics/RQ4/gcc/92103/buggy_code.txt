@@ -1,0 +1,230 @@
+
+        // FIXME: These have to be at namespace-scope because of PR 92103.
+        template<typename _Iter, bool __use_arrow = false>
+          struct __ptr
+          { using type = void; };
+    
+        template<typename _Iter> requires requires { typename _Iter::pointer; }
+          struct __ptr<_Iter, true>
+          { using type = typename _Iter::pointer; };
+    
+        template<typename _Iter> requires requires { typename _Iter::pointer; }
+          struct __ptr<_Iter, false>
+          { using type = typename _Iter::pointer; };
+    
+        template<typename _Iter>
+          requires (!requires { typename _Iter::pointer; }
+    	  && requires(_Iter& __it) { __it.operator->(); })
+          struct __ptr<_Iter, true>
+          { using type = decltype(std::declval<_Iter&>().operator->()); };
+    
+        template<typename _Iter>
+          struct __ref
+          { using type = iter_reference_t<_Iter>; };
+    
+        template<typename _Iter> requires requires { typename _Iter::reference; }
+          struct __ref<_Iter>
+          { using type = typename _Iter::reference; };
+    
+        template<typename _Iter>
+          struct __cat
+          { using type = input_iterator_tag; };
+    
+        template<typename _Iter>
+          requires requires { typename _Iter::iterator_category; }
+          struct __cat<_Iter>
+          { using type = typename _Iter::iterator_category; };
+    
+        template<typename _Iter>
+          requires (!requires { typename _Iter::iterator_category; }
+    		&& __detail::__cpp17_randacc_iterator<_Iter>)
+          struct __cat<_Iter>
+          { using type = random_access_iterator_tag; };
+    
+        template<typename _Iter>
+          requires (!requires { typename _Iter::iterator_category; }
+    		&& __detail::__cpp17_bidi_iterator<_Iter>)
+          struct __cat<_Iter>
+          { using type = bidirectional_iterator_tag; };
+    
+        template<typename _Iter>
+          requires (!requires { typename _Iter::iterator_category; }
+    		&& __detail::__cpp17_fwd_iterator<_Iter>)
+          struct __cat<_Iter>
+          { using type = forward_iterator_tag; };
+    
+        template<typename _Iter>
+          struct __diff
+          { using type = void; };
+    
+        template<typename _Iter>
+          requires requires {
+    	typename incrementable_traits<_Iter>::difference_type;
+          }
+          struct __diff<_Iter>
+          {
+    	using type = typename incrementable_traits<_Iter>::difference_type;
+          };
+    
+
+          using pointer	      = typename __detail::__ptr<_Iterator>::type;
+
+          using iterator_category = typename __detail::__cat<_Iterator>::type;
+
+          using pointer	      = typename __detail::__ptr<_Iterator, true>::type;
+          using reference	      = typename __detail::__ref<_Iterator>::type;
+
+          using difference_type   = typename __detail::__diff<_Iterator>::type;
+
+      namespace __detail
+      {
+        // FIXME: This has to be at namespace-scope because of PR 92103.
+        template<typename _It, typename _Sent>
+          struct __common_iter_ptr
+          {
+    	using type = void;
+          };
+    
+        template<typename _It, typename _Sent>
+          requires __detail::__common_iter_has_arrow<_It>
+          struct __common_iter_ptr<_It, _Sent>
+          {
+    	using common_iterator = std::common_iterator<_It, _Sent>;
+    
+    	using type
+    	  = decltype(std::declval<const common_iterator&>().operator->());
+          };
+      } // namespace __detail
+    
+
+          using pointer = typename __detail::__common_iter_ptr<_It, _Sent>::type;
+
+tree spec_args;
+          tree spec_tmpl = TREE_VALUE (t);
+
+    	  spec_tmpl = tsubst (spec_tmpl, outer_args, tf_none, NULL_TREE);
+
+          if (spec_tmpl == error_mark_node)
+    	return error_mark_node;
+    
+          spec_args = get_partial_spec_bindings (tmpl, spec_tmpl, args);
+
+                  || constraints_satisfied_p (spec_tmpl, spec_args))
+
+                  list = tree_cons (spec_args, TREE_VALUE (t), list);
+
+tree spec_args;
+          tree spec_tmpl = TREE_VALUE (t);
+
+    	  spec_tmpl = tsubst (spec_tmpl, outer_args, tf_none, NULL_TREE);
+
+          if (spec_tmpl == error_mark_node)
+    	return error_mark_node;
+    
+          spec_args = get_partial_spec_bindings (tmpl, spec_tmpl, args);
+
+                  || constraints_satisfied_p (spec_tmpl, spec_args))
+
+                  list = tree_cons (spec_args, TREE_VALUE (t), list);
+
+
+        // FIXME: These have to be at namespace-scope because of PR 92103.
+        template<typename _Iter, bool __use_arrow = false>
+          struct __ptr
+          { using type = void; };
+    
+        template<typename _Iter> requires requires { typename _Iter::pointer; }
+          struct __ptr<_Iter, true>
+          { using type = typename _Iter::pointer; };
+    
+        template<typename _Iter> requires requires { typename _Iter::pointer; }
+          struct __ptr<_Iter, false>
+          { using type = typename _Iter::pointer; };
+    
+        template<typename _Iter>
+          requires (!requires { typename _Iter::pointer; }
+    	  && requires(_Iter& __it) { __it.operator->(); })
+          struct __ptr<_Iter, true>
+          { using type = decltype(std::declval<_Iter&>().operator->()); };
+    
+        template<typename _Iter>
+          struct __ref
+          { using type = iter_reference_t<_Iter>; };
+    
+        template<typename _Iter> requires requires { typename _Iter::reference; }
+          struct __ref<_Iter>
+          { using type = typename _Iter::reference; };
+    
+        template<typename _Iter>
+          struct __cat
+          { using type = input_iterator_tag; };
+    
+        template<typename _Iter>
+          requires requires { typename _Iter::iterator_category; }
+          struct __cat<_Iter>
+          { using type = typename _Iter::iterator_category; };
+    
+        template<typename _Iter>
+          requires (!requires { typename _Iter::iterator_category; }
+    		&& __detail::__cpp17_randacc_iterator<_Iter>)
+          struct __cat<_Iter>
+          { using type = random_access_iterator_tag; };
+    
+        template<typename _Iter>
+          requires (!requires { typename _Iter::iterator_category; }
+    		&& __detail::__cpp17_bidi_iterator<_Iter>)
+          struct __cat<_Iter>
+          { using type = bidirectional_iterator_tag; };
+    
+        template<typename _Iter>
+          requires (!requires { typename _Iter::iterator_category; }
+    		&& __detail::__cpp17_fwd_iterator<_Iter>)
+          struct __cat<_Iter>
+          { using type = forward_iterator_tag; };
+    
+        template<typename _Iter>
+          struct __diff
+          { using type = void; };
+    
+        template<typename _Iter>
+          requires requires {
+    	typename incrementable_traits<_Iter>::difference_type;
+          }
+          struct __diff<_Iter>
+          {
+    	using type = typename incrementable_traits<_Iter>::difference_type;
+          };
+    
+
+          using pointer	      = typename __detail::__ptr<_Iterator>::type;
+
+          using iterator_category = typename __detail::__cat<_Iterator>::type;
+
+          using pointer	      = typename __detail::__ptr<_Iterator, true>::type;
+          using reference	      = typename __detail::__ref<_Iterator>::type;
+
+          using difference_type   = typename __detail::__diff<_Iterator>::type;
+
+      namespace __detail
+      {
+        // FIXME: This has to be at namespace-scope because of PR 92103.
+        template<typename _It, typename _Sent>
+          struct __common_iter_ptr
+          {
+    	using type = void;
+          };
+    
+        template<typename _It, typename _Sent>
+          requires __detail::__common_iter_has_arrow<_It>
+          struct __common_iter_ptr<_It, _Sent>
+          {
+    	using common_iterator = std::common_iterator<_It, _Sent>;
+    
+    	using type
+    	  = decltype(std::declval<const common_iterator&>().operator->());
+          };
+      } // namespace __detail
+    
+
+          using pointer = typename __detail::__common_iter_ptr<_It, _Sent>::type;
+

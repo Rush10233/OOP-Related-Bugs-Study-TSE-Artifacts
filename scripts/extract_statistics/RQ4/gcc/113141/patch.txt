@@ -1,0 +1,54 @@
+Wcast-user-defined
+    C++ ObjC++ Var(warn_cast_user_defined) Warning Init(1)
+    Warn about a cast to reference type that does not use a related user-defined conversion function.
+    
+
+    	    && c_cast_p && !maybe_valid_p)
+    	  {
+    	    if (complain & tf_warning)
+    	      warning (OPT_Wcast_user_defined,
+    		       "casting %qT to %qT does not use %qD",
+    		       from, rto, t->cand->fn);
+    	    /* Don't let recalculation try to make this valid.  */
+    	    break;
+    	  }
+    	else if (t->kind == ck_user
+    		 && DECL_CONV_FN_P (t->cand->fn))
+
+    @opindex Wcast-user-defined
+    @opindex Wno-cast-user-defined
+    @item -Wcast-user-defined
+    Warn when a cast to reference type does not involve a user-defined
+    conversion that the programmer might expect to be called.
+    
+    @smallexample
+    struct A @{ operator const int&(); @} a;
+    auto r = (int&)a; // warning
+    @end smallexample
+    
+    This warning is enabled by default.
+    
+
+/* Returns nonzero if T1 is reference-related to T2.
+    
+       This is considered when a reference to T1 is initialized by a T2.  */
+
+      bool single_list_conv = false;
+
+    	  else if (CLASS_TYPE_P (etype) && TYPE_HAS_CONVERSION (etype))
+    	    /* CWG1996: jason's proposed drafting adds "or initializing T from E
+    	       would bind directly".  We check that in the direct binding with
+    	       conversion code below.  */
+    	    single_list_conv = true;
+
+      else if (!related_p
+    	   && !(flags & LOOKUP_NO_CONVERSION)
+    	   && (CLASS_TYPE_P (from) || single_list_conv))
+
+          tree rexpr = expr;
+          if (single_list_conv)
+    	rexpr = CONSTRUCTOR_ELT (expr, 0)->value;
+    
+
+          z_candidate *cand = build_user_type_conversion_1 (rto, rexpr, flags,
+

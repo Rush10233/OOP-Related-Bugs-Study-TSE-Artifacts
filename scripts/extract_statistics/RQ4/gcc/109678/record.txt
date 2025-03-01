@@ -1,0 +1,8 @@
+Commit:	4b8d0d4
+./gcc/cp/constexpr.cc	5455,5455
+./gcc/cp/cp-tree.h	7518,7518
+Commit:	0a2c771
+Commit:	db6c4ba
+./gcc/cp/constexpr.cc	5480,5488
+Commit:	bc24c51
+./gcc/cp/constexpr.cc	5471,5480

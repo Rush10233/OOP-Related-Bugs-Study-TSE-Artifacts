@@ -1,0 +1,2 @@
+return build2 (COMPOUND_EXPR, TREE_TYPE (result), a, result);
+

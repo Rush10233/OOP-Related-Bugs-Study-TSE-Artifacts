@@ -1,0 +1,16 @@
+// 'bool' is an integral type; dispatch to the right place to handle it.
+      case ICK_Boolean_Conversion:
+        if (FromType->isRealFloatingType())
+          goto FloatingIntegralConversion;
+        if (FromType->isIntegralOrUnscopedEnumerationType())
+          goto IntegralConversion;
+        // Boolean conversions can be from pointers and pointers to members
+        // [conv.bool], and those aren't considered narrowing conversions.
+        return NK_Not_Narrowing;
+    
+
+      FloatingIntegralConversion:
+
+      case ICK_Integral_Conversion:
+      IntegralConversion: {
+

@@ -1,0 +1,55 @@
+(cp_parser *, tree, tree);
+
+      (cp_parser *, cp_parser_flags, cp_cv_quals);
+
+      (cp_parser *, cp_parser_flags, bool, bool *, bool, cp_cv_quals);
+
+      /* A lambda op() is const unless explicitly 'mutable'.  */
+      cp_cv_quals quals = TYPE_QUAL_CONST;
+
+    	  quals = TYPE_UNQUALIFIED;
+
+    	= cp_parser_exception_specification_opt (parser, CP_PARSER_FLAGS_NONE,
+    						 quals);
+
+    		    = cp_parser_exception_specification_opt (parser,
+    							     flags,
+    							     cv_quals);
+
+    	  spec = cp_parser_late_noexcept_specifier (parser, spec, decl);
+
+       we saved for later; parse it now.  DECL is the declaration of the
+       member function.  */
+
+    cp_parser_late_noexcept_specifier (cp_parser *parser, tree default_arg,
+    				   tree decl)
+
+      /* We need to know if this member function was declared `const'.  Look
+         at the this parameter to figure that out.  */
+      cp_cv_quals quals = type_memfn_quals (TREE_TYPE (decl));
+
+    					    /*return_cond=*/false, quals);
+
+       FLAGS is used to control parsing.  QUALS are qualifiers indicating whether
+       the (member) function is `const'.  */
+
+    				      bool return_cond,
+    				      cp_cv_quals quals)
+
+    	    inject_this_parameter (current_class_type, quals);
+
+       control parsing.  QUALS are qualifiers indicating whether the (member)
+       function is `const'.  */
+
+    cp_parser_exception_specification_opt (cp_parser* parser,
+    				       cp_parser_flags flags,
+    				       cp_cv_quals quals)
+
+    					    /*return_cond=*/false, quals);
+
+    						 /*return_cond=*/true,
+    						 TYPE_UNQUALIFIED);
+
+    					       /*return_cond=*/true,
+    					       TYPE_UNQUALIFIED);
+

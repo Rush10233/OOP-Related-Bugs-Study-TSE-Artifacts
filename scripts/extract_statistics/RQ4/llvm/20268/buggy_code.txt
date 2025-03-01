@@ -1,0 +1,11 @@
+bool ShouldCheckUse = true;
+      if (CXXMethodDecl *MD = dyn_cast<CXXMethodDecl>(MemberDecl)) {
+        // Don't diagnose the use of a virtual member function unless it's
+        // explicitly qualified.
+        if (MD->isVirtual() && !SS.isSet())
+          ShouldCheckUse = false;
+      }
+    
+
+      if (ShouldCheckUse && DiagnoseUseOfDecl(MemberDecl, MemberLoc))
+

@@ -1,0 +1,2 @@
+code = TREE_CODE (*expr_p);
+

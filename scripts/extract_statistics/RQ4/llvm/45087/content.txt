@@ -1,0 +1,39 @@
+/// is trivial. Note that this is never true for a union type with fields
+    /// (because the copy always "reads" the active member) and always true for
+    /// a non-class type.
+
+    static bool isReadByLvalueToRvalueConversion(QualType T) {
+      CXXRecordDecl *RD = T->getBaseElementTypeUnsafe()->getAsCXXRecordDecl();
+
+      if (RD->isEmpty())
+        return false;
+    
+      for (auto *Field : RD->fields())
+
+          return true;
+    
+      for (auto &BaseSpec : RD->bases())
+
+      return true;
+    }
+    
+    namespace {
+    typedef SmallVector<APValue, 8> ArgVector;
+    }
+
+      const CXXMethodDecl *MD = dyn_cast<CXXMethodDecl>(Callee);
+      if (MD && MD->isDefaulted() &&
+          (MD->getParent()->isUnion() ||
+
+        assert(This &&
+               (MD->isCopyAssignmentOperator() || MD->isMoveAssignmentOperator()));
+        LValue RHS;
+
+      // actually read them.
+      if (Definition->isDefaulted() && Definition->isCopyOrMoveConstructor() &&
+          (Definition->getParent()->isUnion() ||
+
+        LValue RHS;
+        RHS.setFrom(Info.Ctx, ArgValues[0]);
+        return handleLValueToRValueConversion(
+

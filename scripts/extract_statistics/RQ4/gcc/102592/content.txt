@@ -1,0 +1,161 @@
+template<typename _InputIterator,
+    	     typename _Require = __detail::_Path2<_InputIterator>>
+          path(_InputIterator __first, _InputIterator __last, format = auto_format)
+
+          { _M_split_cmpts(); }
+    
+        template<typename _Source,
+
+          __detail::_Path2<_InputIterator>&
+          append(_InputIterator __first, _InputIterator __last)
+          {
+
+    	return *this;
+          }
+    
+
+          __detail::_Path2<_InputIterator>&
+          concat(_InputIterator __first, _InputIterator __last)
+          {
+
+    	return *this;
+          }
+    
+
+          static auto
+          _S_convert(const _EcharT* __first, const _EcharT* __last);
+    
+        static string_type
+        _S_convert_loc(const char* __first, const char* __last,
+    		   const std::locale& __loc);
+
+template<typename _InputIterator,
+    	     typename _Require = __detail::_Path2<_InputIterator>>
+          path(_InputIterator __first, _InputIterator __last, format = auto_format)
+
+          { _M_split_cmpts(); }
+    
+        template<typename _Source,
+
+          __detail::_Path2<_InputIterator>&
+          append(_InputIterator __first, _InputIterator __last)
+          {
+
+    	return *this;
+          }
+    
+
+          __detail::_Path2<_InputIterator>&
+          concat(_InputIterator __first, _InputIterator __last)
+          {
+
+    	return *this;
+          }
+    
+
+          static auto
+          _S_convert(const _EcharT* __first, const _EcharT* __last);
+    
+        static string_type
+        _S_convert_loc(const char* __first, const char* __last,
+    		   const std::locale& __loc);
+
+template<typename _Iter, typename _Tr = __safe_iterator_traits<_Iter>>
+        using _Path2 = enable_if_t<__is_path_iter_src<_Tr>::value, path>;
+    
+
+      // The __effective_range overloads convert a Source parameter into
+
+      // effective range of the Source, as defined in [fs.path.req].
+    
+      template<typename _CharT, typename _Traits, typename _Alloc>
+
+        __effective_range(const basic_string<_CharT, _Traits, _Alloc>& __source)
+
+        { return __source; }
+    
+      template<typename _CharT, typename _Traits>
+
+        __effective_range(const basic_string_view<_CharT, _Traits>& __source)
+
+        { return __source; }
+    
+
+      template<typename _Source>
+
+        __effective_range(const _Source& __source)
+        {
+
+          else
+    	{
+    	  // _Source is an input iterator that iterates over an NTCTS.
+    	  // Create a basic_string by reading until the null character.
+
+    	  _Source __it = __source;
+    	  for (value_type __ch = *__it; __ch != value_type(); __ch = *++__it)
+    	    __str.push_back(__ch);
+
+        }
+    
+      // The value type of a Source parameter's effective range.
+
+    
+      // SFINAE helper to check that an effective range has value_type char,
+      // as required by path constructors taking a std::locale parameter.
+      // The type _Tp must have already been checked by _Path<Tp> or _Path2<_Tp>.
+
+        using __value_type_is_char
+          = std::enable_if_t<std::is_same_v<_Val, char>, _Val>;
+    
+      // As above, but also allows char8_t, as required by u8path
+      // C++20 [depr.fs.path.factory]
+
+        using __value_type_is_char_or_char8_t
+          = std::enable_if_t<std::is_same_v<_Val, char>
+    #ifdef _GLIBCXX_USE_CHAR8_T
+    			 || std::is_same_v<_Val, char8_t>
+    #endif
+    			 , _Val>;
+    
+
+      template<typename _InputIterator>
+        inline auto
+        __string_from_range(_InputIterator __first, _InputIterator __last)
+        {
+          using _EcharT
+    	= typename std::iterator_traits<_InputIterator>::value_type;
+
+    
+
+    	{
+    	  // For contiguous iterators we can just return a string view.
+
+    	}
+          else
+
+        }
+    
+      /// @} group filesystem
+
+        pair<const string_type*, size_t> _M_find_extension() const noexcept;
+    
+        // path::_S_convert creates a basic_string<value_type> or
+
+        // performing the conversions required by [fs.path.type.cvt].
+        template<typename _Tp>
+          static auto
+
+          {
+
+    	else
+    	  return _S_convert(__str.data(), __str.data() + __str.size());
+          }
+
+          static auto
+          _S_convert(const _EcharT* __first, const _EcharT* __last);
+    
+
+        static string_type
+        _S_convert_loc(const char* __first, const char* __last,
+    		   const std::locale& __loc);
+

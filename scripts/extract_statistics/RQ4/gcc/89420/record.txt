@@ -1,0 +1,3 @@
+Commit:	fcb141a
+./gcc/cp/decl.c	16690,16690
+./gcc/cp/decl.c	16695,16695

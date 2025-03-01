@@ -1,0 +1,4 @@
+if (TX->hasTypeConstraint()) {
+          const TypeConstraint *TXTC = TX->getTypeConstraint();
+          const TypeConstraint *TYTC = TY->getTypeConstraint();
+

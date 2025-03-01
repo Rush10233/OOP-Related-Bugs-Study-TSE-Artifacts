@@ -1,0 +1,21 @@
+
+        bool Delete = false;
+        SourceLocation KWLoc;
+
+        if (TryConsumeToken(tok::kw_delete, KWLoc)) {
+          Diag(KWLoc, getLangOpts().CPlusPlus11
+                          ? diag::warn_cxx98_compat_deleted_function
+                          : diag::ext_deleted_function);
+          Actions.SetDeclDeleted(FnD, KWLoc);
+          Delete = true;
+
+        } else if (TryConsumeToken(tok::kw_default, KWLoc)) {
+          Diag(KWLoc, getLangOpts().CPlusPlus11
+                          ? diag::warn_cxx98_compat_defaulted_function
+                          : diag::ext_defaulted_function);
+          Actions.SetDeclDefaulted(FnD, KWLoc);
+
+        } else {
+          llvm_unreachable("function definition after = not 'delete' or 'default'");
+        }
+

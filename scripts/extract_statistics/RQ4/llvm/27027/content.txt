@@ -1,0 +1,8 @@
+FindLocalExternScope(LookupResult &R)
+          : R(R), OldFindLocalExtern(R.getIdentifierNamespace() &
+                                     Decl::IDNS_LocalExtern) {
+
+      }
+      void restore() {
+        R.setFindLocalExtern(OldFindLocalExtern);
+

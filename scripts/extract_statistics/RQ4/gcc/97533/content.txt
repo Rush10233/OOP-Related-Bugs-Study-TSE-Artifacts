@@ -1,0 +1,117 @@
+if (! (complain & tf_error))
+    	return error_mark_node;
+    
+
+          name = constructor_name (basetype);
+          if (permerror (input_location,
+    		     "cannot call constructor %<%T::%D%> directly",
+
+      /* Add it to the appropriate closure class if we've started it.  */
+      if (current_class_type
+          && current_class_type == LAMBDA_EXPR_CLOSURE (lambda))
+
+    
+      tree listmem = member;
+      if (variadic)
+
+    	{
+    	  scope = TREE_OPERAND (expr, 0);
+    	  member = TREE_OPERAND (expr, 1);
+
+    	}
+          else
+    	{
+
+    	      /* In a template, be permissive by treating an object expression
+    		 of incomplete type as dependent (after a pedwarn).  */
+    	      diagnostic_t kind = (processing_template_decl
+
+    				   ? DK_PEDWARN
+    				   : DK_ERROR);
+    	      cxx_incomplete_type_diagnostic
+    		(location_of (postfix_expression),
+    		 postfix_expression, scope, kind);
+
+    	      if (processing_template_decl)
+    		{
+    		  dependent_p = true;
+
+      return false;
+    }
+    
+    /* Parse a late-specified return type, if any.  This is not a separate
+       non-terminal, but part of a function declarator, which looks like
+    
+
+    					    qualifying_class);
+          pop_deferring_access_checks ();
+        }
+
+        {
+          /* See if any of the functions are non-static members.  */
+          /* If so, the expression may be relative to 'this'.  */
+
+    	expr = build_offset_ref (qualifying_class, expr, /*address_p=*/false,
+    				 complain);
+        }
+      else
+        {
+          /* In a template, return a SCOPE_REF for most qualified-ids
+
+    	 know we have access and building up the SCOPE_REF confuses
+    	 non-type template argument handling.  */
+          if (processing_template_decl
+
+    	expr = build_qualified_name (TREE_TYPE (expr),
+    				     qualifying_class, expr,
+    				     template_p);
+
+    		    ? CP_ID_KIND_UNQUALIFIED_DEPENDENT
+    		    : CP_ID_KIND_UNQUALIFIED)));
+    
+          if (dependent_p
+
+    
+          if (TREE_CODE (decl) == NAMESPACE_DECL)
+    	{
+
+    	 expression.  Template parameters have already
+    	 been handled above.  */
+          if (! error_operand_p (decl)
+
+    	  && integral_constant_expression_p
+    	  && ! decl_constant_var_p (decl)
+    	  && TREE_CODE (decl) != CONST_DECL
+
+    	  decl = build_cxx_call (wrap, 0, NULL, tf_warning_or_error);
+    	}
+          else if (TREE_CODE (decl) == TEMPLATE_ID_EXPR
+
+    	       && variable_template_p (TREE_OPERAND (decl, 0)))
+    	{
+    	  decl = finish_template_variable (decl);
+
+    	}
+          else if (scope)
+    	{
+
+    	  decl = (adjust_result_of_qualified_name_lookup
+    		  (decl, scope, current_nonlambda_class_type()));
+    
+
+          || scope == error_mark_node
+          || name == error_mark_node)
+        return error_mark_node;
+
+      t = build2 (SCOPE_REF, type, scope, name);
+      QUALIFIED_NAME_IS_TEMPLATE (t) = template_p;
+      PTRMEM_OK_P (t) = true;
+
+          break;
+    
+        case BASELINK:
+
+          WALK_SUBTREE (BASELINK_FUNCTIONS (*tp));
+          *walk_subtrees_p = 0;
+          break;
+

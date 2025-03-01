@@ -1,0 +1,11 @@
+- Expressions producing ``nullptr`` are correctly evaluated
+      by the constant interpreter when appearing as the operand
+      of a binary comparision.
+      (`#64923 <https://github.com/llvm/llvm-project/issues/64923>_``)
+    
+
+        LValue Res;
+        if (!EvaluatePointer(E->getLHS(), Res, Info) ||
+            !EvaluatePointer(E->getRHS(), Res, Info))
+          return false;
+

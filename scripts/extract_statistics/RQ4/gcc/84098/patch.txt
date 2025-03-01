@@ -1,0 +1,11 @@
+if (LAMBDA_TYPE_P (t))
+    		/* A closure type for a lambda in an NSDMI or default argument.
+    		   Ignore it; it will be regenerated when needed.  */
+    		continue;
+    
+
+    	  else if ((DECL_CLASS_TEMPLATE_P (t) || DECL_IMPLICIT_TYPEDEF_P (t))
+
+    	    /* A closure type for a lambda in an NSDMI or default argument.
+    	       Ignore it; it will be regenerated when needed.  */;
+

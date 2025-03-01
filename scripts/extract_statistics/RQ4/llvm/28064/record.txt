@@ -1,0 +1,6 @@
+Commit:	7462793
+./clang/include/clang/AST/Decl.h	2621,2621
+./clang/lib/AST/Decl.cpp	3626,3626
+./clang/lib/AST/Decl.cpp	3643,3643
+./clang/lib/AST/Decl.cpp	3648,3648
+./clang/lib/AST/Decl.cpp	3654,3654

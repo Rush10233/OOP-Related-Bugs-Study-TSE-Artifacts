@@ -1,0 +1,2 @@
+else if (koenig_p && identifier_p (function))
+

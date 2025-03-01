@@ -1,0 +1,6 @@
+if (Def->hasAttr<MSInheritanceAttr>()) {
+          Specialization->addAttr(Def->getAttr<MSInheritanceAttr>());
+          Consumer.AssignInheritanceModel(Specialization);
+        }
+    
+

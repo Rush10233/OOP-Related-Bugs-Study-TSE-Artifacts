@@ -1,0 +1,16 @@
+def err_mutable_const : Error<"'mutable' and 'const' cannot be mixed">;
+    def err_mutable_nonmember : Error<
+      "'mutable' can only be applied to member variables">;
+
+    def err_virtual_non_function : Error<
+      "'virtual' can only appear on non-static member functions">;
+    def err_virtual_out_of_class : Error<
+
+              dyn_cast<CXXRecordDecl>(NewFD->getDeclContext())) {
+          if (Parent->isInterface() && cast<CXXMethodDecl>(NewFD)->isUserProvided())
+            NewFD->setPure(true);
+
+        }
+    
+        SetNestedNameSpecifier(NewFD, D);
+

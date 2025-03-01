@@ -1,0 +1,3 @@
+Commit:	efe0e5c
+./gcc/cp/decl.c	13262,13265
+./gcc/testsuite/g++.dg/parse/undefined3.C	5,5

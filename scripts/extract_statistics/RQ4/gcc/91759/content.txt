@@ -1,0 +1,8 @@
+"namespace scope", decl);
+    	  return NULL_TREE;
+    	}
+
+          if (funcdef_flag)
+    	error_at (location,
+    		  "deduction guide %qD must not have a function body", decl);
+

@@ -1,0 +1,9 @@
+if (xvalue_p (expr))
+        return expr;
+
+if (xvalue_p (expr))
+        return expr;
+
+if (xvalue_p (expr))
+        return expr;
+

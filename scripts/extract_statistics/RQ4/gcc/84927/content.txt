@@ -1,0 +1,40 @@
+(*p)->last().value = elt;
+    	}
+          else
+
+        }
+      if (*non_constant_p || !changed)
+        return t;
+
+    	{
+    	  /* Don't re-process a constant CONSTRUCTOR, but do fold it to
+    	     VECTOR_CST if applicable.  */
+
+    	  if (TREE_CONSTANT (t))
+    	    return fold (t);
+    	}
+
+/* We ask for an rvalue for the RESULT_DECL when indirecting
+    	 through an invisible reference, or in named return value
+    	 optimization.  */
+
+    
+        case VAR_DECL:
+          if (DECL_HAS_VALUE_EXPR_P (t))
+
+(*p)->last().value = elt;
+    	}
+          else
+
+        }
+      if (*non_constant_p || !changed)
+        return t;
+
+    	{
+    	  /* Don't re-process a constant CONSTRUCTOR, but do fold it to
+    	     VECTOR_CST if applicable.  */
+
+    	  if (TREE_CONSTANT (t))
+    	    return fold (t);
+    	}
+

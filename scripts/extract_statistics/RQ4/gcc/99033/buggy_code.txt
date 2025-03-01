@@ -1,0 +1,56 @@
+max_index = fold_build2_loc (input_location,
+    				 MINUS_EXPR, TREE_TYPE (nelts),
+    				 nelts, integer_one_node);
+
+          if (!tree_int_cst_equal (max_index, integer_minus_one_node))
+
+    	  if (tree_int_cst_equal (size_zero_node, max_index))
+
+    				max_index);
+
+    	  ce.value = build_zero_init_1 (TREE_TYPE (type),
+    					 /*nelts=*/NULL_TREE,
+    					 static_storage_p, NULL_TREE);
+
+max_index = fold_build2_loc (input_location,
+    				 MINUS_EXPR, TREE_TYPE (nelts),
+    				 nelts, integer_one_node);
+
+          if (!tree_int_cst_equal (max_index, integer_minus_one_node))
+
+    	  if (tree_int_cst_equal (size_zero_node, max_index))
+
+    				max_index);
+
+    	  ce.value = build_zero_init_1 (TREE_TYPE (type),
+    					 /*nelts=*/NULL_TREE,
+    					 static_storage_p, NULL_TREE);
+
+max_index = fold_build2_loc (input_location,
+    				 MINUS_EXPR, TREE_TYPE (nelts),
+    				 nelts, integer_one_node);
+
+          if (!tree_int_cst_equal (max_index, integer_minus_one_node))
+
+    	  if (tree_int_cst_equal (size_zero_node, max_index))
+
+    				max_index);
+
+    	  ce.value = build_zero_init_1 (TREE_TYPE (type),
+    					 /*nelts=*/NULL_TREE,
+    					 static_storage_p, NULL_TREE);
+
+max_index = fold_build2_loc (input_location,
+    				 MINUS_EXPR, TREE_TYPE (nelts),
+    				 nelts, integer_one_node);
+
+          if (!tree_int_cst_equal (max_index, integer_minus_one_node))
+
+    	  if (tree_int_cst_equal (size_zero_node, max_index))
+
+    				max_index);
+
+    	  ce.value = build_zero_init_1 (TREE_TYPE (type),
+    					 /*nelts=*/NULL_TREE,
+    					 static_storage_p, NULL_TREE);
+

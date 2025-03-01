@@ -1,0 +1,5 @@
+Commit:	d50f259
+./gcc/cp/decl2.cc	856,856
+./gcc/cp/decl2.cc	858,858
+Commit:	3b7eecc
+./gcc/cp/friend.cc	664,664

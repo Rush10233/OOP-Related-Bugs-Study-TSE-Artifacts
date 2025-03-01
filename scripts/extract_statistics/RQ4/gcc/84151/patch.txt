@@ -1,0 +1,27 @@
+{
+    		  /* But avoid the implicit lvalue-rvalue conversion when 'a'
+    		     is volatile.  */
+    		  tree a = instance;
+    		  if (TREE_THIS_VOLATILE (a))
+    		    a = build_this (a);
+    		  call = build2 (COMPOUND_EXPR, TREE_TYPE (call), a, call);
+    		}
+
+{
+    		  /* But avoid the implicit lvalue-rvalue conversion when 'a'
+    		     is volatile.  */
+    		  tree a = instance;
+    		  if (TREE_THIS_VOLATILE (a))
+    		    a = build_this (a);
+    		  call = build2 (COMPOUND_EXPR, TREE_TYPE (call), a, call);
+    		}
+
+{
+    		  /* But avoid the implicit lvalue-rvalue conversion when 'a'
+    		     is volatile.  */
+    		  tree a = instance;
+    		  if (TREE_THIS_VOLATILE (a))
+    		    a = build_this (a);
+    		  call = build2 (COMPOUND_EXPR, TREE_TYPE (call), a, call);
+    		}
+

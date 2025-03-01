@@ -1,0 +1,31 @@
+ParseDeclaratorInternal(D, &Parser::ParseDirectDeclarator);
+    }
+    
+
+      if (Kind == tok::star || Kind == tok::caret)
+        return true;
+    
+      if (!Lang.CPlusPlus)
+        return false;
+    
+
+    }
+    
+    /// ParseDeclaratorInternal - Parse a C or C++ declarator. The direct-declarator
+
+    
+      tok::TokenKind Kind = Tok.getKind();
+      // Not a pointer, C++ reference, or block.
+
+        if (DirectDeclParser)
+          (this->*DirectDeclParser)(D);
+        return;
+
+              !D.hasGroupingParens() &&
+              !Actions.containsUnexpandedParameterPacks(D))) {
+          SourceLocation EllipsisLoc = ConsumeToken();
+
+            // The ellipsis was put in the wrong place. Recover, and explain to
+            // the user what they should have done.
+            ParseDeclarator(D);
+

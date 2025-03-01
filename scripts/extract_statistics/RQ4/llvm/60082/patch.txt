@@ -1,0 +1,30 @@
+- Work around with a clang coverage crash which happens when visiting
+      expressions/statements with invalid source locations in non-assert builds.
+
+    - Fix a stack overflow issue when evaluating ``consteval`` default arguments.
+      (`#60082` <https://github.com/llvm/llvm-project/issues/60082>`_)
+
+      runWithSufficientStackSpace(CallLoc, [&] {
+        MarkDeclarationsReferencedInExpr(Init, /*SkipLocalVariables=*/true);
+      });
+
+          ExprResult Res;
+          runWithSufficientStackSpace(CallLoc, [&] {
+            Res = Immediate.TransformInitializer(Param->getInit(),
+                                                 /*NotCopy=*/false);
+          });
+
+        ExprResult Res;
+        runWithSufficientStackSpace(Loc, [&] {
+          Res = Immediate.TransformInitializer(Field->getInClassInitializer(),
+                                               /*CXXDirectInit=*/false);
+        });
+
+          runWithSufficientStackSpace(Loc, [&] {
+            MarkDeclarationsReferencedInExpr(E, /*SkipLocalVariables=*/false);
+          });
+
+            runWithSufficientStackSpace(Init->getSourceLocation(), [&]() {
+              MarkDeclarationsReferencedInExpr(Init->getInit());
+            });
+

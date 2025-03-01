@@ -1,0 +1,16 @@
+"use of default argument to function %0 that is declared later in class %1">;
+    def note_default_argument_declared_here : Note<
+      "default argument declared here">;
+
+    
+    def ext_param_promoted_not_compatible_with_prototype : ExtWarn<
+      "%diff{promoted type $ of K&R function parameter is not compatible with the "
+
+        }
+      }
+    
+
+      // If the default expression creates temporaries, we need to
+      // push them to the current stack of expression temporaries so they'll
+      // be properly destroyed.
+

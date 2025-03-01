@@ -1,0 +1,88 @@
+#include "llvm/IR/Metadata.h"
+
+    llvm::DINodeArray CGDebugInfo::CollectVarTemplateParams(const VarDecl *VL,
+        llvm::DIFile *Unit) {
+      if (auto *TS = dyn_cast<VarTemplateSpecializationDecl>(VL)) {
+        auto T = TS->getSpecializedTemplateOrPartial();
+        auto TA = TS->getTemplateArgs().asArray();
+        // Collect parameters for a partial specialization
+        if (T.is<VarTemplatePartialSpecializationDecl *>()) {
+          const TemplateParameterList *TList =
+            T.get<VarTemplatePartialSpecializationDecl *>()
+            ->getTemplateParameters();
+          return CollectTemplateParams(TList, TA, Unit);
+        }
+    
+        // Collect parameters for an explicit specialization
+        if (T.is<VarTemplateDecl *>()) {
+          const TemplateParameterList *TList = T.get<VarTemplateDecl *>()
+            ->getTemplateParameters();
+          return CollectTemplateParams(TList, TA, Unit);
+        }
+      }
+      return llvm::DINodeArray();
+    }
+    
+
+                                          llvm::MDTuple *&TemplateParameters,
+
+      if (isa<VarTemplateSpecializationDecl>(VD)) {
+        llvm::DINodeArray parameterNodes = CollectVarTemplateParams(VD, &*Unit);
+        TemplateParameters = parameterNodes.get();
+      } else {
+        TemplateParameters = nullptr;
+      }
+    
+
+      llvm::MDTuple *TemplateParameters = nullptr;
+
+      collectVarDeclProps(VD, Unit, Line, T, Name, LinkageName, TemplateParameters,
+                          DContext);
+
+          !VD->isExternallyVisible(), nullptr, TemplateParameters, Align);
+
+      llvm::MDTuple *TemplateParameters = nullptr;
+      collectVarDeclProps(D, Unit, LineNo, T, DeclName, LinkageName,
+                          TemplateParameters, DContext);
+
+            getOrCreateStaticDataMemberDeclarationOrNull(D), TemplateParameters,
+            Align);
+
+    
+      llvm::MDTuple *TemplateParameters = nullptr;
+    
+      if (isa<VarTemplateSpecializationDecl>(VD))
+        if (VarD) {
+          llvm::DINodeArray parameterNodes = CollectVarTemplateParams(VarD, &*Unit);
+          TemplateParameters = parameterNodes.get();
+        }
+    
+
+          TemplateParameters, Align));
+
+      /// A helper function to collect debug info for function template
+      /// parameters.
+      llvm::DINodeArray CollectVarTemplateParams(const VarDecl *VD,
+                                                 llvm::DIFile *Unit);
+    
+
+                               StringRef &LinkageName,
+                               llvm::MDTuple *&TemplateParameters,
+                               llvm::DIScope *&VDContext);
+
+llvm::DIFile *Unit) {
+      // Always get the full list of parameters, not just the ones from the
+      // specialization. A partial specialization may have fewer parameters than
+      // there are arguments.
+      auto *TS = dyn_cast<VarTemplateSpecializationDecl>(VL);
+      if (!TS)
+        return llvm::DINodeArray();
+      VarTemplateDecl *T = TS->getSpecializedTemplate();
+      const TemplateParameterList *TList = T->getTemplateParameters();
+      auto TA = TS->getTemplateArgs().asArray();
+      return CollectTemplateParams(TList, TA, Unit);
+
+      // Always get the full list of parameters, not just the ones from the
+      // specialization. A partial specialization may have fewer parameters than
+      // there are arguments.
+

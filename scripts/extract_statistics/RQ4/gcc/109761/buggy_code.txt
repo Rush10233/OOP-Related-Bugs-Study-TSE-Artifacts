@@ -1,0 +1,48 @@
+(tree, tree);
+
+    	  noexcept_override_late_checks (type, decl);
+
+       noexcept-specifiers.  TYPE is the class and FNDECL is the function
+       that potentially overrides some virtual function with the same
+       signature.  */
+
+    noexcept_override_late_checks (tree type, tree fndecl)
+
+      tree binfo = TYPE_BINFO (type);
+
+(tree, tree);
+
+    	  noexcept_override_late_checks (type, decl);
+
+       noexcept-specifiers.  TYPE is the class and FNDECL is the function
+       that potentially overrides some virtual function with the same
+       signature.  */
+
+    noexcept_override_late_checks (tree type, tree fndecl)
+
+      tree binfo = TYPE_BINFO (type);
+
+(tree, tree);
+
+    	  noexcept_override_late_checks (type, decl);
+
+       noexcept-specifiers.  TYPE is the class and FNDECL is the function
+       that potentially overrides some virtual function with the same
+       signature.  */
+
+    noexcept_override_late_checks (tree type, tree fndecl)
+
+      tree binfo = TYPE_BINFO (type);
+
+(tree, tree);
+
+    	  noexcept_override_late_checks (type, decl);
+
+       noexcept-specifiers.  TYPE is the class and FNDECL is the function
+       that potentially overrides some virtual function with the same
+       signature.  */
+
+    noexcept_override_late_checks (tree type, tree fndecl)
+
+      tree binfo = TYPE_BINFO (type);
+

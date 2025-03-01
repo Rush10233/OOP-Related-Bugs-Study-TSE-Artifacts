@@ -1,0 +1,6 @@
+const TypeConstraint *TXTC = TX->getTypeConstraint();
+        const TypeConstraint *TYTC = TY->getTypeConstraint();
+        if (!TXTC != !TYTC)
+          return false;
+        if (TXTC && TYTC) {
+

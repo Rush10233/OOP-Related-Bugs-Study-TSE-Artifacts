@@ -1,0 +1,8 @@
+process_template_parm could fail. */
+      tree reqs = finish_shorthand_constraint (parm, constr);
+    
+
+    
+      /* Build the parameter node linking the parameter declaration,
+         its default argument (if any), and its constraints (if any). */
+

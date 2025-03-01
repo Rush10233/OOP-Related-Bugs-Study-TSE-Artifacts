@@ -1,0 +1,4 @@
+Commit:	1429db6
+./gcc/cp/decl.c	7865,7865
+Commit:	9ec3065
+./gcc/cp/decl.cc	7963,7963

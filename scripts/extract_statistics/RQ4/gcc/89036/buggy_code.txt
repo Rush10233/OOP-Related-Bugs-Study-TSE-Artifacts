@@ -1,0 +1,8 @@
+/* A class should never have more than one destructor.  */
+      gcc_assert (!current_fns || via_using || !DECL_DESTRUCTOR_P (method));
+    
+
+/* A class should never have more than one destructor.  */
+      gcc_assert (!current_fns || !DECL_DESTRUCTOR_P (method));
+    
+

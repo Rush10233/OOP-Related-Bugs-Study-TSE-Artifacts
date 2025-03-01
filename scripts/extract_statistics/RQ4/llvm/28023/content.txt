@@ -1,0 +1,16 @@
+if (Previous.begin() != Previous.end())
+        PrevDecl = (*Previous.begin())->getUnderlyingDecl();
+    
+
+      // If there is a previous declaration with the same name, check
+      // whether this is a valid redeclaration.
+      ClassTemplateDecl *PrevClassTemplate
+
+            // definition, as part of error recovery?
+            return true;
+          }
+
+      } else if (PrevDecl) {
+        // C++ [temp]p5:
+        //   A class template shall not have the same name as any other
+

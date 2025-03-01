@@ -1,0 +1,8 @@
+restrict pointers.  This is needed to prevent infinite recursion.  */
+
+    			    bool handle_param, bitmap handled_struct_type)
+
+    	  && TYPE_RESTRICT (decl_type))
+
+    				      handled_struct_type);
+

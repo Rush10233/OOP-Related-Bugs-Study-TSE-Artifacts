@@ -1,0 +1,9 @@
+else if (processing_template_decl && complete_type (type) == error_mark_node)
+        goto error_out;
+
+else if (processing_template_decl && complete_type (type) == error_mark_node)
+        goto error_out;
+
+else if (processing_template_decl && complete_type (type) == error_mark_node)
+        goto error_out;
+

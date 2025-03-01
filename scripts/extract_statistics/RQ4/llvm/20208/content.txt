@@ -1,0 +1,24 @@
+
+    def err_default_init_const : Error<
+      "default initialization of an object of const type %0"
+
+    def err_delete_operand : Error<"cannot delete expression of type %0">;
+    def ext_delete_void_ptr_operand : ExtWarn<
+      "cannot delete expression with pointer-to-'void' type %0">;
+
+             "Inconsistent init list check result.");
+    }
+    
+
+    bool InitializationSequence::Diagnose(Sema &S,
+                                          const InitializedEntity &Entity,
+                                          const InitializationKind &Kind,
+
+            << Entity.getName();
+        } else {
+          S.Diag(Kind.getLocation(), diag::err_default_init_const)
+
+        }
+        break;
+    
+

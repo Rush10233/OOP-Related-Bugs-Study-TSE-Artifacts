@@ -1,0 +1,42 @@
+tree type = TREE_TYPE (decl);
+
+    	    TREE_CONSTANT (decl) = true;
+
+      else if (VAR_P (decl)
+    	   && COMPLETE_TYPE_P (type)
+    	   && !TYPE_REF_P (type)
+    	   && !dependent_type_p (type)
+    	   && is_really_empty_class (type, /*ignore_vptr*/false))
+        /* We have no initializer but there's nothing to initialize anyway.
+           Treat DECL as constant due to c++/109876.  */
+        TREE_CONSTANT (decl) = true;
+
+          /* We have a constexpr variable and we're processing a template.  When
+    	 there's lifetime extension involved (for which finish_compound_literal
+    	 used to create a temporary), we'll not be able to evaluate the
+    	 variable until instantiating, so pretend it's value-dependent.  */
+          else if (DECL_DECLARED_CONSTEXPR_P (expression)
+    	       && !TREE_CONSTANT (expression))
+    	return true;
+
+tree type = TREE_TYPE (decl);
+
+    	    TREE_CONSTANT (decl) = true;
+
+      else if (VAR_P (decl)
+    	   && COMPLETE_TYPE_P (type)
+    	   && !TYPE_REF_P (type)
+    	   && !dependent_type_p (type)
+    	   && is_really_empty_class (type, /*ignore_vptr*/false))
+        /* We have no initializer but there's nothing to initialize anyway.
+           Treat DECL as constant due to c++/109876.  */
+        TREE_CONSTANT (decl) = true;
+
+          /* We have a constexpr variable and we're processing a template.  When
+    	 there's lifetime extension involved (for which finish_compound_literal
+    	 used to create a temporary), we'll not be able to evaluate the
+    	 variable until instantiating, so pretend it's value-dependent.  */
+          else if (DECL_DECLARED_CONSTEXPR_P (expression)
+    	       && !TREE_CONSTANT (expression))
+    	return true;
+

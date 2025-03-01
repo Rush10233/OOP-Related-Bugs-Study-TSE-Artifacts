@@ -1,0 +1,9 @@
+Commit:	1c786cb
+./gcc/cp/decl2.c	1832,1833
+./gcc/cp/decl2.c	2313,2317
+Commit:	9eae64d
+./gcc/cp/decl2.c	1942,1943
+./gcc/cp/decl2.c	2425,2439
+Commit:	ee336e8
+./gcc/cp/decl2.c	1942,1943
+./gcc/cp/decl2.c	2425,2439

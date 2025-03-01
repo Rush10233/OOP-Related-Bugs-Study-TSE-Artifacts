@@ -1,0 +1,44 @@
+init = add_stmt_to_compound
+    	    (init, build2 (MODIFY_EXPR, void_type_node, flag, boolean_true_node));
+    	  init = add_stmt_to_compound
+    	    (init, build_call_n (release_fn, 1, guard_addr));
+
+    	init = add_stmt_to_compound (init, set_guard (guard));
+
+          /* Use atexit to register a function for destroying this static
+    	 variable.  */
+          init = add_stmt_to_compound (init, register_dtor_fn (decl));
+
+init = add_stmt_to_compound
+    	    (init, build2 (MODIFY_EXPR, void_type_node, flag, boolean_true_node));
+    	  init = add_stmt_to_compound
+    	    (init, build_call_n (release_fn, 1, guard_addr));
+
+    	init = add_stmt_to_compound (init, set_guard (guard));
+
+          /* Use atexit to register a function for destroying this static
+    	 variable.  */
+          init = add_stmt_to_compound (init, register_dtor_fn (decl));
+
+init = add_stmt_to_compound
+    	    (init, build2 (MODIFY_EXPR, void_type_node, flag, boolean_true_node));
+    	  init = add_stmt_to_compound
+    	    (init, build_call_n (release_fn, 1, guard_addr));
+
+    	init = add_stmt_to_compound (init, set_guard (guard));
+
+          /* Use atexit to register a function for destroying this static
+    	 variable.  */
+          init = add_stmt_to_compound (init, register_dtor_fn (decl));
+
+init = add_stmt_to_compound
+    	    (init, build2 (MODIFY_EXPR, void_type_node, flag, boolean_true_node));
+    	  init = add_stmt_to_compound
+    	    (init, build_call_n (release_fn, 1, guard_addr));
+
+    	init = add_stmt_to_compound (init, set_guard (guard));
+
+          /* Use atexit to register a function for destroying this static
+    	 variable.  */
+          init = add_stmt_to_compound (init, register_dtor_fn (decl));
+

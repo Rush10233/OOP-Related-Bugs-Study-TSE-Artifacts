@@ -1,0 +1,3 @@
+else if ((!DECL_P (decl) && !is_overloaded_fn (decl))
+    	       || TREE_CODE (decl) == USING_DECL)
+

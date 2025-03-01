@@ -1,0 +1,32 @@
+{
+          tree elt = CONSTRUCTOR_ELT (init, 0)->value;
+          if (check_narrowing (ENUM_UNDERLYING_TYPE (type), elt, complain))
+
+          else
+    	return error_mark_node;
+        }
+
+        {
+          tree elt = CONSTRUCTOR_ELT (rhs, 0)->value;
+          if (check_narrowing (ENUM_UNDERLYING_TYPE (type), elt, complain))
+
+          else
+    	rhs = error_mark_node;
+        }
+
+tree elt = CONSTRUCTOR_ELT (init, 0)->value;
+          type = cv_unqualified (type);
+          if (check_narrowing (ENUM_UNDERLYING_TYPE (type), elt, complain))
+
+          else
+    	return error_mark_node;
+        }
+
+        {
+          tree elt = CONSTRUCTOR_ELT (rhs, 0)->value;
+          if (check_narrowing (ENUM_UNDERLYING_TYPE (type), elt, complain))
+
+          else
+    	rhs = error_mark_node;
+        }
+

@@ -1,0 +1,42 @@
+basetype = DECL_CONTEXT (fn);
+
+        {
+          if (COMPLETE_TYPE_P (current_class_type))
+    	internal_error ("trying to capture %qD after closure is complete", id);
+          finish_member_declaration (member);
+        }
+
+    	  gcc_assert (!BASELINK_P (member));
+
+    				   && MAYBE_CLASS_TYPE_P (scope)
+
+    	      if (!MAYBE_CLASS_TYPE_P (scope))
+    		return error_mark_node;
+
+      else if (BASELINK_P (expr))
+
+    	  && (!currently_open_class (qualifying_class)
+    	      || TREE_CODE (expr) == BIT_NOT_EXPR))
+
+    	  && DECL_P (decl)
+    	  && any_dependent_type_attributes_p (DECL_ATTRIBUTES (decl)))
+    	/* Dependent type attributes on the decl mean that the TREE_TYPE is
+    	   wrong, so just return the identifier.  */
+    	return id_expression;
+
+    	  && !dependent_p
+
+    	       && !dependent_p
+
+    	  if (TREE_CODE (decl) == SCOPE_REF)
+    	    {
+    	      gcc_assert (same_type_p (scope, TREE_OPERAND (decl, 0)));
+    	      decl = TREE_OPERAND (decl, 1);
+    	    }
+    
+
+      gcc_assert (TREE_CODE (name) != SCOPE_REF);
+
+          if (BASELINK_QUALIFIED_P (*tp))
+    	WALK_SUBTREE (BINFO_TYPE (BASELINK_ACCESS_BINFO (*tp)));
+

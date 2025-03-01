@@ -1,0 +1,7 @@
+Commit:	660bfe6
+./gcc/cp/pt.c	29019,29019
+./gcc/cp/pt.c	29021,29021
+./gcc/cp/pt.c	29090,29091
+./gcc/cp/pt.c	29093,29093
+./gcc/cp/pt.c	29095,29097
+./gcc/cp/pt.c	29099,29101

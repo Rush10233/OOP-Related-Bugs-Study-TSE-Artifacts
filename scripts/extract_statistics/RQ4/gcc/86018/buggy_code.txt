@@ -1,0 +1,29 @@
+tree objfn = build_min (COMPONENT_REF, NULL_TREE,
+    			      instance, DECL_NAME (callop), NULL_TREE);
+
+    	    /* Avoid capturing variables in this context.  */
+    	    ++cp_unevaluated_operand;
+    	    tree a = forward_parm (tgt);
+    	    --cp_unevaluated_operand;
+    
+
+    	    if (decltype_call)
+    	      CALL_EXPR_ARG (decltype_call, ix) = unshare_expr (a);
+
+    	    if (PACK_EXPANSION_P (a))
+    	      /* Set this after unsharing so it's not in decltype_call.  */
+    	      PACK_EXPANSION_LOCAL_P (a) = true;
+
+    	    bool thk = CALL_FROM_THUNK_P (t);
+    	    if (op || ord || rev || thk)
+
+    		if (thk)
+    		  {
+    		    if (TREE_CODE (function) == CALL_EXPR)
+    		      CALL_FROM_THUNK_P (function) = true;
+    		    else
+    		      AGGR_INIT_FROM_THUNK_P (function) = true;
+    		    /* The thunk location is not interesting.  */
+    		    SET_EXPR_LOCATION (function, UNKNOWN_LOCATION);
+    		  }
+

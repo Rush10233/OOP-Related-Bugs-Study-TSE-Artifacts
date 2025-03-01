@@ -1,0 +1,26 @@
+if ((complain & tf_warning)
+          && warn_suggest_attribute_format)
+
+          tree rhstype = TREE_TYPE (val);
+          const enum tree_code coder = TREE_CODE (rhstype);
+          const enum tree_code codel = TREE_CODE (type);
+          if ((codel == POINTER_TYPE || codel == REFERENCE_TYPE)
+    	  && coder == codel
+    	  && check_missing_format_attribute (type, rhstype))
+    	warning (OPT_Wsuggest_attribute_format,
+    		 "argument of function call might be a candidate for a format attribute");
+
+    	fn = build_cplus_new (TREE_TYPE (fn), fn, complain);
+
+        abstract_virtuals_error (decl, TREE_TYPE (fntype));
+
+       constructors and no non-trivial move constructors.  */
+
+    type_has_nontrivial_copy_init (const_tree t)
+
+      t = strip_array_types (CONST_CAST_TREE (t));
+
+          return ((TYPE_HAS_COPY_CTOR (t)
+    	       && TYPE_HAS_COMPLEX_COPY_CTOR (t))
+    	      || TYPE_HAS_COMPLEX_MOVE_CTOR (t));
+

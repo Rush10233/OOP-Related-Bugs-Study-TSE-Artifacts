@@ -1,0 +1,5 @@
+Commit:	ab8cde8
+./gcc/cp/parser.c	24713,24713
+./gcc/cp/parser.c	24970,24970
+./gcc/cp/parser.c	25032,25032
+./gcc/cp/parser.c	25068,25069

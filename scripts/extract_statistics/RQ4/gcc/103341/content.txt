@@ -1,0 +1,22 @@
+enum auto_deduction_context adc = adc_variable_type;
+          if (VAR_P (decl) && DECL_DECOMPOSITION_P (decl))
+    	adc = adc_decomp_type;
+
+          type = TREE_TYPE (decl) = do_auto_deduction (type, d_init, auto_node,
+    						   tf_warning_or_error, adc,
+
+          if (type == error_mark_node)
+    	return;
+          if (TREE_CODE (type) == FUNCTION_TYPE)
+
+enum auto_deduction_context adc = adc_variable_type;
+          if (VAR_P (decl) && DECL_DECOMPOSITION_P (decl))
+    	adc = adc_decomp_type;
+
+          type = TREE_TYPE (decl) = do_auto_deduction (type, d_init, auto_node,
+    						   tf_warning_or_error, adc,
+
+          if (type == error_mark_node)
+    	return;
+          if (TREE_CODE (type) == FUNCTION_TYPE)
+

@@ -1,0 +1,5 @@
+if (CLASS_TYPE_P (t) && CLASSTYPE_FINAL (t))
+        return 1;
+      if (fixed == NULL_TREE)
+        return 0;
+

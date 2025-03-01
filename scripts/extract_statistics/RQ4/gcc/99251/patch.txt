@@ -1,0 +1,29 @@
+/* Store EXPR and build the real null test.  */
+
+        null_test = expr;
+
+        /* Wrap EXPR in a null test.  */
+        expr = build_if_nonnull (null_test, expr, complain);
+
+    extern tree build_if_nonnull			(tree, tree, tsubst_flags_t);
+
+    tree
+    build_if_nonnull (tree test, tree result, tsubst_flags_t complain)
+
+      tree null_ptr = cp_convert (TREE_TYPE (test), nullptr_node, complain);
+      tree cond = build2 (NE_EXPR, boolean_type_node, test, null_ptr);
+    
+
+    
+      null_ptr = cp_convert (TREE_TYPE (result), nullptr_node, complain);
+      cond = build3 (COND_EXPR, TREE_TYPE (result), cond, result, null_ptr);
+    
+      /* Likewise, don't emit -Wnonnull for using the result to call
+         a member function.  */
+      TREE_NO_WARNING (cond) = 1;
+      return cond;
+
+    	  return build_if_nonnull (expr, expr1, complain);
+
+    	  return build_if_nonnull (expr, result, complain);
+

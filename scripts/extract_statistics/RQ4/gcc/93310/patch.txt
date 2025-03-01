@@ -1,0 +1,8 @@
+/* Virtual function lookup.  We don't need to do anything fancy.  */
+          return cxx_eval_constant_expression (ctx, OBJ_TYPE_REF_EXPR (t),
+    					   lval, non_constant_p, overflow_p);
+
+/* Virtual function lookup.  We don't need to do anything fancy.  */
+          return cxx_eval_constant_expression (ctx, OBJ_TYPE_REF_EXPR (t),
+    					   lval, non_constant_p, overflow_p);
+

@@ -1,0 +1,9 @@
+being bound to an rvalue expression.  If KIND is ck_rvalue or ck_base,
+
+         ck_identity, we will be binding a reference directly or decaying to
+         a pointer.  */
+
+          if (flags & LOOKUP_PREFER_RVALUE)
+    	/* Tell convert_like_real to set LOOKUP_PREFER_RVALUE.  */
+    	conv->rvaluedness_matches_p = true;
+

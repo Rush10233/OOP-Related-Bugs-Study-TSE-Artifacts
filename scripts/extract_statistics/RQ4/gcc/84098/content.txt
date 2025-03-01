@@ -1,0 +1,18 @@
+{
+    	  if (TYPE_P (t))
+    	    {
+
+    	      /* Build new CLASSTYPE_NESTED_UTDS.  */
+    
+    	      tree newtag;
+
+    		  && DECL_OMP_DECLARE_REDUCTION_P (r))
+    		cp_check_omp_declare_reduction (r);
+    	    }
+
+    		   && LAMBDA_TYPE_P (TREE_TYPE (t)))
+
+    	  else
+    	    {
+    	      /* Build new TYPE_FIELDS.  */
+

@@ -1,0 +1,8 @@
+Commit:	e171da5
+./clang/lib/Sema/SemaExprMember.cpp	1045,1052
+./clang/lib/Sema/SemaExprMember.cpp	1054,1054
+./clang/test/SemaCXX/attr-deprecated.cpp	29,29
+./clang/test/SemaCXX/attr-deprecated.cpp	34,34
+./clang/test/SemaCXX/attr-deprecated.cpp	50,50
+./clang/test/SemaCXX/attr-deprecated.cpp	62,62
+./clang/test/SemaCXX/attr-deprecated.cpp	65,65

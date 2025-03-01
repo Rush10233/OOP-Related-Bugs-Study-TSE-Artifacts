@@ -1,0 +1,10 @@
+// We can get a value-dependent initializer during error recovery.
+          (VD->getInit()->isValueDependent() || !VD->evaluateValue()))
+
+if (VD->getDescribedVarTemplate() ||
+            isa<VarTemplatePartialSpecializationDecl>(VD))
+          return false;
+
+      if (VD->getInit() && VD->getInit()->HasSideEffects(*this) &&
+          !VD->evaluateValue())
+

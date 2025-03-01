@@ -1,0 +1,9 @@
+if (conv->kind == ck_ambig)
+        return false;
+
+if (conv->kind == ck_ambig)
+        return false;
+
+if (conv->kind == ck_ambig)
+        return false;
+

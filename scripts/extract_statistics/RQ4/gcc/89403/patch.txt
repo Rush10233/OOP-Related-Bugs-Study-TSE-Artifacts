@@ -1,0 +1,21 @@
+{
+          /* Pretend that this function has been written out so that we don't try
+    	 to expand it again.  */
+          TREE_ASM_WRITTEN (fn) = 1;
+          return false;
+        }
+
+{
+          /* Pretend that this function has been written out so that we don't try
+    	 to expand it again.  */
+          TREE_ASM_WRITTEN (fn) = 1;
+          return false;
+        }
+
+{
+          /* Pretend that this function has been written out so that we don't try
+    	 to expand it again.  */
+          TREE_ASM_WRITTEN (fn) = 1;
+          return false;
+        }
+

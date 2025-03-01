@@ -1,0 +1,28 @@
+HasFromInt = GetInt(Context, FromIter, FromExpr, FromInt,
+                                  FromDefaultNonTypeDecl->getType());
+
+              HasToInt = GetInt(Context, ToIter, ToExpr, ToInt,
+                                ToDefaultNonTypeDecl->getType());
+
+            HasFromInt = GetInt(Context, FromIter, FromExpr, FromInt,
+                                FromDefaultNonTypeDecl->getType());
+
+            HasToInt = GetInt(Context, ToIter, ToExpr, ToInt,
+                              ToDefaultNonTypeDecl->getType());
+
+      /// default arguments.  If the value comes from an expression, extend the
+      /// APSInt to size of IntegerType to match the behavior in
+      /// Sema::CheckTemplateArgument
+
+                         Expr *ArgExpr, llvm::APSInt &Int, QualType IntegerType) {
+
+              Int = Int.extOrTrunc(Context.getTypeSize(IntegerType));
+
+          Int = Int.extOrTrunc(Context.getTypeSize(IntegerType));
+
+// In Sema::CheckTemplateArugment, enum template arguments value are
+          // extended to the size of the integer underlying the enum type.  This
+          // may create a size difference between the enum value and template
+          // argument value, requiring isSameValue here instead of operator==.
+          if (llvm::APSInt::isSameValue(ECD->getInitVal(), Val)) {
+

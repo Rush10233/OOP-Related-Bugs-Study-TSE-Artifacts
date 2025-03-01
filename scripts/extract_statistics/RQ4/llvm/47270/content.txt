@@ -1,0 +1,8 @@
+if (FD->isFunctionTemplateSpecialization())
+          return true;
+    
+
+      return false;
+    }
+    
+

@@ -1,0 +1,39 @@
+// Add the associated namespace for this class.
+    
+      // We don't use DeclContext::getEnclosingNamespaceContext() as this may
+      // be a locally scoped record.
+
+      // We skip out of inline namespaces. The innermost non-inline namespace
+
+      while (Ctx->isRecord() || Ctx->isTransparentContext() ||
+             Ctx->isInlineNamespace())
+
+      if (Ctx->isFileContext())
+        Namespaces.insert(Ctx->getPrimaryContext());
+
+    // lookup that involves a template argument (C++ [basic.lookup.koenig]p2).
+
+      // C++ [basic.lookup.koenig]p2, last bullet:
+
+    // Add the associated classes and namespaces for
+    // argument-dependent lookup with an argument of class type
+    // (C++ [basic.lookup.koenig]p2).
+
+      // C++ [basic.lookup.koenig]p2:
+
+      //        member, if any; and its direct and indirect base
+      //        classes. Its associated namespaces are the namespaces in
+      //        which its associated classes are defined.
+
+        //        classes are: the class itself; the class of which it is a
+        //        member, if any; and its direct and indirect base
+        //        classes. Its associated namespaces are the namespaces in
+        //        which its associated classes are defined.
+
+        //     -- If T is an enumeration type, its associated namespace is
+        //        the namespace in which it is defined. If it is class
+        //        member, its associated class is the member's class; else
+        //        it has no associated class.
+
+          // Add the associated namespace for this class.
+

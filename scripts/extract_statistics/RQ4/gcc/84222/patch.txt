@@ -1,0 +1,111 @@
+extern void cp_warn_deprecated_use		(tree);
+
+        cp_warn_deprecated_use (type);
+
+    	cp_warn_deprecated_use (type);
+
+    	    tree pushed_scope = NULL_TREE;
+    	    if (funcdecl_p
+    		&& decl_context != FIELD
+    		&& inner_declarator->u.id.qualifying_scope
+    		&& CLASS_TYPE_P (inner_declarator->u.id.qualifying_scope))
+    	      pushed_scope
+    		= push_scope (inner_declarator->u.id.qualifying_scope);
+    
+    	    arg_types = grokparms (declarator->u.function.parameters, &parms);
+    
+    	    if (pushed_scope)
+    	      pop_scope (pushed_scope);
+
+    		cp_warn_deprecated_use (deptype);
+
+    /* Wrapper around warn_deprecated_use that doesn't warn for
+       current_class_type.  */
+    
+    void
+    cp_warn_deprecated_use (tree node)
+    {
+      if (TYPE_P (node)
+          && current_class_type
+          && TYPE_MAIN_VARIANT (node) == current_class_type)
+        return;
+      warn_deprecated_use (node, NULL_TREE);
+    }
+    
+
+    	cp_warn_deprecated_use (type);
+
+extern void cp_warn_deprecated_use		(tree);
+
+        cp_warn_deprecated_use (type);
+
+    	cp_warn_deprecated_use (type);
+
+    	    tree pushed_scope = NULL_TREE;
+    	    if (funcdecl_p
+    		&& decl_context != FIELD
+    		&& inner_declarator->u.id.qualifying_scope
+    		&& CLASS_TYPE_P (inner_declarator->u.id.qualifying_scope))
+    	      pushed_scope
+    		= push_scope (inner_declarator->u.id.qualifying_scope);
+    
+    	    arg_types = grokparms (declarator->u.function.parameters, &parms);
+    
+    	    if (pushed_scope)
+    	      pop_scope (pushed_scope);
+
+    		cp_warn_deprecated_use (deptype);
+
+    /* Wrapper around warn_deprecated_use that doesn't warn for
+       current_class_type.  */
+    
+    void
+    cp_warn_deprecated_use (tree node)
+    {
+      if (TYPE_P (node)
+          && current_class_type
+          && TYPE_MAIN_VARIANT (node) == current_class_type)
+        return;
+      warn_deprecated_use (node, NULL_TREE);
+    }
+    
+
+    	cp_warn_deprecated_use (type);
+
+extern void cp_warn_deprecated_use		(tree);
+
+        cp_warn_deprecated_use (type);
+
+    	cp_warn_deprecated_use (type);
+
+    	    tree pushed_scope = NULL_TREE;
+    	    if (funcdecl_p
+    		&& decl_context != FIELD
+    		&& inner_declarator->u.id.qualifying_scope
+    		&& CLASS_TYPE_P (inner_declarator->u.id.qualifying_scope))
+    	      pushed_scope
+    		= push_scope (inner_declarator->u.id.qualifying_scope);
+    
+    	    arg_types = grokparms (declarator->u.function.parameters, &parms);
+    
+    	    if (pushed_scope)
+    	      pop_scope (pushed_scope);
+
+    		cp_warn_deprecated_use (deptype);
+
+    /* Wrapper around warn_deprecated_use that doesn't warn for
+       current_class_type.  */
+    
+    void
+    cp_warn_deprecated_use (tree node)
+    {
+      if (TYPE_P (node)
+          && current_class_type
+          && TYPE_MAIN_VARIANT (node) == current_class_type)
+        return;
+      warn_deprecated_use (node, NULL_TREE);
+    }
+    
+
+    	cp_warn_deprecated_use (type);
+

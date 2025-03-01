@@ -1,0 +1,116 @@
+/* If the innermost arguments are dependent, or if the outer arguments
+         are dependent and are needed by the constraints, we can't check
+         satisfaction yet so pretend they're satisfied for now.  */
+      if (uses_template_parms (args)
+          && ((DECL_TEMPLATE_INFO (t)
+    	   && PRIMARY_TEMPLATE_P (DECL_TI_TEMPLATE (t))
+    	   && (TMPL_ARGS_DEPTH (args) == 1
+    	       || uses_template_parms (INNERMOST_TEMPLATE_ARGS (args))))
+    	  || uses_outer_template_parms_in_constraints (t)))
+
+      /* If the innermost arguments are dependent, or if the outer arguments
+         are dependent and are needed by the constraints, we can't check
+         satisfaction yet so pretend they're satisfied for now.  */
+      if (uses_template_parms (args)
+          && (TMPL_ARGS_DEPTH (args) == 1
+    	  || uses_template_parms (INNERMOST_TEMPLATE_ARGS (args))
+    	  || uses_outer_template_parms_in_constraints (t)))
+
+    extern bool uses_outer_template_parms_in_constraints (tree);
+
+          if (tinfo
+    	  && TREE_CODE (TI_TEMPLATE (tinfo)) == TEMPLATE_DECL
+    	  && PRIMARY_TEMPLATE_P (TI_TEMPLATE (tinfo))
+
+    static bool
+
+      if (uses_outer_template_parms_in_constraints (decl))
+        return true;
+      return false;
+    }
+    
+    /* Returns true if the constraints of DECL depend on any template parameters
+       from its enclosing scope.  */
+    
+    bool
+    uses_outer_template_parms_in_constraints (tree decl)
+    {
+
+      if (!ci)
+        return false;
+      int depth = template_class_depth (CP_DECL_CONTEXT (decl));
+      if (depth == 0)
+        return false;
+      return for_each_template_parm (ci, template_parm_outer_level,
+    				 &depth, NULL, /*nondeduced*/true);
+
+      /* Otherwise, its constraints could still depend on outer template parameters
+         from its (dependent) scope.  */
+      if (TREE_CODE (expression) == FUNCTION_DECL
+          /* As an optimization, check this cheaper sufficient condition first.
+    	 (At this point we've established that we're looking at a member of
+    	 a dependent class, so it makes sense to start treating say undeduced
+    	 auto as dependent.)  */
+          && !dependent_type_p (TREE_TYPE (expression))
+          && uses_outer_template_parms_in_constraints (expression))
+        return true;
+    
+
+/* If the innermost arguments are dependent, or if the outer arguments
+         are dependent and are needed by the constraints, we can't check
+         satisfaction yet so pretend they're satisfied for now.  */
+      if (uses_template_parms (args)
+          && ((DECL_TEMPLATE_INFO (t)
+    	   && PRIMARY_TEMPLATE_P (DECL_TI_TEMPLATE (t))
+    	   && (TMPL_ARGS_DEPTH (args) == 1
+    	       || uses_template_parms (INNERMOST_TEMPLATE_ARGS (args))))
+    	  || uses_outer_template_parms_in_constraints (t)))
+
+      /* If the innermost arguments are dependent, or if the outer arguments
+         are dependent and are needed by the constraints, we can't check
+         satisfaction yet so pretend they're satisfied for now.  */
+      if (uses_template_parms (args)
+          && (TMPL_ARGS_DEPTH (args) == 1
+    	  || uses_template_parms (INNERMOST_TEMPLATE_ARGS (args))
+    	  || uses_outer_template_parms_in_constraints (t)))
+
+    extern bool uses_outer_template_parms_in_constraints (tree);
+
+          if (tinfo
+    	  && TREE_CODE (TI_TEMPLATE (tinfo)) == TEMPLATE_DECL
+    	  && PRIMARY_TEMPLATE_P (TI_TEMPLATE (tinfo))
+
+    static bool
+
+      if (uses_outer_template_parms_in_constraints (decl))
+        return true;
+      return false;
+    }
+    
+    /* Returns true if the constraints of DECL depend on any template parameters
+       from its enclosing scope.  */
+    
+    bool
+    uses_outer_template_parms_in_constraints (tree decl)
+    {
+
+      if (!ci)
+        return false;
+      int depth = template_class_depth (CP_DECL_CONTEXT (decl));
+      if (depth == 0)
+        return false;
+      return for_each_template_parm (ci, template_parm_outer_level,
+    				 &depth, NULL, /*nondeduced*/true);
+
+      /* Otherwise, its constraints could still depend on outer template parameters
+         from its (dependent) scope.  */
+      if (TREE_CODE (expression) == FUNCTION_DECL
+          /* As an optimization, check this cheaper sufficient condition first.
+    	 (At this point we've established that we're looking at a member of
+    	 a dependent class, so it makes sense to start treating say undeduced
+    	 auto as dependent.)  */
+          && !dependent_type_p (TREE_TYPE (expression))
+          && uses_outer_template_parms_in_constraints (expression))
+        return true;
+    
+

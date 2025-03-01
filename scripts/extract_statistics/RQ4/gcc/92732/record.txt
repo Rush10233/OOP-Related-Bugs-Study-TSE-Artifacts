@@ -1,0 +1,15 @@
+Commit:	ae1b211
+./gcc/testsuite/g++.dg/cpp2a/bitfield3.C	18,18
+./gcc/testsuite/g++.dg/cpp2a/bitfield3.C	22,22
+./gcc/testsuite/g++.dg/cpp2a/bitfield3.C	31,31
+./gcc/testsuite/g++.dg/cpp2a/bitfield3.C	35,35
+Commit:	e0daa2c
+./gcc/testsuite/g++.dg/cpp2a/bitfield3.C	18,18
+./gcc/testsuite/g++.dg/cpp2a/bitfield3.C	22,22
+./gcc/testsuite/g++.dg/cpp2a/bitfield3.C	31,31
+./gcc/testsuite/g++.dg/cpp2a/bitfield3.C	35,35
+Commit:	1aafdd7
+./gcc/testsuite/g++.dg/cpp2a/bitfield3.C	18,18
+./gcc/testsuite/g++.dg/cpp2a/bitfield3.C	22,22
+./gcc/testsuite/g++.dg/cpp2a/bitfield3.C	31,31
+./gcc/testsuite/g++.dg/cpp2a/bitfield3.C	35,35

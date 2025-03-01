@@ -1,0 +1,16 @@
+info.in_decl = t;
+    
+      if (info.quiet ())
+
+          return *result;
+    
+      /* Get the normalized constraints.  */
+
+        }
+    
+      if (info.quiet ())
+
+    
+      return result;
+    }
+

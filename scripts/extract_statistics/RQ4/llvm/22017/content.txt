@@ -1,0 +1,53 @@
+Tree.SetDefault(FromIter.isEnd() && FromExpr, ToIter.isEnd() && ToExpr);
+          if (FromDefaultNonTypeDecl->getType()->isIntegralOrEnumerationType()) {
+            if (FromExpr)
+
+            if (ToExpr)
+
+          }
+          if (HasFromInt && HasToInt) {
+            Tree.SetNode(FromInt, ToInt, HasFromInt, HasToInt);
+
+    
+        if (HasFromInt || HasToInt) {
+          if (!HasFromInt && FromExpr)
+
+          if (!HasToInt && ToExpr)
+
+          Tree.SetNode(FromInt, ToInt, HasFromInt, HasToInt);
+          if (HasFromInt && HasToInt) {
+            Tree.SetSame(FromInt == ToInt);
+
+      }
+    
+      /// GetInt - Retrieves the template integer argument, including evaluating
+
+      static bool GetInt(ASTContext &Context, const TSTiterator &Iter,
+
+        // Default, value-depenedent expressions require fetching
+        // from the desugared TemplateArgument, otherwise expression needs to
+        // be evaluatable.
+
+            case TemplateArgument::Expression:
+              ArgExpr = Iter.getDesugar().getAsExpr();
+              Int = ArgExpr->EvaluateKnownConstInt(Context);
+
+              return true;
+            default:
+              llvm_unreachable("Unexpected template argument kind");
+          }
+        } else if (ArgExpr->isEvaluatable(Context)) {
+          Int = ArgExpr->EvaluateKnownConstInt(Context);
+
+          return true;
+        }
+    
+
+
+      if (const EnumType *ET = T->getAs<EnumType>()) {
+        for (const EnumConstantDecl* ECD : ET->getDecl()->enumerators()) {
+
+            ECD->printQualifiedName(Out, Policy);
+            return;
+          }
+

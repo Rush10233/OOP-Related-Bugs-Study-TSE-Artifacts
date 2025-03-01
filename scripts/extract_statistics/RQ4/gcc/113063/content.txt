@@ -1,0 +1,55 @@
+{
+      int cp_unevaluated_operand;
+      int c_inhibit_evaluation_warnings;
+
+    
+      static local_state_t
+      save_and_clear ()
+
+        ::cp_unevaluated_operand = 0;
+        s.c_inhibit_evaluation_warnings = ::c_inhibit_evaluation_warnings;
+        ::c_inhibit_evaluation_warnings = 0;
+
+        return s;
+      }
+    
+
+      {
+        ::cp_unevaluated_operand = this->cp_unevaluated_operand;
+        ::c_inhibit_evaluation_warnings = this->c_inhibit_evaluation_warnings;
+
+      }
+    };
+    
+
+void
+    synthesize_method (tree fndecl)
+    {
+      bool need_body = true;
+      tree stmt;
+      location_t save_input_location = input_location;
+
+         it now.  */
+      push_deferring_access_checks (dk_no_deferred);
+    
+
+    
+      input_location = DECL_SOURCE_LOCATION (fndecl);
+    
+
+    
+      input_location = save_input_location;
+    
+
+    
+      pop_deferring_access_checks ();
+    
+
+it now.  */
+      push_deferring_access_checks (dk_no_deferred);
+    
+
+      if (! context)
+        push_to_top_level ();
+      else if (nested)
+

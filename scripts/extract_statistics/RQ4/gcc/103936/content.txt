@@ -1,0 +1,8 @@
+ret = GS_OK;
+          break;
+    
+
+        case THROW_EXPR:
+          /* FIXME communicate throw type to back end, probably by moving
+    	 THROW_EXPR into ../tree.def.  */
+

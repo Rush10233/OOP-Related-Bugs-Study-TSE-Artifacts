@@ -1,0 +1,8 @@
+//   If the type specifier in a friend declaration designates a (possibly
+      //   cv-qualified) class type, that class is declared as a friend; otherwise,
+      //   the friend declaration is ignored.
+
+    }
+    
+    /// Handle a friend tag declaration where the scope specifier was
+

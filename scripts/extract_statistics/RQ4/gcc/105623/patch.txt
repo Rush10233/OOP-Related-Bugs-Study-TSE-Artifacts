@@ -1,0 +1,30 @@
+tree fns = BASELINK_FUNCTIONS (decl);
+          if (really_overloaded_fn (fns))
+
+          fns = OVL_FIRST (fns);
+          if (!mark_used (fns, complain))
+    	return false;
+          /* We might have deduced its return type.  */
+          TREE_TYPE (decl) = TREE_TYPE (fns);
+          return true;
+
+    	  /* Force auto deduction now.  Use tf_none to avoid redundant
+    	     deprecated warning on deprecated-14.C.  */
+    	  mark_single_function (arg, tf_none);
+    
+
+tree fns = BASELINK_FUNCTIONS (decl);
+          if (really_overloaded_fn (fns))
+
+          fns = OVL_FIRST (fns);
+          if (!mark_used (fns, complain))
+    	return false;
+          /* We might have deduced its return type.  */
+          TREE_TYPE (decl) = TREE_TYPE (fns);
+          return true;
+
+    	  /* Force auto deduction now.  Use tf_none to avoid redundant
+    	     deprecated warning on deprecated-14.C.  */
+    	  mark_single_function (arg, tf_none);
+    
+

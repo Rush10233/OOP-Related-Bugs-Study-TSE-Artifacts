@@ -1,0 +1,8 @@
+{
+          tree ptype = non_reference (TREE_VALUE (parmlist));
+          tree dtype = DECL_CONTEXT (fn);
+
+    	{
+    	  viable = false;
+    	  reason = inherited_ctor_rejection ();
+

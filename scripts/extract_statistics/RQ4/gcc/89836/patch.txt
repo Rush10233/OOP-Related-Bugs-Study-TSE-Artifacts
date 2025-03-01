@@ -1,0 +1,45 @@
+/* Worker for build_converted_constant_expr.  */
+
+    static tree
+    build_converted_constant_expr_internal (tree type, tree expr,
+    					int flags, tsubst_flags_t complain)
+
+    			      /*c_cast_p=*/false, flags, complain);
+
+    /* Subroutine of convert_nontype_argument.
+    
+       EXPR is an expression used in a context that requires a converted
+       constant-expression, such as a template non-type parameter.  Do any
+       necessary conversions (that are permitted for converted
+       constant-expressions) to convert it to the desired type.
+    
+       This function doesn't consider explicit conversion functions.  If
+       you mean to use "a contextually converted constant expression of type
+       bool", use build_converted_constant_bool_expr.
+    
+       If conversion is successful, returns the converted expression;
+       otherwise, returns error_mark_node.  */
+    
+    tree
+    build_converted_constant_expr (tree type, tree expr, tsubst_flags_t complain)
+    {
+      return build_converted_constant_expr_internal (type, expr, LOOKUP_IMPLICIT,
+    						 complain);
+    }
+    
+    /* Used to create "a contextually converted constant expression of type
+       bool".  This differs from build_converted_constant_expr in that it
+       also considers explicit conversion functions.  */
+    
+    tree
+    build_converted_constant_bool_expr (tree expr, tsubst_flags_t complain)
+    {
+      return build_converted_constant_expr_internal (boolean_type_node, expr,
+    						 LOOKUP_NORMAL, complain);
+    }
+    
+
+    extern tree build_converted_constant_bool_expr	(tree, tsubst_flags_t);
+
+      expr = build_converted_constant_bool_expr (expr, complain);
+

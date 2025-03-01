@@ -1,0 +1,57 @@
+return;
+        }
+    
+
+    
+      if (DECL_DEFAULTED_IN_CLASS_P (fn)
+          && DECL_DECLARED_CONSTEXPR_P (implicit_fn))
+
+        }
+    }
+    
+    /* Returns true iff FN can be explicitly defaulted, and gives any
+       errors if defaulting FN is ill-formed.  */
+    
+
+      parser->unparsed_queues->last ().funs_with_definitions
+    #define unparsed_nsdmis \
+      parser->unparsed_queues->last ().nsdmis
+    #define unparsed_noexcepts \
+      parser->unparsed_queues->last ().noexcepts
+    
+    static void
+    push_unparsed_function_queues (cp_parser *parser)
+    {
+
+      vec_safe_push (parser->unparsed_queues, e);
+    }
+    
+
+    	     error recovery (c++/71169, c++/71832).  */
+    	  vec_safe_truncate (unparsed_funs_with_default_args, 0);
+    	  vec_safe_truncate (unparsed_nsdmis, 0);
+    	  vec_safe_truncate (unparsed_funs_with_definitions, 0);
+    	}
+    
+
+          if (pushed_scope)
+    	pop_scope (pushed_scope);
+    
+          /* If there are noexcept-specifiers that have not yet been processed,
+    	 take care of them now.  */
+          class_type = NULL_TREE;
+
+    	  cp_parser_late_parsing_for_member (parser, decl);
+          vec_safe_truncate (unparsed_funs_with_definitions, 0);
+        }
+    
+      /* Put back any saved access checks.  */
+      pop_deferring_access_checks ();
+
+         FIELD_DECLs appear in this list in declaration order.  */
+      vec<tree, va_gc> *nsdmis;
+    
+      /* Functions with noexcept-specifiers that require post-processing.  */
+      vec<tree, va_gc> *noexcepts;
+    };
+

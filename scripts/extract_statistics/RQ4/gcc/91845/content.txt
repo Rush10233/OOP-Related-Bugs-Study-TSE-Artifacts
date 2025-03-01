@@ -1,0 +1,19 @@
+{
+    #define RECUR(t) mark_use ((t), rvalue_p, read_p, loc, reject_builtin)
+    
+
+        return expr;
+    
+      if (reject_builtin && reject_gcc_builtin (expr, loc))
+
+      tree binfo;
+      tree ctype;
+    
+      datum = mark_lvalue_use (datum);
+      component = mark_rvalue_use (component);
+    
+
+      ptrmem_type = TREE_TYPE (component);
+      if (!TYPE_PTRMEM_P (ptrmem_type))
+        {
+

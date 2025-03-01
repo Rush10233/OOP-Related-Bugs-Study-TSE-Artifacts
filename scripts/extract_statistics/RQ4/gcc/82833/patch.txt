@@ -1,0 +1,40 @@
+TREE_PURPOSE (p) = template_parm_to_arg (p);
+
+      tree arg = template_parm_to_arg (decl);
+
+    /* Takes a TEMPLATE_PARM_P or DECL_TEMPLATE_PARM_P node or a TREE_LIST
+       thereof, and converts it into an argument suitable to be passed to
+       the type substitution functions.  Note that if the TREE_LIST contains
+       an error_mark node, the returned argument is error_mark_node.  */
+
+      if (!t)
+        return NULL_TREE;
+
+      if (TREE_CODE (t) == TREE_LIST)
+        t = TREE_VALUE (t);
+
+      if (error_operand_p (t))
+
+      if (DECL_P (t) && DECL_TEMPLATE_PARM_P (t))
+
+          if (TREE_CODE (t) == TYPE_DECL
+    	  || TREE_CODE (t) == TEMPLATE_DECL)
+    	t = TREE_TYPE (t);
+          else
+    	t = DECL_INITIAL (t);
+        }
+    
+      gcc_assert (TEMPLATE_PARM_P (t));
+
+      if (TREE_CODE (t) == TEMPLATE_TYPE_PARM
+          || TREE_CODE (t) == TEMPLATE_TEMPLATE_PARM)
+        {
+
+      if (TREE_CODE (t) == BOUND_TEMPLATE_TEMPLATE_PARM)
+        /* We want the underlying TEMPLATE_TEMPLATE_PARM, not the
+           BOUND_TEMPLATE_TEMPLATE_PARM itself.  */
+        t = TREE_TYPE (TEMPLATE_TEMPLATE_PARM_TEMPLATE_DECL (t));
+    
+
+    	  TREE_VEC_ELT (TREE_OPERAND (id, 1), 0) = t;
+

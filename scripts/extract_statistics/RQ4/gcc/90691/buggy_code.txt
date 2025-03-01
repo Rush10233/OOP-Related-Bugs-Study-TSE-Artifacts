@@ -1,0 +1,35 @@
+bool /*lval*/,
+
+          r = cxx_eval_constant_expression (ctx, r, false, non_constant_p,
+
+          if (r != t || TREE_CONSTANT (t) || !manifestly_const_eval)
+    	return r;
+          /* If we cached this as non-constant and we need a constant value, try
+    */
+
+      r = cxx_eval_outermost_constant_expr (t, true, true, false, false, decl);
+
+/* Whether we should error on a non-constant expression or fail quietly.  */
+
+    get_fundef_copy (constexpr_fundef *fundef)
+
+          else
+
+    	  tree copy = get_fundef_copy (new_call.fundef);
+
+    				  tree object = NULL_TREE)
+
+    			manifestly_const_eval || !allow_non_constant };
+
+      instantiate_constexpr_fns (r);
+
+       as per P0595.  */
+
+    maybe_constant_value (tree t, tree decl, bool manifestly_const_eval)
+
+        return cxx_eval_outermost_constant_expr (t, true, true, true, false, decl);
+
+          return r;
+
+    extern tree maybe_constant_value		(tree, tree = NULL_TREE, bool = false);
+

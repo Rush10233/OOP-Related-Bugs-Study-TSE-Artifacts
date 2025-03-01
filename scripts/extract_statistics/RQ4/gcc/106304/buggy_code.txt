@@ -1,0 +1,2 @@
+&& CP_DECL_CONTEXT (fndecl) == global_namespace);
+

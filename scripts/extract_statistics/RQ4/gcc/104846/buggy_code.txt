@@ -1,0 +1,2 @@
+if (!staticp && !friendp && TREE_CODE (type) != METHOD_TYPE)
+

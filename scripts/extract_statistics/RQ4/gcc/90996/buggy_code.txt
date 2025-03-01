@@ -1,0 +1,22 @@
+if (TREE_CODE (ce->value) == CONSTRUCTOR
+    	  && CONSTRUCTOR_PLACEHOLDER_BOUNDARY (ce->value))
+    	{
+    	  /* Shift CONSTRUCTOR_PLACEHOLDER_BOUNDARY from the element initializer
+    	     up to the array initializer, so that the call to
+    	     replace_placeholders from store_init_value can resolve any
+    	     PLACEHOLDER_EXPRs inside this element initializer.  */
+    	  CONSTRUCTOR_PLACEHOLDER_BOUNDARY (ce->value) = 0;
+    	  CONSTRUCTOR_PLACEHOLDER_BOUNDARY (init) = 1;
+    	}
+    
+
+    	    else if (TREE_CODE (next) == CONSTRUCTOR
+    		     && CONSTRUCTOR_PLACEHOLDER_BOUNDARY (next))
+    	      {
+    		/* As above.  */
+    		CONSTRUCTOR_PLACEHOLDER_BOUNDARY (next) = 0;
+    		CONSTRUCTOR_PLACEHOLDER_BOUNDARY (init) = 1;
+    	      }
+
+while (TREE_CODE (op0) == COMPONENT_REF)
+

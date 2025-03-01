@@ -1,0 +1,6 @@
+static bool isQualifiedMemberAccess(Expr *E) {
+
+        if (!First->getType()->isOverloadableType()) {
+          // The argument is not of overloadable type, so try to create a
+          // built-in unary operation.
+

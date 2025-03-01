@@ -1,0 +1,10 @@
+Commit:	f1d42e8
+./gcc/cp/name-lookup.c	1245,1255
+./gcc/cp/parser.c	7249,7250
+./gcc/cp/semantics.c	3808,3810
+Commit:	e5d35ca
+./gcc/cp/name-lookup.c	1243,1253
+./gcc/cp/parser.c	7159,7160
+./gcc/cp/semantics.c	3787,3789
+Commit:	410902c
+Commit:	3f8362f

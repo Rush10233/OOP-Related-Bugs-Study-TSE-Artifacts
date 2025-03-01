@@ -1,0 +1,5 @@
+Commit:	bf8ee9e
+./gcc/cp/mangle.c	2871,2871
+./gcc/cp/mangle.c	2873,2873
+./gcc/cp/mangle.c	3352,3352
+./gcc/doc/invoke.texi	2840,2840

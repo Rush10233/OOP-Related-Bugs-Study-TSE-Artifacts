@@ -1,0 +1,40 @@
+// FIXME: This does not include the array filler expression.
+
+      /// \brief If this is an array, vector, or complex number element, get the
+      /// element's index.
+      unsigned getElementIndex() const {
+        assert(getKind() == EK_ArrayElement || getKind() == EK_VectorElement ||
+               getKind() == EK_ComplexElement);
+        return Index;
+      }
+
+      /// \param TopLevelOfInitList true if we are initializing from an expression
+      ///        at the top level inside an initializer list. This disallows
+      ///        narrowing conversions in C++11 onwards.
+
+                             bool TopLevelOfInitList = false);
+
+                          bool TopLevelOfInitList);
+
+      // If all elements have already been initialized, skip any further
+      // initialization.
+      llvm::ConstantInt *ConstNum = dyn_cast<llvm::ConstantInt>(NumElements);
+      if (ConstNum && ConstNum->getZExtValue() <= InitListElements) {
+        // If there was a Cleanup, deactivate it.
+        if (CleanupDominator)
+          DeactivateCleanupBlock(Cleanup, CleanupDominator);
+        return;
+      }
+    
+      assert(Init && "have trailing elements to initialize but no initializer");
+    
+
+      if (const CXXConstructExpr *CCE = dyn_cast<CXXConstructExpr>(Init)) {
+
+      if (isa<ImplicitValueInitExpr>(Init)) {
+
+      // If we have an empty initializer list, we can usually use memset.
+      if (auto *ILE = dyn_cast<InitListExpr>(Init))
+        if (ILE->getNumInits() == 0 && TryMemsetInitialization())
+          return;
+

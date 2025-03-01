@@ -1,0 +1,32 @@
+break;
+    
+        case SIZEOF_EXPR:
+
+          break;
+    
+        case COMPOUND_EXPR:
+
+      if (e == error_mark_node)
+        return error_mark_node;
+    
+
+        {
+          e = build_min (SIZEOF_EXPR, size_type_node, e);
+          TREE_SIDE_EFFECTS (e) = 0;
+
+break;
+    
+        case SIZEOF_EXPR:
+
+          break;
+    
+        case COMPOUND_EXPR:
+
+      if (e == error_mark_node)
+        return error_mark_node;
+    
+
+        {
+          e = build_min (SIZEOF_EXPR, size_type_node, e);
+          TREE_SIDE_EFFECTS (e) = 0;
+

@@ -1,0 +1,16 @@
+
+        case CALL_EXPR:
+          /* This is a call to a constructor, hence it's never zero.  */
+
+    	{
+    	  if (nonnull)
+    	    *nonnull = 1;
+
+
+        case CALL_EXPR:
+          /* This is a call to a constructor, hence it's never zero.  */
+
+    	{
+    	  if (nonnull)
+    	    *nonnull = 1;
+

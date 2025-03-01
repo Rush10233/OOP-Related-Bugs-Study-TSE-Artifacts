@@ -1,0 +1,12 @@
+Commit:	3d4c7e0
+./gcc/cp/typeck.c	3363,3366
+./gcc/cp/typeck.c	7780,7780
+./gcc/cp/typeck.c	7894,7894
+Commit:	7900237
+./gcc/cp/typeck.c	3283,3286
+./gcc/cp/typeck.c	7538,7538
+./gcc/cp/typeck.c	7651,7651
+Commit:	25ee215
+./gcc/cp/typeck.c	3363,3366
+./gcc/cp/typeck.c	7780,7780
+./gcc/cp/typeck.c	7894,7894

@@ -1,0 +1,4 @@
+Commit:	12cdb4f
+./clang/lib/Sema/SemaType.cpp	7271,7274
+./clang/lib/Sema/SemaType.cpp	7276,7287
+./clang/lib/Sema/SemaType.cpp	7290,7291

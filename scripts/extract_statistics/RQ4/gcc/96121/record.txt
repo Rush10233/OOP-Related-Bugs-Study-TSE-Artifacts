@@ -1,0 +1,10 @@
+Commit:	d315298
+./gcc/cp/init.c	44,44
+./gcc/cp/init.c	528,530
+./gcc/cp/init.c	532,532
+./gcc/cp/init.c	538,540
+./gcc/cp/init.c	780,780
+./gcc/cp/init.c	783,783
+./gcc/cp/init.c	811,811
+./gcc/cp/init.c	1320,1320
+./gcc/cp/init.c	1408,1408

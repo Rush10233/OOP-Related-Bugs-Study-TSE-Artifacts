@@ -1,0 +1,27 @@
+else if (nargs > DECL_NTPARMS (maintmpl))
+        {
+          error ("too many arguments for partial specialization %qT", type);
+          inform (DECL_SOURCE_LOCATION (maintmpl), "primary template here");
+          /* Avoid crash below.  */
+          return decl;
+        }
+    
+
+else if (nargs > DECL_NTPARMS (maintmpl))
+        {
+          error ("too many arguments for partial specialization %qT", type);
+          inform (DECL_SOURCE_LOCATION (maintmpl), "primary template here");
+          /* Avoid crash below.  */
+          return decl;
+        }
+    
+
+else if (nargs > DECL_NTPARMS (maintmpl))
+        {
+          error ("too many arguments for partial specialization %qT", type);
+          inform (DECL_SOURCE_LOCATION (maintmpl), "primary template here");
+          /* Avoid crash below.  */
+          return decl;
+        }
+    
+

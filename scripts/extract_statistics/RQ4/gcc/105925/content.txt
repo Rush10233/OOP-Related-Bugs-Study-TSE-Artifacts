@@ -1,0 +1,92 @@
+tree empty_ctor = NULL_TREE;
+      hash_set<tree, true> pset;
+    
+
+    
+      /* The conversions within the init-list aren't affected by the enclosing
+         context; they're always simple copy-initialization.  */
+
+         to corresponding TREE_TYPE (ce->index) and mark those FIELD_DECLs as
+         visited.  In the following loop then ignore already visited
+         FIELD_DECLs.  */
+
+        {
+
+    
+
+    
+
+    	}
+
+        }
+    
+      for (; field; field = next_aggregate_field (DECL_CHAIN (field)))
+        {
+          tree ftype = TREE_TYPE (field);
+          bool ok;
+    
+          if (!pset.is_empty () && field_in_pset (pset, field))
+    	continue;
+          if (i < CONSTRUCTOR_NELTS (ctor))
+    	{
+
+    	  ++i;
+    	}
+          else if (DECL_INITIAL (field))
+
+tree elt_init;
+          constructor_elt *old_cur = d->cur;
+    
+
+          check_array_designated_initializer (d->cur, index);
+          elt_init = reshape_init_r (elt_type, d,
+    				 /*first_initializer_p=*/NULL_TREE,
+
+    	    }
+    	  else if (TREE_CODE (d->cur->index) == IDENTIFIER_NODE)
+    	    {
+
+    	      field = get_class_binding (type, d->cur->index);
+    	      direct_desig = true;
+    	    }
+
+        CONSTRUCTOR_IS_DIRECT_INIT (new_init) = true;
+      if (CONSTRUCTOR_IS_DESIGNATED_INIT (init)
+          && BRACE_ENCLOSED_INITIALIZER_P (new_init))
+
+    
+      return new_init;
+    }
+
+tree elt_init;
+          constructor_elt *old_cur = d->cur;
+    
+
+          check_array_designated_initializer (d->cur, index);
+          elt_init = reshape_init_r (elt_type, d,
+    				 /*first_initializer_p=*/NULL_TREE,
+
+    	    }
+    	  else if (TREE_CODE (d->cur->index) == IDENTIFIER_NODE)
+    	    {
+
+    	      field = get_class_binding (type, d->cur->index);
+    	      direct_desig = true;
+    	    }
+
+tree elt_init;
+          constructor_elt *old_cur = d->cur;
+    
+
+          check_array_designated_initializer (d->cur, index);
+          elt_init = reshape_init_r (elt_type, d,
+    				 /*first_initializer_p=*/NULL_TREE,
+
+    	    }
+    	  else if (TREE_CODE (d->cur->index) == IDENTIFIER_NODE)
+    	    {
+
+    	      field = get_class_binding (type, d->cur->index);
+    	      direct_desig = true;
+    	    }
+

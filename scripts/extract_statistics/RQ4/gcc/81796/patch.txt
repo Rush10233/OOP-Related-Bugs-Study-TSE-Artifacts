@@ -1,0 +1,11 @@
+fn = locate_fn_flags (ctype, cp_operator_id (DELETE_EXPR),
+    				ptr_type_node, flags, tf_none);
+    	  if (fn && fn == error_mark_node)
+    	    {
+    	      if (complain & tf_error)
+    		locate_fn_flags (ctype, cp_operator_id (DELETE_EXPR),
+    				 ptr_type_node, flags, complain);
+    	      if (deleted_p)
+    		*deleted_p = true;
+    	    }
+

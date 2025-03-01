@@ -1,0 +1,45 @@
+
+      store_parm_decls (current_function_parms);
+    
+
+      if (!processing_template_decl
+          && (flag_lifetime_dse > 1)
+          && DECL_CONSTRUCTOR_P (decl1)
+
+        }
+    }
+    
+
+    #include "gt-cp-name-lookup.h"
+
+    extern void pop_nested_namespace (tree);
+    extern void push_to_top_level (void);
+    extern void pop_from_top_level (void);
+
+    
+    #endif /* GCC_CP_NAME_LOOKUP_H */
+
+          DECL_EXTERNAL (t) = 1;
+          TREE_STATIC (t) = 0;
+        }
+
+      if (TREE_CODE (t) == NAMESPACE_DECL)
+        /* We do not need the leftover chaining of namespaces from the
+           binding level.  */
+
+        {
+          if (type_dependent_expression_p (arg1)
+    	  || type_dependent_expression_p (arg2))
+
+          arg1 = build_non_dependent_expr (arg1);
+          arg2 = build_non_dependent_expr (arg2);
+        }
+
+      if (processing_template_decl)
+        {
+          if (type_dependent_expression_p (xarg))
+
+    
+          xarg = build_non_dependent_expr (xarg);
+        }
+

@@ -1,0 +1,60 @@
+bool
+    constraints_satisfied_p (tree t)
+    {
+
+      return constraint_satisfaction_value (t, tf_none) == boolean_true_node;
+    }
+    
+
+    bool
+    constraints_satisfied_p (tree t, tree args)
+    {
+
+      return constraint_satisfaction_value (t, args, tf_none) == boolean_true_node;
+    }
+    
+
+    
+    	 [temp.explicit]
+    
+
+      for (tree fld = TYPE_FIELDS (t); fld; fld = DECL_CHAIN (fld))
+        if ((VAR_P (fld)
+    	 || (TREE_CODE (fld) == FUNCTION_DECL
+    	     && !static_p
+    	     && user_provided_p (fld)))
+
+          {
+    	mark_decl_instantiated (fld, extern_p);
+    	if (! extern_p)
+
+bool
+    constraints_satisfied_p (tree t)
+    {
+
+      return constraint_satisfaction_value (t, tf_none) == boolean_true_node;
+    }
+    
+
+    bool
+    constraints_satisfied_p (tree t, tree args)
+    {
+
+      return constraint_satisfaction_value (t, args, tf_none) == boolean_true_node;
+    }
+    
+
+    
+    	 [temp.explicit]
+    
+
+      for (tree fld = TYPE_FIELDS (t); fld; fld = DECL_CHAIN (fld))
+        if ((VAR_P (fld)
+    	 || (TREE_CODE (fld) == FUNCTION_DECL
+    	     && !static_p
+    	     && user_provided_p (fld)))
+
+          {
+    	mark_decl_instantiated (fld, extern_p);
+    	if (! extern_p)
+

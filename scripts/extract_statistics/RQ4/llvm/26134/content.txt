@@ -1,0 +1,23 @@
+//   end of the template-parameter-list rather than a greater-than
+        //   operator.
+        GreaterThanIsOperatorScope G(GreaterThanIsOperator, false);
+
+    
+        DefaultArg = Actions.CorrectDelayedTyposInExpr(ParseAssignmentExpression());
+        if (DefaultArg.isInvalid())
+
+        TemplateArgLists.addOuterTemplateArguments(None);
+    
+      Sema::ContextRAII SavedContext(SemaRef, Template->getDeclContext());
+
+      return SemaRef.SubstExpr(Param->getDefaultArgument(), TemplateArgLists);
+    }
+    
+
+for (unsigned i = 0, e = Param->getDepth(); i != e; ++i)
+        TemplateArgLists.addOuterTemplateArguments(None);
+    
+      EnterExpressionEvaluationContext ConstantEvaluated(SemaRef,
+                                                         Sema::ConstantEvaluated);
+      return SemaRef.SubstExpr(Param->getDefaultArgument(), TemplateArgLists);
+

@@ -1,0 +1,10 @@
+Commit:	5a233ae
+./gcc/cp/class.c	405,405
+./gcc/cp/class.c	407,414
+./gcc/cp/class.c	519,526
+./gcc/cp/rtti.c	124,124
+./gcc/cp/rtti.c	532,533
+./gcc/cp/rtti.c	535,536
+./gcc/cp/rtti.c	540,541
+./gcc/cp/rtti.c	674,674
+./gcc/cp/rtti.c	789,789

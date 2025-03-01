@@ -1,0 +1,8 @@
+zero_init_expr_p (tree t)
+    {
+      tree type = TREE_TYPE (t);
+
+        return false;
+      if (zero_init_p (type))
+        return initializer_zerop (t);
+

@@ -1,0 +1,107 @@
+step_iterator step_begin() const { return Steps.begin(); }
+      step_iterator step_end()   const { return Steps.end(); }
+    
+
+      /// \brief Determine whether this initialization is a direct reference 
+      /// binding (C++ [dcl.init.ref]).
+      bool isDirectReferenceBinding() const;
+
+                                               SourceLocation Loc,
+                                               unsigned NumParams);
+      VarDecl *getCopyElisionCandidate(QualType ReturnType, Expr *E,
+
+      bool isCopyElisionCandidate(QualType ReturnType, const VarDecl *VD,
+
+    
+      StmtResult ActOnReturnStmt(SourceLocation ReturnLoc, Expr *RetValExp,
+                                 Scope *CurScope);
+
+    /// \param E The expression being returned from the function or block, or
+    /// being thrown.
+    ///
+
+    ///
+    /// \returns The NRVO candidate variable, if the return statement may use the
+    /// NRVO, or NULL if there is no such candidate.
+
+      if (!getLangOpts().CPlusPlus)
+        return nullptr;
+    
+
+      if (!VD)
+        return nullptr;
+    
+
+        return VD;
+      return nullptr;
+    }
+    
+    bool Sema::isCopyElisionCandidate(QualType ReturnType, const VarDecl *VD,
+
+      QualType VDType = VD->getType();
+      // - in a return statement in a function with ...
+      // ... a class return type ...
+      if (!ReturnType.isNull() && !ReturnType->isDependentType()) {
+        if (!ReturnType->isRecordType())
+          return false;
+        // ... the same cv-unqualified type as the function return type ...
+
+            !Context.hasSameUnqualifiedType(ReturnType, VDType))
+          return false;
+      }
+    
+      // ...object (other than a function or catch-clause parameter)...
+      if (VD->getKind() != Decl::Var &&
+
+        return false;
+      if (VD->isExceptionVariable()) return false;
+    
+      // ...automatic...
+      if (!VD->hasLocalStorage()) return false;
+    
+
+      // ...non-volatile...
+      if (VD->getType().isVolatileQualified()) return false;
+    
+
+    /// \brief Perform the initialization of a potentially-movable value, which
+    /// is the result of return value.
+    ///
+
+    /// returned lvalues as rvalues in certain cases (to prefer move construction),
+    /// then falls back to treating them as lvalues if that failed.
+    ExprResult
+
+                                          QualType ResultType,
+                                          Expr *Value,
+                                          bool AllowNRVO) {
+
+      ExprResult Res = ExprError();
+
+    
+        Expr *InitExpr = &AsRvalue;
+    
+
+        if (Seq) {
+
+              continue;
+    
+
+    
+            const RValueReferenceType *RRefType
+              = Constructor->getParamDecl(0)->getType()
+                                                     ->getAs<RValueReferenceType>();
+    
+
+            if (!RRefType ||
+                !Context.hasSameUnqualifiedType(RRefType->getPointeeType(),
+
+              break;
+    
+            // Promote "AsRvalue" to the heap, since we now need this
+            // expression node to persist.
+
+    
+            // Complete type-checking the initialization of the return type
+            // using the constructor we found.
+

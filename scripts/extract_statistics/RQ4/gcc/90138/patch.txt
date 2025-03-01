@@ -1,0 +1,4 @@
+decl = pushdecl (decl);
+      if (!is_non_type)
+        parm = decl;
+

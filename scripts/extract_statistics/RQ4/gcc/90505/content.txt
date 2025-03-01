@@ -1,0 +1,23 @@
+about the template parameter in question.  */
+    	  return t;
+    
+
+    	/* If we get here, we must have been looking at a parm for a
+    	   more deeply nested template.  Make a new version of this
+    	   template parameter, but with a lower level.  */
+
+int levels;
+    	tree arg = NULL_TREE;
+    
+    	r = NULL_TREE;
+    
+    	gcc_assert (TREE_VEC_LENGTH (args) > 0);
+
+    	     about the template parameter in question.  */
+    	  return t;
+    
+
+    	/* If we get here, we must have been looking at a parm for a
+    	   more deeply nested template.  Make a new version of this
+    	   template parameter, but with a lower level.  */
+

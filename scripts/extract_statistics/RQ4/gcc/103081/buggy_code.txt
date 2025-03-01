@@ -1,0 +1,16 @@
+/* There is no need to substitute into namespace-scope
+    	   enumerators.  */
+    	if (DECL_NAMESPACE_SCOPE_P (t))
+
+    	/* If ARGS is NULL, then T is known to be non-dependent.  */
+    	if (args == NULL_TREE)
+    	  return scalar_constant_value (t);
+
+/* There is no need to substitute into namespace-scope
+    	   enumerators.  */
+    	if (DECL_NAMESPACE_SCOPE_P (t))
+
+    	/* If ARGS is NULL, then T is known to be non-dependent.  */
+    	if (args == NULL_TREE)
+    	  return scalar_constant_value (t);
+

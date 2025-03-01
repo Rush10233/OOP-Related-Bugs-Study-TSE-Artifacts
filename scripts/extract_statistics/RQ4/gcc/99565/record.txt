@@ -1,0 +1,7 @@
+Commit:	7298285
+./gcc/c-family/c-warn.c	2782,2782
+./gcc/c/c-typeck.c	5547,5547
+./gcc/cp/call.c	5801,5801
+./gcc/cp/cvt.c	1201,1202
+./gcc/cp/cvt.c	1218,1219
+./gcc/fold-const.c	3320,3320

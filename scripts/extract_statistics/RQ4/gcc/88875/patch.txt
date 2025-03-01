@@ -1,0 +1,13 @@
+conversion.  If KIND is ck_ambig or ck_user, true means force
+
+      bool copy_list_init = false;
+
+          copy_list_init = true;
+
+          if (copy_list_init)
+    	/* Remember this was copy-list-initialization.  */
+    	conv->need_temporary_p = true;
+    
+
+    	    && (!CONSTRUCTOR_IS_DIRECT_INIT (expr) || convs->need_temporary_p)
+

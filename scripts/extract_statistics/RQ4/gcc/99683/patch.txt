@@ -1,0 +1,10 @@
+/* Wait until the initializer is non-dependent.  */
+      if (type_dependent_expression_p (init))
+        return ptype;
+    
+
+/* Wait until the initializer is non-dependent.  */
+      if (type_dependent_expression_p (init))
+        return ptype;
+    
+

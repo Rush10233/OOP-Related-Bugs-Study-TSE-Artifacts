@@ -1,0 +1,156 @@
+/* A requires-expression is an unevaluated context.  */
+      cp_unevaluated u;
+    
+
+      if (processing_template_decl)
+        {
+          /* We're partially instantiating a generic lambda.  Substituting into
+
+    						 tree outer, unsigned);
+    extern tree add_to_template_args		(tree, tree);
+    extern tree add_outermost_template_args		(tree, tree);
+
+    extern tree build_extra_args			(tree, tree, tsubst_flags_t);
+    
+    /* in rtti.c */
+
+    tree
+    build_extra_args (tree pattern, tree args, tsubst_flags_t complain)
+    {
+
+      if (local_specializations)
+        if (tree locals = extract_local_specs (pattern, complain))
+          extra = tree_cons (NULL_TREE, extra, locals);
+
+       normal template args to ARGS.  */
+    
+    tree
+
+    {
+      if (extra && TREE_CODE (extra) == TREE_LIST)
+        {
+
+          gcc_assert (!TREE_PURPOSE (extra));
+          extra = TREE_VALUE (extra);
+        }
+
+        {
+
+          extra = tsubst_template_args (extra, args, complain, in_decl);
+          args = add_outermost_template_args (args, extra);
+        }
+      else
+        args = add_to_template_args (extra, args);
+      return args;
+    }
+
+      pattern = PACK_EXPANSION_PATTERN (t);
+    
+      /* Add in any args remembered from an earlier partial instantiation.  */
+
+    
+      levels = TMPL_ARGS_DEPTH (args);
+    
+
+          tree orig_arg = TREE_VEC_ELT (t, i);
+          tree new_arg;
+    
+
+    	new_arg = tsubst_template_args (orig_arg, args, complain, in_decl);
+          else if (PACK_EXPANSION_P (orig_arg))
+            {
+
+        }
+      for (i = 0, out = 0; i < len; i++)
+        {
+
+              && TREE_CODE (elts[i]) == TREE_VEC)
+            {
+              int idx;
+
+          IF_STMT_CONSTEXPR_P (stmt) = IF_STMT_CONSTEXPR_P (t);
+          IF_STMT_CONSTEVAL_P (stmt) = IF_STMT_CONSTEVAL_P (t);
+          if (IF_STMT_CONSTEXPR_P (t))
+
+          tmp = RECUR (IF_COND (t));
+          tmp = finish_if_stmt_cond (tmp, stmt);
+          if (IF_STMT_CONSTEXPR_P (t)
+
+/* A requires-expression is an unevaluated context.  */
+      cp_unevaluated u;
+    
+
+      if (processing_template_decl)
+        {
+          /* We're partially instantiating a generic lambda.  Substituting into
+
+    						 tree outer, unsigned);
+    extern tree add_to_template_args		(tree, tree);
+    extern tree add_outermost_template_args		(tree, tree);
+
+    extern tree build_extra_args			(tree, tree, tsubst_flags_t);
+    
+    /* in rtti.c */
+
+    tree
+    build_extra_args (tree pattern, tree args, tsubst_flags_t complain)
+    {
+
+      if (local_specializations)
+        if (tree locals = extract_local_specs (pattern, complain))
+          extra = tree_cons (NULL_TREE, extra, locals);
+
+       normal template args to ARGS.  */
+    
+    tree
+
+    {
+      if (extra && TREE_CODE (extra) == TREE_LIST)
+        {
+
+          gcc_assert (!TREE_PURPOSE (extra));
+          extra = TREE_VALUE (extra);
+        }
+
+        {
+
+          extra = tsubst_template_args (extra, args, complain, in_decl);
+          args = add_outermost_template_args (args, extra);
+        }
+      else
+        args = add_to_template_args (extra, args);
+      return args;
+    }
+
+      pattern = PACK_EXPANSION_PATTERN (t);
+    
+      /* Add in any args remembered from an earlier partial instantiation.  */
+
+    
+      levels = TMPL_ARGS_DEPTH (args);
+    
+
+          tree orig_arg = TREE_VEC_ELT (t, i);
+          tree new_arg;
+    
+
+    	new_arg = tsubst_template_args (orig_arg, args, complain, in_decl);
+          else if (PACK_EXPANSION_P (orig_arg))
+            {
+
+        }
+      for (i = 0, out = 0; i < len; i++)
+        {
+
+              && TREE_CODE (elts[i]) == TREE_VEC)
+            {
+              int idx;
+
+          stmt = begin_if_stmt ();
+          IF_STMT_CONSTEXPR_P (stmt) = IF_STMT_CONSTEXPR_P (t);
+          if (IF_STMT_CONSTEXPR_P (t))
+
+          tmp = RECUR (IF_COND (t));
+          tmp = finish_if_stmt_cond (tmp, stmt);
+          if (IF_STMT_CONSTEXPR_P (t)
+

@@ -1,0 +1,8 @@
+tree
+    tsubst_constraint (tree t, tree args, tsubst_flags_t complain, tree in_decl)
+    {
+
+        return t;
+      switch (TREE_CODE (t))
+      {
+

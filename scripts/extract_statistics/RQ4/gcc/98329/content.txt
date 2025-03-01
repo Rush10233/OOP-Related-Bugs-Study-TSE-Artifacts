@@ -1,0 +1,16 @@
+{
+    	tree type = tsubst (TREE_TYPE (t), args, complain, in_decl);
+    	tree op0 = tsubst_copy (TREE_OPERAND (t, 0), args, complain, in_decl);
+
+          }
+    
+        case SIZEOF_EXPR:
+
+    	RETURN (r);
+          }
+    
+
+        case POSTDECREMENT_EXPR:
+        case POSTINCREMENT_EXPR:
+          op1 = tsubst_non_call_postfix_expression (TREE_OPERAND (t, 0),
+

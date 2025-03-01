@@ -1,0 +1,24 @@
+ExprResult ParseCXXAmbiguousParenExpression(ParenParseOption &ExprType,
+                                                ParsedType &CastTy,
+                                                BalancedDelimiterTracker &Tracker);
+
+    
+        {
+          // The inside of the parens don't need to be a colon protected scope, and
+          // isn't immediately a message send.
+          ColonProtectionRAIIObject X(*this, false);
+    
+          Res = ParseParenExpression(ParenExprType, false/*stopIfCastExr*/,
+                                     isTypeCast == IsTypeCast, CastTy, RParenLoc);
+        }
+
+          ExprResult res = ParseCXXAmbiguousParenExpression(ExprType, CastTy, T);
+
+                                             BalancedDelimiterTracker &Tracker) {
+
+        ParseSpecifierQualifierList(DS);
+
+        ParseDeclarator(DeclaratorInfo);
+
+           return ParseCompoundLiteralExpression(Ty.get(),
+

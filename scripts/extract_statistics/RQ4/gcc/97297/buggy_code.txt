@@ -1,0 +1,3 @@
+= cp_parser_lookup_name_simple (parser, unqualified_name,
+    						      token->location);
+

@@ -1,0 +1,3 @@
+return Func->isConstexpr() &&
+             (Func->isImplicitlyInstantiable() || !Func->isUserProvided());
+

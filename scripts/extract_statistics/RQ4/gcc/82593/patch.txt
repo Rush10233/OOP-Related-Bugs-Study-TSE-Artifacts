@@ -1,0 +1,15 @@
+extern bool check_array_designated_initializer  (constructor_elt *,
+    						 unsigned HOST_WIDE_INT);
+
+    bool
+
+    	  else if (non_const
+    		   && (!require_potential_rvalue_constant_expression
+    		       (designator)))
+    	    designator = NULL_TREE;
+
+          if (!ce->index)
+
+          else if (!check_array_designated_initializer (ce, i))
+    	ce->index = error_mark_node;
+

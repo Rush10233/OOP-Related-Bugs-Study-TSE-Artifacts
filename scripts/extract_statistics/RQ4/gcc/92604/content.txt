@@ -1,0 +1,48 @@
+because A[] and A[2] are reference-related.  But we don't do it
+    	 because grok_reference_init has deduced the array size (to 1), and
+    	 A[1] and A[2] aren't reference-related.  */
+
+    	{
+    	  tree elt = CONSTRUCTOR_ELT (expr, 0)->value;
+    	  if (error_operand_p (elt))
+
+    	{
+    	  if (BRACE_ENCLOSED_INITIALIZER_P (expr)
+    	      && CONSTRUCTOR_NELTS (expr) == 1
+
+    	      && !is_list_ctor (cand->fn))
+    	    {
+    	      /* "If C is not an initializer-list constructor and the
+
+    
+          if (BRACE_ENCLOSED_INITIALIZER_P (arg)
+    	  && !TYPE_HAS_LIST_CTOR (class_type)
+
+    	  && CONSTRUCTOR_NELTS (arg) == 1)
+    	arg = CONSTRUCTOR_ELT (arg, 0)->value;
+    
+
+         initialized from that element."  Even if T is an aggregate.  */
+      if (cxx_dialect >= cxx11 && (CLASS_TYPE_P (type) || VECTOR_TYPE_P (type))
+          && first_initializer_p
+
+          && d->end - d->cur == 1
+          && reference_related_p (type, TREE_TYPE (init)))
+        {
+
+        {
+          list_init_p = true;
+          try_list_ctor = TYPE_HAS_LIST_CTOR (type);
+
+    	{
+    	  /* As an exception, the first phase in 16.3.1.7 (considering the
+    	     initializer list as a single argument) is omitted if the
+
+         the object is initialized from that element."  */
+      if (cxx_dialect >= cxx11
+          && BRACE_ENCLOSED_INITIALIZER_P (stripped_init)
+
+          && CONSTRUCTOR_NELTS (stripped_init) == 1
+          && ((CLASS_TYPE_P (type) && !CLASSTYPE_NON_AGGREGATE (type))
+    	  || VECTOR_TYPE_P (type)))
+

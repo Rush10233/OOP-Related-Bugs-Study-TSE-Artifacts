@@ -1,0 +1,52 @@
+return call;
+    }
+    
+
+    
+
+    {
+
+        return NULL_TREE;
+    
+      for (tree field = TYPE_FIELDS (type); field; field = DECL_CHAIN (field))
+
+    	continue;
+          if (TREE_STATIC (field))
+    	continue;
+
+    	return field;
+        }
+    
+
+           BINFO_BASE_ITERATE (binfo, i, base_binfo); i++)
+        {
+          tree base = TREE_TYPE (base_binfo);
+
+    	return field;
+        }
+    
+      return NULL_TREE;
+    }
+    
+
+    /* Return true if all copy and move assignment operator overloads for
+       class TYPE are trivial and at least one of them is not deleted and,
+       when ACCESS is set, accessible.  Return false otherwise.  Set
+
+      if (!desttype || !COMPLETE_TYPE_P (desttype) || !CLASS_TYPE_P (desttype))
+        return;
+    
+
+      if (current_function_decl
+
+          && is_this_parameter (tree_strip_nop_conversions (dest)))
+        {
+          tree ctx = DECL_CONTEXT (current_function_decl);
+          bool special = same_type_ignoring_top_level_qualifiers_p (ctx, desttype);
+          tree binfo = TYPE_BINFO (ctx);
+    
+
+    	return;
+        }
+    
+

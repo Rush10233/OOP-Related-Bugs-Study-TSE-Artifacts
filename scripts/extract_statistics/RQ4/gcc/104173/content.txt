@@ -1,0 +1,8 @@
+/* Transform `(a, b).x' into `(*(a, &b)).x', `(a ? b : c).x' into
+         `(*(a ?  &b : &c)).x', and so on.  A COND_EXPR is only an lvalue
+         in the front end; only _DECLs and _REFs are lvalues in the back end.  */
+
+    
+      /* In [expr.ref], there is an explicit list of the valid choices for
+         MEMBER.  We check for each of those cases here.  */
+

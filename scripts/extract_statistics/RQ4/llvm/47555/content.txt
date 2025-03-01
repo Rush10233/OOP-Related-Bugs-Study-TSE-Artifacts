@@ -1,0 +1,8 @@
+}
+    
+    static bool isImplicitlyDefinableConstexprFunction(FunctionDecl *Func) {
+
+    }
+    
+    /// Mark a function referenced, and check whether it is odr-used
+

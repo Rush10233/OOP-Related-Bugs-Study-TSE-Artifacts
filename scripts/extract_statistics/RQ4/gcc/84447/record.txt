@@ -1,0 +1,6 @@
+Commit:	f18f8ad
+./gcc/cp/call.c	7668,7669
+./gcc/cp/call.c	7713,7718
+./gcc/cp/call.c	8093,8093
+./gcc/cp/call.c	8124,8125
+./gcc/cp/call.c	8169,8170

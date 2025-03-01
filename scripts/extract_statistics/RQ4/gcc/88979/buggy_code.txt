@@ -1,0 +1,14 @@
+(cp_parser *, bool);
+
+    	       (parser, decl_spec_seq_has_spec_p (decl_specs, ds_friend))));
+
+    		    if (!is_overloaded_fn (decl))
+
+       declarator is preceded by the `friend' specifier.  */
+
+    cp_parser_constructor_declarator_p (cp_parser *parser, bool friend_p)
+
+    	  /* Look for the type-specifier.  */
+
+    				    CP_PARSER_FLAGS_NONE,
+

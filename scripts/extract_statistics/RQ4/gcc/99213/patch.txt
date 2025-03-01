@@ -1,0 +1,2 @@
+dump_function_decl (pp, scope, f | TFF_NO_TEMPLATE_BINDINGS);
+

@@ -1,0 +1,8 @@
+if (PRIMARY_TEMPLATE_P (TI_TEMPLATE (ti)))
+    	  {
+    	    pp_cxx_begin_template_argument_list (pp);
+    	    tree args = INNERMOST_TEMPLATE_ARGS (TI_ARGS (ti));
+    	    pp_cxx_template_argument_list (pp, args);
+    	    pp_cxx_end_template_argument_list (pp);
+    	  }
+

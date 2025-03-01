@@ -1,0 +1,8 @@
+/* We don't know here whether EXPR is being used as an lvalue or
+    	   rvalue, but we know it's read.  */
+    	mark_exp_read (expr);
+
+/* We don't know here whether EXPR is being used as an lvalue or
+    	   rvalue, but we know it's read.  */
+    	mark_exp_read (expr);
+

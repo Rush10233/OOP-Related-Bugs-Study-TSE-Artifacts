@@ -1,0 +1,9 @@
+/* FIXME This isn't set properly for partial instantiations.  */
+    	      && TPARMS_PRIMARY_TEMPLATE (tparms)
+
+/* FIXME This isn't set properly for partial instantiations.  */
+    	      && TPARMS_PRIMARY_TEMPLATE (tparms)
+
+/* FIXME This isn't set properly for partial instantiations.  */
+    	      && TPARMS_PRIMARY_TEMPLATE (tparms)
+

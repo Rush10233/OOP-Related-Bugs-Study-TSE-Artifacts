@@ -1,0 +1,3 @@
+if (auto *TTP =
+                dyn_cast<TemplateTemplateParmDecl>(Template.getAsTemplateDecl()))
+

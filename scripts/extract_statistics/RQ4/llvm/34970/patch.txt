@@ -1,0 +1,69 @@
+protected:
+      // Since a Deduction Guide [C++17] will never have a body, we can share the
+      // storage, and use a different name.
+      union {
+        /// Indicates if the function declaration will have a body, once we're done
+        /// parsing it.
+        unsigned WillHaveBody : 1;
+        /// Indicates that the Deduction Guide is the implicitly generated 'copy
+        /// deduction candidate' (is used during overload resolution).
+        unsigned IsCopyDeductionCandidate : 1;
+      };
+    private:
+
+    
+        // IsCopyDeductionCandidate is a union variant member, so ensure it is the
+        // active member by storing to it.
+        IsCopyDeductionCandidate = false; 
+
+      void setIsCopyDeductionCandidate() {
+        IsCopyDeductionCandidate = true;
+      }
+    
+      bool isCopyDeductionCandidate() const { return IsCopyDeductionCandidate; }
+    
+
+      // Check C++17 tie-breakers for deduction guides.
+      {
+        auto *Guide1 = dyn_cast_or_null<CXXDeductionGuideDecl>(Cand1.Function);
+        auto *Guide2 = dyn_cast_or_null<CXXDeductionGuideDecl>(Cand2.Function);
+        if (Guide1 && Guide2) {
+          //  -- F1 is generated from a deduction-guide and F2 is not
+          if (Guide1->isImplicit() != Guide2->isImplicit())
+            return Guide2->isImplicit();
+    
+          //  -- F1 is the copy deduction candidate(16.3.1.8) and F2 is not
+          if (Guide1->isCopyDeductionCandidate())
+            return true;
+        }
+      }
+    
+    
+    
+
+      // C++17 [over.match.class.deduct]
+      //    --  If C is not defined or does not declare any constructors, an
+      //    additional function template derived as above from a hypothetical
+      //    constructor C().
+
+      //    -- An additional function template derived as above from a hypothetical
+      //    constructor C(C), called the copy deduction candidate.
+      cast<CXXDeductionGuideDecl>(
+          cast<FunctionTemplateDecl>(
+              Transform.buildSimpleDeductionGuide(Transform.DeducedType))
+              ->getTemplatedDecl())
+          ->setIsCopyDeductionCandidate();
+
+      if (auto *DGuide = dyn_cast<CXXDeductionGuideDecl>(D)) {
+
+          SemaRef.Context, DC, D->getInnerLocStart(), DGuide->isExplicit(),
+          D->getNameInfo(), T, TInfo, D->getSourceRange().getEnd());
+        if (DGuide->isCopyDeductionCandidate())
+          cast<CXXDeductionGuideDecl>(Function)->setIsCopyDeductionCandidate();
+      } else {
+
+      if (Record.readInt())
+        D->setIsCopyDeductionCandidate();
+
+      Record.push_back(D->isCopyDeductionCandidate());
+

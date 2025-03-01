@@ -1,0 +1,8 @@
+Commit:	129ef15
+./gcc/cp/parser.c	2509,2509
+./gcc/cp/parser.c	14055,14055
+./gcc/cp/parser.c	21163,21163
+./gcc/cp/parser.c	27383,27383
+./gcc/cp/parser.c	27386,27386
+./gcc/cp/parser.c	27565,27565
+./gcc/cp/parser.c	27567,27567

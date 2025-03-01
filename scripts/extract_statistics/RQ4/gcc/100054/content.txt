@@ -1,0 +1,46 @@
+
+    	  bool pushed = false;
+    	  tree ctx = DECL_CONTEXT (member);
+
+    	    {
+
+    	      push_nested_class (ctx);
+    	      push_deferring_access_checks (dk_no_deferred);
+    	      pushed = true;
+    	    }
+    
+    	  inject_this_parameter (ctx, TYPE_UNQUALIFIED);
+    
+    	  start_lambda_scope (member);
+
+    	    {
+    	      pop_deferring_access_checks ();
+    	      pop_nested_class ();
+
+    	    }
+    
+    	  input_location = sloc;
+
+
+    	  bool pushed = false;
+    	  tree ctx = DECL_CONTEXT (member);
+
+    	    {
+
+    	      push_nested_class (ctx);
+    	      push_deferring_access_checks (dk_no_deferred);
+    	      pushed = true;
+    	    }
+    
+    	  inject_this_parameter (ctx, TYPE_UNQUALIFIED);
+    
+    	  start_lambda_scope (member);
+
+    	    {
+    	      pop_deferring_access_checks ();
+    	      pop_nested_class ();
+
+    	    }
+    
+    	  input_location = sloc;
+

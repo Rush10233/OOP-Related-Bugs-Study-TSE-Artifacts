@@ -1,0 +1,28 @@
+if ((TREE_CODE (val) == INDIRECT_REF && allows_mem)
+
+    	  || is_inout
+    	  || TREE_ADDRESSABLE (type))
+
+    	  if ((! allows_mem && MEM_P (op) && GET_MODE (op) != BLKmode)
+
+if ((TREE_CODE (val) == INDIRECT_REF && allows_mem)
+
+    	  || is_inout
+    	  || TREE_ADDRESSABLE (type))
+
+    	  if ((! allows_mem && MEM_P (op) && GET_MODE (op) != BLKmode)
+
+if ((TREE_CODE (val) == INDIRECT_REF && allows_mem)
+
+    	  || is_inout
+    	  || TREE_ADDRESSABLE (type))
+
+    	  if ((! allows_mem && MEM_P (op) && GET_MODE (op) != BLKmode)
+
+if ((TREE_CODE (val) == INDIRECT_REF && allows_mem)
+
+    	  || is_inout
+    	  || TREE_ADDRESSABLE (type))
+
+    	  if ((! allows_mem && MEM_P (op) && GET_MODE (op) != BLKmode)
+

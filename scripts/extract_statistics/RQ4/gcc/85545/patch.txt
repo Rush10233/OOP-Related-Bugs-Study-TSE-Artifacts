@@ -1,0 +1,64 @@
+else if (TREE_CODE (expr) == PTRMEM_CST)
+
+      else if (TREE_CODE (expr) == CONSTRUCTOR
+    	   && TYPE_PTRMEMFUNC_P (type))
+        conv = build_ptrmemfunc (TYPE_PTRMEMFUNC_FN_TYPE (type), expr,
+    			     true, false, tf_warning_or_error);
+
+      if (TREE_CODE (ptrmem) == CONSTRUCTOR)
+        {
+          unsigned int ix;
+          tree index, value;
+          FOR_EACH_CONSTRUCTOR_ELT (CONSTRUCTOR_ELTS (ptrmem),
+    				ix, index, value)
+    	if (index && DECL_P (index) && DECL_NAME (index) == member_name)
+    	  return value;
+          gcc_unreachable ();
+        }
+    
+
+    	  else if (integer_zerop (n) && TREE_CODE (pfn) != CONSTRUCTOR)
+
+          if (!integer_zerop (n))
+    	{
+    	  if (TARGET_PTRMEMFUNC_VBIT_LOCATION == ptrmemfunc_vbit_in_delta)
+    	    n = cp_build_binary_op (input_location,
+    				    LSHIFT_EXPR, n, integer_one_node,
+    				    complain);
+    	  delta = cp_build_binary_op (input_location,
+    				      PLUS_EXPR, delta, n, complain);
+    	}
+
+else if (TREE_CODE (expr) == CONSTRUCTOR
+    	   && TYPE_PTRMEMFUNC_P (type))
+        conv = build_ptrmemfunc (TYPE_PTRMEMFUNC_FN_TYPE (type), expr,
+    			     true, false, tf_warning_or_error);
+
+      if (TREE_CODE (ptrmem) == CONSTRUCTOR)
+        {
+          unsigned int ix;
+          tree index, value;
+          FOR_EACH_CONSTRUCTOR_ELT (CONSTRUCTOR_ELTS (ptrmem),
+    				ix, index, value)
+    	if (index && DECL_P (index) && DECL_NAME (index) == member_name)
+    	  return value;
+          gcc_unreachable ();
+        }
+    
+
+    	  else if (integer_zerop (n) && TREE_CODE (pfn) != CONSTRUCTOR)
+
+          if (!integer_zerop (n))
+    	{
+    	  if (TARGET_PTRMEMFUNC_VBIT_LOCATION == ptrmemfunc_vbit_in_delta)
+    	    n = cp_build_binary_op (input_location,
+    				    LSHIFT_EXPR, n, integer_one_node,
+    				    complain);
+    	  delta = cp_build_binary_op (input_location,
+    				      PLUS_EXPR, delta, n, complain);
+    	}
+
+else if (TREE_CODE (expr) == PTRMEM_CST
+    	   || (TREE_CODE (expr) == CONSTRUCTOR
+    	       && TYPE_PTRMEMFUNC_P (type)))
+

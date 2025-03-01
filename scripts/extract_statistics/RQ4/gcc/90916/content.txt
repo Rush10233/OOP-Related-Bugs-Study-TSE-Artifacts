@@ -1,0 +1,16 @@
+for (ovl_iterator iter (fns); iter; ++iter)
+    	{
+    	  tree fn = *iter;
+
+    	}
+          return NULL_TREE;
+        }
+
+for (ovl_iterator iter (fns); iter; ++iter)
+    	{
+    	  tree fn = *iter;
+
+    	    if (TI_TEMPLATE (ti) == tmpl
+    		/* using-declarations can bring in a different
+    		   instantiation of tmpl as a member of a different
+

@@ -1,0 +1,32 @@
+else if (DECL_P (t)
+    	   || EXPR_P (t)
+    	   || TREE_CODE (t) == TEMPLATE_PARM_INDEX
+    	   || TREE_CODE (t) == OVERLOAD
+    	   || BASELINK_P (t)
+    	   || identifier_p (t)
+    	   || TREE_CODE (t) == TRAIT_EXPR
+    	   || TREE_CODE (t) == CONSTRUCTOR
+    	   || CONSTANT_CLASS_P (t))
+
+      else
+        {
+          gcc_assert (t == error_mark_node);
+          dependent_p = false;
+        }
+
+else if (DECL_P (t)
+    	   || EXPR_P (t)
+    	   || TREE_CODE (t) == TEMPLATE_PARM_INDEX
+    	   || TREE_CODE (t) == OVERLOAD
+    	   || BASELINK_P (t)
+    	   || identifier_p (t)
+    	   || TREE_CODE (t) == TRAIT_EXPR
+    	   || TREE_CODE (t) == CONSTRUCTOR
+    	   || CONSTANT_CLASS_P (t))
+
+      else
+        {
+          gcc_assert (t == error_mark_node);
+          dependent_p = false;
+        }
+

@@ -1,0 +1,4 @@
+Commit:	66d8ee9
+./gcc/cp/method.c	2064,2064
+./gcc/cp/semantics.c	9554,9555
+./gcc/cp/semantics.c	9597,9598

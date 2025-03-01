@@ -1,0 +1,37 @@
+if (args && is_this_parameter (args))
+        {
+          gcc_checking_assert (current_class_ptr == NULL_TREE);
+          current_class_ref = cp_build_fold_indirect_ref (args);
+          current_class_ptr = args;
+        }
+
+          tree pushed_scope = NULL_TREE;
+          unsigned ix;
+          cp_default_arg_entry *e;
+    
+          if (!type_definition_ok_p || any_erroneous_template_args_p (type))
+    	{
+
+          /* If there are noexcept-specifiers that have not yet been processed,
+    
+    	 may depend on noexcept-specifiers already having been processed.  */
+
+          FOR_EACH_VEC_SAFE_ELT (unparsed_noexcepts, ix, decl)
+    	{
+    	  tree ctx = DECL_CONTEXT (decl);
+
+    	  /* Make sure that any template parameters are in scope.  */
+    	  maybe_begin_member_template_processing (decl);
+    
+
+    	  inject_parm_decls (decl);
+    
+    	  /* 'this' is not allowed in static member functions.  */
+
+          vec_safe_truncate (unparsed_noexcepts, 0);
+    
+          /* Now parse any NSDMIs.  */
+          FOR_EACH_VEC_SAFE_ELT (unparsed_nsdmis, ix, decl)
+    	{
+    	  if (class_type != DECL_CONTEXT (decl))
+

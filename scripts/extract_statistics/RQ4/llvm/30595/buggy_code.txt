@@ -1,0 +1,11 @@
+if (D.getDeclSpec().hasTypeSpecifier() && !D.isInvalidType()) {
+
+          << SourceRange(D.getDeclSpec().getTypeSpecTypeLoc())
+
+      if (D.getDeclSpec().isExplicitSpecified())
+        Diag(D.getDeclSpec().getExplicitSpecLoc(),
+             getLangOpts().CPlusPlus11 ?
+               diag::warn_cxx98_compat_explicit_conversion_functions :
+               diag::ext_explicit_conversion_functions)
+          << SourceRange(D.getDeclSpec().getExplicitSpecLoc());
+

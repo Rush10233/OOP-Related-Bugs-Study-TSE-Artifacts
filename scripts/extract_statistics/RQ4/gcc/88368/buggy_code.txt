@@ -1,0 +1,5 @@
+if (!expr_noexcept_p (nsdmi, complain))
+
+    	  if (spec == error_mark_node)
+    	    spec = noexcept_false_spec;
+

@@ -1,0 +1,11 @@
+Commit:	2cda2bf
+./gcc/cp/pt.cc	10663,10663
+./gcc/cp/pt.cc	14802,14815
+./gcc/cp/pt.cc	15740,15740
+./gcc/cp/pt.cc	15759,15759
+./gcc/cp/pt.cc	15762,15771
+./gcc/cp/pt.cc	28495,28496
+./gcc/cp/pt.cc	28499,28499
+./gcc/cp/pt.cc	28505,28506
+./gcc/cp/pt.cc	28529,28529
+./gcc/cp/pt.cc	28534,28534

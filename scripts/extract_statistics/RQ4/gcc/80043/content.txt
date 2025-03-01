@@ -1,0 +1,36 @@
+if (rhstype == unknown_type_node)
+    		{
+    		  tree r = instantiate_type (type, rhs, tf_warning_or_error);
+
+    		  if (!seen_error ())
+
+    		}
+    	      else if (fndecl)
+    		error ("cannot convert %qH to %qI for argument %qP to %qD",
+
+overloaded function.  Call instantiate_type to get error
+    		 messages.  */
+    	      if (rhstype == unknown_type_node)
+
+    	      else if (fndecl)
+    		error ("cannot convert %qT to %qT for argument %qP to %qD",
+    		       rhstype, type, parmnum, fndecl);
+
+if (rhstype == unknown_type_node)
+    		{
+    		  tree r = instantiate_type (type, rhs, tf_warning_or_error);
+
+    		  if (!seen_error ())
+
+    		}
+    	      else if (fndecl)
+    		error ("cannot convert %qT to %qT for argument %qP to %qD",
+
+overloaded function.  Call instantiate_type to get error
+    		 messages.  */
+    	      if (rhstype == unknown_type_node)
+
+    	      else if (fndecl)
+    		error ("cannot convert %qT to %qT for argument %qP to %qD",
+    		       rhstype, type, parmnum, fndecl);
+

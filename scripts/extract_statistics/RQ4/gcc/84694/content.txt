@@ -1,0 +1,8 @@
+if (TREE_CODE (declarator) == TEMPLATE_ID_EXPR)
+        {
+          declarator = TREE_OPERAND (declarator, 0);
+
+        }
+    
+      if (ctype)
+

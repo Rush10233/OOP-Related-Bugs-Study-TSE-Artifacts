@@ -1,0 +1,6 @@
+if (CP_AGGREGATE_TYPE_P (elem_type))
+
+if (CP_AGGREGATE_TYPE_P (elem_type))
+
+if (CP_AGGREGATE_TYPE_P (elem_type))
+

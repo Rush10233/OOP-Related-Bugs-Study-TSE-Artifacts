@@ -1,0 +1,7 @@
+Commit:	4bdc273
+./gcc/cp/cvt.c	604,606
+Commit:	b15cc31
+./gcc/cp/typeck.c	8520,8520
+./gcc/cp/typeck.c	8540,8545
+Commit:	e94497f
+./gcc/cp/cvt.c	604,604

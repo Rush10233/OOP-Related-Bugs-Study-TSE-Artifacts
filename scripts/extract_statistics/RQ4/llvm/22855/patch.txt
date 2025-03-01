@@ -1,0 +1,75 @@
+void threadSafetyCleanup(BeforeSet *Cache);
+    
+
+    using namespace clang;
+    using namespace threadSafety;
+
+    namespace {
+
+    } // namespace
+
+    namespace clang {
+    namespace threadSafety {
+
+    } // end namespace threadSafety
+    } // end namespace clang
+
+    namespace {
+
+      friend class threadSafety::BeforeSet;
+
+    } // namespace
+
+    namespace {
+
+    } // namespace
+
+    static bool getStaticBooleanValue(Expr *E, bool &TCond) {
+
+    namespace {
+
+    } // namespace
+
+    static bool neverReturns(const CFGBlock *B) {
+
+    void threadSafety::runThreadSafetyAnalysis(AnalysisDeclContext &AC,
+                                               ThreadSafetyHandler &Handler,
+                                               BeforeSet **BSet) {
+
+    void threadSafety::threadSafetyCleanup(BeforeSet *Cache) { delete Cache; }
+
+    LockKind threadSafety::getLockKindFromAccessKind(AccessKind AK) {
+
+    using namespace clang;
+    using namespace threadSafety;
+
+    std::string threadSafety::getSourceLiteralString(const clang::Expr *CE) {
+
+    static bool isIncompletePhi(const til::SExpr *E) {
+      if (const auto *Ph = dyn_cast<til::Phi>(E))
+        return Ph->status() == til::Phi::PH_Incomplete;
+
+    static bool isCalleeArrow(const Expr *E) {
+
+    static const ValueDecl *getValueDeclFromSExpr(const til::SExpr *E) {
+
+    static bool hasCppPointerType(const til::SExpr *E) {
+
+    static const CXXMethodDecl *getFirstVirtualDecl(const CXXMethodDecl *D) {
+
+    static void maybeUpdateVD(til::SExpr *E, const ValueDecl *VD) {
+
+    using namespace clang;
+    using namespace threadSafety;
+    using namespace til;
+
+    StringRef til::getUnaryOpcodeString(TIL_UnaryOpcode Op) {
+
+    StringRef til::getBinaryOpcodeString(TIL_BinaryOpcode Op) {
+
+    const SExpr *til::getCanonicalVal(const SExpr *E) {
+
+    SExpr *til::simplifyToCanonicalVal(SExpr *E) {
+
+    void til::simplifyIncompleteArg(til::Phi *Ph) {
+

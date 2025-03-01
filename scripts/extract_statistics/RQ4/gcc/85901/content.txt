@@ -1,0 +1,34 @@
+}
+          /* fall through */
+    
+
+        default:
+          if (!(TREE_CODE (t) == FUNCTION_DECL && DECL_CONSTRUCTOR_P (t)))
+    	pp_c_specifier_qualifier_list (pp, t);
+
+    void
+    cxx_pretty_printer::abstract_declarator (tree t)
+    {
+
+        pp_cxx_right_paren (this);
+      else if (INDIRECT_TYPE_P (t))
+        {
+
+    	direct_abstract_declarator (TYPE_PTRMEMFUNC_FN_TYPE (t));
+          break;
+    
+
+        case METHOD_TYPE:
+        case FUNCTION_TYPE:
+          pp_cxx_parameter_declaration_clause (this, t);
+
+        case UNDERLYING_TYPE:
+        case DECLTYPE_TYPE:
+        case TEMPLATE_ID_EXPR:
+
+          pp_cxx_type_specifier_seq (this, t);
+
+          break;
+    
+        case TYPE_PACK_EXPANSION:
+

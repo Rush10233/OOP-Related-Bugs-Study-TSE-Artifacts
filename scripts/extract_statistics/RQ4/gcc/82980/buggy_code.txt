@@ -1,0 +1,11 @@
+else if (!is_this && type_dependent_expression_p (expr))
+
+else if (!is_this && type_dependent_expression_p (expr))
+
+else if (type_dependent_expression_p (expr))
+
+if (!t) return false;
+      while (TREE_CODE (t) == POINTER_TYPE)
+        t = TREE_TYPE (t);
+      return currently_open_class (t);
+

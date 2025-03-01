@@ -1,0 +1,8 @@
+data().DefaultedDestructorIsDeleted = true;
+            }
+    
+
+            // C++0x [class.ctor]p5:
+            //   A default constructor is trivial [...] if:
+            //    -- for all the non-static data members of its class that are of
+

@@ -1,0 +1,41 @@
+++(*this);
+          }
+    
+
+          /// isEnd - Returns true if the iterator is one past the end.
+          bool isEnd() const {
+            assert(TST && "InternalIterator is invalid with a null TST.");
+
+          }
+        };
+    
+        InternalIterator SugaredIterator;
+        InternalIterator DesugaredIterator;
+    
+      public:
+        TSTiterator(ASTContext &Context, const TemplateSpecializationType *TST)
+
+              DesugaredIterator(
+
+    
+        /// &operator++ - Increment the iterator to the next template argument.
+        TSTiterator &operator++() {
+          ++SugaredIterator;
+
+            ++DesugaredIterator;
+          return *this;
+        }
+
+        /// hasDesugaredTA - Returns true if there is another TemplateArgument
+        /// available.
+        bool hasDesugaredTA() const {
+
+        }
+    
+        /// getDesugaredTA - Returns the desugared TemplateArgument.
+        reference getDesugaredTA() const {
+
+                 "Desugared TemplateArgument should not be used.");
+          return *DesugaredIterator;
+        }
+

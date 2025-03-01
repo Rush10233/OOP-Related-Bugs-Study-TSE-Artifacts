@@ -1,0 +1,12 @@
+if (is_really_empty_class (elem_type, /*ignore_vptr*/false))
+        return build_constructor (elem_type, NULL);
+      else if (CP_AGGREGATE_TYPE_P (elem_type))
+
+if (is_really_empty_class (elem_type, /*ignore_vptr*/false))
+        return build_constructor (elem_type, NULL);
+      else if (CP_AGGREGATE_TYPE_P (elem_type))
+
+if (is_really_empty_class (elem_type, /*ignore_vptr*/false))
+        return build_constructor (elem_type, NULL);
+      else if (CP_AGGREGATE_TYPE_P (elem_type))
+

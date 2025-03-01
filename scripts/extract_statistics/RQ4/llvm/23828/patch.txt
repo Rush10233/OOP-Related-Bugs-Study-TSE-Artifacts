@@ -1,0 +1,5 @@
+if (Context.getTargetInfo().getCXXABI().isMicrosoft()) {
+          RequireCompleteType(From->getExprLoc(), From->getType(), 0);
+          RequireCompleteType(From->getExprLoc(), ToType, 0);
+        }
+

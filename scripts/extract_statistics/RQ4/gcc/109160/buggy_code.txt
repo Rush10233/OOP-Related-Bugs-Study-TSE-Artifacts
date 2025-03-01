@@ -1,0 +1,20 @@
+int = LOOKUP_NORMAL);
+
+    				 LOOKUP_IMPLICIT);
+
+    			     argvec, t, complain));
+
+    					 complain, adc_unify, targs);
+
+       For partial-concept-ids, extra args may be appended to the list of deduced
+       template arguments prior to determining constraint satisfaction.  */
+
+                       tsubst_flags_t complain, auto_deduction_context context,
+    		   tree outer_targs, int flags)
+
+      if (tree tmpl = CLASS_PLACEHOLDER_TEMPLATE (auto_node))
+
+        return do_class_deduction (type, tmpl, init, flags, complain);
+
+          tree full_targs = add_to_template_args (outer_targs, targs);
+

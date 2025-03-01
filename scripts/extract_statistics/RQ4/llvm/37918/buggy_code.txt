@@ -1,0 +1,2 @@
+getContext().getTargetInfo().isTLSSupported() && isa<VarDecl>(Global))
+

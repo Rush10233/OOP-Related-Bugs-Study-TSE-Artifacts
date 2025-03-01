@@ -1,0 +1,9 @@
+if (integer_all_onesp (maxindex))
+        {
+          /* Shortcut zero element case to avoid unneeded constructor synthesis.  */
+          if (init && TREE_SIDE_EFFECTS (init))
+    	base = build2 (COMPOUND_EXPR, void_type_node, init, base);
+          return base;
+        }
+    
+

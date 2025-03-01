@@ -1,0 +1,10 @@
+/* Build up the initializer_list object.  Note: fail gracefully
+    	   if the object cannot be completed because, for example, no
+    	   definition is provided (c++/80956).  */
+    	totype = complete_type_or_maybe_complain (totype, NULL_TREE, complain);
+    	if (!totype)
+    	  return error_mark_node;
+
+    	      error ("declaration of %<std::initializer_list%> does not match "
+    		     "%<#include <initializer_list>%>, isn't a template");
+

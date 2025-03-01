@@ -1,0 +1,5 @@
+TemplateIdAnnotation *TemplateId = takeTemplateIdAnnotation(Tok);
+        return TemplateId->Kind == TNK_Concept_template &&
+
+    
+

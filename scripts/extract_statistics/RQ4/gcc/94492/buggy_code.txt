@@ -1,0 +1,33 @@
+if (warn_deprecated_copy
+    	  /* Don't warn about system library classes (c++/86342).  */
+    	  && (!DECL_IN_SYSTEM_HEADER (decl)
+    	      || global_dc->dc_warn_system_headers))
+
+      if (diagnostic->option_index
+          && diagnostic->option_index != permissive_error_option (context))
+        {
+          /* This tests if the user provided the appropriate -Wfoo or
+    	 -Wno-foo option.  */
+          if (! context->option_enabled (diagnostic->option_index,
+    				     context->lang_mask,
+    				     context->option_state))
+    	return false;
+    
+          /* This tests for #pragma diagnostic changes.  */
+          diagnostic_t diag_class
+    	= update_effective_level_from_pragmas (context, diagnostic);
+    
+          /* This tests if the user provided the appropriate -Werror=foo
+    	 option.  */
+          if (diag_class == DK_UNSPECIFIED
+    	  && (context->classify_diagnostic[diagnostic->option_index]
+    	      != DK_UNSPECIFIED))
+    	diagnostic->kind
+    	  = context->classify_diagnostic[diagnostic->option_index];
+    
+          /* This allows for future extensions, like temporarily disabling
+    	 warnings for ranges of source code.  */
+          if (diagnostic->kind == DK_IGNORED)
+    	return false;
+        }
+

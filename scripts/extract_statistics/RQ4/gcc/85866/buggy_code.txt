@@ -1,0 +1,4 @@
+else if (TREE_CODE (function) == OFFSET_REF)
+
+else if (TREE_CODE (function) == OFFSET_REF)
+

@@ -1,0 +1,53 @@
+/* The number of parms for f' is the number of parms of A used in
+    	     the deduced arguments plus non-deduced parms of f.  */
+
+    	  unsigned level = 1;
+    
+    	  /* First copy over the used parms of A.  */
+    	  tree atargs = make_tree_vec (natparms);
+
+    		{
+    		  unsigned index = j++;
+    		  tree nelt = rewrite_tparm_list (elt, index, level,
+    						  atargs, i, complain);
+    		  TREE_VEC_ELT (gtparms, index) = nelt;
+    		}
+
+    	  /* Adjust the deduced template args for f to refer to the A parms
+    	     with their new indexes.  */
+    	  if (nusedatparms && nusedatparms != natparms)
+    	    targs = tsubst_template_args (targs, atargs, complain, in_decl);
+    
+
+      for (int i =  0; i < len; ++i)
+        if (! TREE_VEC_ELT (targs, i))
+          {
+    	tree tparm = TREE_VEC_ELT (tparms, i);
+    	tparm = TREE_VALUE (tparm);
+    
+    	if (!tried_array_deduction
+    	    && TREE_CODE (tparm) == TYPE_DECL)
+    	  {
+    	    try_array_deduction (tparms, targs, TREE_TYPE (tmpl));
+    	    tried_array_deduction = true;
+    	    if (TREE_VEC_ELT (targs, i))
+    	      goto again;
+    	  }
+    	/* If the type parameter is a parameter pack, then it will be deduced
+    	   to an empty parameter pack.  This is another case that doesn't model
+    	   well as partial specialization.  */
+    	if (template_parameter_pack_p (tparm))
+    	  {
+    	    tree arg;
+    	    if (TREE_CODE (tparm) == TEMPLATE_PARM_INDEX)
+    	      {
+    		arg = make_node (NONTYPE_ARGUMENT_PACK);
+    		TREE_CONSTANT (arg) = 1;
+    	      }
+    	    else
+    	      arg = cxx_make_type (TYPE_ARGUMENT_PACK);
+    	    ARGUMENT_PACK_ARGS (arg) = make_tree_vec (0);
+    	    TREE_VEC_ELT (targs, i) = arg;
+    	  }
+          }
+

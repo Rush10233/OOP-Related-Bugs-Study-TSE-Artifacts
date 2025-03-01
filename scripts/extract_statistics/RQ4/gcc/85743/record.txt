@@ -1,0 +1,6 @@
+Commit:	3af0c6b
+./gcc/cp/decl.c	8860,8860
+./gcc/cp/parser.c	7198,7198
+./gcc/cp/parser.c	16330,16338
+./gcc/cp/pt.c	15541,15544
+./gcc/testsuite/g++.dg/addr_builtin-1.C	111,111

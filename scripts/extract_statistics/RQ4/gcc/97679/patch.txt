@@ -1,0 +1,20 @@
+aggregate initialization guide.  OUTER_ARGS are the template arguments
+       for the enclosing scope of the class.  */
+
+    	    {
+    	      if (outer_args)
+    		/* FIXME: We'd like to avoid substituting outer template
+    		   arguments into the constraint ahead of time, but the
+    		   construction of tsubst_args assumes that outer arguments
+    		   are already substituted in.  */
+    		ci = tsubst_constraint_info (ci, outer_args, complain, ctor);
+    	      ci = tsubst_constraint_info (ci, tsubst_args, complain, ctor);
+    	    }
+
+    	    {
+    	      if (outer_args)
+    		/* FIXME: As above.  */
+    		ci = tsubst_constraint_info (ci, outer_args, complain, ctor);
+    	      ci = tsubst_constraint_info (ci, targs, complain, ctor);
+    	    }
+

@@ -1,0 +1,10 @@
+if (ctor > 1)
+    	    TYPE_HAS_CONST_COPY_CTOR (class_type) = 1;
+    	}
+
+    	TYPE_HAS_DEFAULT_CONSTRUCTOR (class_type) = 1;
+
+    	TYPE_HAS_LIST_CTOR (class_type) = 1;
+    
+          if (DECL_DECLARED_CONSTEXPR_P (decl)
+

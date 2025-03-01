@@ -1,0 +1,14 @@
+Importer.getToContext(), DC,
+                                             Loc, Name.getAsIdentifierInfo(), T,
+                                             NamedChain, D->getChainingSize());
+
+            IndirectFieldDecl* IndirectField =
+              IndirectFieldDecl::Create(SemaRef.Context, Owner, VD->getLocation(),
+                                        VD->getIdentifier(), VD->getType(),
+                                        NamedChain, Chaining.size());
+
+      IndirectFieldDecl* IndirectField
+        = IndirectFieldDecl::Create(SemaRef.Context, Owner, D->getLocation(),
+                                    D->getIdentifier(), T,
+                                    NamedChain, D->getChainingSize());
+

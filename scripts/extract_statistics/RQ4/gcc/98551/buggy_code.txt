@@ -1,0 +1,4 @@
+&& AGGREGATE_TYPE_P (TREE_TYPE (res))
+
+&& AGGREGATE_TYPE_P (TREE_TYPE (res))
+

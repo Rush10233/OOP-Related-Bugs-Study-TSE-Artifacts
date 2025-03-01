@@ -1,0 +1,3 @@
+if (auto *TTP = llvm::dyn_cast_or_null<TemplateTemplateParmDecl>(
+                Template.getAsTemplateDecl()))
+

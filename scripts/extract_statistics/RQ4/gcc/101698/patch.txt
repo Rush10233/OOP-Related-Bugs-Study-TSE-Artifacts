@@ -1,0 +1,12 @@
+bool dependent_p = (binfo_type != BINFO_TYPE (BASELINK_BINFO (baselink))
+    		      || optype != BASELINK_OPTYPE (baselink));
+
+bool dependent_p = (binfo_type != BINFO_TYPE (BASELINK_BINFO (baselink))
+    		      || optype != BASELINK_OPTYPE (baselink));
+
+bool dependent_p = (binfo_type != BINFO_TYPE (BASELINK_BINFO (baselink))
+    		      || optype != BASELINK_OPTYPE (baselink));
+
+bool dependent_p = (binfo_type != BINFO_TYPE (BASELINK_BINFO (baselink))
+    		      || optype != BASELINK_OPTYPE (baselink));
+

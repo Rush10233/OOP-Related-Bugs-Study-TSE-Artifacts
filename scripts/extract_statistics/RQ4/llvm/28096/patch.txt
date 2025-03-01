@@ -1,0 +1,75 @@
+typedef llvm::iterator_range<step_iterator> step_range;
+      step_range steps() const { return {step_begin(), step_end()}; }
+    
+
+                                       bool AllowParamOrMoveConstructible);
+
+                                  bool AllowParamOrMoveConstructible);
+
+    /// \param AllowParamOrMoveConstructible Whether we allow function parameters or
+    /// id-expressions that could be moved out of the function to be considered NRVO
+    /// candidates. C++ prohibits these for NRVO itself, but we re-use this logic to
+    /// determine whether we should try to move as part of a return or throw (which
+    /// does allow function parameters).
+
+    VarDecl *Sema::getCopyElisionCandidate(QualType ReturnType, Expr *E,
+                                           bool AllowParamOrMoveConstructible) {
+
+      if (isCopyElisionCandidate(ReturnType, VD, AllowParamOrMoveConstructible))
+
+                                      bool AllowParamOrMoveConstructible) {
+
+        // When considering moving this expression out, allow dissimilar types.
+        if (!AllowParamOrMoveConstructible && !VDType->isDependentType() &&
+
+          !(AllowParamOrMoveConstructible && VD->getKind() == Decl::ParmVar))
+
+      if (AllowParamOrMoveConstructible)
+        return true;
+    
+
+    /// This routine implements C++14 [class.copy]p32, which attempts to treat
+
+      // C++14 [class.copy]p32:
+      // When the criteria for elision of a copy/move operation are met, but not for
+      // an exception-declaration, and the object to be copied is designated by an
+      // lvalue, or when the expression in a return statement is a (possibly
+      // parenthesized) id-expression that names an object with automatic storage
+      // duration declared in the body or parameter-declaration-clause of the
+      // innermost enclosing function or lambda-expression, overload resolution to
+      // select the constructor for the copy is first performed as if the object
+      // were designated by an rvalue.
+
+    
+      if (AllowNRVO && !NRVOCandidate)
+        NRVOCandidate = getCopyElisionCandidate(ResultType, Value, true);
+    
+      if (AllowNRVO && NRVOCandidate) {
+        ImplicitCastExpr AsRvalue(ImplicitCastExpr::OnStack, Value->getType(),
+                                  CK_NoOp, Value, VK_XValue);
+
+        InitializationKind Kind = InitializationKind::CreateCopy(
+            Value->getLocStart(), Value->getLocStart());
+    
+        InitializationSequence Seq(*this, Entity, Kind, InitExpr);
+
+          for (const InitializationSequence::Step &Step : Seq.steps()) {
+            if (!(Step.Kind ==
+                      InitializationSequence::SK_ConstructorInitialization ||
+                  (Step.Kind == InitializationSequence::SK_UserConversion &&
+                   isa<CXXConstructorDecl>(Step.Function.Function))))
+
+            CXXConstructorDecl *Constructor =
+                cast<CXXConstructorDecl>(Step.Function.Function);
+
+            // [...] If the first overload resolution fails or was not performed, or
+            // if the type of the first parameter of the selected constructor is not
+            // an rvalue reference to the object¡¯s type (possibly cv-qualified),
+            // overload resolution is performed again, considering the object as an
+            // lvalue.
+
+                                                NRVOCandidate->getType()))
+
+            Value = ImplicitCastExpr::Create(Context, Value->getType(), CK_NoOp,
+                                             Value, nullptr, VK_XValue);
+

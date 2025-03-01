@@ -1,0 +1,43 @@
+tsubst_flags_t complain,
+    		  tree in_decl)
+    {
+      tree type = NULL_TREE;
+
+      tree expanded_args = NULL_TREE;
+    
+      if (!arg_types || arg_types == void_list_node || arg_types == end)
+        return arg_types;
+    
+      if (PACK_EXPANSION_P (TREE_VALUE (arg_types)))
+        {
+          /* For a pack expansion, perform substitution on the
+
+    
+          if (TREE_CODE (expanded_args) == TREE_VEC)
+            /* So that we'll spin through the parameters, one by one.  */
+
+          else
+            {
+              /* We only partially substituted into the parameter
+
+              expanded_args = NULL_TREE;
+            }
+        }
+
+    
+
+    
+
+        }
+    
+
+    
+
+    
+
+    
+
+    
+      return remaining_arg_types;
+    }
+

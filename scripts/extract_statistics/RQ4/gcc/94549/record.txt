@@ -1,0 +1,8 @@
+Commit:	e76100c
+./gcc/cp/constraint.cc	2740,2742
+./gcc/testsuite/g++.dg/concepts/inherit-ctor3.C	15,15
+./gcc/testsuite/g++.dg/concepts/inherit-ctor3.C	21,21
+./gcc/testsuite/g++.dg/cpp2a/concepts-inherit-ctor4.C	13,13
+./gcc/testsuite/g++.dg/cpp2a/concepts-inherit-ctor4.C	17,17
+Commit:	edfa7c6
+./gcc/cp/constraint.cc	2740,2744

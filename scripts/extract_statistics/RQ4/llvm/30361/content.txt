@@ -1,0 +1,22 @@
+NamedDecl *Result = nullptr;
+        // FIXME: If the name is a dependent name, this lookup won't necessarily
+        // find it. Does that ever matter?
+
+          Result = findInstantiationOf(Context, D, Found.begin(), Found.end());
+        } else {
+          // Since we don't have a name for the entity we're looking for,
+
+      // base (and therefore couldn't do the check) and a
+      // nested-name-qualifier (and therefore could do the lookup).
+      NamedDecl *FirstQualifierInScope = nullptr;
+
+    
+      return getDerived().RebuildMemberExpr(Base.get(), FakeOperatorLoc,
+                                            E->isArrow(),
+                                            QualifierLoc,
+                                            TemplateKWLoc,
+
+                                            Member,
+                                            FoundDecl,
+                                            (E->hasExplicitTemplateArgs()
+

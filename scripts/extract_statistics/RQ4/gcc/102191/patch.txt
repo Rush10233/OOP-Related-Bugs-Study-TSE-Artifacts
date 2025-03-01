@@ -1,0 +1,184 @@
+if (!function_body)
+    	{
+    	  /* Clear the sentinel so we don't try to destroy the retval again on
+    	     rethrow (c++/112301).  */
+    	  tree clear = build2 (MODIFY_EXPR, boolean_type_node,
+    			       current_retval_sentinel, boolean_false_node);
+    	  dtor = build2 (COMPOUND_EXPR, void_type_node, clear, dtor);
+    	}
+
+      bool in_nrv_cleanup;
+
+        {
+          dp->in_nrv_cleanup = true;
+          cp_walk_tree (&CLEANUP_BODY (*tp), finalize_nrv_r, data, 0);
+          dp->in_nrv_cleanup = false;
+          cp_walk_tree (&CLEANUP_EXPR (*tp), finalize_nrv_r, data, 0);
+          *walk_subtrees = 0;
+    
+          CLEANUP_EH_ONLY (*tp) = true;
+    
+          /* If a cleanup might throw, we need to clear current_retval_sentinel on
+    	 the exception path so an outer cleanup added by
+    	 maybe_splice_retval_cleanup doesn't run.  */
+          if (cp_function_chain->throwing_cleanup)
+    	{
+    	  tree clear = build2 (MODIFY_EXPR, boolean_type_node,
+    			       current_retval_sentinel,
+    			       boolean_false_node);
+    
+    	  /* We're already only on the EH path, just prepend it.  */
+    	  tree &exp = CLEANUP_EXPR (*tp);
+    	  exp = build2 (COMPOUND_EXPR, void_type_node, clear, exp);
+    	}
+        }
+      /* Disable maybe_splice_retval_cleanup within the NRV cleanup scope, we don't
+    
+      else if (TREE_CODE (*tp) == CLEANUP_STMT
+    	   && dp->in_nrv_cleanup
+    	   && CLEANUP_DECL (*tp) == dp->result)
+        CLEANUP_EXPR (*tp) = void_node;
+
+      data.in_nrv_cleanup = false;
+
+Otherwise, returns NULL_TREE.
+    
+       The sentinel is set to indicate that we're in the process of returning, and
+       therefore should destroy a normal return value on throw, and shouldn't
+       destroy a named return value variable on normal scope exit.  It is set on
+       return, and cleared either by maybe_splice_retval_cleanup, or when an
+       exception reaches the NRV scope (finalize_nrv_r).  Note that once return
+       passes the NRV scope, it's effectively a normal return value, so cleanup
+       past that point is handled by maybe_splice_retval_cleanup. */
+
+          if (!function_body)
+    	{
+    	  /* Clear the sentinel so we don't try to destroy the retval again on
+    	     rethrow (c++/112301).  */
+    	  tree clear = build2 (MODIFY_EXPR, boolean_type_node,
+    			       current_retval_sentinel, boolean_false_node);
+    	  dtor = build2 (COMPOUND_EXPR, void_type_node, clear, dtor);
+    	}
+
+      bool in_nrv_cleanup;
+
+      else if (TREE_CODE (*tp) == LABEL_EXPR && !dp->in_nrv_cleanup)
+
+          dp->in_nrv_cleanup = true;
+          cp_walk_tree (&CLEANUP_BODY (*tp), finalize_nrv_r, data, 0);
+          dp->in_nrv_cleanup = false;
+          cp_walk_tree (&CLEANUP_EXPR (*tp), finalize_nrv_r, data, 0);
+          *walk_subtrees = 0;
+    
+
+    	/* For a simple NRV, just run it on the EH path.  */
+
+    	  /* Not simple, we need to check current_retval_sentinel to decide
+    	     whether to run it.  If it's set, we're returning normally and
+    	     don't want to destroy the NRV.  If the sentinel is not set, we're
+    	     leaving scope some other way, either by flowing off the end of its
+    	     scope or throwing an exception.  */
+
+    
+          /* If a cleanup might throw, we need to clear current_retval_sentinel on
+    	 the exception path, both so the check above succeeds and so an outer
+    	 cleanup added by maybe_splice_retval_cleanup doesn't run.  */
+          if (cp_function_chain->throwing_cleanup)
+    	{
+    	  tree clear = build2 (MODIFY_EXPR, boolean_type_node,
+    			       current_retval_sentinel,
+    			       boolean_false_node);
+    	  if (dp->simple)
+    	    {
+    	      /* We're already only on the EH path, just prepend it.  */
+    	      tree &exp = CLEANUP_EXPR (*tp);
+    	      exp = build2 (COMPOUND_EXPR, void_type_node, clear, exp);
+    	    }
+    	  else
+    	    {
+    	      /* The cleanup runs on both normal and EH paths, we need another
+    		 CLEANUP_STMT to clear the flag only on the EH path.  */
+    	      tree &bod = CLEANUP_BODY (*tp);
+    	      bod = build_stmt (EXPR_LOCATION (*tp), CLEANUP_STMT,
+    				bod, clear, current_retval_sentinel);
+    	      CLEANUP_EH_ONLY (bod) = true;
+    	    }
+    	}
+
+      /* Disable maybe_splice_retval_cleanup within the NRV cleanup scope, we don't
+    
+      else if (TREE_CODE (*tp) == CLEANUP_STMT
+    	   && dp->in_nrv_cleanup
+    	   && CLEANUP_DECL (*tp) == dp->result)
+        CLEANUP_EXPR (*tp) = void_node;
+
+      data.in_nrv_cleanup = false;
+
+/* COMPOUND_STMT is the STATEMENT_LIST for some block.  If COMPOUND_STMT is the
+       current function body or a try block, and current_retval_sentinel was set in
+       this function, wrap the block in a CLEANUP_STMT to destroy the return value
+       on throw.  */
+
+      /* If we need a cleanup for the return value, add it in at the same level as
+         pushdecl_outermost_localscope.  And also in try blocks.  */
+      bool function_body
+        = (current_binding_level->level_chain
+           && current_binding_level->level_chain->kind == sk_function_parms);
+    
+      if ((function_body || current_binding_level->kind == sk_try)
+          && !DECL_CONSTRUCTOR_P (current_function_decl)
+
+    
+          if (function_body)
+    	{
+    	  /* Add a DECL_EXPR for current_retval_sentinel.  */
+    	  tree decl_expr = build_stmt (loc, DECL_EXPR, current_retval_sentinel);
+    	   (&iter, decl_expr, TSI_SAME_STMT);
+    	}
+
+      maybe_splice_retval_cleanup (stmt_list);
+    
+
+if (!function_body)
+    	{
+    	  /* Clear the sentinel so we don't try to destroy the retval again on
+    	     rethrow (c++/112301).  */
+    	  tree clear = build2 (MODIFY_EXPR, boolean_type_node,
+    			       current_retval_sentinel, boolean_false_node);
+    	  dtor = build2 (COMPOUND_EXPR, void_type_node, clear, dtor);
+    	}
+
+      bool in_nrv_cleanup;
+
+        {
+          dp->in_nrv_cleanup = true;
+          cp_walk_tree (&CLEANUP_BODY (*tp), finalize_nrv_r, data, 0);
+          dp->in_nrv_cleanup = false;
+          cp_walk_tree (&CLEANUP_EXPR (*tp), finalize_nrv_r, data, 0);
+          *walk_subtrees = 0;
+    
+          CLEANUP_EH_ONLY (*tp) = true;
+    
+          /* If a cleanup might throw, we need to clear current_retval_sentinel on
+    	 the exception path so an outer cleanup added by
+    	 maybe_splice_retval_cleanup doesn't run.  */
+          if (cp_function_chain->throwing_cleanup)
+    	{
+    	  tree clear = build2 (MODIFY_EXPR, boolean_type_node,
+    			       current_retval_sentinel,
+    			       boolean_false_node);
+    
+    	  /* We're already only on the EH path, just prepend it.  */
+    	  tree &exp = CLEANUP_EXPR (*tp);
+    	  exp = build2 (COMPOUND_EXPR, void_type_node, clear, exp);
+    	}
+        }
+      /* Disable maybe_splice_retval_cleanup within the NRV cleanup scope, we don't
+    
+      else if (TREE_CODE (*tp) == CLEANUP_STMT
+    	   && dp->in_nrv_cleanup
+    	   && CLEANUP_DECL (*tp) == dp->result)
+        CLEANUP_EXPR (*tp) = void_node;
+
+      data.in_nrv_cleanup = false;
+

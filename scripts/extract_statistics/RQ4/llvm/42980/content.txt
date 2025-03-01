@@ -1,0 +1,21 @@
+
+      ExplicitSpecifier getExplicitSpecifierInternal() const {
+        if (CXXConstructorDeclBits.HasTrailingExplicitSpecifier)
+
+        return ExplicitSpecifier(
+
+                         ? ExplicitSpecKind::ResolvedTrue
+                         : ExplicitSpecKind::ResolvedFalse);
+      }
+
+             InheritedConstructor Inherited = InheritedConstructor());
+    
+      ExplicitSpecifier getExplicitSpecifier() {
+
+      }
+      const ExplicitSpecifier getExplicitSpecifier() const {
+
+      }
+    
+      /// Return true if the declartion is already resolved to be explicit.
+

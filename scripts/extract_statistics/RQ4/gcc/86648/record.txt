@@ -1,0 +1,4 @@
+Commit:	b25a375
+./gcc/cp/cxx-pretty-print.c	190,190
+./gcc/cp/pt.c	26461,26461
+./gcc/cp/pt.c	27394,27395

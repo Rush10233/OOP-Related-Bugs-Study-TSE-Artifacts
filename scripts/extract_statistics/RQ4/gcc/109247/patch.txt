@@ -1,0 +1,66 @@
+/* True iff FN is a copy or move constructor or assignment operator.  */
+    
+    static bool
+    sfk_copy_or_move (tree fn)
+    {
+      if (TREE_CODE (fn) != FUNCTION_DECL)
+        return false;
+      special_function_kind sfk = special_function_p (fn);
+      return sfk >= sfk_copy_constructor && sfk <= sfk_move_assignment;
+    }
+    
+
+      /* CWG2735 (PR109247): A copy/move ctor/op= for which its operand uses an
+         explicit conversion (due to list-initialization) is worse.  */
+      {
+        z_candidate *sp = nullptr;
+        if (sfk_copy_or_move (cand1->fn))
+          sp = cand1;
+        if (sfk_copy_or_move (cand2->fn))
+          sp = sp ? nullptr : cand2;
+        if (sp)
+          {
+    	conversion *conv = sp->convs[!DECL_CONSTRUCTOR_P (sp->fn)];
+    	if (conv->user_conv_p)
+    	  for (; conv; conv = next_conversion (conv))
+    	    if (conv->kind == ck_user
+    		&& DECL_P (conv->cand->fn)
+    		&& DECL_NONCONVERTING_P (conv->cand->fn))
+    	      return (sp == cand1) ? -1 : 1;
+          }
+      }
+    
+
+/* True iff FN is a copy or move constructor or assignment operator.  */
+    
+    static bool
+    sfk_copy_or_move (tree fn)
+    {
+      if (TREE_CODE (fn) != FUNCTION_DECL)
+        return false;
+      special_function_kind sfk = special_function_p (fn);
+      return sfk >= sfk_copy_constructor && sfk <= sfk_move_assignment;
+    }
+    
+
+      /* CWG2735 (PR109247): A copy/move ctor/op= for which its operand uses an
+         explicit conversion (due to list-initialization) is worse.  */
+      {
+        z_candidate *sp = nullptr;
+        if (sfk_copy_or_move (cand1->fn))
+          sp = cand1;
+        if (sfk_copy_or_move (cand2->fn))
+          sp = sp ? nullptr : cand2;
+        if (sp)
+          {
+    	conversion *conv = sp->convs[!DECL_CONSTRUCTOR_P (sp->fn)];
+    	if (conv->user_conv_p)
+    	  for (; conv; conv = next_conversion (conv))
+    	    if (conv->kind == ck_user
+    		&& DECL_P (conv->cand->fn)
+    		&& DECL_NONCONVERTING_P (conv->cand->fn))
+    	      return (sp == cand1) ? -1 : 1;
+          }
+      }
+    
+

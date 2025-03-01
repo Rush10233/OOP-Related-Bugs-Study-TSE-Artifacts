@@ -1,0 +1,7 @@
+Commit:	3f19ada
+./clang/include/clang/Basic/DiagnosticSemaKinds.td	1000,1000
+./clang/lib/Sema/SemaDecl.cpp	10830,10830
+./clang/lib/Sema/SemaDecl.cpp	10925,10926
+./clang/lib/Sema/SemaDecl.cpp	10931,10931
+./clang/lib/Sema/SemaDecl.cpp	11456,11457
+./clang/test/SemaCXX/MicrosoftExtensions.cpp	179,201

@@ -1,0 +1,8 @@
+/* Avoid digest_init clobbering the initializer.  */
+      tree carg = BRACE_ENCLOSED_INITIALIZER_P (arg) ? unshare_expr (arg): arg;
+      perform_implicit_conversion_flags (decl_type, carg, complain,
+
+/* Avoid digest_init clobbering the initializer.  */
+      tree carg = BRACE_ENCLOSED_INITIALIZER_P (arg) ? unshare_expr (arg): arg;
+      perform_implicit_conversion_flags (decl_type, carg, complain,
+

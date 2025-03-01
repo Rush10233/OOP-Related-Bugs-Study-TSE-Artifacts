@@ -1,0 +1,94 @@
+}
+    
+      /// Perform ABI-specific "this" argument adjustment required prior to
+
+        return This;
+      }
+    
+
+        }
+      }
+    
+
+    
+      return EmitCXXMemberCall(MD, CE->getExprLoc(), Callee, ReturnValue, This,
+                               /*ImplicitParam=*/0, QualType(),
+
+      if (!Callee)
+        Callee = CGM.GetAddrOfCXXDestructor(DD, Type);
+    
+      // FIXME: Provide a source location here.
+      CGF.EmitCXXMemberCall(DD, SourceLocation(), Callee, ReturnValueSlot(), This,
+                            VTT, VTTTy, 0, 0);
+
+        return MD->getParent();
+      }
+    
+
+    
+      void addImplicitStructorParams(CodeGenFunction &CGF, QualType &ResTy,
+                                     FunctionArgList &Params) override;
+
+        return C ? C : getZeroInt();
+      }
+    
+
+      void
+      GetNullMemberPointerFields(const MemberPointerType *MPT,
+                                 llvm::SmallVectorImpl<llvm::Constant *> &fields);
+
+      CGM.EmitGlobal(GlobalDecl(D, Dtor_Base));
+    }
+    
+
+      GD = GD.getCanonicalDecl();
+      const CXXMethodDecl *MD = cast<CXXMethodDecl>(GD.getDecl());
+    
+      GlobalDecl LookupGD = GD;
+      if (const CXXDestructorDecl *DD = dyn_cast<CXXDestructorDecl>(MD)) {
+
+        StaticOffset = CharUnits::Zero();
+    
+      if (ML.VBase) {
+
+      }
+      if (!StaticOffset.isZero()) {
+        assert(StaticOffset.isPositive());
+
+    
+    llvm::Value *MicrosoftCXXABI::adjustThisParameterInVirtualFunctionPrologue(
+        CodeGenFunction &CGF, GlobalDecl GD, llvm::Value *This) {
+      // In this ABI, every virtual function takes a pointer to one of the
+      // subobjects that first defines it as the 'this' parameter, rather than a
+      // pointer to the final overrider subobject. Thus, we need to adjust it back
+      //
+      // See comments in the MicrosoftVFTableContext implementation for the details.
+
+      if (Adjustment.isZero())
+        return This;
+    
+
+                                             bool Delegating, llvm::Value *This) {
+      llvm::Value *Callee = CGM.GetAddrOfCXXDestructor(DD, Type);
+    
+
+    
+      // FIXME: Provide a source location here.
+      CGF.EmitCXXMemberCall(DD, SourceLocation(), Callee, ReturnValueSlot(), This,
+
+      CGBuilderTy &Builder = CGF.Builder;
+    
+      Ty = Ty->getPointerTo()->getPointerTo();
+
+      llvm::Value *VTable = CGF.GetVTablePtr(VPtr, Ty);
+    
+      MicrosoftVTableContext::MethodVFTableLocation ML =
+
+          llvm::ConstantInt::get(llvm::IntegerType::getInt32Ty(CGF.getLLVMContext()),
+                                 DtorType == Dtor_Deleting);
+    
+
+      CGF.EmitCXXMemberCall(Dtor, CallLoc, Callee, ReturnValueSlot(), This,
+                            ImplicitParam, Context.IntTy, 0, 0);
+    }
+

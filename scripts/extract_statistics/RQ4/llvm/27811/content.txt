@@ -1,0 +1,35 @@
+}
+      }
+    
+
+      // Translate the parser's template argument list in our AST format.
+      TemplateArgumentListInfo TemplateArgs(LAngleLoc, RAngleLoc);
+      translateTemplateArguments(TemplateArgsIn, TemplateArgs);
+
+          Specialization->setLocation(TemplateNameLoc);
+          PrevDecl = nullptr;
+        }
+
+      }
+    
+      if (!Specialization) {
+
+                                           Specialization->getDefinition());
+      if (Def) {
+        TemplateSpecializationKind Old_TSK = Def->getTemplateSpecializationKind();
+        // Fix a TSK_ExplicitInstantiationDeclaration followed by a
+        // TSK_ExplicitInstantiationDefinition
+        if (Old_TSK == TSK_ExplicitInstantiationDeclaration &&
+
+          // FIXME: Need to notify the ASTMutationListener that we did this.
+          Def->setTemplateSpecializationKind(TSK);
+    
+
+                                                    == TSK_ExplicitSpecialization)
+            continue;
+    
+
+          if (CheckSpecializationInstantiationRedecl(PointOfInstantiation, TSK, 
+                                                     Record, 
+                                            MSInfo->getTemplateSpecializationKind(),
+

@@ -1,0 +1,138 @@
+tree, unification_kind_t, bool, bool);
+    static tree copy_template_args (tree);
+    static tree tsubst_template_parms (tree, tree, tsubst_flags_t);
+
+    tree most_specialized_partial_spec (tree, tsubst_flags_t);
+    static tree tsubst_aggr_type (tree, tree, tsubst_flags_t, tree, int);
+    static tree tsubst_arg_types (tree, tree, tree, tsubst_flags_t, tree);
+
+    	      if (!compparms (fn_arg_types, decl_arg_types))
+    		continue;
+    
+
+    	      if (!freq != !dreq)
+    		continue;
+    	      if (freq)
+
+    		     constraint-expression.  */
+    		  tree fargs = DECL_TI_ARGS (fn);
+    		  tsubst_flags_t complain = tf_none;
+
+    		  if (!cp_tree_equal (freq, dreq))
+    		    continue;
+    		}
+
+          tree parms = DECL_TEMPLATE_PARMS (new_friend);
+          tree treqs = TEMPLATE_PARMS_CONSTRAINTS (parms);
+          treqs = maybe_substitute_reqs_for (treqs, new_friend);
+
+        }
+    
+      /* The mangled name for the NEW_FRIEND is incorrect.  The function
+
+    	{
+    	  tree parms = tsubst_template_parms (DECL_TEMPLATE_PARMS (friend_tmpl),
+    					      args, tf_warning_or_error);
+
+              location_t saved_input_location = input_location;
+              input_location = DECL_SOURCE_LOCATION (friend_tmpl);
+              tree cons = get_constraints (tmpl);
+
+    					   DECL_FRIEND_CONTEXT (friend_tmpl));
+    	      --processing_template_decl;
+    	      set_constraints (tmpl, ci);
+
+    	    }
+    
+    	  /* Inject this template into the enclosing namspace scope.  */
+
+    
+      default_value = TREE_PURPOSE (t);
+      parm_decl = TREE_VALUE (t);
+    
+      parm_decl = tsubst (parm_decl, args, complain, NULL_TREE);
+      if (TREE_CODE (parm_decl) == PARM_DECL
+          && invalid_nontype_parm_type_p (TREE_TYPE (parm_decl), complain))
+        parm_decl = error_mark_node;
+      default_value = tsubst_template_arg (default_value, args,
+    				       complain, NULL_TREE);
+    
+      tree r = build_tree_list (default_value, parm_decl);
+
+      return r;
+    }
+    
+
+    /* Substitute the ARGS into the indicated aggregate (or enumeration)
+       type T.  If T is not an aggregate or enumeration type, it is
+       handled as if by tsubst.  IN_DECL is as for tsubst.  If
+
+tree, unification_kind_t, bool, bool);
+    static tree copy_template_args (tree);
+    static tree tsubst_template_parms (tree, tree, tsubst_flags_t);
+
+    tree most_specialized_partial_spec (tree, tsubst_flags_t);
+    static tree tsubst_aggr_type (tree, tree, tsubst_flags_t, tree, int);
+    static tree tsubst_arg_types (tree, tree, tree, tsubst_flags_t, tree);
+
+    	      if (!compparms (fn_arg_types, decl_arg_types))
+    		continue;
+    
+
+    	      if (!freq != !dreq)
+    		continue;
+    	      if (freq)
+
+    		     constraint-expression.  */
+    		  tree fargs = DECL_TI_ARGS (fn);
+    		  tsubst_flags_t complain = tf_none;
+
+    		  if (!cp_tree_equal (freq, dreq))
+    		    continue;
+    		}
+
+          tree parms = DECL_TEMPLATE_PARMS (new_friend);
+          tree treqs = TEMPLATE_PARMS_CONSTRAINTS (parms);
+          treqs = maybe_substitute_reqs_for (treqs, new_friend);
+
+        }
+    
+      /* The mangled name for the NEW_FRIEND is incorrect.  The function
+
+    	{
+    	  tree parms = tsubst_template_parms (DECL_TEMPLATE_PARMS (friend_tmpl),
+    					      args, tf_warning_or_error);
+
+              location_t saved_input_location = input_location;
+              input_location = DECL_SOURCE_LOCATION (friend_tmpl);
+              tree cons = get_constraints (tmpl);
+
+    					   DECL_FRIEND_CONTEXT (friend_tmpl));
+    	      --processing_template_decl;
+    	      set_constraints (tmpl, ci);
+
+    	    }
+    
+    	  /* Inject this template into the enclosing namspace scope.  */
+
+    
+      default_value = TREE_PURPOSE (t);
+      parm_decl = TREE_VALUE (t);
+    
+      parm_decl = tsubst (parm_decl, args, complain, NULL_TREE);
+      if (TREE_CODE (parm_decl) == PARM_DECL
+          && invalid_nontype_parm_type_p (TREE_TYPE (parm_decl), complain))
+        parm_decl = error_mark_node;
+      default_value = tsubst_template_arg (default_value, args,
+    				       complain, NULL_TREE);
+    
+      tree r = build_tree_list (default_value, parm_decl);
+
+      return r;
+    }
+    
+
+    /* Substitute the ARGS into the indicated aggregate (or enumeration)
+       type T.  If T is not an aggregate or enumeration type, it is
+       handled as if by tsubst.  IN_DECL is as for tsubst.  If
+

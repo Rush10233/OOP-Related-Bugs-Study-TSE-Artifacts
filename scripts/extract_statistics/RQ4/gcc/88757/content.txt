@@ -1,0 +1,8 @@
+
+    	    if (pack_expansion_p)
+    	      maybe_warn_variadic_templates ();
+
+    	  }
+    
+    	handle_declarator:;
+

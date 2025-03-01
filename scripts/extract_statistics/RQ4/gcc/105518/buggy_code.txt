@@ -1,0 +1,52 @@
+/* If T is an alias template specialization, we want to substitute that
+         rather than strip it, especially if it's dependent_alias_template_spec_p.
+         It should be OK not to handle entering_scope in this case, since
+         DECL_CONTEXT will never be an alias template specialization.  We only get
+         here with an alias when tsubst calls us for TYPENAME_TYPE.  */
+      if (alias_template_specialization_p (t, nt_transparent))
+        return tsubst (t, args, complain, in_decl);
+
+        case RECORD_TYPE:
+          if (TYPE_PTRMEMFUNC_P (t))
+    	return tsubst (TYPE_PTRMEMFUNC_FN_TYPE (t), args, complain, in_decl);
+
+          /* Fall through.  */
+        case ENUMERAL_TYPE:
+        case UNION_TYPE:
+          if (TYPE_TEMPLATE_INFO (t) && uses_template_parms (t))
+    	{
+    	  tree argvec;
+    	  tree r;
+
+    	  /* Figure out what arguments are appropriate for the
+    	     type we are trying to find.  For example, given:
+
+    	       template <class T> struct S;
+    	       template <class T, class U> void f(T, U) { S<U> su; }
+
+    	     and supposing that we are instantiating f<int, double>,
+    	     then our ARGS will be {int, double}, but, when looking up
+    	     S we only want {double}.  */
+    	  argvec = tsubst_template_args (TYPE_TI_ARGS (t), args,
+    					 complain, in_decl);
+    	  if (argvec == error_mark_node)
+    	    r = error_mark_node;
+    	  else
+    	    {
+    	      r = lookup_template_class (t, argvec, in_decl, NULL_TREE,
+    					 entering_scope, complain);
+    	      r = cp_build_qualified_type (r, cp_type_quals (t), complain);
+    	    }
+
+    	  return r;
+    	}
+
+    	/* This is not a template type, so there's nothing to do.  */
+    	return t;
+
+        default:
+          return tsubst (t, args, complain, in_decl);
+
+          return tsubst_aggr_type (t, args, complain, in_decl,
+    			       /*entering_scope=*/0);
+

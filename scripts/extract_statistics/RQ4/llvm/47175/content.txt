@@ -1,0 +1,78 @@
+/// The location of the right parentheses (')').
+      SourceLocation RParenLoc;
+    
+
+    
+      CXXUnresolvedConstructExpr(EmptyShell Empty, unsigned NumArgs)
+
+        CXXUnresolvedConstructExprBits.NumArgs = NumArgs;
+      }
+    
+    public:
+      static CXXUnresolvedConstructExpr *Create(const ASTContext &Context,
+
+                                                SourceLocation LParenLoc,
+                                                ArrayRef<Expr *> Args,
+                                                SourceLocation RParenLoc);
+
+      Error Err = Error::success();
+      auto ToLParenLoc = importChecked(Err, E->getLParenLoc());
+      auto ToRParenLoc = importChecked(Err, E->getRParenLoc());
+
+      auto ToTypeSourceInfo = importChecked(Err, E->getTypeSourceInfo());
+      if (Err)
+        return std::move(Err);
+
+        return std::move(Err);
+    
+      return CXXUnresolvedConstructExpr::Create(
+
+          llvm::makeArrayRef(ToArgs), ToRParenLoc);
+    }
+    
+
+    ExprDependence clang::computeDependence(CXXUnresolvedConstructExpr *E) {
+      auto D = ExprDependence::ValueInstantiation;
+      D |= toExprDependence(E->getType()->getDependence());
+      for (auto *A : E->arguments())
+        D |= A->getDependence() &
+             (ExprDependence::UnexpandedPack | ExprDependence::Error);
+
+      return new (buffer) ExprWithCleanups(empty, numObjects);
+    }
+    
+
+                                                           SourceLocation LParenLoc,
+                                                           ArrayRef<Expr *> Args,
+                                                           SourceLocation RParenLoc)
+
+               (TSI->getType()->isLValueReferenceType()
+                    ? VK_LValue
+                    : TSI->getType()->isRValueReferenceType() ? VK_XValue
+
+    }
+    
+    CXXUnresolvedConstructExpr *CXXUnresolvedConstructExpr::Create(
+
+        ArrayRef<Expr *> Args, SourceLocation RParenLoc) {
+      void *Mem = Context.Allocate(totalSizeToAlloc<Expr *>(Args.size()));
+
+    }
+    
+    CXXUnresolvedConstructExpr *
+
+      QualType Ty = TInfo->getType();
+      SourceLocation TyBeginLoc = TInfo->getTypeLoc().getBeginLoc();
+    
+      assert((!ListInitialization ||
+              (Exprs.size() == 1 && isa<InitListExpr>(Exprs[0]))) &&
+             "List initialization must have initializer list as expression.");
+
+        Entity = InitializedEntity::InitializeTemporary(TInfo, Ty);
+      }
+    
+
+      // C++ [expr.type.conv]p1:
+      // If the expression list is a parenthesized single expression, the type
+      // conversion expression is equivalent (in definedness, and if defined in
+

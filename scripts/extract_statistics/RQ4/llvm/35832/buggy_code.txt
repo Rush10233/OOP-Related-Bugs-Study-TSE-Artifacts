@@ -1,0 +1,4 @@
+EmptySS, field, foundDecl, memberNameInfo)
+
+          assert(!QualifierLoc && "Can't have an unnamed field with a qualifier!");
+

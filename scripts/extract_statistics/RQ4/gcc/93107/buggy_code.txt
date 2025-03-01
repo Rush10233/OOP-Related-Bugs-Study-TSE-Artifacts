@@ -1,0 +1,20 @@
+init = resolve_nondeduced_context (init, complain);
+
+if (init == error_mark_node)
+
+      if (type == error_mark_node)
+
+      if (BRACE_ENCLOSED_INITIALIZER_P (init))
+        {
+          /* We don't recurse here because we can't deduce from a nested
+    	 initializer_list.  */
+          if (CONSTRUCTOR_ELTS (init))
+    	for (constructor_elt &elt : CONSTRUCTOR_ELTS (init))
+    	  elt.value = resolve_nondeduced_context (elt.value, complain);
+        }
+      else
+        init = resolve_nondeduced_context (init, complain);
+    
+
+          && init != error_mark_node
+

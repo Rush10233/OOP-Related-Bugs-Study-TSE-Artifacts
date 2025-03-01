@@ -1,0 +1,51 @@
+/// Retrieve the function declaration from which this function could
+      /// be instantiated, if it is an instantiation (rather than a non-template
+      /// or a specialization, for example).
+
+    
+      /// Retrieve the primary template that this function template
+      /// specialization either specializes or was instantiated from.
+
+      return clang::isTemplateInstantiation(getTemplateSpecializationKind());
+    }
+    
+
+      // If this is a generic lambda call operator specialization, its
+      // instantiation pattern is always its primary template's pattern
+      // even if its primary template was instantiated from another
+
+      }
+    
+      if (MemberSpecializationInfo *Info = getMemberSpecializationInfo()) {
+
+          return nullptr;
+        return getDefinitionOrSelf(cast<FunctionDecl>(Info->getInstantiatedFrom()));
+      }
+    
+
+        return nullptr;
+    
+      if (FunctionTemplateDecl *Primary = getPrimaryTemplate()) {
+        // If we hit a point where the user provided a specialization of this
+        // template, we're done looking.
+
+          auto *NewPrimary = Primary->getInstantiatedFromMemberTemplate();
+          if (!NewPrimary)
+            break;
+
+        //   default argument expression appears.
+        ContextRAII SavedContext(*this, FD);
+        LocalInstantiationScope Local(*this);
+
+        runWithSufficientStackSpace(CallLoc, [&] {
+          Result = SubstInitializer(UninstExpr, TemplateArgs,
+                                    /*DirectInit*/false);
+
+      MultiLevelTemplateArgumentList TemplateArgs =
+        getTemplateInstantiationArgs(Decl, nullptr, /*RelativeToPrimary*/true);
+    
+
+      FunctionDecl *Template = Proto->getExceptionSpecTemplate();
+      if (addInstantiatedParametersToScope(*this, Decl, Template, Scope,
+                                           TemplateArgs)) {
+

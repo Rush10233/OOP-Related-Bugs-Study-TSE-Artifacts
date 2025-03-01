@@ -1,0 +1,24 @@
+extern bool is_copy_initialization		(tree);
+
+      if (VAR_P (decl) && is_copy_initialization (init))
+        flags |= LOOKUP_ONLYCONVERTING;
+    
+
+      if (is_copy_initialization (init))
+
+    /* Returns true iff the initializer INIT represents copy-initialization
+       (and therefore we must set LOOKUP_ONLYCONVERTING when processing it).  */
+    
+    bool
+    is_copy_initialization (tree init)
+    {
+      return (init && init != void_type_node
+    	  && TREE_CODE (init) != TREE_LIST
+    	  && !(TREE_CODE (init) == TARGET_EXPR
+    	       && TARGET_EXPR_DIRECT_INIT_P (init))
+    	  && !DIRECT_LIST_INIT_P (init));
+    }
+    
+
+    			      /*asmspec_tree=*/NULL_TREE, 0);
+

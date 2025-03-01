@@ -1,0 +1,12 @@
+"must use a typedef to declare a conversion to %0">;
+
+        I.Loc           = Loc;
+
+                                                          Loc),
+
+      QualType ConvType = GetTypeFromParser(D.getName().ConversionFunctionId);
+
+        Diag(D.getIdentifierLoc(), diag::err_conv_function_with_complex_decl)
+            << Proto->getReturnType();
+        D.setInvalidType();
+

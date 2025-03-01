@@ -1,0 +1,44 @@
+{
+    	  case TEMPLATE_TYPE_PARM:
+    	  case TEMPLATE_TEMPLATE_PARM:
+    	    if (cp_type_quals (t))
+    	      {
+    		r = tsubst (TYPE_MAIN_VARIANT (t), args, complain, in_decl);
+
+    		       only instantiated during satisfaction.  */
+    		    PLACEHOLDER_TYPE_CONSTRAINTS_INFO (r) = ci;
+    
+    		if (TYPE_STRUCTURAL_EQUALITY_P (t))
+    		  SET_TYPE_STRUCTURAL_EQUALITY (r);
+    		else
+    		  TYPE_CANONICAL (r) = canonical_type_parameter (r);
+    	      }
+    	    break;
+    
+
+    	  case TEMPLATE_PARM_INDEX:
+    	    /* OK, now substitute the type of the non-type parameter.  We
+    	       couldn't do it earlier because it might be an auto parameter,
+
+{
+    	  case TEMPLATE_TYPE_PARM:
+    	  case TEMPLATE_TEMPLATE_PARM:
+    	    if (cp_type_quals (t))
+    	      {
+    		r = tsubst (TYPE_MAIN_VARIANT (t), args, complain, in_decl);
+
+    		       only instantiated during satisfaction.  */
+    		    PLACEHOLDER_TYPE_CONSTRAINTS_INFO (r) = ci;
+    
+    		if (TYPE_STRUCTURAL_EQUALITY_P (t))
+    		  SET_TYPE_STRUCTURAL_EQUALITY (r);
+    		else
+    		  TYPE_CANONICAL (r) = canonical_type_parameter (r);
+    	      }
+    	    break;
+    
+
+    	  case TEMPLATE_PARM_INDEX:
+    	    /* OK, now substitute the type of the non-type parameter.  We
+    	       couldn't do it earlier because it might be an auto parameter,
+

@@ -1,0 +1,16 @@
+restrict pointers.  This is needed to prevent infinite recursion.
+       If ADD_RESTRICT, pretend that the pointer NAME is restrict even if DECL
+       does not advertise it.  */
+
+    			    bool handle_param, bitmap handled_struct_type,
+    			    bool add_restrict = false)
+
+    	  && (TYPE_RESTRICT (decl_type) || add_restrict))
+
+      bool this_parm_in_ctor = DECL_CXX_CONSTRUCTOR_P (fn->decl);
+
+    				      handled_struct_type, this_parm_in_ctor);
+
+    
+          this_parm_in_ctor = false;
+

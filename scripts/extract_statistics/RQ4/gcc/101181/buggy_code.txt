@@ -1,0 +1,58 @@
+args = add_extra_args (REQUIRES_EXPR_EXTRA_ARGS (t), args);
+
+    extern tree add_extra_args			(tree, tree);
+
+      tree extra = args;
+
+    add_extra_args (tree extra, tree args)
+
+    #if 1
+      /* I think we should always be able to substitute dependent args into the
+         pattern.  If that turns out to be incorrect in some cases, enable the
+         alternate code (and add complain/in_decl parms to this function).  */
+      gcc_checking_assert (!uses_template_parms (extra));
+    #else
+      if (!uses_template_parms (extra))
+
+          gcc_unreachable ();
+
+    #endif
+
+      args = add_extra_args (PACK_EXPANSION_EXTRA_ARGS (t), args);
+
+          if (TREE_CODE (orig_arg) == TREE_VEC)
+
+          if ((PACK_EXPANSION_P (TREE_VEC_ELT (orig_t, i))
+               || ARGUMENT_PACK_P (TREE_VEC_ELT (orig_t, i)))
+
+    	args = add_extra_args (IF_STMT_EXTRA_ARGS (t), args);
+
+args = add_extra_args (REQUIRES_EXPR_EXTRA_ARGS (t), args);
+
+    extern tree add_extra_args			(tree, tree);
+
+      tree extra = args;
+
+    add_extra_args (tree extra, tree args)
+
+    #if 1
+      /* I think we should always be able to substitute dependent args into the
+         pattern.  If that turns out to be incorrect in some cases, enable the
+         alternate code (and add complain/in_decl parms to this function).  */
+      gcc_checking_assert (!uses_template_parms (extra));
+    #else
+      if (!uses_template_parms (extra))
+
+          gcc_unreachable ();
+
+    #endif
+
+      args = add_extra_args (PACK_EXPANSION_EXTRA_ARGS (t), args);
+
+          if (TREE_CODE (orig_arg) == TREE_VEC)
+
+          if ((PACK_EXPANSION_P (TREE_VEC_ELT (orig_t, i))
+               || ARGUMENT_PACK_P (TREE_VEC_ELT (orig_t, i)))
+
+    	args = add_extra_args (IF_STMT_EXTRA_ARGS (t), args);
+

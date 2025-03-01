@@ -1,0 +1,16 @@
+return error_mark_node;
+        }
+    
+
+      tree type = TREE_TYPE (tmpl);
+    
+      bool try_list_ctor = false;
+
+return error_mark_node;
+        }
+    
+
+      tree type = TREE_TYPE (tmpl);
+    
+      bool try_list_ctor = false;
+

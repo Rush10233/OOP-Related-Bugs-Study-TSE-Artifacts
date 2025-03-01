@@ -1,0 +1,9 @@
+Commit:	9f2c4b6
+./gcc/cp/decl2.c	4728,4732
+./gcc/cp/semantics.c	4301,4301
+Commit:	e622e83
+./gcc/cp/decl2.c	4891,4895
+./gcc/cp/semantics.c	4271,4271
+Commit:	73ab3eb
+./gcc/cp/decl2.c	4968,4972
+./gcc/cp/semantics.c	4355,4355

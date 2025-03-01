@@ -1,0 +1,14 @@
+HasFromInt = GetInt(Context, FromIter, FromExpr, FromInt);
+
+              HasToInt = GetInt(Context, ToIter, ToExpr, ToInt);
+
+            HasFromInt = GetInt(Context, FromIter, FromExpr, FromInt);
+
+            HasToInt = GetInt(Context, ToIter, ToExpr, ToInt);
+
+      /// default arguments.
+
+                         Expr *ArgExpr, llvm::APSInt &Int) {
+
+if (ECD->getInitVal() == Val) {
+

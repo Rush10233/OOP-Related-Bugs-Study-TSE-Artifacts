@@ -1,0 +1,20 @@
+tree closure = LAMBDA_EXPR_CLOSURE (tlambda);
+    	  tree containing_function
+    	    = decl_function_context (TYPE_NAME (closure));
+    
+    	  tree ex = LAMBDA_EXPR_EXTRA_SCOPE (tlambda);
+    	  if (ex && TREE_CODE (ex) == FIELD_DECL)
+
+    	      /* Lambda in an NSDMI.  We don't have a function to look up
+    		 'this' in, but we can find (or rebuild) the fake one from
+    		 inject_this_parameter.  */
+    	      if (!containing_function && !COMPLETE_TYPE_P (closure))
+    		/* If we're parsing a lambda in a non-local class,
+    		   we can find the fake 'this' in scope_chain.  */
+    		init = scope_chain->x_current_class_ptr;
+    	      else
+    		/* Otherwise it's either gone or buried in
+    		   function_context_stack, so make another.  */
+    		init = build_this_parm (NULL_TREE, DECL_CONTEXT (ex),
+    					TYPE_UNQUALIFIED);
+

@@ -1,0 +1,24 @@
+(cp_parser *, cp_parser_flags, bool);
+
+    	       (parser, flags, decl_spec_seq_has_spec_p (decl_specs,
+    							 ds_friend))));
+
+    		    if (!is_overloaded_fn (decl)
+    			/* Allow
+    			   template<typename T>
+    			   A<T>::A(T::type) { }  */
+    			&& !(MAYBE_CLASS_TYPE_P (qualifying_scope)
+    			     && constructor_name_p (unqualified_name,
+    						    qualifying_scope)))
+
+       declarator is preceded by the `friend' specifier.  The parser flags FLAGS
+       is used to control type-specifier parsing.  */
+
+    cp_parser_constructor_declarator_p (cp_parser *parser, cp_parser_flags flags,
+    				    bool friend_p)
+
+    	  /* Look for the type-specifier.  It's not optional, but its typename
+    	     might be.  */
+
+    				    (flags & ~CP_PARSER_FLAGS_OPTIONAL),
+

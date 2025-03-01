@@ -1,0 +1,16 @@
+++idx;
+    	    }
+    	}
+
+    	/* Already handled above.  */;
+          else if (DECL_INITIAL (field))
+    	{
+
+++idx;
+    	    }
+    	}
+
+    	/* Already handled above.  */;
+          else if (DECL_INITIAL (field))
+    	{
+

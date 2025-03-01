@@ -1,0 +1,2 @@
+fns = lookup_qualified_name (global_namespace, fnname);
+

@@ -1,0 +1,5 @@
+// FIXME: We don't set up EvaluatingDecl for local variables or temporaries,
+      // and this doesn't do quite the right thing for const subobjects of the
+
+      if (LVal.getLValueBase() == Info.EvaluatingDecl) {
+

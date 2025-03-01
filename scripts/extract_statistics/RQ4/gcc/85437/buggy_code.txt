@@ -1,0 +1,28 @@
+themselves, such as 1/0.  Call this function (or rather, the macro
+       following it) to check for that condition.
+
+        case NOP_EXPR:
+
+    	    if (same_type_ignoring_top_level_qualifiers_p (type,
+    							   TREE_TYPE (op))
+    		|| can_convert_qual (type, op))
+    	      return cp_fold_convert (type, op);
+    	    else
+    	      {
+    		if (!ctx->quiet)
+    		  error_at (EXPR_LOC_OR_LOC (t, input_location),
+    			    "a reinterpret_cast is not a constant expression");
+    		*non_constant_p = true;
+    		return t;
+    	      }
+
+          return build_nop (type, expr);
+
+          return build_nop (type, expr);
+
+          return build_nop (type, expr);
+
+          return build_nop (type, expr);
+
+      return cp_convert (type, expr, complain);
+

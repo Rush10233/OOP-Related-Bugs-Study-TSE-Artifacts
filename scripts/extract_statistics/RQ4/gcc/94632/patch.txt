@@ -1,0 +1,5 @@
+if (comparing_specializations
+    	  && DECL_CONTEXT (t1) != DECL_CONTEXT (t2))
+
+    	   with parameters with identical contexts.  */
+

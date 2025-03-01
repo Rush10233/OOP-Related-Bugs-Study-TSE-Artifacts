@@ -1,0 +1,4 @@
+Commit:	ae85ad3
+./gcc/cp/constexpr.c	3674,3674
+./gcc/cp/constexpr.c	4557,4557
+./gcc/cp/decl.c	15075,15075

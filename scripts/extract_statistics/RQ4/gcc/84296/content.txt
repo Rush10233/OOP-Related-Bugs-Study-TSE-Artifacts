@@ -1,0 +1,16 @@
+&& !currently_open_class (scope));
+    }
+    
+
+    /* T is a SCOPE_REF; return whether we need to consider it
+        instantiation-dependent so that we can check access at instantiation
+        time even though we know which member it resolves to.  */
+
+    {
+      if (DECL_P (TREE_OPERAND (t, 1))
+          && CLASS_TYPE_P (TREE_OPERAND (t, 0))
+
+          && accessible_in_template_p (TREE_OPERAND (t, 0),
+    				   TREE_OPERAND (t, 1)))
+        return false;
+

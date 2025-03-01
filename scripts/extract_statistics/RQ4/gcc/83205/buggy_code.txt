@@ -1,0 +1,12 @@
+error_at (loc, "%u names provided while %qT decomposes into "
+    			   "%wu elements", count, type, eltscnt);
+
+    	    error_at (loc, "only %u names provided while %qT decomposes into "
+    			   "%wu elements", count, type, eltscnt);
+
+error_at (loc, "%u names provided while %qT decomposes into "
+    			   "%wu elements", count, type, eltscnt);
+
+    	    error_at (loc, "only %u names provided while %qT decomposes into "
+    			   "%wu elements", count, type, eltscnt);
+

@@ -1,0 +1,16 @@
+tree type = TREE_TYPE (postfix_expression);
+          /* If we don't have a (type-dependent) object of class type, use
+    	 typeof to figure out the type of the object.  */
+
+    	type = finish_typeof (postfix_expression);
+          parser->context->object_type = type;
+        }
+
+tree type = TREE_TYPE (postfix_expression);
+          /* If we don't have a (type-dependent) object of class type, use
+    	 typeof to figure out the type of the object.  */
+
+    	type = finish_typeof (postfix_expression);
+          parser->context->object_type = type;
+        }
+

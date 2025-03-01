@@ -1,0 +1,8 @@
+CXXRecordDecl *ClassPattern = ParentRD->getTemplateInstantiationPattern();
+        DeclContext::lookup_result Lookup =
+            ClassPattern->lookup(Field->getDeclName());
+
+        if (InstantiateInClassInitializer(Loc, Field, Pattern,
+                                          getTemplateInstantiationArgs(Field)))
+          return ExprError();
+

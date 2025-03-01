@@ -1,0 +1,177 @@
+if (tcleanup && !CLEANUP_EH_ONLY (*stmt_p)
+    	  && !expr_noexcept_p (tcleanup, tf_none))
+
+          if (rinit && !TREE_SIDE_EFFECTS (rinit)
+    	  && TREE_OPERAND (init, 0) == decl)
+
+    /* We've just initialized subobject SUB; also insert a TARGET_EXPR with an
+       EH-only cleanup for SUB.  Because of EH region nesting issues, we need to
+       make the cleanup conditional on a flag that we will clear once the object is
+       fully initialized, so push a new flag onto FLAGS.  */
+    
+    static void
+    maybe_push_temp_cleanup (tree sub, vec<tree,va_gc> **flags)
+    {
+      if (tree cleanup
+          = cxx_maybe_build_cleanup (sub, tf_warning_or_error))
+        {
+          tree tx = get_target_expr (boolean_true_node);
+          tree flag = TARGET_EXPR_SLOT (tx);
+          CLEANUP_EH_ONLY (tx) = true;
+          TARGET_EXPR_CLEANUP (tx) = build3 (COND_EXPR, void_type_node,
+    					 flag, cleanup, void_node);
+          add_stmt (tx);
+          vec_safe_push (*flags, flag);
+        }
+    }
+    
+
+    split_nonconstant_init_1 (tree dest, tree init, bool nested, vec<tree,va_gc> **flags)
+
+    	    maybe_push_temp_cleanup (dest, flags);
+
+    	      if (!split_nonconstant_init_1 (sub, value, true, flags)
+
+    		  maybe_push_temp_cleanup (sub, flags);
+
+          /* Subobject initializers are not full-expressions.  */
+          auto fe = (make_temp_override
+    		 (current_stmt_tree ()->stmts_are_full_exprs_p, 0));
+    
+
+    
+          /* Collect flags for disabling subobject cleanups once the complete
+    	 object is fully constructed.  */
+          vec<tree, va_gc> *flags = make_tree_vector ();
+    
+          if (split_nonconstant_init_1 (dest, init, false, &flags))
+
+    
+          for (tree f : flags)
+    	{
+    	  /* See maybe_push_temp_cleanup.  */
+    	  tree d = f;
+    	  tree i = boolean_false_node;
+    	  add_stmt (build2 (MODIFY_EXPR, TREE_TYPE (d), d, i));
+    	}
+          release_tree_vector (flags);
+    
+
+tsubst_flags_t,
+    						 vec<tree, va_gc> ** = nullptr);
+
+    extern tree expand_vec_init_expr		(tree, tree, tsubst_flags_t,
+    						 vec<tree,va_gc>** = nullptr);
+
+    	     its destructor.  But arrays are handled in build_vec_init.  */
+
+    		int from_array,
+    		tsubst_flags_t complain,
+    		vec<tree, va_gc>** flags /* = nullptr */)
+
+      tree iterator_targ = get_target_expr (maxindex);
+      add_stmt (iterator_targ);
+      iterator = TARGET_EXPR_SLOT (iterator_targ);
+
+          tree e;
+          tree m = cp_build_binary_op (input_location,
+    				   MINUS_EXPR, maxindex, iterator,
+    				   complain);
+    
+          /* Flatten multi-dimensional array since build_vec_delete only
+    	 expects one-dimensional array.  */
+          if (TREE_CODE (type) == ARRAY_TYPE)
+    	m = cp_build_binary_op (input_location,
+    				MULT_EXPR, m,
+    				/* Avoid mixing signed and unsigned.  */
+    				convert (TREE_TYPE (m),
+    					 array_type_nelts_total (type)),
+    				complain);
+    
+          e = build_vec_delete_1 (input_location, rval, m,
+    			      inner_elt_type, sfk_complete_destructor,
+    			      /*use_global_delete=*/0, complain);
+          if (e == error_mark_node)
+    	errors = true;
+          TARGET_EXPR_CLEANUP (iterator_targ) = e;
+          CLEANUP_EH_ONLY (iterator_targ) = true;
+    
+    
+    	 for any temporaries in the initialization are naturally within our
+    	 cleanup region, so we don't want wrap_temporary_cleanups to do
+    	 anything for arrays.  But if the array is a subobject, we need to
+    	 tell split_nonconstant_init how to turn off this cleanup in favor of
+    	 the cleanup for the complete object.  */
+          if (flags)
+    	vec_safe_push (*flags, build_tree_list (iterator, maxindex));
+
+    	    one_init = expand_vec_init_expr (baseref, elt, complain, flags);
+
+          /* [class.temporary]: "There are three contexts in which temporaries are
+    	 destroyed at a different point than the end of the full-
+    	 expression. The first context is when a default constructor is called
+    	 to initialize an element of an array with no corresponding
+    	 initializer. The second context is when a copy constructor is called
+    	 to copy an element of an array while the entire array is copied. In
+    	 either case, if the constructor has one or more default arguments, the
+    	 destruction of every temporary created in a default argument is
+    
+    
+    	 So, for this loop, statements are full-expressions.  */
+
+    expand_vec_init_expr (tree target, tree vec_init, tsubst_flags_t complain,
+    		      vec<tree,va_gc> **flags)
+
+    			 from_array, complain, flags);
+
+    split_nonconstant_init_1 (tree dest, tree init, vec<tree,va_gc> **flags)
+
+    	     than one per element.  build_vec_init will handle it.  */
+
+    				      tf_warning_or_error, flags);
+
+    	  tree sub;
+    	  if (array_type_p)
+    	    sub = build4 (ARRAY_REF, inner_type, dest, field_index,
+    			  NULL_TREE, NULL_TREE);
+    	  else
+    	    sub = build3 (COMPONENT_REF, inner_type, dest, field_index,
+    			  NULL_TREE);
+    
+
+    	      if (!split_nonconstant_init_1 (sub, value, flags)
+
+    	  else if (TREE_CODE (value) == VEC_INIT_EXPR)
+    	    {
+    	      add_stmt (expand_vec_init_expr (sub, value, tf_warning_or_error,
+    					      flags));
+    
+    	      /* Mark element for removal.  */
+    	      CONSTRUCTOR_ELT (init, idx)->index = NULL_TREE;
+    	      if (idx < tidx)
+    		tidx = idx;
+    	      num_split_elts++;
+    	    }
+
+          /* If the complete object is an array, build_vec_init's cleanup is
+    	 enough.  Otherwise, collect flags for disabling subobject
+    	 cleanups once the complete object is fully constructed.  */
+          vec<tree, va_gc> *flags = nullptr;
+          if (TREE_CODE (TREE_TYPE (dest)) != ARRAY_TYPE)
+    	flags = make_tree_vector ();
+
+          if (split_nonconstant_init_1 (dest, init, &flags))
+
+    	  if (TREE_CODE (f) == TREE_LIST)
+    	    {
+    	      /* To disable a build_vec_init cleanup, set
+    		 iterator = maxindex.  */
+    	      d = TREE_PURPOSE (f);
+    	      i = TREE_VALUE (f);
+    	      ggc_free (f);
+    	    }
+
+cp_gimplify_init_expr (tree *expr_p)
+
+          cp_gimplify_init_expr (expr_p);
+

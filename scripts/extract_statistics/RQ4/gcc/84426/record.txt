@@ -1,0 +1,13 @@
+Commit:	7f7e718
+./gcc/cp/class.c	996,1001
+./gcc/cp/class.c	1149,1150
+./gcc/cp/name-lookup.c	1149,1152
+./gcc/cp/name-lookup.c	1154,1159
+./gcc/cp/name-lookup.c	1337,1339
+./gcc/cp/name-lookup.c	1342,1342
+./gcc/cp/name-lookup.c	1345,1345
+./gcc/cp/name-lookup.c	1392,1393
+./gcc/cp/name-lookup.c	1396,1397
+./gcc/cp/name-lookup.c	1401,1405
+./gcc/cp/name-lookup.c	1408,1409
+./gcc/cp/name-lookup.h	313,313

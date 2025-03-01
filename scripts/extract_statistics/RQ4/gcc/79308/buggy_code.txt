@@ -1,0 +1,4 @@
+the CLASSTPYE_TI_TEMPLATE for S<int*> will be S, not the S<T*>.  */
+
+    		  elt.args = INNERMOST_TEMPLATE_ARGS (elt.args);
+

@@ -1,0 +1,10 @@
+void set(APValue::LValueBase B, unsigned I = 0, bool BInvalid = false,
+                 bool IsNullPtr_ = false, uint64_t Offset_ = 0) {
+
+          Offset = CharUnits::fromQuantity(Offset_);
+
+          IsNullPtr = IsNullPtr_;
+
+        auto Offset = Info.Ctx.getTargetNullPointerValue(E->getType());
+        Result.set((Expr*)nullptr, 0, false, true, Offset);
+

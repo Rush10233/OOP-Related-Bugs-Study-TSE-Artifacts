@@ -1,0 +1,17 @@
+/* We may have to generate early debug late for LTO in case debug
+
+    	{
+    	  dwarf2out_decl (decl);
+    	  die = lookup_decl_die (decl);
+    	}
+    
+          if (die)
+
+    	    /* We cannot replace a load that may throw or is volatile.  */
+    	    && !stmt_can_throw_internal (cfun, use_stmt)))
+
+          msq = vect_setup_realignment (first_stmt_info, gsi, &realignment_token,
+
+    	  if (TREE_CODE (*tem) != VAR_DECL
+    	      || !auto_var_in_fn_p (*tem, DECL_CONTEXT (*tem)))
+

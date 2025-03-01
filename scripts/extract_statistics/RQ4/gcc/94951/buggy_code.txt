@@ -1,0 +1,27 @@
+if (warn_strict_aliasing > 2)
+    	    if (strict_aliasing_warning (EXPR_LOCATION (ptr),
+    					 type, TREE_OPERAND (ptr, 0)))
+    	      TREE_NO_WARNING (ptr) = 1;
+
+    	strict_aliasing_warning (EXPR_LOCATION (expr), type, expr);
+
+    	strict_aliasing_warning (EXPR_LOCATION (expr), type, expr);
+
+if (warn_strict_aliasing > 2)
+    	    if (strict_aliasing_warning (EXPR_LOCATION (ptr),
+    					 type, TREE_OPERAND (ptr, 0)))
+    	      TREE_NO_WARNING (ptr) = 1;
+
+    	strict_aliasing_warning (EXPR_LOCATION (expr), type, expr);
+
+    	strict_aliasing_warning (EXPR_LOCATION (expr), type, expr);
+
+if (warn_strict_aliasing > 2)
+    	    if (strict_aliasing_warning (EXPR_LOCATION (ptr),
+    					 type, TREE_OPERAND (ptr, 0)))
+    	      TREE_NO_WARNING (ptr) = 1;
+
+    	strict_aliasing_warning (EXPR_LOCATION (expr), type, expr);
+
+    	strict_aliasing_warning (EXPR_LOCATION (expr), type, expr);
+

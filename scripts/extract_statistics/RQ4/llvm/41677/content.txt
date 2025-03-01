@@ -1,0 +1,103 @@
+#include "llvm/IR/DerivedTypes.h"
+    #include "llvm/IR/Instructions.h"
+    #include "llvm/IR/Intrinsics.h"
+
+    #include "llvm/IR/Module.h"
+    #include "llvm/Support/FileSystem.h"
+    #include "llvm/Support/MD5.h"
+
+      return llvm::DINodeArray();
+    }
+    
+
+    llvm::DINodeArray CGDebugInfo::CollectCXXTemplateParams(
+        const ClassTemplateSpecializationDecl *TSpecial, llvm::DIFile *Unit) {
+      // Always get the full list of parameters, not just the ones from
+
+    void CGDebugInfo::collectVarDeclProps(const VarDecl *VD, llvm::DIFile *&Unit,
+                                          unsigned &LineNo, QualType &T,
+                                          StringRef &Name, StringRef &LinkageName,
+
+                                          llvm::DIScope *&VDContext) {
+      Unit = getOrCreateFile(VD->getLocation());
+      LineNo = getLineNumber(VD->getLocation());
+
+      if (LinkageName == Name)
+        LinkageName = StringRef();
+    
+
+      // Since we emit declarations (DW_AT_members) for static members, place the
+      // definition of those static members in the namespace they were declared in
+      // in the source code (the lexical decl context).
+
+      llvm::DIFile *Unit = getOrCreateFile(Loc);
+      llvm::DIScope *DContext = Unit;
+      unsigned Line = getLineNumber(Loc);
+
+    
+
+      auto Align = getDeclAlignIfRequired(VD, CGM.getContext());
+      auto *GV = DBuilder.createTempGlobalVariableFwdDecl(
+          DContext, Name, LinkageName, Unit, Line, getOrCreateType(T, Unit),
+
+      FwdDeclReplaceMap.emplace_back(
+          std::piecewise_construct,
+          std::make_tuple(cast<VarDecl>(VD->getCanonicalDecl())),
+
+      unsigned LineNo;
+      StringRef DeclName, LinkageName;
+      QualType T;
+
+    
+      // Attempt to store one global variable for the declaration - even if we
+      // emit a lot of fields.
+
+            DContext, DeclName, LinkageName, Unit, LineNo, getOrCreateType(T, Unit),
+            Var->hasLocalLinkage(),
+            Expr.empty() ? nullptr : DBuilder.createExpression(Expr),
+
+        Var->addDebugInfo(GVE);
+      }
+      DeclCache[D->getCanonicalDecl()].reset(GVE);
+
+          InitExpr = DBuilder.createConstantValueExpression(
+              Init.getFloat().bitcastToAPInt().getZExtValue());
+      }
+
+      GV.reset(DBuilder.createGlobalVariableExpression(
+          DContext, Name, StringRef(), Unit, getLineNumber(VD->getLocation()), Ty,
+          true, InitExpr, getOrCreateStaticDataMemberDeclarationOrNull(VarD),
+
+    }
+    
+    llvm::DIScope *CGDebugInfo::getCurrentContextDescriptor(const Decl *D) {
+
+      llvm::DINodeArray CollectFunctionTemplateParams(const FunctionDecl *FD,
+                                                      llvm::DIFile *Unit);
+    
+
+      /// A helper function to collect debug info for template
+      /// parameters.
+      llvm::DINodeArray
+
+      /// Collect various properties of a VarDecl.
+      void collectVarDeclProps(const VarDecl *VD, llvm::DIFile *&Unit,
+                               unsigned &LineNo, QualType &T, StringRef &Name,
+
+    
+      /// Allocate a copy of \p A using the DebugInfoNames allocator
+      /// and return a reference to it. If multiple arguments are given the strings
+
+}
+    
+    llvm::DINodeArray CGDebugInfo::CollectVarTemplateParams(const VarDecl *VL,
+
+    }
+    
+    llvm::DINodeArray CGDebugInfo::CollectCXXTemplateParams(
+        const ClassTemplateSpecializationDecl *TSpecial, llvm::DIFile *Unit) {
+
+      TemplateParameterList *TPList =
+          TSpecial->getSpecializedTemplate()->getTemplateParameters();
+      const TemplateArgumentList &TAList = TSpecial->getTemplateArgs();
+

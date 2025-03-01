@@ -1,0 +1,32 @@
+/* Don't warn for artificial things that are not implicit typedefs.  */
+      if (DECL_ARTIFICIAL (decl) && !DECL_IMPLICIT_TYPEDEF_P (decl))
+        return;
+
+      if (nonlambda_method_basetype ())
+        if (tree member = lookup_member (current_nonlambda_class_type (),
+    				     DECL_NAME (decl), /*protect=*/0,
+
+    	   is a function or a pointer-to-function.  */
+    	if (!OVL_P (member)
+    	    || TREE_CODE (decl) == FUNCTION_DECL
+
+    	  {
+    	    auto_diagnostic_group d;
+    	    if (warning_at (DECL_SOURCE_LOCATION (decl), OPT_Wshadow,
+
+/* Don't warn for artificial things that are not implicit typedefs.  */
+      if (DECL_ARTIFICIAL (decl) && !DECL_IMPLICIT_TYPEDEF_P (decl))
+        return;
+
+      if (nonlambda_method_basetype ())
+        if (tree member = lookup_member (current_nonlambda_class_type (),
+    				     DECL_NAME (decl), /*protect=*/0,
+
+    	   is a function or a pointer-to-function.  */
+    	if (!OVL_P (member)
+    	    || TREE_CODE (decl) == FUNCTION_DECL
+
+    	  {
+    	    auto_diagnostic_group d;
+    	    if (warning_at (DECL_SOURCE_LOCATION (decl), OPT_Wshadow,
+

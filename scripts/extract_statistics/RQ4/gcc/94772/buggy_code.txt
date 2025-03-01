@@ -1,0 +1,2 @@
+TREE_READONLY (*valp) = true;
+

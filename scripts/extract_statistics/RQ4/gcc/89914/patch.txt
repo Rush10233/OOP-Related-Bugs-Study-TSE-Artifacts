@@ -1,0 +1,15 @@
+{
+          if (raises != error_mark_node)
+    	fn_type = build_exception_variant (fn_type, raises);
+          else
+    	/* Can happen, eg, in C++98 mode for an ill-formed non-static data
+    	   member initializer (c++/89914).  */
+    	gcc_assert (seen_error ());
+        }
+
+    	  if (!maybe_instantiate_noexcept (fn)
+    	      || !TYPE_NOTHROW_P (TREE_TYPE (fn)))
+
+    		  && maybe_instantiate_noexcept (t)
+    		  && TYPE_NOTHROW_P (TREE_TYPE (t))));
+

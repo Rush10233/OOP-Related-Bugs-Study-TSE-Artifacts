@@ -1,0 +1,8 @@
+static int
+    argument_pack_element_is_expansion_p (tree arg_pack, int i)
+    {
+
+      tree vec = ARGUMENT_PACK_ARGS (arg_pack);
+      if (i >= TREE_VEC_LENGTH (vec))
+        return 0;
+

@@ -1,0 +1,6 @@
+tree fn = TREE_OPERAND (t, 0);
+
+    	fn = tsubst_copy (fn, args, complain, in_decl);
+
+    	return lookup_template_function (fn, targs);
+

@@ -1,0 +1,9 @@
+/* If a function is explicitly defaulted on its first declaration without an
+         exception-specification, it is implicitly considered to have the same
+         exception-specification as if it had been implicitly declared.  */
+      if (!TYPE_RAISES_EXCEPTIONS (TREE_TYPE (fn))
+          && DECL_DEFAULTED_IN_CLASS_P (fn))
+        TREE_TYPE (fn) = build_exception_variant (TREE_TYPE (fn), eh_spec);
+
+      cp_unparsed_functions_entry e = { NULL, make_tree_vector (), NULL, NULL };
+

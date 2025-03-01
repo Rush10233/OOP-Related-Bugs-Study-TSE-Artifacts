@@ -1,0 +1,4 @@
+Commit:	0983170
+./gcc/cp/init.c	590,590
+./gcc/cp/init.c	593,593
+./gcc/cp/init.c	599,599

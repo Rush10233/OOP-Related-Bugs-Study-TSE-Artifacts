@@ -1,0 +1,5 @@
+that case, use it in place of this one.  */
+
+    	      TARGET_EXPR_ELIDING_P (init) = TARGET_EXPR_ELIDING_P (stmt);
+    	      *stmt_p = init;
+

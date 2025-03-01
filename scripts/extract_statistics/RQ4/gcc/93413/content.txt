@@ -1,0 +1,7 @@
+&& !DECL_DEFAULTED_OUTSIDE_CLASS_P (decl)
+          && ! DECL_INITIAL (decl))
+        {
+          /* Remember the current location for a function we will end up
+    	 synthesizing.  Then we can inform the user where it was
+    	 required in the case of error.  */
+

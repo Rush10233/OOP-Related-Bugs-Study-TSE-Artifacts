@@ -1,0 +1,8 @@
+Commit:	25b6bfe
+./gcc/cp/pt.c	10271,10274
+./gcc/cp/pt.c	11777,11779
+./gcc/cp/pt.c	11781,11781
+./gcc/cp/pt.c	21137,21137
+./gcc/cp/pt.c	26014,26015
+Commit:	5b1ce65
+./gcc/cp/pt.c	11772,11772

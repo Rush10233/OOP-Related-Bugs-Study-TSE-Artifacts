@@ -1,0 +1,27 @@
+if (TREE_CODE (lhs_ref.ref) == MEM_REF)
+
+    	  lhs_ref.ref = TREE_OPERAND (lhs_ref.ref, 0);
+    	  ++lhs_ref.deref;
+
+          if (TREE_CODE (lhs_ref.ref) == ADDR_EXPR)
+    	{
+    	  lhs_ref.ref = TREE_OPERAND (lhs_ref.ref, 0);
+    	  --lhs_ref.deref;
+    	}
+          if (TREE_CODE (lhs_ref.ref) == SSA_NAME)
+
+    	  lhs_ref.ref = SSA_NAME_VAR (lhs_ref.ref);
+
+    
+          if (TREE_CODE (lhs_ref.ref) == PARM_DECL
+    	  && (lhs_ref.deref - DECL_BY_REFERENCE (lhs_ref.ref)) > 0)
+    	/* Assignment through a (real) pointer/reference parameter.  */;
+          else if (TREE_CODE (lhs_ref.ref) == VAR_DECL
+    	       && !auto_var_p (lhs_ref.ref))
+    	/* Assignment to/through a non-local variable.  */;
+
+    	/* Something else, don't warn.  */
+
+    	  loc = DECL_SOURCE_LOCATION (lhs_ref.ref);
+    	  inform (loc, "%qD declared here", lhs_ref.ref);
+

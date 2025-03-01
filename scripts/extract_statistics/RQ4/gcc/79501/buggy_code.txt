@@ -1,0 +1,29 @@
+if (!DECL_NAMESPACE_SCOPE_P (decl))
+    	{
+    	  error_at (location, "deduction guide %qD must be declared at "
+    		    "namespace scope", decl);
+    	  return NULL_TREE;
+    	}
+
+      if (rval && is_overloaded_fn (rval))
+
+/* Handle C++17 deduction guides.  */
+          if (!decl_specifiers->type
+    	  && !decl_specifiers->any_type_specifiers_p
+    	  && ctor_dtor_or_conv_p <= 0
+    	  && cxx_dialect >= cxx17)
+    	{
+    	  cp_declarator *id = get_id_declarator (declarator);
+    	  tree name = id->u.id.unqualified_name;
+    	  parser->scope = id->u.id.qualifying_scope;
+    	  tree tmpl = cp_parser_lookup_name_simple (parser, name, id->id_loc);
+    	  if (tmpl
+    	      && (DECL_CLASS_TEMPLATE_P (tmpl)
+    		  || DECL_TEMPLATE_TEMPLATE_PARM_P (tmpl)))
+    	    {
+    	      id->u.id.unqualified_name = dguide_name (tmpl);
+    	      id->u.id.sfk = sfk_deduction_guide;
+    	      ctor_dtor_or_conv_p = 1;
+    	    }
+    	}
+

@@ -1,0 +1,37 @@
+&& DECL_MEMBER_TEMPLATE_P (DECL_TI_TEMPLATE (fn)))
+
+    	      /* Use the selected template, not the specialization, so that
+    		 this looks like an actual lookup result for sake of
+    		 filter_memfn_lookup.  */
+
+       NEWFNS is a lookup set of member functions from NEWTYPE, a specialization
+       of that class template.  Return the subset of NEWFNS which are
+       specializations of a function from OLDFNS.  */
+
+    filter_memfn_lookup (tree oldfns, tree newfns, tree newtype)
+
+    	     a dependent USING_DECL to the member functions it introduces
+    	     seems tricky.  */
+
+    	visible_set.add (fn);
+
+      auto visible_p = [newtype, &visible_set] (tree fn) {
+        if (DECL_CONTEXT (fn) != newtype)
+          /* FN is a member function from a base class, introduced via a
+    	 non-dependent using-decl; look in the old lookup set for
+    	 FN exactly.  */
+
+        else if (TREE_CODE (fn) == TEMPLATE_DECL)
+          /* FN is a member function template from the current class;
+    	 look in the old lookup set for the TEMPLATE_DECL from which
+    	 it was specialized.  */
+
+          /* FN is a non-template member function from the current class;
+    	 look in the old lookup set for the FUNCTION_DECL from which
+    	 it was specialized.  */
+          return visible_set.contains (DECL_TEMPLATE_RESULT
+    				   (DECL_TI_TEMPLATE (fn)));
+
+    	    = filter_memfn_lookup (fns, BASELINK_FUNCTIONS (baselink),
+    				   binfo_type);
+

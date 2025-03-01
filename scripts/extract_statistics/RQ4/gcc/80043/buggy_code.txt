@@ -1,0 +1,12 @@
+/* -fpermissive might allow this.  */
+
+    		    return r;
+
+instantiate_type (type, rhs, tf_warning_or_error);
+
+/* -fpermissive might allow this.  */
+
+    		    return r;
+
+instantiate_type (type, rhs, tf_warning_or_error);
+

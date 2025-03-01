@@ -1,0 +1,40 @@
+BOOL_BITFIELD bad_p : 1;
+      /* If KIND is ck_ref_bind ck_base_conv, true to indicate that a
+         temporary should be created to hold the result of the
+
+         copy-initialization.  */
+      BOOL_BITFIELD need_temporary_p : 1;
+      /* If KIND is ck_ptr or ck_pmem, true to indicate that a conversion
+
+          from = TREE_TYPE (expr);
+        }
+    
+
+      if (expr && BRACE_ENCLOSED_INITIALIZER_P (expr))
+        {
+          maybe_warn_cpp0x (CPP0X_INITIALIZER_LISTS);
+
+          /* Otherwise, if T is a reference type, a prvalue temporary of the type
+    	 referenced by T is copy-list-initialized, and the reference is bound
+    	 to that temporary. */
+
+        skip:;
+        }
+    
+
+    
+      if (conv->user_conv_p)
+        {
+
+          /* If initializing the temporary used a conversion function,
+    	 recalculate the second conversion sequence.  */
+          for (conversion *t = conv; t; t = next_conversion (t))
+
+    	if (DECL_NONCONVERTING_P (convfn) && DECL_CONSTRUCTOR_P (convfn)
+    	    && BRACE_ENCLOSED_INITIALIZER_P (expr)
+    	    /* Unless this is for direct-list-initialization.  */
+
+    	    /* And in C++98 a default constructor can't be explicit.  */
+    	    && cxx_dialect >= cxx11)
+    	  {
+

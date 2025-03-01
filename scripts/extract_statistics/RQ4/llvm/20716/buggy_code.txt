@@ -1,0 +1,4 @@
+// Used when there is not templated element (tt-params, alias?).
+
+        auto *BasePrimaryTemplate = cast<CXXRecordDecl>(TD->getTemplatedDecl());
+

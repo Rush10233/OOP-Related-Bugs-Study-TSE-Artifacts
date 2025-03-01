@@ -1,0 +1,83 @@
+#define IMPLICIT_CONV_EXPR_BRACED_INIT(NODE) \
+      (TREE_LANG_FLAG_2 (IMPLICIT_CONV_EXPR_CHECK (NODE)))
+    
+
+    /* Nonzero means that an object of this type cannot be initialized using
+       an initializer list.  */
+    #define CLASSTYPE_NON_AGGREGATE(NODE) \
+
+    
+    	tree ttype = TREE_TYPE (t);
+    	tree optype = TREE_TYPE (op);
+
+    
+    	if (TREE_CODE (ttype) != TREE_CODE (optype)
+    	    && INDIRECT_TYPE_P (ttype)
+
+    	    else
+    	      dump_unary_op (pp, "&", t, flags);
+    	  }
+
+    	  {
+    	    /* It is a cast, but we cannot tell whether it is a
+    	       reinterpret or static cast. Use the C style notation.  */
+
+        {
+          if (hi != ohi)
+    	{
+    	  call = copy_node (call);
+    	  CALL_EXPR_ARG (call, 0) = hi;
+    	}
+
+       conversion for the benefit of cp_tree_equal.  */
+    
+    static tree
+
+    {
+      /* Auto parms get no conversion.  */
+      if (type_uses_auto (type))
+        return arg;
+
+      /* We don't need or want to add this conversion now if we're going to use the
+         argument for deduction.  */
+
+        return arg;
+    
+      type = cv_unqualified (type);
+      tree argtype = TREE_TYPE (arg);
+
+        return arg;
+    
+      arg = build1 (IMPLICIT_CONV_EXPR, type, arg);
+      IMPLICIT_CONV_EXPR_NONTYPE_ARG (arg) = true;
+
+      return arg;
+    }
+    
+
+          if (t != TREE_TYPE (parm))
+    	t = canonicalize_type_argument (t, complain);
+    
+
+          if (!type_dependent_expression_p (orig_arg)
+    	  && !uses_template_parms (t))
+    	/* We used to call digest_init here.  However, digest_init
+
+          else
+    	{
+    	  val = canonicalize_expr_argument (orig_arg, complain);
+
+    	}
+    
+          if (val == NULL_TREE)
+    	val = error_mark_node;
+          else if (val == error_mark_node && (complain & tf_error))
+
+    	    RETURN (retval);
+    	  }
+    	if (IMPLICIT_CONV_EXPR_NONTYPE_ARG (t))
+
+    	int flags = LOOKUP_IMPLICIT;
+    	if (IMPLICIT_CONV_EXPR_DIRECT_INIT (t))
+    	  flags = LOOKUP_NORMAL;
+

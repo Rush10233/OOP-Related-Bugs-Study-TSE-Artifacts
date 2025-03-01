@@ -1,0 +1,118 @@
+if (gcond *cond_stmt = safe_dyn_cast <gcond *> (stmt))
+
+      if (!last || gimple_code (last) != GIMPLE_COND)
+
+    		    {
+    		      tree lhs = gimple_cond_lhs (stmt);
+    		      if (gimple_cond_code (stmt) != EQ_EXPR
+    			  && gimple_cond_code (stmt) != NE_EXPR
+    			  && INTEGRAL_TYPE_P (TREE_TYPE (lhs))
+    			  && TYPE_OVERFLOW_UNDEFINED (TREE_TYPE (lhs)))
+    			gimple_set_no_warning (stmt, true);
+    		    }
+
+    		      tree rhs1 = gimple_assign_rhs1 (stmt);
+    		      if (TREE_CODE_CLASS (rhs_code) == tcc_comparison
+    			  && rhs_code != EQ_EXPR
+    			  && rhs_code != NE_EXPR
+    			  && INTEGRAL_TYPE_P (TREE_TYPE (rhs1))
+    			  && TYPE_OVERFLOW_UNDEFINED (TREE_TYPE (rhs1)))
+
+        locus = gimple_location_safe (last_stmt (exit->src));
+
+            locus = gimple_location_safe (last_stmt (exit->src));
+
+        {
+          /* Since we're going to move dereferences across predecessor
+             edges avoid blocks with abnormal predecessors.  */
+          if (bb_has_abnormal_pred (bb))
+    	continue;
+          for (gsi = gsi_start_phis (bb); !gsi_end_p (gsi); gsi_next (&gsi))
+    	did_something |= propagate_with_phi (bb, gsi.phi (), phivn, n);
+        }
+
+/* Determines whether the chrec contains symbolic names or not.  If LOOP isn't
+       NULL, we also consider chrec wrto outer loops of LOOP as symbol.  */
+
+    chrec_contains_symbols (const_tree chrec, struct loop *loop)
+
+      if (loop != NULL
+          && TREE_CODE (chrec) == POLYNOMIAL_CHREC
+          && flow_loop_nested_p (get_chrec_loop (chrec), loop))
+        return true;
+    
+
+        if (chrec_contains_symbols (TREE_OPERAND (chrec, i), loop))
+
+    extern bool chrec_contains_symbols (const_tree, struct loop * = NULL);
+
+    	   && !chrec_contains_symbols (chrec_a, loop_nest)
+
+    	   && !chrec_contains_symbols (chrec_b, loop_nest))
+
+      struct loop *loop = DDR_LOOP_NEST (ddr)[0];
+
+    	  /* When data references are collected in a loop while data
+    	     dependences are analyzed in loop nest nested in the loop, we
+    	     would have more number of access functions than number of
+    	     loops.  Skip access functions of loops not in the loop nest.
+    
+    	     See PR89725 for more information.  */
+    	  if (flow_loop_nested_p (get_loop (cfun, var_a), loop))
+    	    continue;
+    
+
+      struct loop *loop = DDR_LOOP_NEST (ddr)[0];
+
+    	  /* When data references are collected in a loop while data
+    	     dependences are analyzed in loop nest nested in the loop, we
+    	     would have more number of access functions than number of
+    	     loops.  Skip access functions of loops not in the loop nest.
+    
+    	     See PR89725 for more information.  */
+    	  if (flow_loop_nested_p (get_loop (cfun, CHREC_VARIABLE (access_fun)),
+    				  loop))
+    	    continue;
+    
+
+      else if (gcall *call = dyn_cast <gcall *> (stmt))
+        {
+          unsigned int i = 0;
+          if (gimple_call_internal_p (call))
+    	{
+    	  internal_fn ifn = gimple_call_internal_fn (call);
+    	  if (internal_load_fn_p (ifn) || internal_store_fn_p (ifn))
+    	    /* gimple_expr_type already picked the type of the loaded
+    	       or stored data.  */
+    	    i = ~0U;
+    	  else if (internal_fn_mask_index (ifn) == 0)
+    	    i = 1;
+    	}
+          if (i < gimple_call_num_args (call))
+    	{
+    	  tree rhs_type = TREE_TYPE (gimple_call_arg (call, i));
+    	  if (tree_fits_uhwi_p (TYPE_SIZE_UNIT (rhs_type)))
+    	    {
+    	      rhs = TREE_INT_CST_LOW (TYPE_SIZE_UNIT (rhs_type));
+    	      if (rhs < lhs)
+    		scalar_type = rhs_type;
+    	    }
+    	}
+        }
+
+    	    dump_printf_loc (MSG_NOTE, vect_location,
+
+    	  /* When doing outer loop vectorization, we need to check if there is
+    	     a backward dependence at the inner loop level if the dependence
+    	     at the outer loop is reversed.  See PR81740.  */
+    	  if (nested_in_vect_loop_p (loop, DR_STMT (dra))
+    	      || nested_in_vect_loop_p (loop, DR_STMT (drb)))
+    	    {
+    	      unsigned inner_depth = index_in_loop_nest (loop->inner->num,
+    							 DDR_LOOP_NEST (ddr));
+    	      if (dist_v[inner_depth] < 0)
+    		return true;
+    	    }
+
+    	  *max_vf = abs_dist;
+

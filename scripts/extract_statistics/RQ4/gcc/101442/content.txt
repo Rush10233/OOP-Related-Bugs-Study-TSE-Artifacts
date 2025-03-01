@@ -1,0 +1,196 @@
+{
+          unsigned i; tree t;
+          FOR_EACH_VEC_ELT (*cleanups, i, t)
+
+          release_tree_vector (cleanups);
+        }
+    
+
+          init = build2 (INIT_EXPR, type, decl, init);
+          finish_expr_stmt (init);
+          FOR_EACH_VEC_ELT (*cleanups, i, t)
+
+        }
+      else if (type_build_ctor_call (type)
+    	   || (init && CLASS_TYPE_P (strip_array_types (type))))
+
+    
+    /* Queue a cleanup.  CLEANUP is an expression/statement to be executed
+       when the current scope is exited.  EH_ONLY is true when this is not
+
+    
+    void
+    push_cleanup (tree decl, tree cleanup, bool eh_only)
+
+return expr;
+    }
+    
+
+    /* DECL is a VAR_DECL whose type is a REFERENCE_TYPE.  The reference
+       is being bound to a temporary.  Create and return a new VAR_DECL
+       with the indicated TYPE; this variable will store the value to
+
+      if (TREE_STATIC (decl))
+        {
+          /* Namespace-scope or local static; give it a mangled name.  */
+
+          tree name;
+    
+          TREE_STATIC (var) = 1;
+
+       cleanup for the new variable is returned through CLEANUP, and the
+       code to initialize the new variable is returned through INITP.  */
+    
+
+    {
+      tree init;
+      tree type;
+
+      if (TREE_CODE (expr) != TARGET_EXPR)
+        expr = get_target_expr (expr);
+    
+
+      /* If the initializer is constant, put it in DECL_INITIAL so we get
+         static initialization and use in constant expressions.  */
+      init = maybe_constant_init (expr);
+
+          if (TREE_STATIC (var))
+    	init = add_stmt_to_compound (init, register_dtor_fn (var));
+          else
+
+    
+          /* We must be careful to destroy the temporary only
+    	 after its initialization has taken place.  If the
+
+    }
+    
+    /* Convert EXPR to the indicated reference TYPE, in a way suitable for
+
+    
+    tree
+
+    		      int flags, tsubst_flags_t complain)
+    {
+      conversion *conv;
+
+          return error_mark_node;
+        }
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+        {
+
+    	{
+
+    	}
+        }
+
+    
+
+    }
+    
+    /* Returns true iff TYPE is some variant of std::initializer_list.  */
+
+    extern tree type_passed_as			(tree);
+    extern tree convert_for_arg_passing		(tree, tree);
+    extern bool is_properly_derived_from		(tree, tree);
+
+    						 tsubst_flags_t);
+
+    extern tree make_temporary_var_for_ref_to_temp	(tree, tree);
+    extern tree strip_top_quals			(tree);
+    extern bool reference_related_p			(tree, tree);
+
+    extern int abstract_virtuals_error		(tree, tree);
+    extern int abstract_virtuals_error_sfinae	(tree, tree, tsubst_flags_t);
+    
+
+    extern void check_narrowing			(tree, tree);
+    extern tree digest_init				(tree, tree, tsubst_flags_t);
+    extern tree digest_init_flags			(tree, tree, int);
+
+{
+          unsigned i; tree t;
+          FOR_EACH_VEC_ELT (*cleanups, i, t)
+
+          release_tree_vector (cleanups);
+        }
+    
+
+          init = build2 (INIT_EXPR, type, decl, init);
+          finish_expr_stmt (init);
+          FOR_EACH_VEC_ELT (*cleanups, i, t)
+
+          release_tree_vector (cleanups);
+        }
+      else if (type_build_ctor_call (type)
+
+    
+    /* Queue a cleanup.  CLEANUP is an expression/statement to be executed
+       when the current scope is exited.  EH_ONLY is true when this is not
+
+    
+    void
+    push_cleanup (tree decl, tree cleanup, bool eh_only)
+
+{
+          unsigned i; tree t;
+          FOR_EACH_VEC_ELT (*cleanups, i, t)
+
+          release_tree_vector (cleanups);
+        }
+    
+
+          init = build2 (INIT_EXPR, type, decl, init);
+          finish_expr_stmt (init);
+          FOR_EACH_VEC_ELT (*cleanups, i, t)
+
+        }
+      else if (type_build_ctor_call (type)
+    	   || (init && CLASS_TYPE_P (strip_array_types (type))))
+
+    
+    /* Queue a cleanup.  CLEANUP is an expression/statement to be executed
+       when the current scope is exited.  EH_ONLY is true when this is not
+
+    
+    void
+    push_cleanup (tree decl, tree cleanup, bool eh_only)
+
+{
+          for (tree t : *cleanups)
+    	{
+
+    	  /* As in initialize_local_var.  */
+    	  wrap_temporary_cleanups (init, t);
+    	}
+
+          init = build2 (INIT_EXPR, type, decl, init);
+          finish_expr_stmt (init);
+          FOR_EACH_VEC_ELT (*cleanups, i, t)
+
+        }
+      else if (type_build_ctor_call (type)
+    	   || (init && CLASS_TYPE_P (strip_array_types (type))))
+
+    
+    /* Queue a cleanup.  CLEANUP is an expression/statement to be executed
+       when the current scope is exited.  EH_ONLY is true when this is not
+
+    
+    void
+    push_cleanup (tree decl, tree cleanup, bool eh_only)
+

@@ -1,0 +1,18 @@
+/* Subroutine of convert_nontype_argument.
+    
+       EXPR is an expression used in a context that requires a converted
+       constant-expression, such as a template non-type parameter.  Do any
+       necessary conversions (that are permitted for converted
+       constant-expressions) to convert it to the desired type.
+    
+       If conversion is successful, returns the converted expression;
+       otherwise, returns error_mark_node.  */
+
+    tree
+    build_converted_constant_expr (tree type, tree expr, tsubst_flags_t complain)
+
+    			      /*c_cast_p=*/false,
+    			      LOOKUP_IMPLICIT, complain);
+
+      expr = build_converted_constant_expr (boolean_type_node, expr, complain);
+

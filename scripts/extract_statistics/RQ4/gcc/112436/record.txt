@@ -1,0 +1,17 @@
+Commit:	4a1cd55
+./gcc/cp/except.cc	42,43
+./gcc/cp/except.cc	401,401
+./gcc/cp/except.cc	629,633
+./gcc/cp/except.cc	818,819
+./gcc/cp/except.cc	821,822
+./gcc/cp/except.cc	824,824
+./gcc/cp/except.cc	826,826
+./gcc/cp/except.cc	829,829
+./gcc/cp/except.cc	836,837
+./gcc/cp/except.cc	839,839
+./gcc/cp/except.cc	849,849
+./gcc/cp/except.cc	855,855
+./gcc/cp/except.cc	865,865
+./gcc/cp/except.cc	875,875
+./gcc/cp/except.cc	881,882
+./gcc/cp/except.cc	887,893

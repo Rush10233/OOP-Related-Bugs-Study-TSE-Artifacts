@@ -1,0 +1,32 @@
+/// Indicates if the function declaration will have a body, once we're done
+      /// parsing it.
+      unsigned WillHaveBody : 1;
+    
+
+      //    -- F1 is generated from a deduction-guide and F2 is not
+      auto *Guide1 = dyn_cast_or_null<CXXDeductionGuideDecl>(Cand1.Function);
+      auto *Guide2 = dyn_cast_or_null<CXXDeductionGuideDecl>(Cand2.Function);
+      if (Guide1 && Guide2 && Guide1->isImplicit() != Guide2->isImplicit())
+        return Guide2->isImplicit();
+    
+
+      bool AddedCopyOrMove = false;
+
+    
+        AddedCopyOrMove |= CD->isCopyOrMoveConstructor();
+
+      // Synthesize an X() -> X<...> guide if there were no declared constructors.
+      // FIXME: The standard doesn't say (how) to do this.
+
+      // Synthesize an X(X<...>) -> X<...> guide if there was no declared constructor
+      // resembling a copy or move constructor.
+      // FIXME: The standard doesn't say (how) to do this.
+      if (!AddedCopyOrMove)
+        Transform.buildSimpleDeductionGuide(Transform.DeducedType);
+
+      if (auto *DGuide = dyn_cast<CXXDeductionGuideDecl>(D))
+
+            SemaRef.Context, DC, D->getInnerLocStart(), DGuide->isExplicit(),
+            D->getNameInfo(), T, TInfo, D->getSourceRange().getEnd());
+      else {
+

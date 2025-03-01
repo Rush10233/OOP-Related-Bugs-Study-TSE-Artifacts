@@ -1,0 +1,4 @@
+auto *Inst = cast<TemplateTypeParmDecl>(
+
+          if (Inst && !Inst->hasTypeConstraint()) {
+

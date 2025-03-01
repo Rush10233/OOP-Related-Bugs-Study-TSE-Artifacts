@@ -1,0 +1,9 @@
+} else if (isTemplateInstantiation(D->getTemplateSpecializationKind()) ||
+                 getContext().GetGVALinkageForVariable(D) == GVA_DiscardableODR) {
+
+        if (getTarget().getCXXABI().isMicrosoft() && COMDATKey) {
+          // In The MS C++, MS add template static data member in the linker
+          // drective.
+          addUsedGlobal(COMDATKey);
+        }
+

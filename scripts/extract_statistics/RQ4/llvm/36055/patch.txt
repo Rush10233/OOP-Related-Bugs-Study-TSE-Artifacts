@@ -1,0 +1,67 @@
+if (Init->isValueDependent()) {
+          Success = false;
+          continue;
+        }
+
+                                     const ASTContext &Ctx, bool &IsConst,
+                                     bool IsCheckingForOverflow) {
+
+          !Ctx.getLangOpts().CPlusPlus11 && !IsCheckingForOverflow) {
+
+      if (FastEvaluateAsRValue(this, Result, Ctx, IsConst, false))
+
+      if (!FastEvaluateAsRValue(this, EvalResult, Ctx, IsConst, true)) {
+
+        E->EvaluateForOverflow(Context);
+
+InitListExpr *OuterILE, unsigned OuterIndex,
+
+        FillInEmptyInitializations(BaseEntity, InnerILE, RequiresSecondPass,
+                                   ILE, Init, FillWithNoInit);
+
+                                   RequiresSecondPass, ILE, Init,
+                                   /*FillWithNoInit =*/true);
+
+                                   RequiresSecondPass, ILE, Init, FillWithNoInit);
+
+                                   RequiresSecondPass, ILE, Init,
+                                   /*FillWithNoInit =*/true);
+
+    /// appropriate type, and finish off the InitListExpr formation.
+
+                                                InitListExpr *OuterILE,
+                                                unsigned OuterIndex,
+
+      // If this is a nested initializer list, we might have changed its contents
+      // (and therefore some of its properties, such as instantiation-dependence)
+      // while filling it in. Inform the outer initializer list so that its state
+      // can be updated to match.
+      //
+      // the outer InitListExpr instead of mutating AST nodes after they have
+      // been used as subexpressions of other nodes.
+      struct UpdateOuterILEWithUpdatedInit {
+        InitListExpr *Outer;
+        unsigned OuterIndex;
+        ~UpdateOuterILEWithUpdatedInit() {
+          if (Outer)
+            Outer->setInit(OuterIndex, Outer->getInit(OuterIndex));
+        }
+      } UpdateOuterRAII = {OuterILE, OuterIndex};
+    
+
+                                     ILE, Init, FillWithNoInit);
+
+                                     RequiresSecondPass, ILE, Init,
+                                     /*FillWithNoInit =*/true);
+
+        FillInEmptyInitializations(Entity, FullyStructuredList, RequiresSecondPass,
+                                   /*OuterILE=*/nullptr, /*OuterIndex=*/0);
+
+                                     RequiresSecondPass, nullptr, 0);
+
+                                       RequiresSecondPass, StructuredList,
+                                       StructuredIndex);
+
+                                         RequiresSecondPass, StructuredList,
+                                         StructuredIndex);
+

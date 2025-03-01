@@ -1,0 +1,6 @@
+Expr *Value =
+          S.ImpCastExprToType(new (S.Context) CXXNullPtrLiteralExpr(
+                                  S.Context.NullPtrTy, NTTP->getLocation()),
+                              NullPtrType, CK_NullToPointer)
+              .get();
+

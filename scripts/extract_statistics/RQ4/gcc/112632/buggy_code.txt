@@ -1,0 +1,28 @@
+while (CONVERT_EXPR_P (parm) || TREE_CODE (parm) == VIEW_CONVERT_EXPR)
+
+while (CONVERT_EXPR_P (parm) || TREE_CODE (parm) == VIEW_CONVERT_EXPR)
+
+else if (!same_type_p (TREE_TYPE (op), TREE_TYPE (t)))
+
+    	  /* Work around maybe_convert_nontype_argument not doing this for
+    	     dependent arguments.  Don't use IMPLICIT_CONV_EXPR_NONTYPE_ARG
+    	     because that will make tsubst_expr ignore it.  */
+    	  tree type = tsubst (TREE_TYPE (ohi), args, complain, in_decl);
+    	  if (!TREE_TYPE (hi) || !same_type_p (type, TREE_TYPE (hi)))
+    	    hi = build1 (IMPLICIT_CONV_EXPR, type, hi);
+    
+
+    maybe_convert_nontype_argument (tree type, tree arg)
+
+      if (value_dependent_expression_p (arg))
+
+      if (same_type_p (type, argtype))
+
+    	  val = maybe_convert_nontype_argument (t, val);
+
+    
+
+    	  /* We'll pass this to convert_nontype_argument again, we don't need
+    	     to actually perform any conversion here.  */
+    	  RETURN (expr);
+

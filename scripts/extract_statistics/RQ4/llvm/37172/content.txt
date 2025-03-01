@@ -1,0 +1,11 @@
+// C++ [class.virtual]p1:
+        //   A class that declares or inherits a virtual function is called a 
+        //   polymorphic class.
+
+          data().Polymorphic = true;
+    
+
+        // C++0x [class]p7:
+        //   A standard-layout class is a class that: [...]
+        //    -- has no non-standard-layout base classes
+

@@ -1,0 +1,16 @@
+continue;
+    	      }
+    
+
+    	    /* -- If the type has new-extended alignment, a function with a
+    	       parameter of type std::align_val_t is preferred; otherwise a
+    	       function without such a parameter is preferred. If exactly one
+
+      if (destroying_delete_p (decl))
+        {
+          if (DECL_CLASS_SCOPE_P (decl))
+
+          else
+    	/* A destroying operator delete shall be a class member function named
+    	   operator delete.  */
+

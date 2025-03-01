@@ -1,0 +1,22 @@
+&& operand_equal_p (thenb, elseb, OEP_LEXICOGRAPHIC
+    					| OEP_ADDRESS_OF_SAME_FIELD)
+
+          && (op1 == op2 || operand_equal_p (op1, op2, OEP_ADDRESS_OF_SAME_FIELD)))
+
+          && (arg2 == arg3 || operand_equal_p (arg2, arg3,
+    					   OEP_ADDRESS_OF_SAME_FIELD)))
+
+    	expr = build3_loc (loc, COND_EXPR, TREE_TYPE (new_op2),
+    			   TREE_OPERAND (expr, 0), new_op1, new_op2);
+
+    	    tree t = build2_loc (loc, COMPOUND_EXPR, TREE_TYPE (new_op1),
+    				 TREE_OPERAND (expr, 0), new_op1);
+
+    		if (compare_address
+    		    && (flags & OEP_ADDRESS_OF_SAME_FIELD) == 0)
+
+      OEP_BITWISE = 128,
+      /* For OEP_ADDRESS_OF of COMPONENT_REFs, only consider same fields as
+         equivalent rather than also different fields with the same offset.  */
+      OEP_ADDRESS_OF_SAME_FIELD = 256
+

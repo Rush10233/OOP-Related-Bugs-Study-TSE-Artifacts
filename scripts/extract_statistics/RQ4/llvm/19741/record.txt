@@ -1,0 +1,3 @@
+Commit:	af65856
+./clang/lib/AST/ExprConstant.cpp	3101,3102
+./clang/lib/AST/ExprConstant.cpp	3104,3104

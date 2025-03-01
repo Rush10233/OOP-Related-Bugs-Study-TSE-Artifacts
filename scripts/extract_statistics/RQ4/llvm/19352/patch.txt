@@ -1,0 +1,4 @@
+return FriendDecl::Create(Context, CurContext,
+                                TSInfo->getTypeLoc().getLocStart(), TSInfo,
+                                FriendLoc);
+

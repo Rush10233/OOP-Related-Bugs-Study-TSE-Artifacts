@@ -1,0 +1,4 @@
+push_deferring_access_checks (dk_no_deferred);
+
+      pop_deferring_access_checks ();
+

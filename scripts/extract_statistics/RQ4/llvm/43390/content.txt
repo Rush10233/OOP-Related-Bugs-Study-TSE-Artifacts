@@ -1,0 +1,8 @@
+const CXXRecordDecl *RD;
+          std::tie(VTable, RD) =
+              CGM.getCXXABI().LoadVTablePtr(*this, This.getAddress(),
+
+          EmitVTablePtrCheckForCall(RD, VTable, CFITCK_NVCall, CE->getBeginLoc());
+        }
+    
+

@@ -1,0 +1,7 @@
+"no viable conversion%select{%diff{ from $ to $|}1,2|"
+      "%diff{ from returned value of type $ to function return type $|}1,2}0">;
+
+              << (Entity.getKind() == InitializedEntity::EK_Result)
+
+              << false << From->getType() << From->getSourceRange() << ToType;
+

@@ -1,0 +1,8 @@
+const TemplateArgumentListInfo *TemplateArgs) {
+      DeclContext *DC = getFunctionLevelDeclContext();
+    
+
+        QualType ThisType = cast<CXXMethodDecl>(DC)->getThisType(Context);
+    
+        // Since the 'this' expression is synthesized, we don't need to
+

@@ -1,0 +1,16 @@
+
+        case VAR_DECL:
+          if (DECL_HAS_VALUE_EXPR_P (t))
+
+          /* fall through */
+        case CONST_DECL:
+          /* We used to not check lval for CONST_DECL, but darwin.c uses
+
+
+        case VAR_DECL:
+          if (DECL_HAS_VALUE_EXPR_P (t))
+
+          /* fall through */
+        case CONST_DECL:
+          /* We used to not check lval for CONST_DECL, but darwin.c uses
+

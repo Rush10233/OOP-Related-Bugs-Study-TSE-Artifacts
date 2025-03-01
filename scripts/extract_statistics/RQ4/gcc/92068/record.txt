@@ -1,0 +1,6 @@
+Commit:	2369079
+./gcc/cp/pt.c	4947,4947
+Commit:	b3b0c67
+./gcc/cp/pt.c	5067,5067
+Commit:	cb05d70
+./gcc/cp/pt.c	4906,4906

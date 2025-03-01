@@ -1,0 +1,27 @@
+
+    /* Nonzero if NODE is a DECL which we know about but which has not
+       been explicitly declared, such as a built-in function or a friend
+
+    #define DECL_ANTICIPATED(NODE) \
+      (DECL_LANG_SPECIFIC (TYPE_FUNCTION_OR_TEMPLATE_DECL_CHECK (NODE)) \
+       ->u.base.anticipated_p)
+    
+    /* True for artificial decls added for OpenMP privatized non-static
+       data members.  */
+    #define DECL_OMP_PRIVATIZED_MEMBER(NODE) \
+
+        {
+          maybe_ovl = ovl_make (fn, maybe_ovl);
+    
+          if (using_or_hidden < 0)
+    	OVL_HIDDEN_P (maybe_ovl) = true;
+          if (using_or_hidden > 0)
+
+    tree
+    ovl_skip_hidden (tree ovl)
+    {
+
+    
+      return ovl;
+    }
+

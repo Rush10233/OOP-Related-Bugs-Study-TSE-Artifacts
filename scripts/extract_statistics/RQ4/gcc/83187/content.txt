@@ -1,0 +1,28 @@
+tree
+    build_complex_type (tree component_type, bool named)
+    {
+      gcc_assert (INTEGRAL_TYPE_P (component_type)
+    	      || SCALAR_FLOAT_TYPE_P (component_type)
+    	      || FIXED_POINT_TYPE_P (component_type));
+    
+      /* Make a node of the sort we want.  */
+
+    
+
+    
+      /* If we already have such a type, use the old one.  */
+
+    
+
+        {
+
+    	SET_TYPE_STRUCTURAL_EQUALITY (t);
+
+    	TYPE_CANONICAL (t)
+
+    
+
+        }
+    
+      return build_qualified_type (t, TYPE_QUALS (component_type));
+

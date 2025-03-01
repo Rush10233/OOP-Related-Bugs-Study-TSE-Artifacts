@@ -1,0 +1,4 @@
+clk_class = 4,    /* A prvalue of class-type.  */
+
+          if (CLASS_TYPE_P (TREE_TYPE (ref)))
+

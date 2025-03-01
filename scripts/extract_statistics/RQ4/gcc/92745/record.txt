@@ -1,0 +1,7 @@
+Commit:	7ac251e
+./gcc/cp/decl.c	6165,6172
+Commit:	f2f70af
+./gcc/cp/decl.c	6227,6234
+Commit:	22edf94
+Commit:	97ba5b8
+./gcc/cp/decl.c	6402,6409

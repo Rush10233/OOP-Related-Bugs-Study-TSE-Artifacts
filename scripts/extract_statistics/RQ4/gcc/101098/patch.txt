@@ -1,0 +1,8 @@
+if (cxx_dialect < cxx20
+          && (DECL_TEMPLATE_SPECIALIZATION (newfn)
+    	  <= DECL_TEMPLATE_SPECIALIZATION (oldfn)))
+
+if (cxx_dialect < cxx20
+          && (DECL_TEMPLATE_SPECIALIZATION (newfn)
+    	  <= DECL_TEMPLATE_SPECIALIZATION (oldfn)))
+

@@ -1,0 +1,38 @@
+/// Whether this member function had an associated template
+        /// scope. When true, D is a template declaration.
+        /// otherwise, it is a member function declaration.
+        bool TemplateScope;
+    
+        explicit LexedMethod(Parser* P, Decl *MD)
+          : Self(P), D(MD), TemplateScope(false) {}
+
+          : Self(P), Method(M), TemplateScope(false),
+            ExceptionSpecTokens(nullptr) {}
+
+        /// Whether this member function had an associated template
+        /// scope. When true, D is a template declaration.
+        /// otherwise, it is a member function declaration.
+        bool TemplateScope;
+    
+
+          : TopLevelClass(TopLevelClass), TemplateScope(false),
+            IsInterface(IsInterface), TagOrTemplate(TagOrTemplate) { }
+
+        /// Whether this class had an associated template
+        /// scope. When true, TagOrTemplate is a template declaration;
+        /// otherwise, it is a tag declaration.
+        bool TemplateScope : 1;
+    
+
+      bool ParseTemplateParameters(unsigned Depth,
+
+      DeclContext *getEntity() const { return Entity; }
+      void setEntity(DeclContext *E) { Entity = E; }
+
+      DeclContext *getContainingDC(DeclContext *DC);
+    
+
+      unsigned ActOnReenterTemplateScope(Scope *S, Decl *Template);
+
+      // A declaration is dependent if it is a template or a template pattern, or
+

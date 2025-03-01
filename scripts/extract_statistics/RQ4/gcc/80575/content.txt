@@ -1,0 +1,10 @@
+}
+    
+      fixed = fixed_type_or_null (instance, nonnull, &cdtorp);
+      if (INDIRECT_TYPE_P (t))
+        t = TREE_TYPE (t);
+
+      if (!same_type_ignoring_top_level_qualifiers_p (t, fixed))
+        return 0;
+      return cdtorp ? -1 : 1;
+

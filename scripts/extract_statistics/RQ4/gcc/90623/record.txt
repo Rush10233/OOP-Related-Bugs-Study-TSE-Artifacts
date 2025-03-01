@@ -1,0 +1,17 @@
+Commit:	fc79fc4
+./gcc/cp/cp-tree.h	426,426
+./gcc/cp/cp-tree.h	4487,4488
+./gcc/cp/cp-tree.h	4491,4492
+./gcc/cp/cp-tree.h	6797,6797
+./gcc/cp/lambda.c	216,225
+./gcc/cp/lambda.c	597,597
+./gcc/cp/pt.c	3875,3875
+./gcc/cp/pt.c	3885,3885
+./gcc/cp/pt.c	11767,11770
+./gcc/cp/pt.c	15142,15153
+./gcc/cp/pt.c	15159,15159
+./gcc/cp/pt.c	18037,18042
+./gcc/cp/pt.c	18045,18047
+./gcc/cp/pt.c	18100,18103
+./gcc/cp/pt.c	18107,18108
+./gcc/testsuite/g++.dg/cpp0x/range-for19.C	8,8

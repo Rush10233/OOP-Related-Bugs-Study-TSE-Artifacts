@@ -1,0 +1,9 @@
+Constructor = S.findInheritingConstructor(Loc, Constructor, Shadow);
+          if (S.DiagnoseUseOfDecl(Constructor, Loc))
+
+        S.MarkFunctionReferenced(Loc, Constructor);
+
+                S.Context, Constructor,
+
+            Constructor);
+

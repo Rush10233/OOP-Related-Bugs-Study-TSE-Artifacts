@@ -1,0 +1,12 @@
+// C++17 [temp.dep.expr]p3:
+
+        if (NewTSI->getType()->isUndeducedType()) {
+          // C++17 [temp.dep.expr]p3:
+          //   An id-expression is type-dependent if it contains
+          //    - an identifier associated by name lookup with a non-type
+          //      template-parameter declared with a type that contains a
+          //      placeholder type (7.1.7.4),
+          NewTSI = SubstAutoTypeSourceInfo(NewTSI, Context.DependentTy);
+        }
+    
+

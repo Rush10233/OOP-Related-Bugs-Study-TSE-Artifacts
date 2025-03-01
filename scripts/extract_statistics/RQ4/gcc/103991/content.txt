@@ -1,0 +1,16 @@
+can contain unfolded immediate function calls, we have to discard
+         the then_ block regardless of whether else_ has side-effects or not.  */
+      if (IF_STMT_CONSTEVAL_P (stmt))
+
+      else
+        stmt = build3 (COND_EXPR, void_type_node, cond, then_, else_);
+      protected_set_expr_location_if_unset (stmt, locus);
+
+          return false;
+    
+        case IF_STMT:
+
+          if (block_may_fallthru (THEN_CLAUSE (stmt)))
+    	return true;
+          return block_may_fallthru (ELSE_CLAUSE (stmt));
+

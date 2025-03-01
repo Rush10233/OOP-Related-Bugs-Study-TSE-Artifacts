@@ -1,0 +1,18 @@
+if (!field && ANON_AGGR_TYPE_P (type))
+    	    /* Apparently the designator isn't for a member of this anonymous
+    	       struct, so head back to the enclosing class.  */
+    	    break;
+    
+
+if (!field && ANON_AGGR_TYPE_P (type))
+    	    /* Apparently the designator isn't for a member of this anonymous
+    	       struct, so head back to the enclosing class.  */
+    	    break;
+    
+
+if (!field && ANON_AGGR_TYPE_P (type))
+    	    /* Apparently the designator isn't for a member of this anonymous
+    	       struct, so head back to the enclosing class.  */
+    	    break;
+    
+

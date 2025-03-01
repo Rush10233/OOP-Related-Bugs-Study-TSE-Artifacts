@@ -1,0 +1,16 @@
+if (*candidates && (*candidates)->fn == totype)
+        return NULL;
+    
+
+      for (i = 0; i < len; ++i)
+        {
+          tree arg, argtype, convert_type = NULL_TREE;
+
+if (*candidates && (*candidates)->fn == totype)
+        return NULL;
+    
+
+      for (i = 0; i < len; ++i)
+        {
+          tree arg, argtype, convert_type = NULL_TREE;
+

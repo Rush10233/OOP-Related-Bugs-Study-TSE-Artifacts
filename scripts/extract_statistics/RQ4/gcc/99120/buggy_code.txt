@@ -1,0 +1,10 @@
+
+
+    	    || TYPE_PTRFN_P (TREE_TYPE (decl))
+    	    || TYPE_PTRMEMFUNC_P (TREE_TYPE (decl)))
+
+
+
+    	    || TYPE_PTRFN_P (TREE_TYPE (decl))
+    	    || TYPE_PTRMEMFUNC_P (TREE_TYPE (decl)))
+

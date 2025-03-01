@@ -1,0 +1,6 @@
+Commit:	0ddb93c
+./gcc/cp/constexpr.c	6376,6416
+./gcc/testsuite/g++.dg/cpp2a/constexpr-new12.C	27,27
+Commit:	e244b0a
+./gcc/cp/constexpr.c	6310,6350
+./gcc/testsuite/g++.dg/cpp2a/constexpr-new12.C	27,27

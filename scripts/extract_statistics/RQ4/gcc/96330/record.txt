@@ -1,0 +1,4 @@
+Commit:	b49d23f
+./gcc/cp/pt.c	17113,17113
+./gcc/cp/pt.c	17116,17116
+./gcc/cp/pt.c	17120,17120

@@ -1,0 +1,6 @@
+Commit:	cdec1a0
+./gcc/cp/semantics.c	3418,3418
+./gcc/cp/semantics.c	3420,3421
+Commit:	fc881de
+./gcc/cp/semantics.c	3441,3441
+./gcc/cp/semantics.c	3443,3444

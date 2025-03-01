@@ -1,0 +1,12 @@
+else if (!constraints_satisfied_p (fn))
+    	/* Not eligible.  */;
+          else if (copy_fn_p (fn))
+
+          else if (move_fn_p (fn))
+
+          else if (!constraints_satisfied_p (fn))
+    	/* Not eligible.  */;
+          else if (copy_fn_p (fn))
+
+          else if (move_fn_p (fn))
+

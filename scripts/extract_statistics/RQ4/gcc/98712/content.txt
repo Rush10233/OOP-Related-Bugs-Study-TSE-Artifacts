@@ -1,0 +1,24 @@
+&& !DECL_ARTIFICIAL (fn)
+    	&& DECL_DEFAULTED_IN_CLASS_P (fn))
+          {
+
+    	int copy = copy_fn_p (fn);
+    	if (copy > 0)
+    	  {
+
+         for any static member objects of the type we're working on.  */
+      for (x = TYPE_FIELDS (t); x; x = DECL_CHAIN (x))
+        if (DECL_DECLARES_FUNCTION_P (x))
+
+        else if (VAR_P (x) && TREE_STATIC (x)
+    	     && TREE_TYPE (x) != error_mark_node
+    	     && same_type_p (TYPE_MAIN_VARIANT (TREE_TYPE (x)), t))
+
+    extern bool deduce_inheriting_ctor		(tree);
+    extern bool decl_remember_implicit_trigger_p	(tree);
+    extern void synthesize_method			(tree);
+
+    extern tree lazily_declare_fn			(special_function_kind,
+    						 tree);
+    extern tree skip_artificial_parms_for		(const_tree, tree);
+

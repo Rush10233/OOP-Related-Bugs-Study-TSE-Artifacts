@@ -1,0 +1,23 @@
+bool try_list_cand = false;
+
+          try_list_cand = true;
+          if (CONSTRUCTOR_NELTS (init) == 1
+
+    	    try_list_cand = false;
+
+          if (try_list_cand || is_std_init_list (type))
+
+      /* If this is list-initialization and the class has a list guide, first
+
+      if (try_list_cand)
+        {
+          tree list_cands = NULL_TREE;
+          for (tree dg : lkp_range (cands))
+
+          if (list_cands)
+    	fndecl = perform_dguide_overload_resolution (list_cands, args, tf_none);
+
+    	  args = resolve_args (args, complain);
+    	  if (args == NULL)
+    	    return error_mark_node;
+

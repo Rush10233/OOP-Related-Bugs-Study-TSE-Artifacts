@@ -1,0 +1,20 @@
+else if (TREE_CODE (type) == FUNCTION_TYPE)
+    	{
+    	  if (current_class_type
+
+    	    {
+
+    		     ? G_("cannot define member function %<%T::%s%> "
+    			  "within %<%T%>")
+    		     : G_("cannot declare member function %<%T::%s%> "
+
+else if (TREE_CODE (type) == FUNCTION_TYPE)
+    	{
+    	  if (current_class_type
+
+    	    {
+
+    		     ? G_("cannot define member function %<%T::%s%> "
+    			  "within %<%T%>")
+    		     : G_("cannot declare member function %<%T::%s%> "
+

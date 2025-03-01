@@ -1,0 +1,56 @@
+not a type concept.
+    - Fix crash when a doc comment contains a line splicing.
+      (`#62054 <https://github.com/llvm/llvm-project/issues/62054>`_)
+
+      Assert builds may still see assertions triggered from this.
+    - Fix a failed assertion due to an invalid source location when trying to form
+      a coverage report for an unresolved constructor expression.
+
+    - Fix crash when attempting to perform parenthesized initialization of an
+      aggregate with a base class with only non-public constructors.
+      (`#62296 <https://github.com/llvm/llvm-project/issues/62296>`_)
+
+    
+    Bug Fixes to Compiler Builtins
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+          Param);
+      ExprEvalContexts.back().IsCurrentlyCheckingDefaultArgumentOrInitializer =
+          SkipImmediateInvocations;
+
+      return false;
+    }
+    
+
+          ExprEvalContexts.back().DelayedDefaultInitializationContext = {
+              CallLoc, Param, CurContext};
+          EnsureImmediateInvocationInDefaultArgs Immediate(*this);
+
+          if (Res.isInvalid())
+            return ExprError();
+          Res = ConvertParamDefaultArgument(Param, Res.get(),
+
+            NestedDefaultChecking;
+    
+        EnsureImmediateInvocationInDefaultArgs Immediate(*this);
+
+        if (!Res.isInvalid())
+          Res = ConvertMemberDefaultInitExpression(Field, Res.get(), Loc);
+        if (Res.isInvalid()) {
+
+      if (Field->getInClassInitializer()) {
+        Expr *E = Init ? Init : Field->getInClassInitializer();
+        if (!NestedDefaultChecking)
+
+        // C++11 [class.base.init]p7:
+        //   The initialization of each base and member constitutes a
+        //   full-expression.
+
+      if (CXXConstructorDecl *Constructor = dyn_cast<CXXConstructorDecl>(Func)) {
+        for (CXXCtorInitializer *Init : Constructor->inits()) {
+          if (Init->isInClassMemberInitializer())
+
+        }
+      }
+    
+

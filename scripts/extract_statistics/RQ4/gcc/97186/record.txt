@@ -1,0 +1,3 @@
+Commit:	9de8fa8
+./gcc/cp/pt.c	25400,25403
+./gcc/cp/pt.c	25405,25408

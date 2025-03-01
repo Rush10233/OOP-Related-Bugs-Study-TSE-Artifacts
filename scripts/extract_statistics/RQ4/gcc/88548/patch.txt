@@ -1,0 +1,129 @@
+extern bool shared_member_p			(tree);
+
+      bool static_p = decl_specifiers->storage_class == sc_static;
+
+    			    member_p, friend_p, static_p);
+
+    		  if (memfn && !friend_p)
+
+    /* True for a class member means that it is shared between all objects
+
+    bool
+
+      if (VAR_P (t) || TREE_CODE (t) == TYPE_DECL
+
+        return true;
+
+    	  if (TREE_CODE (decl) == USING_DECL)
+    	    /* Conservatively assume a dependent using-declaration
+    	       might resolve to a non-static member.  */
+    	    return false;
+
+    	    return false;
+
+          return true;
+
+      return false;
+
+          if (!shared_member_p (expr)
+
+cp_debug_print_flag (file, "Local names forbidden in current context",
+    			      (parser->local_variables_forbidden_p
+    			       & LOCAL_VARS_FORBIDDEN));
+      cp_debug_print_flag (file, "'this' forbidden in current context",
+    			      (parser->local_variables_forbidden_p
+    			       & THIS_FORBIDDEN));
+
+       bool, bool, bool);
+
+      (cp_parser *, cp_parser_declarator_kind, cp_parser_flags, int *, bool, bool,
+       bool);
+
+      parser->local_variables_forbidden_p = 0;
+
+    	  if (parser->local_variables_forbidden_p & THIS_FORBIDDEN)
+
+    
+
+    	    if ((parser->local_variables_forbidden_p & LOCAL_VARS_FORBIDDEN)
+
+      unsigned char local_variables_forbidden_p
+        = parser->local_variables_forbidden_p;
+
+      parser->local_variables_forbidden_p = 0;
+
+    					 /*friend_p=*/false,
+    					 /*static_p=*/false);
+
+    				/*friend_p=*/false,
+    				/*static_p=*/false);
+
+    			    member_p, friend_p, /*static_p=*/false);
+
+       FRIEND_P is true iff this declarator is a friend.
+    
+       STATIC_P is true iff the keyword static was seen.  */
+
+    		      bool member_p, bool friend_p, bool static_p)
+
+    					 friend_p, /*static_p=*/false);
+
+    						member_p, friend_p, static_p);
+
+       CTOR_DTOR_OR_CONV_P, MEMBER_P, FRIEND_P, and STATIC_P are
+
+    			     bool member_p, bool friend_p, bool static_p)
+
+    		  unsigned char local_variables_forbidden_p
+    		    = parser->local_variables_forbidden_p;
+    		  /* 'this' is not allowed in static member functions.  */
+    		  if (static_p || friend_p)
+    		    parser->local_variables_forbidden_p |= THIS_FORBIDDEN;
+
+    
+    		  /* Restore the state of local_variables_forbidden_p.  */
+    		  parser->local_variables_forbidden_p
+    		    = local_variables_forbidden_p;
+
+    					member_p, friend_p,
+    					/*static_p=*/false);
+
+    			    /*friend_p=*/false,
+    			    /*static_p=*/false);
+
+    					 /*friend_p=*/false,
+    					 /*static_p=*/false);
+
+      unsigned char saved_local_variables_forbidden_p;
+
+      parser->local_variables_forbidden_p = LOCAL_VARS_AND_THIS_FORBIDDEN;
+
+    	      bool static_p = (decl_specifiers.storage_class == sc_static);
+
+    					friend_p, static_p);
+
+    				       /*friend_p=*/false,
+    				       /*static_p=*/false);
+
+      unsigned char saved_local_variables_forbidden_p;
+
+      parser->local_variables_forbidden_p = LOCAL_VARS_AND_THIS_FORBIDDEN;
+
+    					    /*friend_p=*/false,
+    					    /*static_p=*/false);
+
+    					/*friend_p=*/false,
+    					/*static_p=*/false);
+
+    					 NULL, NULL, false, false, false);
+
+    					 /*friend_p=*/false,
+    					 /*static_p=*/false);
+
+      /* Used to track if local variable names and/or `this' are forbidden
+         in the current context.  */
+    #define LOCAL_VARS_FORBIDDEN (1 << 0)
+    #define THIS_FORBIDDEN (1 << 1)
+    #define LOCAL_VARS_AND_THIS_FORBIDDEN (LOCAL_VARS_FORBIDDEN | THIS_FORBIDDEN)
+      unsigned char local_variables_forbidden_p;
+

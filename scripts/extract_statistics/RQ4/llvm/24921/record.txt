@@ -1,0 +1,4 @@
+Commit:	4bc1a9e
+./clang/lib/Sema/SemaTemplate.cpp	3926,3926
+./clang/lib/Sema/SemaTemplate.cpp	6799,6799
+./clang/lib/Sema/SemaTemplate.cpp	6888,6891

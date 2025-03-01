@@ -1,0 +1,8 @@
+if (TREE_CODE (decl) != FIELD_DECL)
+
+          init_subob_ctx (ctx, new_ctx, index, value);
+
+if (TREE_CODE (decl) != FIELD_DECL)
+
+          init_subob_ctx (ctx, new_ctx, index, value);
+

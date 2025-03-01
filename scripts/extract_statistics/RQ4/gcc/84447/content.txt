@@ -1,0 +1,39 @@
+deduce_inheriting_ctor (fn);
+    
+      /* Make =delete work with SFINAE.  */
+
+    
+      if (DECL_FUNCTION_MEMBER_P (fn))
+        {
+
+         conversions.  */
+      if (flags & LOOKUP_SPECULATIVE)
+        {
+          if (cand->viable == 1)
+    	return fn;
+          else if (!(complain & tf_error))
+
+    
+          /* [class.copy]: the copy constructor is implicitly defined even if
+    	 the implementation elided its use.  */
+
+    	{
+    	  if (!mark_used (fn, complain) && !(complain & tf_error))
+    	    return error_mark_node;
+
+        }
+      else if (DECL_ASSIGNMENT_OPERATOR_P (fn)
+    	   && DECL_OVERLOADED_OPERATOR_IS (fn, NOP_EXPR)
+
+        {
+          tree to = cp_stabilize_reference
+    	(cp_build_fold_indirect_ref (argarray[0]));
+
+    
+          return val;
+        }
+
+        {
+          if (DECL_DESTRUCTOR_P (fn))
+    	return fold_convert (void_type_node, argarray[0]);
+

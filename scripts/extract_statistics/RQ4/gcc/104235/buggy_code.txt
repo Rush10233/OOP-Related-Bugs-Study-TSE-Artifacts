@@ -1,0 +1,2 @@
+else if (!DECL_P (decl) && !is_overloaded_fn (decl))
+

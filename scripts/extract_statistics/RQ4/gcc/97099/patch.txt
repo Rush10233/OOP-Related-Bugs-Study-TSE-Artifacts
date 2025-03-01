@@ -1,0 +1,20 @@
+if (deduction_guide_p (olddecl)
+    	  && deduction_guide_p (newdecl))
+    	return G_("deduction guide %q+D redeclared");
+    
+
+    			  "%<gnu_inline%> attribute");
+
+          if (deduction_guide_p (olddecl)
+    	  && deduction_guide_p (newdecl))
+    	return G_("deduction guide %q+D redeclared");
+    
+          /* Core issue #226 (C++11):
+    
+
+          if ((cxx_dialect != cxx98)
+
+    	  && !check_default_tmpl_args (nt, DECL_TEMPLATE_PARMS (newdecl),
+
+    		  "may not have default template arguments");
+

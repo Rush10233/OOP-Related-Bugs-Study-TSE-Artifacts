@@ -1,0 +1,10 @@
+tree late_return_type = declarator->u.function.late_return_type;
+    	    if (tree auto_node = type_uses_auto (type))
+    	      {
+
+    		  {
+
+    		      /* OK for C++11 lambdas.  */;
+    		    else if (cxx_dialect < cxx14)
+    		      {
+

@@ -1,0 +1,145 @@
+
+    # Run the testsuite with garbage collection at every opportunity.
+    check-g++-strict-gc:
+
+    	  TESTSUITEDIR="$(TESTSUITEDIR).gc" check-g++
+    check-c++-subtargets : check-g++-subtargets
+    # List of targets that can use the generic check- rule and its // variant.
+
+    
+      ++comparing_specializations;
+      ++comparing_dependent_aliases;
+
+      equal = (e1->tmpl == e2->tmpl
+    	   && comp_template_args (e1->args, e2->args));
+      if (equal && flag_concepts
+
+          tree c2 = e2->spec ? get_constraints (e2->spec) : NULL_TREE;
+          equal = equivalent_constraints (c1, c2);
+        }
+
+      --comparing_dependent_aliases;
+      --comparing_specializations;
+    
+
+function, two inside the body of a function in a local class, etc.)  */
+    extern int function_depth;
+    
+
+    extern int comparing_specializations;
+    
+
+    /* When comparing specializations permit context _FROM to match _TO.  */
+    extern tree map_context_from;
+    extern tree map_context_to;
+
+      dump.indent ();
+    
+      /* We care about structural equality.  */
+
+    
+      /* First seed the imports.  */
+      while (tree import = sec.tree_node ())
+
+    #undef cfun
+      cfun = old_cfun;
+      current_function_decl = old_cfd;
+
+    
+      dump.outdent ();
+      dump () && dump ("Read section:%u", snum);
+
+    
+    /* Restricts tree and type comparisons.  */
+    int comparing_specializations;
+
+    
+    /* Returns true iff two spec_entry nodes are equivalent.  */
+    
+
+      int equal;
+    
+      ++comparing_specializations;
+
+      equal = (e1->tmpl == e2->tmpl
+    	   && comp_template_args (e1->args, e2->args));
+      if (equal && flag_concepts
+
+          tree c2 = e2->spec ? get_constraints (e2->spec) : NULL_TREE;
+          equal = equivalent_constraints (c1, c2);
+        }
+
+      --comparing_specializations;
+    
+      return equal;
+
+    tree
+    dependent_alias_template_spec_p (const_tree t, bool transparent_typedefs)
+    {
+
+        return NULL_TREE;
+    
+      tree tinfo = TYPE_ALIAS_TEMPLATE_INFO (t);
+
+      if (class_nttp_const_wrapper_p (ot))
+        ot = TREE_OPERAND (ot, 0);
+    
+
+      if (TREE_CODE (nt) == TREE_VEC || TREE_CODE (ot) == TREE_VEC)
+        /* For member templates */
+        return TREE_CODE (ot) == TREE_CODE (nt) && comp_template_args (ot, nt);
+
+        {
+          if (!(TYPE_P (nt) && TYPE_P (ot)))
+    	return false;
+
+        }
+      else
+        {
+
+    	  {
+    	    DECL_ORIGINAL_TYPE (r) = NULL_TREE;
+    	    set_underlying_type (r);
+    	  }
+    
+    	layout_decl (r, 0);
+
+      tree r = instantiate_template (tmpl, args, complain);
+      pop_tinst_level ();
+    
+
+      return r;
+    }
+    
+
+    	 template.  */
+    
+          if (comparing_specializations
+
+    	/* When comparing hash table entries, only an exact match is
+    	   good enough; we don't want to replace 'this' with the
+    	   version from another function.  But be more flexible
+
+      /* Both should be types that are not obviously the same.  */
+      gcc_checking_assert (t1 != t2 && TYPE_P (t1) && TYPE_P (t2));
+    
+
+      if (!comparing_specializations)
+        {
+          /* TYPENAME_TYPEs should be resolved if the qualifying scope is the
+
+        return false;
+    
+     check_alias:
+
+        {
+          /* Don't treat an alias template specialization with dependent
+    	 arguments as equivalent to its underlying type when used as a
+
+      if (t1 == error_mark_node || t2 == error_mark_node)
+        return false;
+    
+      if (strict == COMPARE_STRICT)
+        {
+          if (TYPE_STRUCTURAL_EQUALITY_P (t1) || TYPE_STRUCTURAL_EQUALITY_P (t2))
+

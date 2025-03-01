@@ -1,0 +1,4 @@
+if (!TREE_TYPE (dest)
+          || (TREE_CODE (TREE_TYPE (dest)) != ARRAY_TYPE
+    	  && !INDIRECT_TYPE_P (TREE_TYPE (dest))))
+

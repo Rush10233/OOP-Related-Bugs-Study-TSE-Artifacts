@@ -1,0 +1,131 @@
+class ObjCMethodDecl;
+    class ObjCProtocolDecl;
+    struct PrintingPolicy;
+
+    class Stmt;
+    class StoredDeclsMap;
+    class TranslationUnitDecl;
+
+        return const_cast<DeclContext *>(this)->getEnclosingNamespaceContext();
+      }
+    
+
+      /// \brief Test if this context is part of the enclosing namespace set of
+      /// the context NS, as defined in C++0x [namespace.def]p9. If either context
+      /// isn't a namespace, this is equivalent to Equals().
+
+      const FieldDecl *getField() const { return Field; }
+    
+      /// \brief Get the initialization expression that will be used.
+
+    
+      SourceLocation getLocStart() const LLVM_READONLY { return Loc; }
+      SourceLocation getLocEnd() const LLVM_READONLY { return Loc; }
+
+      "in instantiation of variable template specialization %q0 requested here">;
+    def note_template_enum_def_here : Note<
+      "in instantiation of enumeration %q0 requested here">;
+
+    def note_template_type_alias_instantiation_here : Note<
+      "in instantiation of template type alias %0 requested here">;
+    def note_template_exception_spec_instantiation_here : Note<
+
+      "'constexpr' specifier">;
+    def err_in_class_initializer_non_constant : Error<
+      "in-class initializer for static data member is not a constant expression">;
+
+    
+    def ext_in_class_initializer_non_constant : Extension<
+      "in-class initializer for static data member is not a constant expression; "
+
+                            bool IsStdInitListInitialization, bool RequiresZeroInit,
+                            unsigned ConstructKind, SourceRange ParenRange);
+    
+
+      /// BuildCXXDefaultArgExpr - Creates a CXXDefaultArgExpr, instantiating
+      /// the default expr if needed.
+      ExprResult BuildCXXDefaultArgExpr(SourceLocation CallLoc,
+
+                           const MultiLevelTemplateArgumentList &TemplateArgs,
+                           TemplateSpecializationKind TSK);
+    
+
+      struct LateInstantiatedAttribute {
+        const Attr *TmplAttr;
+        LocalInstantiationScope *Scope;
+
+      return Ctx->getPrimaryContext();
+    }
+    
+
+    bool DeclContext::InEnclosingNamespaceSetOf(const DeclContext *O) const {
+      // For non-file contexts, this is equivalent to Equals.
+      if (!isFileContext())
+
+      case CXXDefaultArgExprClass:
+        return cast<CXXDefaultArgExpr>(this)->getExpr()->HasSideEffects(Ctx);
+    
+
+          return E->HasSideEffects(Ctx);
+        // If we've not yet parsed the initializer, assume it has side-effects.
+        return true;
+
+    
+      case CXXDynamicCastExprClass: {
+        // A dynamic_cast expression has side-effects if it can throw.
+
+    #include "clang/Sema/ParsedTemplate.h"
+    #include "clang/Sema/Scope.h"
+    #include "clang/Sema/ScopeInfo.h"
+
+    #include "llvm/ADT/STLExtras.h"
+    #include "llvm/ADT/SmallString.h"
+    #include <map>
+
+        return false;
+    
+      if (Field->hasInClassInitializer() && !Info.isImplicitCopyOrMove()) {
+
+        CXXCtorInitializer *Init;
+        if (Indirect)
+
+        else
+
+        return Info.addFieldInitializer(Init);
+      }
+    
+
+        if (F->hasInClassInitializer()) {
+          if (Expr *E = F->getInClassInitializer())
+            ExceptSpec.CalledExpr(E);
+        } else if (const RecordType *RecordTy
+                  = Context.getBaseElementType(F->getType())->getAs<RecordType>()) {
+          CXXRecordDecl *FieldRecDecl = cast<CXXRecordDecl>(RecordTy->getDecl());
+
+        if (F->hasInClassInitializer()) {
+          if (Expr *E = F->getInClassInitializer())
+            ExceptSpec.CalledExpr(E);
+        } else if (const RecordType *RecordTy
+                  = Context.getBaseElementType(F->getType())->getAs<RecordType>()) {
+          CXXRecordDecl *FieldRecDecl = cast<CXXRecordDecl>(RecordTy->getDecl());
+
+          ParenRange);
+    }
+    
+
+    void Sema::FinalizeVarWithDestructor(VarDecl *VD, const RecordType *Record) {
+      if (VD->isInvalidDecl()) return;
+    
+
+        //   members in the aggregate, then each member not explicitly initialized
+        //   shall be initialized from its brace-or-equal-initializer [...]
+        if (Field->hasInClassInitializer()) {
+
+          if (Init < NumInits)
+
+          else {
+
+            RequiresSecondPass = true;
+          }
+          return;
+

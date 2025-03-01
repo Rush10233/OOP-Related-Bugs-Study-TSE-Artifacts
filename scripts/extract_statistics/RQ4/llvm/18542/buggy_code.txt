@@ -1,0 +1,3 @@
+D.setInvalidType();
+        } else if (!D.getDeclSpec().isFriendSpecified()) {
+

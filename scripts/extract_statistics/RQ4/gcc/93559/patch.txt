@@ -1,0 +1,4 @@
+bool reuse = (first_initializer_p
+    		&& !CP_AGGREGATE_TYPE_P (elt_type)
+    		&& !TREE_SIDE_EFFECTS (first_initializer_p));
+

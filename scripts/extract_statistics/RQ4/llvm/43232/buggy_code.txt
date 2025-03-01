@@ -1,0 +1,2 @@
+!ParentIList->isIdiomaticZeroInitializer(SemaRef.getLangOpts())) {
+

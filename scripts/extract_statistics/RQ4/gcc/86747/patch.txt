@@ -1,0 +1,10 @@
+{
+          context = tsubst (context, args, tf_error, NULL_TREE);
+          push_nested_class (context);
+        }
+
+{
+          context = tsubst (context, args, tf_error, NULL_TREE);
+          push_nested_class (context);
+        }
+

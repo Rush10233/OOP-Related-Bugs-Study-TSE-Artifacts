@@ -1,0 +1,12 @@
+// For an anonymous union member, our overload resolution will perform
+            // overload resolution for its members.
+            if (Field->isAnonymousStructOrUnion()) {
+              data().NeedOverloadResolutionForMoveConstructor |=
+                  FieldRec->data().NeedOverloadResolutionForMoveConstructor;
+              data().NeedOverloadResolutionForMoveAssignment |=
+                  FieldRec->data().NeedOverloadResolutionForMoveAssignment;
+              data().NeedOverloadResolutionForDestructor |=
+                  FieldRec->data().NeedOverloadResolutionForDestructor;
+            }
+    
+

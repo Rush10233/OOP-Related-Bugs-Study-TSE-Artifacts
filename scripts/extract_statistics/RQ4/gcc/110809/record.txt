@@ -1,0 +1,6 @@
+Commit:	27ba736
+./gcc/cp/pt.cc	24920,24920
+./gcc/cp/pt.cc	24922,24922
+Commit:	00c806e
+./gcc/cp/pt.cc	24924,24924
+./gcc/cp/pt.cc	24926,24926

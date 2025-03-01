@@ -1,0 +1,28 @@
+/* If something went wrong, a message indicating what.  */
+      const char *errstr;
+
+    	  lfi->errstr = G_("request for member %qD is ambiguous");
+
+      const char *errstr = 0;
+    
+
+      errstr = lfi.errstr;
+
+      if (rval && protect 
+          && !really_overloaded_fn (rval))
+
+    	rval = error_mark_node;
+        }
+    
+      if (errstr && protect)
+        {
+          if (complain & tf_error)
+    	{
+    	  error (errstr, name, type);
+    	  if (lfi.ambiguous)
+    	    print_candidates (lfi.ambiguous);
+    	}
+          rval = error_mark_node;
+
+      if (rval && is_overloaded_fn (rval)
+

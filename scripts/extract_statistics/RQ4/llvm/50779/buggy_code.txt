@@ -1,0 +1,4 @@
+return MaybeBindToTemporary(TheCall);
+
+      return MaybeBindToTemporary(TheCall);
+

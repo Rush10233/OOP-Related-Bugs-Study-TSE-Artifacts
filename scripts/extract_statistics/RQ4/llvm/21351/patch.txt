@@ -1,0 +1,11 @@
+if (const auto *TTP = dyn_cast<TemplateTemplateParmDecl>(ND))
+
+      else
+        mangleUnscopedName(ND->getTemplatedDecl());
+
+      if (const auto *TTP = dyn_cast<TemplateTemplateParmDecl>(ND)) {
+
+      } else {
+        manglePrefix(getEffectiveDeclContext(ND), NoFunction);
+        mangleUnqualifiedName(ND->getTemplatedDecl());
+

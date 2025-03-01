@@ -1,0 +1,10 @@
+Commit:	064263c
+./gcc/cp/name-lookup.c	1723,1723
+./gcc/cp/name-lookup.c	1732,1733
+./gcc/cp/name-lookup.c	1770,1782
+./gcc/cp/name-lookup.c	1785,1790
+./gcc/cp/name-lookup.c	1796,1802
+./gcc/cp/name-lookup.c	1857,1860
+./gcc/cp/name-lookup.c	1862,1862
+./gcc/cp/name-lookup.c	1878,1879
+./gcc/cp/name-lookup.c	1889,1890

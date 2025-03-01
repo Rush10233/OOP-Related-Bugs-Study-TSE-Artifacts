@@ -1,0 +1,16 @@
+Commit:	969d518
+./gcc/cp/call.c	8765,8777
+./gcc/cp/call.c	8787,8790
+./gcc/cp/call.c	8805,8805
+./gcc/cp/call.c	8808,8808
+Commit:	359c0a8
+./gcc/cp/call.c	9155,9156
+./gcc/cp/call.c	9163,9164
+Commit:	7e9baf4
+./gcc/cp/call.c	8312,8324
+./gcc/cp/call.c	8334,8337
+./gcc/cp/call.c	8352,8352
+./gcc/cp/call.c	8355,8355
+Commit:	6d2de5e
+./gcc/cp/call.c	9155,9156
+./gcc/cp/call.c	9163,9164

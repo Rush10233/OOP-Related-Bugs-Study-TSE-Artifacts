@@ -1,0 +1,7 @@
+Commit:	4f69f92
+./clang/lib/AST/ASTDiagnostic.cpp	998,998
+./clang/lib/AST/ASTDiagnostic.cpp	1004,1005
+./clang/lib/AST/ASTDiagnostic.cpp	1007,1007
+./clang/lib/AST/ASTDiagnostic.cpp	1012,1012
+./clang/lib/AST/ASTDiagnostic.cpp	1035,1035
+./clang/lib/AST/ASTDiagnostic.cpp	1040,1040

@@ -1,0 +1,56 @@
+by unsafe_copy_elision_p.  */
+
+        /* unsafe_copy_elision_p must have said this is OK.  */
+
+    /* Return true iff T refers to a base or potentially-overlapping field, which
+       cannot be used for return by invisible reference.  We avoid doing C++17
+       mandatory copy elision when this is true.
+
+       This returns true even if the type of T has no tail padding that other data
+       could be allocated into, because that depends on the particular ABI.
+       unsafe_copy_elision_p, below, does consider whether there is padding.  */
+
+    bool
+
+        return true;
+
+      return (DECL_FIELD_IS_BASE (t)
+    	  || lookup_attribute ("no_unique_address", DECL_ATTRIBUTES (t)));
+
+    /* We can't elide a copy from a function returning by value to a
+       potentially-overlapping subobject, as the callee might clobber tail padding.
+       Return true iff this could be that case.  */
+
+    unsafe_copy_elision_p (tree target, tree exp)
+
+      tree type = TYPE_MAIN_VARIANT (TREE_TYPE (exp));
+      /* It's safe to elide the copy for a class with no tail padding.  */
+      if (!is_empty_class (type)
+          && tree_int_cst_equal (TYPE_SIZE (type), CLASSTYPE_SIZE (type)))
+        return false;
+      /* It's safe to elide the copy if we aren't initializing a base object.  */
+      if (!unsafe_return_slot_p (target))
+        return false;
+
+    	 into the target, so look at them. */
+
+    	if (unsafe_copy_elision_p (target, op))
+
+          return unsafe_copy_elision_p (target, TREE_OPERAND (init, 2));
+
+          bool unsafe = unsafe_copy_elision_p (fa, arg);
+
+    extern bool unsafe_return_slot_p		(tree);
+
+    		      /* We may need to add a copy constructor call if
+    			 the field has [[no_unique_address]].  */
+
+    			(sub, complete_ctor_identifier, &args, inner_type,
+
+    		    code = build2 (INIT_EXPR, inner_type, sub, value);
+
+/* We may need to add a copy constructor call if
+    			 the field has [[no_unique_address]].  */
+
+    		    code = build2 (INIT_EXPR, inner_type, sub, value);
+

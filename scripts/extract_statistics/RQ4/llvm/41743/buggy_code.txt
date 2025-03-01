@@ -1,0 +1,5 @@
+//
+      // should be emitted.  Also, only ignore POD types with trivial copy
+      // constructors.
+      if (VariableType.isPODType(SemaRef.Context))
+

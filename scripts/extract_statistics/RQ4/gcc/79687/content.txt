@@ -1,0 +1,16 @@
+if (TREE_CODE (init) == CONSTRUCTOR
+    	  && !DECL_INITIALIZED_BY_CONSTANT_EXPRESSION_P (decl))
+    	break;
+
+          decl = unshare_expr (init);
+        }
+      return decl;
+
+if (TREE_CODE (init) == CONSTRUCTOR
+    	  && !DECL_INITIALIZED_BY_CONSTANT_EXPRESSION_P (decl))
+    	break;
+
+          decl = unshare_expr (init);
+        }
+      return decl;
+

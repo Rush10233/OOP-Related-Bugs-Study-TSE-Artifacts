@@ -1,0 +1,54 @@
+max_index_cst = tree_to_uhwi (fold_convert (size_type_node, max_index));
+        }
+    
+
+      /* Loop until there are no more initializers.  */
+      for (index = 0;
+           d->cur != d->end && (!sized_array_p || index <= max_index_cst);
+
+          if (!TREE_CONSTANT (elt_init))
+    	TREE_CONSTANT (new_init) = false;
+    
+
+          /* This can happen with an invalid initializer (c++/54501).  */
+          if (d->cur == old_cur && !sized_array_p)
+    	break;
+        }
+    
+
+      return new_init;
+    }
+    
+
+        }
+      else if (code == CONSTRUCTOR)
+        {
+
+    
+
+    	write_string ("il");
+          else
+    	{
+    	  write_string ("tl");
+
+    	}
+          write_char ('E');
+        }
+      else if (code == LAMBDA_EXPR)
+
+    static void
+    write_template_arg_literal (const tree value)
+    {
+
+    
+      /* Write a null member pointer value as (type)0, regardless of its
+         real representation.  */
+
+    	break;
+    
+          case STRING_CST:
+
+    
+          default:
+    	gcc_unreachable ();
+

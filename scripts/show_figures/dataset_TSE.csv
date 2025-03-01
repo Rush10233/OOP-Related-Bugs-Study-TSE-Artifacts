@@ -1,0 +1,789 @@
+Bug_id,Project,Category,Subcategory,Creation Date,Symptom,Root Cause(patch),Importance,Title
+85464,GCC,object,overloading,2018/4/19,Diagnostic,Assignment Error,P2 normal,[7 Regression] Wignored-qualifiers is emitted by cc1plus without diagnostics when triggered by a cast operator.
+91466,GCC,compiletime_polymorphic,constraints and concepts,2019/8/15,Reject Valid,Overlooked Case,P3 normal,"[concepts] indicates ""used in its own initializer"" when not, constraint order change passes compilation."
+19452,LLVM,compiletime_polymorphic,template instantiation,2014/4/16,Accept Invalid,Others,P normal,Invalid candidate function for unary operator on scoped enum
+32172,LLVM,compiletime_polymorphic,template(no instantiation),2017/3/7,Crash,Overlooked Case,P release blocker,Segmentation fault with structured bindings inside for-loop inside template class
+102592,GCC,compiletime_polymorphic,constraints and concepts,2021/10/4,Wrong Code,Assignment Error,P2 normal,[11/12 Regression] heap-use-after-free when constructing std::filesystem::path from iterator pair
+28039,LLVM,compiletime_polymorphic,template instantiation,2016/6/7,Reject Valid,API Misuse,P normal,Local classes must have an associated namespace since C++14
+34796,LLVM,compiletime_polymorphic,template instantiation,2017/10/1,Wrong Code,Incorrect Branch,P enhancement,explicit instantiation declaration of class template causes static constexpr member to be considered not a constant expression
+89331,GCC,inheritance,member access(inherit),2019/2/13,Crash,Overlooked Case,P2 normal,"[8/9 Regression] internal compiler error: in build_simple_base_path, at cp/class.c:589"
+105925,GCC,object,initialization & destruction,2022/6/11,Reject Valid,Assignment Error,P3 normal,"[11/12/13 Regression] Could not convert '{{0, 0.0}}' from '<brace-enclosed initializer list>' to 'X' since"
+91921,GCC,runtime_polymorphic,override control,2019/9/26,Diagnostic,Error Message,P3 normal,Incomplete -Woverloaded-virtual warning when base class is in system header
+100474,GCC,compiletime_polymorphic,constraints and concepts,2021/5/7,Crash,Overlooked Case,P3 normal,"ICE: in diagnose_trait_expr, at cp/constraint.cc:3706"
+100644,GCC,object,copy & move,2021/5/18,Reject Valid,Overlooked Case,P3 normal,[11/12 regression] Deleted move constructor prevents templated constructor from being used
+97533,GCC,object,overloading,2020/10/22,Crash,Incorrect Branch,P3 normal,ICE encountering operator() within lambda expression within templated struct
+82294,GCC,object,initialization & destruction,2017/9/22,Others,Incorrect Branch,P3 normal,Array of objects with constexpr constructors initialized from space-inefficient memory image
+36810,LLVM,encapsulation,friends,2018/3/19,Others,Overlooked Case,P enhancement,c++ visibility for specialization is not correct
+87425,GCC,object,copy & move,2018/9/24,Crash,Incorrect Branch,P3 normal,[9 Regression] ICE with virtual assignment operator
+32898,LLVM,object,overloading,2017/5/2,Reject Valid,API Misuse,P normal,Overloaded method pointer's public/private access isn't resolved correctly
+48545,LLVM,object,initialization & destruction,2020/12/17,Reject Valid,API Misuse,P normal,Access failure to own private inherited constructor for prvalue direct-initialization
+19993,LLVM,encapsulation,member access,2014/6/10,Crash,API Misuse,P normal,clang Crashes on invalid code
+104173,GCC,object,overloading,2022/1/21,Reject Valid,Incorrect Branch,P1 normal,[12 Regression] wrong overload resolution for ref-qualifiers
+38671,LLVM,object,initialization & destruction,2018/8/22,Crash,API Misuse,P enhancement,"""destructor cannot be declared as a template"" leads to segfault in Sema::LookupSpecialMember"
+83374,GCC,inheritance,multiple inheritance,2017/12/11,Accept Invalid,Overlooked Case,P3 normal,[DR1813] Bad std::is_standard_layout with two base class subobjects of the same type
+85067,GCC,object,copy & move,2018/3/24,Crash,Error Code Logic,P4 normal,[8 Regression] ICE with volatile parameter in defaulted copy-constructor
+30305,LLVM,inheritance,member access(inherit),2016/9/7,Accept Invalid,Overlooked Case,P normal,Inheriting constructors import special members -- Causes runtime slicing
+21351,LLVM,compiletime_polymorphic,template instantiation,2014/10/22,Wrong Code,Error Code Logic,P normal,Incorrect name mangling for a template class method reference
+93138,GCC,encapsulation,member access,2020/1/2,Reject Valid,API Misuse,P3 normal,[10 regression] elaborated type specifier visibility check problem
+79503,GCC,inheritance,derived class construction & destruction,2017/2/14,Reject Valid,Incorrect Branch,P3 normal,[7 Regression] [new inheriting ctors] spurious bad candidate from same or derived type
+90951,GCC,object,initialization & destruction,2019/6/20,Reject Valid,Overlooked Case,P2 normal,[8/9 Regression] error initializing a constexpr array of a struct with const member
+27941,LLVM,object,copy & move,2016/5/30,Crash,Incorrect Branch,P normal,Clang segfaults when considering non-special defaulted assignment operator.
+73666,LLVM,compiletime_polymorphic,template instantiation,2023/11/29,Wrong Code,Overlooked Case,,C++20: Deduction guides ignored for class type placeholder template argument
+92082,GCC,compiletime_polymorphic,constraints and concepts,2019/10/13,Crash,Others,P3 normal,ICE with concepts
+19681,LLVM,encapsulation,member access,2014/5/7,Crash,Error Code Logic,P normal,Crash on invalid in Sema::CheckAddressOfMemberAccess
+23629,LLVM,encapsulation,member access,2015/5/21,Crash,Error Message,P normal,Crash with constexpr virtual function
+89512,GCC,compiletime_polymorphic,template instantiation,2019/2/26,Crash,Overlooked Case,P2 normal,"[7 Regression] ICE in get_expr_operands, at tree-ssa-operands.c:882"
+47176,LLVM,encapsulation,friends,2020/8/15,Crash,Error Code Logic,P enhancement,Crash parsing friend constexpr function with noexcept(true) specifier
+85866,GCC,compiletime_polymorphic,template instantiation,2018/5/22,Reject Valid,Incorrect Branch,P3 normal,[8/9 Regression] too few arguments to function when sfinae on calling pointer to member function
+79377,GCC,object,overloading,2017/2/4,Crash,Incorrect Branch,P2 normal,[6 Regression] ICE with increment operator in -fpermissive mode
+20496,LLVM,encapsulation,member access,2014/7/30,Diagnostic,API Misuse,P normal,No diagnostic for address of bit-field result of pre-increment operator
+30844,LLVM,runtime_polymorphic,override control,2016/10/31,Reject Valid,API Misuse,P normal,Using override on a overridden destructor produces an error
+90801,GCC,object,initialization & destruction,2019/6/9,Hang,Error Code Logic,P3 normal,A recurring hang
+31222,LLVM,inheritance,member access(inherit),2016/12/1,Diagnostic,Error Message,P enhancement,Produce warning when a derived class shadows a field of the base class with `-Wshadow`
+85901,GCC,compiletime_polymorphic,template instantiation,2018/5/24,Diagnostic,Overlooked Case,P3 normal,"Error message contains ""#'offset_type' not supported by simple_type_specifier#)#'offset_type' not supported by direct_abstract_declarator#"""
+82643,GCC,encapsulation,member access,2017/10/20,Reject Valid,Overlooked Case,P3 normal,lambda capture breaks constexpr-ness of non-static const constexpr member call on non-constexpr value/variable
+91933,GCC,inheritance,member access(inherit),2019/9/30,Reject Valid,Error Code Logic,P2 normal,"[9 Regression] ICE: tree check: expected class 'type', have 'exceptional' (error_mark) in build_simple_base_path, at cp/class.c:541"
+42581,LLVM,compiletime_polymorphic,template instantiation,2019/7/11,Crash,Overlooked Case,P normal,clang Crashed during compilation - template recursive constexpr function
+89212,GCC,compiletime_polymorphic,template instantiation,2019/2/5,Crash,Overlooked Case,P2 normal,[8 Regression] ICE in fold_convert_loc at fold-const.c:2552
+101040,GCC,inheritance,derived class construction & destruction,2021/6/12,Crash,Incorrect Branch,P3 normal,"[11/12 Regression] Internal compiler error: in get_or_insert_ctor_field, at cp/constexpr.c:3571 since"
+88830,GCC,runtime_polymorphic,override control,2019/1/13,Crash,Incorrect Branch,P1 normal,[9 Regression] ice in maybe_emit_vtables
+92062,GCC,encapsulation,member access,2019/10/11,Wrong Code,API Misuse,P3 normal,[9 Regression] ODR-use by static_assert ignored for static member of class template
+103081,GCC,encapsulation,member access,2021/11/4,Crash,Error Code Logic,P3 normal,"[ICE] with ""using enum"""
+80913,GCC,encapsulation,class scope(global),2017/5/29,Hang,Error Code Logic,P3 normal,[8 regression] Infinite loop in cc1plus with stat hack patch
+95074,GCC,encapsulation,class scope(global),2020/5/12,Accept Invalid,Error Code Logic,P3 normal,Function found via ADL when it should not
+99008,GCC,compiletime_polymorphic,template alias,2021/2/13,Crash,Error Message,P2 normal,"[10 Regression] ICE in set_constraints, at cp/constraint.cc:1256"
+89422,GCC,compiletime_polymorphic,template instantiation,2019/2/20,Crash,Error Code Logic,P2 normal,"[8 Regression] ICE in field_byte_offset, at dwarf2out.c:19086"
+103703,GCC,compiletime_polymorphic,template(no instantiation),2021/12/14,Crash,Incorrect Branch,P3 normal,ICE with -Wmismatched-tags with friends and templates
+85761,GCC,encapsulation,class scope(global),2018/5/12,Accept Invalid,Overlooked Case,P2 normal,[8/9 Regression] ICE on invalid in rtl with uncaptured constexpr
+84708,GCC,encapsulation,class scope(global),2018/3/5,Crash,Error Code Logic,P3 normal,"[8 Regression] internal compiler error: in lambda_expr_this_capture, at cp/lambda.c:772"
+105265,GCC,object,initialization & destruction,2022/4/13,Wrong Code,Incorrect Branch,P2 normal,[9 Regression] temporary object not destructed causing memory leaks
+104300,GCC,object,initialization & destruction,2022/1/31,Crash,API Misuse,P1 normal,"[12 Regression] ICE in gimplify_var_or_parm_decl, at gimplify.c:2977 since"
+102050,GCC,object,initialization & destruction,2021/8/24,Reject Valid,Error Code Logic,P3 normal,Nonempty list-initialization rejects constructor with defaulted std::initializer_list
+93496,GCC,object,initialization & destruction,2020/1/29,Wrong Code,API Misuse,P3 normal,Miscompile of range-for over braced-init-list in constructor of class with virtual inheritance
+94124,GCC,object,initialization & destruction,2020/3/10,Reject Valid,Error Code Logic,P1 normal,[10 Regression] conversion from   <brace-enclosed initializer list>   to   F   is ambiguous since
+97186,GCC,encapsulation,member access,2020/9/24,Crash,Overlooked Case,P3 normal,[11 Regression] ICE: Segmentation fault (in maybe_instantiate_noexcept)
+90749,GCC,object,initialization & destruction,2019/6/4,Crash,API Misuse,P2 normal,"[8/9/10 Regression] ICE in enclosing_instantiation_of, at cp/pt.c:13462"
+92732,GCC,object,initialization & destruction,2019/11/29,Reject Valid,Overlooked Case,P3 normal,Bit-field of scoped enumeration type cannot be initialized
+98642,GCC,object,copy & move,2021/1/12,Reject Valid,Overlooked Case,P1 normal,"[10 Regression] wrong ""use of deleted function"" error"
+97279,GCC,object,overloading,2020/10/3,Wrong Code,Error Code Logic,P3 normal,GCC ignores the operation definition of the template
+107329,GCC,object,initialization & destruction,2022/10/20,Crash,API Misuse,P1 normal,"[13 Regression] ICE in gimplify_expr, at gimplify.cc:17118 since"
+96078,GCC,object,initialization & destruction,2020/7/6,Diagnostic,Incorrect Branch,P2 normal,[10 Regression] flatten attribute on constructor and destructor causes spurious warning
+93143,GCC,object,initialization & destruction,2020/1/3,Wrong Code,Incorrect Branch,P1 normal,[10 Regression] Multiple calls to static constexpr member function gives Wrong Code
+96994,GCC,object,initialization & destruction,2020/9/9,Wrong Code,Overlooked Case,P3 normal,Missing code from consteval constructor initializing const variable
+100752,GCC,encapsulation,member access,2021/5/25,Reject Valid,API Misuse,P2 normal,[11 Regression] error: cannot call member function   void S::f()   without object
+85646,GCC,encapsulation,member access,2018/5/4,Reject Valid,Incorrect Branch,P2 normal,[7/8/9 Regression] Incorrect lambda visibility with -fvisibility=hidden
+84993,GCC,encapsulation,member access,2018/3/20,Diagnostic,Error Code Logic,P3 normal,Combination of fieldnames and accessor suggestions for misspelled private fields
+83835,GCC,object,initialization & destruction,2018/1/14,Reject Valid,Overlooked Case,P3 normal,[7/8 Regression] constexpr constructor rejected in c++17 mode (regression WRT c++14)
+83956,GCC,object,initialization & destruction,2018/1/20,Reject Valid,API Misuse,P3 normal,[8 regression] error: use of deleted function   {anonymous}::a::~a()  
+84851,GCC,object,copy & move,2018/3/13,Diagnostic,Error Code Logic,P3 enhancement,missing -Wclass-memaccess for a memcpy in a copy ctor with a non-trivial member
+86473,GCC,inheritance,member access(inherit),2018/7/11,Reject Valid,Assignment Error,P3 normal,a problem in member lookup?
+83825,GCC,compiletime_polymorphic,template instantiation,2018/1/13,Crash,API Misuse,P4 normal,"[8 Regression] ICE on invalid C++ code with shadowed identifiers: in operator[], at vec.h:826"
+84426,GCC,inheritance,member access(inherit),2018/2/16,Crash,Others,P4 normal,[8 Regression] ICE with conflicting class member names
+28337,LLVM,object,initialization & destruction,2016/6/27,Reject Valid,Error Code Logic,P release blocker,Static constexpr arrays can not be dereferenced when declared inside class template.
+40323,LLVM,compiletime_polymorphic,template instantiation,2019/1/15,Reject Valid,Overlooked Case,P enhancement,incorrect static object initialization on Windows
+44361,LLVM,compiletime_polymorphic,template(no instantiation),2019/12/21,Crash,Overlooked Case,P enhancement,Crash in clang::Redeclarable<clang::TagDecl>::DeclLink::getPrevious(clang::TagDecl const*)
+42276,LLVM,encapsulation,member access,2019/6/13,Crash,Error Code Logic,P enhancement,Regression(363295): Clang Crashes when compiling angle
+27155,LLVM,compiletime_polymorphic,template instantiation,2016/3/31,Reject Valid,Error Code Logic,P normal,Template argument deduction for base class fails
+44671,LLVM,compiletime_polymorphic,template instantiation,2020/1/26,Crash,API Misuse,P enhancement,Assertion failure while parsing deduction guide for class template with constructor constrained with terse syntax
+23303,LLVM,compiletime_polymorphic,template(no instantiation),2015/4/21,Reject Valid,Overlooked Case,P normal,Default template argument not being picked up when there's a forward declaration with no default template argument
+24289,LLVM,object,initialization & destruction,2015/7/28,Crash,Overlooked Case,P normal,non-deterministic Codegen Crash for function static initializer_list
+37265,LLVM,object,copy & move,2018/4/26,Reject Valid,Assignment Error,P enhancement,"[coroutines] co_return should [class.copy]/33 (namely, try to move first if auto variable)"
+28096,LLVM,object,copy & move,2016/6/12,Wrong Code,Error Code Logic,P normal,Clang++ selects wrong constructor in return statement (lvalue instead of rvalue)
+37172,LLVM,inheritance,member access(inherit),2018/4/18,Reject Valid,Assignment Error,P normal,__is_aggregate should be false for an inherited virtual function
+33904,LLVM,object,overloading,2017/7/24,Wrong Code,Error Code Logic,P enhancement,Completion provides no OVERLOAD/CXCursor_OverloadCandidate items for static member functions
+50779,LLVM,object,overloading,2021/6/20,Reject Valid,API Misuse,P normal,regression Clang >= 11 rejects consteval subscript operator use
+44809,LLVM,compiletime_polymorphic,constraints and concepts,2020/2/5,Accept Invalid,Overlooked Case,P enhancement,Constraint ignored in function template of class template when using terse syntax with a multi-argument concept
+81942,GCC,object,initialization & destruction,2017/8/23,Crash,Assignment Error,P3 normal,ICE on empty constexpr constructor with C++14
+92068,GCC,compiletime_polymorphic,template specialization,2019/10/11,Crash,Overlooked Case,P2 normal,[8/9/10 Regression] ICE on invalid in process_partial_specialization
+105110,GCC,compiletime_polymorphic,template instantiation,2022/3/30,Reject Valid,API Misuse,P3 normal,NTTP type deduction fails when dependent of previous NTTPs
+99389,GCC,encapsulation,class scope(global),2021/3/4,Others,API Misuse,P3 normal,[modules] bad serialization of data
+94951,GCC,inheritance,member access(inherit),2020/5/5,Diagnostic,Error Message,P2 normal,[8/9 Regression] dereferencing type-punned pointer will break strict-aliasing rules when using super class for a template type
+100205,GCC,encapsulation,member access,2021/4/22,Reject Valid,Error Code Logic,P3 normal,[11/12 Regression] error: invalid use of non-static data member
+89419,GCC,encapsulation,class scope(global),2019/2/20,Crash,Error Code Logic,P2 normal,[8/9 Regression] ICE in is_normal_capture_proxy starting with
+100517,GCC,runtime_polymorphic,casting,2021/5/11,Crash,Incorrect Branch,P3 normal,"[12 Regression] ICE in rvalue, at cp/tree.c:946 since"
+100838,GCC,object,initialization & destruction,2021/5/30,Wrong Code,Incorrect Branch,P2 normal,[11 Regression] -fno-elide-constructors for C++14 missing required destructor call since
+94590,GCC,others,others,2020/4/14,Accept Invalid,Incorrect Branch,P3 normal,Incorrectly accepts invalid C++11 braced initialisation of double from long double if sizeof(long double)==sizeof(double)
+80415,GCC,object,initialization & destruction,2017/4/13,Reject Valid,Incorrect Branch,P1 normal,"[7 Regression] bogus ""invalid initialization of reference"" error"
+101532,GCC,object,initialization & destruction,2021/7/20,Crash,Incorrect Branch,P1 normal,"[12 Regression] ICE in finish_expr_stmt, at cp/semantics.c:859"
+93905,GCC,object,initialization & destruction,2020/2/24,Reject Valid,Incorrect Branch,P3 normal,[8 Regression] Cannot use Derived type of Base containing both enum and protected destructor
+82110,GCC,compiletime_polymorphic,constraints and concepts,2017/9/6,Reject Valid,Overlooked Case,P3 normal,"Concept for default constructing works with new T, not with new T[1]"
+90199,GCC,others,others,2019/4/22,Crash,API Misuse,P3 normal,"ICE: tree check: expected complex_cst, have plus_expr in output_constant, at varasm.c:4994"
+98329,GCC,compiletime_polymorphic,template instantiation,2020/12/16,Crash,Error Code Logic,P1 normal,"[11 Regression] ICE in cp_build_bit_cast, at cp/semantics.c:10730"
+103480,GCC,object,copy & move,2021/11/29,Diagnostic,Overlooked Case,P2 normal,[10 Regression] -Werror=useless-cast with constexpr destructor
+81888,GCC,object,initialization & destruction,2017/8/18,Reject Valid,Incorrect Branch,P2 normal,[7 Regression] Structured bindings stopped working
+96229,GCC,compiletime_polymorphic,constraints and concepts,2020/7/17,Accept Invalid,Error Code Logic,P3 normal,Invalid specialization accepted when also constrained in base template template parameter
+102191,GCC,object,initialization & destruction,2021/9/3,Reject Valid,Incorrect Branch,P3 normal,[C++20] Can't return prvalue with potentially-throwing destructor during constant evaluation
+89652,GCC,compiletime_polymorphic,template instantiation,2019/3/11,Crash,API Misuse,P1 normal,[9 Regression] ICE during constexpr evaluation
+96560,GCC,compiletime_polymorphic,template instantiation,2020/8/10,Reject Valid,API Misuse,P3 normal,Substitution triggers compile-time error when it shouldn't
+86374,GCC,compiletime_polymorphic,template instantiation,2018/7/2,Reject Valid,Overlooked Case,P1 normal,[8/9 regression] template member name lookup problem
+85060,GCC,inheritance,member access(inherit),2018/3/24,Reject Valid,API Misuse,P2 normal,"[7/8 Regression] Object cannot call its inherited member function ""without object"""
+84578,GCC,object,initialization & destruction,2018/2/26,Crash,Error Code Logic,P2 normal,[6/7 Regression] ICE with flexible array member and constexpr
+86763,GCC,inheritance,derived class construction & destruction,2018/7/31,Wrong Code,Assignment Error,P2 normal,[7 Regression] Wrong Code comparing member of copy of a 237 byte object with nontrivial default constructor on x86-64 arch
+84222,GCC,object,copy & move,2018/2/5,Diagnostic,Error Code Logic,P2 normal,[6/7 Regression] [[deprecated]] class complains about internal class usage
+87651,GCC,compiletime_polymorphic,template instantiation,2018/10/19,Reject Valid,Others,P2 normal,[8 Regression] inner class with template template friend declaration of same name fails to compile
+84296,GCC,compiletime_polymorphic,template instantiation,2018/2/8,Crash,API Misuse,P3 normal,[8 Regression] ICE in finish_member_declaration
+87531,GCC,object,copy & move,2018/10/5,Wrong Code,Others,P3 normal,[8/9 Regression] assignment operator does nothing if performed as a call via operator=
+85031,GCC,encapsulation,member access,2018/3/22,Crash,Others,P3 normal,internal compiler error: Segmentation fault (field_accessor_p()/dfs_locate_field_accessor_pre())
+85241,GCC,compiletime_polymorphic,template instantiation,2018/4/5,Reject Valid,Others,P3 normal,"Requires-expressions, fold expressions, and member function templates with dependent parameters don't play nicely"
+85558,GCC,encapsulation,friends,2018/4/28,Crash,Others,P3 normal,ICE in make_rtl_for_nonlocal_decl when using static member of template class
+86018,GCC,encapsulation,class scope(global),2018/5/31,Diagnostic,Overlooked Case,P3 normal,Incorrect unused warning for int passed by reference to lambda
+84375,GCC,encapsulation,friends,2018/2/13,Crash,Incorrect Branch,P4 normal,[8 Regression] ICE with friend in local class
+85014,GCC,encapsulation,class scope(global),2018/3/21,Crash,Overlooked Case,P4 minor,"[8 Regression] internal compiler error: in lookup_base, at cp/search.c:185"
+47270,LLVM,inheritance,member access(inherit),2020/8/21,Crash,Overlooked Case,P enhancement,clang Crashes on not finding a destructor during pch deserialization
+42211,LLVM,inheritance,multiple inheritance,2019/6/9,Wrong Code,Overlooked Case,P normal,using declaration on method with multiple inheritance disables virtual call to overridden method
+34970,LLVM,compiletime_polymorphic,template instantiation,2017/10/16,Reject Valid,Error Code Logic,P normal,Class template argument deduction mishandles std::optional
+18876,LLVM,compiletime_polymorphic,template instantiation,2014/2/17,Wrong Code,Assignment Error,P normal,"is_default_constructible and DRs 1354, 1424"
+48687,LLVM,compiletime_polymorphic,template instantiation,2021/1/7,Crash,Overlooked Case,P release blocker,Compiler frontend segfault on explicit template instantiation
+22591,LLVM,object,copy & move,2015/2/14,Reject Valid,Incorrect Branch,P normal,Compilation of exported class gives errors when class is not copyable and/or copy-assignable
+49020,LLVM,object,initialization & destruction,2021/2/3,Accept Invalid,Overlooked Case,P enhancement,Allowing brace elision even with desgnated initializers
+35039,LLVM,object,copy & move,2017/10/23,Crash,Overlooked Case,P normal,Crash with GNU's ?: operator when guaranteed copy elision (c++17) is enabled
+20744,LLVM,object,initialization & destruction,2014/8/25,Wrong Code,Others,P normal,Source range of explicitly defaulted constructor not recorded
+27027,LLVM,object,overloading,2016/3/22,Reject Valid,API Misuse,P normal,Block scope operator function ignored by lookup for infix notation
+20930,LLVM,encapsulation,member access,2014/9/12,Diagnostic,API Misuse,P normal,declspec/attribute deprecated does not give a warning for nested anonymous classes
+51484,LLVM,object,initialization & destruction,2021/8/15,Crash,API Misuse,P normal,Consteval returning struct/class causes frontend error.
+92918,GCC,inheritance,member access(inherit),2019/12/12,Reject Valid,Incorrect Branch,P2 normal,[9/10 Regression] Does not do name lookup when using from base class
+102045,GCC,inheritance,derived class construction & destruction,2021/8/24,Wrong Code,API Misuse,P2 normal,[11 regression] constructor is not being instantiated
+100111,GCC,inheritance,derived class construction & destruction,2021/4/16,Crash,Overlooked Case,P2 normal,[10 Regression] `-fno-elide-constructors` with `constexpr` ctors causes ICE in GCC 10.3
+98744,GCC,inheritance,derived class construction & destruction,2021/1/19,Wrong Code,API Misuse,P1 normal,"[11 Regression] ICE in gimple_call_arg, at gimple.h:3246 since"
+103177,GCC,inheritance,multiple inheritance,2021/11/10,Diagnostic,Overlooked Case,P3 normal,incorrect error message for ambiguous lookup with a static member function from a private base
+80431,GCC,inheritance,derived class construction & destruction,2017/4/14,Wrong Code,API Misuse,P3 normal,"Use of ""this"" pointer in member initializer causes constructor not to be called (or ICE on gcc 7)"
+104641,GCC,compiletime_polymorphic,template instantiation,2022/2/22,Reject Valid,Overlooked Case,P3 normal,Deduction guide for member template class rejected at class scope when used with typename dependant type
+90138,GCC,compiletime_polymorphic,template(no instantiation),2019/4/18,Crash,Assignment Error,P4 normal,[7/8 Regression] ICE on invalid in contains_struct_check()
+95678,GCC,compiletime_polymorphic,template instantiation,2020/6/15,Crash,API Misuse,P3 normal,"[9 Regression] ICE in dependent_type_p, at cp/pt.c:25610"
+79501,GCC,compiletime_polymorphic,template instantiation,2017/2/14,Reject Valid,Error Code Logic,P3 normal,member deduction guide not recognized
+92776,GCC,compiletime_polymorphic,template(no instantiation),2019/12/3,Reject Valid,Assignment Error,P3 normal,Can't define member function out of line with non-type template parameter
+98570,GCC,compiletime_polymorphic,template specialization,2021/1/6,Crash,Incorrect Branch,P2 normal,[8/9/10/11 Regression] ICE: canonical types differ for identical types
+99374,GCC,others,others,2021/3/3,Reject Valid,Incorrect Branch,P2 normal,[8/9/10 Regression] C++17/20 mode fails to recognise pointer-to-member functions of incomplete types in conditional expression
+98332,GCC,object,initialization & destruction,2020/12/16,Crash,Incorrect Branch,P3 normal,"[10/11 Regression] ICE in unshare_constructor, at cp/constexpr.c:1527 since"
+93559,GCC,object,initialization & destruction,2020/2/3,Crash,Incorrect Branch,P1 normal,[10 Regression] ICE: side-effects element in no-side-effects CONSTRUCTOR
+94024,GCC,object,initialization & destruction,2020/3/3,Diagnostic,Assignment Error,P3 normal,Error message has misleading source location for constructor member initialisation.
+99033,GCC,object,initialization & destruction,2021/2/9,Crash,Overlooked Case,P2 normal,"[9 Regression] ICE in tree_to_poly_int64, at tree.c:3091"
+97523,GCC,object,initialization & destruction,2020/10/21,Reject Valid,Incorrect Branch,P1 normal,"[11 Regression] bogus ""would use explicit constructor"" error for new[]()"
+93238,GCC,object,overloading,2020/1/12,Crash,API Misuse,P1 normal,"[10 Regression] ICE in tree check: expected integer_cst, have mult_expr in to_wide, at tree.h:5855 since"
+104425,GCC,compiletime_polymorphic,template instantiation,2022/2/7,Reject Valid,API Misuse,P3 normal,SFINAE hard error on failed resolution of << for defined class in namespace
+103341,GCC,compiletime_polymorphic,template alias,2021/11/20,Crash,API Misuse,P2 normal,[11 Regression] ICE type of variable instantiation constrained on template parameter
+89481,GCC,encapsulation,class scope(global),2019/2/24,Accept Invalid,Assignment Error,P3 normal,constexpr function allows writing one active union member and reading another
+90171,GCC,object,overloading,2019/4/19,Crash,Error Code Logic,P3 normal,"[9 Regression] ICE in build_op_delete_call, at cp/call.c:6630"
+99613,GCC,object,initialization & destruction,2021/3/16,Wrong Code,API Misuse,P3 normal,Static variable destruction order race condition
+88554,GCC,encapsulation,friends,2018/12/19,Crash,Incorrect Branch,P1 normal,[9 Regression] Segfault ICE when falling off the end of a reference-returning friend operator
+84520,GCC,object,initialization & destruction,2018/2/22,Crash,Incorrect Branch,P2 normal,[6/7/8 Regression] ICE with lambda and static member function
+84820,GCC,inheritance,member access(inherit),2018/3/11,Accept Invalid,Incorrect Branch,P2 normal,[7 Regression]? Bogus pointer-to-member accepted within template
+86953,GCC,object,overloading,2018/8/14,Crash,Others,P2 normal,"[8 Regression] compiler Crashes with constexpr operator== and specific struct (cxx_eval_bit_field_ref, at cp/constexpr.c:2704)"
+87506,GCC,inheritance,derived class construction & destruction,2018/10/3,Crash,Overlooked Case,P2 normal,[7 Regression] ICE with inherited constexpr constructor with const argument
+87571,GCC,encapsulation,friends,2018/10/10,Crash,Others,P2 normal,"[8 Regression] ICE in friend_accessible_p, accessing protected member of template friend inside template class"
+83912,GCC,object,initialization & destruction,2018/1/17,Reject Valid,Others,P3 normal,"[constexpr] struct with a pointer to one of its members, returned by a function, is not a constant expression"
+68024,LLVM,compiletime_polymorphic,template alias,2023/10/3,Crash,Overlooked Case,,Dependent value passed to function object passed to auto template parameter causes: Assertion isa<T>(CanonicalType) failed
+30559,LLVM,compiletime_polymorphic,template instantiation,2016/9/28,Crash,Overlooked Case,P normal,clang Crashes on valid C++11 code: Assertion `ParamIter != FD->param_end()' failed
+37903,LLVM,object,initialization & destruction,2018/6/22,Wrong Code,Error Code Logic,P release blocker,Clang/LLVM 7.0.1 on Windows initializes inline static data member multiple times
+26182,LLVM,encapsulation,class scope(global),2016/1/17,Reject Valid,API Misuse,P normal,Associated namespaces of local classes in ADL
+42513,LLVM,encapsulation,friends,2019/7/4,Wrong Code,API Misuse,P normal,Friend function declarations hidden in qualifed name lookup (regression introduced by commit r350505)
+19808,LLVM,object,overloading,2014/5/20,Reject Valid,API Misuse,P normal,Pointer-to-member conversion to bool considered indistinguishable from conversion to non-bool
+30595,LLVM,object,overloading,2016/10/2,Accept Invalid,Error Code Logic,P normal,extraneous const qualifier allowed in malformed conversion function
+22354,LLVM,object,copy & move,2015/1/27,Others,Others,P normal,generic lambda capture fails with undefined reference to custom copy ctor
+42961,LLVM,object,copy & move,2019/8/11,Crash,Incorrect Branch,P enhancement,assertion failure converting lambda returning trivial_abi struct to function pointer
+30586,LLVM,encapsulation,friends,2016/10/1,Diagnostic,Error Message,P normal,Clang-cl Friend class error: elaborated type refers to a type alias
+18544,LLVM,encapsulation,class scope(global),2014/1/19,Diagnostic,Error Code Logic,P normal,Crash declaring inline operator new in a namespace
+43232,LLVM,object,initialization & destruction,2019/9/5,Diagnostic,Error Code Logic,P enhancement,-Wmissing-braces firing for aggregate structs with only 1 base and no members
+36747,LLVM,compiletime_polymorphic,template specialization,2018/3/14,Crash,API Misuse,P normal,Structured bindings in conditions Crash when using member get
+37918,LLVM,encapsulation,class scope(global),2018/6/24,Wrong Code,Incorrect Branch,P enhancement,When compiling with `-fopenmp` clang will under certain circumstances not produce symbols for const or constexpr static data members.
+94041,GCC,object,initialization & destruction,2020/3/5,Wrong Code,Error Code Logic,P1 normal,[10 Regression] temporary object destructor called before the end of the full-expression since
+70272,GCC,inheritance,derived class construction & destruction,2017/3/17,Wrong Code,Incorrect Branch,P3 normal,Spurious line directive with -g
+94175,GCC,object,copy & move,2020/3/14,Others,Overlooked Case,P1 normal,[10 Regression] Passing constexpr empty class variable to function since
+93310,GCC,inheritance,multiple inheritance,2020/1/17,Wrong Code,Error Code Logic,P3 normal,Incorrect constexpr virtual evaluation inside a constructor
+90538,GCC,compiletime_polymorphic,template instantiation,2019/5/20,Reject Valid,Error Code Logic,P3 normal,[9/10 Regression] Redeclaration error when expanding parameter pack multiple times in a lambda
+94102,GCC,compiletime_polymorphic,template instantiation,2020/3/9,Reject Valid,Incorrect Branch,P3 normal,Variadic template deduction guide issue - error: 'In instantiation of'
+89761,GCC,compiletime_polymorphic,template instantiation,2019/3/18,Crash,Overlooked Case,P3 normal,"[9 Regression] ICE: tree check: expected class 'expression', have 'exceptional' (argument_pack_select)"
+99844,GCC,compiletime_polymorphic,template instantiation,2021/3/31,Crash,Overlooked Case,P2 normal,[9/10 Regression] ICE: unexpected expression 'B' of kind template_parm_index
+95371,GCC,compiletime_polymorphic,constraints and concepts,2020/5/27,Crash,Overlooked Case,P3 normal,[10/11 Regression] ICE concepts with template template parameter since
+80746,GCC,compiletime_polymorphic,constraints and concepts,2017/5/15,Crash,Others,P3 normal,[concepts] ICE evaluating constraints for concepts with dependent template parameters
+94926,GCC,object,initialization & destruction,2020/5/2,Accept Invalid,Error Code Logic,P3 normal,[9/10/11 regression] invalid use of incomplete type not recogniced for static self reference of templated struct since
+98930,GCC,compiletime_polymorphic,template instantiation,2021/2/2,Crash,Overlooked Case,P3 normal,ICE with static variable in template function used as template argument
+89217,GCC,object,initialization & destruction,2019/2/6,Reject Valid,Assignment Error,P1 normal,"[9 Regression] ICE tree check: expected constructor, have error_mark in split_nonconstant_init_1"
+103968,GCC,compiletime_polymorphic,template alias,2022/1/10,Crash,Overlooked Case,P2 normal,[11 Regression] ICE and segfault when instantiating template with lvalue ref argument and nested template type
+88979,GCC,compiletime_polymorphic,template alias,2019/1/22,Reject Valid,Error Code Logic,P3 normal,[C++20] P0634R3 not working for constructor parameter types
+96199,GCC,compiletime_polymorphic,template alias,2020/7/14,Crash,Error Code Logic,P2 normal,[10/11 Regression] internal compiler error: in tsubst_copy with CTAD for alias templates
+93248,GCC,compiletime_polymorphic,template alias,2020/1/13,Crash,API Misuse,P2 normal,[8/9/10 Regression] ICE in decltype of template constructor with default argument within a class template since
+101988,GCC,compiletime_polymorphic,template instantiation,2021/8/19,Accept Invalid,Error Message,P1 normal,[12 Regression] Accepts invalid new-expression of array of deduced class template
+97679,GCC,compiletime_polymorphic,template instantiation,2020/11/2,Crash,Overlooked Case,P2 normal,[10 Regression] [concepts] ICE with CTAD for a nested class template with constrained constructor
+98844,GCC,compiletime_polymorphic,template alias,2021/1/27,Accept Invalid,Incorrect Branch,P3 normal,Deduction guides don't inhibit the aggregate deduction candidate
+105734,GCC,encapsulation,class scope(global),2022/5/26,Reject Valid,Incorrect Branch,P2 normal,"[12/13 Regression]: Incorrect ""error: invalid use of 'auto'"" for explicit destructor inside a template"
+94775,GCC,compiletime_polymorphic,template alias,2020/4/26,Crash,Error Code Logic,P2 normal,"[8/9/10 Regression] ICE in strip_typedefs, at cp/tree.c:1734 since"
+92103,GCC,compiletime_polymorphic,constraints and concepts,2019/10/15,Reject Valid,Error Code Logic,P3 normal,constraints not checked on nested class template
+91826,GCC,encapsulation,class scope(global),2019/9/19,Reject Valid,Error Code Logic,P2 normal,[8/9/10 Regression] Unexpected behavior when class defined with namespace alias
+100502,GCC,encapsulation,member access,2021/5/10,Crash,API Misuse,P1 normal,[11/12 Regression] ICE in enforce_access at cp/semantics.c:368 since
+96840,GCC,compiletime_polymorphic,constraints and concepts,2020/8/29,Reject Valid,Overlooked Case,P3 normal,[11 Regression] Recursive substitution in constrained commutative operator
+98413,GCC,object,initialization & destruction,2020/12/21,Crash,Overlooked Case,P1 normal,[11 Regression] ICE on placement new and member pointer
+89050,GCC,encapsulation,class scope(global),2019/1/24,Reject Valid,Incorrect Branch,P3 normal,[8 Regression] GCC sometimes requires this to be captured when doing overload resolution but selecting a static member function
+90546,GCC,compiletime_polymorphic,template instantiation,2019/5/20,Wrong Code,Incorrect Branch,P2 normal,[9/10 Regression] Incorrect template argument deduction for conversion functions
+91377,GCC,compiletime_polymorphic,template instantiation,2019/8/6,Crash,Incorrect Branch,P2 normal,"[8/9/10 Regression] ICE with non-static block scope constexpr, captured in lambda, used as template parameter"
+95999,GCC,compiletime_polymorphic,template specialization,2020/6/30,Crash,API Misuse,P4 trivial,"[9/10/11/12 Regression] ICE in tree check: expected integer_cst, have var_decl in get_len, at tree.h:5951"
+101767,GCC,object,initialization & destruction,2021/8/3,Reject Valid,Overlooked Case,P1 normal,[11 Regression] Aggregate initialization fails for struct that has both unnamed struct and union fields
+95369,GCC,compiletime_polymorphic,template instantiation,2020/5/27,Accept Invalid,Overlooked Case,P3 normal,braced-init-list with designated initializers as template-argument rejected
+80178,GCC,object,copy & move,2017/3/24,Wrong Code,Error Message,P3 normal,Class with deleted copy and move constructors uses wrong argument passing ABI
+79064,GCC,compiletime_polymorphic,template instantiation,2017/1/11,Reject Valid,Overlooked Case,P3 normal,Cannot overload member function templates on type of literal
+104647,GCC,compiletime_polymorphic,template alias,2022/2/22,Crash,Overlooked Case,P2 normal,"[10/11/12/13 Regression] ICE in get_or_insert_ctor_field, at cp/constexpr.cc:3705 since"
+92134,GCC,object,initialization & destruction,2019/10/17,Accept Invalid,Assignment Error,P3 normal,static constinit members incorrectly compile
+107280,GCC,object,initialization & destruction,2022/10/16,Crash,API Misuse,P2 normal,"[10/11 Regression] ICE: tree check: expected constructor, have view_convert_expr in cxx_eval_store_expression, at cp/constexpr.cc:5928"
+93805,GCC,object,initialization & destruction,2020/2/18,Diagnostic,API Misuse,P2 normal,[9 Regression] A suspicious -Werror=noexcept warning since
+79796,GCC,object,initialization & destruction,2017/3/1,Crash,Overlooked Case,P2 normal,[5 Regression] ICE with NSDMI and this pointer
+103936,GCC,object,initialization & destruction,2022/1/7,Crash,Overlooked Case,P3 blocker,[12 Regression] ICE with cs[5]{}
+100963,GCC,object,initialization & destruction,2021/6/8,Wrong Code,API Misuse,P3 normal,[11/12 Regression] GCC 11 regression: templated constructor with std::initializer_list<T> is not selected
+92907,GCC,object,overloading,2019/12/11,Wrong Code,API Misuse,P3 normal,"noexcept does not consider ""const"" in member functions"
+103783,GCC,object,overloading,2021/12/21,Reject Valid,API Misuse,P3 normal,Ambiguous overload between constrained static member and unconstrained non-static member
+104846,GCC,object,overloading,2022/3/8,Crash,API Misuse,P4 normal,"[10/11/12 Regression] ICE: tree check: expected function_decl, have field_decl in grokmethod, at cp/decl.cc:17999"
+79474,GCC,object,overloading,2017/2/12,Crash,Incorrect Branch,P3 normal,Multiple definitions of user-defined conversion operator cause ICE (internal compiler error)
+100763,GCC,encapsulation,class scope(global),2021/5/26,Diagnostic,Overlooked Case,P3 normal,Diagnostics of type alias is missing scope
+82299,GCC,object,initialization & destruction,2017/9/22,Diagnostic,API Misuse,P3 normal,-Wuseless-cast errors on typed enums used in member data initializers in c++1z
+79746,GCC,inheritance,derived class construction & destruction,2017/2/28,Diagnostic,Overlooked Case,P3 normal,[7 Regression] Confusing -Wunused-but-set-parameter warning with virtual inheritance
+99365,GCC,compiletime_polymorphic,constraints and concepts,2021/3/3,Reject Valid,Error Code Logic,P1 normal,[11 Regression] ICE on partial specialization with constrained placeholder NTTP
+101098,GCC,compiletime_polymorphic,constraints and concepts,2021/6/16,Crash,Incorrect Branch,P3 normal,[11/12 Regression] ICE with explicit specialization of constrained function template
+98644,GCC,compiletime_polymorphic,constraints and concepts,2021/1/12,Crash,Incorrect Branch,P2 normal,"[10/11 Regression] [concepts] ICE in satisfaction_value, at cp/constraint.cc:2825"
+96623,GCC,encapsulation,member access,2020/8/15,Crash,Assignment Error,P1 normal,"[11 Regression] ICE in inject_parm_decls, at cp/parser.c:23893"
+91606,GCC,compiletime_polymorphic,template instantiation,2019/8/30,Wrong Code,Incorrect Branch,P3 normal,[9 regression] Optimization leads to invalid code
+85277,GCC,encapsulation,member access,2018/4/7,Diagnostic,Error Message,P1 normal,[8 Regression] Broken diagnostic for offsetof with static member function
+84434,GCC,compiletime_polymorphic,template instantiation,2018/2/18,Crash,Error Code Logic,P1 normal,"[8 Regression] internal compiler error: tree check: expected var_decl or field_decl or function_decl or type_decl or template_decl, have using_decl in build_deduction_guide, at cp/pt.c:25636"
+86823,GCC,encapsulation,class scope(global),2018/8/1,Accept Invalid,API Misuse,P2 normal,[8 Regression] private member template struct/class is publicly accessible
+85141,GCC,encapsulation,class scope(global),2018/3/31,Crash,API Misuse,P2 normal,[6/7/8 Regression] ICE with pointer arithmetic of static member function address
+88183,GCC,compiletime_polymorphic,template(no instantiation),2018/11/24,Crash,Error Code Logic,P2 normal,[8 Regression] Fold expression with operator .* inside an polymorphic lambda
+84590,GCC,object,initialization & destruction,2018/2/27,Crash,Overlooked Case,P2 normal,"[7 Regression] -fsanitize=undefined internal compiler error: tree check: expected constructor, have target_expr in split_nonconstant_init_1, at cp/typeck2.c:629"
+87652,GCC,encapsulation,class scope(global),2018/10/19,Reject Valid,Assignment Error,P2 normal,[8 Regression] inner class template of outer class template can't access friend's protected data member
+88528,GCC,object,overloading,2018/12/17,Crash,Overlooked Case,P2 normal,[7 Regression] ICE with templated operator bool() in gcc 7
+85061,GCC,encapsulation,member access,2018/3/24,Crash,API Misuse,P3 normal,ICE with __builtin_offsetof applied to static member
+87547,GCC,others,others,2018/10/8,Wrong Code,API Misuse,P3 normal,G++ reports bad type names for bit-field members
+88578,GCC,object,initialization & destruction,2018/12/22,Wrong Code,Incorrect Branch,P3 normal,Static C++ objects with flexible array members overlap when initializes are non-const
+86190,GCC,runtime_polymorphic,casting,2018/6/18,Diagnostic,Error Message,P3 normal,[6/7 Regression] -Wsign-conversion ignores explicit conversion in some cases
+87530,GCC,object,copy & move,2018/10/5,Accept Invalid,Numberical Error,P3 normal,copy elision in return statement doesn't check for rvalue reference to object type
+84605,GCC,others,others,2018/2/27,Crash,Incorrect Branch,P4 normal,"[8 Regression] internal compiler error: in xref_basetypes, at cp/decl.c:13818"
+47555,LLVM,inheritance,derived class construction & destruction,2020/9/16,Reject Valid,Overlooked Case,P normal,Inherited constructor unusable for constexpr static member of class template
+19104,LLVM,inheritance,multiple inheritance,2014/3/11,Wrong Code,Error Code Logic,P normal,[Windows] Incorrect handling of non-virtual calls of virtual methods
+31701,LLVM,compiletime_polymorphic,template(no instantiation),2017/1/19,Crash,Incorrect Branch,P normal,ICE when initializing a const class with a class static variable template
+37631,LLVM,compiletime_polymorphic,template instantiation,2018/5/30,Accept Invalid,Error Message,P normal,missing access check for deduction guide declarations
+53354,LLVM,compiletime_polymorphic,template specialization,2022/1/22,Crash,API Misuse,,Segfault from constraining partial specialization on nested template type
+24730,LLVM,object,initialization & destruction,2015/9/6,Crash,Error Code Logic,P normal,Clang 3.7 Crashes in MismatchingNewDeleteDetector
+20259,LLVM,encapsulation,class scope(global),2014/7/9,Reject Valid,Overlooked Case,P normal,Friend lookup works differently in ms mode
+42778,LLVM,object,initialization & destruction,2019/7/26,Reject Valid,Overlooked Case,P enhancement,Cannot aggregate initialize with C++17 *this lambda capture
+18477,LLVM,encapsulation,class scope(global),2014/1/14,Wrong Code,Error Code Logic,P normal,lambda capturing confused when instantiating a class with a default initializer
+22465,LLVM,object,initialization & destruction,2015/2/4,Wrong Code,Incorrect Branch,P normal,An extra InitListExpr in r227424 likely caused by DR1467
+36055,LLVM,object,initialization & destruction,2018/1/23,Crash,API Misuse,P normal,Reproducible Clang Crash + strongly suspected invalid code generation
+22855,LLVM,object,initialization & destruction,2015/3/9,Crash,Others,P normal,Assertion failed: Ptr must be a pointer to Val type!
+19195,LLVM,object,initialization & destruction,2014/3/19,Crash,Others,P normal,Crash on valid codegen'ing member class template with in-class initialized member
+18542,LLVM,compiletime_polymorphic,template(no instantiation),2014/1/19,Crash,Error Code Logic,P normal,Crash defining method of undefined class inside an incomplete type
+27811,LLVM,compiletime_polymorphic,template(no instantiation),2016/5/18,Wrong Code,Overlooked Case,P normal,[ms] clang-cl emits scalar deleting ctor and vtable for templates with dllimported instantiation declaration
+40395,LLVM,compiletime_polymorphic,template instantiation,2019/1/21,Hang,Others,P enhancement,__uuidof at a template argument causes infinite template instantiation
+47805,LLVM,object,initialization & destruction,2020/10/12,Reject Valid,Others,P enhancement,By-value function parameter changes are rolled back prior to destructor call during constant evaluation
+62102,LLVM,compiletime_polymorphic,template(no instantiation),2023/4/13,Crash,Error Message,,[clang] Invalid cast assertion in clang::Sema::PrintInstantiationStack()
+22075,LLVM,runtime_polymorphic,override control,2014/12/31,Diagnostic,Others,P normal,Poor diagnostics emitted when override appears before const in a method declaration
+19741,LLVM,encapsulation,member access,2014/5/14,Reject Valid,Overlooked Case,P normal,clang incorrectly rejects constexpr constructor which modified member variable in its body
+34644,LLVM,others,others,2017/9/16,Wrong Code,Incorrect Branch,P normal,extern template turns constexpr into non-constexpr
+28394,LLVM,encapsulation,class scope(global),2016/7/1,Wrong Code,Overlooked Case,P normal,out-of-line declaration of C++17 inline variables should make definition non-discardable
+33189,LLVM,object,initialization & destruction,2017/5/26,Crash,API Misuse,P normal,Clang Crashes on template destructor declaration
+28105,LLVM,object,initialization & destruction,2016/6/13,Crash,Overlooked Case,P normal,"clang Crashes on C++ code with invalid default argument for constructor: Assertion `Val && ""isa<> used on a null pointer""' failed"
+104476,GCC,inheritance,member access(inherit),2022/2/9,Reject Valid,Assignment Error,P2 normal,[11 Regression] using-decl shadowed by member function when in incomplete-class context
+104432,GCC,inheritance,member access(inherit),2022/2/7,Crash,Error Code Logic,P1 normal,[12 Regression] ICE in operator() from filter_memfn_lookup since
+94549,GCC,inheritance,derived class construction & destruction,2020/4/10,Reject Valid,Incorrect Branch,P1 normal,"[10 Regression] Inherited and constrained constructors are ""ambiguous"" even if they aren't"
+100983,GCC,compiletime_polymorphic,template instantiation,2021/6/9,Reject Valid,Error Code Logic,P3 normal,Deduction guide for member template class rejected at class scope
+93286,GCC,compiletime_polymorphic,template alias,2020/1/16,Crash,Assignment Error,P1 normal,"[10 Regression] ICE: tree check: did not expect class   type  , have   type   (reference_type) in convert_from_reference, at cp/cvt.c:550 since"
+105803,GCC,compiletime_polymorphic,template instantiation,2022/6/1,Crash,Overlooked Case,P3 normal,[13 regression] ICE at gcc/cp/pt.cc:27737 after
+88757,GCC,compiletime_polymorphic,template(no instantiation),2019/1/8,Reject Valid,Overlooked Case,P1 normal,[9 Regression] GCC wrongly treats dependent name as a type when it should be treated as a value
+88815,GCC,object,overloading,2019/1/12,Wrong Code,Error Code Logic,P1 normal,[9 Regression] is_constexpr (based on narrowing conversion and expression SFINAE) broken
+94944,GCC,compiletime_polymorphic,template instantiation,2020/5/4,Reject Valid,Assignment Error,P3 normal,compile error accessing member function of dependent base class template in noexcept specification
+82152,GCC,inheritance,derived class construction & destruction,2017/9/8,Crash,Overlooked Case,P2 normal,[7 Regression] ICE on invalid code in C++17 mode if inheriting constructors are used
+100065,GCC,compiletime_polymorphic,template(no instantiation),2021/4/13,Accept Invalid,Overlooked Case,P3 normal,Conditional explicit doesn't work for deduction guide
+79504,GCC,object,overloading,2017/2/14,Reject Valid,Overlooked Case,P3 normal,Overload resolution in trailing-return-type ignores reference qualifier and leads to recursive template instantiation.
+90210,GCC,compiletime_polymorphic,template instantiation,2019/4/23,Accept Invalid,Incorrect Branch,P3 normal,[C++17] CTAD forbidding explicit deduction guide for copy-list-initialization
+90916,GCC,encapsulation,member access,2019/6/18,Crash,Incorrect Branch,P1 normal,"[10 Regression] ICE in retrieve_specialization, at cp/pt.c:1258"
+101181,GCC,compiletime_polymorphic,constraints and concepts,2021/6/23,Crash,API Misuse,P2 normal,[11/12 Regression] ICE when using an alias template
+106969,GCC,encapsulation,class scope(global),2022/9/19,Reject Valid,Assignment Error,P2 normal,[12 Regression] member function constness incorrectly propagates to local class member function return type deduction
+97297,GCC,encapsulation,class scope(global),2020/10/5,Reject Valid,API Misuse,P3 normal,typename wrongly required in out-of-class member function definitions
+89913,GCC,compiletime_polymorphic,template alias,2019/4/1,Crash,Overlooked Case,P4 minor,[9 Regression] ICE with invalid using declaration
+105518,GCC,encapsulation,class scope(global),2022/5/7,Reject Valid,Error Code Logic,P3 normal,[rejects valid] nested lambda using an outer type alias fails with constexpr integer in that alias
+100032,GCC,compiletime_polymorphic,template alias,2021/4/11,Accept Invalid,Overlooked Case,P2 normal,[9/10 Regression] renaming alias template that also adds cv-qualifiers is deemed equivalent to underlying template
+79687,GCC,object,initialization & destruction,2017/2/23,Wrong Code,Error Code Logic,P3 normal,[5/6 Regression] Wrong Code with pointer-to-member
+106882,GCC,others,others,2022/9/7,Reject Valid,Others,P3 normal,passing X as 'this' argument discards qualifiers
+89705,GCC,encapsulation,class scope(global),2019/3/13,Reject Valid,API Misuse,P2 normal,"[7/8 Regression] ICE in convert_like_real, at cp/call.c:7334"
+93046,GCC,others,others,2019/12/23,Crash,Overlooked Case,P3 normal,[10 Regression] ICE in cp_gimplify_init_expr
+100209,GCC,runtime_polymorphic,casting,2021/4/22,Reject Valid,Overlooked Case,P3 normal,multiple inheritance with crtp pattern fails on sequentioal member access
+90938,GCC,object,initialization & destruction,2019/6/19,Reject Valid,Overlooked Case,P2 normal,"[9 Regression] Initializing array with {1} works, but not {0}"
+103337,GCC,object,initialization & destruction,2021/11/19,Reject Valid,API Misuse,P3 normal,rejects-valid brace elision inside designated initializer
+89974,GCC,compiletime_polymorphic,template instantiation,2019/4/4,Reject Valid,Incorrect Branch,P3 normal,ICE on a definition of a non-type specialization on a struct object with pointer to member function
+101803,GCC,object,initialization & destruction,2021/8/6,Reject Valid,API Misuse,P3 normal,CTAD fails for nested designated initializers
+101405,GCC,object,initialization & destruction,2021/7/10,Crash,Error Code Logic,P2 normal,"[12 Regression] internal compiler error: in reshape_init_class, at cp/decl.c:6483"
+96876,GCC,object,initialization & destruction,2020/8/31,Accept Invalid,Overlooked Case,P3 normal,missing check for destructibility of base classes in aggregate initialization
+89214,GCC,object,initialization & destruction,2019/2/5,Crash,Overlooked Case,P2 normal,"[7/8 Regression] ICE in digest_init_r, at cp/typeck2.c:1211 with -std=c++17"
+98423,GCC,object,initialization & destruction,2020/12/23,Reject Valid,Overlooked Case,P3 normal,The defaulted default constructor defined as deleted when one of variant member has a default member initializer
+104225,GCC,object,initialization & destruction,2022/1/25,Accept Invalid,Incorrect Branch,P2 normal,[9 Regression] accepts-invalid new expression that uses deleted implicit default constructor of class specialization
+88969,GCC,object,initialization & destruction,2019/1/22,Crash,Error Code Logic,P1 normal,"[9 Regression] ICE in build_op_delete_call, at cp/call.c:6509"
+94470,GCC,object,initialization & destruction,2020/4/3,Reject Valid,API Misuse,P2 normal,[9 Regression] Constexpr variable initialization with self-modifying constructor incorrectly rejected since
+80935,GCC,object,initialization & destruction,2017/5/31,Reject Valid,Incorrect Branch,P3 normal,[C++1z] incorrect error 'uninitialized variable in constexpr function' when conditionally declaring variable inside lambda inside template class
+90243,GCC,object,initialization & destruction,2019/4/25,Diagnostic,Error Message,P3 normal,diagnostic notes that belong to a suppressed error about an uninitialized variable in a constexpr function are still shown
+82899,GCC,object,initialization & destruction,2017/11/8,Others,API Misuse,P3 normal,*this in constructors could not alias with reference input parameters of the same type
+93413,GCC,inheritance,derived class construction & destruction,2020/1/24,Reject Valid,Error Code Logic,P3 normal,Defaulted constexpr Destructor not being found during constant evaluation
+89392,GCC,inheritance,member access(inherit),2019/2/18,Crash,Error Code Logic,P3 normal,"[7 Regression] ICE in bitmap_bit_p, at bitmap.c:978"
+95567,GCC,inheritance,member access(inherit),2020/6/7,Wrong Code,Error Code Logic,P3 normal,"Defaulted virtual <=> has the wrong behavior, vtable is checked when it should not be"
+94932,GCC,encapsulation,friends,2020/5/3,Crash,Error Message,P2 normal,"[10/11 Regression] ICE in ovl_skip_hidden, at cp/tree.c:2292 since"
+99251,GCC,runtime_polymorphic,casting,2021/2/24,Diagnostic,Error Message,P3 normal,[11 Regression] inconsistent -Wnonnull warning behaviour with dynamic_cast
+96003,GCC,runtime_polymorphic,casting,2020/6/30,Diagnostic,Error Code Logic,P3 normal,[11 Regression] spurious -Wnonnull calling a member on the result of static_cast
+94492,GCC,object,copy & move,2020/4/5,Diagnostic,API Misuse,P3 normal,no way to silence -Wdeprecated-copy for aggregates
+92106,GCC,object,initialization & destruction,2019/10/15,Crash,Assignment Error,P3 normal,[8 Regression] ICE with structured bindings and -Wreturn-local-addr
+92582,GCC,compiletime_polymorphic,constraints and concepts,2019/11/19,Crash,API Misuse,P1 normal,[10 Regression] internal compiler error: Segmentation fault with concept on constructor
+103700,GCC,compiletime_polymorphic,constraints and concepts,2021/12/14,Reject Valid,Overlooked Case,P3 normal,Incomplete type not causing constraints to fail
+82833,GCC,compiletime_polymorphic,constraints and concepts,2017/11/4,Crash,Others,P3 normal,[concepts] Out-of-line definition of nested class template errors with constraint (ICE)
+84330,GCC,compiletime_polymorphic,constraints and concepts,2018/2/12,Crash,Incorrect Branch,P4 normal,[7 Regression] [concepts] ICE with broken constraint
+90858,GCC,others,others,2019/6/12,Reject Valid,API Misuse,P3 normal,Pointer to member is treated as non-constexpr
+80456,GCC,encapsulation,member access,2017/4/18,Reject Valid,Overlooked Case,P3 normal,[9/10 Regression] calling constexpr member function from volatile-qualified member function: error:   this   is not a constant expression
+98333,GCC,object,initialization & destruction,2020/12/16,Crash,Overlooked Case,P2 normal,"[10 Regression] ICE in check_qualified_type, at tree.c:6593 since"
+101717,GCC,encapsulation,class scope(global),2021/8/2,Crash,Incorrect Branch,P2 normal,[9 Regression] ICE capturing static member within stateless generic lambda
+92531,GCC,compiletime_polymorphic,template(no instantiation),2019/11/15,Crash,Error Code Logic,P2 normal,"[9 Regression] ICE in uses_template_parms, at cp/pt.c:10471"
+84098,GCC,compiletime_polymorphic,template instantiation,2018/1/29,Crash,Error Code Logic,P1 normal,[8 Regression] ICE when using a lambda in a in-class static member initialization
+84447,GCC,inheritance,derived class construction & destruction,2018/2/18,Crash,Error Code Logic,P1 normal,[8 Regression] ICE with inherited deleted constructor and default argument
+85545,GCC,object,initialization & destruction,2018/4/26,Crash,Error Code Logic,P1 normal,[8 Regression] ICE with static_cast of pointer-to-member-function
+84445,GCC,others,others,2018/2/18,Crash,Incorrect Branch,P2 normal,[7 Regression] ICE with __builtin_launder and virtual function
+85662,GCC,others,others,2018/5/5,Reject Valid,Others,P2 normal,"[8/9 Regression] ""error: non-constant condition for static assertion"" from __builtin_offsetof in C++"
+85356,GCC,object,copy & move,2018/4/11,Crash,API Misuse,P2 normal,[7 Regression] ICE with operator=
+86521,GCC,object,copy & move,2018/7/14,Reject Valid,Error Code Logic,P2 normal,[8 Regression] GCC 8 selects incorrect overload of ref-qualified conversion operator template
+88368,GCC,object,copy & move,2018/12/5,Reject Valid,Error Code Logic,P2 normal,[8 Regression] Improper ``use of deleted function''
+84927,GCC,object,initialization & destruction,2018/3/17,Crash,Assignment Error,P2 normal,[7 Regression] ICE with NSDMI and reference
+88114,GCC,object,initialization & destruction,2018/11/20,Wrong Code,Overlooked Case,P3 normal,"""virtual ~destructor() = default"": Destructor not created"
+84306,GCC,object,overloading,2018/2/9,Wrong Code,Error Code Logic,P3 normal,"Wrong overload selected with -std=c++17, explicit and {}"
+85883,GCC,compiletime_polymorphic,template instantiation,2018/5/23,Reject Valid,Error Code Logic,P3 normal,class template argument deduction fails in new-expression
+86439,GCC,object,initialization & destruction,2018/7/9,Reject Valid,Overlooked Case,P3 normal,CTAD with deleted copy constructor fails due to deduction-guide taking by value
+85493,GCC,object,initialization & destruction,2018/4/22,Accept Invalid,Overlooked Case,P3 normal,decltype can use deleted constructor and deleted template function in template function
+85743,GCC,compiletime_polymorphic,template alias,2018/5/11,Reject Valid,Error Code Logic,P3 normal,Cannot call template member function inside a variadic lambda unless specifying `this`
+19010,LLVM,inheritance,derived class construction & destruction,2014/2/28,Reject Valid,Error Code Logic,P normal,Empty base of class with trivial default constructor is not initialized in constant expression
+21942,LLVM,compiletime_polymorphic,template instantiation,2014/12/17,Accept Invalid,API Misuse,P normal,"""final"" and ""override"" specifiers are not recognized for some methods of class templates"
+43390,LLVM,inheritance,multiple inheritance,2019/9/20,Wrong Code,API Misuse,P normal,CFI: wrong type passed to llvm.type.test with multiple inheritance devirtualization
+33158,LLVM,runtime_polymorphic,casting,2017/5/24,Crash,API Misuse,P normal,Constant expression cast to virtual base Crashes
+23828,LLVM,inheritance,member access(inherit),2015/6/12,Crash,API Misuse,P normal,"[ms] ""Expected MSInheritanceAttr on the CXXRecordDecl!"" assert when passing address of base class member function through subclass access path"
+44658,LLVM,compiletime_polymorphic,template instantiation,2020/1/24,Crash,API Misuse,P enhancement,Assertion failure in constrained variadic function template of class template
+22056,LLVM,object,initialization & destruction,2014/12/29,Crash,Assignment Error,P normal,Designated initializer with 'this' as array index Crashes GCC and clang
+47175,LLVM,object,initialization & destruction,2020/8/14,Reject Valid,Error Code Logic,P normal,[CTAD] User-defined deduction guide not found when argument type is template parameter
+42111,LLVM,object,initialization & destruction,2019/6/3,Wrong Code,Incorrect Branch,P normal,thread-local static variable unnecessarily constructed again
+25731,LLVM,encapsulation,class scope(global),2015/12/3,Reject Valid,API Misuse,P normal,Compilation error in namespace alias (7.3.2) due to r253283
+37768,LLVM,compiletime_polymorphic,template specialization,2018/6/11,Wrong Code,Error Message,P normal,expected the class name after '~' to name a destructor
+36181,LLVM,compiletime_polymorphic,template instantiation,2018/1/31,Others,Error Code Logic,P enhancement,Microsoft mangling cannot mangle injected class name type
+40238,LLVM,compiletime_polymorphic,template instantiation,2019/1/6,Reject Valid,Error Message,P enhancement,fails to deduce template specialization in friend declaration
+20227,LLVM,runtime_polymorphic,casting,2014/7/7,Accept Invalid,Overlooked Case,P normal,Temporary expression result of dynamic_cast not lifetime-extended but corresponding static_cast is
+23802,LLVM,runtime_polymorphic,casting,2015/6/9,Reject Valid,Overlooked Case,P normal,cast-expression from lvalue to rvalue reference fails while reinterpret_cast for the same conversion works
+47861,LLVM,object,overloading,2020/10/15,Wrong Code,Overlooked Case,P enhancement,Lifetime of temporaries inconsistently extending when optiimzations are enabled
+42980,LLVM,compiletime_polymorphic,constraints and concepts,2019/8/12,Accept Invalid,API Misuse,P enhancement,Conditional explicit not respected with out-of-line definition
+25689,LLVM,object,copy & move,2015/12/1,Reject Valid,Error Code Logic,P release blocker,defaulted destructor pervents using constexpr on defaulted copy/move-operator
+31639,LLVM,object,initialization & destruction,2017/1/13,Crash,Error Code Logic,P normal,diagnose_if triggers an assertion failure when disabling a constructor.
+34402,LLVM,object,copy & move,2017/9/1,Wrong Code,Overlooked Case,P enhancement,Code completion shows implicitly deleted copy constructor
+60082,LLVM,object,initialization & destruction,2023/1/17,Crash,API Misuse,,[clang] Recursive initialization causes front-end to seg fault
+19178,LLVM,runtime_polymorphic,override control,2014/3/18,Wrong Code,Overlooked Case,P normal,__is_constructible(A) returns true if A is an abstract type.
+22877,LLVM,object,initialization & destruction,2015/3/11,Wrong Code,Error Message,P normal,Missing destructors for default arguments created during list-initialization of array
+45087,LLVM,object,copy & move,2020/5/5,Reject Valid,Incorrect Branch,P normal,Clang 10 fails compiling Swift on Fedora Linux on s390x architecture
+19352,LLVM,encapsulation,friends,2014/4/7,Diagnostic,API Misuse,P normal,getLocation() points to the wrong position for FriendDecls
+23186,LLVM,others,others,2015/4/10,Others,Assignment Error,P normal,Type correction leads to null dereference
+94616,GCC,object,initialization & destruction,2020/4/16,Wrong Code,Incorrect Branch,P3 normal,[8 Regression] Incorrect destruction for partially built objects
+79077,GCC,inheritance,derived class construction & destruction,2017/1/12,Wrong Code,Error Code Logic,P1 normal,[7 regression][new inheriting ctors] bad code for inherited ctor
+101194,GCC,object,initialization & destruction,2021/6/24,Reject Valid,Overlooked Case,P3 normal,[9 Regression] aggregate init requires default constructor
+94885,GCC,runtime_polymorphic,casting,2020/4/30,Accept Invalid,Overlooked Case,P3 normal,[10 Regression] Functional cast from int to empty class type with empty base incorrectly accepted with -std=c++2a
+80073,GCC,inheritance,multiple inheritance,2017/3/16,Crash,Assignment Error,P1 normal,[7 Regression] ICE with virtual base
+95311,GCC,runtime_polymorphic,override control,2020/5/25,Crash,API Misuse,P3 normal,[11 Regression] ICE in cp_ubsan_maybe_instrument_member_call at gcc/cp/cp-ubsan.c:136 since
+100797,GCC,inheritance,multiple inheritance,2021/5/27,Wrong Code,Error Code Logic,P2 normal,[10/11 Regression] using declaration causing virtual call with wrongly adjusted this pointer
+99664,GCC,runtime_polymorphic,override control,2021/3/19,Accept Invalid,Assignment Error,P3 normal,"Overriding virtual function with different return type (and not covariant) is allowed to compile, when it shouldn  t be"
+80956,GCC,object,initialization & destruction,2017/6/2,Crash,Error Message,P2 normal,[7 Regression] ICE with abstract class vector
+106304,GCC,runtime_polymorphic,casting,2022/7/14,Crash,Assignment Error,P3 normal,"[modules] ICE compiling dynamic_cast in constexpr function (in tree_node, at cp/module.cc:9183)"
+99815,GCC,compiletime_polymorphic,constraints and concepts,2021/3/29,Crash,Assignment Error,P1 normal,"[11 Regression] ICE: in placeholder_type_constraint_dependent_p, at cp/pt.c:28193"
+100138,GCC,compiletime_polymorphic,constraints and concepts,2021/4/18,Crash,API Misuse,P3 normal,ICE with constructor constrained (C++20 Concepts) by parameter pack length
+99180,GCC,compiletime_polymorphic,template alias,2021/2/20,Crash,Incorrect Branch,P2 normal,[10 Regression] ICE with alias template and empty parameter pack
+98611,GCC,compiletime_polymorphic,template specialization,2021/1/9,Crash,Overlooked Case,P3 normal,"[concepts][10 Regression] ICE in get_underlying_template, at cp/pt.c:6494 since"
+88986,GCC,compiletime_polymorphic,template alias,2019/1/22,Crash,Overlooked Case,P4 normal,"[8 Regression] ICE: tree check: expected tree that contains 'decl minimal' structure, have 'error_mark' in member_vec_binary_search, at cp/name-lookup.c:1136"
+93207,GCC,compiletime_polymorphic,constraints and concepts,2020/1/8,Reject Valid,Error Code Logic,P3 normal,[concepts] Variadic concepts refuse to compile when function definition is not inline
+103346,GCC,compiletime_polymorphic,template alias,2021/11/21,Crash,Error Code Logic,P3 normal,"ICE on template specialization via alias template with a non-type parameter pack, and fold expression on lambda calls"
+97819,GCC,object,initialization & destruction,2020/11/13,Reject Valid,Overlooked Case,P3 normal,Pack expansion in member initializer lists nested with their parameter list got rejected.
+82239,GCC,others,others,2017/9/18,Reject Valid,API Misuse,P3 normal,Parentheses around constexpr template member break static_assert
+96330,GCC,compiletime_polymorphic,template instantiation,2020/7/27,Reject Valid,Incorrect Branch,P3 normal,Constexpr variables cannot be used in the template context.
+100592,GCC,compiletime_polymorphic,template alias,2021/5/14,Reject Valid,Assignment Error,P3 normal,"Bogus ""qualifiers cannot be applied"" error with reference type produced by dependent alias template"
+81236,GCC,encapsulation,class scope(global),2017/6/27,Crash,Incorrect Branch,P3 normal,Crash when calling a template member function from generic lambda
+91768,GCC,compiletime_polymorphic,template(no instantiation),2019/9/14,Reject Valid,Error Code Logic,P3 normal,gcc try to resolve member of dependent type too soon
+105842,GCC,compiletime_polymorphic,constraints and concepts,2022/6/3,Reject Valid,Error Code Logic,P3 normal,rejects-valid: static member function overload set constrained by concepts for class template results in ambiguous call
+102137,GCC,compiletime_polymorphic,template instantiation,2021/8/30,Accept Invalid,Error Code Logic,P3 normal,class template argument deduction with template template parameter allows explicit deduction guide
+91907,GCC,compiletime_polymorphic,template(no instantiation),2019/9/25,Reject Valid,API Misuse,P3 normal,['17] Constexpr of member function pointer as template parameter results in inconsistent diagnostics
+92944,GCC,compiletime_polymorphic,constraints and concepts,2019/12/15,Reject Valid,Error Code Logic,P3 normal,[concepts] redefinition error when using constrained structure template inside namespace
+79308,GCC,encapsulation,class scope(global),2017/1/31,Crash,Error Code Logic,P3 normal,"ICE on specialization of nested template classes (in finish_member_declaration, at cp/semantics.c:2963)"
+89511,GCC,encapsulation,class scope(global),2019/2/26,Crash,Incorrect Branch,P2 normal,"[7/8 Regression] ICE in push_using_decl_1, at cp/name-lookup.c:3845"
+93614,GCC,encapsulation,class scope(global),2020/2/6,Reject Valid,Assignment Error,P3 normal,C++ compile error with struct in template class and < operator
+94799,GCC,encapsulation,class scope(global),2020/4/27,Reject Valid,Assignment Error,P2 normal,[8/9/10 Regression] Calling a member template function fails
+92859,GCC,object,overloading,2019/12/8,Wrong Code,API Misuse,P3 normal,compiler treats enum type as an integer during overload resolution when a bit-field of this enum is considered
+105589,GCC,compiletime_polymorphic,template alias,2022/5/13,Crash,Error Message,P1 normal,[12/13 Regression] [ICE] templated type alias over std::array with bound type in template function fails
+99120,GCC,compiletime_polymorphic,template(no instantiation),2021/2/16,Crash,Incorrect Branch,P2 normal,[8/9/10 Regression] ICE in -Wshadow in templated member function
+100862,GCC,encapsulation,class scope(global),2021/6/1,Reject Valid,Error Code Logic,P3 normal,using enum member access fail
+103749,GCC,compiletime_polymorphic,template(no instantiation),2021/12/16,Diagnostic,Overlooked Case,P3 normal,Misleading error message on template/non-template conflict
+93400,GCC,compiletime_polymorphic,constraints and concepts,2020/1/23,Crash,Assignment Error,P3 normal,"[10 Regression] ICE: in tsubst, at cp/pt.c:15142 on friends with concepts"
+91845,GCC,encapsulation,class scope(global),2019/9/20,Crash,Error Code Logic,P4 normal,"[8/9/10 Regression] ICE: tree check: expected class 'type', have 'exceptional' (error_mark) in build_m_component_ref, at cp/typeck2.c:2086"
+80575,GCC,encapsulation,member access,2017/4/30,Others,Overlooked Case,P3 normal,unnecessary virtual function table support in member function call
+80043,GCC,encapsulation,member access,2017/3/14,Crash,API Misuse,P3 normal,[6/7 Regression] ICE with pointer-to-member-function and -fpermissive
+107574,GCC,encapsulation,member access,2022/11/8,Crash,Overlooked Case,P2 normal,[10/11 Regression] ICE: tree check in cp_fold_convert with ptr to member field cast inside a class not completed and inherent since
+82980,GCC,encapsulation,class scope(global),2017/11/14,Reject Valid,API Misuse,P2 normal,"[9/10 Regression] template keyword should not be required for captured decl of the ""base"" type since"
+107938,GCC,object,overloading,2022/11/30,Crash,Overlooked Case,P2 normal,[11/12 Regression] ICE directly returning `this` of `extern` variable in template since
+94772,GCC,object,initialization & destruction,2020/4/26,Reject Valid,Overlooked Case,P1 normal,[10 Regression] constructing constexpr variables fail with delegated constexpr constructors
+89836,GCC,runtime_polymorphic,casting,2019/3/26,Reject Valid,API Misuse,P3 normal,converted constant expression of type bool and explicit conversion functions
+90448,GCC,encapsulation,class scope(global),2019/5/13,Reject Valid,Incorrect Branch,P2 normal,[8/9/10/11 Regression] decltype-based lambda parameter pack is rejected
+89158,GCC,encapsulation,class scope(global),2019/2/2,Reject Valid,API Misuse,P2 normal,[8 Regression] by-value capture of ICE variable isn't an lvalue?
+81675,GCC,object,initialization & destruction,2017/8/2,Diagnostic,Error Code Logic,P2 normal,[6 Regression] attribute(noreturn) of destructor in :? not honored
+82461,GCC,object,initialization & destruction,2017/10/7,Reject Valid,Incorrect Branch,P2 normal,[7 Regression] Temporary required for brace-initializing (non-literal-type) member variable
+88857,GCC,object,initialization & destruction,2019/1/15,Crash,Incorrect Branch,P2 normal,[7/8 Regression] ICE in build_value_init
+100489,GCC,object,initialization & destruction,2021/5/8,Crash,Overlooked Case,P2 normal,[10/11/12 Regression] ICE in cp/constexpr.c:3556
+82593,GCC,object,initialization & destruction,2017/10/17,Crash,Error Code Logic,P3 normal,"Internal compiler error: in process_init_constructor_array, at cp/typeck2.c:1294"
+93107,GCC,object,initialization & destruction,2019/12/30,Reject Valid,Overlooked Case,P3 normal,unable to deduce initializer_list<auto> from function template
+88875,GCC,object,initialization & destruction,2019/1/16,Reject Valid,Incorrect Branch,P1 normal,[9 regression] initializer_list and explicit ctor
+106366,GCC,compiletime_polymorphic,template instantiation,2022/7/20,Reject Valid,Error Code Logic,P3 normal,CTAD fails to prioritize initializer_list when done via Deduction guide and inherited CTORS
+104031,GCC,object,initialization & destruction,2022/1/14,Wrong Code,API Misuse,P1 normal,[12 regression] Global nested constructors generate invalid code since
+104182,GCC,object,initialization & destruction,2022/1/22,Wrong Code,Assignment Error,P1 critical,[12 Regression] Wrong Code since
+92869,GCC,object,initialization & destruction,2019/12/9,Wrong Code,Overlooked Case,P3 normal,[10 Regression] C++17 wrongly reports aggregate type as not-aggregate (when explicitly defaulted ctors are added)
+100054,GCC,object,initialization & destruction,2021/4/12,Crash,Error Code Logic,P1 normal,[11 Regression] internal compiler error: in get_nsdmi
+92745,GCC,object,initialization & destruction,2019/12/1,Reject Valid,Overlooked Case,P2 normal,[9 Regression] Initializing array with vec4 results in compile error
+82873,GCC,object,copy & move,2017/11/7,Wrong Code,Overlooked Case,P3 normal,Generated copy constructor calls constructors for 0-sized array members
+79606,GCC,inheritance,member access(inherit),2017/2/19,Crash,Incorrect Branch,P3 normal,[7 Regression] ICE with NSDMI and this pointer in template
+79461,GCC,object,initialization & destruction,2017/2/10,Crash,Overlooked Case,P2 normal,[5 Regression] [C++1z] ICE when capturing a variable in a lambda in a constexpr constructor
+80186,GCC,object,initialization & destruction,2017/3/25,Crash,API Misuse,P3 normal,ICE on C++ code with invalid constructor: Segmentation fault (program cc1plus)
+98712,GCC,inheritance,member access(inherit),2021/1/17,Wrong Code,Overlooked Case,P3 normal,Incorrect defaulted operator== at compile time and runtime when declared constexpr and inheriting (c++20)
+93675,GCC,object,overloading,2020/2/11,Reject Valid,Error Code Logic,P3 normal,Starship operator on a hidden friend operator does not work
+95629,GCC,object,overloading,2020/6/10,Crash,Incorrect Branch,P3 normal,consteval operator== Crashes compiler
+93480,GCC,object,overloading,2020/1/28,Reject Valid,Error Code Logic,P3 normal,Defaulted <=> doesn't expand array elements
+94462,GCC,encapsulation,class scope(global),2020/4/2,Crash,Incorrect Branch,P1 normal,"[10 Regression] ICE in duplicate_decls, at cp/decl.c:1456 since"
+91098,GCC,inheritance,member access(inherit),2019/7/5,Crash,Incorrect Branch,P3 normal,"[10 Regression] internal compiler error: tree check: expected var_decl or field_decl or function_decl or type_decl or template_decl, have using_decl in build_deduction_guide, at cp/pt.c:27167"
+92806,GCC,compiletime_polymorphic,constraints and concepts,2019/12/4,Diagnostic,API Misuse,P3 normal,Suboptimal diagnostic for concept that depends on non-bool value
+95303,GCC,compiletime_polymorphic,constraints and concepts,2020/5/24,Diagnostic,Incorrect Branch,P3 normal,[concepts] Member type of class template is incorrectly printed in diagnostics when it fails to satisfy a concept
+79679,GCC,object,initialization & destruction,2017/2/22,Wrong Code,Assignment Error,P3 normal,[7 Regression] [C++17] Missing destruction of temporary within constructor's mem-initializer-list
+92001,GCC,others,others,2019/10/5,Diagnostic,Incorrect Branch,P3 normal,missing -Wclass-memaccess with array as first argument to memset
+92385,GCC,object,initialization & destruction,2019/11/5,Efficient,Overlooked Case,P3 normal,extremely long and memory intensive compilation for brace construction of array member
+90449,GCC,inheritance,multiple inheritance,2019/5/13,Diagnostic,Error Message,P3 normal,No way to turn off warning about inaccessible base
+83205,GCC,others,others,2017/11/29,Crash,Error Message,P3 normal,ICE on structured binding with ill-formed negative std::tuple_size<T>::value
+96164,GCC,compiletime_polymorphic,constraints and concepts,2020/7/11,Reject Valid,Incorrect Branch,P3 normal,Constraints and explicit template instantiation
+98486,GCC,compiletime_polymorphic,constraints and concepts,2020/12/31,Accept Invalid,Incorrect Branch,P3 normal,Variable template specialization doesn't account for primary's constraints
+105351,GCC,compiletime_polymorphic,constraints and concepts,2022/4/22,Accept Invalid,API Misuse,P3 normal,[concepts] Constraint checking does correctly match static member attributes
+98551,GCC,compiletime_polymorphic,template alias,2021/1/5,Crash,API Misuse,P2 normal,"[10/11 Regression] ICE in replace_result_decl, at cp/constexpr.c:2150"
+90691,GCC,object,initialization & destruction,2019/5/31,Diagnostic,Error Code Logic,P2 normal,[9 regression] -Wsign-compare false-positive with constant
+90212,GCC,encapsulation,class scope(global),2019/4/23,Reject Valid,Error Code Logic,P2 normal,[8 Regression] by-ref capture of constexpr class object rejected
+97427,GCC,object,initialization & destruction,2020/10/14,Reject Valid,Incorrect Branch,P3 normal,constexpr destructor for const object incorrectly rejected as modifying const object
+83116,GCC,encapsulation,class scope(global),2017/11/22,Wrong Code,Incorrect Branch,P2 normal,[6 Regression] Statement with no effect causes Wrong Code of static object constexpr method
+91378,GCC,compiletime_polymorphic,template instantiation,2019/8/6,Crash,API Misuse,P2 normal,[9 regression] [C++17] ICE in type_dependent_expression_p with noexcept and deduced return type
+98745,GCC,others,others,2021/1/19,Crash,Overlooked Case,P3 normal,[11 Regression] ICE: Segmentation fault (in print_mem_ref / c_pretty_printer::primary_expression)
+105035,GCC,encapsulation,member access,2022/3/23,Crash,Incorrect Branch,P2 normal,"[11 Regression] tree check: expected field_decl, have identifier_node in operand_equal_p, at fold-const.c:3335 since"
+99565,GCC,encapsulation,member access,2021/3/12,Diagnostic,API Misuse,P1 normal,[11 Regression] Bogus identical branches warning when returning references to union members
+84850,GCC,object,copy & move,2018/3/13,Diagnostic,Error Code Logic,P1 normal,[8 Regression] -Wclass-memaccess on a memcpy in a copy assignment operator with no nontrivial bases or members
+85437,GCC,runtime_polymorphic,casting,2018/4/17,Reject Valid,Error Code Logic,P1 normal,[8 Regression] member pointer static upcast rejected in a constexpr context
+85739,GCC,compiletime_polymorphic,template instantiation,2018/5/10,Crash,API Misuse,P2 normal,"[8/9 Regression] internal compiler error: in finish_member_declaration, at cp/semantics.c:3057"
+88049,GCC,object,initialization & destruction,2018/11/15,Crash,Overlooked Case,P2 normal,[8 Regression] ICE in lto_symtab_prevailing_virtual_decl at gcc/lto/lto-symtab.c:1075 since r23
+86610,GCC,object,overloading,2018/7/20,Reject Valid,Incorrect Branch,P2 normal,[8/9 Regression] non-const operator erroneously called in lambda in templated function
+83796,GCC,object,initialization & destruction,2018/1/11,Accept Invalid,Overlooked Case,P2 normal,[7 Regression] Abstract classes allowed to be instantiated when initialised as default parameter to function or constructor
+85659,GCC,others,others,2018/5/5,Crash,Incorrect Branch,P3 normal,[6/7 Regression] ICE with inline assembly inside virtual function
+87820,GCC,runtime_polymorphic,casting,2018/10/30,Accept Invalid,Error Code Logic,P3 normal,Explicit user-defined casting inside a template class working in implicit conversion inside function template
+84001,GCC,compiletime_polymorphic,template instantiation,2018/1/23,Crash,Assignment Error,P3 normal,ICE in dependent_type_p cp/pt.c:23567 when using member type of template parameter in template list
+84140,GCC,compiletime_polymorphic,constraints and concepts,2018/1/30,Reject Valid,Others,P3 normal,Inline friends are not constrained by concepts
+85806,GCC,compiletime_polymorphic,constraints and concepts,2018/5/16,Reject Valid,Others,P3 normal,"[concepts] Hard error for ""invalid use of non-static data member"" in a requires expression"
+88515,GCC,compiletime_polymorphic,constraints and concepts,2018/12/15,Reject Valid,Others,P3 normal,[concepts] id-expression that names non-static data member rejected in requires-expression
+84449,GCC,object,initialization & destruction,2018/2/18,Crash,Overlooked Case,P4 normal,[7 Regression] ICE with constexpr and deleted destructor
+84348,GCC,compiletime_polymorphic,template(no instantiation),2018/2/12,Crash,Error Code Logic,P4 normal,[7 Regression] ICE with invalid friend declaration
+108438,GCC,compiletime_polymorphic,template(no instantiation),2023/1/17,Crash,API Misuse,P4 normal ,"[11/12/13/14/15 Regression] ICE in cxx_eval_constant_expression, at cp/constexpr.cc:7611"
+108468,GCC,compiletime_polymorphic,template instantiation,2023/1/19,Crash,Incorrect Branch,P2 normal ,[11 Regression] ICE in most_specialized_partial_spec/builtin_guide_p in C++20 mode
+108526,GCC,compiletime_polymorphic,template(no instantiation),2023/1/24,Crash,Overlooked Case,P1 normal ,[13 Regression] ICE in start_preparsed_function with static on generic lambdas inside a template
+108606,GCC,encapsulation,friends,2023/1/30,Crash,Assignment Error,P1 normal ,[13 Regression] ICE in potential_constant_expression_1 with friend function declaration inside a local class of a generic/templated lambda
+109241,GCC,encapsulation,class scope(global),2023/3/21,Crash,Overlooked Case,P1 normal ,[12/13/14 Regression] ICE Segmentation fault for statement expression with a local type inside inside a generic lambda inside a generic lambda since 
+109247,GCC,object,copy & move,2023/3/22,Reject Valid,Overlooked Case,P3 normal ,[13/14 Regression] optional<T> o; o = {x}; wants to use explicit optional(U) constructor since 
+109277,GCC,runtime_polymorphic,casting,2023/3/24,Reject Valid,Assignment Error,P3 normal ,[13 Regression] type_traits:1417:30: error: invalid use of incomplete type â€˜class v8::internal::WasmArrayâ€?
+109320,GCC,compiletime_polymorphic,template alias,2023/3/28,Crash,Error Code Logic,P1 normal ,"[13 Regression] ICE in coerce_template_parameter_pack, at cp/pt.cc:8795"
+109739,GCC,object,initialization & destruction,2023/5/4,Others,Incorrect Branch,P3 normal ,bogus warning due to -Wmissing-field-initializers in C++20 with designated initializers on struct with empty base class
+109745,GCC,encapsulation,member access,2023/5/5,Accept Invalid,Error Code Logic,P2 normal ,[13 Regression] Incorrect code generated with -O1 when having a constexpr object modifying a mutable member
+109761,GCC,encapsulation,class scope(global),2023/5/6,Reject Valid,Assignment Error,P3 normal ,[11/12 Regression] Nested class destructor's noexcept specification incorrectly considered as too loose compared to the outer class
+109876,GCC,compiletime_polymorphic,template instantiation,2023/5/16,Reject Valid,Assignment Error,P2 normal ,[11/12 Regression] initializer_list not usable in constant expressions in a template
+109923,GCC,encapsulation,friends,2023/5/21,Accept Invalid,Incorrect Branch,P3 normal ,"Template friend function defined in a template class becomes a friend of all instantiations, not one"
+110064,GCC,inheritance,member access(inherit),2023/5/31,Diagnostic,Incorrect Branch,P3 normal ,spurious missing initializer for member for anonymous
+110075,GCC,encapsulation,class scope(global),2023/6/1,Diagnostic,Overlooked Case,P3 normal ,Bogus -Wdangling-reference
+110122,GCC,compiletime_polymorphic,template instantiation,2023/6/5,Reject Valid,Overlooked Case,P3 normal ,"[13/14 Regression] using an aggregate with a member variable with a user defined copy constructor in a class NTTP causes capture and use of the `this` pointer in a generic lambda to produce the following error ""-copy ctor- used before its definition"""
+110463,GCC,encapsulation,member access,2023/6/28,Accept Invalid,Assignment Error,P3 normal ,[13/14 Regression] Mutable subobject is usable in a constant expression
+110566,GCC,compiletime_polymorphic,template alias,2023/7/5,Crash,API Misuse,P2 normal ,"[13 Regression] ICE when instantiating function template with template template parameter with 2 or more auto parameters with a dependent member template, ICE in tsubst, at cp/pt.cc:16135"
+110809,GCC,compiletime_polymorphic,template(no instantiation),2023/7/25,Crash,API Misuse,P3 normal ,"ICE: in unify, at cp/pt.cc:25226 with floating-point NTTPs"
+111286,GCC,object,initialization & destruction,2023/9/4,Crash,Incorrect Branch,P2 normal ,[12/13/14 Regression] ICE on functional cast empty brace-init-list to const array reference
+111705,GCC,compiletime_polymorphic,constraints and concepts,2023/10/5,Reject Valid,Incorrect Branch,P3 normal ,[12/13 Regression] use of concepted copy constructored struct inside a template function messes up with -fchecking=2
+111710,GCC,encapsulation,class scope(global),2023/10/5,Others,API Misuse,P3 normal ,[modules] ICE when compiling module where a lambda is assigned to a field in an exported class
+112427,GCC,encapsulation,member access,2023/11/7,Crash,Assignment Error,P1 normal ,"[14 regression] ICE when building Minetest (internal compiler error: tree check: expected tree that contains â€˜decl commonâ€?structure, have â€˜identifier_nodeâ€?in get_inner_reference, at expr.cc:7931) since"
+112436,GCC,compiletime_polymorphic,constraints and concepts,2023/11/8,Reject Valid,API Misuse,P3 normal ,SFINAE-unfriendly error on throwing pointer to incomplete type
+112439,GCC,object,initialization & destruction,2023/11/8,Reject Valid,Incorrect Branch,P3 normal ,[13/14 Regression] Modification of a member overlapping with a [[no_unique_address]] member in the constructor is incorrectly rejected in constant evaluation since 
+112619,GCC,object,initialization & destruction,2023/11/19,Crash,Overlooked Case,P1 normal ,"[14 regression] ICE when building libcrafter (tree check: expected statement_list, have modify_expr in tsi_start, at tree-iterator.h:57) since "
+112632,GCC,compiletime_polymorphic,template alias,2023/11/20,Reject Valid,API Misuse,P1 normal ,[14 Regression]  Non-type template parameter created with converting constructor sometimes has original type
+112765,GCC,others,others,2023/11/29,Diagnostic,Error Message,P3 normal ,[14 regression] -Wparentheses warning even when extra parens are present
+113063,GCC,object,overloading,2023/12/18,Crash,API Misuse,P3 normal ,Strange linker error in special case involving local class with defaulted spaceship operator and static assert
+113083,GCC,object,initialization & destruction,2023/12/19,Crash,Overlooked Case,P1 normal ,"[14 Regression][arm] ICE in fold_convert_loc, at fold-const.cc:2602 since "
+113088,GCC,others,others,2023/12/19,Crash,Error Code Logic,P2 normal ,[12/13 Regression] Segmentation fault with empty try/catch following try/catch with returns + noexcept destructor
+113141,GCC,runtime_polymorphic,casting,2023/12/26,Crash,Assignment Error,P2 normal ,[13 Regression] ICE on conversion to reference in aggregate initialization
+28885,LLVM,inheritance,derived class construction & destruction,2016/8/6,Wrong Code,Error Message,P normal,Regression concerning inheriting constructor
+29087,LLVM,inheritance,member access(inherit),2016/8/22,Crash,API Misuse,P release blocker,"Assertion `isa<X>(Val) && ""cast<Ty>() argument of incompatible type!""' failed from EvaluateUnaryTypeTrait in lib/Sema/SemaExprCXX.cpp"
+20445,LLVM,object,initialization & destruction,2014/7/24,Wrong Code,API Misuse,P normal,Clang doesn't emit ctor call from template instantiations if it needs to perform initializer_list conversion
+19172,LLVM,inheritance,multiple inheritance,2014/3/18,Crash,Overlooked Case,P normal,[Windows] Wrong this adjustment calculated for virtual destructor in a class with complex inheritance
+32992,LLVM,inheritance,member access(inherit),2017/5/10,Others,Overlooked Case,P enhancement,Static const members in base classes are not dllexported
+30831,LLVM,compiletime_polymorphic,template instantiation,2016/10/28,Crash,API Misuse,P normal,Parser segmentation fault
+38205,LLVM,compiletime_polymorphic,template instantiation,2018/7/17,Accept Invalid,Error Message,P enhancement,type mismatch in explicit template instantiation of static data member of class template not detected
+44699,LLVM,encapsulation,class scope(global),2020/1/28,Reject Valid,Error Code Logic,P normal,Members of nested classes incorrectly shadow template parameters of member functions of the nested class
+18746,LLVM,compiletime_polymorphic,template(no instantiation),2014/2/5,Reject Valid,Incorrect Branch,P normal,rejects-valid on a constexpr member function of a class template with a deduced return type and no return statements
+35655,LLVM,compiletime_polymorphic,template(no instantiation),2017/12/13,Reject Valid,Overlooked Case,P enhancement,"Non-type ""auto"" template parameter of member function of class template fails to compile"
+33471,LLVM,compiletime_polymorphic,template instantiation,2017/6/15,Crash,Overlooked Case,P enhancement,Crash with 'operator auto'
+51547,LLVM,object,initialization & destruction,2021/8/19,Crash,Error Message,P normal,ICE attempting to deduce array of class template in new-expression
+46790,LLVM,compiletime_polymorphic,constraints and concepts,2020/7/21,Crash,Error Code Logic,P enhancement,deserialization Crash on checking concept-related TemplateParameters
+52970,LLVM,compiletime_polymorphic,template instantiation,2022/1/4,Others,Error Code Logic,,SFINAEing p.x on a pointer wrongly tries to complete the pointee's type
+28064,LLVM,encapsulation,member access,2016/6/9,Crash,Error Code Logic,P normal,"clang Crashes on valid C++11 code: Assertion `isa<LabelDecl>(D) && ""declaration not instantiated in this scope""' failed"
+24921,LLVM,compiletime_polymorphic,template specialization,2015/9/24,Reject Valid,Overlooked Case,P normal,Specializing template methods with enum parameters not working in 3.7
+30361,LLVM,object,initialization & destruction,2016/9/12,Crash,Error Code Logic,P normal,clang segfaults when compiling template member function that calls destructor
+35027,LLVM,compiletime_polymorphic,template(no instantiation),2017/10/21,Wrong Code,Error Code Logic,P normal,Clang fails to compile inline variable in class template
+42205,LLVM,compiletime_polymorphic,template specialization,2019/6/9,Crash,Overlooked Case,P normal,Crash producing debug info for in-class partial specialization of static data member template with 'auto' type
+41677,LLVM,compiletime_polymorphic,template specialization,2019/4/30,Crash,Error Code Logic,P enhancement,[clang-cl] ICE instantiating partial specialization of variable template with /Zi
+49724,LLVM,compiletime_polymorphic,template instantiation,2021/3/25,Reject Valid,API Misuse,P normal,Partial template specialization error with member function
+62174,LLVM,encapsulation,class scope(global),2023/4/17,Reject Valid,Overlooked Case,,Clang will ignore using declarations from qualified name lookups when handling declarators
+37556,LLVM,encapsulation,class scope(global),2018/5/22,Reject Valid,API Misuse,P normal,Improper symbol redefinition diagnostic for names in different declarative regions
+28060,LLVM,compiletime_polymorphic,template instantiation,2016/6/8,Crash,API Misuse,P normal,clang Crashes on valid C++11 code: Assertion `Lookup.size() == 1' failed
+27047,LLVM,object,initialization & destruction,2016/3/24,Crash,Error Message,P normal,clang Crashes on valid C++11 code
+22307,LLVM,compiletime_polymorphic,template instantiation,2015/1/23,Accept Invalid,Error Code Logic,P normal,Template may multiply define friend function
+26841,LLVM,compiletime_polymorphic,template alias,2016/3/4,Accept Invalid,Overlooked Case,P normal,[accepts-invalid] Member template inside a local class
+31852,LLVM,encapsulation,friends,2017/2/2,Reject Valid,API Misuse,P normal,Friend declaration not picked up for function with auto-deduced return type
+43519,LLVM,encapsulation,member access,2019/10/1,Reject Valid,Overlooked Case,P normal,Failing compilation of dereferencing pointer-to-member function in constexpr function context
+18551,LLVM,runtime_polymorphic,casting,2014/1/19,Accept Invalid,Incorrect Branch,P normal,clang (incorrectly?) converts strong enum to bool when operator! is used
+18506,LLVM,runtime_polymorphic,casting,2014/1/16,Crash,Incorrect Branch,P normal,Pointer to member cast in static_cast causes assertion
+20771,LLVM,runtime_polymorphic,casting,2014/8/27,Reject Valid,Assignment Error,P normal,"Regression(rr216439): ""Stored value type does not match pointer operand type!"""
+23514,LLVM,object,initialization & destruction,2015/5/13,Crash,API Misuse,P normal,Out-of-sequence initialiser causes clang to Crash
+22793,LLVM,object,initialization & destruction,2015/3/4,Crash,Overlooked Case,P normal,"Crash when explicitly instantiating a class template with a protected defaulted dtor, after a use of that dtor"
+19876,LLVM,object,initialization & destruction,2014/5/28,Crash,Overlooked Case,P normal,Generic lambdas used within NSDMI's cause Crash when they capture 'this'
+20268,LLVM,encapsulation,member access,2014/7/9,Accept Invalid,Incorrect Branch,P normal,virtual deleted functions appear to be callable.
+20671,LLVM,compiletime_polymorphic,template instantiation,2014/8/14,Crash,Error Code Logic,P normal,Assertion failed: (EST != EST_Unevaluated && EST != EST_Uninstantiated) in MS ABI on innocuous code
+23931,LLVM,others,others,2015/6/23,Accept Invalid,Error Message,P normal,Clang allows a virtual member function inside a union
+23942,LLVM,others,others,2015/6/25,Accept Invalid,Incorrect Branch,P normal,Some invalid pure-specifiers incorrectly accepted
+19879,LLVM,object,initialization & destruction,2014/5/28,Reject Valid,Others,P normal,aggregate initialization uses value initialization rather than initialization from {} for subobjects with no initializer
+21969,LLVM,object,overloading,2014/12/18,Diagnostic,API Misuse,P normal,trailing return type for conversion operator leads to bizarre diagnostic
+20346,LLVM,object,initialization & destruction,2014/7/17,Diagnostic,Overlooked Case,P normal,Strange diagnostic on struct initializer in template
+23215,LLVM,encapsulation,member access,2015/4/13,Diagnostic,API Misuse,P normal,Pure virtual warning for qualified calls
+28460,LLVM,object,initialization & destruction,2016/7/7,Diagnostic,Error Message,P normal,Wdelete-non-virtual-dtor doesn't work with std::unique_ptr
+40858,LLVM,encapsulation,class scope(global),2019/2/26,Diagnostic,Overlooked Case,P enhancement,Warn when shadowing a member variable in a structured binding
+42126,LLVM,object,overloading,2019/6/4,Crash,Overlooked Case,P enhancement,clang Crashes when compiling code
+48656,LLVM,compiletime_polymorphic,constraints and concepts,2021/1/4,Crash,Error Code Logic,P release blocker,"front end Crash when using variadic concepts requirement with ""or"" statement (trunk/11)"
+89403,GCC,compiletime_polymorphic,template instantiation,2019/2/19,Crash,Assignment Error,P2 normal,"[7 Regression] ICE in maybe_clone_body, at cp/optimize.c:693"
+103711,GCC,inheritance,derived class construction & destruction,2021/12/14,Wrong Code,Overlooked Case,P3 normal,Virtual base destroyed twice when an exception is thrown in a derived class' constructor called from a delegated constructor
+91334,GCC,object,initialization & destruction,2019/8/2,Crash,Error Code Logic,P1 normal,[10 Regression] ICE in propagate_necessity at gcc/tree-ssa-dce.c:813 since
+82764,GCC,inheritance,derived class construction & destruction,2017/10/28,Crash,Assignment Error,P2 normal,"[7/8 Regression] ICE in output_constructor_regular_field, at varasm.c:5030"
+93803,GCC,object,initialization & destruction,2020/2/18,Crash,Error Code Logic,P1 normal,[10 Regression] ICE: segmentation fault with constant initialization of class having a [[no_unique_address]] field
+96052,GCC,encapsulation,member access,2020/7/4,Accept Invalid,API Misuse,P3 normal,"Unlike Clang, alignment specifier is ignored on empty no_unique_address members"
+79825,GCC,object,copy & move,2017/3/3,Diagnostic,Incorrect Branch,P1 normal,[7 Regression] Uninitialized uses in aggregate copies of empty structs (missed DCE in C++ gimplify)
+88690,GCC,inheritance,multiple inheritance,2019/1/4,Crash,Overlooked Case,P2 normal,"[8 Regression] c++17 internal compiler error: in output_constructor_regular_field, at varasm.c:5031"
+81164,GCC,inheritance,multiple inheritance,2017/6/21,Crash,Incorrect Branch,P2 normal,[7/8 Regression] ICE in inherited_ctor_binfo_1 when using virtual inheritance
+95466,GCC,inheritance,multiple inheritance,2020/6/1,Crash,Error Code Logic,P3 normal,"[11 Regression] ICE in tree_operand_check, at tree.h:3794 since"
+82336,GCC,inheritance,derived class construction & destruction,2017/9/27,Others,API Misuse,P2 normal,[6 Regression] GCC requires but does not emit defaulted constructors in certain cases
+93633,GCC,runtime_polymorphic,override control,2020/2/8,Crash,Overlooked Case,P3 normal,ICE on consteval virtual
+80829,GCC,inheritance,derived class construction & destruction,2017/5/19,Reject Valid,API Misuse,P3 normal,[7/8 Regression] Use of constexpr constructors with base type instantiation fails compilation
+103769,GCC,compiletime_polymorphic,template alias,2021/12/19,Crash,API Misuse,P2 normal,[11 Regression] checking ICE in hashtab_chk_error with alias template and pack expansion after
+108090,GCC,compiletime_polymorphic,template alias,2022/12/14,Reject Valid,Overlooked Case,P3 normal,pack expansion of using declarations doesn't properly handle dependent conversion function names
+89917,GCC,compiletime_polymorphic,template instantiation,2019/4/1,Crash,Assignment Error,P2 normal,[8 Regression] ICE with lambda in variadic template hierarchy
+101247,GCC,compiletime_polymorphic,constraints and concepts,2021/6/29,Crash,Error Code Logic,P3 normal,ICE when using static constexpr bool defined in parent-class in nested class constructor requires-clause
+79865,GCC,compiletime_polymorphic,template alias,2017/3/4,Crash,Overlooked Case,P3 normal,ICE calling member function with template parameter from generic lambda
+91230,GCC,encapsulation,class scope(global),2019/7/23,Reject Valid,Incorrect Branch,P3 normal,[9/10 Regression] Template function containing lambda expression that has auto parameter and uses __PRETTY_FUNCTION__ does not compile
+89420,GCC,object,initialization & destruction,2019/2/20,Crash,API Misuse,P2 normal,[9 Regression] ICE: unexpected expression 'int()' of kind cast_expr
+104108,GCC,compiletime_polymorphic,template alias,2022/1/19,Reject Valid,Assignment Error,P2 normal,[10 Regression] [c++17+] template alias inside template with static field of template class rejected since
+99683,GCC,compiletime_polymorphic,template instantiation,2021/3/20,Reject Valid,Overlooked Case,P3 normal,Deduction failure when using CTAD of CNTTP inside a deduction guide
+101698,GCC,object,overloading,2021/7/30,Wrong Code,Incorrect Branch,P2 normal,[9 Regression] Template type conversion operator from base class preferred over matching overload
+105623,GCC,compiletime_polymorphic,template instantiation,2022/5/16,Reject Valid,API Misuse,P2 normal,[12/13 regression][rejects valid] invalid use of auto when deducing return type of base class template
+90505,GCC,compiletime_polymorphic,template instantiation,2019/5/16,Reject Valid,Overlooked Case,P2 normal,[9 Regression] g++ rejects valid code
+92593,GCC,compiletime_polymorphic,template instantiation,2019/11/20,Crash,Incorrect Branch,P4 normal,[10 Regression] ICE with CTAD using undeclared constraint
+95486,GCC,compiletime_polymorphic,template alias,2020/6/2,Crash,API Misuse,P3 normal,ICE for alias CTAD with non-dependent argument and constrained constructor
+96647,GCC,object,overloading,2020/8/17,Reject Valid,Overlooked Case,P3 normal,Can't resolve pointer to overloaded member with auto return type
+97099,GCC,compiletime_polymorphic,template(no instantiation),2020/9/18,Accept Invalid,Overlooked Case,P3 normal,[temp.deduct.guide]p3 not implemented properly
+91759,GCC,encapsulation,class scope(global),2019/9/12,Accept Invalid,Overlooked Case,P2 normal,[8/9 Regression] g++ accepts ill-formed deduction guides in wrong scope since
+104235,GCC,compiletime_polymorphic,template specialization,2022/1/26,Crash,Incorrect Branch,P1 normal,"[12 Regression] ICE: in cp_parser_template_id, at cp/parser.cc"
+101783,GCC,compiletime_polymorphic,template specialization,2021/8/4,Reject Valid,Incorrect Branch,P3 normal,unnecessary error when top level cv qualifier is dropped
+97328,GCC,compiletime_polymorphic,template instantiation,2020/10/7,Crash,Error Code Logic,P2 normal,"[10 Regression] ICE in verify_ctor_sanity, at cp/constexpr.c:3995 since"
+89744,GCC,compiletime_polymorphic,template specialization,2019/3/17,Crash,Overlooked Case,P2 normal,[8 Regression] ICE with specialization of nested template class
+103678,GCC,compiletime_polymorphic,template specialization,2021/12/13,Reject Valid,API Misuse,P3 normal,[concepts] Constrained partial specialization of dependent template conflicts with unconstrained partial specialization
+100374,GCC,compiletime_polymorphic,constraints and concepts,2021/5/1,Reject Valid,Assignment Error,P3 normal,Type-constraints of member function templates should not be substituted into during implicit instantiation
+100616,GCC,compiletime_polymorphic,template instantiation,2021/5/15,Crash,Overlooked Case,P3 normal,[modules] ICE when a variable of class taking a non-type template argument is defined both inside and outside the module
+94632,GCC,compiletime_polymorphic,template instantiation,2020/4/17,Crash,API Misuse,P1 normal,[10 Regression] canonical types differ for identical types since
+98802,GCC,compiletime_polymorphic,template alias,2021/1/23,Hang,Error Code Logic,P3 normal,[10 Regression] class template argument deduce guide leads infinite recursive since
+89390,GCC,encapsulation,member access,2019/2/18,Crash,API Misuse,P3 normal,"[9 Regression] ICE in get_string, at spellcheck-tree.h:46"
+102670,GCC,encapsulation,class scope(global),2021/10/9,Reject Valid,Error Code Logic,P3 normal,"Erroneous ""missing template arguments"" message for wrapper of ADL function template"
+98249,GCC,encapsulation,class scope(global),2020/12/11,Reject Valid,API Misuse,P2 normal,[9 Regression] Improper ADL on the `arg` in `new (arg) T`
+91911,GCC,compiletime_polymorphic,template alias,2019/9/26,Reject Valid,Error Code Logic,P3 normal,Strange interaction between CTAD and decltype
+83187,GCC,compiletime_polymorphic,template specialization,2017/11/27,Crash,Error Message,P3 normal,"[8 regression] internal compiler error: in get_alias_set, at alias.c:923"
+89682,GCC,encapsulation,member access,2019/3/12,Reject Valid,API Misuse,P1 normal,[9 Regression] g++9 incorrectly disallows using private static method as default arg to ctor of template type
+96204,GCC,compiletime_polymorphic,template instantiation,2020/7/15,Reject Valid,API Misuse,P3 normal,gcc complains about private member access in SFINAE context
+98231,GCC,encapsulation,class scope(global),2020/12/11,Reject Valid,Error Code Logic,P1 normal,[11 Regression] bogus error: no match for   operator<<  
+103714,GCC,compiletime_polymorphic,constraints and concepts,2021/12/14,Accept Invalid,API Misuse,P2 normal,[11/12 Regression] name lookup in requires-clause finds wrong thing
+79290,GCC,encapsulation,class scope(global),2017/1/30,Reject Valid,Assignment Error,P1 normal,"[7 Regression] forming pointer to member function tries to access ""__pfn"""
+90124,GCC,inheritance,member access(inherit),2019/4/17,Reject Valid,Incorrect Branch,P1 normal,[9 Regression] Compilation of llvm PDBContext.cpp fails.
+105761,GCC,inheritance,member access(inherit),2022/5/28,Crash,Overlooked Case,P3 normal,[11/12/13 Regression] ICE on hidden friend definition defined in base type since
+107461,GCC,compiletime_polymorphic,template instantiation,2022/10/30,Reject Valid,Overlooked Case,P1 normal,[12 Regression] ambiguity error for friend with templated constexpr argument
+107484,GCC,encapsulation,class scope(global),2022/11/1,Accept Invalid,Overlooked Case,P1 normal,[13 Regression] ICE: Segmentation fault (in decls_match)
+79519,GCC,encapsulation,class scope(global),2017/2/14,Crash,Error Message,P2 normal,[5/6 Regression] ICE deleting template friend function
+102786,GCC,encapsulation,member access,2021/10/15,Reject Valid,Incorrect Branch,P3 normal,[c++20] virtual pmf sometimes rejected as not a constant
+98441,GCC,encapsulation,member access,2020/12/25,Reject Valid,Incorrect Branch,P1 normal,[11 Regression] member function pointer incorrectly parsed as having trailing return type
+89387,GCC,encapsulation,class scope(global),2019/2/18,Crash,Incorrect Branch,P1 normal,[9 Regression] ICE in maybe_generic_this_capture at gcc/cp/lambda.c:945 since
+85764,GCC,encapsulation,class scope(global),2018/5/12,Reject Valid,Error Code Logic,P2 normal,[8/9 Regression] bogus   this   was not captured for this lambda function error
+100493,GCC,encapsulation,class scope(global),2021/5/9,Diagnostic,Incorrect Branch,P3 normal,"Lambda default copy capture that captures ""this"" cannot be used in both C++17 and C++20 modes"
+90623,GCC,encapsulation,class scope(global),2019/5/24,Crash,Error Code Logic,P3 normal,compilation error with fold expression and parameter pack
+107755,GCC,compiletime_polymorphic,template specialization,2022/11/19,Crash,Incorrect Branch,P2 normal,"[10/11 Regression] ICE: in fold_convert_loc, at fold-const.c:2435, with -Wlogical-op, implicit user-defined conversion operator, template function, logical operator, and conditional operator"
+106675,GCC,object,copy & move,2022/8/18,Crash,Overlooked Case,P2 normal,[10 Regression] g++ Crashes on funky operators
+103455,GCC,object,overloading,2021/11/28,Crash,API Misuse,P2 normal,[9 Regression] internal compiler error: in dependent_type_p since
+101442,GCC,object,initialization & destruction,2021/7/13,Wrong Code,API Misuse,P2 normal,"[9 Regression] Destructor not called for a temporary object, if it's bound to a ref member of an object subject to NRVO"
+107065,GCC,compiletime_polymorphic,template specialization,2022/9/28,Wrong Code,Error Code Logic,P3 normal,GCC treats rvalue as an lvalue
+96934,GCC,object,copy & move,2020/9/4,Wrong Code,API Misuse,P3 normal,[9 Regression] Copy initialization of struct involving aggregate array initialization miscompiles in GCC 9
+89315,GCC,object,initialization & destruction,2019/2/12,Reject Valid,Error Code Logic,P1 normal,[9 Regression] Cannot convert to std::initializer_list - fails with gcc9 works with gcc8
+92604,GCC,object,initialization & destruction,2019/11/20,Accept Invalid,Incorrect Branch,P3 normal,GCC accepts invalid conversion from designated initializer list
+90190,GCC,compiletime_polymorphic,template instantiation,2019/4/19,Reject Valid,Incorrect Branch,P2 normal,[8 regression] CTAD confuses with {one element} initializer_list
+83227,GCC,inheritance,derived class construction & destruction,2017/11/30,Crash,Error Code Logic,P2 normal,[7 Regression] internal compiler error: in process_init_constructor_array
+99700,GCC,object,initialization & destruction,2021/3/21,Accept Invalid,Overlooked Case,P3 normal,[10 Regression] uninitialized variable accepted as a constant expression in C++ 20
+90825,GCC,object,initialization & destruction,2019/6/10,Crash,Error Code Logic,P3 normal,[9 Regression] g++: internal compiler error: Segmentation fault signal terminated program cc1plus
+79118,GCC,object,initialization & destruction,2017/1/17,Crash,Incorrect Branch,P1 normal,"[7 Regression] internal compiler error: in cxx_eval_bit_field_ref, at cp/constexpr.c:2258"
+91179,GCC,others,others,2019/7/16,Diagnostic,Overlooked Case,P3 normal,Spurious -Wconversion warning after promotion
+101073,GCC,object,initialization & destruction,2021/6/14,Crash,Error Code Logic,P2 normal,"[10/11/12/13 Regression] ICE in cxx_eval_constant_expression, at cp/constexpr.c:6941"
+83058,GCC,object,initialization & destruction,2017/11/20,Crash,API Misuse,P3 normal,"[6/7/8 Regression] ICE on C++ code with negative array index: in warn_placement_new_too_small, at cp/init.c:2666"
+96121,GCC,object,initialization & destruction,2020/7/8,Diagnostic,API Misuse,P3 normal,Uninitialized variable copying in member initialized list not diagnosed
+89187,GCC,compiletime_polymorphic,template alias,2019/2/4,Crash,Assignment Error,P2 normal,"[7 Regression] ICE in initialize_argument_information, at calls.c:2023"
+89914,GCC,object,initialization & destruction,2019/4/1,Crash,Error Message,P4 normal,"[9 Regression] ICE in nothrow_spec_p, at cp/except.c:1238"
+81796,GCC,inheritance,derived class construction & destruction,2017/8/10,Reject Valid,Error Code Logic,P3 normal,error: no matching function for call to   S2::operator delete(void*)  
+90996,GCC,object,initialization & destruction,2019/6/25,Crash,Error Code Logic,P2 normal,"[9 Regression] ICE in gimplify_expr, at gimplify.c:13495"
+94074,GCC,compiletime_polymorphic,template alias,2020/3/6,Reject Valid,Overlooked Case,P1 normal,[10 Regression] bogus modifying a const object error with const COMPONENT_REF
+81311,GCC,object,copy & move,2017/7/4,Wrong Code,Incorrect Branch,P2 normal,[7 Regression] An std::ref argument calls copy constructor instead of template constructor in C++17 mode
+96533,GCC,object,overloading,2020/8/8,Crash,Others,P3 normal,ICE with three-way comparison when error occurs in templated operator< overload and -Wunused-parameter
+97121,GCC,object,overloading,2020/9/19,Crash,Error Code Logic,P3 normal,ICE (segfault) on incorrect default three-way comparison declaration
+96299,GCC,object,overloading,2020/7/23,Reject Valid,Error Code Logic,P3 normal,Defaulted operator <=> implicitly deleted when a member has operator < and operator == and return type is specified
+98545,GCC,compiletime_polymorphic,template alias,2021/1/5,Crash,Overlooked Case,P1 normal,"[11 Regression] ICE in write_expression, at cp/mangle.c:3352"
+99213,GCC,compiletime_polymorphic,template specialization,2021/2/23,Diagnostic,API Misuse,P3 normal,Suboptimal pretty printing of local class type when type's context contains a class template specialization
+88795,GCC,compiletime_polymorphic,template instantiation,2019/1/10,Crash,Overlooked Case,P3 normal,ICE on class-template argument deduction if non-type parameter has indirection
+89532,GCC,compiletime_polymorphic,template(no instantiation),2019/2/28,Crash,Overlooked Case,P1 normal,"[9 Regression] internal compiler error: in type_has_nontrivial_copy_init, at cp/tree.c:4024"
+83217,GCC,compiletime_polymorphic,template instantiation,2017/11/29,Efficient,Error Code Logic,P3 normal,Compiler segfault: structured binding by reference to a templated type via a pointer
+98620,GCC,compiletime_polymorphic,template specialization,2021/1/11,Diagnostic,Incorrect Branch,P3 normal,SFINAE code in class specialization generates warnings
+103991,GCC,object,initialization & destruction,2022/1/12,Diagnostic,Assignment Error,P1 normal,[12 Regression] Bogus -Wreturn-type with constexpr if and local var with destructor
+80916,GCC,runtime_polymorphic,override control,2017/5/30,Diagnostic,Error Code Logic,P2 normal,"[8 Regression] Spurious ""declared 'static' but never defined"" warni"
+95328,GCC,compiletime_polymorphic,template instantiation,2020/5/26,Reject Valid,Overlooked Case,P3 normal,"structured binding of template type inside template function is reported as ""incomplete class type"""
+82075,GCC,inheritance,derived class construction & destruction,2017/9/1,Reject Valid,Incorrect Branch,P3 normal,structured binding fails with empty base class
+89036,GCC,compiletime_polymorphic,constraints and concepts,2019/1/24,Crash,API Misuse,P2 normal,[8 Regression] ICE if destructor has a requires
+94719,GCC,compiletime_polymorphic,constraints and concepts,2020/4/22,Crash,Error Code Logic,P3 normal,ICE with constrained inherited constructor template from class template since
+94819,GCC,compiletime_polymorphic,constraints and concepts,2020/4/28,Reject Valid,API Misuse,P3 normal,"[10 Regression] Inherited and constrained constructors are ""ambiguous"" even if they aren't Pt. 2"
+104527,GCC,compiletime_polymorphic,constraints and concepts,2022/2/14,Crash,Assignment Error,P2 normal,"[11 Regression] ICE: tree check: accessed elt 1 of 'tree_vec' with 0 elts in hash, at cp/constraint.cc:2486"
+100828,GCC,compiletime_polymorphic,constraints and concepts,2021/5/30,Reject Valid,Error Message,P3 normal,Arbitrary limit on constraint complexity
+82507,GCC,compiletime_polymorphic,constraints and concepts,2017/10/10,Reject Valid,Others,P3 normal,[concepts] premature substitution into constraint of non-template member function
+87327,GCC,encapsulation,class scope(global),2018/9/17,Reject Valid,Overlooked Case,P2 normal,"[8 Regression] Calling member functions on captured constexpr variables ""is not a constant expression"""
+107079,GCC,object,initialization & destruction,2022/9/28,Crash,API Misuse,P2 normal,[10/11 Regression] ICE initializing lifetime-extended constexpr variable that stores its this pointer
+93169,GCC,object,initialization & destruction,2020/1/6,Wrong Code,Assignment Error,P1 normal,[10 regression] Variable incorrectly put into readonly section.
+93998,GCC,object,overloading,2020/3/2,Crash,Error Code Logic,P1 normal,"[10 Regression] ICE in adjust_temp_type, at cp/constexpr.c:1426"
+99980,GCC,compiletime_polymorphic,template alias,2021/4/8,Reject Valid,Overlooked Case,P3 normal,Delayed parsing of noexcept doesn't work in member function template
+106925,GCC,object,initialization & destruction,2022/9/13,Crash,Incorrect Branch,P2 normal,[12/13 Regression] ICE in maybe_splice_retval_cleanup at gcc/cp/except.cc:1330 since
+84314,GCC,others,others,2018/2/9,Crash,API Misuse,P1 normal,[8 Regression] Another ICE in finish_member_declaration
+88548,GCC,encapsulation,friends,2018/12/18,Accept Invalid,Error Code Logic,P1 normal,[9 Regression] this accepted in static member functions
+86747,GCC,encapsulation,member access,2018/7/30,Reject Valid,Assignment Error,P2 normal,[8 Regression] rejects-valid with redundant friend declaration
+83958,GCC,compiletime_polymorphic,template alias,2018/1/21,Crash,Overlooked Case,P2 normal,[7 Regression] ICE: Segmentation fault (in find_decomp_class_base)
+84558,GCC,object,initialization & destruction,2018/2/25,Crash,Incorrect Branch,P2 normal,[6 Regression] ICE with invalid constexpr constructor
+87436,GCC,object,initialization & destruction,2018/9/25,Efficient,Others,P2 normal,[7 Regression] G++ produces >300MB .rodata section to initialize struct with big array
+85148,GCC,compiletime_polymorphic,template instantiation,2018/3/31,Crash,Error Message,P2 normal,[6/7/8 Regression] ICE with NSDMI and this pointer
+85262,GCC,inheritance,derived class construction & destruction,2018/4/6,Reject Valid,Error Code Logic,P2 normal,[6/7/8 Regression] Trouble with constructor and -fpermissive
+87480,GCC,compiletime_polymorphic,template instantiation,2018/10/1,Reject Valid,Assignment Error,P2 normal,"[8 Regression] SFINAE constructor not matched, only in templated function"
+87554,GCC,compiletime_polymorphic,template instantiation,2018/10/8,Crash,Error Code Logic,P2 normal,"[8 Regression] internal compiler error: in record_reference, at cgraphbuild.c:64"
+88123,GCC,encapsulation,class scope(global),2018/11/20,Reject Valid,Overlooked Case,P2 normal,[8 Regression] faulty qualified name lookup of overloaded operator within generic lambda via using-directive
+88380,GCC,object,initialization & destruction,2018/12/5,Wrong Code,Error Code Logic,P2 normal,"[8 Regression] Sequence of not-explicitly initialised, initialised, variable length generates no initialiser"
+87150,GCC,object,copy & move,2018/8/30,Accept Invalid,Assignment Error,P2 normal,[8 Regression] move ctor wrongly chosen in return stmt (derived vs. base)
+87750,GCC,inheritance,member access(inherit),2018/10/25,Reject Valid,Others,P2 normal,[8/9 Regression] Failed compilation / parsing of template member call after 'using' declaration
+84892,GCC,encapsulation,member access,2018/3/15,Diagnostic,API Misuse,P3 normal,Missing accessor hint for private field
+88110,GCC,runtime_polymorphic,override control,2018/11/20,Crash,Incorrect Branch,P3 normal,"[9 Regression] ICE (segfault) with -std=C++2a in cxx_eval_constant_expression when trying to evaluate nonoverridden ""virtual ... = 0"" function of a base class"
+84151,GCC,encapsulation,member access,2018/1/31,Wrong Code,API Misuse,P3 normal,[6 Regression] g++ generates two identical loads in a volatile-qualified member function.
+84698,GCC,compiletime_polymorphic,template instantiation,2018/3/4,Crash,Error Code Logic,P3 normal,ICE when using noexcept(noexcept()) declaration on global friend function of template class
+85363,GCC,object,initialization & destruction,2018/4/12,Wrong Code,Error Code Logic,P3 normal,Throwing exception from member constructor (brace initializer vs initializer list)
+87378,GCC,inheritance,derived class construction & destruction,2018/9/21,Diagnostic,Error Message,P3 normal,False -Wredundant-move (derived vs. base)
+88252,GCC,compiletime_polymorphic,template instantiation,2018/11/28,Accept Invalid,Error Code Logic,P3 normal,Deduction guide assume the constructor parameter is a forwarding reference if constructor defined outside class
+88580,GCC,compiletime_polymorphic,template instantiation,2018/12/23,Reject Valid,Overlooked Case,P3 normal,Parameter pack expansion fails (variadic constructor template inside a variadic class template)
+83895,GCC,encapsulation,member access,2018/1/16,Diagnostic,Incorrect Branch,P3 normal,[8 Regression] -Wparentheses warns about pointer-to-member typedefs
+84494,GCC,object,initialization & destruction,2018/2/20,Wrong Code,Overlooked Case,P3 normal,Invalid constexpr with default assignment operator
+84689,GCC,inheritance,multiple inheritance,2018/3/3,Reject Valid,Others,P3 normal,is_invocable is true even for call operator via ambiguous base
+84692,GCC,compiletime_polymorphic,template instantiation,2018/3/3,Crash,Others,P3 normal,Class template argument deduction ICE for template's member template
+85146,GCC,compiletime_polymorphic,template instantiation,2018/3/31,Crash,Error Code Logic,P3 normal,ICE with __direct_bases for declared but not defined struct
+85155,GCC,runtime_polymorphic,override control,2018/4/2,Diagnostic,Error Code Logic,P3 normal,Suboptimal error messages when using noexcept(false) on defaulted dtor
+85386,GCC,object,initialization & destruction,2018/4/12,Crash,Overlooked Case,P3 normal,ICE when applying noexcept operator to default constructor
+85415,GCC,encapsulation,class scope(global),2018/4/16,Crash,Others,P3 normal,"internal compiler error: in finish_member_declaration, at cp/semantics.c:2984"
+86044,GCC,object,overloading,2018/6/4,Reject Valid,Error Code Logic,P3 normal,noexcept(false) of constexpr member function ignored
+86970,GCC,compiletime_polymorphic,template instantiation,2018/8/16,Reject Valid,API Misuse,P3 normal,"Rejected constexpr expression involving lambdas and inheritance, ""use of this in a constant expression"""
+87324,GCC,object,initialization & destruction,2018/9/15,Crash,Assignment Error,P3 normal,g++ ICE with overriding initializers: Segmentation fault
+88118,GCC,object,initialization & destruction,2018/11/20,Efficient,Others,P3 enhancement,GCC keeps unnecessary calls to new
+84694,GCC,compiletime_polymorphic,template(no instantiation),2018/3/3,Crash,Assignment Error,P4 normal,"[8 Regression] internal compiler error: tree check: expected tree that contains 'decl minimal' structure, have 'identifier_node' in do_friend, at cp/friend.c:498"
+86648,GCC,compiletime_polymorphic,template instantiation,2018/7/23,Crash,Overlooked Case,P1 normal,[9 Regression] ICE on class template argument deduction
+108437,GCC,object,overloading,2023/1/17,Crash,Overlooked Case,P1 normal ,"[13 Regression] ICE in build_min_non_dep_op_overload, at cp/tree.cc:3710"
+108559,GCC,inheritance,member access(inherit),2023/1/26,Crash,Incorrect Branch,P1 normal ,"[13 Regression] A new crash with using a simple class, inheritance and a function"
+108579,GCC,compiletime_polymorphic,constraints and concepts,2023/1/28,Reject Valid,Incorrect Branch,P3 normal ,[13 Regression] Requires-expression that checks constructor on non-template constructor of template class got rejected
+108698,GCC,compiletime_polymorphic,template instantiation,2023/2/7,Others,Overlooked Case,P1 normal ,[13 Regression] decltype ((T() + â€˜excess_precision_exprâ€?not supported by dump_expr<expression error>)) median(ndarray<T>) [with T = double]â€? since
+108887,GCC,compiletime_polymorphic,template instantiation,2023/2/22,Crash,Error Code Logic,P1 normal ,[13 Regression] ICE in process_function_and_variable_attributes since 
+108998,GCC,compiletime_polymorphic,template instantiation,2023/3/2,Crash,API Misuse,P1 normal ,"[12 Regression] ICE in tsubst, at cp/pt.cc:16037"
+109039,GCC,object,initialization & destruction,2023/3/6,Wrong Code,Error Code Logic,P2 normal ,[12 Regression] Miscompilation with no_unique_address and bitfields
+109042,GCC,others,others,2023/3/6,Crash,API Misuse,P1 normal ,"[13 Regression] ICE in emit_support_tinfo_1, at cp/rtti.cc:1584"
+109096,GCC,object,initialization & destruction,2023/3/10,Wrong Code,Incorrect Branch,P3 normal ,__has_unique_object_representations does not account for unnamed bitfield
+109159,GCC,object,copy & move,2023/3/16,Accept Invalid,Numberical Error,P2 normal ,[10/11/12 Regression] explicit constructor is used in copy-initialization
+109160,GCC,compiletime_polymorphic,constraints and concepts,2023/3/16,Crash,API Misuse,P3 normal ,[Valid code] Constraint on deduced NTTP from method call causes ICE/Segfault.
+109172,GCC,encapsulation,member access,2023/3/17,Accept Invalid,API Misuse,P3 normal ,[10/11/12/13 Regression] g++ calls a private destructor with the keyword throw after the try-block
+109319,GCC,object,overloading,2023/3/28,Crash,Overlooked Case,P2 normal ,"[12 Regression] ICE in build_min_non_dep_op_overload, at cp/tree.cc:3793 since "
+109396,GCC,object,copy & move,2023/4/3,Diagnostic,Overlooked Case,P3 enhancement ,Winit-self doesn't warn when std::move()-d
+109506,GCC,compiletime_polymorphic,template instantiation,2023/4/13,Accept Invalid,API Misuse,P3 normal ,[11/12 regression] -fchecking=2 causes some template constructor not be instantiated when used with NSDMI
+109514,GCC,object,copy & move,2023/4/14,Others,Error Code Logic,P3 normal ,[13 regression] -Werror=dangling-pointer false positive on fheroes-1.0.3 (lambdas)
+109531,GCC,compiletime_polymorphic,template instantiation,2023/4/17,Crash,Error Code Logic,P3 normal ,[13/14 Regression] Checking ICE with  hash table checking failed: equal operator returns true for a pair of values with a different hash value since 
+109649,GCC,encapsulation,friends,2023/4/27,Accept Invalid,Incorrect Branch,P3 normal ,[13/14 Regression] GCC accepts invalid inaccessible friend declaration of member function
+109678,GCC,object,initialization & destruction,2023/4/29,Efficient,Error Code Logic,P2 normal ,[13/14 Regression] exponential time behavior on std::variant
+109751,GCC,compiletime_polymorphic,constraints and concepts,2023/5/5,Reject Valid,API Misuse,P3 normal ,[13/14 Regression] boost iterator_interface fails concept check starting in gcc-13
+109871,GCC,object,initialization & destruction,2023/5/16,Accept Invalid,Error Code Logic,P3 normal ,error: call of overloaded ... is ambiguous (std::vector vs designated initializers)
+109899,GCC,object,initialization & destruction,2023/5/17,Crash,Incorrect Branch,P2 normal ,"[12/13 Regression] ICE in check_noexcept_r, at cp/except.cc:1065"
+109958,GCC,inheritance,member access(inherit),2023/5/24,Crash,Overlooked Case,P2 normal ,"[11/12/13/14/15 Regression] ICE: in build_ptrmem_type, at cp/decl.cc:11066 taking the address of bound static member function brought into derived class by using-declaration"
+110084,GCC,object,overloading,2023/6/2,Crash,Incorrect Branch,P2 normal ,[12/13/14 Regression] defaulted constexpr operator== causes crash
+110102,GCC,object,initialization & destruction,2023/6/3,Accept Invalid,Overlooked Case,P3 normal ,"[13 regression] initializer_list ctors of containers skip Allocator_traits::construct, copies move-only type"
+110197,GCC,object,initialization & destruction,2023/6/9,Reject Valid,Error Code Logic,P2 normal ,[13 Regression] Empty constexpr object constructor erronously claims out of range access
+110295,GCC,inheritance,derived class construction & destruction,2023/6/17,Crash,Incorrect Branch,P2 normal ,[11 Regression] ICE in dwarf2out_finish with local class with inherited operator delete in a templated function and -g
+110395,GCC,object,initialization & destruction,2023/6/24,Efficient,Overlooked Case,P3 normal ,GCOV stuck in an infinite loop with large std::array
+110441,GCC,object,copy & move,2023/6/27,Reject Valid,API Misuse,P3 normal ,c++17: temporary causes static member function call to confuse required copy elision
+110524,GCC,compiletime_polymorphic,template specialization,2023/7/3,Crash,Overlooked Case,P3 normal ,[C++20] ICE with use of function template name with no prior declaration in decltype
+110535,GCC,compiletime_polymorphic,constraints and concepts,2023/7/3,Crash,Overlooked Case,P3 normal ,Internal error when performing a surrogate call with unsatisfied constraints
+110580,GCC,compiletime_polymorphic,template specialization,2023/7/6,Accept Invalid,API Misuse,P3 normal ,[14 Regression] gcc fails to typecheck nix-2.16.1 source: error: invalid initialization of reference of type
+110927,GCC,compiletime_polymorphic,constraints and concepts,2023/8/7,Reject Valid,API Misuse,P3 normal ,GCC fails to parse dependent type in concept through partial specialization
+111272,GCC,encapsulation,member access,2023/9/1,Diagnostic,Overlooked Case,P3 normal ,[13/14 Regression] Truncated error messages with -std=c++23 and -std=c++26
+112301,GCC,object,initialization & destruction,2023/10/30,Wrong Code,Overlooked Case,P3 normal ,[12/13/14 regression] Double destruction of returned object when exiting the scope causes an exception which gets rethrown since 
+112482,GCC,object,initialization & destruction,2023/11/11,Reject Valid,Incorrect Branch,P3 normal ,error when auto(x) is used in a variable initializer (block scope)
+112594,GCC,compiletime_polymorphic,template(no instantiation),2023/11/17,Reject Valid,Error Code Logic,P3 normal ,Non-type template parameter created with converting constructor sometimes has original type
+112658,GCC,object,initialization & destruction,2023/11/21,Wrong Code,API Misuse,P2 normal ,[12/13 Regression] ICE: finish_expr_stmt with casting an temp array to pointer and constructor call
+112744,GCC,inheritance,multiple inheritance,2023/11/28,Reject Valid,API Misuse,P3 normal ,Nested name specifier wrongly produces ambiguity in accessing static field
+113031,GCC,runtime_polymorphic,casting,2023/12/15,Crash,Incorrect Branch,P1 normal ,[14 Regression] ICE in cxx_fold_indirect_ref_1 starting with 
+113064,GCC,object,copy & move,2023/12/18,Reject Valid,Overlooked Case,P3 normal ,assignement from temporary sometimes invokes copy-assign instead of move-assign operator
+20716,LLVM,inheritance,member access(inherit),2014/8/20,Crash,Error Code Logic,P normal,Crash when recovering from type in known dependent base (ms-compatibility)
+19240,LLVM,inheritance,multiple inheritance,2014/3/25,Crash,Overlooked Case,P normal,"Assertion failed: VFTableLayouts.count(id) == 0, file ..\tools\clang\lib\AST\VTableBuilder.cpp, line 3288"
+19066,LLVM,inheritance,multiple inheritance,2014/3/6,Crash,API Misuse,P normal,0-sized vftable in the presence of virtual inheritance
+32990,LLVM,inheritance,derived class construction & destruction,2017/5/10,Wrong Code,Others,P enhancement,clang emits inline copy of complete object destructor for dllimport classes with virtual bases
+64088,LLVM,runtime_polymorphic,casting,2023/7/25,Crash,Overlooked Case,,ICE with dynamic_cast and multiple inheritance: Shouldn't query vtable linkage without key function
+32673,LLVM,compiletime_polymorphic,template instantiation,2017/4/15,Crash,Overlooked Case,P release blocker,Segmentation fault with class template argument deduction and variadic template class with variadic constructor and variadic inheritance
+56864,LLVM,compiletime_polymorphic,template(no instantiation),2022/8/2,Reject Valid,Incorrect Branch,,Failure to parse cast + fold expression
+53012,LLVM,compiletime_polymorphic,template(no instantiation),2022/1/6,Crash,Overlooked Case,,ICE on invalid: clang::Sema::AttachBaseSpecifiers: Stack dump
+21332,LLVM,compiletime_polymorphic,template instantiation,2014/10/21,Accept Invalid,Error Code Logic,P normal,failing to instantiate all of a local class (DR1484) when instantiating the surrounding function
+26134,LLVM,compiletime_polymorphic,template(no instantiation),2016/1/13,Crash,API Misuse,P normal,VarDecl::checkInitIsIce() !Init->isValueDependent Assertion failure
+26893,LLVM,compiletime_polymorphic,template instantiation,2016/3/9,Reject Valid,Incorrect Branch,P normal,sizeof non-static member of struct nested within class template (-std=c++11)
+28195,LLVM,inheritance,multiple inheritance,2016/6/19,Accept Invalid,API Misuse,P normal,Clang allows ambiguous derived-to-base pointer conversion.
+22396,LLVM,object,overloading,2015/1/29,Hang,Overlooked Case,P normal,clang: infinite loop in clang::Sema::CreateOverloadedBinOp on invalid input
+25661,LLVM,compiletime_polymorphic,template specialization,2015/11/27,Reject Valid,API Misuse,P normal,Clang frontend doesn't deal with class member function pointer passed as template argument correctly on Windows
+22017,LLVM,compiletime_polymorphic,template(no instantiation),2014/12/23,Crash,API Misuse,P normal,"assertion ""Comparison requires equal bit widths"""
+41607,LLVM,compiletime_polymorphic,template specialization,2019/4/25,Crash,Overlooked Case,P enhancement,Crash on dependent variable initialization in in-class explicit specialization of member class template
+41192,LLVM,encapsulation,member access,2019/3/21,Reject Valid,Overlooked Case,P enhancement,clang can't parse a global-namespace-qualfiied qualified-id after a type definition
+23421,LLVM,compiletime_polymorphic,template alias,2015/5/5,Crash,API Misuse,P normal,ICE when using __underlying_type builtin trait in template alias or function template signature
+35832,LLVM,inheritance,multiple inheritance,2018/1/4,Reject Valid,API Misuse,P normal,ambiguity accessing anonymous union member present in multiple bases despite explicit qualification
+38257,LLVM,compiletime_polymorphic,template instantiation,2018/7/21,Reject Valid,Incorrect Branch,P normal,operator& definition causes unexplained error passing pointer-to-member to template parameter
+28023,LLVM,compiletime_polymorphic,template instantiation,2016/6/6,Crash,Error Code Logic,P normal,"clang Crashes on C++ code with shadowed template parameter: Assertion `Access != AS_none && ""Access specifier is AS_none inside a record decl""' failed"
+19748,LLVM,others,others,2014/5/14,Reject Valid,API Misuse,P normal,Parse error after a cast of a variable with the same name as an existing struct in a ternary operator
+42694,LLVM,compiletime_polymorphic,constraints and concepts,2019/7/19,Reject Valid,Incorrect Branch,P normal,C++20 conditional explicit should be supported in C++14/17 modes
+22566,LLVM,object,initialization & destruction,2015/2/12,Accept Invalid,Overlooked Case,P normal,Expected narrowing conversion during list initialization of bool from double
+21367,LLVM,object,overloading,2014/10/24,Reject Valid,Assignment Error,P normal,Extension to support rvalue references causes some legal C++03 to fail compile
+22310,LLVM,object,overloading,2015/1/23,Wrong Code,API Misuse,P normal,incorrect function overloading resolution with initializer-list param
+28978,LLVM,object,copy & move,2016/8/14,Crash,Overlooked Case,P release blocker,Assertion in setImplicitMoveConstructorIsDeleted() fails
+19729,LLVM,object,copy & move,2014/5/12,Reject Valid,Assignment Error,P normal,List initialization of placement parameter produces spurious complaint regarding deleted copy/move constructors
+22673,LLVM,object,initialization & destruction,2015/2/24,Accept Invalid,Error Code Logic,P normal,accepts-invalid call to deleted ctor
+22763,LLVM,inheritance,derived class construction & destruction,2015/3/2,Reject Valid,Assignment Error,P normal,Explicit template instantiations do not instantiate explicitly defaulted special members
+27994,LLVM,compiletime_polymorphic,template instantiation,2016/6/3,Crash,Error Code Logic,P normal,"clang Crashes on valid C++11 code: Assertion `!isNull() && ""Cannot retrieve a NULL type pointer""' failed"
+40313,LLVM,others,others,2019/1/14,Wrong Code,Error Code Logic,P enhancement,"With __PRETTY_FUNCTION__, dereferencing same pointer produces different results at compile time vs. runtime"
+40682,LLVM,object,copy & move,2019/2/10,Wrong Code,Incorrect Branch,P normal,clang++ miscompilation while generating copy constructors of classes containing 0-length array
+22924,LLVM,object,initialization & destruction,2015/3/16,Reject Valid,Error Message,P normal,support braced-init-list of exact size + array new with no default ctor as an extension
+64923,LLVM,object,overloading,2023/8/23,Wrong Code,Overlooked Case,,[C++] Side effect get removed if the return type of a unary operator is std::nullptr_t
+21803,LLVM,compiletime_polymorphic,template instantiation,2014/12/9,Diagnostic,Error Message,P normal,wordsmith viable conversion error message for function return type
+18852,LLVM,encapsulation,class scope(global),2014/2/15,Diagnostic,Error Code Logic,P normal,Spelling correction to non-static member functions with qualification
+19902,LLVM,encapsulation,member access,2014/5/30,Diagnostic,Error Message,P normal,Clang-cl gives 'definition of dllimport static field not allowed' while cl does not
+20208,LLVM,object,initialization & destruction,2014/7/4,Diagnostic,Error Message,P normal,Misleading diagnostic for missing initializer for const POD
+18608,LLVM,inheritance,member access(inherit),2014/1/24,Diagnostic,API Misuse,P normal,bad typo correction on method call suggesting qualifier
+19767,LLVM,compiletime_polymorphic,template instantiation,2014/5/17,Diagnostic,Overlooked Case,P normal,Assertion failed: (DTy.getTag() == dwarf::DW_TAG_enumeration_type) with void* non-type template argument
+41743,LLVM,object,copy & move,2019/5/4,Diagnostic,Incorrect Branch,P normal," =-Wrange-loop-analysis warns about copying small (or empty), trivially copyable types"
+50590,LLVM,compiletime_polymorphic,template(no instantiation),2021/6/5,Diagnostic,Overlooked Case,P enhancement,"Assertion `!A->getDeducedType().isNull() && ""cannot request the size of an undeduced or dependent auto type""' failed"
+44673,LLVM,compiletime_polymorphic,constraints and concepts,2020/1/26,Reject Valid,Overlooked Case,P enhancement,Rejects valid code with constructor accepting constrained auto parameter when the concept name is namespace qualified and has an explicit template argument
+50561,LLVM,compiletime_polymorphic,constraints and concepts,2021/6/2,Wrong Code,Assignment Error,P normal,Concepts overload check not considered?

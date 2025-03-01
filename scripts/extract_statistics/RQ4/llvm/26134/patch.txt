@@ -1,0 +1,6 @@
+EnterExpressionEvaluationContext ConstantEvaluated(Actions,
+                                                           Sema::ConstantEvaluated);
+
+      EnterExpressionEvaluationContext ConstantEvaluated(SemaRef,
+                                                         Sema::ConstantEvaluated);
+

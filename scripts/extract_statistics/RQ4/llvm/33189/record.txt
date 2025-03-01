@@ -1,0 +1,3 @@
+Commit:	8844c52
+./clang/lib/AST/DeclCXX.cpp	1420,1421
+./clang/lib/AST/DeclCXX.cpp	1423,1424

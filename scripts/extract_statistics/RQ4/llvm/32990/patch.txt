@@ -1,0 +1,108 @@
+// Always alias equivalent complete destructors to base destructors in the
+        // MS ABI.
+        if (getTarget().getCXXABI().isMicrosoft() &&
+            Type == StructorType::Complete && MD->getParent()->getNumVBases() == 0)
+          Type = StructorType::Base;
+
+    void CGCXXABI::setCXXDestructorDLLStorage(llvm::GlobalValue *GV,
+                                              const CXXDestructorDecl *Dtor,
+                                              CXXDtorType DT) const {
+      // Assume the base C++ ABI has no special rules for destructor variants.
+      CGM.setDLLImportDLLExport(GV, Dtor);
+    }
+    
+    llvm::GlobalValue::LinkageTypes CGCXXABI::getCXXDestructorLinkage(
+        GVALinkage Linkage, const CXXDestructorDecl *Dtor, CXXDtorType DT) const {
+      // Delegate back to CGM by default.
+      return CGM.getLLVMLinkageForDeclarator(Dtor, Linkage,
+                                             /*isConstantVariable=*/false);
+    }
+    
+
+      virtual void setCXXDestructorDLLStorage(llvm::GlobalValue *GV,
+                                              const CXXDestructorDecl *Dtor,
+                                              CXXDtorType DT) const;
+    
+      virtual llvm::GlobalValue::LinkageTypes
+      getCXXDestructorLinkage(GVALinkage Linkage, const CXXDestructorDecl *Dtor,
+                              CXXDtorType DT) const;
+    
+
+      // C++ destructors have a few C++ ABI specific special cases.
+
+        getCXXABI().setCXXDestructorDLLStorage(GV, Dtor, GD.getDtorType());
+        return;
+
+      if (const auto *Dtor = dyn_cast<CXXDestructorDecl>(D))
+        return getCXXABI().getCXXDestructorLinkage(Linkage, Dtor, GD.getDtorType());
+
+      void setCXXDestructorDLLStorage(llvm::GlobalValue *GV,
+                                      const CXXDestructorDecl *Dtor,
+                                      CXXDtorType DT) const override;
+    
+      llvm::GlobalValue::LinkageTypes
+      getCXXDestructorLinkage(GVALinkage Linkage, const CXXDestructorDecl *Dtor,
+                              CXXDtorType DT) const override;
+    
+
+    void MicrosoftCXXABI::setCXXDestructorDLLStorage(llvm::GlobalValue *GV,
+                                                     const CXXDestructorDecl *Dtor,
+                                                     CXXDtorType DT) const {
+      // Deleting destructor variants are never imported or exported. Give them the
+      // default storage class.
+      if (DT == Dtor_Deleting) {
+        GV->setDLLStorageClass(llvm::GlobalValue::DefaultStorageClass);
+      } else {
+        const NamedDecl *ND = Dtor;
+        CGM.setDLLImportDLLExport(GV, ND);
+      }
+    }
+    
+    llvm::GlobalValue::LinkageTypes MicrosoftCXXABI::getCXXDestructorLinkage(
+        GVALinkage Linkage, const CXXDestructorDecl *Dtor, CXXDtorType DT) const {
+      // Internal things are always internal, regardless of attributes. After this,
+      // we know the thunk is externally visible.
+      if (Linkage == GVA_Internal)
+        return llvm::GlobalValue::InternalLinkage;
+    
+      switch (DT) {
+      case Dtor_Base:
+        // The base destructor most closely tracks the user-declared constructor, so
+        // we delegate back to the normal declarator case.
+        return CGM.getLLVMLinkageForDeclarator(Dtor, Linkage,
+                                               /*isConstantVariable=*/false);
+      case Dtor_Complete:
+        // The complete destructor is like an inline function, but it may be
+        // imported and therefore must be exported as well. This requires changing
+        // the linkage if a DLL attribute is present.
+        if (Dtor->hasAttr<DLLExportAttr>())
+          return llvm::GlobalValue::WeakODRLinkage;
+        if (Dtor->hasAttr<DLLImportAttr>())
+          return llvm::GlobalValue::AvailableExternallyLinkage;
+        return llvm::GlobalValue::LinkOnceODRLinkage;
+      case Dtor_Deleting:
+        // Deleting destructors are like inline functions. They have vague linkage
+        // and are emitted everywhere they are used. They are internal if the class
+        // is internal.
+        return llvm::GlobalValue::LinkOnceODRLinkage;
+      case Dtor_Comdat:
+        llvm_unreachable("MS C++ ABI does not support comdat dtors");
+      }
+      llvm_unreachable("invalid dtor type");
+    }
+    
+
+      // Use the base destructor variant in place of the complete destructor variant
+      // if the class has no virtual bases. This effectively implements some of the
+      // -mconstructor-aliases optimization, but as part of the MS C++ ABI.
+      if (Type == Dtor_Complete && DD->getParent()->getNumVBases() == 0)
+        Type = Dtor_Base;
+    
+
+      // Emit the base destructor if the base and complete (vbase) destructors are
+      // equivalent. This effectively implements -mconstructor-aliases as part of
+      // the ABI.
+      if (dtorType == StructorType::Complete &&
+          dtor->getParent()->getNumVBases() == 0)
+        dtorType = StructorType::Base;
+

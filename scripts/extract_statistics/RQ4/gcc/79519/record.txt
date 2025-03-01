@@ -1,0 +1,6 @@
+Commit:	71f0832
+./gcc/cp/decl.c	10583,10583
+./gcc/cp/decl.c	10585,10585
+Commit:	c34923c
+./gcc/cp/decl.c	11368,11368
+./gcc/cp/decl.c	11370,11370

@@ -1,0 +1,40 @@
+print_error_for_call_failure (tree fn, vec<tree, va_gc> *args,
+
+      tree call = error_mark_node;
+
+          ++cp_unevaluated_operand;
+          call = build_new_function_call (list_cands, &args, tf_decltype);
+          --cp_unevaluated_operand;
+
+          if (call == error_mark_node)
+
+      else if (!cands && call == error_mark_node)
+
+      if (call == error_mark_node)
+        {
+          ++cp_unevaluated_operand;
+          call = build_new_function_call (cands, &args, tf_decltype);
+          --cp_unevaluated_operand;
+        }
+
+      if (call == error_mark_node)
+
+    
+    	  ++cp_unevaluated_operand;
+    	  call = build_new_function_call (cands, &args,
+    					  complain | tf_decltype);
+    	  --cp_unevaluated_operand;
+    
+
+          tree fndecl = cp_get_callee_fndecl_nofold (call);
+          if (fndecl && DECL_NONCONVERTING_P (fndecl))
+
+      if (call != error_mark_node && !any_dguides_p)
+
+          tree fndecl = cp_get_callee_fndecl_nofold (call);
+          if (fndecl != NULL_TREE
+    	  && (!DECL_IN_SYSTEM_HEADER (fndecl)
+    	      || global_dc->dc_warn_system_headers)
+
+      return cp_build_qualified_type (TREE_TYPE (call), cp_type_quals (ptype));
+

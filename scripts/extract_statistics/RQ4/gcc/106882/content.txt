@@ -1,0 +1,64 @@
+cpp_define (pfile, "__cpp_multidimensional_subscript=202110L");
+    	  cpp_define (pfile, "__cpp_named_character_escapes=202207L");
+    	  cpp_define (pfile, "__cpp_static_call_operator=202207L");
+
+    	}
+          if (flag_concepts)
+            {
+
+    
+          /* Nor the reverse.  */
+          if (!is_lvalue && !TYPE_REF_IS_RVALUE (rto)
+
+    	       && (gl_kind & clk_implicit_rval))
+    	  && (!CP_TYPE_CONST_NON_VOLATILE_P (to)
+    	      || (flags & LOOKUP_NO_RVAL_BIND))
+
+    extern tree make_template_placeholder		(tree);
+    extern bool template_placeholder_p		(tree);
+    extern bool ctad_template_p			(tree);
+
+    extern tree do_auto_deduction                   (tree, tree, tree,
+                                                     tsubst_flags_t
+    						 = tf_warning_or_error,
+
+    				  cp_type_quals (ptype));
+    }
+    
+
+    /* Replace occurrences of 'auto' in TYPE with the appropriate type deduced
+       from INIT.  AUTO_NODE is the TEMPLATE_TYPE_PARM used for 'auto' in TYPE.
+       The CONTEXT determines the context in which auto deduction is performed
+
+         auto_node.  */
+      complain &= ~tf_partial;
+    
+
+      if (tree tmpl = CLASS_PLACEHOLDER_TEMPLATE (auto_node))
+        /* C++17 class template argument deduction.  */
+        return do_class_deduction (type, tmpl, init, flags, complain);
+
+        }
+      else if (AUTO_IS_DECLTYPE (auto_node))
+        {
+
+          tree deduced = finish_decltype_type (init, id, complain);
+          deduced = canonicalize_type_argument (deduced, complain);
+          if (deduced == error_mark_node)
+
+    bool
+    xvalue_p (const_tree ref)
+    {
+
+    }
+    
+    /* True if REF is a bit-field.  */
+
+    	 the conditions for the named return value optimization.  */
+          bool converted = false;
+          tree moved;
+
+    	{
+    	  if (cxx_dialect < cxx20)
+    	    {
+

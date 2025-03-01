@@ -1,0 +1,3 @@
+if (!cp_unevaluated_operand
+    	      && !dependent_type_p (object_type)
+

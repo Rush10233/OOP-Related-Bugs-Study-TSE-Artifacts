@@ -1,0 +1,8 @@
+if (is_friend)
+    	    {
+    	      if (level->kind != sk_namespace)
+
+    		/* Hide it from ordinary lookup.  */
+    		DECL_ANTICIPATED (decl) = DECL_HIDDEN_FRIEND_P (decl) = true;
+    	    }
+

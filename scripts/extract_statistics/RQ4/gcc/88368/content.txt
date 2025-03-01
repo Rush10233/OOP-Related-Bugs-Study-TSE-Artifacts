@@ -1,0 +1,34 @@
+if (spec_p)
+    		{
+    		  tree nsdmi = get_nsdmi (field, /*ctor*/false, complain);
+
+    		    *spec_p = noexcept_false_spec;
+    		}
+    	      /* Don't do the normal processing.  */
+
+      if (SFK_DTOR_P (sfk) && DECL_VIRTUAL_P (decl))
+        /* We have to examine virtual bases even if abstract.  */
+        sfk = sfk_virtual_destructor;
+
+      synthesized_method_walk (ctype, sfk, const_p, &spec, NULL, NULL,
+    			   NULL, diag, &inh, parms);
+
+      return spec;
+    }
+    
+
+    	  pop_deferring_access_checks ();
+    	  pop_access_scope (fn);
+    	  pop_tinst_level ();
+    	}
+          else
+    	spec = noexcept_false_spec;
+
+    {
+      tree noex, orig_list;
+    
+
+      /* No exception-specifier or noexcept(false) are less strict than
+         anything else.  Prefer the newer variant (LIST).  */
+      if (!list || list == noexcept_false_spec)
+

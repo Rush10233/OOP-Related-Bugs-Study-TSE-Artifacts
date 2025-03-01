@@ -1,0 +1,10 @@
+// Capture the context in which the function call is made. This is the context
+      // that is needed when the accessibility of template arguments is checked.
+      DeclContext *CallingCtx = CurContext;
+    
+
+          &OriginalCallArgs, PartialOverloading, [&, CallingCtx]() {
+            ContextRAII SavedContext(*this, CallingCtx);
+            return CheckNonDependent(ParamTypesForArgChecking);
+          });
+

@@ -1,0 +1,6 @@
+if (!currently_open_class (DECL_CONTEXT (member)))
+
+    	      push_nested_class (DECL_CONTEXT (member));
+
+    	  inject_this_parameter (DECL_CONTEXT (member), TYPE_UNQUALIFIED);
+

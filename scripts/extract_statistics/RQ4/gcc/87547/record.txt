@@ -1,0 +1,2 @@
+Commit:	6b0649c
+./gcc/cp/rtti.c	276,276

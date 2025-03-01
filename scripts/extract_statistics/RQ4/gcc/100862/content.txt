@@ -1,0 +1,94 @@
+static bool type_maybe_constexpr_destructor (tree);
+    static bool field_poverlapping_p (tree);
+    
+
+    /* Return a COND_EXPR that executes TRUE_STMT if this execution of the
+       'structor is in charge of 'structing virtual bases, or FALSE_STMT
+       otherwise.  */
+
+    	 CONST_DECL_USING_P is true.  */
+          gcc_assert (TREE_CODE (decl) == CONST_DECL);
+    
+
+          tree copy = copy_decl (decl);
+          DECL_CONTEXT (copy) = t;
+          DECL_ARTIFICIAL (copy) = true;
+
+    extern bool subsumes                            (tree, tree);
+    
+    /* In class.c */
+
+    extern void cp_finish_injected_record_type (tree);
+    
+    /* in vtable-class-hierarchy.c */
+
+    
+    	 For which case we need to make sure that the access of `S::i'
+    	 matches the access of `S::E'.  */
+
+          finish_member_declaration (decl);
+        }
+      else
+        pushdecl (decl);
+
+    static tree tsubst_function_type (tree, tree, tsubst_flags_t, tree);
+    static bool check_specialization_scope (void);
+    static tree process_partial_specialization (tree);
+    static enum template_base_result get_template_base (tree, tree, tree, tree,
+    						    bool , tree *);
+    static tree try_class_unification (tree, tree, tree, tree, bool);
+
+      return inits;
+    }
+    
+    /* Instantiate an enumerated type.  TAG is the template type, NEWTAG
+       is the instantiation (which should have been created with
+       start_enum) and ARGS are the template arguments to use.  */
+
+static bool type_maybe_constexpr_destructor (tree);
+    static bool field_poverlapping_p (tree);
+    
+
+    /* Return a COND_EXPR that executes TRUE_STMT if this execution of the
+       'structor is in charge of 'structing virtual bases, or FALSE_STMT
+       otherwise.  */
+
+    	 CONST_DECL_USING_P is true.  */
+          gcc_assert (TREE_CODE (decl) == CONST_DECL);
+    
+
+          tree copy = copy_decl (decl);
+          DECL_CONTEXT (copy) = t;
+          DECL_ARTIFICIAL (copy) = true;
+
+    extern bool subsumes                            (tree, tree);
+    
+    /* In class.c */
+
+    extern void cp_finish_injected_record_type (tree);
+    
+    /* in vtable-class-hierarchy.c */
+
+    
+    	 For which case we need to make sure that the access of `S::i'
+    	 matches the access of `S::E'.  */
+
+          finish_member_declaration (decl);
+        }
+      else
+        pushdecl (decl);
+
+    static tree tsubst_function_type (tree, tree, tsubst_flags_t, tree);
+    static bool check_specialization_scope (void);
+    static tree process_partial_specialization (tree);
+    static enum template_base_result get_template_base (tree, tree, tree, tree,
+    						    bool , tree *);
+    static tree try_class_unification (tree, tree, tree, tree, bool);
+
+      return inits;
+    }
+    
+    /* Instantiate an enumerated type.  TAG is the template type, NEWTAG
+       is the instantiation (which should have been created with
+       start_enum) and ARGS are the template arguments to use.  */
+

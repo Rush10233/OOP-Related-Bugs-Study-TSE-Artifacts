@@ -1,0 +1,2 @@
+Commit:	ca0a0bf
+./clang/lib/Sema/SemaTemplateDeduction.cpp	5806,5807

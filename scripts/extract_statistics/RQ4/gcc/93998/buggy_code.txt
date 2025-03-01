@@ -1,0 +1,29 @@
+if (!*non_constant_p)
+    	/* Adjust the type of the result to the type of the temporary.  */
+    	r = adjust_temp_type (TREE_TYPE (t), r);
+
+constexpr_global_ctx () : constexpr_ops_count (0) {}
+
+      /* SAVE_EXPRs that we've seen within the current LOOP_EXPR.  NULL if we
+         aren't inside a loop.  */
+
+    	  /* Track the callee's evaluated SAVE_EXPRs so that we can forget
+    	     their values after the call.  */
+
+    	  /* Forget the saved values of the callee's SAVE_EXPRs.  */
+
+          /* Forget saved values of SAVE_EXPRs.  */
+
+      /* Forget saved values of SAVE_EXPRs.  */
+
+    	{
+    	  tree slot = TARGET_EXPR_SLOT (t);
+    	  r = unshare_constructor (r);
+    	  ctx->global->values.put (slot, r);
+    	  return slot;
+    	}
+
+        case NON_LVALUE_EXPR:
+
+        case CLEANUP_POINT_EXPR:
+

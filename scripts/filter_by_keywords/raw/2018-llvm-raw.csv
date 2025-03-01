@@ -1,0 +1,80 @@
+37903	Clang/LLVM 7.0.1 on Windows initializes inline static data member multiple times
+35850	returning a coroutine from a generic lambda segfaults
+39264	While compiling V8 JS engine on Ubuntu server, gets error with clang
+36992	copy constructor memcpy optimization tramples virtual bases in tail padding
+37614	"Constexpr static data member ""unresolved external symbol"" when member of a templated struct"
+38161	Fixed-Point works poorly with octal/integer literals.
+39336	init-capture of initializer_list fails to extend lifetime
+37172	__is_aggregate should be false for an inherited virtual function
+37631	missing access check for deduction guide declarations
+39428	lambda capture shadowing is not rejected
+38257	operator& definition causes unexplained error passing pointer-to-member to template parameter
+39623	SFINAE in default template parameter does not delete the function.
+36054	"wrong error ""constexpr function never produces a constant expression"""
+38490	__uuidof not constexpr
+39649	clang fails to generate defaulted move constructor upon template instantiation
+37305	Clang warning message on FP to integer implicit conversion is inconsistent with its behavior.
+37768	expected the class name after '~' to name a destructor
+38508	clang-cl handles /E and /P (preprocess only) incorrectly with PCH files
+36216	Merge r324134 into 6.0 branch: Make __has_unique_object_representations reject empty union types.
+37778	"__builtin_nan incorrectly has ""const"" attribute"
+38548	Merge aligned allocation fixes in clang and libc++ into 7.0 branch
+36222	Lambda passed to template argument deduction parsed as decomposition group
+37320	Missing C++17 feature-test macros
+39822	[Coverage] clang crashes with 'Assertion SpellingRegion(SM, StartLoc, EndLoc).isInSourceOrder() failed.'
+36267	Less than ideal handling of variable names in Cyrillic alphabet
+37935	`deprecated` attribute can't take a message when other attribute exists
+36645	isCXX11ConstantExpr related segfault
+35816	Merge r321777 into the 6.0 branch: PR35028: Retain duplicate alignas attributes in template instantiation.
+36747	Structured bindings in conditions crash when using member get
+38044	clang fails to consider the most specialized template definition when it's partialy specialized with multiple template template parameters
+35817	Merge r321779 into the 6.0 branch: PR35045: Convert injected-class-name to its corresponding simple-template-id
+37556	Improper symbol redefinition diagnostic for names in different declarative regions
+35832	ambiguity accessing anonymous union member present in multiple bases despite explicit qualification
+36756	Constructor thought to be variable declaration (using class template argument deduction)
+38987	(REGRESSION) crash in coverage build: error in backend: File exit not handled before popRegions
+37595	-fvisibility-inlines-hidden marks static local variables as hidden when it shouldn't
+38136	Can't take a pointer to a variadic templated function when the variadic args are not the last argument
+39231	Segfault with operator '^' overload for integer_sequences when specifying wrong parameter pack
+35862	-Wmissing-variable-declarations warnings trigger on inline variables and variable temples
+35867	Ternary operator causes fatal error during code coverage generation
+35894	merge r322236 to clang 6 branch
+38235	attribute((constructor)) accepts enum class as integer constan
+35897	merge r322030 into clang 6 branch
+37232	clang-cl fails on reference to static constexpr member
+37633	overflow builtins are not constexpr
+39513	DR 458 not implemented?
+35951	clang permits assignment to vector/extvector elements in a const method
+37265	[coroutines] co_return should [class.copy]/33 (namely, try to move first if auto variable)
+37681	Invalid template member specialization causes ICE
+38282	expected ';' after expression
+37275	packed attribute should not apply to base classes
+37754	clang windows-msvc doesn't mangle Obj-C generics
+36181	Microsoft mangling cannot mangle injected class name type
+39769	Generic lambda in variable template in class template does not compile
+37314	Make init list narrowing diags not DefaultIgnored in clang-cl mode
+39779	-Wunsequenced warning on OR operator
+38623	Assertion in CodeGen fails when a reference to a global variable is captured by a block
+36228	-O2 optimization bug
+37327	Stmt::IgnoreImplicit() should ignore non-trailing ImplicitCastExpr
+37918	When compiling with `-fopenmp` clang will under certain circumstances not produce symbols for const or constexpr static data members.
+38671	"""destructor cannot be declared as a template"" leads to segfault in Sema::LookupSpecialMember"
+39837	clang does not warn about nodiscard in a range-based for loop
+37394	clang produces duplicate symbols when enabling Control Flow Integrity (icall)
+38798	clang never ends compiling this file
+40096	Clang source code incompatibility with C++20
+37465	[ms] noexcept mangled wrong for /std:c++17
+37979	incorrect sizeof for bitfield enum values
+38868	for Microsoft compatibility, md5 hash on long mangled names
+37481	Failed to instantiate a function template on C++17 mode of clang-cl
+38883	instantiating a friend member specialization declaration does not look up member specialization properly
+36748	Assertion failure laying out class hierarchy with inlined inheriting constructor
+38077	Crash when accessing member of decltype of function template
+38910	Replacements::add does not de-duplicate, as documented
+37585	constexpr if condition is not a constant expression and std::is_same
+38124	Windows-specific entry points are not marked as extern C
+39079	"Clang logs ""hit!"" when compiling sample code with smmintrin.h"
+36767	Some warnings do not have -Wno- options (for example -Wno-disabled-macro-expansion -Wno-global-constructors)
+36810	c++ visibility for specialization is not correct
+37604	[coroutine] Implicit object parameter not passed to promise_ctor
+38141	declaration has a different exception specifier

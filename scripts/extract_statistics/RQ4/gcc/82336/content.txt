@@ -1,0 +1,16 @@
+A default argument expression is implicitly converted to the
+         parameter type.  */
+      ++cp_unevaluated_operand;
+
+    				     LOOKUP_IMPLICIT);
+      --cp_unevaluated_operand;
+    
+
+A default argument expression is implicitly converted to the
+         parameter type.  */
+      ++cp_unevaluated_operand;
+
+    				     LOOKUP_IMPLICIT);
+      --cp_unevaluated_operand;
+    
+

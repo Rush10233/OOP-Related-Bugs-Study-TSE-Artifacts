@@ -1,0 +1,7 @@
+it can't throw.
+    
+       TODO: Consider extending -Wnoexcept to do something like walk_subtrees in the
+       case of a defaulted function that obtained a noexcept(false) spec.  */
+
+    			   && !expr_noexcept_p (nsdmi, tf_none))
+

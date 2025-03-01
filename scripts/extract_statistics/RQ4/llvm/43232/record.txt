@@ -1,0 +1,4 @@
+Commit:	389b7ce
+./clang/lib/Sema/SemaInit.cpp	890,890
+./clang/test/Sema/zero-initializer.c	23,23
+./clang/test/Sema/zero-initializer.c	35,35

@@ -1,0 +1,7 @@
+Commit:	d87f8d7
+./llvm/lib/Analysis/InstructionSimplify.cpp	2807,2812
+./llvm/lib/Analysis/InstructionSimplify.cpp	2814,2814
+./llvm/lib/Analysis/InstructionSimplify.cpp	2820,2823
+Commit:	016a6d5
+Commit:	48c8240
+./llvm/lib/Analysis/InstructionSimplify.cpp	2840,2840

@@ -1,0 +1,37 @@
+for (unsigned i = FirstParam; i < NumParams; i++) {
+
+        ParmVarDecl *Param = FDecl ? FDecl->getParamDecl(i) : nullptr;
+
+    
+
+          assert(Param && "can't use default arguments without a known callee");
+
+            OperatorNew->getType()->getAs<FunctionProtoType>();
+        VariadicCallType CallType = Proto->isVariadic() ? VariadicFunction
+                                                        : VariadicDoesNotApply;
+
+        // We've already converted the placement args, just fill in any default
+        // arguments. Skip the first parameter because we don't have a corresponding
+        // argument.
+
+        // FIXME: This is wrong: PlacementArgs misses out the first (size) argument.
+
+    /// \brief Find an fitting overload for the allocation function
+    /// in the specified scope.
+    ///
+    /// \param StartLoc The location of the 'new' token.
+    /// \param SourceRange The range of the placement arguments.
+    /// \param Name The name of the function ('operator new' or 'operator new[]').
+    /// \param Args The placement arguments specified.
+    /// \param Ctx The scope in which we should search; either a class scope or the
+    ///        translation unit.
+    /// \param AllowMissing If \c true, report an error if we can't find any
+    ///        allocation functions. Otherwise, succeed but don't fill in \p
+    ///        Operator.
+    /// \param Operator Filled in with the found allocation function. Unchanged if
+    ///        no allocation function was found.
+    /// \param Diagnose If \c true, issue errors if the allocation function is not
+    ///        usable.
+
+        Operator = FnDecl;
+

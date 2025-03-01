@@ -1,0 +1,24 @@
+}
+      else if (BASELINK_P (expr))
+        ;
+
+      else
+        {
+          /* In a template, return a SCOPE_REF for most qualified-ids
+
+expr = build_offset_ref (qualifying_class, expr, /*address_p=*/false,
+    				 complain);
+        }
+
+      else
+        {
+          /* In a template, return a SCOPE_REF for most qualified-ids
+
+expr = build_offset_ref (qualifying_class, expr, /*address_p=*/false,
+    				 complain);
+        }
+
+      else
+        {
+          /* In a template, return a SCOPE_REF for most qualified-ids
+

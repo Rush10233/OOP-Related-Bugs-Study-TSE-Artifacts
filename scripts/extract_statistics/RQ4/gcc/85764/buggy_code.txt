@@ -1,0 +1,40 @@
+&& DERIVED_FROM_P (type, current_nonlambda_class_type ()))
+
+    /* Returns the method basetype of the innermost non-lambda function, or
+       NULL_TREE if none.  */
+
+      tree fn, type;
+
+      type = current_class_type;
+
+      /* Find the nearest enclosing non-lambda function.  */
+      fn = TYPE_NAME (type);
+      do
+        fn = decl_function_context (fn);
+      while (fn && LAMBDA_FUNCTION_P (fn));
+    
+      if (!fn || !DECL_NONSTATIC_MEMBER_FUNCTION_P (fn))
+        return NULL_TREE;
+    
+      return TYPE_METHOD_BASETYPE (TREE_TYPE (fn));
+
+&& DERIVED_FROM_P (type, current_nonlambda_class_type ()))
+
+    /* Returns the method basetype of the innermost non-lambda function, or
+       NULL_TREE if none.  */
+
+      tree fn, type;
+
+      type = current_class_type;
+
+      /* Find the nearest enclosing non-lambda function.  */
+      fn = TYPE_NAME (type);
+      do
+        fn = decl_function_context (fn);
+      while (fn && LAMBDA_FUNCTION_P (fn));
+    
+      if (!fn || !DECL_NONSTATIC_MEMBER_FUNCTION_P (fn))
+        return NULL_TREE;
+    
+      return TYPE_METHOD_BASETYPE (TREE_TYPE (fn));
+

@@ -1,0 +1,7 @@
+Commit:	8925dc0
+./clang/lib/AST/ItaniumMangle.cpp	640,641
+./clang/lib/AST/ItaniumMangle.cpp	643,644
+./clang/lib/AST/ItaniumMangle.cpp	646,646
+./clang/lib/AST/ItaniumMangle.cpp	1566,1567
+./clang/lib/AST/ItaniumMangle.cpp	1569,1569
+./clang/lib/AST/ItaniumMangle.cpp	1572,1573

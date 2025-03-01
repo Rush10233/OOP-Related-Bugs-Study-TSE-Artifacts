@@ -1,0 +1,30 @@
+
+        case VEC_COND_EXPR:
+        case COND_EXPR:
+          loc = EXPR_LOCATION (x);
+          op0 = cp_fold_rvalue (TREE_OPERAND (x, 0));
+          op1 = cp_fold (TREE_OPERAND (x, 1));
+
+    	  if (!VOID_TYPE_P (TREE_TYPE (op2)))
+    	    op2 = cp_truthvalue_conversion (op2);
+    	}
+
+    
+          if (op0 != TREE_OPERAND (x, 0)
+    	  || op1 != TREE_OPERAND (x, 1)
+
+
+        case VEC_COND_EXPR:
+        case COND_EXPR:
+          loc = EXPR_LOCATION (x);
+          op0 = cp_fold_rvalue (TREE_OPERAND (x, 0));
+          op1 = cp_fold (TREE_OPERAND (x, 1));
+
+    	  if (!VOID_TYPE_P (TREE_TYPE (op2)))
+    	    op2 = cp_truthvalue_conversion (op2);
+    	}
+
+    
+          if (op0 != TREE_OPERAND (x, 0)
+    	  || op1 != TREE_OPERAND (x, 1)
+

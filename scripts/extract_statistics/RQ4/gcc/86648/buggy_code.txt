@@ -1,0 +1,7 @@
+if (TYPE_IDENTIFIER (t))
+
+      tree t = make_auto_1 (DECL_NAME (tmpl), true);
+
+    	  || TYPE_IDENTIFIER (type) == decltype_auto_identifier
+    	  || CLASS_PLACEHOLDER_TEMPLATE (type)))
+

@@ -1,0 +1,6 @@
+Commit:	ca26766
+./gcc/cp/parser.cc	30980,30980
+./gcc/cp/parser.cc	30990,30990
+Commit:	16cc91e
+./gcc/cp/parser.cc	30942,30942
+./gcc/cp/parser.cc	30952,30952

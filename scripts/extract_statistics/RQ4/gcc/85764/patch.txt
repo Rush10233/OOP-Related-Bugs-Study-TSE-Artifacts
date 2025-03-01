@@ -1,0 +1,52 @@
+&& DERIVED_FROM_P (type, nonlambda_method_basetype()))
+
+    /* Returns the method basetype of the innermost non-lambda function, including
+       a hypothetical constructor if inside an NSDMI, or NULL_TREE if none.  */
+
+      tree type = current_class_type;
+
+      while (true)
+        {
+          tree lam = CLASSTYPE_LAMBDA_EXPR (type);
+          tree ex = LAMBDA_EXPR_EXTRA_SCOPE (lam);
+          if (ex && TREE_CODE (ex) == FIELD_DECL)
+    	/* Lambda in an NSDMI.  */
+    	return DECL_CONTEXT (ex);
+    
+          tree fn = TYPE_CONTEXT (type);
+          if (!fn || TREE_CODE (fn) != FUNCTION_DECL
+    	  || !DECL_NONSTATIC_MEMBER_FUNCTION_P (fn))
+    	/* No enclosing non-lambda method.  */
+    	return NULL_TREE;
+          if (!LAMBDA_FUNCTION_P (fn))
+    	/* Found an enclosing non-lambda method.  */
+    	return TYPE_METHOD_BASETYPE (TREE_TYPE (fn));
+          type = DECL_CONTEXT (fn);
+        }
+
+&& DERIVED_FROM_P (type, nonlambda_method_basetype()))
+
+    /* Returns the method basetype of the innermost non-lambda function, including
+       a hypothetical constructor if inside an NSDMI, or NULL_TREE if none.  */
+
+      tree type = current_class_type;
+
+      while (true)
+        {
+          tree lam = CLASSTYPE_LAMBDA_EXPR (type);
+          tree ex = LAMBDA_EXPR_EXTRA_SCOPE (lam);
+          if (ex && TREE_CODE (ex) == FIELD_DECL)
+    	/* Lambda in an NSDMI.  */
+    	return DECL_CONTEXT (ex);
+    
+          tree fn = TYPE_CONTEXT (type);
+          if (!fn || TREE_CODE (fn) != FUNCTION_DECL
+    	  || !DECL_NONSTATIC_MEMBER_FUNCTION_P (fn))
+    	/* No enclosing non-lambda method.  */
+    	return NULL_TREE;
+          if (!LAMBDA_FUNCTION_P (fn))
+    	/* Found an enclosing non-lambda method.  */
+    	return TYPE_METHOD_BASETYPE (TREE_TYPE (fn));
+          type = DECL_CONTEXT (fn);
+        }
+

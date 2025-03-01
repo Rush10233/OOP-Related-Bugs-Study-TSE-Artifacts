@@ -1,0 +1,4 @@
+|| (TREE_CODE (initializer) == CONSTRUCTOR
+
+|| (TREE_CODE (initializer) == CONSTRUCTOR
+

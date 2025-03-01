@@ -1,0 +1,8 @@
+if (type == error_mark_node || size == error_mark_node)
+        return error_mark_node;
+    
+
+      /* If there are some types which cannot be array elements,
+         issue an error-message and return.  */
+      switch (TREE_CODE (type))
+

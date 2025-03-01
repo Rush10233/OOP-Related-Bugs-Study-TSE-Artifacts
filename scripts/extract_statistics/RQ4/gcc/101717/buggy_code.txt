@@ -1,0 +1,8 @@
+if (!containing_function && !COMPLETE_TYPE_P (closure))
+
+if (!containing_function && !COMPLETE_TYPE_P (closure))
+
+if (!containing_function && !COMPLETE_TYPE_P (closure))
+
+if (!containing_function && !COMPLETE_TYPE_P (closure))
+

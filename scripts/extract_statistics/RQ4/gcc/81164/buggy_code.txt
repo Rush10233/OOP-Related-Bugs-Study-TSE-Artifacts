@@ -1,0 +1,6 @@
+else if (name == ctor_identifier
+    	       && BINFO_INHERITANCE_CHAIN (BINFO_INHERITANCE_CHAIN (binfo)))
+
+else if (name == ctor_identifier
+    	       && BINFO_INHERITANCE_CHAIN (BINFO_INHERITANCE_CHAIN (binfo)))
+

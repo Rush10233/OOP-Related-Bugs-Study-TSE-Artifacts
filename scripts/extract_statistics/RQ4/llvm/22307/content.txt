@@ -1,0 +1,34 @@
+bool CheckFunctionDeclaration(Scope *S,
+                                    FunctionDecl *NewFD, LookupResult &Previous,
+                                    bool IsExplicitSpecialization);
+
+      void CheckMain(FunctionDecl *FD, const DeclSpec &D);
+      void CheckMSVCRTEntryPoint(FunctionDecl *FD);
+      Decl *ActOnParamDeclarator(Scope *S, Declarator &D);
+
+      return NewFD;
+    }
+    
+
+    /// \brief Perform semantic checking of a new function declaration.
+    ///
+    /// Performs semantic analysis of the new function declaration
+
+          }
+    
+        } else {
+
+        }
+      }
+    
+
+        // and shall be the only declaration of the function or function
+        // template in the translation unit.
+        if (functionDeclHasDefaultArgument(FD)) {
+
+            Diag(FD->getLocation(), diag::err_friend_decl_with_def_arg_redeclared);
+
+          } else if (!D.isFunctionDefinition())
+            Diag(FD->getLocation(), diag::err_friend_decl_with_def_arg_must_be_def);
+        }
+

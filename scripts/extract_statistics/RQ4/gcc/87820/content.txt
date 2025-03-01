@@ -1,0 +1,40 @@
+extern tree build_aggr_init			(tree, tree, int,
+                                                     tsubst_flags_t);
+    extern int is_class_type			(tree, int);
+
+    extern tree build_zero_init			(tree, tree, bool);
+    extern tree build_value_init			(tree, tsubst_flags_t);
+    extern tree build_value_init_noctor		(tree, tsubst_flags_t);
+
+      if (type == error_mark_node)
+        return;
+    
+
+      /* Warn about register storage specifiers except when in GNU global
+         or local register variable extension.  */
+      if (VAR_P (decl) && DECL_REGISTER (decl) && asmspec_tree == NULL_TREE)
+
+          return stmt_expr;
+        }
+    
+
+        flags |= LOOKUP_ONLYCONVERTING;
+    
+      is_global = begin_init_stmts (&stmt_expr, &compound_stmt);
+
+      return 1;
+    }
+    
+
+    /* Build a reference to a member of an aggregate.  This is not a C++
+       `&', but really something which can have its address taken, and
+       then act as a pointer to member, for example TYPE :: FIELD can have
+
+    	      const_init
+    		= DECL_INITIALIZED_BY_CONSTANT_EXPRESSION_P (code_pattern);
+    	      cp_finish_decl (d, init, /*init_const_expr_p=*/const_init,
+
+    	    }
+    	  if (enter_context)
+    	    pop_nested_class ();
+

@@ -1,0 +1,66 @@
+r = genericize_spaceship (type, lhs, rhs);
+
+      return genericize_spaceship (type, op0, op1);
+
+    extern tree genericize_spaceship		(tree, tree, tree);
+
+    /* Turn <=> with type TYPE and operands OP0 and OP1 into GENERIC.  */
+
+    genericize_spaceship (tree type, tree op0, tree op1)
+
+      op0 = save_expr (op0);
+      op1 = save_expr (op1);
+
+    	 op0 > op1 ? greater : unordered */
+
+          tree comp = fold_build2 (GT_EXPR, boolean_type_node, op0, op1);
+          r = fold_build3 (COND_EXPR, type, comp, gt, uo);
+
+      tree comp = fold_build2 (LT_EXPR, boolean_type_node, op0, op1);
+      r = fold_build3 (COND_EXPR, type, comp, lt, r);
+
+      comp = fold_build2 (EQ_EXPR, boolean_type_node, op0, op1);
+      r = fold_build3 (COND_EXPR, type, comp, eq, r);
+    
+      /* Wrap the whole thing in a TARGET_EXPR like build_conditional_expr_1.  */
+      r = get_target_expr (r);
+
+      int flags = LOOKUP_NORMAL | LOOKUP_NONVIRTUAL | LOOKUP_DEFAULTED;
+
+    		inform (DECL_SOURCE_LOCATION (field), "cannot default compare "
+
+    		inform (DECL_SOURCE_LOCATION (field), "cannot default compare "
+
+    	  tree comp = build_new_op (info.loc, code, flags, lhs_mem, rhs_mem,
+    				    NULL_TREE, NULL, complain);
+
+    	      bad = true;
+    	      continue;
+
+    	  if (code == SPACESHIP_EXPR
+    	      && cat_tag_for (TREE_TYPE (comp)) == cc_last)
+
+    		inform (DECL_SOURCE_LOCATION (field),
+
+if (SCALAR_TYPE_P (TREE_TYPE (op0)))
+
+          tree comp = build_new_op (loc, LT_EXPR, flags, op1, op0, complain);
+          r = build_conditional_expr (loc, comp, gt, uo, complain);
+
+      tree comp = build_new_op (loc, LT_EXPR, flags, op0, op1, complain);
+      r = build_conditional_expr (loc, comp, lt, r, complain);
+
+      comp = build_new_op (loc, EQ_EXPR, flags, op0, op1, complain);
+      r = build_conditional_expr (loc, comp, eq, r, complain);
+
+if (SCALAR_TYPE_P (TREE_TYPE (op0)))
+
+          tree comp = build_new_op (loc, LT_EXPR, flags, op1, op0, complain);
+          r = build_conditional_expr (loc, comp, gt, uo, complain);
+
+      tree comp = build_new_op (loc, LT_EXPR, flags, op0, op1, complain);
+      r = build_conditional_expr (loc, comp, lt, r, complain);
+
+      comp = build_new_op (loc, EQ_EXPR, flags, op0, op1, complain);
+      r = build_conditional_expr (loc, comp, eq, r, complain);
+

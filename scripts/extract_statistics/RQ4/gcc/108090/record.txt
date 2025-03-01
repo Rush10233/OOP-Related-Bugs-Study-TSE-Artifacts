@@ -1,0 +1,7 @@
+Commit:	57ab371
+./gcc/cp/parser.cc	21711,21711
+./gcc/cp/pt.cc	14966,14966
+./gcc/cp/pt.cc	14969,14972
+./gcc/cp/pt.cc	14974,14986
+./gcc/cp/pt.cc	14991,14996
+./gcc/cp/pt.cc	14998,14999

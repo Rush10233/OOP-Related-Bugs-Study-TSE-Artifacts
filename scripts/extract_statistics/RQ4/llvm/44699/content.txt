@@ -1,0 +1,106 @@
+}
+      };
+    
+
+      /// EnterScope - Start a new scope.
+      void EnterScope(unsigned ScopeFlags);
+    
+      /// ExitScope - Pop a scope off the scope stack.
+      void ExitScope();
+    
+
+    private:
+      /// RAII object used to modify the scope flags for the current scope.
+      class ParseScopeFlags {
+
+        Decl *D;
+        CachedTokens Toks;
+    
+
+    
+        void ParseLexedMethodDefs() override;
+      };
+
+      /// argument (C++ [class.mem]p2).
+      struct LateParsedMethodDeclaration : public LateParsedDeclaration {
+        explicit LateParsedMethodDeclaration(Parser *P, Decl *M)
+
+    
+        void ParseLexedMethodDeclarations() override;
+    
+
+        /// Method - The method declaration.
+        Decl *Method;
+    
+        /// DefaultArgs - Contains the parameters of the function and
+        /// their default arguments. At least one of the parameters will
+        /// have a default argument, but all of the parameters of the
+
+      /// parsed after the corresponding top-level class is complete.
+      struct ParsingClass {
+        ParsingClass(Decl *TagOrTemplate, bool TopLevelClass, bool IsInterface)
+
+    
+        /// Whether this is a "top-level" class, meaning that it is
+        /// not nested within another class.
+        bool TopLevelClass : 1;
+    
+        /// Whether this class is an __interface.
+        bool IsInterface : 1;
+    
+
+        SourceRange getSourceRange() const LLVM_READONLY;
+      };
+    
+
+      void LexTemplateFunctionForLateParsing(CachedTokens &Toks);
+      void ParseLateTemplatedFuncDef(LateParsedTemplate &LPT);
+    
+
+          DeclaratorContext Context, const ParsedTemplateInfo &TemplateInfo,
+          ParsingDeclRAIIObject &DiagsFromParams, SourceLocation &DeclEnd,
+          ParsedAttributes &AccessAttrs, AccessSpecifier AS = AS_none);
+
+                                   SmallVectorImpl<NamedDecl *> &TemplateParams,
+                                   SourceLocation &LAngleLoc,
+                                   SourceLocation &RAngleLoc);
+
+      /// declared in.
+      bool isDeclScope(const Decl *D) const { return DeclsInScope.count(D) != 0; }
+    
+
+    
+      /// Determine whether any unrecoverable errors have occurred within this
+      /// scope. Note that this may return false even if the scope contains invalid
+
+                         Decl *EnumDecl, ArrayRef<Decl *> Elements, Scope *S,
+                         const ParsedAttributesView &Attr);
+    
+      /// Set the current declaration context until it gets popped.
+      void PushDeclContext(Scope *S, DeclContext *DC);
+      void PopDeclContext();
+
+      void EnterDeclaratorContext(Scope *S, DeclContext *DC);
+      void ExitDeclaratorContext(Scope *S);
+    
+
+      /// Push the parameters of D, which must be a function, into scope.
+      void ActOnReenterFunctionContext(Scope* S, Decl* D);
+      void ActOnExitFunctionContext();
+
+      void ActOnFinishCXXNonNestedClass();
+    
+      void ActOnReenterCXXMethodParameter(Scope *S, ParmVarDecl *Param);
+
+      void ActOnStartDelayedMemberDeclarations(Scope *S, Decl *Record);
+      void ActOnStartDelayedCXXMethodDeclaration(Scope *S, Decl *Method);
+      void ActOnDelayedCXXMethodParameter(Scope *S, Decl *Param);
+
+    }
+    
+    bool Decl::isTemplated() const {
+
+      // is within (lexcially for a friend, semantically otherwise) a dependent
+      // context.
+      // FIXME: Should local extern declarations be treated like friends?
+

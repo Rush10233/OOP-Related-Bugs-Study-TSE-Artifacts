@@ -1,0 +1,6 @@
+call = build2 (COMPOUND_EXPR, TREE_TYPE (call), a, call);
+
+call = build2 (COMPOUND_EXPR, TREE_TYPE (call), a, call);
+
+call = build2 (COMPOUND_EXPR, TREE_TYPE (call), a, call);
+

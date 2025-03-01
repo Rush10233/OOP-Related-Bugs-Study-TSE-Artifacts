@@ -1,0 +1,32 @@
+template <typename T> struct S {};
+          template <typename T> struct S<T*> {};
+          
+
+    #define CLASSTYPE_TI_TEMPLATE(NODE) TI_TEMPLATE (CLASSTYPE_TEMPLATE_INFO (NODE))
+    #define CLASSTYPE_TI_ARGS(NODE)     TI_ARGS (CLASSTYPE_TEMPLATE_INFO (NODE))
+    
+
+    		  type_specializations->remove_elt (&elt);
+    
+    		  elt.tmpl = tmpl;
+
+    
+    		  spec_entry **slot
+    		    = type_specializations->find_slot (&elt, INSERT);
+
+    		   : (TREE_CODE (found) == TYPE_DECL
+    		      ? DECL_TI_TEMPLATE (found)
+    		      : CLASSTYPE_TI_TEMPLATE (found)));
+
+    	}
+    
+          // Build template info for the new specialization.
+          SET_TYPE_TEMPLATE_INFO (t, build_template_info (found, arglist));
+    
+          elt.spec = t;
+          slot = type_specializations->find_slot_with_hash (&elt, hash, INSERT);
+
+          entry = ggc_alloc<spec_entry> ();
+          *entry = elt;
+          *slot = entry;
+

@@ -1,0 +1,24 @@
+/* Avoid wrapping an aggregate value in a NOP_EXPR.  */
+      if (TREE_CODE (temp) == CONSTRUCTOR)
+        return build_constructor (type, CONSTRUCTOR_ELTS (temp));
+
+      gcc_assert (scalarish_type_p (type));
+      return cp_fold_convert (type, temp);
+    }
+
+/* Avoid wrapping an aggregate value in a NOP_EXPR.  */
+      if (TREE_CODE (temp) == CONSTRUCTOR)
+        return build_constructor (type, CONSTRUCTOR_ELTS (temp));
+
+      gcc_assert (scalarish_type_p (type));
+      return cp_fold_convert (type, temp);
+    }
+
+/* Avoid wrapping an aggregate value in a NOP_EXPR.  */
+      if (TREE_CODE (temp) == CONSTRUCTOR)
+        return build_constructor (type, CONSTRUCTOR_ELTS (temp));
+
+      gcc_assert (scalarish_type_p (type));
+      return cp_fold_convert (type, temp);
+    }
+

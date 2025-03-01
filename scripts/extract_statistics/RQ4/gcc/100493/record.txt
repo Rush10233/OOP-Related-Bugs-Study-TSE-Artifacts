@@ -1,0 +1,14 @@
+Commit:	648d5aa
+./gcc/cp/parser.c	11026,11026
+./gcc/cp/parser.c	11028,11029
+./gcc/testsuite/g++.dg/cpp1z/lambda-this1.C	21,21
+./gcc/testsuite/g++.dg/cpp1z/lambda-this1.C	30,30
+./gcc/testsuite/g++.dg/cpp1z/lambda-this1.C	32,32
+./gcc/testsuite/g++.dg/cpp1z/lambda-this1.C	35,35
+Commit:	a5d269f
+./gcc/cp/parser.c	11187,11187
+./gcc/cp/parser.c	11189,11190
+./gcc/testsuite/g++.dg/cpp1z/lambda-this1.C	21,21
+./gcc/testsuite/g++.dg/cpp1z/lambda-this1.C	30,30
+./gcc/testsuite/g++.dg/cpp1z/lambda-this1.C	32,32
+./gcc/testsuite/g++.dg/cpp1z/lambda-this1.C	35,35

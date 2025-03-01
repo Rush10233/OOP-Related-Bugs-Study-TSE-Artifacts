@@ -1,0 +1,11 @@
+CXXConstructorDecl *CalleeDecl = Constructor;
+
+          CalleeDecl = S.findInheritingConstructor(Loc, Constructor, Shadow);
+          if (S.DiagnoseUseOfDecl(CalleeDecl, Loc))
+
+        S.MarkFunctionReferenced(Loc, CalleeDecl);
+
+                S.Context, CalleeDecl,
+
+            CalleeDecl);
+

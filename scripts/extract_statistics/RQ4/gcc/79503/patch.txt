@@ -1,0 +1,4 @@
+tree btype = DECL_INHERITED_CTOR_BASE (fn);
+          if (reference_related_p (ptype, dtype)
+    	  && reference_related_p (btype, ptype))
+

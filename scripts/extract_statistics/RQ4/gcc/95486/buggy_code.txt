@@ -1,0 +1,16 @@
+set_constraints (fprime, ci);
+
+gcc_assert (!err);
+
+    	    return error_mark_node;
+
+    	    return error_mark_node;
+
+set_constraints (fprime, ci);
+
+gcc_assert (!err);
+
+    	    return error_mark_node;
+
+    	    return error_mark_node;
+

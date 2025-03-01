@@ -1,0 +1,8 @@
+compound_literal = digest_init_flags (type, compound_literal,
+    					LOOKUP_NORMAL | LOOKUP_NO_NARROWING,
+    					complain);
+
+      /* If we're in a template, return the original compound literal.  */
+      if (orig_cl)
+        {
+

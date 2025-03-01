@@ -1,0 +1,12 @@
+r = cxx_eval_constant_expression (ctx, fold_sizeof_expr (t), lval,
+    					non_constant_p, overflow_p,
+    					jump_target);
+
+      if (processing_template_decl)
+
+r = cxx_eval_constant_expression (ctx, fold_sizeof_expr (t), lval,
+    					non_constant_p, overflow_p,
+    					jump_target);
+
+      if (processing_template_decl)
+

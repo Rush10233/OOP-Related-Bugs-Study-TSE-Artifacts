@@ -1,0 +1,36 @@
+{
+           cnt_mismatch:
+    	  if (count > eltscnt)
+
+    	  else
+
+    	  goto error_out;
+    	}
+          eltype = TREE_TYPE (type);
+
+    			 "constant expression", type);
+    	  goto error_out;
+    	}
+
+          eltscnt = tree_to_uhwi (tsize);
+          if (count != eltscnt)
+    	goto cnt_mismatch;
+
+{
+           cnt_mismatch:
+    	  if (count > eltscnt)
+
+    	  else
+
+    	  goto error_out;
+    	}
+          eltype = TREE_TYPE (type);
+
+    			 "constant expression", type);
+    	  goto error_out;
+    	}
+
+          eltscnt = tree_to_uhwi (tsize);
+          if (count != eltscnt)
+    	goto cnt_mismatch;
+

@@ -1,0 +1,4 @@
+Commit:	cd394c5
+./gcc/cp/constexpr.cc	6036,6036
+Commit:	f4e4108
+./gcc/cp/constexpr.cc	5738,5738

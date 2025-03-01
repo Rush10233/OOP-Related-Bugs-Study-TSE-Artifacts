@@ -1,0 +1,16 @@
+- Update ``FunctionDeclBitfields.NumFunctionDeclBits``. This fixes:
+      (`#64171 <https://github.com/llvm/llvm-project/issues/64171>`_).
+    
+
+    Bug Fixes to AST Handling
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    - Fixed an import failure of recursive friend class template.
+
+        // C++11 [expr.rel]p4, [expr.eq]p3: If two operands of type std::nullptr_t
+        // are compared, the result is true of the operator is <=, >= or ==, and
+        // false otherwise.
+
+        return Success(CmpResult::Equal, E);
+      }
+    
+

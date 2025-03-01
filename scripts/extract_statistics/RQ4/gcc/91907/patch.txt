@@ -1,0 +1,12 @@
+[(set (reg LR_REGNO)
+
+    (define_insn "load_macho_picbase_<mode>"
+      [(set (reg:P LR_REGNO)
+    	(unspec:P [(match_operand:P 0 "immediate_operand" "s")
+
+      [(set (reg LR_REGNO)
+
+    (define_insn "reload_macho_picbase_<mode>"
+      [(set (reg:P LR_REGNO)
+            (unspec:P [(match_operand:P 0 "immediate_operand" "s")
+

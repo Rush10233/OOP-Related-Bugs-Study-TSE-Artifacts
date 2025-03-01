@@ -1,0 +1,32 @@
+static bool
+
+      tree parms1 = TYPE_ARG_TYPES (TREE_TYPE (fn1));
+      tree parms2 = TYPE_ARG_TYPES (TREE_TYPE (fn2));
+      if (DECL_FUNCTION_MEMBER_P (fn1)
+          && DECL_FUNCTION_MEMBER_P (fn2)
+          && (DECL_NONSTATIC_MEMBER_FUNCTION_P (fn1)
+    	  != DECL_NONSTATIC_MEMBER_FUNCTION_P (fn2)))
+        {
+          /* Ignore 'this' when comparing the parameters of a static member
+    	 function with those of a non-static one.  */
+          parms1 = skip_artificial_parms_for (fn1, parms1);
+          parms2 = skip_artificial_parms_for (fn2, parms2);
+        }
+      return compparms (parms1, parms2);
+
+static bool
+
+      tree parms1 = TYPE_ARG_TYPES (TREE_TYPE (fn1));
+      tree parms2 = TYPE_ARG_TYPES (TREE_TYPE (fn2));
+      if (DECL_FUNCTION_MEMBER_P (fn1)
+          && DECL_FUNCTION_MEMBER_P (fn2)
+          && (DECL_NONSTATIC_MEMBER_FUNCTION_P (fn1)
+    	  != DECL_NONSTATIC_MEMBER_FUNCTION_P (fn2)))
+        {
+          /* Ignore 'this' when comparing the parameters of a static member
+    	 function with those of a non-static one.  */
+          parms1 = skip_artificial_parms_for (fn1, parms1);
+          parms2 = skip_artificial_parms_for (fn2, parms2);
+        }
+      return compparms (parms1, parms2);
+

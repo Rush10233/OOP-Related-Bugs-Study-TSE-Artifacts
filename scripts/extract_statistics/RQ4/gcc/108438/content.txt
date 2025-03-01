@@ -1,0 +1,8 @@
+NULL);
+    	parser->in_type_id_in_expr_p = saved_in_type_id_in_expr_p;
+    	/* Look for the closing `>'.  */
+
+    	/* Restore the old message.  */
+    	parser->type_definition_forbidden_message = saved_message;
+    
+

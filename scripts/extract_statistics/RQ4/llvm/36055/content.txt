@@ -1,0 +1,143 @@
+void CheckFloatComparison(SourceLocation Loc, Expr* LHS, Expr* RHS);
+      void CheckImplicitConversions(Expr *E, SourceLocation CC = SourceLocation());
+      void CheckBoolLikeConversion(Expr *E, SourceLocation CC);
+      void CheckUnsequencedOperations(Expr *E);
+    
+      /// \brief Perform semantic checks on a completed expression. This will either
+
+        // the initializer list.
+        ImplicitValueInitExpr VIE(HaveInit ? Info.Ctx.IntTy : Field->getType());
+        const Expr *Init = HaveInit ? E->getInit(ElementNo++) : &VIE;
+
+    
+        // Temporarily override This, in case there's a CXXDefaultInitExpr in here.
+        ThisOverrideRAII ThisOverride(*Info.CurrentCall, &This,
+
+    }
+    
+    static bool FastEvaluateAsRValue(const Expr *Exp, Expr::EvalResult &Result,
+
+      // Fast-path evaluations of integer literals, since we sometimes see files
+      // containing vast quantities of these.
+      if (const IntegerLiteral *L = dyn_cast<IntegerLiteral>(Exp)) {
+
+      // performance problems. Only do so in C++11 for now.
+      if (Exp->isRValue() && (Exp->getType()->isArrayType() ||
+                              Exp->getType()->isRecordType()) &&
+
+        IsConst = false;
+        return true;
+      }
+
+    /// will be applied to the result.
+    bool Expr::EvaluateAsRValue(EvalResult &Result, const ASTContext &Ctx) const {
+      bool IsConst;
+
+        return IsConst;
+    
+      EvalInfo Info(Ctx, Result, EvalInfo::EM_IgnoreSideEffects);
+
+    void Expr::EvaluateForOverflow(const ASTContext &Ctx) const {
+      bool IsConst;
+      EvalResult EvalResult;
+
+        EvalInfo Info(Ctx, EvalResult, EvalInfo::EM_EvaluateForOverflow);
+        (void)::EvaluateAsRValue(Info, this, EvalResult.Val);
+      }
+
+      ::CheckBoolLikeConversion(*this, E, CC);
+    }
+    
+    namespace {
+    /// \brief Visitor for expressions which looks for unsequenced operations on the
+    /// same object.
+
+      if (!E->isInstantiationDependent())
+        CheckUnsequencedOperations(E);
+      if (!IsConstexpr && !E->isValueDependent())
+
+      DiagnoseMisalignedMembers();
+    }
+    
+
+bool FillWithNoInit = false);
+      void FillInEmptyInitializations(const InitializedEntity &Entity,
+                                      InitListExpr *ILE, bool &RequiresSecondPass,
+
+                                      bool FillWithNoInit = false);
+      bool CheckFlexibleArrayInit(const InitializedEntity &Entity,
+                                  Expr *InitExpr, FieldDecl *Field,
+
+        ILE->setInit(Init, BaseInit.getAs<Expr>());
+      } else if (InitListExpr *InnerILE =
+                     dyn_cast<InitListExpr>(ILE->getInit(Init))) {
+
+      } else if (DesignatedInitUpdateExpr *InnerDIUE =
+                   dyn_cast<DesignatedInitUpdateExpr>(ILE->getInit(Init))) {
+        FillInEmptyInitializations(BaseEntity, InnerDIUE->getUpdater(),
+
+      }
+    }
+    
+
+      } else if (InitListExpr *InnerILE
+                   = dyn_cast<InitListExpr>(ILE->getInit(Init)))
+        FillInEmptyInitializations(MemberEntity, InnerILE,
+
+      else if (DesignatedInitUpdateExpr *InnerDIUE
+                   = dyn_cast<DesignatedInitUpdateExpr>(ILE->getInit(Init)))
+        FillInEmptyInitializations(MemberEntity, InnerDIUE->getUpdater(),
+
+    }
+    
+    /// Recursively replaces NULL values within the given initializer list
+    /// with expressions that perform value-initialization of the
+
+    void
+    InitListChecker::FillInEmptyInitializations(const InitializedEntity &Entity,
+                                                InitListExpr *ILE,
+                                                bool &RequiresSecondPass,
+
+                                                bool FillWithNoInit) {
+      assert((ILE->getType() != SemaRef.Context.VoidTy) &&
+             "Should not have void type");
+    
+
+      // A transparent ILE is not performing aggregate initialization and should
+      // not be filled in.
+      if (ILE->isTransparent())
+
+        } else if (InitListExpr *InnerILE
+                     = dyn_cast_or_null<InitListExpr>(InitExpr))
+          FillInEmptyInitializations(ElementEntity, InnerILE, RequiresSecondPass,
+
+        else if (DesignatedInitUpdateExpr *InnerDIUE
+                     = dyn_cast_or_null<DesignatedInitUpdateExpr>(InitExpr))
+          FillInEmptyInitializations(ElementEntity, InnerDIUE->getUpdater(),
+
+      }
+    }
+    
+
+    
+      if (!hadError && !VerifyOnly) {
+        bool RequiresSecondPass = false;
+
+        if (RequiresSecondPass && !hadError)
+          FillInEmptyInitializations(Entity, FullyStructuredList,
+
+      }
+    }
+    
+
+          if (!hadError && !VerifyOnly) {
+            bool RequiresSecondPass = false;
+            FillInEmptyInitializations(Entity, InnerStructuredList,
+
+            if (RequiresSecondPass && !hadError)
+              FillInEmptyInitializations(Entity, InnerStructuredList,
+
+          }
+          ++StructuredIndex;
+          ++Index;
+

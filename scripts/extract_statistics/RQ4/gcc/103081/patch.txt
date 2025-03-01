@@ -1,0 +1,4 @@
+if (!uses_template_parms (DECL_CONTEXT (t)))
+
+if (!uses_template_parms (DECL_CONTEXT (t)))
+

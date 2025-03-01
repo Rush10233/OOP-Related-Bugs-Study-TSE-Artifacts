@@ -1,0 +1,8 @@
+return *getTrailingObjects<ExplicitSpecifier>();
+
+            nullptr, CXXConstructorDeclBits.IsSimpleExplicit
+
+        return getCanonicalDecl()->getExplicitSpecifierInternal();
+
+        return getCanonicalDecl()->getExplicitSpecifierInternal();
+

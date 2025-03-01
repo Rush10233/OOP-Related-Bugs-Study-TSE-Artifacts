@@ -1,0 +1,84 @@
+VariadicCallType CallType, bool AllowExplicit,
+                                      bool IsListInitialization) {
+      unsigned NumParams = Proto->getNumParams();
+      bool Invalid = false;
+      unsigned ArgIx = 0;
+      // Continue to check argument types (even if we have too few/many args).
+
+        QualType ProtoArgType = Proto->getParamType(i);
+    
+        Expr *Arg;
+
+        if (ArgIx < Args.size()) {
+          Arg = Args[ArgIx++];
+    
+
+                                  diag::err_call_incomplete_argument, Arg))
+            return true;
+    
+          // Strip the unbridged-cast placeholder expression off, if applicable.
+          bool CFAudited = false;
+          if (Arg->getType() == Context.ARCUnbridgedCastTy &&
+
+          // Remember that parameter belongs to a CF audited API.
+          if (CFAudited)
+            Entity.setParameterCFAudited();
+
+          ExprResult ArgE = PerformCopyInitialization(Entity,
+                                                      SourceLocation(),
+                                                      Owned(Arg),
+
+    
+          Arg = ArgE.takeAs<Expr>();
+        } else {
+
+    
+          ExprResult ArgExpr =
+            BuildCXXDefaultArgExpr(CallLoc, FDecl, Param);
+
+    
+      SmallVector<Expr *, 8> AllPlaceArgs;
+      if (OperatorNew) {
+        const FunctionProtoType *Proto =
+
+    
+
+        if (GatherArgumentsForCall(PlacementLParen, OperatorNew, Proto, 1,
+                                   PlacementArgs, AllPlaceArgs, CallType))
+          return ExprError();
+    
+        if (!AllPlaceArgs.empty())
+          PlacementArgs = AllPlaceArgs;
+    
+
+        DiagnoseSentinelCalls(OperatorNew, PlacementLParen, PlacementArgs);
+    
+        // FIXME: Missing call to CheckFunctionCall or equivalent
+
+        return false;
+      }
+    
+      // C++ [expr.new]p19:
+      //
+      //   If the new-expression begins with a unary :: operator, the
+
+      return false;
+    }
+    
+
+    bool Sema::FindAllocationOverload(SourceLocation StartLoc, SourceRange Range,
+                                      DeclarationName Name, MultiExprArg Args,
+                                      DeclContext *Ctx,
+
+      case OR_Success: {
+        // Got one!
+        FunctionDecl *FnDecl = Best->Function;
+        if (CheckAllocationAccess(StartLoc, Range, R.getNamingClass(),
+                                  Best->FoundDecl, Diagnose) == AR_inaccessible)
+          return true;
+    
+
+        return false;
+      }
+    
+

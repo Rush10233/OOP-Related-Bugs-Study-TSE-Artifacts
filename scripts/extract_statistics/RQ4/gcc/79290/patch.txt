@@ -1,0 +1,5 @@
+tree res = build_simple_component_ref (ptrmem, member);
+    
+      TREE_NO_WARNING (res) = 1;
+      return res;
+

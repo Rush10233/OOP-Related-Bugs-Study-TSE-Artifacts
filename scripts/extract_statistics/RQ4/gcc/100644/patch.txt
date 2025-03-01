@@ -1,0 +1,12 @@
+/* CWG1402 makes an implicitly deleted move op worse than other
+         candidates.  */
+      if (DECL_DELETED_FN (cand->fn) && DECL_DEFAULTED_FN (cand->fn)
+          && move_fn_p (cand->fn))
+        return false;
+
+/* CWG1402 makes an implicitly deleted move op worse than other
+         candidates.  */
+      if (DECL_DELETED_FN (cand->fn) && DECL_DEFAULTED_FN (cand->fn)
+          && move_fn_p (cand->fn))
+        return false;
+

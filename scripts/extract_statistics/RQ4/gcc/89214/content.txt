@@ -1,0 +1,16 @@
+{
+          tree elt = CONSTRUCTOR_ELT (init, 0)->value;
+          if (reference_related_p (type, TREE_TYPE (elt)))
+
+        }
+    
+      if (BRACE_ENCLOSED_INITIALIZER_P (init)
+
+{
+          tree elt = CONSTRUCTOR_ELT (stripped_init, 0)->value;
+          if (reference_related_p (type, TREE_TYPE (elt)))
+
+        }
+    
+      if (BRACE_ENCLOSED_INITIALIZER_P (stripped_init)
+

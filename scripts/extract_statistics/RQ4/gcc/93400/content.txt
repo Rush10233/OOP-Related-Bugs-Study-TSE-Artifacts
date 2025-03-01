@@ -1,0 +1,40 @@
+decl_constraints->remove (t);
+    }
+    
+
+    /* Returns the template-head requires clause for the template
+       declaration T or NULL_TREE if none.  */
+    
+
+    extern tree current_template_constraints	(void);
+    extern tree associate_classtype_constraints     (tree);
+    extern tree build_constraints                   (tree, tree);
+
+    extern tree get_template_head_requirements	(tree);
+    extern tree get_trailing_function_requirements	(tree);
+    extern tree get_shorthand_constraints           (tree);
+
+      tree reqs2 = get_trailing_function_requirements (oldfn);
+      if ((reqs1 != NULL_TREE) != (reqs2 != NULL_TREE))
+        return false;
+
+      return cp_tree_equal (reqs1, reqs2);
+    }
+    
+
+          DECL_SAVED_TREE (DECL_TEMPLATE_RESULT (new_friend))
+    	= DECL_SAVED_TREE (DECL_TEMPLATE_RESULT (decl));
+    
+
+        }
+    
+      /* The mangled name for the NEW_FRIEND is incorrect.  The function
+
+    	tree_cons (size_int (TMPL_PARMS_DEPTH (parms)
+    			     - TMPL_ARGS_DEPTH (args)),
+    		   new_vec, NULL_TREE);
+
+        }
+    
+      --processing_template_decl;
+

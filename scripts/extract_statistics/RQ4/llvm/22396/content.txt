@@ -1,0 +1,8 @@
+sema::TemplateDeductionInfo *DeductionInfo) {
+      SavedInNonInstantiationSFINAEContext =
+          SemaRef.InNonInstantiationSFINAEContext;
+
+      Invalid = CheckInstantiationDepth(PointOfInstantiation, InstantiationRange);
+      if (!Invalid) {
+        ActiveTemplateInstantiation Inst;
+

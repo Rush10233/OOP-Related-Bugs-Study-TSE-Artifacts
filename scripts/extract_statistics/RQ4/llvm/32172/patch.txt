@@ -1,0 +1,7 @@
+if (!LoopVar->isInvalidDecl() && Kind != BFRK_Check) {
+          if (auto *DD = dyn_cast<DecompositionDecl>(LoopVar))
+            for (auto *Binding : DD->bindings())
+              Binding->setType(Context.DependentTy);
+
+        }
+

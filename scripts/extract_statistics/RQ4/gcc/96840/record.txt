@@ -1,0 +1,10 @@
+Commit:	20f2928
+./gcc/cp/constraint.cc	2593,2595
+./gcc/cp/constraint.cc	2866,2870
+./gcc/testsuite/g++.dg/cpp2a/concepts-pr88395.C	4,4
+./gcc/testsuite/g++.dg/cpp2a/concepts-pr88395.C	6,6
+./gcc/testsuite/g++.dg/cpp2a/concepts-pr88395.C	20,20
+./gcc/testsuite/g++.dg/cpp2a/concepts-pr88395.C	22,23
+./gcc/testsuite/g++.dg/cpp2a/concepts-recursive-sat2.C	4,4
+./gcc/testsuite/g++.dg/cpp2a/concepts-recursive-sat2.C	12,12
+./gcc/testsuite/g++.dg/cpp2a/concepts-recursive-sat2.C	14,15

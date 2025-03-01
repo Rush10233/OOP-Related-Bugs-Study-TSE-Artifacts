@@ -1,0 +1,2 @@
+Commit:	db6a9fe
+./gcc/cp/decl2.cc	5791,5798

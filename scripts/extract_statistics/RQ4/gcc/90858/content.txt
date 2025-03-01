@@ -1,0 +1,34 @@
+return same_type_ignoring_top_level_qualifiers_p (type1, type2);
+    }
+    
+
+    /* A less strict version of fold_indirect_ref_1, which requires cv-quals to
+       match.  We want to be less strict for simple *& folding; if we have a
+       non-const temporary that we access through a const pointer, that should
+       work.  We handle this here rather than change fold_indirect_ref_1
+       because we're dealing with things like ADDR_EXPR of INTEGER_CST which
+       don't really make sense outside of constant expression evaluation.  Also
+       we want to allow folding to COMPONENT_REF, which could cause trouble
+
+    
+    static tree
+    cxx_fold_indirect_ref (location_t loc, tree type, tree op0, bool *empty_base)
+
+    	  else
+    	    return op;
+    	}
+
+        }
+      else if (TREE_CODE (sub) == POINTER_PLUS_EXPR
+
+        {
+          tree op00 = TREE_OPERAND (sub, 0);
+          tree op01 = TREE_OPERAND (sub, 1);
+    
+          STRIP_NOPS (op00);
+          if (TREE_CODE (op00) == ADDR_EXPR)
+
+        }
+      /* *(foo *)fooarrptr => (*fooarrptr)[0] */
+      else if (TREE_CODE (TREE_TYPE (subtype)) == ARRAY_TYPE
+

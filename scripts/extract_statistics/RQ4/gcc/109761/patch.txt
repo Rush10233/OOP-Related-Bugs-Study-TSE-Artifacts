@@ -1,0 +1,44 @@
+(tree);
+
+    	  noexcept_override_late_checks (decl);
+
+       noexcept-specifiers.  FNDECL is the member function that potentially
+       overrides some virtual function with the same signature.  */
+
+    noexcept_override_late_checks (tree fndecl)
+
+      tree binfo = TYPE_BINFO (DECL_CONTEXT (fndecl));
+
+(tree);
+
+    	  noexcept_override_late_checks (decl);
+
+       noexcept-specifiers.  FNDECL is the member function that potentially
+       overrides some virtual function with the same signature.  */
+
+    noexcept_override_late_checks (tree fndecl)
+
+      tree binfo = TYPE_BINFO (DECL_CONTEXT (fndecl));
+
+(tree);
+
+    	  noexcept_override_late_checks (decl);
+
+       noexcept-specifiers.  FNDECL is the member function that potentially
+       overrides some virtual function with the same signature.  */
+
+    noexcept_override_late_checks (tree fndecl)
+
+      tree binfo = TYPE_BINFO (DECL_CONTEXT (fndecl));
+
+(tree);
+
+    	  noexcept_override_late_checks (decl);
+
+       noexcept-specifiers.  FNDECL is the member function that potentially
+       overrides some virtual function with the same signature.  */
+
+    noexcept_override_late_checks (tree fndecl)
+
+      tree binfo = TYPE_BINFO (DECL_CONTEXT (fndecl));
+

@@ -1,0 +1,22 @@
+/* Unless it's really an lvalue.  */
+    	  && !(cxx_dialect >= cxx20
+
+          /* Figure out if INIT is an unparenthesized id-expression or an
+    	 unparenthesized class member access.  */
+          tree stripped_init = tree_strip_any_location_wrapper (init);
+          /* We need to be able to tell '(r)' and 'r' apart (when it's of
+    	 reference type).  Only the latter is an id-expression.  */
+          if (REFERENCE_REF_P (stripped_init)
+    	  && !REF_PARENTHESIZED_P (stripped_init))
+    	stripped_init = TREE_OPERAND (stripped_init, 0);
+          const bool id = (DECL_P (stripped_init)
+    		       || ((TREE_CODE (stripped_init) == COMPONENT_REF
+    			    || TREE_CODE (stripped_init) == SCOPE_REF)
+    			   && !REF_PARENTHESIZED_P (stripped_init)));
+
+      return (lvalue_kind (ref) == clk_rvalueref);
+
+          /* This is only interesting for class type.  */
+          if (CLASS_TYPE_P (functype)
+    	  && (moved = treat_lvalue_as_rvalue_p (retval, /*return*/true)))
+

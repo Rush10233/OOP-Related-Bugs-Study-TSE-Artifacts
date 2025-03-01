@@ -1,0 +1,132 @@
+33644	clang++-5.0 on trunk crashed
+34266	[maybe regression]: undefined behavior due to misaligned access to aligned lambda
+32994	Merge r302750 to 4.0.1
+33082	assert failure due to pack expansion of variadic generic lambda
+32638	Compiler crash (segmentation fault) on well-formed generic lambda with `noexcept(noexcept(...))` specifier
+32000	Cannot mangle swiftcall convention in MS C++ ABI
+32673	Segmentation fault with class template argument deduction and variadic template class with variadic constructor and variadic inheritance
+32696	C++1z class template argument deduction fails for variadic constructors.
+32822	clang crashes with arrays of std::complex
+32172	Segmentation fault with structured bindings inside for-loop inside template class
+35697	"Regression(r313729): Assertion `!Old || Old->getCachedLinkage() == D->getCachedLinkage()' failed for external ""C"" function definition"
+34858	clang-cl crash with constexpr ctor
+32974	Cannot deduce the noexcept constant from a function type
+31631	'if' initialization statements may trigger incorrect warning: variable 'x' is uninitialized when used here
+34913	[FIXED]: Clang crashes while building swift code.
+31931	"[Windows] Incorrect name mangling for ""vbase destructor""."
+32447	llvm/tools/clang/lib/Sema/SemaOverload.cpp: PVS-Studio: CWE-476 (NULL Pointer Dereference)
+33696	clang accepts lambda expression in template argument
+31638	diagnose_if generates duplicate diagnostics
+34942	Implement __has_unique_object_representations for C++17
+31934	Functions with non-tautological enable_if conditions shouldn't be assignable to references
+32467	Assertion failure with deducing template parameters for tuple constructor (C++17)
+34273	"`auto x = true[""Oh really?""];` does not compile (https://godbolt.org/g/XJBGdp)"
+31639	diagnose_if triggers an assertion failure when disabling a constructor.
+34970	Class template argument deduction mishandles std::optional
+32557	thread_local data member of a class template is constructed on each access when the argument is a local structure
+34368	Const-qualified derived object can call a non-const base member-function.
+31640	diagnose_if generates better diagnostics as a warning
+34973	wrong -Wexceptions warning generated with two encapsulated try catch in a a noexcept function
+32563	Fold expression with >> or > does not compile
+33778	Destructor not generated for std::function<void()>
+31692	"After r291318: Assertion failed: (it != OpaqueRValues.end() && ""no mapping for opaque value!""), function getOpaqueRValueMapping, file tools/clang/lib/CodeGen/CodeGenFunction.h, line 2008."
+34982	[coroutines] assertion failure diagnosing bad coroutine await_suspend function
+31978	"Assertion `isa<TypeDecl>(D) && ""Unsupported decl kind""' failed."
+35340	Incorrect -Wunsequenced warning in correct C++17 code with new evaluation order rules
+31701	ICE when initializing a const class with a class static variable template
+35381	C++17 if-with-initializer doesn't compile with empty init-statement
+33158	Constant expression cast to virtual base crashes
+34644	extern template turns constexpr into non-constexpr
+31703	DCE optimization lost after manual inlining
+34984	[coroutines] accepts-invalid and codegen crash on missing await_resume function
+33168	"Assertion `isa<X>(Val) && ""cast<Ty>() argument of incompatible type!""' failed with template destructor error"
+34668	P0704R1 implementation is too permissive
+31742	Empty list initializer in dynamically-sized array operator new fails pedantic checks
+34988	(void) cast does not silence [[nodiscard]] volatile int& f()
+35466	Type deduction failure for explicit conversion operator with auto type
+34754	"static data member ""unresolved external symbol"" if constexpr is used in its definition"
+31751	Compilation not completing for gnomon_engine.cpp of BlastC++
+35019	class type template parameter deduction from constructor taking a pointer to member function is broken (works in gcc)
+33189	Clang crashes on template destructor declaration
+34776	C++17 Class template argument deduction -Wundefined-func-template warning
+31783	"Assertion failed: !A->getDeducedType().isNull() && ""cannot request the size of an undeduced or dependent auto type"", file llvm\tools\clang\lib\AST\ASTContext.cpp, line 1884"
+35027	Clang fails to compile inline variable in class template
+35599	ICE on inline statics + template specialization
+31815	spurious Wunused-lambda-capture warning?
+35028	Clang does not use the strictest alignas in templates
+35637	Really bad codegen for libc++ vector
+31831	clang-cl does not evaluate arguments left-to-right in initializer-list constructor call
+35039	Crash with GNU's ?: operator when guaranteed copy elision (c++17) is enabled
+32891	Internal Compiler Error on wrong c++1z code
+34161	fold expression (pack, ...) with empty pack is not constexpr
+31507	Call to friend function template of a class template considered ambiguous
+31846	clang crashes on valid C++14 code with -std=c++11: UNREACHABLE executed at /path/to/CodeGenTypes.cpp:485!
+35045	Class template argument deduction mishandles std::chrono::time_point
+32898	Overloaded method pointer's public/private access isn't resolved correctly
+33314	Clang emits a useless warning with class template deduction
+31514	Segfault when evaluating alias template in class template specialization.
+34822	Implicitly defined functions don't cause redefinition errors
+31852	Friend declaration not picked up for function with auto-deduced return type
+35066	Clang never gives hidden visibility to fundamental types, even with -fvisibility=hidden
+32185	template template parameters not matched correctly when they contain non-type template parameters
+34185	Infinite loop during function instantiation under -fdelayed-template-parsing with 'auto' return type
+31854	Clang-CL compiles __fastfail intrinsic but fails to link
+35077	Incorrect overload resolution dependent on instantiation order
+32955	Crash in infinite loop trying to find a proper constructor
+33473	operator new(size_t) can't have hidden visibility
+34190	Core dump when printing error with invalid range-based for loop
+31606	regression, using parent constructor enables illegal implicit casts
+31893	[MS-ABI] Verifier failure: inlinable function call in a function with debug info must have a !dbg location
+35089	clang abort/assertion in SelectionDag.cpp:6952 while compiling chrome
+34219	SLP vectorizer: aligned store to unaligned address
+35101	"Assertion ""Trying to aggregate-copy a type without a trivial copy/move contructor or assignment operator"" failed"
+32990	clang emits inline copy of complete object destructor for dllimport classes with virtual bases
+35146	dllexported classes don't emit typeinfo (often enough) in the itanium ABI
+32992	Static const members in base classes are not dllexported
+33746	[modules] static data member already has an initializer
+31958	Clang-CL compiles __int2c intrinsic but fails to link
+35174	"clang-cl ""cannot mangle this built-in __float128 type"" due to promotions"
+33762	Segfault due to stack overflow on infinite template instantiation depth
+31977	Spurious -Wunused-lambda-capture for RAII object (e.g. reference-counted pointer)
+35191	"SemaDeclCXX.cpp: Assertion `IdentLoc.isValid() && ""Invalid TargetName location.""' failed."
+34402	Code completion shows implicitly deleted copy constructor
+33117	Clang does not support libstdc++ 7.1.1 optional
+33796	availability attributes override visibility
+34520	user defined deduction guide isn't found in case of nested template class
+34983	[coroutines] diagnostics for missing coroutine promise members produce invalid typo corrections
+33839	[C++1z] Bogus warning of unused variable during range-based iteration of templated type
+32010	Crash on libstdc++ trunk
+35435	Member access to incomplete type from dllimport
+32725	Assertion failed: (BaseType->isPointerType()), function BuildMemberReferenceExpr, file llvm/tools/clang/lib/Sema/SemaExprMember.cpp, line 990
+33843	[C++1z] Segfault when attempting recovery of an error
+32025	"Assertion failed: isa<TypeDecl>(D) && ""Unsupported decl kind"" while trying template deduction guide"
+32732	Clang crashes on code completion in comment [clang::Lexer::Lex (this=0x0, Result=...), clang::Preprocessor::Lex (this=0x450df0, Result=...)]
+33178	CXXMangler crash on ChakraCore
+33904	Completion provides no OVERLOAD/CXCursor_OverloadCandidate items for static member functions
+32028	Code leads to unreachable in llvm::DIType *CGDebugInfo::CreateTypeNode(QualType Ty, llvm::DIFile *Unit)
+35586	"clang crashes on valid C++ code: Assertion `T->isIntegralType(Context) && ""Integral type required!""' failed"
+33912	Add -std=c++17
+32034	"Assert-on-valid: ""temporary created multiple times"""
+32846	[[nodiscard]] attribute cannot be applied to a lambda.
+33222	Compilation error for std::variant using GCC's 7.1 libstdc++
+33916	std::byte implementation half-baked
+34796	explicit instantiation declaration of class template causes static constexpr member to be considered not a constant expression
+32044	"tools/clang/lib/AST/Expr.cpp:1876: bool clang::InitListExpr::isTransparent() const: Assertion `getNumInits() == 1 && ""multiple inits in glvalue init list""' failed"
+35655	"Non-type ""auto"" template parameter of member function of class template fails to compile"
+32860	Modifying data member when passing temporary to function accepting T const & not considered constexpr
+33226	"[coroutines] ICE ""Pass 'Coroutine Elision' is not initialized"" with -fcoroutines-ts -O0"
+34091	Explicit type conversion failed to compile with class template argument deduction
+34805	Regression(314461 or 314462): clang-cl can no longer compile COM code
+32046	false positive for -Wunused-member-function when in anonymous namespace
+35677	__int128_t or __uint128_t as non-type template parameter causes crash when considering invalid constructor
+33295	Deduction-guide preferred over more specialized function template
+34816	"diagnostic attributes (unavailable, diagnose_if, etc.) do not trigger on ""operator delete"""
+34163	using 'class name' causes vtable to not be emitted when compiling with -g
+35700	Intentional fallthrough in SemaTemplateDeduction.cpp?
+32933	crash on lambda capture of VLA
+33471	Crash with 'operator auto'
+31526	[[nodiscard]] attribute on a type is ignored when returned from a function pointer call.
+32375	Wrong constexpr in c++1z mode (affects boost::hana::unique)
+35772	Function pointer to __declspec(dllimport) function not constant in /std:c++latest, works in /std:c++14
+34912	Brace-init of const type to non-const reference produces error message with missing/incorrect types
+32443	C++17: Declaration of variable of template type with default initialization and all default template arguments is rejected

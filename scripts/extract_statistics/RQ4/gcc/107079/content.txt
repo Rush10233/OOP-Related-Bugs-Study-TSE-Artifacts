@@ -1,0 +1,16 @@
+
+      /* If the initializer is constant, put it in DECL_INITIAL so we get
+         static initialization and use in constant expressions.  */
+
+      /* As in store_init_value.  */
+      init = cp_fully_fold (init);
+      if (TREE_CONSTANT (init))
+
+
+      /* If the initializer is constant, put it in DECL_INITIAL so we get
+         static initialization and use in constant expressions.  */
+
+      /* As in store_init_value.  */
+      init = cp_fully_fold (init);
+      if (TREE_CONSTANT (init))
+

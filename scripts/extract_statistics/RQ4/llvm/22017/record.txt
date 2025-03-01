@@ -1,0 +1,9 @@
+Commit:	99b0a9c
+./clang/lib/AST/ASTDiagnostic.cpp	1006,1006
+./clang/lib/AST/ASTDiagnostic.cpp	1008,1008
+./clang/lib/AST/ASTDiagnostic.cpp	1029,1029
+./clang/lib/AST/ASTDiagnostic.cpp	1031,1031
+./clang/lib/AST/ASTDiagnostic.cpp	1213,1213
+./clang/lib/AST/ASTDiagnostic.cpp	1215,1215
+Commit:	f4ea3d3
+./clang/lib/AST/TemplateBase.cpp	45,45

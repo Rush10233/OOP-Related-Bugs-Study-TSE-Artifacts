@@ -1,0 +1,3 @@
+if (typespec_loc == UNKNOWN_LOCATION)
+        typespec_loc = input_location;
+

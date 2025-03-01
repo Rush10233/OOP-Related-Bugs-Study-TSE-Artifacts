@@ -1,0 +1,8 @@
+templates, assume S::p to name a type.  Otherwise,
+    		       don't.  */
+    		    tree decl
+
+    		    if (!is_overloaded_fn (decl)
+    			/* Allow
+    			   template<typename T>
+

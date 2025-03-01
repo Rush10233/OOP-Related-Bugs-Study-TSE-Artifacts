@@ -1,0 +1,5 @@
+if (TREE_CODE (expr) != DEFERRED_NOEXCEPT)
+    	/* Avoid problems with a function type built with a dependent typedef
+    	   being reused in another scope (c++/84045).  */
+    	expr = strip_typedefs_expr (expr);
+

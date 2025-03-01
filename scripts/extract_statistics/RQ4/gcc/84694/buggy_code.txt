@@ -1,0 +1,2 @@
+declarator = OVL_NAME (declarator);
+

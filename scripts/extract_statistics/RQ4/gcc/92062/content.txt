@@ -1,0 +1,16 @@
+static bool
+    has_value_dependent_address (tree op)
+    {
+
+      /* We could use get_inner_reference here, but there's no need;
+         this is only relevant for template non-type arguments, which
+         can only be expressed as &id-expression.  */
+
+static bool
+    has_value_dependent_address (tree op)
+    {
+
+      /* We could use get_inner_reference here, but there's no need;
+         this is only relevant for template non-type arguments, which
+         can only be expressed as &id-expression.  */
+

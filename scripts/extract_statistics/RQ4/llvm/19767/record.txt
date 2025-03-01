@@ -1,0 +1,12 @@
+Commit:	e919fca
+./llvm/lib/CodeGen/AsmPrinter/DwarfUnit.cpp	752,753
+Commit:	d978ca0
+./clang/include/clang/Basic/SourceManager.h	757,757
+./clang/include/clang/Basic/SourceManager.h	813,813
+./clang/include/clang/Basic/SourceManager.h	815,816
+./clang/lib/AST/ASTImporter.cpp	4926,4927
+./clang/lib/CodeGen/CodeGenAction.cpp	252,252
+./clang/lib/Lex/Preprocessor.cpp	482,482
+./clang/lib/Lex/ScratchBuffer.cpp	68,68
+./clang/lib/Serialization/ASTReader.cpp	1252,1253
+./clang/unittests/AST/CommentLexer.cpp	64,64

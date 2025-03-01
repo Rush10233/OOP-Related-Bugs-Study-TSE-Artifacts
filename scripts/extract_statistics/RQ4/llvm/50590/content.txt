@@ -1,0 +1,16 @@
+
+    void DeclRefExpr::setDecl(ValueDecl *NewD) {
+      D = NewD;
+
+      setDependence(computeDependence(this, NewD->getASTContext()));
+    }
+    
+
+      return new (Mem) MemberExpr(EmptyShell());
+    }
+    
+
+      setDependence(computeDependence(this));
+    }
+    
+

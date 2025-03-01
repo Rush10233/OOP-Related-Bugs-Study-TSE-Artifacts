@@ -1,0 +1,3 @@
+if (fixed == NULL_TREE)
+        return 0;
+

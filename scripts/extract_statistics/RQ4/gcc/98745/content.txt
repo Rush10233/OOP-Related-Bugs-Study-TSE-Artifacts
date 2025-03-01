@@ -1,0 +1,10 @@
+if (SSA_NAME_VAR (e))
+    	{
+    	  tree var = SSA_NAME_VAR (e);
+
+    	    {
+
+    	    }
+    	  else
+    	    primary_expression (var);
+

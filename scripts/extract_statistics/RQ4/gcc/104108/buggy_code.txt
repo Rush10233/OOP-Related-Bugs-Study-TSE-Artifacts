@@ -1,0 +1,4 @@
+const bool val_dep_p = value_dependent_expression_p (expr);
+
+const bool val_dep_p = value_dependent_expression_p (expr);
+

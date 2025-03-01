@@ -1,0 +1,6 @@
+else if (STRIP_ANY_LOCATION_WRAPPER (*valp),
+    	       TREE_CODE (*valp) == STRING_CST)
+
+else if (STRIP_ANY_LOCATION_WRAPPER (*valp),
+    	       TREE_CODE (*valp) == STRING_CST)
+

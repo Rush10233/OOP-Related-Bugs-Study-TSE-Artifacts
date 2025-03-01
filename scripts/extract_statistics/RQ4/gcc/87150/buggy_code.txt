@@ -1,0 +1,5 @@
+being bound to an rvalue expression.  If KIND is ck_rvalue,
+
+         KIND is ck_base, always false.  If ck_identity, we will be
+         binding a reference directly or decaying to a pointer.  */
+

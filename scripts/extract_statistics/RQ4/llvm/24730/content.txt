@@ -1,0 +1,8 @@
+MismatchingNewDeleteDetector::MismatchResult
+    MismatchingNewDeleteDetector::analyzeInClassInitializer() {
+      assert(Field != nullptr && "This should be called only for members");
+
+        if (NE->isArray() != IsArrayForm) {
+          NewExprs.push_back(NE);
+          return MemberInitMismatches;
+

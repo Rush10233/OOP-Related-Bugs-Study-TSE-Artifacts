@@ -1,0 +1,111 @@
+}
+    
+    /* Some expressions may have constant operands but are not constant
+
+    
+       We only call this in places that require an arithmetic constant, not in
+       places where we might have a non-constant expression that can be a
+
+    				       non_constant_p, overflow_p);
+          break;
+    
+
+        case CONVERT_EXPR:
+        case VIEW_CONVERT_EXPR:
+        case UNARY_PLUS_EXPR:
+          {
+    	tree oldop = TREE_OPERAND (t, 0);
+
+    	if (TREE_CODE (op) == PTRMEM_CST
+    	    && !TYPE_PTRMEM_P (type))
+    	  op = cplus_expand_constant (op);
+
+    	if (TREE_CODE (op) == PTRMEM_CST && tcode == NOP_EXPR)
+    	  {
+
+    	  }
+    
+    	if (POINTER_TYPE_P (type) && TREE_CODE (op) == INTEGER_CST)
+
+    		return t;
+    	      }
+    	  }
+
+    	if (op == oldop && tcode != UNARY_PLUS_EXPR)
+    	  /* We didn't fold at the top so we could check for ptr-int
+    	     conversion.  */
+    	  return fold (t);
+
+    	if (tcode == UNARY_PLUS_EXPR)
+    	  r = fold_convert (TREE_TYPE (t), op);
+    	else
+    	  r = fold_build1 (tcode, type, op);
+
+    	/* Conversion of an out-of-range value has implementation-defined
+    	   behavior; the language considers it different from arithmetic
+    	   overflow, which is undefined.  */
+
+          TEMPLATE_TYPE_PARM_FOR_CLASS (TEMPLATE_TYPE_PARM)
+          DECL_NAMESPACE_INLINE_P (in NAMESPACE_DECL)
+          SWITCH_STMT_ALL_CASES_P (in SWITCH_STMT)
+
+          ALIGNOF_EXPR_STD_P (in ALIGNOF_EXPR)
+       1: IDENTIFIER_KIND_BIT_1 (in IDENTIFIER_NODE)
+          TI_PENDING_TEMPLATE_FLAG.
+
+    #define COND_EXPR_IS_VEC_DELETE(NODE) \
+      TREE_LANG_FLAG_0 (COND_EXPR_CHECK (NODE))
+    
+
+    /* Returns nonzero iff TYPE1 and TYPE2 are the same type, in the usual
+       sense of `same'.  */
+    #define same_type_p(TYPE1, TYPE2) \
+
+      return build_nop (type, expr);
+    }
+    
+
+    /* Return a representation for a reinterpret_cast from EXPR to TYPE.
+       If C_CAST_P is true, this reinterpret cast is being done as part of
+       a C-style cast.  If VALID_P is non-NULL, *VALID_P is set to
+
+    	warning (OPT_Wcast_function_type,
+    		 "cast between incompatible function types"
+    		 " from %qH to %qI", intype, type);
+
+        }
+      else if (TYPE_PTRMEMFUNC_P (type) && TYPE_PTRMEMFUNC_P (intype))
+        {
+
+    	warning (OPT_Wcast_function_type,
+    		 "cast between incompatible pointer to member types"
+    		 " from %qH to %qI", intype, type);
+
+        }
+      else if ((TYPE_PTRDATAMEM_P (type) && TYPE_PTRDATAMEM_P (intype))
+    	   || (TYPE_PTROBV_P (type) && TYPE_PTROBV_P (intype)))
+
+    	/* strict_aliasing_warning STRIP_NOPs its expr.  */
+    	strict_aliasing_warning (EXPR_LOCATION (expr), type, expr);
+    
+
+        }
+      else if ((TYPE_PTRFN_P (type) && TYPE_PTROBV_P (intype))
+    	   || (TYPE_PTRFN_P (intype) && TYPE_PTROBV_P (type)))
+
+    	warning (OPT_Wconditionally_supported,
+    		 "casting between pointer-to-function and pointer-to-object "
+    		 "is conditionally-supported");
+
+        }
+      else if (VECTOR_TYPE_P (type))
+        return convert_to_vector (type, expr);
+
+          return error_mark_node;
+        }
+    
+
+    }
+    
+    tree
+

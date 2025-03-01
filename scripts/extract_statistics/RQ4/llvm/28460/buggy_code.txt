@@ -1,0 +1,6 @@
+InGroup<DeleteNonVirtualDtor>, DefaultIgnore;
+
+      "non-virtual destructor">, InGroup<DeleteNonVirtualDtor>;
+
+      if (!dtor || dtor->isVirtual() || !CallCanBeVirtual)
+

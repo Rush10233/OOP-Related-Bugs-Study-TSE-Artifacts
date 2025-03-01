@@ -1,0 +1,118 @@
+r = cxx_eval_constant_expression (ctx, TREE_OPERAND (t, 1),
+    					false,
+    					non_constant_p, overflow_p);
+
+          if (TARGET_EXPR_CLEANUP (t) && !CLEANUP_EH_ONLY (t))
+    	ctx->global->cleanups->safe_push (TARGET_EXPR_CLEANUP (t));
+          r = unshare_constructor (r);
+
+    	{
+    	  r = cxx_eval_constant_expression (ctx, TREE_OPERAND (t, 0), false,
+    					    non_constant_p, overflow_p);
+
+    	  ctx->global->values.put (t, r);
+    	  if (ctx->save_exprs)
+    	    ctx->save_exprs->safe_push (t);
+
+/* Heap VAR_DECLs created during the evaluation of the outermost constant
+         expression.  */
+      auto_vec<tree, 16> heap_vars;
+
+      /* Constructor.  */
+
+    };
+    
+    /* The constexpr expansion context.  CALL is the current function
+
+      constexpr_global_ctx *global;
+      /* The innermost call we're evaluating.  */
+      constexpr_call *call;
+
+      vec<tree> *save_exprs;
+      /* The CONSTRUCTOR we're currently building up for an aggregate
+         initializer.  */
+
+    	  else
+    	    ctx->global->values.put (res, NULL_TREE);
+    
+
+    	  constexpr_ctx ctx_with_save_exprs = *ctx;
+    	  auto_vec<tree, 10> save_exprs;
+    	  ctx_with_save_exprs.save_exprs = &save_exprs;
+
+    	      TREE_READONLY (e) = true;
+    	    }
+    
+
+    	  unsigned int i;
+    	  tree save_expr;
+    	  FOR_EACH_VEC_ELT (save_exprs, i, save_expr)
+
+    	    gcc_assert (*jump_target);
+    	}
+    
+
+          unsigned int i;
+          tree save_expr;
+          FOR_EACH_VEC_ELT (save_exprs, i, save_expr)
+
+    	 && (!switches (jump_target) || count == 0)
+    	 && !*non_constant_p);
+    
+
+      unsigned int i;
+      tree save_expr;
+      FOR_EACH_VEC_ELT (save_exprs, i, save_expr)
+
+    	  *non_constant_p = true;
+    	  break;
+    	}
+
+          if ((AGGREGATE_TYPE_P (TREE_TYPE (t)) || VECTOR_TYPE_P (TREE_TYPE (t))))
+    	{
+    	  /* We're being expanded without an explicit target, so start
+
+          if (!*non_constant_p)
+    	/* Adjust the type of the result to the type of the temporary.  */
+    	r = adjust_temp_type (TREE_TYPE (t), r);
+
+          if (lval)
+
+          break;
+    
+        case INIT_EXPR:
+
+    	}
+          break;
+    
+        case TRY_CATCH_EXPR:
+
+        case TRY_BLOCK:
+        case MUST_NOT_THROW_EXPR:
+        case EXPR_STMT:
+        case EH_SPEC_BLOCK:
+
+    					jump_target);
+          break;
+    
+
+        case TRY_FINALLY_EXPR:
+          r = cxx_eval_constant_expression (ctx, TREE_OPERAND (t, 0), lval,
+    					non_constant_p, overflow_p,
+
+    	r = TARGET_EXPR_INITIAL (r);
+        }
+    
+
+      instantiate_constexpr_fns (r);
+      r = cxx_eval_constant_expression (&ctx, r,
+    				    false, &non_constant_p, &overflow_p);
+
+      else
+        DECL_INITIALIZED_BY_CONSTANT_EXPRESSION_P (object) = true;
+    
+
+      /* Mutable logic is a bit tricky: we want to allow initialization of
+         constexpr variables with mutable members, but we can't copy those
+         members to another constexpr variable.  */
+

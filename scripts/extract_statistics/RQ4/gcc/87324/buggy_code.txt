@@ -1,0 +1,2 @@
+(*v)[i].index = NULL_TREE;
+

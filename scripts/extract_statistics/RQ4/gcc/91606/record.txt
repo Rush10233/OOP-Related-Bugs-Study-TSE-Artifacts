@@ -1,0 +1,6 @@
+Commit:	80f606b
+./gcc/dwarf2out.c	26650,26650
+./gcc/dwarf2out.c	26654,26659
+./gcc/tree-ssa-phiprop.c	341,342
+./gcc/tree-vect-stmts.c	8279,8279
+Commit:	ba045eb

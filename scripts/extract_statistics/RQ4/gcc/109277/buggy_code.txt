@@ -1,0 +1,7 @@
+return !!complete_type_or_else (strip_array_types (type), NULL_TREE);
+
+      gcc_assert (diag_kind == DK_WARNING 
+    	      || diag_kind == DK_PEDWARN 
+    	      || diag_kind == DK_ERROR);
+    
+

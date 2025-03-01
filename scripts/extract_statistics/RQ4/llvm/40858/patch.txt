@@ -1,0 +1,43 @@
+- -Wshadow now also checks for shadowed structured bindings
+
+              "type alias in %2|"
+              "structured binding}1">,
+
+      NamedDecl *getShadowedDeclaration(const BindingDecl *D,
+                                        const LookupResult &R);
+
+      SDK_Using,
+      SDK_StructuredBinding
+
+      else if (isa<BindingDecl>(ShadowedDecl))
+        return SDK_StructuredBinding;
+
+      return isa<VarDecl, FieldDecl, BindingDecl>(ShadowedDecl) ? ShadowedDecl
+                                                                : nullptr;
+
+    /// Return the declaration shadowed by the given variable \p D, or null
+    /// if it doesn't shadow any declaration or shadowing warnings are disabled.
+    NamedDecl *Sema::getShadowedDeclaration(const BindingDecl *D,
+                                            const LookupResult &R) {
+      if (!shouldWarnIfShadowedDecl(Diags, R))
+        return nullptr;
+    
+      NamedDecl *ShadowedDecl = R.getFoundDecl();
+      return isa<VarDecl, FieldDecl, BindingDecl>(ShadowedDecl) ? ShadowedDecl
+                                                                : nullptr;
+    }
+    
+
+        auto *BD = BindingDecl::Create(Context, DC, B.NameLoc, B.Name);
+    
+    
+        NamedDecl *ShadowedDecl = D.getCXXScopeSpec().isEmpty()
+                                      ? getShadowedDeclaration(BD, Previous)
+                                      : nullptr;
+    
+
+    
+
+        } else if (ShadowedDecl && !D.isRedeclaration()) {
+          CheckShadow(BD, ShadowedDecl, Previous);
+

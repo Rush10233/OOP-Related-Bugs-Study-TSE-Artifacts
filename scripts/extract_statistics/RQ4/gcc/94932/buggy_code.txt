@@ -1,0 +1,26 @@
+declared inside a class.  In the latter case DECL_HIDDEN_FRIEND_P
+       will be set.  */
+
+    /* Is DECL NODE a hidden name?  */
+    #define DECL_HIDDEN_P(NODE) \
+      (DECL_LANG_SPECIFIC (NODE) && TYPE_FUNCTION_OR_TEMPLATE_DECL_P (NODE) \
+       && DECL_ANTICIPATED (NODE))
+    
+    /* True if this is a hidden class type.    */
+    #define TYPE_HIDDEN_P(NODE) \
+      (DECL_LANG_SPECIFIC (TYPE_NAME (NODE)) \
+       && DECL_ANTICIPATED (TYPE_NAME (NODE)))
+    
+
+          gcc_checking_assert ((using_or_hidden < 0) == DECL_HIDDEN_P (fn));
+    
+
+      for (;
+           ovl && TREE_CODE (ovl) == OVERLOAD && OVL_HIDDEN_P (ovl);
+           ovl = OVL_CHAIN (ovl))
+        gcc_checking_assert (DECL_HIDDEN_P (OVL_FUNCTION (ovl)));
+    
+      /* We should not see a naked hidden decl.  */
+      gcc_checking_assert (!(ovl && TREE_CODE (ovl) != OVERLOAD
+    			 && DECL_HIDDEN_P (ovl)));
+

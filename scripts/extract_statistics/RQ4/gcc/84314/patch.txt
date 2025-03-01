@@ -1,0 +1,28 @@
+/* If the target-dependent attributes make NTYPE different from
+    	   its canonical type, we will need to use structural equality
+    	   checks for this type.
+    
+    	   We shouldn't get here for stripping attributes from a type;
+    	   the no-attribute type might not need structural comparison.  But
+    	   we can if was discarded from type_hash_table.  */
+    	SET_TYPE_STRUCTURAL_EQUALITY (ntype);
+
+tree dtype = ntype = build_distinct_type_copy (ttype);
+
+          if (ntype != dtype)
+    	/* This variant was already in the hash table, don't mess with
+    	   TYPE_CANONICAL.  */;
+          else if (TYPE_STRUCTURAL_EQUALITY_P (ttype)
+    	       || !comp_type_attributes (ntype, ttype))
+    	{
+    	  /* If the target-dependent attributes make NTYPE different from
+    	     its canonical type, we will need to use structural equality
+    	     checks for this type.
+    
+    	     But make sure we don't get here for stripping attributes from a
+    	     type; the no-attribute type might not need structural comparison,
+    	     and it should have been in the hash table already.  */
+    	  gcc_assert (attribute);
+    	  SET_TYPE_STRUCTURAL_EQUALITY (ntype);
+    	}
+

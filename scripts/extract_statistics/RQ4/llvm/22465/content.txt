@@ -1,0 +1,118 @@
+if (!E->getType()->isVariableArrayType()) {
+          assert(isa<llvm::PointerType>(V->getType()) && "Expected pointer");
+          V = CGF.Builder.CreatePointerCast(
+
+    
+          assert(isa<llvm::ArrayType>(V->getType()->getPointerElementType()) &&
+                 "Expected pointer to array");
+
+
+      case Expr::CXXConstructExprClass: {
+        const auto *CE = cast<CXXConstructExpr>(E);
+
+          assert(
+              CE->getNumArgs() >= 1 &&
+              (CE->getNumArgs() == 1 || isa<CXXDefaultArgExpr>(CE->getArg(1))) &&
+
+        mangleType(CE->getType());
+        if (!List && N != 1)
+          Out << '_';
+
+        if (List || N != 1)
+          Out << 'E';
+        break;
+
+    
+    void StmtPrinter::VisitCXXTemporaryObjectExpr(CXXTemporaryObjectExpr *Node) {
+      Node->getType().print(OS, Policy);
+
+        OS << "{";
+      else
+        OS << "(";
+
+          OS << ", ";
+        PrintExpr(*Arg);
+      }
+
+        OS << "}";
+      else
+        OS << ")";
+
+    }
+    
+    void StmtPrinter::VisitCXXConstructExpr(CXXConstructExpr *E) {
+
+        OS << "{";
+    
+      for (unsigned i = 0, e = E->getNumArgs(); i != e; ++i) {
+
+        PrintExpr(E->getArg(i));
+      }
+    
+
+        OS << "}";
+    }
+    
+
+    /// \brief Attempt initialization by constructor (C++ [dcl.init]), which
+    /// enumerates the constructors of the initialized entity and performs overload
+    /// resolution to select the best.
+
+    static void TryConstructorInitialization(Sema &S,
+                                             const InitializedEntity &Entity,
+                                             const InitializationKind &Kind,
+                                             MultiExprArg Args, QualType DestType,
+                                             InitializationSequence &Sequence,
+
+    
+      // The type we're constructing needs to be complete.
+      if (S.RequireCompleteType(Kind.getLocation(), DestType, 0)) {
+
+    
+      // Determine whether we are allowed to call explicit constructors or
+      // explicit conversion operators.
+
+      bool CopyInitialization = Kind.getKind() == InitializationKind::IK_Copy;
+    
+      //   - Otherwise, if T is a class type, constructors are considered. The
+
+      //   - Initially, the candidate functions are the initializer-list
+      //     constructors of the class T and the argument list consists of the
+      //     initializer list as a single argument.
+
+        InitListExpr *ILE = cast<InitListExpr>(Args[0]);
+        AsInitializerList = true;
+    
+
+                                            /*OnlyListConstructors=*/false);
+      }
+      if (Result) {
+
+                          InitializationSequence::FK_ListConstructorOverloadFailed :
+                          InitializationSequence::FK_ConstructorOverloadFailed,
+                                    Result);
+
+      //   In copy-list-initialization, if an explicit constructor is chosen, the
+      //   initializer is ill-formed.
+      CXXConstructorDecl *CtorDecl = cast<CXXConstructorDecl>(Best->Function);
+
+        Sequence.SetFailed(InitializationSequence::FK_ExplicitConstructor);
+        return;
+      }
+    
+      // Add the constructor initialization step. Any cv-qualification conversion is
+      // subsumed by the initialization.
+      bool HadMultipleCandidates = (CandidateSet.size() > 1);
+
+    }
+    
+    static bool
+
+          QualType InitType = InitList->getInit(0)->getType();
+          if (S.Context.hasSameUnqualifiedType(InitType, DestType) ||
+              S.IsDerivedFrom(InitType, DestType)) {
+
+            return;
+          }
+        }
+

@@ -1,0 +1,5 @@
+else if (flag_exceptions
+    	   && TREE_CODE (from) == CONSTRUCTOR
+
+    	   && TYPE_HAS_NONTRIVIAL_DESTRUCTOR (TREE_TYPE (from)))
+

@@ -1,0 +1,55 @@
+tree *slot = find_member_slot (type, DECL_NAME (method));
+      tree current_fns = slot ? *slot : NULL_TREE;
+    
+
+      if (!COMPLETE_TYPE_P (type) && !DECL_CONV_FN_P (method)
+          && !push_class_level_binding (DECL_NAME (method), current_fns))
+        return false;
+    
+      if (!slot)
+        slot = add_member_slot (type, DECL_NAME (method));
+    
+      /* Maintain TYPE_HAS_USER_CONSTRUCTOR, etc.  */
+      grok_special_member_properties (method);
+
+          if (OVL_NAME (binding) == name)
+    	return binding;
+
+       such slot and the class is complete, create an empty one, at the
+       correct point in the sorted member vector.  Otherwise return NULL.
+       Deals with conv_op marker handling.  */
+
+    find_member_slot (tree klass, tree name)
+
+    
+
+      /* No slot found, add one if the class is complete.  */
+
+          /* Do exact allocation, as we don't expect to add many.  */
+          gcc_assert (name != conv_op_identifier);
+
+          CLASSTYPE_MEMBER_VEC (klass) = member_vec;
+
+          return &(*member_vec)[ix];
+
+    
+      return NULL;
+    }
+    
+    /* KLASS is an incomplete class to which we're adding a method NAME.
+       Add a slot and deal with conv_op marker handling.  */
+    
+    tree *
+    add_member_slot (tree klass, tree name)
+    {
+      gcc_assert (!COMPLETE_TYPE_P (klass));
+    
+      vec<tree, va_gc> *member_vec = CLASSTYPE_MEMBER_VEC (klass);
+      vec_safe_push (member_vec, NULL_TREE);
+
+      tree *slot = &member_vec->last ();
+      if (IDENTIFIER_CONV_OP_P (name))
+
+    extern tree *find_member_slot (tree klass, tree name);
+    extern tree *add_member_slot (tree klass, tree name);
+

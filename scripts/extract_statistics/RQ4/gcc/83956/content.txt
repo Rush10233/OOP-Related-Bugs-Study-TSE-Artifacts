@@ -1,0 +1,16 @@
+|| DECL_ARTIFICIAL (field))
+    	continue;
+    
+
+          mem_type = strip_array_types (TREE_TYPE (field));
+          if (assign_p)
+    	{
+
+    		      "%q#D is implicitly deleted because the default "
+    		      "definition would be ill-formed:", decl);
+    	      synthesized_method_walk (ctype, sfk, const_p,
+
+    				       &inh, parms);
+    	    }
+    	  else if (!comp_except_specs
+

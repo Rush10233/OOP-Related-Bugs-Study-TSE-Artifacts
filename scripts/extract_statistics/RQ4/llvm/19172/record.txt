@@ -1,0 +1,3 @@
+Commit:	4635793
+./clang/lib/AST/VTableBuilder.cpp	2579,2584
+./clang/lib/AST/VTableBuilder.cpp	3294,3295

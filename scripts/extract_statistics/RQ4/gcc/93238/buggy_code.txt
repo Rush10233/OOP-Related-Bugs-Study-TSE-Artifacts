@@ -1,0 +1,6 @@
+if (!integer_zerop (op1))
+
+    	      && tree_int_cst_sgn (op1) > 0
+
+    	      && compare_tree_int (op1, TYPE_PRECISION (TREE_TYPE (arg0))) < 0
+

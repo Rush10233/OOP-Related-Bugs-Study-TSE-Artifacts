@@ -1,0 +1,8 @@
+
+      if (tree name = DECL_P (decl) ? DECL_NAME (decl) : NULL_TREE)
+        {
+
+          /* Look up the declaration in its scope.  */
+          tree pushed_scope = NULL_TREE;
+          if (tree ctype = DECL_CONTEXT (decl))
+

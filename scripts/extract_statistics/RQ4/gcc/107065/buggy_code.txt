@@ -1,0 +1,24 @@
+&& (!DECL_P (tree_strip_any_location_wrapper (current.lhs))
+
+          val = invert_truthvalue_loc (location, arg);
+
+    	return val;
+
+&& (!DECL_P (tree_strip_any_location_wrapper (current.lhs))
+
+          val = invert_truthvalue_loc (location, arg);
+
+    	return val;
+
+&& (!DECL_P (tree_strip_any_location_wrapper (current.lhs))
+
+          val = invert_truthvalue_loc (location, arg);
+
+    	return val;
+
+&& (!DECL_P (tree_strip_any_location_wrapper (current.lhs))
+
+          val = invert_truthvalue_loc (location, arg);
+
+    	return val;
+

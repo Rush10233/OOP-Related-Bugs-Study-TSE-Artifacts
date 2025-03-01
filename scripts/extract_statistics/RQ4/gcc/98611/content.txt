@@ -1,0 +1,26 @@
+result = NULL_TREE;
+      switch (code)
+        {
+
+        case DEFERRED_PARSE:
+        case TEMPLATE_TEMPLATE_PARM:
+        case BOUND_TEMPLATE_TEMPLATE_PARM:
+        case UNBOUND_CLASS_TEMPLATE:
+        case TEMPLATE_PARM_INDEX:
+        case TYPEOF_TYPE:
+        case UNDERLYING_TYPE:
+          /* None of these have subtrees other than those already walked
+
+result = NULL_TREE;
+      switch (code)
+        {
+
+        case DEFERRED_PARSE:
+        case TEMPLATE_TEMPLATE_PARM:
+        case BOUND_TEMPLATE_TEMPLATE_PARM:
+        case UNBOUND_CLASS_TEMPLATE:
+        case TEMPLATE_PARM_INDEX:
+        case TYPENAME_TYPE:
+        case TYPEOF_TYPE:
+        case UNDERLYING_TYPE:
+

@@ -1,0 +1,47 @@
+/* Maintain TYPE_HAS_USER_CONSTRUCTOR, etc.  */
+      grok_special_member_properties (method);
+    
+      tree *slot = get_member_slot (type, DECL_NAME (method));
+      tree current_fns = *slot;
+    
+
+      if (!DECL_CONV_FN_P (method) && !COMPLETE_TYPE_P (type))
+        push_class_level_binding (DECL_NAME (method), current_fns);
+
+        /* We can get a NULL binding during insertion of a new method
+           name, because the identifier_binding machinery performs a
+           lookup.  If we find such a NULL slot, that's the thing we were
+           looking for, so we might as well bail out immediately.  */
+
+          {
+    	if (OVL_NAME (binding) == name)
+    	  return binding;
+          }
+        else
+          break;
+
+       such slot, create an empty one.  KLASS might be complete at this
+       point, in which case we need to preserve ordering.  Deals with
+       conv_op marker handling.  */
+
+    get_member_slot (tree klass, tree name)
+
+      
+
+      /* No slot found.  Create one at IX.  We know in this case that our
+         caller will succeed in adding the function.  */
+
+          /* Do exact allocation when complete, as we don't expect to add
+    	 many.  */
+
+      else
+        {
+          gcc_checking_assert (ix == length);
+          vec_safe_push (member_vec, NULL_TREE);
+        }
+
+      tree *slot = &(*member_vec)[ix];
+      if (name == conv_op_identifier)
+
+    extern tree *get_member_slot (tree klass, tree name);
+

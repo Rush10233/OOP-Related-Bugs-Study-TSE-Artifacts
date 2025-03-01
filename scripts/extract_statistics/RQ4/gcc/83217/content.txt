@@ -1,0 +1,16 @@
+if (TREE_CODE (type) == REFERENCE_TYPE)
+        {
+          dexp = convert_from_reference (dexp);
+
+        }
+    
+      tree eltype = NULL_TREE;
+
+if (TREE_CODE (type) == REFERENCE_TYPE)
+        {
+          dexp = convert_from_reference (dexp);
+
+        }
+    
+      tree eltype = NULL_TREE;
+

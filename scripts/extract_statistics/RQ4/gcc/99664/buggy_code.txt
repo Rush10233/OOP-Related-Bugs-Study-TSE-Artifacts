@@ -1,0 +1,2 @@
+fail = cp_type_quals (base_return) != cp_type_quals (over_return);
+

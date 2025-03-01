@@ -1,0 +1,9 @@
+
+
+    
+          if (VAR_P (op)
+    	  && TREE_STATIC (op)
+    	  && TREE_CODE (ctx) == FUNCTION_DECL
+    	  && type_dependent_expression_p (ctx))
+    	return true;
+

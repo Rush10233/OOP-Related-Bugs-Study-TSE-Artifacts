@@ -1,0 +1,15 @@
+else if (type_uses_auto (type))
+    	/* We don't know the actual type yet.  */;
+
+      /* Do auto deduction unless decl is a function or an uninstantiated
+         template specialization.  */
+
+          && !(init == NULL_TREE
+    	   && DECL_LANG_SPECIFIC (decl)
+    	   && DECL_TEMPLATE_INSTANTIATION (decl)
+    	   && !DECL_TEMPLATE_INSTANTIATED (decl))
+
+    	gcc_assert (CLASS_PLACEHOLDER_TEMPLATE (auto_node));
+
+    	  || undeduced_auto_decl (decl)
+

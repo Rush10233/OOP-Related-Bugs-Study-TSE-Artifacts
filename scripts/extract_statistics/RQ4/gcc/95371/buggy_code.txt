@@ -1,0 +1,4 @@
+TREE_TYPE (DECL_TEMPLATE_RESULT (parm)) = t;
+
+TREE_TYPE (DECL_TEMPLATE_RESULT (parm)) = t;
+

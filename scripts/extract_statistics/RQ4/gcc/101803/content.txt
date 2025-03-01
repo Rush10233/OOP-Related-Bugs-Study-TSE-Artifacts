@@ -1,0 +1,61 @@
+#define CONSTRUCTOR_IS_PAREN_INIT(NODE) \
+      (CONSTRUCTOR_CHECK(NODE)->base.private_flag)
+    
+
+    /* True if NODE represents a conversion for direct-initialization in a
+       template.  Set by perform_implicit_conversion_flags.  */
+    #define IMPLICIT_CONV_EXPR_DIRECT_INIT(NODE) \
+
+      /* A non-aggregate type is always initialized with a single
+         initializer.  */
+      if (!CP_AGGREGATE_TYPE_P (type)
+
+          || (cxx_dialect >= cxx20
+    	  && TREE_CODE (type) == ARRAY_TYPE
+    	  && uses_template_parms (TYPE_DOMAIN (type))))
+
+         initializer already, and there is not a CONSTRUCTOR, it means that there
+         is a missing set of braces (that is, we are processing the case for
+         which reshape_init exists).  */
+
+      if (!first_initializer_p)
+        {
+          if (TREE_CODE (stripped_init) == CONSTRUCTOR)
+
+    	warning (OPT_Wmissing_braces,
+    		 "missing braces around initializer for %qT",
+    		 type);
+
+        }
+    
+      /* Dispatch to specialized routines.  */
+
+      if (CLASS_TYPE_P (type))
+
+      else if (TREE_CODE (type) == ARRAY_TYPE)
+
+      else if (VECTOR_TYPE_P (type))
+
+      else
+        gcc_unreachable();
+
+    }
+    
+    /* Undo the brace-elision allowed by [dcl.init.aggr] in a
+
+        {
+          tree ftype = elt ? elt : TREE_TYPE (idx);
+          if (BRACE_ENCLOSED_INITIALIZER_P (val)
+
+    	{
+    	  tree subelt = NULL_TREE;
+    	  if (TREE_CODE (ftype) == ARRAY_TYPE)
+
+#define CONSTRUCTOR_IS_PAREN_INIT(NODE) \
+      (CONSTRUCTOR_CHECK(NODE)->base.private_flag)
+    
+
+       CTAD.  */
+    #define CONSTRUCTOR_BRACES_ELIDED_P(NODE) \
+      (CONSTRUCTOR_CHECK (NODE)->base.protected_flag)
+

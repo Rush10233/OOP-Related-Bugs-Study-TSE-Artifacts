@@ -1,0 +1,8 @@
+if (TREE_THIS_VOLATILE (a))
+        a = build_this (a);
+      if (TREE_SIDE_EFFECTS (a))
+
+      return result;
+    }
+    
+

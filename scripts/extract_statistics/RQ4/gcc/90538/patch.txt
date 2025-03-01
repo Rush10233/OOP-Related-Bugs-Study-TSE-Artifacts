@@ -1,0 +1,146 @@
+decltype: lambda capture just drops references,
+       lambda proxies look through implicit dereference.  */
+
+    extern tree uses_parameter_packs                (tree);
+
+      if (!is_this && explicit_init_p)
+
+      else if (!is_this && type_dependent_expression_p (expr))
+        {
+          type = cxx_make_type (DECLTYPE_TYPE);
+          DECLTYPE_TYPE_EXPR (type) = expr;
+          DECLTYPE_FOR_LAMBDA_CAPTURE (type) = true;
+          DECLTYPE_FOR_REF_CAPTURE (type) = by_reference_p;
+          SET_TYPE_STRUCTURAL_EQUALITY (type);
+        }
+
+        {
+          type = make_pack_expansion (type);
+          if (explicit_init_p)
+    	/* With an explicit initializer 'type' is auto, which isn't really a
+    	   parameter pack in this context.  We will want as many fields as we
+    	   have elements in the expansion of the initializer, so use its packs
+    	   instead.  */
+    	PACK_EXPANSION_PARAMETER_PACKS (type)
+    	  = uses_parameter_packs (initializer);
+        }
+
+    tree
+
+      return parameter_packs;
+
+    					    false /*explicit_init*/,
+
+    /* Subroutine of tsubst_lambda_expr: add the FIELD/INIT capture pair to the
+       LAMBDA_EXPR_CAPTURE_LIST passed in LIST.  Do deduction for a previously
+       dependent init-capture.  */
+    
+    static void
+    prepend_one_capture (tree field, tree init, tree &list,
+    		     tsubst_flags_t complain)
+    {
+      if (tree auto_node = type_uses_auto (TREE_TYPE (field)))
+        {
+          tree type = NULL_TREE;
+          if (!init)
+    	{
+    	  if (complain & tf_error)
+    	    error ("empty initializer in lambda init-capture");
+    	  init = error_mark_node;
+    	}
+          else if (TREE_CODE (init) == TREE_LIST)
+    	init = build_x_compound_expr_from_list (init, ELK_INIT, complain);
+          if (!type)
+    	type = do_auto_deduction (TREE_TYPE (field), init, auto_node, complain);
+          TREE_TYPE (field) = type;
+          cp_apply_type_quals_to_decl (cp_type_quals (type), field);
+        }
+      list = tree_cons (field, init, list);
+    }
+    
+
+    	    prepend_one_capture (TREE_VEC_ELT (field, i),
+    				 TREE_VEC_ELT (init, i),
+    				 LAMBDA_EXPR_CAPTURE_LIST (r),
+    				 complain);
+
+    	  prepend_one_capture (field, init, LAMBDA_EXPR_CAPTURE_LIST (r),
+    			       complain);
+
+          if (error_operand_p (init))
+    	return error_mark_node;
+    
+
+decltype: lambda capture just drops references,
+       lambda proxies look through implicit dereference.  */
+
+    extern tree uses_parameter_packs                (tree);
+
+      if (!is_this && explicit_init_p)
+
+      else if (!is_this && type_dependent_expression_p (expr))
+        {
+          type = cxx_make_type (DECLTYPE_TYPE);
+          DECLTYPE_TYPE_EXPR (type) = expr;
+          DECLTYPE_FOR_LAMBDA_CAPTURE (type) = true;
+          DECLTYPE_FOR_REF_CAPTURE (type) = by_reference_p;
+          SET_TYPE_STRUCTURAL_EQUALITY (type);
+        }
+
+        {
+          type = make_pack_expansion (type);
+          if (explicit_init_p)
+    	/* With an explicit initializer 'type' is auto, which isn't really a
+    	   parameter pack in this context.  We will want as many fields as we
+    	   have elements in the expansion of the initializer, so use its packs
+    	   instead.  */
+    	PACK_EXPANSION_PARAMETER_PACKS (type)
+    	  = uses_parameter_packs (initializer);
+        }
+
+    tree
+
+      return parameter_packs;
+
+    					    false /*explicit_init*/,
+
+    /* Subroutine of tsubst_lambda_expr: add the FIELD/INIT capture pair to the
+       LAMBDA_EXPR_CAPTURE_LIST passed in LIST.  Do deduction for a previously
+       dependent init-capture.  */
+    
+    static void
+    prepend_one_capture (tree field, tree init, tree &list,
+    		     tsubst_flags_t complain)
+    {
+      if (tree auto_node = type_uses_auto (TREE_TYPE (field)))
+        {
+          tree type = NULL_TREE;
+          if (!init)
+    	{
+    	  if (complain & tf_error)
+    	    error ("empty initializer in lambda init-capture");
+    	  init = error_mark_node;
+    	}
+          else if (TREE_CODE (init) == TREE_LIST)
+    	init = build_x_compound_expr_from_list (init, ELK_INIT, complain);
+          if (!type)
+    	type = do_auto_deduction (TREE_TYPE (field), init, auto_node, complain);
+          TREE_TYPE (field) = type;
+          cp_apply_type_quals_to_decl (cp_type_quals (type), field);
+        }
+      list = tree_cons (field, init, list);
+    }
+    
+
+    	    prepend_one_capture (TREE_VEC_ELT (field, i),
+    				 TREE_VEC_ELT (init, i),
+    				 LAMBDA_EXPR_CAPTURE_LIST (r),
+    				 complain);
+
+    	  prepend_one_capture (field, init, LAMBDA_EXPR_CAPTURE_LIST (r),
+    			       complain);
+
+          if (error_operand_p (init))
+    	return error_mark_node;
+    
+

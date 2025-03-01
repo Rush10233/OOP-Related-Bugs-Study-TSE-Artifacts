@@ -1,0 +1,4 @@
+Commit:	630825e
+./gcc/cp/constexpr.c	1699,1699
+Commit:	5ec046c
+./gcc/cp/constexpr.c	1700,1700

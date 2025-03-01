@@ -1,0 +1,3 @@
+stmt = build3 (COND_EXPR, void_type_node, boolean_false_node,
+    		   void_node, else_);
+

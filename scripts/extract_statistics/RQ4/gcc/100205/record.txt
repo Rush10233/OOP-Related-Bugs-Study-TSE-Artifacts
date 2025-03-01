@@ -1,0 +1,10 @@
+Commit:	f71ca97
+Commit:	ba165ed
+./gcc/cp/cp-tree.h	5483,5483
+./gcc/cp/cp-tree.h	5485,5485
+./gcc/cp/parser.c	2166,2166
+./gcc/cp/parser.c	10377,10377
+./gcc/cp/parser.c	10383,10383
+./gcc/cp/parser.c	24239,24239
+./gcc/cp/semantics.c	4096,4101
+./gcc/cp/semantics.c	4115,4118

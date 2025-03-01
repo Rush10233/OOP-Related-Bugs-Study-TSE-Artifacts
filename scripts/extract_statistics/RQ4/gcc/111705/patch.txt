@@ -1,0 +1,4 @@
+&& (now || !var_in_maybe_constexpr_fn (t))
+
+    	    if (now || !var_in_maybe_constexpr_fn (x))
+

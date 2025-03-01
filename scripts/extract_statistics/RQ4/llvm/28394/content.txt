@@ -1,0 +1,44 @@
+/// \brief Returns true if this is an inline-initialized static data member
+      /// which is treated as a definition for MSVC compatibility.
+      bool isMSStaticDataMemberInlineDefinition(const VarDecl *VD) const;
+
+    private:
+      const ASTRecordLayout &
+      getObjCLayout(const ObjCInterfaceDecl *D,
+
+             !VD->getFirstDecl()->isOutOfLine() && VD->getFirstDecl()->hasInit();
+    }
+    
+
+    static inline 
+    std::string charUnitsToString(const CharUnits &CU) {
+      return llvm::itostr(CU.getQuantity());
+
+      if (Context.isMSStaticDataMemberInlineDefinition(VD))
+        return GVA_DiscardableODR;
+    
+
+        StrongLinkage = GVA_DiscardableODR;
+
+    
+      switch (VD->getTemplateSpecializationKind()) {
+      case TSK_Undeclared:
+
+          // Implicit template instantiations may change linkage if they are later
+          // explicitly instantiated, so they should not be emitted eagerly.
+          return false;
+
+      // If OpenMP is enabled and threadprivates must be generated like TLS, delay
+      // codegen for global variables, because they may be marked as threadprivate.
+      if (LangOpts.OpenMP && LangOpts.OpenMPUseTLS &&
+
+                                VD->hasAttr<CUDADeviceAttr>());
+        if (!MustEmitForCuda &&
+            VD->isThisDeclarationADefinition() != VarDecl::Definition &&
+
+          return;
+
+      }
+    
+      // Defer code generation to first use when possible, e.g. if this is an inline
+

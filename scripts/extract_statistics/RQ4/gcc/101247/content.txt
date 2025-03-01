@@ -1,0 +1,32 @@
+{
+    	/* If T is a member template that shares template parameters with
+    	   ctx_parms, we need to mark all those parameters for mapping.  */
+
+          }
+          break;
+    
+
+break;
+    
+        case TEMPLATE_DECL:
+
+          break;
+    
+        case LAMBDA_EXPR:
+
+{
+    	/* If T is a member template that shares template parameters with
+    	   ctx_parms, we need to mark all those parameters for mapping.  */
+
+          }
+          break;
+    
+
+break;
+    
+        case TEMPLATE_DECL:
+
+          break;
+    
+        case LAMBDA_EXPR:
+

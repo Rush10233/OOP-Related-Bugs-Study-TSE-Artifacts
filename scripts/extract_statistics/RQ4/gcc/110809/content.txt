@@ -1,0 +1,28 @@
+/* Types INTEGER_CST and MINUS_EXPR can come from array bounds.  */
+          /* Type INTEGER_CST can come from ordinary constant template args.  */
+        case INTEGER_CST:
+
+          while (CONVERT_EXPR_P (arg))
+    	arg = TREE_OPERAND (arg, 0);
+    
+
+    	return unify_template_argument_mismatch (explain_p, parm, arg);
+
+    	      ? unify_success (explain_p)
+    	      : unify_template_argument_mismatch (explain_p, parm, arg));
+    
+
+/* Types INTEGER_CST and MINUS_EXPR can come from array bounds.  */
+          /* Type INTEGER_CST can come from ordinary constant template args.  */
+        case INTEGER_CST:
+
+          while (CONVERT_EXPR_P (arg))
+    	arg = TREE_OPERAND (arg, 0);
+    
+
+    	return unify_template_argument_mismatch (explain_p, parm, arg);
+
+    	      ? unify_success (explain_p)
+    	      : unify_template_argument_mismatch (explain_p, parm, arg));
+    
+

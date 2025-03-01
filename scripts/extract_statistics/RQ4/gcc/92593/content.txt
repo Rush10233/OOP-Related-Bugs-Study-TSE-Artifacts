@@ -1,0 +1,8 @@
+if (declspecs->explicit_specifier)
+    	      store_explicit_specifier (decl, declspecs->explicit_specifier);
+    	  }
+
+    	  {
+    	    if (TREE_CODE (type) != ARRAY_TYPE
+    		|| !COMPLETE_TYPE_P (TREE_TYPE (type)))
+

@@ -1,0 +1,4 @@
+/* An ARRAY_TYPE doesn't have any TYPE_FIELDS.  */
+
+    	    field = NULL_TREE;
+

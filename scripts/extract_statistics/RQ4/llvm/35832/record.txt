@@ -1,0 +1,3 @@
+Commit:	80440de
+./clang/lib/Sema/SemaExprMember.cpp	851,851
+./clang/lib/Sema/TreeTransform.h	2242,2242

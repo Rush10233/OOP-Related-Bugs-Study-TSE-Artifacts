@@ -1,0 +1,16 @@
+if (DECL_HAS_VALUE_EXPR_P (expression))
+    	{
+    	  tree value_expr = DECL_VALUE_EXPR (expression);
+
+    	    return true;
+    	}
+          return false;
+
+if (DECL_HAS_VALUE_EXPR_P (expression))
+    	{
+    	  tree value_expr = DECL_VALUE_EXPR (expression);
+
+    	    return true;
+    	}
+          return false;
+

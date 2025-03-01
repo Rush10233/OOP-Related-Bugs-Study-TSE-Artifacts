@@ -1,0 +1,92 @@
+time.  */
+          tree ass_op = build_lang_decl (USING_DECL, assign_op_identifier,
+    				     NULL_TREE);
+
+          USING_DECL_SCOPE (ass_op) = t;
+          DECL_DEPENDENT_P (ass_op) = true;
+          DECL_ARTIFICIAL (ass_op) = true;
+
+    	}
+          else if (STAT_HACK_P (val))
+    	val = STAT_DECL (val);
+        }
+      else
+        {
+
+    		else if (!args->is_empty ()
+    			 && is_overloaded_fn (postfix_expression))
+    		  {
+
+    		    tree fn = get_first_fn (postfix_expression);
+    		    fn = STRIP_TEMPLATE (fn);
+    
+    		    /* Do not do argument dependent lookup if regular
+    		       lookup finds a member function or a block-scope
+    		       function declaration.  [basic.lookup.argdep]/3  */
+
+    		      {
+    			koenig_p = true;
+    			if (!any_type_dependent_arguments_p (args))
+
+    	    return error_mark_node;
+    
+    	  if (!template_arg_p
+
+    	    {
+    	      /* A set of member functions.  */
+    	      decl = maybe_dummy_object (DECL_CONTEXT (first_fn), 0);
+
+time.  */
+          tree ass_op = build_lang_decl (USING_DECL, assign_op_identifier,
+    				     NULL_TREE);
+
+          USING_DECL_SCOPE (ass_op) = t;
+          DECL_DEPENDENT_P (ass_op) = true;
+          DECL_ARTIFICIAL (ass_op) = true;
+
+    	}
+          else if (STAT_HACK_P (val))
+    	val = STAT_DECL (val);
+        }
+      else
+        {
+
+    		else if (!args->is_empty ()
+    			 && is_overloaded_fn (postfix_expression))
+    		  {
+
+    		    tree fn = get_first_fn (postfix_expression);
+    		    fn = STRIP_TEMPLATE (fn);
+    
+    		    /* Do not do argument dependent lookup if regular
+    		       lookup finds a member function or a block-scope
+    		       function declaration.  [basic.lookup.argdep]/3  */
+
+    		      {
+    			koenig_p = true;
+    			if (!any_type_dependent_arguments_p (args))
+
+    	    return error_mark_node;
+    
+    	  if (!template_arg_p
+
+    	    {
+    	      /* A set of member functions.  */
+    	      decl = maybe_dummy_object (DECL_CONTEXT (first_fn), 0);
+
+else if (DECL_DECLARES_FUNCTION_P (x))
+    	  DECL_IN_AGGR_P (x) = false;
+    
+
+          TYPE_SIZE (t) = bitsize_zero_node;
+          TYPE_SIZE_UNIT (t) = size_zero_node;
+          /* COMPLETE_TYPE_P is now true.  */
+
+else if (DECL_DECLARES_FUNCTION_P (x))
+    	  DECL_IN_AGGR_P (x) = false;
+    
+
+          TYPE_SIZE (t) = bitsize_zero_node;
+          TYPE_SIZE_UNIT (t) = size_zero_node;
+          /* COMPLETE_TYPE_P is now true.  */
+

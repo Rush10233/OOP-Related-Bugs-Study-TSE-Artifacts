@@ -1,0 +1,100 @@
+
+      formula (tree t)
+      {
+
+        m_current = m_clauses.begin ();
+      }
+    
+
+      clause& branch ()
+      {
+        gcc_assert (!done ());
+
+      }
+    
+      /* Returns the position of the current clause.  */
+
+        return m_clauses.end ();
+      }
+    
+
+      std::list<clause> m_clauses; /* The list of clauses.  */
+      iterator m_current; /* The current clause.  */
+    };
+
+      f.advance ();
+    }
+    
+    static bool derive_proof (clause&, tree, rules);
+    
+    /* Derive a proof of both operands of T.  */
+
+      }
+    }
+    
+    /* Key/value pair for caching subsumption results. This associates a pair of
+       constraints with a boolean value indicating the result.  */
+    
+
+      if (bool *b = lookup_subsumption(lhs, rhs))
+        return *b;
+    
+
+      else
+
+        {
+
+        }
+    
+      return save_subsumption (lhs, rhs, result);
+
+
+      formula (tree t)
+      {
+
+        m_current = m_clauses.begin ();
+      }
+    
+
+      clause& branch ()
+      {
+        gcc_assert (!done ());
+
+      }
+    
+      /* Returns the position of the current clause.  */
+
+        return m_clauses.end ();
+      }
+    
+
+      std::list<clause> m_clauses; /* The list of clauses.  */
+      iterator m_current; /* The current clause.  */
+    };
+
+      f.advance ();
+    }
+    
+    static bool derive_proof (clause&, tree, rules);
+    
+    /* Derive a proof of both operands of T.  */
+
+      }
+    }
+    
+    /* Key/value pair for caching subsumption results. This associates a pair of
+       constraints with a boolean value indicating the result.  */
+    
+
+      if (bool *b = lookup_subsumption(lhs, rhs))
+        return *b;
+    
+
+      else
+
+        {
+
+        }
+    
+      return save_subsumption (lhs, rhs, result);
+

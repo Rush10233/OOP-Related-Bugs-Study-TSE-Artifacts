@@ -1,0 +1,246 @@
+private:
+          template<typename _Iter>
+    	struct __ptr
+    	{ using type = void; };
+    
+          template<typename _Iter> requires requires { typename _Iter::pointer; }
+    	struct __ptr<_Iter>
+    	{ using type = typename _Iter::pointer; };
+    
+        public:
+
+          using pointer	      = typename __ptr<_Iterator>::type;
+
+        private:
+          template<typename _Iter>
+    	struct __cat
+    	{ using type = input_iterator_tag; };
+    
+          template<typename _Iter>
+    	requires requires { typename _Iter::iterator_category; }
+    	struct __cat<_Iter>
+    	{ using type = typename _Iter::iterator_category; };
+    
+          template<typename _Iter>
+    	requires (!requires { typename _Iter::iterator_category; }
+    		  && __detail::__cpp17_randacc_iterator<_Iter>)
+    	struct __cat<_Iter>
+    	{ using type = random_access_iterator_tag; };
+    
+          template<typename _Iter>
+    	requires (!requires { typename _Iter::iterator_category; }
+    		  && __detail::__cpp17_bidi_iterator<_Iter>)
+    	struct __cat<_Iter>
+    	{ using type = bidirectional_iterator_tag; };
+    
+          template<typename _Iter>
+    	requires (!requires { typename _Iter::iterator_category; }
+    		  && __detail::__cpp17_fwd_iterator<_Iter>)
+    	struct __cat<_Iter>
+    	{ using type = forward_iterator_tag; };
+    
+          template<typename _Iter>
+    	struct __ptr
+    	{ using type = void; };
+    
+          template<typename _Iter> requires requires { typename _Iter::pointer; }
+    	struct __ptr<_Iter>
+    	{ using type = typename _Iter::pointer; };
+    
+          template<typename _Iter>
+    	requires (!requires { typename _Iter::pointer; }
+    	    && requires(_Iter& __it) { __it.operator->(); })
+    	struct __ptr<_Iter>
+    	{ using type = decltype(std::declval<_Iter&>().operator->()); };
+    
+          template<typename _Iter>
+    	struct __ref
+    	{ using type = iter_reference_t<_Iter>; };
+    
+          template<typename _Iter> requires requires { typename _Iter::reference; }
+    	struct __ref<_Iter>
+    	{ using type = typename _Iter::reference; };
+    
+        public:
+          using iterator_category = typename __cat<_Iterator>::type;
+
+          using pointer	      = typename __ptr<_Iterator>::type;
+          using reference	      = typename __ref<_Iterator>::type;
+
+        private:
+          template<typename _Iter>
+    	struct __diff
+    	{ using type = void; };
+    
+          template<typename _Iter>
+    	requires requires
+    	{ typename incrementable_traits<_Iter>::difference_type; }
+    	struct __diff<_Iter>
+    	{
+    	  using type = typename incrementable_traits<_Iter>::difference_type;
+    	};
+    
+        public:
+
+          using difference_type   = typename __diff<_Iterator>::type;
+
+        private:
+          template<typename _Iter>
+    	struct __ptr
+    	{
+    	  using type = void;
+    	};
+    
+          template<typename _Iter>
+    	requires __detail::__common_iter_has_arrow<_Iter>
+    	struct __ptr<_Iter>
+    	{
+    	  using _CIter = common_iterator<_Iter, _Sent>;
+    	  using type = decltype(std::declval<const _CIter&>().operator->());
+    	};
+    
+        public:
+
+          using pointer = typename __ptr<_It>::type;
+
+const tree ospec_tmpl = TREE_VALUE (t);
+
+          tree spec_tmpl;
+
+    	  spec_tmpl = tsubst (ospec_tmpl, outer_args, tf_none, NULL_TREE);
+
+    	  if (spec_tmpl == error_mark_node)
+    	    return error_mark_node;
+
+          else
+    	spec_tmpl = ospec_tmpl;
+
+          tree spec_args = get_partial_spec_bindings (tmpl, spec_tmpl, args);
+
+    	      || constraints_satisfied_p (ospec_tmpl, spec_args))
+
+    	      list = tree_cons (spec_args, ospec_tmpl, list);
+
+const tree ospec_tmpl = TREE_VALUE (t);
+
+          tree spec_tmpl;
+
+    	  spec_tmpl = tsubst (ospec_tmpl, outer_args, tf_none, NULL_TREE);
+
+    	  if (spec_tmpl == error_mark_node)
+    	    return error_mark_node;
+
+          else
+    	spec_tmpl = ospec_tmpl;
+
+          tree spec_args = get_partial_spec_bindings (tmpl, spec_tmpl, args);
+
+    	      || constraints_satisfied_p (ospec_tmpl, spec_args))
+
+    	      list = tree_cons (spec_args, ospec_tmpl, list);
+
+private:
+          template<typename _Iter>
+    	struct __ptr
+    	{ using type = void; };
+    
+          template<typename _Iter> requires requires { typename _Iter::pointer; }
+    	struct __ptr<_Iter>
+    	{ using type = typename _Iter::pointer; };
+    
+        public:
+
+          using pointer	      = typename __ptr<_Iterator>::type;
+
+        private:
+          template<typename _Iter>
+    	struct __cat
+    	{ using type = input_iterator_tag; };
+    
+          template<typename _Iter>
+    	requires requires { typename _Iter::iterator_category; }
+    	struct __cat<_Iter>
+    	{ using type = typename _Iter::iterator_category; };
+    
+          template<typename _Iter>
+    	requires (!requires { typename _Iter::iterator_category; }
+    		  && __detail::__cpp17_randacc_iterator<_Iter>)
+    	struct __cat<_Iter>
+    	{ using type = random_access_iterator_tag; };
+    
+          template<typename _Iter>
+    	requires (!requires { typename _Iter::iterator_category; }
+    		  && __detail::__cpp17_bidi_iterator<_Iter>)
+    	struct __cat<_Iter>
+    	{ using type = bidirectional_iterator_tag; };
+    
+          template<typename _Iter>
+    	requires (!requires { typename _Iter::iterator_category; }
+    		  && __detail::__cpp17_fwd_iterator<_Iter>)
+    	struct __cat<_Iter>
+    	{ using type = forward_iterator_tag; };
+    
+          template<typename _Iter>
+    	struct __ptr
+    	{ using type = void; };
+    
+          template<typename _Iter> requires requires { typename _Iter::pointer; }
+    	struct __ptr<_Iter>
+    	{ using type = typename _Iter::pointer; };
+    
+          template<typename _Iter>
+    	requires (!requires { typename _Iter::pointer; }
+    	    && requires(_Iter& __it) { __it.operator->(); })
+    	struct __ptr<_Iter>
+    	{ using type = decltype(std::declval<_Iter&>().operator->()); };
+    
+          template<typename _Iter>
+    	struct __ref
+    	{ using type = iter_reference_t<_Iter>; };
+    
+          template<typename _Iter> requires requires { typename _Iter::reference; }
+    	struct __ref<_Iter>
+    	{ using type = typename _Iter::reference; };
+    
+        public:
+          using iterator_category = typename __cat<_Iterator>::type;
+
+          using pointer	      = typename __ptr<_Iterator>::type;
+          using reference	      = typename __ref<_Iterator>::type;
+
+        private:
+          template<typename _Iter>
+    	struct __diff
+    	{ using type = void; };
+    
+          template<typename _Iter>
+    	requires requires
+    	{ typename incrementable_traits<_Iter>::difference_type; }
+    	struct __diff<_Iter>
+    	{
+    	  using type = typename incrementable_traits<_Iter>::difference_type;
+    	};
+    
+        public:
+
+          using difference_type   = typename __diff<_Iterator>::type;
+
+        private:
+          template<typename _Iter>
+    	struct __ptr
+    	{
+    	  using type = void;
+    	};
+    
+          template<typename _Iter>
+    	requires __detail::__common_iter_has_arrow<_Iter>
+    	struct __ptr<_Iter>
+    	{
+    	  using _CIter = common_iterator<_Iter, _Sent>;
+    	  using type = decltype(std::declval<const _CIter&>().operator->());
+    	};
+    
+        public:
+
+          using pointer = typename __ptr<_It>::type;
+

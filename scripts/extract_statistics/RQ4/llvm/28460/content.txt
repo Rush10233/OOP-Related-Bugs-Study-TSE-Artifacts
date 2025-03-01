@@ -1,0 +1,29 @@
+if (!PointeeRD->isPolymorphic() || PointeeRD->hasAttr<FinalAttr>())
+        return;
+    
+
+      QualType ClassType = dtor->getThisType(Context)->getPointeeType();
+      if (PointeeRD->isAbstract()) {
+        // If the class is abstract, we warn by default, because we're
+
+def warn_delete_non_virtual_dtor : Warning<
+      "%select{delete|destructor}0 called on non-final %1 that has "
+      "virtual functions but non-virtual destructor">,
+
+    def note_delete_non_virtual : Note<
+      "qualify call to silence this warning">;
+    def warn_delete_abstract_non_virtual_dtor : Warning<
+      "%select{delete|destructor}0 called on %1 that is abstract but has "
+
+    def warn_overloaded_virtual : Warning<
+      "%q0 hides overloaded virtual %select{function|functions}1">,
+      InGroup<OverloadedVirtual>, DefaultIgnore;
+
+                                    bool IsDelete, bool CallCanBeVirtual,
+                                    bool WarnOnNonAbstractTypes,
+                                    SourceLocation DtorLoc) {
+
+        return;
+    
+      // C++ [expr.delete]p3:
+

@@ -1,0 +1,3 @@
+if (((!id_expr && TREE_CODE (*iter) != USING_DECL)
+    	       || TREE_CODE (*iter) == TEMPLATE_DECL)
+

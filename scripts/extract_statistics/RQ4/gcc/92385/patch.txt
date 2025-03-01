@@ -1,0 +1,242 @@
+else if (CONSTRUCTOR_NELTS (init) == 0
+    	   && !CP_AGGREGATE_TYPE_P (strip_array_types (atype)))
+
+       We assume that init is either NULL_TREE, {}, void_type_node (indicating
+
+      if (init && BRACE_ENCLOSED_INITIALIZER_P (init))
+        {
+          /* Even if init has initializers for some array elements,
+    	 we're interested in the {}-init of trailing elements.	*/
+          if (CP_AGGREGATE_TYPE_P (inner_type))
+    	{
+    	  tree empty = build_constructor (init_list_type_node, nullptr);
+    	  return digest_init (inner_type, empty, complain);
+    	}
+          else
+    	/* It's equivalent to value-init.  */
+    	init = void_type_node;
+        }
+      if (init == void_type_node)
+
+      if (cxx_dialect >= cxx11)
+        {
+          bool cx = potential_constant_expression (elt_init);
+          if (BRACE_ENCLOSED_INITIALIZER_P (init))
+    	cx &= potential_constant_expression (init);
+          VEC_INIT_EXPR_IS_CONSTEXPR (init) = cx;
+        }
+
+if (processing_template_decl)
+    	/* The AGGR_INIT_EXPR tweaking below breaks in templates.  */
+    	return build_min (CAST_EXPR, type, NULL_TREE);
+
+if (target_expr_needs_replace (from))
+
+       Note:  The folding of non-omp cases is something to move into
+
+    struct cp_fold_data
+    {
+      hash_set<tree> pset;
+      bool genericize; // called from cp_fold_function?
+    
+      cp_fold_data (bool g): genericize (g) {}
+    };
+    
+
+    cp_fold_r (tree *stmt_p, int *walk_subtrees, void *data_)
+
+      cp_fold_data *data = (cp_fold_data*)data_;
+
+    	  if (!data->pset.add (stmt))
+
+      if (data->pset.add (stmt))
+
+          /* These are only for genericize time; they're here rather than in
+    	 cp_genericize to avoid problems with the invisible reference
+    	 transition.  */
+
+          if (data->genericize)
+    	cp_genericize_init_expr (stmt_p);
+
+          if (data->genericize)
+    	cp_genericize_target_expr (stmt_p);
+
+      cp_fold_data data (/*genericize*/true);
+      cp_walk_tree (&DECL_SAVED_TREE (fndecl), cp_fold_r, &data, NULL);
+
+      cp_fold_data data (/*genericize*/false);
+      cp_walk_tree (&x, cp_fold_r, &data, NULL);
+
+    /* If T is a VEC_INIT_EXPR, return it, possibly stripping a TARGET_EXPR
+       wrapper.  Otherwise, return null.  */
+    inline tree
+    get_vec_init_expr (tree t)
+    {
+      if (t && TREE_CODE (t) == TARGET_EXPR)
+        t = TARGET_EXPR_INITIAL (t);
+      if (t && TREE_CODE (t) == VEC_INIT_EXPR)
+        return t;
+      return NULL_TREE;
+    }
+    
+
+    /* True if T is a TARGET_EXPR for which we'll need to replace_decl to use it as
+       an initializer.  */
+    inline bool
+    target_expr_needs_replace (tree t)
+    {
+      if (!t || TREE_CODE (t) != TARGET_EXPR)
+        return false;
+      tree init = TARGET_EXPR_INITIAL (t);
+      if (!init || !VOID_TYPE_P (TREE_TYPE (init)))
+        return false;
+      while (TREE_CODE (init) == COMPOUND_EXPR)
+        init = TREE_OPERAND (init, 1);
+      return TREE_CODE (init) != AGGR_INIT_EXPR;
+    }
+    
+
+      if (tree vi = get_vec_init_expr (init))
+        init = VEC_INIT_EXPR_INIT (vi);
+
+    
+    	     handle cleanup flags properly.  */
+    	  gcc_checking_assert (!target_expr_needs_replace (elt));
+    
+
+    	  else if (tree vi = get_vec_init_expr (elt))
+    	    one_init = expand_vec_init_expr (baseref, vi, complain, flags);
+
+      if (tree vi = get_vec_init_expr (init))
+        return vi;
+
+    
+    	     handle cleanup flags properly.  */
+    	  gcc_checking_assert (!target_expr_needs_replace (value));
+    
+
+    	  else if (tree vi = get_vec_init_expr (value))
+
+    	      add_stmt (expand_vec_init_expr (sub, vi, tf_warning_or_error,
+
+          init = get_target_expr (init);
+
+if (processing_template_decl)
+    	/* The AGGR_INIT_EXPR tweaking below breaks in templates.  */
+    	return build_min (CAST_EXPR, type, NULL_TREE);
+
+else if (TREE_CODE (TREE_TYPE (t)) == ARRAY_TYPE)
+
+      bool value_init = VEC_INIT_EXPR_VALUE_INIT (t);
+      if (!init || !BRACE_ENCLOSED_INITIALIZER_P (init))
+        ;
+      else if (CONSTRUCTOR_NELTS (init) == 0)
+        {
+          /* Handle {} as value-init.  */
+          init = NULL_TREE;
+          value_init = true;
+        }
+      else
+        {
+          /* This is a more complicated case, like needing to loop over trailing
+    	 elements; call build_vec_init and evaluate the result.  */
+          tsubst_flags_t complain = ctx->quiet ? tf_none : tf_warning_or_error;
+          constexpr_ctx new_ctx = *ctx;
+          if (!ctx->object)
+    	{
+    	  /* We want to have an initialization target for an VEC_INIT_EXPR.
+    	     If we don't already have one in CTX, use the VEC_INIT_EXPR_SLOT.  */
+    	  new_ctx.object = VEC_INIT_EXPR_SLOT (t);
+    	  tree ctor = new_ctx.ctor = build_constructor (atype, NULL);
+    	  CONSTRUCTOR_NO_CLEARING (ctor) = true;
+    	  ctx->global->values.put (new_ctx.object, ctor);
+    	  ctx = &new_ctx;
+    	}
+          init = expand_vec_init_expr (ctx->object, t, complain);
+          return cxx_eval_constant_expression (ctx, init, lval, non_constant_p,
+    					   overflow_p);
+        }
+      tree r = cxx_eval_vec_init_1 (ctx, atype, init, value_init,
+
+    	*expr_p = expand_vec_init_expr (NULL_TREE, *expr_p,
+    					tf_warning_or_error);
+    
+
+    extern tree expand_vec_init_expr		(tree, tree, tsubst_flags_t);
+
+      if (init && TREE_CODE (init) == VEC_INIT_EXPR)
+        {
+          gcc_checking_assert (false);
+          init = VEC_INIT_EXPR_INIT (init);
+        }
+    
+
+          if (TREE_CODE (TREE_TYPE (elt)) == ARRAY_TYPE
+    	  && TREE_CODE (elt) != VEC_INIT_EXPR)
+
+    	  else if (TREE_CODE (elt) == VEC_INIT_EXPR)
+    	    one_init = expand_vec_init_expr (baseref, elt, complain);
+
+      if (init && !BRACE_ENCLOSED_INITIALIZER_P (init))
+
+          gcc_assert (same_type_ignoring_top_level_qualifiers_p
+    		  (type, TREE_TYPE (init)));
+
+      if (init && TREE_CODE (init) == VEC_INIT_EXPR)
+
+          gcc_checking_assert (false);
+          return init;
+
+    
+      tree elt_init;
+      if (init && TREE_CODE (init) == CONSTRUCTOR
+          && !BRACE_ENCLOSED_INITIALIZER_P (init))
+        /* We built any needed constructor calls in digest_init.  */
+        elt_init = init;
+
+      bool value_init = false;
+
+      tree slot = build_local_temp (type);
+
+    /* Call build_vec_init to expand VEC_INIT into TARGET (for which NULL_TREE
+       means VEC_INIT_EXPR_SLOT).  */
+    
+    tree
+    expand_vec_init_expr (tree target, tree vec_init, tsubst_flags_t complain)
+    {
+      iloc_sentinel ils = EXPR_LOCATION (vec_init);
+    
+      if (!target)
+        target = VEC_INIT_EXPR_SLOT (vec_init);
+      tree init = VEC_INIT_EXPR_INIT (vec_init);
+      int from_array = (init && TREE_CODE (TREE_TYPE (init)) == ARRAY_TYPE);
+      return build_vec_init (target, NULL_TREE, init,
+    			 VEC_INIT_EXPR_VALUE_INIT (vec_init),
+    			 from_array, complain);
+    }
+    
+
+    #define PICFLAG_VEC_INIT 16
+
+    	    if (next != error_mark_node
+    		&& ! seen_error () // Improves error-recovery on anew5.C.
+
+    		    != null_pointer_node))
+    	      {
+    		/* Use VEC_INIT_EXPR for non-constant initialization of
+    		   trailing elements with no explicit initializers.  */
+    		picflags |= PICFLAG_VEC_INIT;
+    		break;
+    	      }
+    
+    	    picflags |= picflag_from_initializer (next);
+    	    if (len > i+1)
+
+      if (picflags & PICFLAG_VEC_INIT)
+        {
+          /* Defer default-initialization of array elements with no corresponding
+    	 initializer-clause until later so we can use a loop.  */
+          TREE_TYPE (init) = init_list_type_node;
+          init = build_vec_init_expr (type, init, complain);
+        }
+

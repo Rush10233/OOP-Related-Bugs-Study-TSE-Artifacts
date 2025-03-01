@@ -1,0 +1,5 @@
+Commit:	4930c53
+./gcc/cp/decl.c	1235,1236
+./gcc/cp/except.c	1197,1197
+./gcc/cp/pt.c	23237,23237
+./gcc/cp/pt.c	23279,23279

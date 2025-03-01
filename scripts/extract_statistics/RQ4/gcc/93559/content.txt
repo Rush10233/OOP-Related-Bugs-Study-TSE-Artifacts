@@ -1,0 +1,8 @@
+/* The initializer for an array is always a CONSTRUCTOR.  If this is the
+         outermost CONSTRUCTOR and the element type is non-aggregate, we don't need
+         to build a new one.  */
+
+      if (reuse)
+        new_init = first_initializer_p;
+      else
+

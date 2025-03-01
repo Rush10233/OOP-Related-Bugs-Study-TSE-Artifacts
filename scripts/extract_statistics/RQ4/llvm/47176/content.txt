@@ -1,0 +1,30 @@
+
+        void ParseLexedMethodDeclarations() override;
+    
+
+    
+        /// Method - The method declaration.
+        Decl *Method;
+
+          InitCXXThisScopeForDeclaratorIfRelevant(D, DS, ThisScope);
+    
+          // Parse exception-specification[opt].
+
+          bool Delayed = D.isFirstDeclarationOfMember() &&
+                         D.isFunctionDeclaratorAFunctionDeclaration();
+          if (Delayed && Actions.isLibstdcxxEagerExceptionSpecHack(D) &&
+
+        auto LateMethod = new LateParsedMethodDeclaration(this, ThisDecl);
+        getCurrentClass().LateParsedDeclarations.push_back(LateMethod);
+    
+
+        LateMethod->DefaultArgs.reserve(FTI.NumParams);
+        for (unsigned ParamIdx = 0; ParamIdx < FTI.NumParams; ++ParamIdx)
+          LateMethod->DefaultArgs.push_back(LateParsedDefaultArgument(
+              FTI.Params[ParamIdx].Param,
+              std::move(FTI.Params[ParamIdx].DefaultArgTokens)));
+
+      }
+    }
+    
+

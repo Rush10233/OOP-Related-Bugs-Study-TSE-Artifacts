@@ -1,0 +1,55 @@
+tree ambiguous;
+      /* If nonzero, we are looking for types, not data members.  */
+      int want_type;
+    };
+    
+    /* True for a class member means that it is shared between all objects
+
+    	  /* Add the new value.  */
+    	  lfi->ambiguous = tree_cons (NULL_TREE, nval, lfi->ambiguous);
+    	  TREE_TYPE (lfi->ambiguous) = error_mark_node;
+    	}
+        }
+      else
+
+         checks.  Whereas rval is only set if a proper (not hidden)
+         non-function member is found.  */
+    
+      if (name == error_mark_node
+          || xbasetype == NULL_TREE
+          || xbasetype == error_mark_node)
+
+      rval_binfo = lfi.rval_binfo;
+      if (rval_binfo)
+        type = BINFO_TYPE (rval_binfo);
+    
+      /* If we are not interested in ambiguities, don't report them;
+         just return NULL_TREE.  */
+
+    	protect = 0;
+        }
+    
+
+      /* [class.access]
+    
+         In the case of overloaded function names, access control is
+
+    
+        only the first call to "f" is valid.  However, if the function is
+        static, we can check.  */
+
+        {
+          tree decl = is_overloaded_fn (rval) ? get_first_fn (rval) : rval;
+          decl = strip_using_decl (decl);
+
+    	  && !DECL_NONSTATIC_MEMBER_FUNCTION_P (decl)
+    	  && !perform_or_defer_access_check (basetype_path, decl, decl,
+    					     complain, afi))
+
+        }
+    
+
+          /* Don't use a BASELINK for class-scope deduction guides since
+    	 they're not actually member functions.  */
+          && !dguide_name_p (name))
+

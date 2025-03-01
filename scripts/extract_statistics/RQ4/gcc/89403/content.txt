@@ -1,0 +1,45 @@
+/* Generate RTL for this function now that we know we
+    		 need it.  */
+    	      expand_or_defer_fn (decl);
+    	      reconsider = true;
+    	    }
+    	}
+
+      /* There's no reason to do any of the work here if we're only doing
+         semantic analysis; this code just generates RTL.  */
+      if (flag_syntax_only)
+
+    
+      return true;
+    }
+
+/* Generate RTL for this function now that we know we
+    		 need it.  */
+    	      expand_or_defer_fn (decl);
+    	      reconsider = true;
+    	    }
+    	}
+
+      /* There's no reason to do any of the work here if we're only doing
+         semantic analysis; this code just generates RTL.  */
+      if (flag_syntax_only)
+
+    
+      return true;
+    }
+
+/* Generate RTL for this function now that we know we
+    		 need it.  */
+    	      expand_or_defer_fn (decl);
+    	      reconsider = true;
+    	    }
+    	}
+
+      /* There's no reason to do any of the work here if we're only doing
+         semantic analysis; this code just generates RTL.  */
+      if (flag_syntax_only)
+
+    
+      return true;
+    }
+

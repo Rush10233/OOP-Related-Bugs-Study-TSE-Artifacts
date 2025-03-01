@@ -1,0 +1,32 @@
+/// Is this an explicit specialization at class scope (within the class that
+      /// owns the primary template)? For example:
+      ///
+      /// \code
+      /// template<typename T> struct Outer {
+      ///   template<typename U> struct Inner;
+      ///   template<> struct Inner; // class-scope explicit specialization
+      /// };
+      /// \endcode
+      bool isClassScopeExplicitSpecialization() const {
+        return isExplicitSpecialization() &&
+               isa<CXXRecordDecl>(getLexicalDeclContext());
+      }
+    
+
+      bool isClassScopeExplicitSpecialization() const {
+        return isExplicitSpecialization() &&
+               isa<CXXRecordDecl>(getLexicalDeclContext());
+      }
+    
+
+        // Add template arguments from a variable template instantiation. For a
+        // class-scope explicit specialization, there are no template arguments
+        // at this level, but there may be enclosing template arguments.
+        VarTemplateSpecializationDecl *Spec =
+            dyn_cast<VarTemplateSpecializationDecl>(D);
+        if (Spec && !Spec->isClassScopeExplicitSpecialization()) {
+
+        ClassTemplateSpecializationDecl *Spec
+              = dyn_cast<ClassTemplateSpecializationDecl>(Ctx);
+        if (Spec && !Spec->isClassScopeExplicitSpecialization()) {
+

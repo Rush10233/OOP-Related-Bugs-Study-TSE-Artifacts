@@ -1,0 +1,6 @@
+if (init)
+    	    DECL_INITIAL (decl) = init;
+
+if (init)
+    	    DECL_INITIAL (decl) = init;
+

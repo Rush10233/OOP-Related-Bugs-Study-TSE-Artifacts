@@ -1,0 +1,60 @@
+cp_expr expr);
+    extern tree cp_build_c_cast			(location_t, tree, tree,
+    						 tsubst_flags_t);
+
+    extern cp_expr build_x_modify_expr		(location_t, tree,
+    						 enum tree_code, tree,
+    						 tree, tsubst_flags_t);
+
+      if (decl == error_mark_node)
+        return;
+    
+
+          && init
+          && TREE_CODE (init) == TREE_LIST
+          && TREE_CHAIN (init) == NULL_TREE)
+
+    	warning_at (DECL_SOURCE_LOCATION (current_function_decl),
+    		    OPT_Winit_self, "%qD is initialized with itself",
+    		    member);
+
+    	find_uninit_fields (&val, &uninitialized, decl);
+        }
+    
+
+    
+    /* Warn when a value is moved to itself with std::move.  LHS is the target,
+       RHS may be the std::move call, and LOC is the location of the whole
+
+    
+
+    maybe_warn_self_move (location_t loc, tree lhs, tree rhs)
+    {
+      if (!warn_self_move)
+
+    
+      /* C++98 doesn't know move.  */
+      if (cxx_dialect < cxx11)
+
+    
+      if (processing_template_decl)
+
+    
+      if (!REFERENCE_REF_P (rhs)
+          || TREE_CODE (TREE_OPERAND (rhs, 0)) != CALL_EXPR)
+
+      tree fn = TREE_OPERAND (rhs, 0);
+      if (!is_std_move_p (fn))
+
+    
+      /* Just a little helper to strip * and various NOPs.  */
+      auto extract_op = [] (tree &op) {
+
+      tree type = TREE_TYPE (lhs);
+      tree orig_lhs = lhs;
+      extract_op (lhs);
+
+    }
+    
+    /* For use from the C common bits.  */
+

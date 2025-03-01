@@ -1,0 +1,27 @@
+/* Carry over the dummy TREE_TYPE node containing the source location.  */
+          TREE_TYPE (subobject_init) = TREE_TYPE (init);
+
+          /* If this initializer was explicitly provided, then the dummy TREE_TYPE
+    	 node contains the source location.  */
+          iloc_sentinel ils (EXPR_LOCATION (TREE_TYPE (mem_inits)));
+    
+
+      if (!member)
+        return error_mark_node;
+      tree node = build_tree_list (member, expression_list);
+    
+      /* We can't attach the source location of this initializer directly to
+         the list node, so we instead attach it to a dummy EMPTY_CLASS_EXPR
+         within the TREE_TYPE of the list node.  */
+      location_t loc
+        = make_location (token->location, token->location, parser->lexer);
+      tree dummy = build0 (EMPTY_CLASS_EXPR, NULL_TREE);
+      SET_EXPR_LOCATION (dummy, loc);
+      TREE_TYPE (node) = dummy;
+    
+      return node;
+
+    	      /* Carry over the dummy TREE_TYPE node containing the source
+    		 location.  */
+    	      TREE_TYPE (init) = TREE_TYPE (t);
+

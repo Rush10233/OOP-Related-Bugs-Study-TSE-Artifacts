@@ -1,0 +1,24 @@
+return maybe_wrap_with_location (op0, EXPR_LOCATION (t));
+    	    }
+    	  tree op = TREE_OPERAND (t, 0);
+    	  /* force_paren_expr can also create a VIEW_CONVERT_EXPR.  */
+
+    	    {
+    	      op = tsubst_copy (op, args, complain, in_decl);
+    	      op = build1 (code, TREE_TYPE (op), op);
+    	      REF_PARENTHESIZED_P (op) = true;
+    	      return op;
+    	    }
+
+    	  gcc_unreachable ();
+    	}
+    
+
+    
+        case NON_LVALUE_EXPR:
+        case VIEW_CONVERT_EXPR:
+
+    
+        default:
+          /* Handle Objective-C++ constructs, if appropriate.  */
+

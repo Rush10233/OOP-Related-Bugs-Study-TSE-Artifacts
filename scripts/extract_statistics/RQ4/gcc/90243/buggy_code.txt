@@ -1,0 +1,5 @@
+permerror (DECL_SOURCE_LOCATION (decl),
+    			   "uninitialized const %qD", decl);
+
+          if (CLASS_TYPE_P (type) && (complain & tf_error))
+

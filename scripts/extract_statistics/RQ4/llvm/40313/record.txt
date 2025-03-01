@@ -1,0 +1,4 @@
+Commit:	6e69db5
+./clang/lib/CodeGen/CGExprConstant.cpp	1791,1801
+./clang/test/CodeGen/const-init.c	124,125
+./clang/test/CodeGen/const-init.c	156,156

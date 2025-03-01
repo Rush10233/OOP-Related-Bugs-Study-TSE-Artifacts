@@ -1,0 +1,14 @@
+initializer.  */
+
+    deduction_guides_for (tree tmpl, tsubst_flags_t complain)
+
+          guides = deduction_guides_for (TI_TEMPLATE (tinfo), complain);
+
+      tree cands = deduction_guides_for (tmpl, complain);
+
+      if (tree guide = maybe_aggr_guide (tmpl, init, args))
+        cands = lookup_add (guide, cands);
+
+if (tree guide = maybe_aggr_guide (tmpl, init, args))
+        cands = lookup_add (guide, cands);
+

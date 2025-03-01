@@ -1,0 +1,11 @@
+bool show_notes = true;
+    
+
+    		show_notes = permerror (DECL_SOURCE_LOCATION (decl),
+    				        "uninitialized const %qD", decl);
+
+    	      else
+    		show_notes = false;
+
+          if (show_notes && CLASS_TYPE_P (type) && (complain & tf_error))
+

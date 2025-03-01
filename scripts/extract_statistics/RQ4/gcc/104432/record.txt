@@ -1,0 +1,12 @@
+Commit:	1ce5395
+./gcc/cp/call.cc	11192,11193
+./gcc/cp/call.cc	11195,11197
+./gcc/cp/pt.cc	16320,16322
+./gcc/cp/pt.cc	16325,16325
+./gcc/cp/pt.cc	16335,16336
+./gcc/cp/pt.cc	16340,16352
+./gcc/cp/pt.cc	16354,16354
+./gcc/cp/pt.cc	16359,16361
+./gcc/cp/pt.cc	16363,16363
+./gcc/cp/pt.cc	16366,16366
+./gcc/cp/pt.cc	16458,16458

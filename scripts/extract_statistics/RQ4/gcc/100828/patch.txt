@@ -1,0 +1,82 @@
+m_clauses.emplace_back (t);
+
+        return *m_clauses.insert (std::next (m_current), *m_current);
+
+      /* Remove the specified clause from the formula.  */
+    
+      void erase (iterator i)
+      {
+        gcc_assert (i != m_current);
+        m_clauses.erase (i);
+      }
+    
+
+      tree x, y;
+      rules r;
+      if (dnf_size (lhs) <= cnf_size (rhs))
+        /* When LHS looks simpler than RHS, we'll determine subsumption by
+           decomposing LHS into its disjunctive normal form and checking that
+           each (conjunctive) clause in the decomposed LHS implies RHS.  */
+        x = lhs, y = rhs, r = left;
+
+        /* Otherwise, we'll determine subsumption by decomposing RHS into its
+           conjunctive normal form and checking that each (disjunctive) clause
+           in the decomposed RHS implies LHS.  */
+        x = rhs, y = lhs, r = right;
+    
+      /* Decompose X into a list of sequents according to R, and recursively
+         check for implication of Y.  */
+      bool result = true;
+      formula f (x);
+      while (!f.done ())
+
+          auto i = f.current ();
+          decompose_clause (f, *i, r);
+          if (!derive_proof (*i, y, r))
+    	{
+    	  result = false;
+    	  break;
+    	}
+          f.erase (i);
+
+m_clauses.emplace_back (t);
+
+        return *m_clauses.insert (std::next (m_current), *m_current);
+
+      /* Remove the specified clause from the formula.  */
+    
+      void erase (iterator i)
+      {
+        gcc_assert (i != m_current);
+        m_clauses.erase (i);
+      }
+    
+
+      tree x, y;
+      rules r;
+      if (dnf_size (lhs) <= cnf_size (rhs))
+        /* When LHS looks simpler than RHS, we'll determine subsumption by
+           decomposing LHS into its disjunctive normal form and checking that
+           each (conjunctive) clause in the decomposed LHS implies RHS.  */
+        x = lhs, y = rhs, r = left;
+
+        /* Otherwise, we'll determine subsumption by decomposing RHS into its
+           conjunctive normal form and checking that each (disjunctive) clause
+           in the decomposed RHS implies LHS.  */
+        x = rhs, y = lhs, r = right;
+    
+      /* Decompose X into a list of sequents according to R, and recursively
+         check for implication of Y.  */
+      bool result = true;
+      formula f (x);
+      while (!f.done ())
+
+          auto i = f.current ();
+          decompose_clause (f, *i, r);
+          if (!derive_proof (*i, y, r))
+    	{
+    	  result = false;
+    	  break;
+    	}
+          f.erase (i);
+

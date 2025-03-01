@@ -1,0 +1,34 @@
+/// declaration whose initializer is being evaluated, if any.
+        APValue *EvaluatingDeclValue;
+    
+
+        /// The current array initialization index, if we're performing array
+        /// initialization.
+        uint64_t ArrayInitIndex = -1;
+
+        void setEvaluatingDecl(APValue::LValueBase Base, APValue &Value) {
+          EvaluatingDecl = Base;
+          EvaluatingDeclValue = &Value;
+
+        }
+    
+        const LangOptions &getLangOpts() const { return Ctx.getLangOpts(); }
+
+      }
+    
+      // During the construction of an object, it is not yet 'const'.
+
+      // object under construction.
+
+        BaseType = Info.Ctx.getCanonicalType(BaseType);
+        BaseType.removeLocalConst();
+      }
+
+        return false;
+      }
+    
+
+      CallStackFrame Frame(Info, CallLoc, Definition, &This, ArgValues);
+    
+      // FIXME: Creating an APValue just to hold a nonexistent return value is
+

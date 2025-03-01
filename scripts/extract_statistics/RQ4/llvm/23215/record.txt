@@ -1,0 +1,6 @@
+Commit:	5808cd8
+./clang/include/clang/Basic/DiagnosticSemaKinds.td	1315,1316
+./clang/lib/Sema/SemaExpr.cpp	13244,13244
+./clang/lib/Sema/SemaExpr.cpp	13278,13278
+./clang/lib/Sema/SemaOverload.cpp	11775,11776
+./clang/test/SemaCXX/warn-pure-virtual-call-from-ctor-dtor.cpp	3,4

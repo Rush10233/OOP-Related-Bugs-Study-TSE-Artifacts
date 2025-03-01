@@ -1,0 +1,8 @@
+Commit:	98afdc3
+./gcc/cp/search.cc	944,945
+./gcc/cp/search.cc	1058,1058
+./gcc/cp/search.cc	1130,1131
+./gcc/cp/search.cc	1175,1175
+./gcc/cp/search.cc	1209,1210
+./gcc/cp/search.cc	1219,1230
+./gcc/cp/search.cc	1233,1233

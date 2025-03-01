@@ -1,0 +1,16 @@
+}
+        }
+    
+
+      /* Since we're writing out the vtable here, also write the debug
+         info.  */
+      note_debug_info_needed (ctype);
+
+    	 within the body of a function so as to avoid collecting live data
+    	 on the stack (such as overload resolution candidates).
+    
+
+             this function by adding it to deferred_fns, but doing
+             it at the use site produces better error messages.  */
+          ++function_depth;
+

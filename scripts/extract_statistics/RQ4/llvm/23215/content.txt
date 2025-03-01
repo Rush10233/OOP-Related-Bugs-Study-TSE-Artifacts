@@ -1,0 +1,62 @@
+#include "clang/AST/TemplateBase.h"
+    #include "clang/AST/Type.h"
+    #include "clang/Basic/CharInfo.h"
+
+    #include "clang/Basic/TypeTraits.h"
+    #include "llvm/ADT/APFloat.h"
+    #include "llvm/ADT/APSInt.h"
+
+        HadMultipleCandidates = V;
+      }
+    
+
+      static bool classof(const Stmt *T) {
+        return T->getStmtClass() == MemberExprClass;
+      }
+
+    def note_pure_virtual_function : Note<
+      "unimplemented pure virtual method %0 in %1">;
+    
+
+    def err_deleted_decl_not_first : Error<
+      "deleted definition must be first declaration">;
+    
+
+      "%q0 is not a member of class %1">;
+    
+    def warn_call_to_pure_virtual_member_function_from_ctor_dtor : Warning<
+
+    
+    def note_member_declared_at : Note<"member is declared here">;
+    def note_ivar_decl : Note<"instance variable is declared here">;
+
+      if (!MD)
+        return;
+      // Only attempt to devirtualize if this is truly a virtual call.
+
+      if (!IsVirtualCall)
+        return;
+      const Expr *Base = ME->getBase();
+
+      //   expression, is odr-used, unless it is a pure virtual function and its
+      //   name is not explicitly qualified.
+      bool OdrUse = true;
+
+        if (CXXMethodDecl *Method = dyn_cast<CXXMethodDecl>(E->getMemberDecl()))
+          if (Method->isPure())
+            OdrUse = false;
+
+          TheCall->getMethodDecl()->isPure()) {
+        const CXXMethodDecl *MD = TheCall->getMethodDecl();
+    
+
+               diag::warn_call_to_pure_virtual_member_function_from_ctor_dtor)
+            << MD->getDeclName() << isa<CXXDestructorDecl>(CurContext)
+            << MD->getParent()->getDeclName();
+    
+          Diag(MD->getLocStart(), diag::note_previous_decl) << MD->getDeclName();
+
+        }
+      }
+      return MaybeBindToTemporary(TheCall);
+

@@ -1,0 +1,6 @@
+void initializeLocal(ASTContext &Context, SourceLocation Loc) {
+        setKWLoc(Loc);
+        setRParenLoc(Loc);
+        setLParenLoc(Loc);
+      }
+

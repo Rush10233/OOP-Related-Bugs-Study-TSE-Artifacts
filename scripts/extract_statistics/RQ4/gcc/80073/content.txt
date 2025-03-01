@@ -1,0 +1,8 @@
+
+      if (max_vbases)
+        {
+
+          vec_alloc (CLASSTYPE_VBASECLASSES (ref), max_vbases);
+    
+          if (max_dvbases)
+

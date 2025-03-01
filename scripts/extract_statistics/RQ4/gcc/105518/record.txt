@@ -1,0 +1,11 @@
+Commit:	3830484
+./gcc/cp/pt.cc	13831,13837
+./gcc/cp/pt.cc	13841,13843
+./gcc/cp/pt.cc	13845,13851
+./gcc/cp/pt.cc	13853,13854
+./gcc/cp/pt.cc	13856,13857
+./gcc/cp/pt.cc	13859,13871
+./gcc/cp/pt.cc	13873,13874
+./gcc/cp/pt.cc	13876,13877
+./gcc/cp/pt.cc	13879,13880
+./gcc/cp/pt.cc	15800,15801

@@ -1,0 +1,100 @@
+BLOCK_OUTER_CURLY_BRACE_P (in BLOCK)
+          FOLD_EXPR_MODOP_P (*_FOLD_EXPR)
+          IF_STMT_CONSTEXPR_P (IF_STMT)
+          DECL_NAMESPACE_INLINE_P (in NAMESPACE_DECL)
+          SWITCH_STMT_ALL_CASES_P (in SWITCH_STMT)
+          REINTERPRET_CAST_P (in NOP_EXPR)
+
+      adc_decomp_type    /* Decomposition declaration initializer deduction */
+    };
+    
+    /* True iff this TEMPLATE_TYPE_PARM represents decltype(auto).  */
+    #define AUTO_IS_DECLTYPE(NODE) \
+      (TYPE_LANG_FLAG_5 (TEMPLATE_TYPE_PARM_CHECK (NODE)))
+
+    static bool check_instantiated_args (tree, tree, tsubst_flags_t);
+    static int check_non_deducible_conversion (tree, tree, int, int,
+    					   struct conversion **, bool);
+
+    static int type_unification_real (tree, tree, tree, const tree *,
+    				  unsigned int, int, unification_kind_t,
+    				  vec<deferred_access_check, va_gc> **,
+
+    	}
+          else if (DECL_IMPLICIT_TYPEDEF_P (decl)
+    	       && CLASS_TYPE_P (TREE_TYPE (decl)))
+
+          else if (TREE_CODE (decl) == TYPE_DECL
+    	       && TYPE_DECL_ALIAS_P (decl))
+    	/* alias-declaration */
+
+    	  gcc_assert (DECL_CONTEXT (parm) == NULL_TREE);
+    	  DECL_CONTEXT (parm) = tmpl;
+    	}
+        }
+    
+      tree ci = get_constraints (tmpl);
+
+      return r;
+    }
+    
+
+    
+       [temp.deduct.call] and [temp.deduct.conv].  The rules in these two
+       sections are symmetric.  PARM is the type of a function parameter
+
+       ARG_EXPR is the original argument expression, which may be null.  */
+    
+    static int
+
+    				  tree* parm,
+    				  tree* arg,
+    				  tree arg_expr)
+
+          /* Core issue #873: Do the DR606 thing (see below) for these cases,
+    	 too, but here handle it by stripping the reference from PARM
+    	 rather than by adding it to ARG.  */
+
+    	  && TYPE_REF_P (*arg)
+    	  && !TYPE_REF_IS_RVALUE (*arg))
+    	*parm = TREE_TYPE (*parm);
+
+    	*arg = TYPE_MAIN_VARIANT (*arg);
+        }
+    
+
+          && (arg_expr ? lvalue_p (arg_expr)
+    	  /* try_one_overload doesn't provide an arg_expr, but
+    	     functions are always lvalues.  */
+
+    	    return unify_invalid (explain_p);
+    	}
+    
+
+        }
+      else
+        if ((TYPE_P (parm) || TREE_CODE (parm) == TEMPLATE_DECL)
+
+      else if (addr_p)
+        arg = build_pointer_type (arg);
+    
+
+    
+      /* We don't copy orig_targs for this because if we have already deduced
+         some template args from previous args, unify would complain when we
+
+    		/* It should only be possible to get here for a call.  */
+    		gcc_assert (elt_strict & UNIFY_ALLOW_OUTER_LEVEL);
+    		elt_strict |= maybe_adjust_types_for_deduction
+
+    		elt = type;
+    	      }
+    
+
+          tree oldtype = TREE_TYPE (olddecl);
+          newtype = cxx_make_type (TREE_CODE (oldtype));
+          TYPE_MAIN_VARIANT (newtype) = newtype;
+        }
+      else
+        {
+

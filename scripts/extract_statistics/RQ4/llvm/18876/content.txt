@@ -1,0 +1,15 @@
+}
+    
+      CXXBindTemporaryExpr *TopBind = dyn_cast<CXXBindTemporaryExpr>(E);
+
+    
+      // Disable the special decltype handling now.
+      ExprEvalContexts.back().IsDecltype = false;
+
+        return Owned(E);
+    
+      // Perform the semantic checks we delayed until this point.
+      for (unsigned I = 0, N = ExprEvalContexts.back().DelayedDecltypeCalls.size();
+           I != N; ++I) {
+        CallExpr *Call = ExprEvalContexts.back().DelayedDecltypeCalls[I];
+

@@ -1,0 +1,10 @@
+Commit:	c0a73a4
+./gcc/cp/typeck.c	8593,8593
+./gcc/cp/typeck.c	8595,8595
+Commit:	664c733
+./gcc/cp/typeck.c	8346,8346
+Commit:	d4ddf7a
+./gcc/cp/typeck.c	8502,8502
+./gcc/cp/typeck.c	8504,8504
+Commit:	3231d64
+./gcc/cp/typeck.c	8489,8489

@@ -1,0 +1,5 @@
+Commit:	eb04c8c
+./clang/lib/AST/ExprConstant.cpp	1233,1234
+./clang/lib/AST/ExprConstant.cpp	1245,1245
+./clang/lib/AST/ExprConstant.cpp	1249,1249
+./clang/lib/AST/ExprConstant.cpp	5497,5498

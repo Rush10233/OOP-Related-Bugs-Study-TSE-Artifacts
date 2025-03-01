@@ -1,0 +1,1757 @@
+85464
+4	7.3.0	86	1	7
+--enable-gnu-indirect-function
+91466
+10.0.0	20190814	2
+-fconcepts
+102592
+1	0
+
+89331
+
+
+105925
+20	11.2	11.1	12.1
+-std=c++20
+91921
+3
+-Woverloaded-virtual
+100474
+
+
+100644
+6
+
+97533
+
+
+82294
+
+-Wall -Wextra -march=native -std=c++17 -Os
+87425
+2
+
+104173
+24
+
+83374
+
+
+85067
+
+
+93138
+17
+-std=c++17
+79503
+14
+-fno-new-inheriting-ctors	-std=c++14
+90951
+1
+
+92082
+
+
+89512
+
+
+85866
+
+
+79377
+6.1.0
+
+90801
+
+
+85901
+
+
+82643
+
+
+91933
+
+
+89212
+7.4	14	8.0	4.9	8.1	8.2
+-std=c++14
+101040
+
+
+88830
+
+
+92062
+
+
+103081
+512	5124	32	4	20	64	3	4.2	1	4.1	11.1.0	111	16	2
+-Wdangling-else	-Wrestrict	-mno-fma4	-fno-semantic-interposition	-mno-fma	-Wno-mismatched-new-delete	-fPIC	-Wno-array-bounds	-Wno-deprecated-declarations	-std=gnu++20	-Woverloaded-virtual	-Wwrite-strings	-mno-f16c	-Wno-placement-new	-fno-strict-overflow	-Wno-unknown-pragmas	-Wdeprecated-copy-dtor	-Wredundant-move	-W	-Wdeprecated-copy	-fsigned-char	-Wno-ignored-qualifiers	-Wzero-as-null-pointer-constant	-mno-fsgsbase
+80913
+1	9
+-fpreprocessed
+95074
+
+
+99008
+3	86	20210213
+-fdiagnostics-color=always	-O3
+89422
+
+
+103703
+
+-Wmismatched-tags
+85761
+
+
+84708
+11
+-std=c++11
+105265
+86	17	64
+-std=c++17	-fpreprocessed	-Wformat-security	--eh-frame-hdr	-fworking-directory	-fno-strict-aliasing	-fasynchronous-unwind-tables	-fwrapv	-fpch-preprocess	-plugin-opt=-fresolution=ares	-fstack-protector-strong
+104300
+
+-freport-bug
+102050
+
+
+93496
+
+
+94124
+
+
+97186
+
+
+90749
+
+
+92732
+20
+
+98642
+
+
+97279
+
+
+107329
+
+-freport-bug
+96078
+3	2
+
+93143
+17	8
+-std=gnu++17
+96994
+20
+-std=c++20
+100752
+
+
+85646
+5
+
+84993
+
+
+83835
+
+
+83956
+3
+-O3
+84851
+19	17
+-Wclass-memaccess
+86473
+
+
+83825
+
+
+84426
+
+
+81942
+14
+-std=c++14
+92068
+2
+-fpreprocessed
+105110
+
+
+99389
+1	
+-fmodule-header	-fmodules-ts	
+94951
+3	2
+-O2	-O3
+100205
+
+
+89419
+253601	17
+-std=c++17
+100517
+
+
+100838
+14
+-std=c++14	-fno-elide-constructors
+94590
+
+
+80415
+
+
+101532
+
+
+93905
+
+
+82110
+
+
+90199
+7.4	9.0.0	6.3	270355	8.3	7
+-frounding-math
+98329
+
+
+103480
+69	82
+
+81888
+7.2	17	7.1
+-std=c++17
+96229
+
+
+102191
+
+
+89652
+3	1	17
+-std=c++17	-O3
+96560
+
+
+86374
+1	17
+-std=c++17	-fconcepts
+85060
+
+
+84578
+
+
+86763
+14	4	8.1	64	86	1	2
+-fpreprocessed	-std=c++14	--eh-frame-hdr	-Werror	-fpch-preprocess	-plugin-opt=-fresolution=t4res	-O1	-O2
+84222
+
+
+87651
+
+
+84296
+
+
+87531
+
+
+85031
+
+
+85241
+17	7
+-std=c++17	-Wconversion	-Wpedantic	-Werror	-fconcepts
+85558
+
+
+86018
+19	14
+-std=c++14
+84375
+
+
+85014
+
+
+92918
+17
+
+102045
+
+
+100111
+10
+-fno-elide-constructors
+98744
+2
+-fno-inline	-O2	-Wmaybe-uninitialized
+103177
+
+-Wfatal-errors
+80431
+
+
+104641
+
+
+90138
+2
+-fpreprocessed	-fsyntax-only	--enable-gnu-indirect-function
+95678
+14
+-std=c++14	-fconcepts
+79501
+3
+
+92776
+
+
+98570
+
+
+99374
+20	14	17	7
+-std=c++17	
+98332
+
+
+93559
+
+
+94024
+
+
+99033
+11	1
+-fsanitize=undefined
+97523
+11	20
+-std=c++20
+93238
+
+
+104425
+
+
+103341
+
+
+89481
+3
+
+90171
+9.0.0	8.0.0	270355	17	2
+-std=c++17
+99613
+
+
+88554
+
+
+84520
+
+
+84820
+
+
+86953
+32	4	02	3	7.3.1	86	7
+-fpreprocessed	-fpch-preprocess	--enable-gnu-indirect-function	-O3
+87506
+11	14	1	17	2
+--std=	--std=c++14
+87571
+
+
+83912
+
+-fsanitize=undefined
+94041
+
+
+70272
+217967	2
+-O2
+94175
+32	64	0	10	86	2
+-O2
+93310
+2
+-std=c++2a
+90538
+
+
+94102
+
+
+89761
+17
+
+99844
+
+
+95371
+10	2
+-std=c++2a
+80746
+
+-fconcepts
+94926
+
+
+98930
+10.2.1	7.2	3	0	11.0
+-O3
+89217
+
+
+103968
+
+
+88979
+2
+-O2	-std=c++2a
+96199
+
+
+93248
+
+
+101988
+20210818	12.0.0	0
+
+97679
+20
+-std=c++20
+98844
+
+
+105734
+
+
+94775
+36	17	16	2
+-std=c++17	-O2	-fsanitize=address
+92103
+2
+-std=gnu++2a
+91826
+
+
+100502
+11	20	20210509	12.0.0	11.1	20.04
+-std=c++20
+96840
+
+
+98413
+
+
+89050
+
+-fsyntax-only	--enable-gnu-indirect-function
+90546
+2
+-std=c++2a
+91377
+
+
+95999
+
+
+101767
+32	86	11.2.0	1
+--disable-fixed-point
+95369
+
+
+80178
+
+
+79064
+
+
+104647
+20	1	12	2
+-std=c++2a	-std=c++20
+92134
+
+
+107280
+20
+-freport-bug	-std=c++20
+93805
+6	15
+-Werror=noexcept
+79796
+1
+-std=c++1y
+103936
+
+
+100963
+11	14
+-std=c++14
+92907
+
+
+103783
+
+
+104846
+
+
+79474
+
+
+100763
+
+
+82299
+5	1
+-Wuseless-cast	-std=c++1z
+79746
+17	2
+-Wunused-but-set-parameter
+99365
+
+
+101098
+1	12	9	2
+-fconcepts
+98644
+20
+
+96623
+
+
+91606
+14	2
+-O2
+85277
+
+
+84434
+1	17
+-std=c++17
+86823
+
+
+85141
+
+
+88183
+
+-std=c++17
+84590
+14	3	5	0	221
+-std=c++14	-O3	-fsanitize=undefined
+87652
+
+
+88528
+14
+-std=c++14
+85061
+
+
+87547
+
+
+88578
+13	0
+-Wno-pedantic
+86190
+1
+-Wsign-conversion
+87530
+
+
+84605
+3	14
+-std=c++14	-O3
+104476
+
+
+104432
+
+
+94549
+2
+-std=c++2a	--enable-gnu-indirect-function
+100983
+
+
+93286
+1	17
+-std=c++17	-fmax-errors=1
+105803
+3	14	9	64
+-ffast-math	-fpeel-loops	-std=c++14	-Wno-deprecated-declarations	-funroll-loops	-O3	-fpermissive	-fvect-cost-model
+88757
+
+
+88815
+
+
+94944
+
+
+82152
+11	14	17
+-std=c++17	-std=c++11
+100065
+
+
+79504
+
+
+90210
+
+
+90916
+
+
+101181
+23	0
+-std=c++23	-fmodules-ts
+106969
+32	86	1	12.2.1
+--enable-gnu-indirect-function
+97297
+20	0634
+-std=c++20
+89913
+
+
+105518
+
+
+100032
+
+
+79687
+
+
+106882
+
+
+89705
+14	19	4.9	5	7
+-std=c++14
+93046
+
+
+100209
+0
+
+90938
+
+
+103337
+
+
+89974
+2
+-O2	-std=c++2a
+101803
+
+
+101405
+
+
+96876
+15	8
+
+89214
+32	86	17
+-std=c++17	-Wpedantic	--enable-gnu-indirect-function
+98423
+
+
+104225
+
+
+88969
+
+
+94470
+17
+-std=c++17
+80935
+11	14	86	1	7.1.0	4.0
+-fpreprocessed	-std=c++1z	-std=c++11	-std=c++14
+90243
+
+
+82899
+
+
+93413
+10	2
+-std=c++2a
+89392
+6	1	0	9
+-O1	-flto	-fvtable-verify=std
+95567
+
+
+94932
+11	10.0.0	10.1.0	6	2
+-std=c++2a
+99251
+11	30
+-Wnonnull
+96003
+8
+-Werror=nonnull
+94492
+15
+
+92106
+1	17
+-std=c++17
+92582
+17	2
+-std=c++17	-std=c++2a	--enable-gnu-indirect-function	-fconcepts
+103700
+
+
+82833
+
+
+84330
+
+
+90858
+
+
+80456
+
+
+98333
+
+
+101717
+
+
+92531
+10.0.0	278028	9.2	6	17
+-std=c++17
+84098
+6	11	5
+-std=c++11
+84447
+
+
+85545
+17	8
+-Wformat
+84445
+
+
+85662
+2
+-O2
+85356
+1
+
+86521
+27	17
+-std=c++17
+88368
+
+
+84927
+
+
+88114
+3	11	2
+-std=c++11
+84306
+1	14	17
+-std=c++17	-std=c++14
+85883
+
+
+86439
+
+
+85493
+49965849
+
+85743
+
+
+94616
+11
+-std=c++11
+79077
+
+-fno-new-inheriting-ctors
+101194
+14	0634	7.2	7.1	17
+-std=c++17	-std=c++14
+94885
+2	17	9	10
+-std=c++17	-std=c++2a
+80073
+1
+-std=c++1z
+95311
+63470
+-fsanitize=undefined
+100797
+
+
+99664
+
+
+80956
+20170528	1	17	8.0.0
+-std=c++1z
+106304
+
+-freport-bug
+99815
+
+
+100138
+20
+-std=c++20
+99180
+
+
+98611
+32	20	64	23	10.2.0	86	1	17	2
+-fpreprocessed	-std=c++2a	-std=c++20	--enable-fully-dynamic-string	-fpch-preprocess	--with-pkgversion=MinGW-W64
+88986
+17	9.0.0	9
+-std=c++17
+93207
+
+
+103346
+20
+-std=c++20
+97819
+14	4.9.3	9.3.0	2	10.1.0	5.5.0	7.3.0	8.3.0	17	6.3.0
+-std=c++17	-std=c++2a	-std=c++14
+82239
+11	14	5.4
+-std=c++14	-std=c++11
+96330
+
+
+100592
+
+
+81236
+
+
+91768
+
+
+105842
+
+
+102137
+
+
+91907
+86	17
+-std=c++17	-fpreprocessed	-fpch-preprocess
+92944
+
+
+79308
+11
+-std=c++11
+89511
+17
+-std=c++17
+93614
+
+
+94799
+
+
+92859
+17	11	9.1.0	14
+-std=c++17	-std=c++14	-std=c++11
+105589
+
+-freport-bug
+99120
+
+-Wshadow
+100862
+
+
+103749
+
+
+93400
+17	2
+-std=c++17	-std=c++2a	--enable-gnu-indirect-function	-fconcepts
+91845
+
+
+80575
+
+
+80043
+
+-fpermissive
+107574
+
+
+82980
+
+
+107938
+
+-freport-bug
+94772
+2
+-std=c++2a
+89836
+
+
+90448
+10.0.0	17
+-std=c++17
+89158
+14
+-std=c++14
+81675
+
+
+82461
+11	14	19.11	5.0	17
+-std=c++17	-std=c++11
+88857
+
+
+100489
+32	12.0.0	86	1	39671
+--disable-fixed-point
+82593
+11	4.0
+-std=c++11
+93107
+
+
+88875
+17	2
+-std=c++17
+106366
+
+
+104031
+11.2.0	2.4	2	12.0.0
+-O2
+104182
+
+
+92869
+1	0	17
+-std=c++17
+100054
+20	10.2	91	10.3	10.1
+-std=c++20
+92745
+3
+-O3
+82873
+17
+-std=c++17	-W
+79606
+
+
+79461
+86	1	14
+-std=c++1z	-std=c++14
+80186
+
+
+98712
+
+
+93675
+
+
+95629
+
+
+93480
+
+
+94462
+11	10.0.0	60	10.0.1	6	2
+-std=c++2a
+91098
+17
+
+92806
+2
+-std=gnu++2a
+95303
+1	2
+
+79679
+14	7.0.1	6.3.1	20170221	17
+-std=c++17	-std=c++14
+92001
+
+-Wclass-memaccess
+92385
+3	11
+-std=c++11	-fno-aggressive-loop-optimizations	-fno-strict-aliasing	-fwrapv	-fsanitize=undefined	-O3
+90449
+
+
+83205
+17	8
+-std=c++17
+96164
+
+
+98486
+
+
+105351
+20	2
+-O2	-std=c++20
+98551
+0	14
+-std=gnu++14
+90691
+14
+
+90212
+
+
+97427
+
+
+83116
+3	1	0	2
+-Og	--enable-gnu-indirect-function	-O1	-O2	-O3
+91378
+
+
+98745
+0	686	11.0.0
+-fanalyzer
+105035
+
+-Wduplicated-cond
+99565
+
+
+84850
+26	1	2	64
+-fcf-protection	-Wp-D_FORTIFY_SOURCE=2	-fstack-protector-strong	-fstack-clash-protection	-Werror	-Wp-D_GLIBCXX_ASSERTIONS	-Woverloaded-virtual	-Wpointer-arith	-fasynchronous-unwind-tables	-Wwrite-strings	-Werror=format-security	-fPIC	-Wshadow	-Wcomments	-O2
+85437
+70248
+
+85739
+6.3.0	11	14	4	3	7.3.0	17	2
+-fno-rtti	-ffunction-sections	-fno-use-cxa-atexit	-fno-exceptions	-fdata-sections	-Wshadow	-O2	-std=gnu++17
+88049
+2
+-O2	-fPIC	-flto
+86610
+3	28
+
+83796
+
+
+85659
+
+
+87820
+17	0	14
+-std=c++0x
+84001
+
+
+84140
+7.2.0	64	86	17	7
+-std=c++17	-Wconversion	-Wpedantic	-Werror	-fconcepts
+85806
+1	17
+-std=c++17	-fconcepts
+88515
+2
+-std=c++2a	-fconcepts
+84449
+1
+
+84348
+
+
+108438
+6	1	13
+
+108468
+20	11.1
+-std=c++20
+108526
+23	1	13
+-std=c++23
+108606
+
+
+109241
+
+-freport-bug
+109247
+
+
+109277
+8	20	12	41	13	1	128	2
+-std=gnu++20
+109320
+20230312	20	23	13	20230226	1
+-std=c++23	-std=c++20
+109739
+20	12	13.1	1	2
+-std=c++20	-Werror=missing-field-initializers
+109745
+6910	1	14	07
+-O1	-std=c++14
+109761
+17
+-std=gnu++17
+109876
+
+
+109923
+
+
+110064
+8
+
+110075
+13	14
+
+110122
+
+
+110463
+
+
+110566
+
+
+110809
+
+
+111286
+20
+-std=c++20
+111705
+
+
+111710
+23
+-std=c++23	-fmodules-ts
+112427
+
+-freport-bug
+112436
+
+
+112439
+
+
+112619
+1.0	32	64	3	246	14.0.0.9999	14.0.0	86	35	2
+-freport-bug	-fdiagnostics-color=always	-fdiagnostics-urls=never	-frecord-gcc-switches	-fPIC	--disable-fixed-point	--with-build-config=bootstrap-O3	-O2	-fcf-protection=none
+112632
+
+
+112765
+
+-Wparentheses
+113063
+
+
+113083
+98295
+-freport-bug	-Os
+113088
+
+-freport-bug
+113141
+
+
+89403
+11	14	9	5	0	2
+-fsyntax-only	-O2	-Os	-std=c++14
+103711
+11	867	32	86	4.8.5
+-std=c++11	--enable-gnu-indirect-function
+91334
+32	512	2
+-ffast-math	-funroll-loops	-flto	-Ofast
+82764
+2	17	7
+-std=c++17
+93803
+2	10	9
+-std=c++2a	-fsyntax-only
+96052
+20	64
+-fsyntax-only	-std=c++20
+79825
+6
+
+88690
+9	4	52832	3	5	0	17
+-ffunction-sections	-Wctor-dtor-privacy	-Weffc++	-fmessage-length=0	-Wabi	-fno-threadsafe-statics	-O5	-Wlogical-op	-Wfloat-equal	-Wnoexcept	-fdata-sections	-fno-exceptions	-Wshadow	-O3	-std=c++17	-fsigned-char	-fno-rtti	-fno-use-cxa-atexit	-fabi-version=9
+81164
+
+
+95466
+9
+-fsanitize=vptr
+82336
+11	86	64
+-plugin-opt=-fresolution=/tmp/ccvOLjqjres	-std=c++11	--enable-gnu-indirect-function	--eh-frame-hdr
+93633
+
+
+80829
+
+
+103769
+
+
+108090
+
+
+89917
+
+
+101247
+20
+-std=c++20
+79865
+
+
+91230
+14	17
+
+89420
+20181104	20181028
+-std
+104108
+
+
+99683
+
+
+101698
+
+
+105623
+
+
+90505
+
+
+92593
+2
+-std=gnu++2a
+95486
+
+
+96647
+
+
+97099
+
+
+91759
+3
+
+104235
+
+
+101783
+
+
+97328
+20
+
+89744
+
+
+103678
+20
+-std=c++20
+100374
+20
+-std=c++20
+100616
+20
+
+94632
+
+
+98802
+900	8
+
+89390
+
+
+102670
+
+
+98249
+
+
+91911
+
+
+83187
+1
+-O1
+89682
+
+-fsyntax-only
+96204
+
+
+98231
+
+
+103714
+
+
+79290
+
+
+90124
+86	11
+-fpreprocessed	-Wcast-qual	-ffunction-sections	-Wno-unused-parameter	-fPIC	-Wno-maybe-uninitialized	-Werror=date-time	-Wno-long-long	-Wwrite-strings	-Wno-class-memaccess	-Wpedantic	-std	-fvisibility-inlines-hidden	-fdata-sections	-fno-exceptions	-Wno-missing-field-initializers	-Wno-comment	-fno-rtti	-Wdelete-non-virtual-dtor
+105761
+4
+-freport-bug
+107461
+8
+
+107484
+
+
+79519
+
+
+102786
+
+
+98441
+
+
+89387
+
+
+85764
+
+
+100493
+6	20	17
+-Wdeprecated
+90623
+17
+-std=c++17
+107755
+86	10	20221118
+-fdiagnostics-color=always	-freport-bug	-Wlogical-op
+106675
+
+
+103455
+
+
+101442
+
+
+107065
+
+
+96934
+1
+-Wstringop-overflow
+89315
+
+
+92604
+
+
+90190
+
+
+83227
+14	7.2.0	20171109	17	6.4.0
+-std=c++17	-std=c++14
+99700
+
+
+90825
+
+
+79118
+1	14
+-fPIE	-fstack-protector-strong	-std=gnu++14
+91179
+11	4	7.4.0	86	2
+-Wconversion	--enable-libstdcxx-filesystem-ts
+101073
+6	12	9
+-fno-elide-constructors
+83058
+
+
+96121
+
+
+89187
+390
+-flive-patching=inline-only-static	-fno-tree-sra	-fno-tree-ccp	-Os
+89914
+
+
+81796
+
+-fsyntax-only
+90996
+
+
+94074
+
+
+81311
+1	14	7.1	8
+-std=c++1z/17	-std=c++14
+96533
+20
+-std=c++20	-Wunused-parameter
+97121
+
+
+96299
+11	1	10	1186
+
+98545
+11	0
+-std=gnu++11
+99213
+
+
+88795
+17	7.1
+-std=c++17
+89532
+2
+-std=gnu++2a
+83217
+7.2	86	1	7.1
+--std=c++1z
+98620
+5	11	20
+-std=c++20	-Wmissing-field-initializers
+103991
+
+
+80916
+3	11	1	2
+-std=c++11	-Wno-invalid-offsetof	-O1/-O0	-O2	-Os	-O3
+95328
+11	14	8	17	7
+-std=c++17	-Werror
+82075
+
+
+89036
+
+
+94719
+2
+-std=c++2a	-fconcepts
+94819
+2	9
+-std=c++2a
+104527
+58	13.0.0	20	12.0.1	6	20220213
+-std=c++20	-fconcepts
+100828
+
+
+82507
+
+
+87327
+17
+-std=c++17
+107079
+
+-freport-bug
+93169
+12	9	2
+-O2
+93998
+
+
+99980
+
+
+106925
+
+-freport-bug
+84314
+
+
+88548
+
+
+86747
+
+
+83958
+1	8.0.0
+-std=c++1z
+84558
+5	1
+
+87436
+4	11	1	385
+-std=c++11
+85148
+
+
+85262
+
+
+87480
+
+
+87554
+1	8.2.0
+-O1
+88123
+
+
+88380
+
+
+87150
+11	111417	8.1	3	1	17	2
+-std=c++{111417}
+87750
+
+
+84892
+
+
+88110
+8.2.1	20181120	17	2
+-std=c++17	-std=c++2a
+84151
+2
+-O2
+84698
+32	7.3.0	86	17	1.0
+-std=c++17	--disable-fixed-point
+85363
+48909833
+-Wpedantic
+87378
+
+-Wredundant-move
+88252
+
+
+88580
+
+
+83895
+
+
+84494
+32	86	64
+-fpreprocessed	--eh-frame-hdr	-plugin-opt=-fresolution=testres	--enable-gnu-indirect-function	-fpch-preprocess
+84689
+
+
+84692
+
+
+85146
+
+
+85155
+8	5	6	17	7
+-std=c++17
+85386
+
+
+85415
+86	1
+-fpch-preprocess	-fpreprocessed	-std=c++1z	--enable-gnu-indirect-function
+86044
+
+
+86970
+17	8
+-std=c++17
+87324
+
+
+88118
+
+
+84694
+4
+
+86648
+
+
+108437
+23	13	20221106	1	20221120
+-std=c++23
+108559
+
+
+108579
+20
+
+108698
+32	14	12
+-std=c++14
+108887
+1	2	2171964
+-freport-bug	-O2
+108998
+
+
+109039
+12.1	20
+
+109042
+6	20230305	13.0.1	15
+
+109096
+
+
+109159
+
+
+109160
+20
+-std=c++20
+109172
+11
+-std=c++11
+109319
+23	13	20221106	1	20221120
+-std=c++23
+109396
+6	12
+-Winit-self
+109506
+20
+-std=c++20
+109514
+13.0.0	16	2	35566
+-O2	-Werror	-Werror=dangling-pointer
+109531
+14	4.7	3	0	13	86	2
+-freport-bug	-std=c++14	-fdiagnostics-color=always	-fno-strict-aliasing	-O2
+109649
+
+
+109678
+17
+-std=c++17	-ftime-report-details
+109751
+
+
+109871
+
+
+109899
+
+
+109958
+3
+
+110084
+
+
+110102
+13.1
+
+110197
+
+
+110295
+
+
+110395
+
+
+110441
+17
+-std=c++17
+110524
+055	20	256	4.2	0	86	128
+-Wpedantic	-Werror	-std=c++20	-Wno-psabi
+110535
+
+
+110580
+13	14	2
+-std=c++2a
+110927
+
+
+111272
+14	20	23	26	17
+-std=c++26
+112301
+
+
+112482
+23	15
+-std=c++23
+112594
+
+
+112658
+86	1
+-freport-bug	-fpreprocessed	-fpch-preprocess	--enable-gnu-indirect-function
+112744
+
+
+113031
+
+-freport-bug
+113064
+

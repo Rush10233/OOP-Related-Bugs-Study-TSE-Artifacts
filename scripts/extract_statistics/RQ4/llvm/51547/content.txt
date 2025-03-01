@@ -1,0 +1,11 @@
+if (Deduced && isa<DeducedTemplateSpecializationType>(Deduced)) {
+        if (ArraySize)
+          return ExprError(
+
+                   diag::err_deduced_class_template_compound_type)
+              << /*array*/ 2
+
+    
+        InitializedEntity Entity
+          = InitializedEntity::InitializeNew(StartLoc, AllocType);
+

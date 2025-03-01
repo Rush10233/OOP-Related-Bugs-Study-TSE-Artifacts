@@ -1,0 +1,27 @@
+
+          if (short_compare)
+    	{
+
+    	  enum tree_code xresultcode = resultcode;
+    	  shorten_compare (location, &xop0, &xop1, &xresult_type,
+
+    	}
+    
+          if ((short_compare || code == MIN_EXPR || code == MAX_EXPR)
+
+         otherwise, it will be given type RESULT_TYPE.  */
+      if (! converted)
+        {
+
+          if (TREE_TYPE (op0) != result_type)
+    	op0 = cp_convert_and_check (result_type, op0, complain);
+          if (TREE_TYPE (op1) != result_type)
+
+otherwise, it will be given type RESULT_TYPE.  */
+      if (! converted)
+        {
+
+          if (TREE_TYPE (op0) != result_type)
+    	op0 = cp_convert_and_check (result_type, op0, complain);
+          if (TREE_TYPE (op1) != result_type)
+

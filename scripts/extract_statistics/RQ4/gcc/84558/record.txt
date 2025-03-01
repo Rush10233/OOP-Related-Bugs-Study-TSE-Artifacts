@@ -1,0 +1,12 @@
+Commit:	08735f5
+./gcc/cp/constexpr.c	2962,2964
+./gcc/cp/constexpr.c	2977,2978
+./gcc/cp/constexpr.c	2981,2982
+Commit:	1e20975
+./gcc/cp/constexpr.c	2740,2742
+./gcc/cp/constexpr.c	2755,2756
+./gcc/cp/constexpr.c	2759,2760
+Commit:	68f2615
+./gcc/cp/constexpr.c	2898,2900
+./gcc/cp/constexpr.c	2913,2914
+./gcc/cp/constexpr.c	2917,2918

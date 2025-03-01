@@ -1,0 +1,7 @@
+Commit:	728f97c
+./gcc/cp/lambda.c	232,232
+Commit:	d939233
+./gcc/cp/lambda.c	231,231
+Commit:	d634c5d
+./gcc/cp/lambda.cc	214,214
+Commit:	8189838

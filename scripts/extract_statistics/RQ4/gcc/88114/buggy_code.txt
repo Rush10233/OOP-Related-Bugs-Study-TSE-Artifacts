@@ -1,0 +1,2 @@
+We could just let cp_write_global_declarations handle synthesizing
+

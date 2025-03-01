@@ -1,0 +1,12 @@
+Commit:	670ef5b
+./gcc/cp/constraint.cc	3182,3184
+./gcc/cp/constraint.cc	3246,3248
+./gcc/cp/pt.cc	392,392
+./gcc/cp/pt.cc	10956,10956
+./gcc/cp/pt.cc	10990,10993
+Commit:	f35d655
+./gcc/cp/constraint.cc	3179,3181
+./gcc/cp/constraint.cc	3243,3245
+./gcc/cp/pt.cc	394,394
+./gcc/cp/pt.cc	11014,11014
+./gcc/cp/pt.cc	11048,11051

@@ -1,0 +1,20 @@
+{
+    	  warning_sentinel w (warn_useless_cast);
+    	  return cp_build_c_cast (type, elt, tf_warning_or_error);
+    	}
+
+    	{
+    	  warning_sentinel w (warn_useless_cast);
+    	  rhs = cp_build_c_cast (type, elt, complain);
+    	}
+
+{
+    	  warning_sentinel w (warn_useless_cast);
+    	  return cp_build_c_cast (type, elt, tf_warning_or_error);
+    	}
+
+    	{
+    	  warning_sentinel w (warn_useless_cast);
+    	  rhs = cp_build_c_cast (type, elt, complain);
+    	}
+

@@ -1,0 +1,9 @@
+Commit:	742c588
+./clang/lib/Sema/SemaExprCXX.cpp	5085,5086
+./clang/lib/Sema/SemaExprCXX.cpp	5097,5097
+./clang/test/CXX/dcl.dcl/dcl.spec/dcl.type/dcl.type.simple/p5-cxx0x.cpp	34,36
+./clang/test/CXX/dcl.dcl/dcl.spec/dcl.type/dcl.type.simple/p5-cxx0x.cpp	41,46
+./clang/test/CXX/dcl.dcl/dcl.spec/dcl.type/dcl.type.simple/p5-cxx0x.cpp	48,48
+./clang/test/CXX/dcl.dcl/dcl.spec/dcl.type/dcl.type.simple/p5-cxx0x.cpp	51,52
+./clang/test/CXX/dcl.dcl/dcl.spec/dcl.type/dcl.type.simple/p5-cxx0x.cpp	55,55
+./clang/test/CXX/dcl.dcl/dcl.spec/dcl.type/dcl.type.simple/p5-cxx0x.cpp	110,110

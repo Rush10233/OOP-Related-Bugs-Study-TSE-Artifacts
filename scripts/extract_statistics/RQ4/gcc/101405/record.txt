@@ -1,0 +1,5 @@
+Commit:	30b3839
+./gcc/cp/decl.cc	6572,6572
+./gcc/cp/decl.cc	6574,6574
+./gcc/cp/decl.cc	6578,6578
+./gcc/cp/decl.cc	6581,6581

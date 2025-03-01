@@ -1,0 +1,65 @@
+print_error_for_call_failure (tree fn, const vec<tree, va_gc> *args,
+
+    /* Perform overload resolution on the set of deduction guides DGUIDES
+       using ARGS.  Returns the selected deduction guide, or error_mark_node
+       if overload resolution fails.  */
+    
+    tree
+    perform_dguide_overload_resolution (tree dguides, const vec<tree, va_gc> *args,
+    				    tsubst_flags_t complain)
+    {
+      z_candidate *candidates;
+      bool any_viable_p;
+      tree result;
+    
+      gcc_assert (deduction_guide_p (OVL_FIRST (dguides)));
+    
+      /* Get the high-water mark for the CONVERSION_OBSTACK.  */
+      void *p = conversion_obstack_alloc (0);
+    
+      z_candidate *cand = perform_overload_resolution (dguides, args, &candidates,
+    						   &any_viable_p, complain);
+      if (!cand)
+        {
+          if (complain & tf_error)
+    	print_error_for_call_failure (dguides, args, candidates);
+          result = error_mark_node;
+        }
+      else
+        result = cand->fn;
+    
+      /* Free all the conversions we allocated.  */
+      obstack_free (&conversion_obstack, p);
+    
+      return result;
+    }
+    
+
+    extern tree perform_dguide_overload_resolution	(tree, const vec<tree, va_gc> *,
+    						 tsubst_flags_t);
+
+      tree fndecl = error_mark_node;
+
+          fndecl = perform_dguide_overload_resolution (list_cands, args, tf_none);
+
+          if (fndecl == error_mark_node)
+
+      else if (!cands && fndecl == error_mark_node)
+
+      if (fndecl == error_mark_node)
+        fndecl = perform_dguide_overload_resolution (cands, args, tf_none);
+
+      if (fndecl == error_mark_node)
+
+    	  perform_dguide_overload_resolution (cands, args, complain);
+
+          if (DECL_NONCONVERTING_P (fndecl))
+
+      if (fndecl != error_mark_node && !any_dguides_p)
+
+          if ((!DECL_IN_SYSTEM_HEADER (fndecl)
+    	   || global_dc->dc_warn_system_headers)
+
+      return cp_build_qualified_type (TREE_TYPE (TREE_TYPE (fndecl)),
+    				  cp_type_quals (ptype));
+

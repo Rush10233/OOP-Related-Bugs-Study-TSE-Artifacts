@@ -1,0 +1,16 @@
+arg1 = cp_stabilize_reference (arg1);
+    	  arg2 = arg1 = prevent_lifetime_extension (arg1);
+    	}
+
+          else
+    	arg2 = arg1 = cp_save_expr (arg1);
+        }
+
+think that such code never uses the TARGET_EXPR as an initializer.  If
+         I'm wrong, we'll abort because the temp won't have any RTL.  In that
+         case, I guess we'll need to replace references somehow.  */
+
+        from = TARGET_EXPR_INITIAL (from);
+    
+      /* If we might need to clean up a partially constructed object, break down
+

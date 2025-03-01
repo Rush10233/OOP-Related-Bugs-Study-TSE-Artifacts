@@ -1,0 +1,7 @@
+tree save_ccp = current_class_ptr;
+          tree save_ccr = current_class_ref;
+
+    	  /* Make sure that any member-function parameters are in scope.
+    	     This function doesn't expect ccp to be set.  */
+    	  current_class_ptr = current_class_ref = NULL_TREE;
+

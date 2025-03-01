@@ -1,0 +1,45 @@
+DeduceTemplateArguments(Sema &S, TemplateParameterList *TemplateParams,
+
+                            SmallVectorImpl<DeducedTemplateArgument> &Deduced,
+                            bool NumberOfArgumentsMustMatch);
+
+        return DeduceTemplateArguments(S, TemplateParams, Param->getArgs(),
+                                       Param->getNumArgs(), SpecArg->getArgs(),
+                                       SpecArg->getNumArgs(), Info, Deduced,
+                                       /*NumberOfArgumentsMustMatch=*/false);
+
+      return DeduceTemplateArguments(
+          S, TemplateParams, Param->getArgs(), Param->getNumArgs(),
+          SpecArg->getTemplateArgs().data(), SpecArg->getTemplateArgs().size(),
+          Info, Deduced, /*NumberOfArgumentsMustMatch=*/true);
+
+          SmallVector<DeducedTemplateArgument, 8> SuccessfulDeduced;
+
+                // If we've already seen some success, then deduction fails due to
+                // an ambiguity (temp.deduct.call p5).
+                if (Successful)
+                  return Sema::TDK_MiscellaneousDeductionFailure;
+    
+
+                std::swap(SuccessfulDeduced, Deduced);
+    
+
+              }
+    
+              Deduced = DeducedOrig;
+
+          if (Successful) {
+            std::swap(SuccessfulDeduced, Deduced);
+
+          }
+
+    DeduceTemplateArguments(Sema &S, TemplateParameterList *TemplateParams,
+
+                            SmallVectorImpl<DeducedTemplateArgument> &Deduced,
+                            bool NumberOfArgumentsMustMatch) {
+
+            return NumberOfArgumentsMustMatch ? Sema::TDK_TooFewArguments
+                                              : Sema::TDK_Success;
+
+                                     Info, Deduced, false);
+

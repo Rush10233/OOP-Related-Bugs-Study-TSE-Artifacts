@@ -1,0 +1,4 @@
+/* check_initializer will have done any constant initialization.  */
+
+/* check_initializer will have done any constant initialization.  */
+

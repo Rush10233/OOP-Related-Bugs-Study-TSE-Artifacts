@@ -1,0 +1,8 @@
+cp_parser_check_class_key (class_key, type);
+    
+      /* If this type was already complete, and we see another definition,
+
+        {
+          error_at (type_start_token->location, "redefinition of %q#T",
+    		type);
+

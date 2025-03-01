@@ -1,0 +1,9 @@
+if (!integer_zerop (const_op1))
+
+    	  tree const_op1 = cp_fold_rvalue (op1);
+
+    	      && tree_int_cst_sgn (const_op1) > 0
+
+    	      && compare_tree_int (const_op1,
+    				   TYPE_PRECISION (TREE_TYPE (arg0))) < 0
+

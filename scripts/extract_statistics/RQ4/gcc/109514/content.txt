@@ -1,0 +1,31 @@
+if (!m_ptr_qry.get_ref (lhs, stmt, &lhs_ref, 0))
+    	continue;
+    
+
+    	{
+
+    	}
+
+    	{
+    	  gimple *def_stmt = SSA_NAME_DEF_STMT (lhs_ref.ref);
+    	  if (!gimple_nop_p (def_stmt))
+    	    /**/
+    	    return;
+    
+
+    	}
+
+          else
+
+    	continue;
+    
+          if (stores.add (lhs_ref.ref))
+
+    	  location_t loc = DECL_SOURCE_LOCATION (rhs_ref.ref);
+    	  inform (loc, "%qD declared here", rhs_ref.ref);
+    
+
+    	}
+        }
+    
+

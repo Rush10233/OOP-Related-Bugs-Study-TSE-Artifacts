@@ -1,0 +1,74 @@
+int num_initialized_elts = 0;
+
+    	      int max = tree_to_shwi (maxindex)+1;
+    	      for (; num_initialized_elts < max; ++num_initialized_elts)
+
+HOST_WIDE_INT nz_elts, init_elts, num_fields;
+
+    	    HOST_WIDE_INT nz = 0, ic = 0;
+
+    	    bool const_elt_p = categorize_ctor_elements_1 (value, &nz, &ic,
+    							   p_complete);
+
+    	    nz_elts += mult;
+
+    	    nz_elts += mult;
+
+    	    nz_elts += mult;
+    	  init_elts += mult;
+
+    		  nz_elts += mult;
+
+      return categorize_ctor_elements_1 (ctor, p_nz_elts, p_init_elts, p_complete);
+
+    /* Return 1 if EXP contains mostly (3/4)  zeros.  */
+
+          HOST_WIDE_INT nz_elts, init_elts;
+
+          categorize_ctor_elements (exp, &nz_elts, &init_elts, &complete_p);
+
+          HOST_WIDE_INT nz_elts, init_elts;
+
+          categorize_ctor_elements (exp, &nz_elts, &init_elts, &complete_p);
+
+    				      HOST_WIDE_INT *, bool *);
+
+    	    && (flag_merge_constants >= 2 || !TREE_ADDRESSABLE (object)))
+
+HOST_WIDE_INT nz_elts, init_elts, num_fields;
+
+    	    HOST_WIDE_INT nz = 0, ic = 0;
+
+    	    bool const_elt_p = categorize_ctor_elements_1 (value, &nz, &ic,
+    							   p_complete);
+
+    	    nz_elts += mult;
+
+    	    nz_elts += mult;
+
+    	    nz_elts += mult;
+    	  init_elts += mult;
+
+    		  nz_elts += mult;
+
+      return categorize_ctor_elements_1 (ctor, p_nz_elts, p_init_elts, p_complete);
+
+    /* Return 1 if EXP contains mostly (3/4)  zeros.  */
+
+          HOST_WIDE_INT nz_elts, init_elts;
+
+          categorize_ctor_elements (exp, &nz_elts, &init_elts, &complete_p);
+
+          HOST_WIDE_INT nz_elts, init_elts;
+
+          categorize_ctor_elements (exp, &nz_elts, &init_elts, &complete_p);
+
+    				      HOST_WIDE_INT *, bool *);
+
+    	    && (flag_merge_constants >= 2 || !TREE_ADDRESSABLE (object)))
+
+int num_initialized_elts = 0;
+
+    	      int max = tree_to_shwi (maxindex)+1;
+    	      for (; num_initialized_elts < max; ++num_initialized_elts)
+

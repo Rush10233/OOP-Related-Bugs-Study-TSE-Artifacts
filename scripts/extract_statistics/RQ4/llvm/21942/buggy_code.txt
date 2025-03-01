@@ -1,0 +1,156 @@
+bool IsMarkedOverride : 1; // sunk from CXXMethodDecl
+      bool IsMarkedFinal : 1; // sunk from CXXMethodDecl
+
+          HasImplicitReturnZero(false), IsMarkedOverride(false), 
+          IsMarkedFinal(false), EndRangeLoc(NameInfo.getEndLoc()),
+
+      /// \brief Whether this member function is marked with the 'override' keyword,
+      /// C++0x [class.mem]p8.
+      bool isMarkedOverride() const { return IsMarkedOverride; }
+      void setIsMarkedOverride(bool IMO) { IsMarkedOverride = IMO; }
+    
+      /// \brief Whether this member function is marked with the 'final' keyword,
+      /// C++0x [class.mem]p8.
+      bool isMarkedFinal() const { return IsMarkedFinal; }
+      void setIsMarkedFinal(bool IMF) { IsMarkedFinal = IMF; }
+    
+
+        /// \brief Whether this class is marked 'final'.
+        bool IsMarkedFinal : 1;
+    
+        /// \brief Whether this class is marked 'explicit'.
+        bool IsMarkedExplicit : 1;
+    
+
+      /// \brief Whether this class is marked 'final'.
+      bool isMarkedFinal() const { return data().IsMarkedFinal; }
+    
+      /// \brief Mark this class as 'final'.
+      void setIsMarkedFinal(bool IMF) { data().IsMarkedFinal = IMF; }
+    
+      /// \brief Whether this class is marked 'explicit'.
+      bool isMarkedExplicit() const { return data().IsMarkedExplicit; }
+    
+      /// \brief Mark this class as 'explicit'.
+      void setIsMarkedExplicit(bool IME) { data().IsMarkedExplicit = IME; }
+    
+
+        IsMarkedFinal(false), IsMarkedExplicit(false),
+        NumBases(0), NumVBases(0), Bases(), VBases(), 
+        Definition(D), FirstFriend(0) {
+
+      if (MD->isMarkedFinal())
+
+      if (MD->getParent()->isMarkedFinal())
+
+      Record->setIsMarkedFinal(CVS.isFinalSpecified());
+      Record->setIsMarkedExplicit(CVS.isExplicitSpecified());
+
+      if (CXXBaseDecl->isMarkedFinal()) {
+
+      if (MD->isMarkedOverride() && !HasOverriddenMethods) {
+
+      if (MD->getParent()->isMarkedExplicit() && !isa<CXXDestructorDecl>(MD) &&
+          HasOverriddenMethods && !MD->isMarkedOverride()) {
+
+      if (!Old->isMarkedFinal())
+
+          MD->setIsMarkedOverride(true);
+
+          MD->setIsMarkedFinal(true);
+
+      Instantiation->setIsMarkedFinal(Pattern->isMarkedFinal());
+      Instantiation->setIsMarkedExplicit(Pattern->isMarkedExplicit());
+    
+
+      Method->setIsMarkedOverride(D->isMarkedOverride());
+      Method->setIsMarkedFinal(D->isMarkedFinal());
+
+      FD->IsMarkedOverride = Record[Idx++];
+      FD->IsMarkedFinal = Record[Idx++];
+    
+
+      Data.IsMarkedFinal = Record[Idx++];
+      Data.IsMarkedExplicit = Record[Idx++];
+
+      Record.push_back(Data.IsMarkedFinal);
+      Record.push_back(Data.IsMarkedExplicit);
+
+      Record.push_back(D->isMarkedOverride());
+      Record.push_back(D->isMarkedFinal());
+
+/// \param Variadic Whether this is a variadic function type.
+      ///
+      /// \param HasTrailingReturn Whether this function has a trailing return type.
+      ///
+      /// \param Quals The cvr-qualifiers to be applied to the function type.
+      ///
+
+      /// \returns A suitable function type, if there are no errors.
+
+                                 bool Variadic, bool HasTrailingReturn,
+                                 unsigned Quals, RefQualifierKind RefQualifier,
+
+                                 FunctionType::ExtInfo Info);
+
+      // FIXME: "make check" is clean if the call to dropAttrs() is commented out.
+
+                                          Proto->isVariadic(),
+                                          Proto->hasTrailingReturn(),
+                                          Proto->getTypeQuals(),
+                                          Proto->getRefQualifier(),
+
+                                          Proto->getExtInfo());
+
+    
+
+                                     bool Variadic, bool HasTrailingReturn,
+                                     unsigned Quals,
+                                     RefQualifierKind RefQualifier,
+
+                                     FunctionType::ExtInfo Info) {
+
+      FunctionProtoType::ExtProtoInfo EPI;
+      EPI.Variadic = Variadic;
+      EPI.HasTrailingReturn = HasTrailingReturn;
+      EPI.TypeQuals = Quals;
+      EPI.RefQualifier = RefQualifier;
+      EPI.ExtInfo = Info;
+    
+
+                                        bool Variadic, bool HasTrailingReturn,
+                                        unsigned Quals,
+                                        RefQualifierKind RefQualifier,
+                                        const FunctionType::ExtInfo &Info);
+
+                                                       T->isVariadic(),
+                                                       T->hasTrailingReturn(),
+                                                       T->getTypeQuals(),
+                                                       T->getRefQualifier(),
+                                                       T->getExtInfo());
+
+      const FunctionType *exprFunctionType = E->getFunctionType();
+
+                                              oldBlock->isVariadic(),
+                                              false, 0, RQ_None,
+                                              exprFunctionType->getExtInfo());
+
+        bool Variadic,
+        bool HasTrailingReturn,
+        unsigned Quals,
+        RefQualifierKind RefQualifier,
+        const FunctionType::ExtInfo &Info) {
+      return SemaRef.BuildFunctionType(T, ParamTypes, Variadic,
+                                       HasTrailingReturn, Quals, RefQualifier,
+
+                                       Info);
+
+D->dropAttrs();
+
+      if (FunctionDecl *FD = dyn_cast<FunctionDecl>(D)) {
+
+    
+        for (auto I : FD->params())
+          I->dropAttrs();
+      }
+

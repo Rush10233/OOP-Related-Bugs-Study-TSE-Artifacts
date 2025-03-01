@@ -1,0 +1,10 @@
+element.  */
+    	  if (!reduced_constant_expression_p (val))
+    	    return false;
+
+    	  if (field)
+
+    	}
+          /* There could be a non-empty field at the end.  */
+          for (; field; field = next_initializable_field (DECL_CHAIN (field)))
+

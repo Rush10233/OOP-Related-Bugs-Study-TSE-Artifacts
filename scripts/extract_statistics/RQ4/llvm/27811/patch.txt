@@ -1,0 +1,42 @@
+// In MSVC mode, dllimported explicit instantiation definitions are treated as
+      // instantiation declarations for most purposes.
+      bool DLLImportExplicitInstantiationDef = false;
+      if (TSK == TSK_ExplicitInstantiationDefinition &&
+          Context.getTargetInfo().getCXXABI().isMicrosoft()) {
+        // Check for dllimport class template instantiation definitions.
+        bool DLLImport =
+            ClassTemplate->getTemplatedDecl()->getAttr<DLLImportAttr>();
+        for (AttributeList *A = Attr; A; A = A->getNext()) {
+          if (A->getKind() == AttributeList::AT_DLLImport)
+            DLLImport = true;
+          if (A->getKind() == AttributeList::AT_DLLExport) {
+            // dllexport trumps dllimport here.
+            DLLImport = false;
+            break;
+          }
+        }
+        if (DLLImport) {
+          TSK = TSK_ExplicitInstantiationDeclaration;
+          DLLImportExplicitInstantiationDef = true;
+        }
+      }
+    
+
+    
+        if (PrevDecl_TSK == TSK_ExplicitInstantiationDeclaration &&
+            DLLImportExplicitInstantiationDef) {
+          // The new specialization might add a dllimport attribute.
+          HasNoEffect = false;
+        }
+
+            (TSK == TSK_ExplicitInstantiationDefinition ||
+             DLLImportExplicitInstantiationDef)) {
+
+          if (Context.getTargetInfo().getCXXABI().isMicrosoft() &&
+              TSK == TSK_ExplicitInstantiationDeclaration) {
+            // In MSVC mode, explicit instantiation decl of the outer class doesn't
+            // affect the inner class.
+            continue;
+          }
+    
+

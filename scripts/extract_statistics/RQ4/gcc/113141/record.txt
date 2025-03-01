@@ -1,0 +1,8 @@
+Commit:	d435571
+./gcc/cp/call.cc	2037,2037
+Commit:	c950008
+./gcc/cp/call.cc	1599,1599
+./gcc/cp/call.cc	1910,1911
+./gcc/cp/call.cc	1926,1926
+Commit:	60e1e13
+./gcc/cp/call.cc	2020,2020

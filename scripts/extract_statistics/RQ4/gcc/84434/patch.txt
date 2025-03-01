@@ -1,0 +1,52 @@
+tree name = OVL_NAME ((*member_vec)[0]);
+      for (unsigned jx, ix = 0; ix < len; ix = jx)
+
+          tree current = NULL_TREE;
+
+          for (jx = ix; jx < len; jx++)
+
+    	  tree next = (*member_vec)[jx];
+    	  if (jx != ix)
+
+    	      tree next_name = OVL_NAME (next);
+    	      if (next_name != name)
+    		{
+    		  name = next_name;
+    		  break;
+    		}
+
+    	  if (IDENTIFIER_CONV_OP_P (name))
+
+    	      marker = next;
+
+    	      if (IDENTIFIER_CTOR_P (name))
+    		/* Dependent inherited ctor. */
+    		continue;
+    
+
+    	      if (TREE_CODE (next) == USING_DECL)
+
+    		  continue;
+
+    
+    	      if (is_overloaded_fn (next))
+    		continue;
+
+    	  if (DECL_DECLARES_TYPE_P (next))
+    	    {
+    	      to_type = next;
+    	      continue;
+    	    }
+    
+    	  if (!current)
+    	    current = next;
+
+          if (current)
+
+    	  if (marker)
+    	    {
+    	      OVL_CHAIN (marker) = current;
+    	      current = marker;
+    	    }
+    	  (*member_vec)[store++] = current;
+

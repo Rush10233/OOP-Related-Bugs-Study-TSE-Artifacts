@@ -1,0 +1,49 @@
+if (!(flags & TFF_UNQUALIFIED_NAME))
+    	  {
+    	    tree scope = USING_DECL_SCOPE (t);
+
+    	    if (PACK_EXPANSION_P (scope))
+    	      {
+    		scope = PACK_EXPANSION_PATTERN (scope);
+    		variadic = true;
+    	      }
+
+    	    dump_type (pp, scope, flags);
+    	    pp_cxx_colon_colon (pp);
+    	  }
+
+    	pedwarn (ell->location, OPT_Wc__17_extensions,
+    		 "pack expansion in using-declaration only available "
+    		 "with %<-std=c++17%> or %<-std=gnu++17%>");
+
+        }
+    
+      /* The function we call to handle a using-declaration is different
+
+          if (DECL_DEPENDENT_P (t)
+    	  || uses_template_parms (USING_DECL_SCOPE (t)))
+    	{
+
+    	  tree scope = USING_DECL_SCOPE (t);
+    	  if (PACK_EXPANSION_P (scope))
+    	    {
+
+    		{
+
+    		}
+
+    	    }
+    	  else
+
+    	    {
+
+    		{
+
+    		}
+
+    	    }
+
+    	}
+          else
+    	{
+

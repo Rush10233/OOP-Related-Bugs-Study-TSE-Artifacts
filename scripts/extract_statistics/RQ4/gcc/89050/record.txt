@@ -1,0 +1,3 @@
+Commit:	cdec1a0
+./gcc/cp/semantics.c	3418,3418
+./gcc/cp/semantics.c	3420,3421

@@ -1,0 +1,56 @@
+hash_map<tree,tree> *values;
+      /* SAVE_EXPRs that we've seen within the current LOOP_EXPR.  NULL if we
+         aren't inside a loop.  */
+
+      /* The CONSTRUCTOR we're currently building up for an aggregate
+         initializer.  */
+      tree ctor;
+
+    	  /* Track the callee's evaluated SAVE_EXPRs so that we can forget
+    	     their values after the call.  */
+    	  constexpr_ctx ctx_with_save_exprs = *ctx;
+
+    	  ctx_with_save_exprs.save_exprs = &save_exprs;
+    	  ctx_with_save_exprs.call = &new_call;
+    
+
+    	    }
+    
+    	  /* Forget the saved values of the callee's SAVE_EXPRs.  */
+
+    
+    	  /* Remove the parms/result from the values map.  Is it worth
+    	     bothering to do this when the map itself is only live for
+
+        default:
+          gcc_unreachable ();
+        }
+
+      new_ctx.save_exprs = &save_exprs;
+      do
+        {
+
+    	}
+    
+          /* Forget saved values of SAVE_EXPRs.  */
+
+    
+          if (++count >= constexpr_loop_limit)
+    	{
+
+    	 && !*non_constant_p);
+    
+      /* Forget saved values of SAVE_EXPRs.  */
+
+    
+      return NULL_TREE;
+    }
+
+    					    non_constant_p, overflow_p);
+    	  ctx->values->put (t, r);
+    	  if (ctx->save_exprs)
+
+    	}
+          break;
+    
+

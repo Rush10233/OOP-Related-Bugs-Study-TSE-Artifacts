@@ -1,0 +1,10 @@
+if (TREE_CODE (expr) == TARGET_EXPR
+    	  && TARGET_EXPR_LIST_INIT_P (expr))
+    	/* Copy-list-initialization doesn't actually involve a copy.  */
+    	return expr;
+
+if (TREE_CODE (expr) == TARGET_EXPR
+    	  && TARGET_EXPR_LIST_INIT_P (expr))
+    	/* Copy-list-initialization doesn't actually involve a copy.  */
+    	return expr;
+

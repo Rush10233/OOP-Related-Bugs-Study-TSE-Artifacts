@@ -1,0 +1,10 @@
+if (!non_constant_p && overflow_p)
+        non_constant_p = true;
+    
+
+      bool should_unshare = true;
+
+        should_unshare = false;
+    
+      if (non_constant_p && !allow_non_constant)
+

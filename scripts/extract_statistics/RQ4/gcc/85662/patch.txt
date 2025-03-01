@@ -1,0 +1,75 @@
+traditional rendering of offsetof as a macro.  TYPE is the desired type of
+       the whole expression.  Return the folded result.  */
+
+    fold_offsetof (tree expr, tree type, enum tree_code ctx)
+
+          return convert (type, TREE_OPERAND (expr, 0));
+
+          base = fold_offsetof (TREE_OPERAND (expr, 0), type, code);
+
+          base = fold_offsetof (TREE_OPERAND (expr, 0), type, code);
+
+          return fold_offsetof (t, type);
+
+      if (!POINTER_TYPE_P (type))
+        return size_binop (PLUS_EXPR, base, convert (type, off));
+
+    extern tree fold_offsetof (tree, tree = size_type_node,
+    			   tree_code ctx = ERROR_MARK);
+
+    	ret = fold_offsetof (op0, TREE_TYPE (expr));
+
+    	  ret = fold_offsetof (arg, argtype);
+
+    		return fold_offsetof (op0, TREE_TYPE (x));
+
+traditional rendering of offsetof as a macro.  TYPE is the desired type of
+       the whole expression.  Return the folded result.  */
+
+    fold_offsetof (tree expr, tree type, enum tree_code ctx)
+
+          return convert (type, TREE_OPERAND (expr, 0));
+
+          base = fold_offsetof (TREE_OPERAND (expr, 0), type, code);
+
+          base = fold_offsetof (TREE_OPERAND (expr, 0), type, code);
+
+          return fold_offsetof (t, type);
+
+      if (!POINTER_TYPE_P (type))
+        return size_binop (PLUS_EXPR, base, convert (type, off));
+
+    extern tree fold_offsetof (tree, tree = size_type_node,
+    			   tree_code ctx = ERROR_MARK);
+
+    	ret = fold_offsetof (op0, TREE_TYPE (expr));
+
+    	  ret = fold_offsetof (arg, argtype);
+
+    		return fold_offsetof (op0, TREE_TYPE (x));
+
+traditional rendering of offsetof as a macro.  TYPE is the desired type of
+       the whole expression.  Return the folded result.  */
+
+    fold_offsetof (tree expr, tree type, enum tree_code ctx)
+
+          return convert (type, TREE_OPERAND (expr, 0));
+
+          base = fold_offsetof (TREE_OPERAND (expr, 0), type, code);
+
+          base = fold_offsetof (TREE_OPERAND (expr, 0), type, code);
+
+          return fold_offsetof (t, type);
+
+      if (!POINTER_TYPE_P (type))
+        return size_binop (PLUS_EXPR, base, convert (type, off));
+
+    extern tree fold_offsetof (tree, tree = size_type_node,
+    			   tree_code ctx = ERROR_MARK);
+
+    	ret = fold_offsetof (op0, TREE_TYPE (expr));
+
+    	  ret = fold_offsetof (arg, argtype);
+
+    		return fold_offsetof (op0, TREE_TYPE (x));
+

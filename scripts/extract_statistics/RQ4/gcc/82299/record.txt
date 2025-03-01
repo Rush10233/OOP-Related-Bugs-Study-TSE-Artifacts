@@ -1,0 +1,6 @@
+Commit:	1e28109
+./gcc/cp/decl.c	6103,6103
+./gcc/cp/typeck.c	8417,8417
+Commit:	681f18d
+./gcc/cp/decl.c	6050,6050
+./gcc/cp/typeck.c	8530,8530

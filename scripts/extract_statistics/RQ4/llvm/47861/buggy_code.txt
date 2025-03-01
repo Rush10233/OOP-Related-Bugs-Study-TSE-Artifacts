@@ -1,0 +1,23 @@
+const Decl *D = nullptr;
+
+    /// supposed to lifetime-extend along (but don't).
+    static bool shouldLifetimeExtendThroughPath(const IndirectLocalPath &Path) {
+
+        if (Elem.Kind != IndirectLocalPathEntry::DefaultInit)
+          return false;
+
+      return true;
+
+          // Lifetime-extend the temporary.
+          if (Path.empty()) {
+
+          }
+
+          if (shouldLifetimeExtendThroughPath(Path)) {
+
+          } else {
+
+              Diag(DiagLoc, shouldLifetimeExtendThroughPath(Path)
+
+          case IndirectLocalPathEntry::VarInit:
+

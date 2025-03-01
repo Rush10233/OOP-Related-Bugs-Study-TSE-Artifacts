@@ -1,0 +1,11 @@
+else if (!args->is_empty ()
+    			 && is_overloaded_fn (postfix_expression))
+    		  {
+    		    /* Do not do argument dependent lookup if regular
+    		       lookup finds a member function or a block-scope
+    		       function declaration.  [basic.lookup.argdep]/3  */
+
+    		      {
+    			koenig_p = true;
+    			if (!any_type_dependent_arguments_p (args))
+

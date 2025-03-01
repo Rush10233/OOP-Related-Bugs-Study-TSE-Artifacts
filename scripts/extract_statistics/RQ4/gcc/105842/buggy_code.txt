@@ -1,0 +1,34 @@
+/* If any arguments depend on template parameters, we can't
+         check constraints. Pretend they're satisfied for now.  */
+      if (uses_template_parms (args))
+
+      /* If any arguments depend on template parameters, we can't
+         check constraints. Pretend they're satisfied for now.  */
+      if (uses_template_parms (args))
+
+          if (tinfo && PRIMARY_TEMPLATE_P (TI_TEMPLATE (tinfo))
+
+    bool
+
+      if (ci && for_each_template_parm (ci, template_parm_outer_level,
+    				    &depth, NULL, /*nondeduced*/true))
+        return true;
+      return false;
+
+/* If any arguments depend on template parameters, we can't
+         check constraints. Pretend they're satisfied for now.  */
+      if (uses_template_parms (args))
+
+      /* If any arguments depend on template parameters, we can't
+         check constraints. Pretend they're satisfied for now.  */
+      if (uses_template_parms (args))
+
+          if (tinfo && PRIMARY_TEMPLATE_P (TI_TEMPLATE (tinfo))
+
+    bool
+
+      if (ci && for_each_template_parm (ci, template_parm_outer_level,
+    				    &depth, NULL, /*nondeduced*/true))
+        return true;
+      return false;
+

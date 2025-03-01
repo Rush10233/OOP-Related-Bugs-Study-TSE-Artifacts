@@ -1,0 +1,72 @@
+return data.changed;
+    }
+    
+
+    /* Subroutine of cxx_eval_constant_expression.
+       Evaluate the call expression tree T in the context of OLD_CALL expression
+       evaluation.  */
+
+    
+      depth_ok = push_cx_call_context (t);
+    
+
+      tree new_obj = NULL_TREE;
+
+        {
+
+    	 At this point it has already been evaluated in the call
+    	 to cxx_bind_parameters_in_call.  */
+          new_obj = TREE_VEC_ELT (new_call.bindings, 0);
+
+    	  unsigned save_heap_alloc_count = ctx->global->heap_vars.length ();
+    	  unsigned save_heap_dealloc_count = ctx->global->heap_dealloc_count;
+    
+
+    	  tree jump_target = NULL_TREE;
+    	  cxx_eval_constant_expression (&ctx_with_save_exprs, body,
+    					lval, non_constant_p, overflow_p,
+
+    	     the object is no longer under construction, and its possible
+    	     'const' semantics now apply.  Make a note of this fact by
+    	     marking the CONSTRUCTOR TREE_READONLY.  */
+
+    
+    	  /* Forget the saved values of the callee's SAVE_EXPRs and
+    	     TARGET_EXPRs.  */
+
+non_constant_p, overflow_p);
+    }
+    
+
+    /* Subroutine of cxx_eval_constant_expression.
+       Evaluate the call expression tree T in the context of OLD_CALL expression
+       evaluation.  */
+
+    
+      depth_ok = push_cx_call_context (t);
+    
+
+      tree new_obj = NULL_TREE;
+
+        {
+
+    	 At this point it has already been evaluated in the call
+    	 to cxx_bind_parameters_in_call.  */
+          new_obj = TREE_VEC_ELT (new_call.bindings, 0);
+
+    	  unsigned save_heap_alloc_count = ctx->global->heap_vars.length ();
+    	  unsigned save_heap_dealloc_count = ctx->global->heap_dealloc_count;
+    
+
+    	  tree jump_target = NULL_TREE;
+    	  cxx_eval_constant_expression (&ctx_with_save_exprs, body,
+    					lval, non_constant_p, overflow_p,
+
+    	     the object is no longer under construction, and its possible
+    	     'const' semantics now apply.  Make a note of this fact by
+    	     marking the CONSTRUCTOR TREE_READONLY.  */
+
+    
+    	  /* Forget the saved values of the callee's SAVE_EXPRs and
+    	     TARGET_EXPRs.  */
+

@@ -1,0 +1,12 @@
+case REAL_CST:
+
+          if (TREE_CODE (arg) != TREE_CODE (parm))
+
+          return (simple_cst_equal (parm, arg)
+
+case REAL_CST:
+
+          if (TREE_CODE (arg) != TREE_CODE (parm))
+
+          return (simple_cst_equal (parm, arg)
+

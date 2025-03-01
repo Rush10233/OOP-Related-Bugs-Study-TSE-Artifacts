@@ -1,0 +1,22 @@
+if (TREE_CODE (functions) == OVERLOAD && OVL_SINGLE_P (functions))
+    	functions = OVL_FIRST (functions);
+
+          if (TREE_CODE (fn) == OVERLOAD && OVL_SINGLE_P (fn))
+    	fn = OVL_FIRST (fn);
+    
+
+if (using_decl)
+        {
+          overload = ovl_cons (method, current_fns);
+          OVL_USED (overload) = true;
+        }
+      else
+        overload = build_overload (method, current_fns);
+
+          && !really_overloaded_fn (rval))
+        {
+          tree decl = is_overloaded_fn (rval) ? get_first_fn (rval) : rval;
+          if (!DECL_NONSTATIC_MEMBER_FUNCTION_P (decl))
+    	perform_or_defer_access_check (basetype_path, decl, decl);
+        }
+

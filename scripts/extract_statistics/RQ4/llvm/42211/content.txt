@@ -1,0 +1,33 @@
+return false;
+          };
+    
+
+          Overriding.erase(
+              std::remove_if(Overriding.begin(), Overriding.end(), IsHidden),
+              Overriding.end());
+
+      if (auto *MD = getCorrespondingMethodDeclaredInClass(RD, MayBeBase))
+        return MD;
+    
+
+      for (const auto &I : RD->bases()) {
+        const RecordType *RT = I.getType()->getAs<RecordType>();
+        if (!RT)
+          continue;
+        const auto *Base = cast<CXXRecordDecl>(RT->getDecl());
+
+      }
+    
+
+    }
+    
+    CXXMethodDecl *CXXMethodDecl::Create(ASTContext &C, CXXRecordDecl *RD,
+
+      CXXMethodDecl *DevirtualizedMethod =
+          getCorrespondingMethodInClass(BestDynamicDecl);
+    
+
+      // If that method is pure virtual, we can't devirtualize. If this code is
+      // reached, the result would be UB, not a direct call to the derived class
+      // function, and we can't assume the derived class function is defined.
+

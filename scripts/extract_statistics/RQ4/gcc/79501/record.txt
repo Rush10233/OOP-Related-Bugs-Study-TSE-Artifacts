@@ -1,0 +1,5 @@
+Commit:	8d980e8
+./gcc/cp/decl.c	10045,10050
+./gcc/cp/search.c	1229,1229
+Commit:	6186708
+./gcc/cp/parser.c	22257,22275

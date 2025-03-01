@@ -1,0 +1,8 @@
+return false;
+        if (TX->hasTypeConstraint() != TY->hasTypeConstraint())
+          return false;
+
+          if (TXTC->getNamedConcept() != TYTC->getNamedConcept())
+            return false;
+          if (TXTC->hasExplicitTemplateArgs() != TYTC->hasExplicitTemplateArgs())
+

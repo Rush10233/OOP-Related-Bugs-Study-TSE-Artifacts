@@ -1,0 +1,32 @@
+if (expression == NULL_TREE || expression == error_mark_node)
+        return false;
+    
+
+      STRIP_ANY_LOCATION_WRAPPER (expression);
+    
+      /* An unresolved name is always dependent.  */
+
+    	}
+          return r;
+        }
+
+      else
+        {
+          bool dependent_p = type_dependent_expression_p (decl);
+
+return (GET_MODE_SIZE (mode1) == 8
+    	    && ix86_hard_regno_mode_ok (FIRST_MMX_REG, mode1));
+    
+
+      return false;
+    }
+    
+
+under instantiate_non_dependent_expr; it can't be constant.  */
+          return true;
+    
+
+        default:
+          /* A constant expression is value-dependent if any subexpression is
+    	 value-dependent.  */
+

@@ -1,0 +1,113 @@
+/* Returns true if FN is a usual deallocation fn with a size_t parameter.  */
+    
+    static bool
+    sized_deallocation_fn_p (tree fn)
+    {
+      tree t = FUNCTION_ARG_CHAIN (fn);
+      if (destroying_delete_p (fn))
+        t = TREE_CHAIN (t);
+      if (!t || !same_type_p (TREE_VALUE (t), size_type_node))
+        return false;
+      t = TREE_CHAIN (t);
+      if (t == void_list_node)
+        return true;
+      if (aligned_new_threshold && t
+          && same_type_p (TREE_VALUE (t), align_type_node)
+          && TREE_CHAIN (t) == void_list_node)
+        return true;
+      return false;
+    }
+    
+
+      /* A usual deallocation function is a deallocation function whose parameters
+         after the first are
+         - optionally, a parameter of type std::destroying_delete_t, then
+         - optionally, a parameter of type std::size_t, then
+         - optionally, a parameter of type std::align_val_t.  */
+
+    	  && sized_deallocation_fn_p (t)))
+
+    	    bool fn_size = sized_deallocation_fn_p (fn);
+    	    bool elt_size = sized_deallocation_fn_p (elt);
+
+    	  if (sized_deallocation_fn_p (fn))
+
+struct dealloc_info
+
+      bool sized;
+      bool aligned;
+      tree destroying;
+    };
+
+    /* Returns true iff T, an element of an OVERLOAD chain, is a usual deallocation
+       function (3.7.4.2 [basic.stc.dynamic.deallocation]).  If so, and DI is
+       non-null, also set *DI. */
+
+    usual_deallocation_fn_p (tree t, dealloc_info *di)
+
+      if (di) *di = dealloc_info();
+
+      if (chain && destroying_delete_p (t))
+        {
+          if (di) di->destroying = TREE_VALUE (chain);
+          chain = TREE_CHAIN (chain);
+        }
+      if (chain
+          && (!global || flag_sized_deallocation)
+          && same_type_p (TREE_VALUE (chain), size_type_node))
+        {
+          if (di) di->sized = true;
+          chain = TREE_CHAIN (chain);
+        }
+      if (chain && aligned_new_threshold
+          && same_type_p (TREE_VALUE (chain), align_type_node))
+        {
+          if (di) di->aligned = true;
+          chain = TREE_CHAIN (chain);
+        }
+      return (chain == void_list_node);
+    }
+    
+    /* Just return whether FN is a usual deallocation function.  */
+    
+    bool
+    usual_deallocation_fn_p (tree fn)
+    {
+      return usual_deallocation_fn_p (fn, NULL);
+
+      dealloc_info di_fn = { };
+
+    	dealloc_info di_elt;
+    	if (usual_deallocation_fn_p (elt, &di_elt))
+
+    		di_fn = di_elt;
+
+    	    if (di_elt.destroying != di_fn.destroying)
+
+    		if (di_elt.destroying)
+    		  {
+    		    fn = elt;
+    		    di_fn = di_elt;
+    		  }
+
+    		if (di_elt.aligned != di_fn.aligned)
+
+    		    if (want_align == di_elt.aligned)
+    		      {
+    			fn = elt;
+    			di_fn = di_elt;
+    		      }
+
+    	    gcc_assert (di_fn.sized != di_elt.sized);
+    	    if (want_size == di_elt.sized)
+    	      {
+    		fn = elt;
+    		di_fn = di_elt;
+    	      }
+
+    	  tree destroying = di_fn.destroying;
+
+    	  if (di_fn.sized)
+
+    	  if (di_fn.aligned)
+

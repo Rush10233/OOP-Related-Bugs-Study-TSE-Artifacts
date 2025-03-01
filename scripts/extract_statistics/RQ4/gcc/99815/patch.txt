@@ -1,0 +1,6 @@
+if (ARGUMENT_PACK_P (first))
+        {
+          args = expand_template_argument_pack (args);
+          first = TREE_VEC_ELT (args, 0);
+        }
+

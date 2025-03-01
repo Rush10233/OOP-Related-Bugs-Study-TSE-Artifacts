@@ -1,0 +1,27 @@
+TREE_PURPOSE (p) = TREE_VALUE (p);
+
+      tree arg = template_parm_to_arg (build_tree_list (NULL_TREE, decl));
+
+    /* Takes a TREE_LIST representing a template parameter and convert it
+       into an argument suitable to be passed to the type substitution
+       functions.  Note that If the TREE_LIST contains an error_mark
+       node, the returned argument is error_mark_node.  */
+
+      if (t == NULL_TREE
+          || TREE_CODE (t) != TREE_LIST)
+        return t;
+
+      if (error_operand_p (TREE_VALUE (t)))
+
+      t = TREE_VALUE (t);
+    
+      if (TREE_CODE (t) == TYPE_DECL
+          || TREE_CODE (t) == TEMPLATE_DECL)
+
+          t = TREE_TYPE (t);
+
+          t = DECL_INITIAL (t);
+    
+
+    	  TREE_VEC_ELT (TREE_OPERAND (id, 1), 0) = template_parm_to_arg (t);
+

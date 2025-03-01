@@ -1,0 +1,54 @@
+/* We already called reshape_init in implicit_conversion, but it might not
+         have done anything in the case of parenthesized aggr init.  */
+
+      tree idx, val;
+      FOR_EACH_CONSTRUCTOR_ELT (CONSTRUCTOR_ELTS (ctor), i, idx, val)
+
+          if (!idx)
+    	break;
+
+          gcc_checking_assert (TREE_CODE (idx) == FIELD_DECL);
+
+          tree ftype = TREE_TYPE (idx);
+          bool ok;
+    
+          if (TREE_CODE (ftype) == ARRAY_TYPE)
+    	ok = can_convert_array (ftype, val, flags, complain);
+          else
+    	ok = can_convert_arg (ftype, TREE_TYPE (val), val, flags,
+    			      complain);
+    
+          if (!ok)
+    	return NULL;
+    
+          /* For unions, there should be just one initializer.  */
+          if (TREE_CODE (type) == UNION_TYPE)
+    	{
+    	  field = NULL_TREE;
+    	  i = 1;
+    	  break;
+
+          pset.add (idx);
+
+    	  constructor_elt *ce = CONSTRUCTOR_ELT (ctor, i);
+    	  gcc_checking_assert (!ce->index);
+    	  val = ce->value;
+
+if (d->cur->index)
+    	CONSTRUCTOR_IS_DESIGNATED_INIT (new_init) = true;
+
+    	      CONSTRUCTOR_IS_DESIGNATED_INIT (new_init) = true;
+
+        gcc_checking_assert (CONSTRUCTOR_IS_DESIGNATED_INIT (new_init)
+    			 || seen_error ());
+
+if (d->cur->index)
+    	CONSTRUCTOR_IS_DESIGNATED_INIT (new_init) = true;
+
+    	      CONSTRUCTOR_IS_DESIGNATED_INIT (new_init) = true;
+
+if (d->cur->index)
+    	CONSTRUCTOR_IS_DESIGNATED_INIT (new_init) = true;
+
+    	      CONSTRUCTOR_IS_DESIGNATED_INIT (new_init) = true;
+

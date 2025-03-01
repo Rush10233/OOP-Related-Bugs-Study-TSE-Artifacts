@@ -1,0 +1,10 @@
+if (GET_MODE (*curr_id->operand_loc[in]) == VOIDmode
+    	|| GET_MODE (new_in_reg) == GET_MODE (*curr_id->operand_loc[in]))
+
+        else
+          {
+    	lra_assert
+    	  (GET_MODE (new_out_reg) == GET_MODE (*curr_id->operand_loc[in]));
+    	*curr_id->operand_loc[in] = new_out_reg;
+          }
+

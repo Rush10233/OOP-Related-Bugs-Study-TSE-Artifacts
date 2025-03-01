@@ -1,0 +1,16 @@
+if (rhs == NULL_TREE)
+    	    return NULL_TREE;
+    	  rhs = TREE_TYPE (rhs);	/* Pointer type.  */
+
+    	  rhs = TREE_TYPE (rhs);	/* Function type.  */
+    	  rhstype = TREE_TYPE (rhs);
+    	  if (!rhstype || !POINTER_TYPE_P (rhstype))
+
+if (rhs == NULL_TREE)
+    	    return NULL_TREE;
+    	  rhs = TREE_TYPE (rhs);	/* Pointer type.  */
+
+    	  rhs = TREE_TYPE (rhs);	/* Function type.  */
+    	  rhstype = TREE_TYPE (rhs);
+    	  if (!rhstype || !POINTER_TYPE_P (rhstype))
+

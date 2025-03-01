@@ -1,0 +1,23 @@
+return;
+    
+      // <template-template-param> ::= <template-param>
+
+        mangleTemplateParameter(TTP->getIndex());
+
+    
+      addSubstitution(ND);
+    }
+    
+
+        return;
+    
+      // <template-template-param> ::= <template-param>
+
+        mangleTemplateParameter(TTP->getIndex());
+
+      }
+    
+      addSubstitution(ND);
+    }
+    
+

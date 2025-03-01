@@ -1,0 +1,10 @@
+bool nothrow;
+      tree decl = get_callee_fndecl (call);
+
+      nothrow = decl && TREE_NOTHROW (decl);
+      if (CALL_EXPR_FN (call))
+        nothrow |= TYPE_NOTHROW_P (TREE_TYPE (TREE_TYPE (CALL_EXPR_FN (call))));
+      else if (internal_fn_flags (CALL_EXPR_IFN (call)) & ECF_NOTHROW)
+
+      if (TREE_CODE (*tp) == CALL_EXPR)
+

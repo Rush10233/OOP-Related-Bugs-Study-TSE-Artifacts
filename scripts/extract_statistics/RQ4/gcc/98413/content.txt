@@ -1,0 +1,16 @@
+x = TREE_OPERAND (x, 0);
+    
+      tree type = TREE_TYPE (x);
+
+    
+       if (TREE_CODE (x) != INTEGER_CST
+          && TREE_CODE (x) != SSA_NAME)
+
+        return false;
+    
+      tree dealloc_decl = get_callee_fndecl (exp);
+
+      if (DECL_IS_OPERATOR_DELETE_P (dealloc_decl)
+          && !DECL_IS_REPLACEABLE_OPERATOR (dealloc_decl))
+        {
+

@@ -1,0 +1,88 @@
+bool PartialOrdering = false);
+    
+    static Sema::TemplateDeductionResult
+
+                            const TemplateArgument *Params, unsigned NumParams,
+                            const TemplateArgument *Args, unsigned NumArgs,
+                            TemplateDeductionInfo &Info,
+
+    
+    /// \brief If the given expression is of a form that permits the deduction
+    /// of a non-type template parameter, return the declaration of that
+
+        // Perform template argument deduction on each template
+        // argument. Ignore any missing/extra arguments, since they could be
+        // filled in by default arguments.
+
+      }
+    
+      // If the argument type is a class template specialization, we
+
+        return Result;
+    
+      // Perform template argument deduction for the template arguments.
+
+    }
+    
+    /// \brief Determines whether the given type is an opaque type that
+
+          SmallVector<const RecordType *, 8> ToVisit;
+          ToVisit.push_back(RecordT);
+          bool Successful = false;
+
+          while (!ToVisit.empty()) {
+            // Retrieve the next class in the inheritance hierarchy.
+            const RecordType *NextT = ToVisit.pop_back_val();
+
+              // note that we had some success. Otherwise, ignore any deductions
+              // from this base class.
+              if (BaseResult == Sema::TDK_Success) {
+
+                Successful = true;
+
+                Info.Param = BaseInfo.Param;
+                Info.FirstArg = BaseInfo.FirstArg;
+                Info.SecondArg = BaseInfo.SecondArg;
+
+            }
+    
+            // Visit base classes
+
+            }
+          }
+    
+
+            return Sema::TDK_Success;
+
+    
+          return Result;
+        }
+
+    }
+    
+    static Sema::TemplateDeductionResult
+
+                            const TemplateArgument *Params, unsigned NumParams,
+                            const TemplateArgument *Args, unsigned NumArgs,
+                            TemplateDeductionInfo &Info,
+
+      // C++0x [temp.deduct.type]p9:
+      //   If the template argument list of P contains a pack expansion that is not
+      //   the last template argument, the entire template argument list is a
+
+    
+          // Check whether we have enough arguments.
+          if (!hasTemplateArgumentForDeduction(Args, ArgIdx, NumArgs))
+
+    
+          if (Args[ArgIdx].isPackExpansion()) {
+            // FIXME: We follow the logic of C++0x [temp.deduct.type]p22 here,
+
+      return DeduceTemplateArguments(S, TemplateParams,
+                                     ParamList.data(), ParamList.size(),
+                                     ArgList.data(), ArgList.size(),
+
+    }
+    
+    /// \brief Determine whether two template arguments are the same.
+

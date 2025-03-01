@@ -1,0 +1,16 @@
+extern bool uses_outer_template_parms_in_constraints (tree);
+
+    	  error_at (location, "constraints on a non-templated function");
+
+    uses_outer_template_parms_in_constraints (tree decl)
+
+      int depth = template_class_depth (CP_DECL_CONTEXT (decl));
+
+          else if (!constraints_satisfied_p (new_friend))
+    	/* Only define a constrained hidden friend when satisfied.  */
+    	return error_mark_node;
+
+else if (!constraints_satisfied_p (new_friend))
+    	/* Only define a constrained hidden friend when satisfied.  */
+    	return error_mark_node;
+

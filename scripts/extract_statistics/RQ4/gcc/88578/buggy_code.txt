@@ -1,0 +1,28 @@
+if (!split_nonconstant_init_1 (sub, value))
+
+    	  fieldsize = array_size_for_constructor (local->val);
+
+    	  tree size = TYPE_SIZE_UNIT (TREE_TYPE (local->val));
+    	  gcc_checking_assert (compare_tree_int (size, fieldsize) == 0);
+
+if (!split_nonconstant_init_1 (sub, value, true))
+
+    	  fieldsize = array_size_for_constructor (local->val);
+
+    	  tree size = TYPE_SIZE_UNIT (TREE_TYPE (local->val));
+    	  gcc_checking_assert (compare_tree_int (size, fieldsize) == 0);
+
+if (!split_nonconstant_init_1 (sub, value, true))
+
+    	  fieldsize = array_size_for_constructor (local->val);
+
+    	  tree size = TYPE_SIZE_UNIT (TREE_TYPE (local->val));
+    	  gcc_checking_assert (compare_tree_int (size, fieldsize) == 0);
+
+if (!split_nonconstant_init_1 (sub, value, true))
+
+    	  fieldsize = array_size_for_constructor (local->val);
+
+    	  tree size = TYPE_SIZE_UNIT (TREE_TYPE (local->val));
+    	  gcc_checking_assert (compare_tree_int (size, fieldsize) == 0);
+

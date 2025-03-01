@@ -1,0 +1,37 @@
+DECL_FINAL_P (in FUNCTION_DECL)
+          QUALIFIED_NAME_IS_TEMPLATE (in SCOPE_REF)
+          DECLTYPE_FOR_INIT_CAPTURE (in DECLTYPE_TYPE)
+
+          TINFO_USED_TEMPLATE_ID (in TEMPLATE_INFO)
+          PACK_EXPANSION_SIZEOF_P (in *_PACK_EXPANSION)
+          OVL_USING_P (in OVERLOAD)
+
+       B b{1,2}, not B b({1,2}) or B b = {1,2}.  */
+    #define CONSTRUCTOR_IS_DIRECT_INIT(NODE) (TREE_LANG_FLAG_0 (CONSTRUCTOR_CHECK (NODE)))
+    
+
+    /* True if this CONSTRUCTOR should not be used as a variable initializer
+       because it was loaded from a constexpr variable with mutable fields.  */
+    #define CONSTRUCTOR_MUTABLE_POISON(NODE) \
+
+    	return *tp;
+          break;
+    
+
+        default:
+          break;
+        }
+
+    	  return error_mark_node;
+          }
+    
+
+        {
+          TREE_TYPE (compound_literal) = type;
+          /* Mark the expression as a compound literal.  */
+          TREE_HAS_CONSTRUCTOR (compound_literal) = 1;
+
+          if (fcl_context == fcl_c99)
+    	CONSTRUCTOR_C99_COMPOUND_LITERAL (compound_literal) = 1;
+          return compound_literal;
+

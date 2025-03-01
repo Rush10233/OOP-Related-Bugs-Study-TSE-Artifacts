@@ -1,0 +1,8 @@
+QualType DestClass(DestMemPtr->getClass(), 0);
+      CXXBasePaths Paths(/*FindAmbiguities=*/true, /*RecordPaths=*/true,
+                      /*DetectVirtual=*/true);
+
+        return TC_NotApplicable;
+      }
+    
+

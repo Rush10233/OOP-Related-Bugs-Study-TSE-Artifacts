@@ -1,0 +1,3 @@
+Commit:	8d8f9c2
+./clang/lib/Sema/SemaLookup.cpp	3115,3115
+./clang/lib/Sema/SemaLookup.cpp	3117,3119

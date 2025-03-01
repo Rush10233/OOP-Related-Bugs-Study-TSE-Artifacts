@@ -1,0 +1,25 @@
+	Issue ID	Title
+0	41065	"In some circumstances the clang_cl for windows doesn't generate default virtual destructor for the derived class with ""/O2"" and ""/EHsc"" flags"
+1	42111	thread-local static variable unnecessarily constructed again
+2	43280	Static constexpr string struct causes unresolved symbols on Windows
+3	42182	"""cannot compile this non-trivial TLS destruction yet"", when compiling with -fno-use-cxa-atexit"
+4	42205	crash producing debug info for in-class partial specialization of static data member template with 'auto' type
+5	40682	clang++ miscompilation while generating copy constructors of classes containing 0-length array
+6	42220	rvalue bound to aggregate with base class fails to bind base reference member to temporary
+7	43266	Clang parser bug
+8	42211	using declaration on method with multiple inheritance disables virtual call to overridden method
+9	42743	Incorrect behavior with Coroutines TS in opt mode
+10	43370	Clang crashes in code generation of builtin atomic operation.
+11	41989	c++2a: unable to default the three-way comparison operator
+12	43519	Failing compilation of dereferencing pointer-to-member function in constexpr function context
+13	43232	-Wmissing-braces firing for aggregate structs with only 1 base and no members
+14	43547	template alias arguments are not marked as used when forming a template parameter kind
+15	41607	crash on dependent variable initialization in in-class explicit specialization of member class template
+16	41990	c++2a: unable to resolve traditional comparison operators from three-way comparison operator
+17	42668	Clang generates overaligned load of thrown object
+18	41743	-Wrange-loop-analysis warns about copying small (or empty), trivially copyable types
+19	41276	Invalid address space cast in C++17 mode (CastConsistency assertion failure)
+20	43390	CFI: wrong type passed to llvm.type.test with multiple inheritance devirtualization
+21	43242	Regression: clang crashes when processing operator() call in a lambda
+22	42694	C++20 conditional explicit should be supported in C++14/17 modes
+23	44235	Project xgboost fails to compile when SkipFunctionBodies is specified

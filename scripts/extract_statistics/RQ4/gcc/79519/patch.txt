@@ -1,0 +1,8 @@
+&& (!friendp || funcdef_flag || initialized))
+
+    	      error (funcdef_flag || initialized
+
+&& (!friendp || funcdef_flag || initialized))
+
+    	      error (funcdef_flag || initialized
+

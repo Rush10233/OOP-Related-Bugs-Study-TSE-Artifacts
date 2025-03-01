@@ -1,0 +1,9 @@
+});
+        }
+        CXXDestructorDecl *DD = RD->getDestructor();
+        Result->setMethod(DD);
+
+        return *Result;
+      }
+    
+

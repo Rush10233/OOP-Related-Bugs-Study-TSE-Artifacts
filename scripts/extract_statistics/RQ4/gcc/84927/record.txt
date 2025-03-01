@@ -1,0 +1,8 @@
+Commit:	e5cc0d5
+./gcc/cp/constexpr.c	2883,2883
+./gcc/cp/constexpr.c	4533,4537
+Commit:	f5f035a
+./gcc/cp/constexpr.c	4114,4114
+Commit:	3ad015a
+./gcc/cp/constexpr.c	2795,2795
+./gcc/cp/constexpr.c	4442,4446

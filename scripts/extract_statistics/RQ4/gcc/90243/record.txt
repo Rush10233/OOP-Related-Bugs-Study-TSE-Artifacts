@@ -1,0 +1,3 @@
+Commit:	700e633
+./gcc/cp/decl.c	5699,5700
+./gcc/cp/decl.c	5717,5717

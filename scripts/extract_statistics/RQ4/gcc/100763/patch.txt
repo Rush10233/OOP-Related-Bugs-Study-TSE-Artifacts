@@ -1,0 +1,3 @@
+if (! (flags & TFF_UNQUALIFIED_NAME))
+    	    dump_scope (pp, CP_DECL_CONTEXT (decl), flags);
+

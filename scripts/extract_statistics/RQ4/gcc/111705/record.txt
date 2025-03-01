@@ -1,0 +1,3 @@
+Commit:	93d85b8
+./gcc/cp/constexpr.cc	9626,9626
+./gcc/cp/constexpr.cc	9740,9740

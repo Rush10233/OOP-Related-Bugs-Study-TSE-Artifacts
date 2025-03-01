@@ -1,0 +1,66 @@
+NumInits = List->getNumExprs();
+      }
+    
+      // C++11 [dcl.spec.auto]p6. Deduce the type which 'auto' stands in for.
+      if (TypeMayContainAuto && AllocType->isUndeducedType()) {
+        if (initStyle == CXXNewExpr::NoInit || NumInits == 0)
+
+      // do it now.
+      if (!AllocType->isDependentType() &&
+          !Expr::hasAnyTypeDependentArguments(
+
+        // C++11 [expr.new]p15:
+        //   A new-expression that creates an object of type T initializes that
+        //   object as follows:
+
+      /// TransformExpr or TransformExprs.
+      ///
+      /// \returns the transformed initializer.
+
+    
+      /// \brief Transform the given list of expressions.
+      ///
+
+    
+    template<typename Derived>
+    ExprResult TreeTransform<Derived>::TransformInitializer(Expr *Init,
+
+      // Initializers are instantiated like expressions, except that various outer
+      // layers are stripped.
+      if (!Init)
+
+    
+      if (CXXStdInitializerListExpr *ILE =
+              dyn_cast<CXXStdInitializerListExpr>(Init))
+
+    
+
+      // InitListExprs. Other forms of copy-initialization will be a no-op if
+      // the initializer is already the right type.
+      CXXConstructExpr *Construct = dyn_cast<CXXConstructExpr>(Init);
+
+        return getDerived().TransformExpr(Init);
+    
+      // Revert value-initialization back to empty parens.
+
+      // If the initialization implicitly converted an initializer list to a
+      // std::initializer_list object, unwrap the std::initializer_list too.
+      if (Construct && Construct->isStdInitListInitialization())
+
+    
+      SmallVector<Expr*, 8> NewArgs;
+      bool ArgChanged = false;
+      if (getDerived().TransformExprs(Construct->getArgs(), Construct->getNumArgs(),
+
+        return ExprError();
+    
+      // If this was list initialization, revert to list form.
+
+      Expr *OldInit = E->getInitializer();
+      ExprResult NewInit;
+      if (OldInit)
+
+      if (NewInit.isInvalid())
+        return ExprError();
+    
+

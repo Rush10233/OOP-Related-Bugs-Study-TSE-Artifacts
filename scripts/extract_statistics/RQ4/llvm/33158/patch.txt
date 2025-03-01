@@ -1,0 +1,18 @@
+void set(APValue::LValueBase B, unsigned I = 0, bool BInvalid = false) {
+
+          Offset = CharUnits::fromQuantity(0);
+
+          IsNullPtr = false;
+        }
+    
+        void setNull(QualType PointerTy, uint64_t TargetVal) {
+          Base = (Expr *)nullptr;
+          Offset = CharUnits::fromQuantity(TargetVal);
+          InvalidBase = false;
+          CallIndex = 0;
+          Designator = SubobjectDesignator(PointerTy->getPointeeType());
+          IsNullPtr = true;
+
+        auto TargetVal = Info.Ctx.getTargetNullPointerValue(E->getType());
+        Result.setNull(E->getType(), TargetVal);
+

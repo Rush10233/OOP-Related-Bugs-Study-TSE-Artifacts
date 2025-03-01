@@ -1,0 +1,4 @@
+Commit:	07f8bcc
+./gcc/cp/cp-tree.h	62,62
+./gcc/testsuite/g++.dg/ext/stmtexpr15.C	7,7
+./gcc/testsuite/g++.dg/parse/error26.C	7,7

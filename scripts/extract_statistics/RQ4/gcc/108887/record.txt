@@ -1,0 +1,10 @@
+Commit:	04b0a7b
+./gcc/cgraph.h	1069,1076
+./gcc/cgraphunit.cc	381,381
+./gcc/cgraphunit.cc	384,384
+./gcc/cgraphunit.cc	386,392
+./gcc/cgraphunit.cc	394,395
+./gcc/cgraphunit.cc	403,403
+./gcc/cp/decl2.cc	4745,4745
+./gcc/cp/decl2.cc	4748,4749
+./gcc/cp/decl2.cc	4751,4752

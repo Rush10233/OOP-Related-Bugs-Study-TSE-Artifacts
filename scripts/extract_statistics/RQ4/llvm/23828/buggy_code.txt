@@ -1,0 +1,5 @@
+QualType FromType = From->getType();
+        if (FromType->isMemberPointerType())
+          if (Context.getTargetInfo().getCXXABI().isMicrosoft())
+            RequireCompleteType(From->getExprLoc(), FromType, 0);
+

@@ -1,0 +1,40 @@
+&& UNEVALUATED_NOEXCEPT_SPEC_P (old_exceptions))
+        return;
+    
+
+      new_exceptions = TYPE_RAISES_EXCEPTIONS (TREE_TYPE (new_decl));
+      old_exceptions = TYPE_RAISES_EXCEPTIONS (TREE_TYPE (old_decl));
+    
+
+    {
+      /* This isn't part of the signature, so don't bother trying to evaluate
+         it until instantiation.  */
+
+        {
+          expr = perform_implicit_conversion_flags (boolean_type_node, expr,
+    						complain,
+    						LOOKUP_NORMAL);
+
+          expr = cxx_constant_value (expr);
+        }
+      if (TREE_CODE (expr) == INTEGER_CST)
+
+      tree fntype, spec, noex, clone;
+    
+      /* Don't instantiate a noexcept-specification from template context.  */
+
+        return true;
+    
+      if (DECL_CLONED_FUNCTION_P (fn))
+
+    					tf_warning_or_error, fn,
+    					/*function_p=*/false,
+    					/*integral_constant_expression_p=*/true);
+
+    	  pop_deferring_access_checks ();
+    	  pop_access_scope (fn);
+    	  pop_tinst_level ();
+    	  if (spec == error_mark_node)
+    	    spec = noexcept_false_spec;
+    	}
+

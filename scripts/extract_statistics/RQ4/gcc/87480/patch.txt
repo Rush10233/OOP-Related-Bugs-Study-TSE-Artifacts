@@ -1,0 +1,32 @@
+/* Even if the call is happening in template context, getting
+    		 here means it's non-dependent, and a default argument is
+    		 considered a separate definition under [temp.decls], so we can
+    		 do this substitution without processing_template_decl.  This
+    		 is important if the default argument contains something that
+    		 might be instantiation-dependent like access (87480).  */
+    	      processing_template_decl_sentinel s;
+
+    	      if (saw_undeduced == 1)
+
+/* The caller hasn't called push_to_top_level yet, but we need
+         get_partial_spec_bindings to be done in non-template context so that we'll
+         fully resolve everything.  */
+      processing_template_decl_sentinel ptds;
+    
+
+/* The caller hasn't called push_to_top_level yet, but we need
+         get_partial_spec_bindings to be done in non-template context so that we'll
+         fully resolve everything.  */
+      processing_template_decl_sentinel ptds;
+    
+
+/* Even if the call is happening in template context, getting
+    		 here means it's non-dependent, and a default argument is
+    		 considered a separate definition under [temp.decls], so we can
+    		 do this substitution without processing_template_decl.  This
+    		 is important if the default argument contains something that
+    		 might be instantiation-dependent like access (87480).  */
+    	      processing_template_decl_sentinel s;
+
+    	      if (saw_undeduced == 1)
+

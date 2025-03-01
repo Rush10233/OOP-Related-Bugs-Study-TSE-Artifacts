@@ -1,0 +1,4 @@
+Commit:	1f82453
+./gcc/cp/constexpr.c	5630,5630
+Commit:	dac867c
+./gcc/cp/constexpr.c	5729,5729

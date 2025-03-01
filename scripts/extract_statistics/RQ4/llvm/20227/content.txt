@@ -1,0 +1,24 @@
+}
+        SrcPointee = SrcType;
+      } else {
+
+        SrcPointee = SrcType;
+      }
+    
+
+          SrcExpr = ExprError();
+          return;
+        }
+
+        Kind = CK_DerivedToBase;
+    
+        // If we are casting to or through a virtual base class, we need a
+
+    
+      QualType DestPointee = DestReference->getPointeeType();
+    
+
+      return TryStaticDowncast(Self, 
+                               Self.Context.getCanonicalType(SrcExpr->getType()), 
+                               Self.Context.getCanonicalType(DestPointee), CStyle,
+

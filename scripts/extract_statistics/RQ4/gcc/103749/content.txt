@@ -1,0 +1,16 @@
+return error_mark_node;
+        }
+    
+
+      if (DECL_CLASS_TEMPLATE_P (decl)
+          /* If scope is TAG_how::CURRENT_ONLY we're defining a class,
+    	 so ignore a template template parameter.  */
+
+      if (DECL_TEMPLATE_TEMPLATE_PARM_P (tmpl))
+        return ptype;
+    
+
+      /* Wait until the enclosing scope is non-dependent.  */
+      if (DECL_CLASS_SCOPE_P (tmpl)
+          && dependent_type_p (DECL_CONTEXT (tmpl)))
+

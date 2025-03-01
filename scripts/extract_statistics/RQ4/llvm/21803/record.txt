@@ -1,0 +1,5 @@
+Commit:	73a7c93
+./clang/include/clang/Basic/DiagnosticSemaKinds.td	5795,5795
+./clang/lib/Sema/SemaOverload.cpp	3215,3215
+./clang/test/CXX/dcl.dcl/dcl.spec/dcl.type/dcl.spec.auto/p3-generic-lambda-1y.cpp	52,52
+./clang/test/CXX/expr/expr.prim/expr.prim.lambda/templates.cpp	41,41

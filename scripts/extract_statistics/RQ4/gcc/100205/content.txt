@@ -1,0 +1,62 @@
+public:
+      int uneval;
+      int inhibit;
+
+        : uneval(cp_unevaluated_operand), inhibit(c_inhibit_evaluation_warnings)
+
+      ~cp_evaluated ()
+      { cp_unevaluated_operand = uneval;
+        c_inhibit_evaluation_warnings = inhibit; }
+
+    static cp_expr cp_parser_expression
+      (cp_parser *, cp_id_kind * = NULL, bool = false, bool = false, bool = false);
+    static cp_expr cp_parser_constant_expression
+
+    static cp_expr cp_parser_builtin_offsetof
+      (cp_parser *);
+    static cp_expr cp_parser_lambda_expression
+
+      If ALLOW_NON_CONSTANT_P a non-constant expression is silently
+      accepted.  If ALLOW_NON_CONSTANT_P is true and the expression is not
+      constant, *NON_CONSTANT_P is set to TRUE.  If ALLOW_NON_CONSTANT_P
+
+      only parse a conditional-expression, otherwise parse an
+      assignment-expression.  See below for rationale.  */
+    
+    static cp_expr
+    cp_parser_constant_expression (cp_parser* parser,
+
+    			       bool *non_constant_p,
+    			       bool strict_p)
+    {
+
+      parser->allow_non_integral_constant_expression_p
+        = (allow_non_constant_p || cxx_dialect >= cxx11);
+      parser->non_integral_constant_expression_p = false;
+
+      /* Although the grammar says "conditional-expression", when not STRICT_P,
+         we parse an "assignment-expression", which also permits
+         "throw-expression" and the use of assignment operators.  In the case
+
+        {
+          initializer
+    	= cp_parser_constant_expression (parser,
+
+    					non_constant_p);
+        }
+      else
+
+    
+    	  cp_warn_deprecated_use_scopes (scope);
+    
+    	  if (TYPE_P (scope))
+    	    decl = finish_qualified_id_expr (scope,
+    					     decl,
+
+    	}
+          else if (TREE_CODE (decl) == FIELD_DECL)
+    	{
+    	  /* Since SCOPE is NULL here, this is an unqualified name.
+    	     Access checking has been performed during name lookup
+    	     already.  Turn off checking to avoid duplicate errors.  */
+

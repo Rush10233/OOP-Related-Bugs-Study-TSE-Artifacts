@@ -1,0 +1,10 @@
+Commit:	b049173
+./clang/test/Analysis/temp-obj-dtors-cfg-output.cpp	837,837
+./clang/test/Analysis/temp-obj-dtors-cfg-output.cpp	846,849
+./clang/test/Analysis/temp-obj-dtors-cfg-output.cpp	864,867
+./clang/test/Analysis/temp-obj-dtors-cfg-output.cpp	889,889
+./clang/test/Analysis/temp-obj-dtors-cfg-output.cpp	897,900
+./clang/test/Analysis/temp-obj-dtors-cfg-output.cpp	917,920
+./clang/test/Analysis/temp-obj-dtors-cfg-output.cpp	928,928
+./clang/test/Analysis/temp-obj-dtors-cfg-output.cpp	936,939
+./clang/test/Analysis/temp-obj-dtors-cfg-output.cpp	954,957

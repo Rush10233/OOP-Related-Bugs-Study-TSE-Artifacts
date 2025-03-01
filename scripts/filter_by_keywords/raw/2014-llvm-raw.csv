@@ -1,0 +1,219 @@
+19182	Can't use constexpr function-pointer member as non-type template parameter
+19052	clang 3.4 and trunk segfaults on lambda which uses static object of sorrounding function
+18770	ICE/Crash constructing or using structure with member array.
+19278	Bus error in ASTTemplateArgumentListInfo::initializeFrom
+19754	clang++ cannot compile cstdio with -std=c++1y
+18409	crash on simple FFT routine(s)
+20760	Assertion `!isTokenSpecial() && "Should consume special tokens with Consume*Token"' failed.
+21034	clang does not use the specific manglings for reinterpret_cast etc.
+19339	generalized lambda capture in uniform initialization failed to compile
+18477	lambda capturing confused when instantiating a class with a default initializer
+21437	Members declared later in a class appear to be unavailable in noexcept expressions
+19623	Assertion with template alias and debug info
+18635	clang crashes in llvm::Module::getNamedValue on thread_local std::unique_ptr<int>
+21737	imprecise debug info for class initializer list (hurting asan reports)
+19828	Assertion failed: isa<X>(Val) && "cast<Ty>() argument of incompatible type!", file ..\include\llvm/Support/Casting.h, line 237
+18838	Inheritance/friend problem
+21860	[fuzz] Assertion `hasInClassInitializer() && InitStorage.getPointer() == nullptr && "bit width, initializer or captured type already set"' failed.
+20069	Malformed loop pragma crashes clang
+18924	Assertion failed: NextFieldOffset <= RecordSize && "Size mismatch!" at lib\CodeGen\CGRecordLayoutBuilder.cpp:909
+22043	Initializing atomic qualified type with another atomic qualified type leads to assertion failure
+20346	Strange diagnostic on struct initializer in template
+20769	Bogus conflict between default argument at block scope and namespace scope
+19195	crash on valid codegen'ing member class template with in-class initialized member
+21045	Built-in __is_constructible interferes with definition of struct __is_constructible {};
+19346	adding zero to null pointer rejected in constant expressions
+18498	explicit template arguments with variadic generic lambdas causes crash
+21446	Trailing decltype in variadic function with explicitly specified template parameters fails
+19655	thread_local accessor function for 'primitive' variable in anonymous namespace has wrong linkage
+18645	Clang deduces rvalue reference function template parameters as function type when passed a function l-value as argument.
+21754	crash on definition of sized operator delete
+19876	Generic lambdas used within NSDMI's cause crash when they capture 'this'
+18839	Variable declaration treated as definition in direct linkage-specification having "C++" as string-literal
+21870	[fuzz] Assertion `isa<LabelDecl>(D) && "declaration not instantiated in this scope"' failed.
+20073	Should not be allowed to dereference a void *
+18997	std::cout << std::endl crashes under Windows
+22051	Regression: Assertion failed: DISubprogram(Scope).describes(MF->getFunction())
+20351	MS ABI: "Assertion failed: (EST != EST_Unevaluated && EST != EST_Uninstantiated), function isNothrow" on innocuous code
+20371	Crash when parameterizing a const auto variable
+20771	Regression(rr216439): "Stored value type does not match pointer operand type!"
+19204	Compiler fail to reject wrong type when std::enable_if is used variadic template.
+21047	Generating debug info for use of __uuidof as default template parameter causes an assert
+19352	getLocation() points to the wrong position for FriendDecls
+18506	Pointer to member cast in static_cast causes assertion
+21493	Compilation error when initializing in an agreggate containing a deleted copy constructor using initializer list from a template function
+19674	cxx_generic_lambdas documentation issues
+18653	Abort after class declaration as template argument
+21755	In-class initialization with template function call fails to compile
+19878	variadic template arguments deduction
+18844	MS ABI: Incorrect this adjustment in base dtor when dtor is in non-primary vftable
+21872	[fuzz] Assertion `D.isPastIdentifier() && "Haven't past the location of the identifier yet?"' failed.
+20090	Instantiation depth hit in recursive constexpr function definition
+19010	Empty base of class with trivial default constructor is not initialized in constant expression
+22055	Crash on invalid: Assertion failed: (Access == AS_private || Access == AS_protected)
+22056	Designated initializer with 'this' as array index crashes GCC and clang
+20398	clang C++11 wrong number of template parameters using aliases with template parameter pack
+20826	compiled code crash in std::string destructor in lambda capture on PPC 32
+19207	With -std=c++11, setjmp and sigsetjmp lose returns_twice attribute
+21125	enable_if diagnostics don't work well with enable_if_t
+19372	assertion "Replacement.isCanonical() && "replacement types must always be canonical""
+18509	Segfault during parsing of simple lambda involving template
+21517	crash on ill formed code
+19681	crash on invalid in Sema::CheckAddressOfMemberAccess
+18674	Assertion failed: ParseAssignmentExpression went over the default arg tokens
+21758	Assertion `EvalResult.Val.isInt() && "Expression did not evaluate to integer"' failed.
+19879	aggregate initialization uses value initialization rather than initialization from {} for subobjects with no initializer
+18845	MS ABI: Incorrect this adjustment in base dtor when dtor is in non-primary vftable
+21904	Incorrect mangling for static locals in template
+20120	Compiler crash triggered upon parsing template var use (C++1y)
+19025	[MS ABI] template arguments of variable template specializations not included in mangled name
+22072	Regression/crash for noexcept
+20430	Improper decaying of pointers to arrays as template parameters
+20833	Crash on invalid
+19240	Assertion failed: VFTableLayouts.count(id) == 0, file ..\tools\clang\lib\AST\VTableBuilder.cpp, line 3288
+21128	Allow a pseudo-destructor call on a pointer to a forward declared ObjC class
+19411	Block scope function declaration in class member function definition ignores linkage specification
+18530	Crash in variable template code when performing error recovery
+21527	CGPassManager::RefreshCallGraph(): Assertion `CallSites.empty() && "Dangling pointers found in call sites map"' failed.
+19698	__has_feature(cxx_decltype_auto) is not implemented
+18677	SFINAE/std::enable_if non-failure in empty variadic parameter declaration
+21787	__has_trivial_constructor is true for lambdas
+19898	Support #pragma intrinsic and implement more builtins
+18852	Spelling correction to non-static member functions with qualification
+21907	using declaration in template with more than one parameter fails
+20121	-Wreturn-type fails to diagnose when a lambda contains a noreturn destructor temporary
+22075	Poor diagnostics emitted when override appears before const in a method declaration
+20445	Clang doesn't emit ctor call from template instantiations if it needs to perform initializer_list conversion
+20842	clang -fsanitize=address is extremely slow on unittests/Support/ConvertUTFTest.cpp
+19242	attribute_deprecated_with_message enabled when [[deprecated]] is not available
+21180	clang does not delete default-constructor of lambdas
+19415	clang crashes Assertion failed: (!Failed && "Making a constexpr member const shouldn't fail"), function ActOnCXXMemberDeclarator, file SemaDeclCXX.cpp, line 1970.
+18539	Use of specialized template function mistakenly instantiates its primary template function when the primary template function is deleted
+21528	[Windows] Stack traces don't contain namespaces in function names since r220544
+19713	-Wunused-function complains (spammily) about static constexpr functions
+18678	Invalid code generated with the -fno-elide-constructors flag
+21803	wordsmith viable conversion error message for function return type
+19902	Clang-cl gives 'definition of dllimport static field not allowed' while cl does not
+18855	Lexer produces incorrect identifier in user defined literals using UCNs
+21925	Assertion "Failed to get the state for a TypoExpr!"
+20195	code compiles with g++-4.9.0, but not clang-3.4.2
+19066	0-sized vftable in the presence of virtual inheritance
+20459	Dependent template-id parsing fails to match angle brackets in certain comma delimited contexts
+20844	C++11 uniform-init of non-const references produces code that crashes
+19249	lambda crash (hard to explain without source)
+21212	template instantiation of classes in class contexts fails for fields with in-class initializers
+19427	clang does not diagnose declaration of name inside class scope
+18540	Use of specialized template function mistakenly instantiates its primary template function when the primary template function is deleted
+21531	crash on parameter pack in switch case
+19729	List initialization of placement parameter produces spurious complaint regarding deleted copy/move constructors
+18719	crash on valid, lambda inside function template
+21817	[fuzz] Assertion `!isTokenSpecial() && "Should consume special tokens with Consume*Token"' failed.
+19936	Templates, multiple declarations, decltype and operator overloading
+18859	cv-qualifications not ignored in enum-base
+21927	Clang 3.6.0 crash: unable to execute command: Aborted (core dumped)
+20208	Misleading diagnostic for missing initializer for const POD
+19070	Invalid promotion from automatic to static storage
+20461	Rejects valid for alleged duplicate case label when proper conversion yields different results
+20877	Problem with C++11 template methods, friend, and namespaces
+19252	alignas on global variable with auto leads to crash
+21218	False positive -Wreturn-stack-address warning
+19452	Invalid candidate function for unary operator on scoped enum
+18541	Using the main function in a program is allowed
+21536	clang incorrectly deduces template parameter pack
+19741	clang incorrectly rejects constexpr constructor which modified member variable in its body
+18746	rejects-valid on a constexpr member function of a class template with a deduced return type and no return statements
+21834	Compound literal with reference type triggers Assertion `(t.isNull() || !t->isReferenceType()) && "Expressions can't have reference type"' failed.
+19939	Clang fails to export __declspec(dllexport) symbols
+18870	string-literals not handled correctly in linkage-specification
+21942	"final" and "override" specifiers are not recognized for some methods of class templates
+20221	"member access into incomplete type" errors in msvc mode
+20628	virt-specifiers are allowed in friend declarations
+19104	[Windows] Incorrect handling of non-virtual calls of virtual methods
+20496	No diagnostic for address of bit-field result of pre-increment operator
+20897	Assertion failed: "Invalid GetElementPtrInst indices for type"
+19254	c++11 static thread_local members may cause a segfault when accessed via 'this->'
+21221	bogus unused-local-typedef warning
+19458	warn on pessimizing call to std::move
+18542	crash defining method of undefined class inside an incomplete type
+21565	r221918 breaks bootstrap on Fedora 20/x86-64
+19748	Parse error after a cast of a variable with the same name as an existing struct in a ternary operator
+18759	-Wframe-larger-than reporting should be improved
+21835	[fuzz] Assertion `Context.hasSameType( ToAtomicType->castAs<AtomicType>()->getValueType(), From->getType())' failed.
+19989	Change introduced in r207451 broke thread_local on Darwin
+18874	constexpr function ill-formed but error message incorrect
+21944	clang segmentation fault slp-vectorize
+20226	Assertion `!empty()' failed: function default argument in template at block scope
+20660	clang crashes on unexpanded parameter pack
+19121	ARC/member variable initialization incorrect code
+20497	Clang crashes on nested class template with member initializer
+20928	wrong whitespace when stringizing raw string literal
+19276	Last scoped name during name lookup may be repeated indefinitely without error
+21252	Trunk clang crashes with weird catch expression
+19461	clang writes code after an #endif (same line)
+18544	crash declaring inline operator new in a namespace
+21571	/Zo not supported in visual sutdio 2013 update 3 and above
+19751	rejects-valid if parenthesized temporary is incremented, due to incorrect disambiguation
+21836	[fuzz] Assertion `isScalarType()' failed.
+19993	clang crashes on invalid code
+18876	is_default_constructible and DRs 1354, 1424
+21949	[fuzz] UNREACHABLE executed at tools/clang/lib/AST/ASTContext.cpp:1509
+20227	Temporary expression result of dynamic_cast not lifetime-extended but corresponding static_cast is
+20671	Assertion failed: (EST != EST_Unevaluated && EST != EST_Uninstantiated) in MS ABI on innocuous code
+19139	explain why a variable is const
+20611	crash with lambda (auto) return type
+20930	declspec/attribute deprecated does not give a warning for nested anonymous classes
+21289	Unrecognized indirect pack expansion when accessing value member
+19480	Miscompile when linking variable templates instantiated from similarly named local types
+18551	clang (incorrectly?) converts strong enum to bool when operator! is used
+21618	libclang_rt.asan_osx_dynamic.dylib incorrect RPATH
+18776	AST printer doesn't handle conversion operators correctly
+21840	[fuzz] Assertion `isa<X>(Val) && "cast<Ty>() argument of incompatible type!"' failed.
+19996	assertion "idx.hasValue()" failed: file "~/llvm/tools/clang/lib/Analysis/UninitializedValues.cpp", line 197
+18879	type-name alias in qualified-id used in explicit destructor call not handled correctly
+21969	trailing return type for conversion operator leads to bizarre diagnostic
+20238	'volatile' keyword permitted before destructor declaration
+20675	missing -Wreturn-type on a function try block with no return
+19152	auto variable template
+20619	Assertion failed: (EST != EST_Unevaluated && EST != EST_Uninstantiated), function isNothrow, file /Users/ldionne/code/llvm/tools/clang/lib/AST/Type.cpp, line 1699.
+20939	Assertion failed: ((ND->isUsed(false) || !isa<VarDecl>(ND) || !E->getLocation().isValid()) && "Should not use decl without marking it used!")
+19284	Crash while compiling KJ library
+18400	Underlying type of an enum class doesn't discard cv-qualifiers
+21332	failing to instantiate all of a local class (DR1484) when instantiating the surrounding function
+19508	Nested class with std::unique_ptr with custom deleter causes clang to crash.
+18568	Crash: lambda capturing templated object with initializer
+21629	Warning "missing braces around initializer" causing problems with std::array
+19767	Assertion failed: (DTy.getTag() == dwarf::DW_TAG_enumeration_type) with void* non-type template argument
+18777	Explicit conversion operator ignored when passed as argument to new expression
+21845	[fuzz] Assertion `(E->getType()->isAnyPointerType() || E->getType()->isBlockPointerType() || E->getType()->isObjCQualifiedIdType()) && "EvalAddr only works on pointers"' failed.
+20008	clang-cl doesn't support the ui32 type suffix properly
+18880	[win32] __restrict pointer arguments are mangled incorrectly
+21991	Conversion operator not considered in braced init list
+20244	AddressSanitizer doesn't play well with RTTI on Windows
+20698	Erroneous "too many template arguments for class template" (via template template)?
+19169	crash on invalid attempting to specialize a template method as a template variable
+20625	static constexpr member function of a local struct in a function template is instantiated too late
+20972	crash on invalid: Assertion `!Init->isValueDependent()' failed.
+19286	Microsoft mangling of return type deducing functions/lambdas that return local types is broken [prelim patch attached]
+18401	An ICE with a variadic alias template aliasing another variadic alias template
+21351	Incorrect name mangling for a template class method reference
+19517	Unexpected template recursion limit hit for constexpr function template
+18571	Noisy warnings about const-attributed functions used in decltype
+21632	Assertion failure in CXXNameMangler::mangleFunctionParam with typeid() of VLA
+19781	Clang crashed while parsing __visibility__ attribute under arm-linux-gnueabihf
+18783	Wrong "too few template arguments for class template"
+21847	[fuzz] Assertion `Arg < NumArgs && "Arg access out of range!"' failed.
+20021	static_assert rejected in anonymous structs/unions
+18887	[META] Compiling Chromium on Windows with clang-cl
+22010	Wrong alignment with _mm_move_epi64()
+20257	invalid 'const' not rejected on constructor definition
+20716	Crash when recovering from type in known dependent base (ms-compatibility)
+19171	Crash when clang suggest non-class typo-correction for a using decl inside class declaration
+20988	crash calling enable_if'd function with a reference in a function template
+19288	thread_local member variable accessed without being constructed
+18402	no ::gets in the global namespace when compiling <ios>
+21367	Extension to support rvalue references causes some legal C++03 to fail compile
+19558	Partial specialization of variable template causes 'unused variable' warning illegally.
+18581	Cannot allocate variable length of POD type if it is an inner class of a template class
+21661	Clang crashes on valid(?) explicit instantiation
+19787	Assertion `ClassDecl->hasFlexibleArrayMember() && "Incomplete array type is not valid"' failed.
+18792	Note in wrong place when using std::enable_if_t

@@ -1,0 +1,86 @@
+/// skipped.
+      unsigned HasSkippedBody : 1;
+    
+
+      /// \brief End part of this FunctionDecl's source range.
+      ///
+      /// We could compute the full range in getSourceRange(). However, when we're
+
+        if (EndLocation.isValid())
+          setRangeEnd(EndLocation);
+        IsExplicitSpecified = IsExplicit;
+
+      }
+    
+    public:
+
+        return getDeclName().getCXXDeductionGuideTemplate();
+      }
+    
+
+      // Implement isa/cast/dyncast/etc.
+      static bool classof(const Decl *D) { return classofKind(D->getKind()); }
+      static bool classofKind(Kind K) { return K == CXXDeductionGuide; }
+
+        // C++14 [over.match.best]p1 section 2 bullet 3.
+      }
+    
+      //    -- F1 is a non-template function and F2 is a function template
+      //       specialization, or, if not that,
+      bool Cand1IsSpecialization = Cand1.Function &&
+
+        // Inherited from sibling base classes: still ambiguous.
+      }
+    
+
+      // FIXME: Work around a defect in the C++17 guaranteed copy elision wording,
+      // as combined with the resolution to CWG issue 243.
+      //
+
+      // for which some class template parameter without a default argument never
+      // appears in a deduced context).
+      bool AddedAny = false;
+      for (NamedDecl *D : LookupConstructors(Transform.Primary)) {
+        D = D->getUnderlyingDecl();
+        if (D->isInvalidDecl() || D->isImplicit())
+
+    
+        Transform.transformConstructor(FTD, CD);
+        AddedAny = true;
+      }
+    
+
+      if (!AddedAny)
+        Transform.buildSimpleDeductionGuide(None);
+    
+
+    }
+    
+    /// \brief Diagnose the presence of a default template argument on a
+
+      }
+    
+      FunctionDecl *Function;
+
+        Function = CXXDeductionGuideDecl::Create(
+
+        Function = FunctionDecl::Create(
+            SemaRef.Context, DC, D->getInnerLocStart(), D->getNameInfo(), T, TInfo,
+            D->getCanonicalDecl()->getStorageClass(), D->isInlineSpecified(),
+
+    
+    void ASTDeclReader::VisitCXXDeductionGuideDecl(CXXDeductionGuideDecl *D) {
+      VisitFunctionDecl(D);
+
+    }
+    
+    void ASTDeclReader::VisitCXXMethodDecl(CXXMethodDecl *D) {
+
+    
+    void ASTDeclWriter::VisitCXXDeductionGuideDecl(CXXDeductionGuideDecl *D) {
+      VisitFunctionDecl(D);
+
+      Code = serialization::DECL_CXX_DEDUCTION_GUIDE;
+    }
+    
+

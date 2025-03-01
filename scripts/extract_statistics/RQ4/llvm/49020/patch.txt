@@ -1,0 +1,28 @@
+def ext_designated_init_brace_elision : ExtWarn<
+      "brace elision for designated initializer is a C99 extension">,
+      InGroup<C99Designator>, SFINAEFailure;
+
+                               unsigned &StructuredIndex,
+                               bool DirectlyDesignated = false);
+
+                                              unsigned &StructuredIndex,
+                                              bool DirectlyDesignated) {
+
+    
+        // In C++20, brace elision is not permitted for a designated initializer.
+        if (DirectlyDesignated && SemaRef.getLangOpts().CPlusPlus && !hadError) {
+          if (InOverloadResolution)
+            hadError = true;
+          if (!VerifyOnly) {
+            SemaRef.Diag(expr->getBeginLoc(),
+                         diag::ext_designated_init_brace_elision)
+                << expr->getSourceRange()
+                << FixItHint::CreateInsertion(expr->getBeginLoc(), "{")
+                << FixItHint::CreateInsertion(
+                       SemaRef.getLocForEndOfToken(expr->getEndLoc()), "}");
+          }
+        }
+
+        CheckSubElementType(Entity, IList, CurrentObjectType, Index, StructuredList,
+                            StructuredIndex, /*DirectlyDesignated=*/true);
+

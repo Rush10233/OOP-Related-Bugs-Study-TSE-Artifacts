@@ -1,0 +1,6 @@
+/* Template specializations are matched elsewhere.  */
+          if (DECL_LANG_SPECIFIC (decl)
+    	  && DECL_USE_TEMPLATE (decl))
+    	return NULL_TREE;
+    
+

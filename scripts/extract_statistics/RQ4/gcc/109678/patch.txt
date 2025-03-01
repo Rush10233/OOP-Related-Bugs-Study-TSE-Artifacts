@@ -1,0 +1,69 @@
+&& lookup_base (optype, type, ba_any, NULL, tf_none, off))
+
+    						 base_kind *, tsubst_flags_t,
+    						 HOST_WIDE_INT = -1);
+
+      HOST_WIDE_INT offset; /* Offset we want, or -1 if any.  */
+
+      if (data->offset != -1)
+        {
+          /* We're looking for the type at a particular offset.  */
+          int comp = compare_tree_int (BINFO_OFFSET (binfo), data->offset);
+          if (comp > 0)
+    	/* Don't bother looking into bases laid out later; even if they
+    	   do virtually inherit from the base we want, we can get there
+    	   by another path.  */
+    	return dfs_skip_bases;
+          else if (comp != 0
+    	       && SAME_BINFO_TYPE_P (BINFO_TYPE (binfo), data->base))
+    	/* Right type, wrong offset.  */
+    	return dfs_skip_bases;
+          /* Fall through.  */
+        }
+    
+
+       discovered.  If OFFSET is other than -1, only match at that offset.
+
+    	     base_kind *kind_ptr, tsubst_flags_t complain,
+    	     HOST_WIDE_INT offset /* = -1 */)
+
+          data.repeated_base = (offset == -1) && CLASSTYPE_REPEATED_BASE_P (t);
+
+          data.offset = offset;
+
+STRIP_NOPS (new_obj);
+          if (TREE_CODE (new_obj) == ADDR_EXPR)
+    	new_obj = TREE_OPERAND (new_obj, 0);
+
+    	  *empty_base = true;
+
+    		       tree op0, bool *empty_base)
+
+
+          /* Handle conversion to an empty base class, which is represented with a
+    
+    	 which is likely to be a waste of time (109678).  */
+          if (is_empty_class (type)
+    	  && CLASS_TYPE_P (optype)
+    	  && DERIVED_FROM_P (type, optype))
+    	{
+    	  if (empty_base)
+    	    *empty_base = true;
+    	  return op;
+    	}
+    
+
+
+          /* Handle conversion to an empty base class, which is represented with a
+    
+    	 which is likely to be a waste of time (109678).  */
+          if (is_empty_class (type)
+    	  && CLASS_TYPE_P (optype)
+    	  && DERIVED_FROM_P (type, optype))
+    	{
+    	  if (empty_base)
+    	    *empty_base = true;
+    	  return op;
+    	}
+    
+

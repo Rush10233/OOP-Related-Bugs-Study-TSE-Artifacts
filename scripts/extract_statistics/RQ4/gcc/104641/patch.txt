@@ -1,0 +1,48 @@
+tf_tst_ok = 1 << 12,		 /* Allow a typename-specifier to name
+    				    a template (C++17 or later).  */
+
+          if ((complain & tf_tst_ok) && cxx_dialect >= cxx17
+    	  && DECL_TYPE_TEMPLATE_P (t))
+    	/* The caller permits this typename-specifier to name a template
+    	   (because it appears in a CTAD-enabled context).  */;
+          else
+    	{
+    	  if (complain & tf_error)
+    	    error ("%<typename %T::%D%> names %q#T, which is not a type",
+    		   context, name, t);
+    	  return error_mark_node;
+    	}
+
+      if (!want_template && DECL_TYPE_TEMPLATE_P (t))
+        return make_template_placeholder (t);
+    
+
+    	    tsubst_flags_t tcomplain = complain;
+    	    if (VAR_P (t))
+    	      tcomplain |= tf_tst_ok;
+    	    type = tsubst (type, args, tcomplain, in_decl);
+
+      bool tst_ok = (complain & tf_tst_ok);
+      complain &= ~tf_tst_ok;
+    
+
+    	tsubst_flags_t tcomplain = complain | tf_keep_type_decl;
+    	if (tst_ok)
+    	  tcomplain |= tf_tst_ok;
+    	f = make_typename_type (ctx, f, typename_type, tcomplain);
+
+    	tsubst_flags_t tcomplain = complain;
+    	if (code == CAST_EXPR)
+    	  tcomplain |= tf_tst_ok;
+    	tree type = tsubst (TREE_TYPE (t), args, tcomplain, in_decl);
+
+    	tsubst_flags_t tcomplain = complain;
+    	if (TREE_CODE (t) == CAST_EXPR)
+    	  tcomplain |= tf_tst_ok;
+    	type = tsubst (TREE_TYPE (t), args, tcomplain, in_decl);
+
+    	tsubst_flags_t tcomplain = complain;
+    	if (COMPOUND_LITERAL_P (t))
+    	  tcomplain |= tf_tst_ok;
+    	tree type = tsubst (TREE_TYPE (t), args, tcomplain, in_decl);
+

@@ -1,0 +1,22 @@
+while (TREE_CODE (arg) == TARGET_EXPR)
+    	      /* We're disconnecting the initializer from its target,
+    		 don't create a temporary.  */
+    	      arg = TARGET_EXPR_INITIAL (arg);
+
+      if (SIMPLE_TARGET_EXPR_P (op)
+          && TYPE_HAS_TRIVIAL_DESTRUCTOR (type))
+        /* The TARGET_EXPR is itself a simple copy, look through it.  */
+        return simple_empty_class_p (type, TARGET_EXPR_INITIAL (op), code);
+
+    	    while (TREE_CODE (op1) == TARGET_EXPR)
+    	      /* We're disconnecting the initializer from its target,
+    		 don't create a temporary.  */
+    	      op1 = TARGET_EXPR_INITIAL (op1);
+    
+
+    	    if (code == RETURN_EXPR && REFERENCE_CLASS_P (*expr_p))
+    	      /* Avoid 'return *<retval>;'  */
+    	      *expr_p = TREE_OPERAND (*expr_p, 0);
+
+       && TARGET_EXPR_INITIAL (NODE)				\
+

@@ -1,0 +1,10 @@
+/* [dcl.init.list]#7.2: "from long double to double or float, or from
+          double to float".  */
+
+          if ((same_type_p (ftype, long_double_type_node)
+    	   && (same_type_p (type, double_type_node)
+    	       || same_type_p (type, float_type_node)))
+    	  || (same_type_p (ftype, double_type_node)
+    	      && same_type_p (type, float_type_node))
+    	  || (TYPE_PRECISION (type) < TYPE_PRECISION (ftype)))
+

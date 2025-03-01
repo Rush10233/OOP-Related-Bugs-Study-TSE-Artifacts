@@ -1,0 +1,100 @@
+def warn_cxx98_compat_unelaborated_friend_type : Warning<
+      "befriending %1 without '%select{struct|interface|union|class|enum}0' "
+      "keyword is incompatible with C++98">, InGroup<CXX98Compat>, DefaultIgnore;
+
+    def err_introducing_special_friend : Error<
+      "%plural{[0,2]:must use a qualified name when declaring|3:cannot declare}0"
+      " a %select{constructor|destructor|conversion operator|deduction guide}0 "
+
+                        const TemplateArgumentListInfo &ExplicitTemplateArgs,
+                                                        LookupResult &Previous);
+    
+
+      bool CheckMemberSpecialization(NamedDecl *Member, LookupResult &Previous);
+      void CompleteMemberSpecialization(NamedDecl *Member, LookupResult &Previous);
+    
+
+          D->isTemplateParameter())
+        return true;
+    
+
+      // Skip template specializations.
+      // FIXME: This feels like a hack. Should DeclarationName support
+      // template-ids, or is there a better way to keep specializations
+
+    
+      // If this has an identifier and is not a function template specialization,
+      // add it to the scope stack.
+
+    
+      if (isInOpenMPDeclareTargetContext())
+        checkDeclIsAllowedInOpenMPTarget(nullptr, New);
+
+      SmallVector<std::pair<FunctionDecl *, unsigned>, 1> NearMatches;
+      TypoCorrection Correction;
+      bool IsDefinition = ExtraArgs.D.isFunctionDefinition();
+
+      LookupResult Prev(SemaRef, Name, NewFD->getLocation(),
+                        IsLocalFriend ? Sema::LookupLocalFriendName
+                                      : Sema::LookupOrdinaryName,
+
+    
+        LookupQualifiedName(Previous, DC);
+    
+        // C++ [class.friend]p1: A friend of a class is a function or
+        //   class that is not a member of the class . . .
+        if (DC->Equals(CurContext))
+
+          //   A function can be defined in a friend declaration of a class if and
+          //   only if the class is a non-local class (9.8), the function name is
+          //   unqualified, and the function has namespace scope.
+
+          SemaDiagnosticBuilder DB
+            = Diag(SS.getRange().getBegin(), diag::err_qualified_friend_def);
+    
+
+              !isa<FunctionTemplateDecl>(Underlying))
+            continue;
+    
+
+                break;
+              }
+            }
+          }
+    
+          // FIXME: Preserve D as the FoundDecl.
+
+        }
+      }
+    }
+
+        }
+      }
+    
+
+      return Ovl_Overload;
+    }
+    
+
+    ///
+    /// \param Previous the set of declarations that may be specialized by
+    /// this function specialization.
+
+    bool Sema::CheckFunctionTemplateSpecialization(
+        FunctionDecl *FD, TemplateArgumentListInfo *ExplicitTemplateArgs,
+
+      // The set of function template specializations that could match this
+      // explicit function template specialization.
+      UnresolvedSet<8> Candidates;
+
+        }
+      }
+    
+
+      // Find the most specialized function template.
+      UnresolvedSetIterator Result = getMostSpecialized(
+
+          PDiag(diag::err_function_template_spec_no_match) << FD->getDeclName(),
+          PDiag(diag::err_function_template_spec_ambiguous)
+              << FD->getDeclName() << (ExplicitTemplateArgs != nullptr),
+

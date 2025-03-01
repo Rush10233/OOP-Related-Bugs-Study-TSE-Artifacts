@@ -1,0 +1,6 @@
+Commit:	3084317
+Commit:	87e1f02
+./gcc/cp/search.cc	737,739
+./gcc/cp/search.cc	741,742
+./gcc/testsuite/g++.dg/template/access37.C	9,12
+Commit:	a42220f

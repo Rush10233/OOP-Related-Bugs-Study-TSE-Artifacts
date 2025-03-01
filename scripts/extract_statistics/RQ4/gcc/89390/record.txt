@@ -1,0 +1,11 @@
+Commit:	102a4fe
+./gcc/cp/error.c	4279,4279
+Commit:	986e0e3
+./gcc/cp/parser.c	6043,6043
+./gcc/cp/parser.c	6053,6053
+./gcc/cp/parser.c	6060,6060
+./gcc/cp/parser.c	6064,6064
+./gcc/cp/parser.c	6155,6155
+./gcc/cp/parser.c	6171,6171
+./gcc/cp/parser.c	6186,6186
+./gcc/cp/parser.c	6190,6190

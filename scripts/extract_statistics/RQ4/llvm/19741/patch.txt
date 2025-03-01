@@ -1,0 +1,35 @@
+/// EvaluatingObject - Pair of the AST node that an lvalue represents and
+        /// the call index that that lvalue was allocated in.
+        typedef std::pair<APValue::LValueBase, unsigned> EvaluatingObject;
+    
+        /// EvaluatingConstructors - Set of objects that are currently being
+        /// constructed.
+        llvm::DenseSet<EvaluatingObject> EvaluatingConstructors;
+    
+        struct EvaluatingConstructorRAII {
+          EvalInfo &EI;
+          EvaluatingObject Object;
+          bool DidInsert;
+          EvaluatingConstructorRAII(EvalInfo &EI, EvaluatingObject Object)
+              : EI(EI), Object(Object) {
+            DidInsert = EI.EvaluatingConstructors.insert(Object).second;
+          }
+          ~EvaluatingConstructorRAII() {
+            if (DidInsert) EI.EvaluatingConstructors.erase(Object);
+          }
+        };
+    
+        bool isEvaluatingConstructor(APValue::LValueBase Decl, unsigned CallIndex) {
+          return EvaluatingConstructors.count(EvaluatingObject(Decl, CallIndex));
+        }
+    
+
+          EvaluatingConstructors.insert({Base, 0});
+
+      // FIXME: This doesn't do quite the right thing for const subobjects of the
+
+      if (Info.isEvaluatingConstructor(LVal.getLValueBase(), LVal.CallIndex)) {
+
+      EvalInfo::EvaluatingConstructorRAII EvalObj(
+          Info, {This.getLValueBase(), This.CallIndex});
+

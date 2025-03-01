@@ -1,0 +1,26 @@
+	Issue ID	Title
+0	36992	copy constructor memcpy optimization tramples virtual bases in tail padding
+1	37614	"Constexpr static data member ""unresolved external symbol"" when member of a templated struct"
+2	39649	clang fails to generate defaulted move constructor upon template instantiation
+3	37768	expected the class name after '~' to name a destructor
+4	35817	Merge r321779 into the 6.0 branch: PR35045: Convert injected-class-name to its corresponding simple-template-id
+5	36756	Constructor thought to be variable declaration (using class template argument deduction)
+6	37172	__is_aggregate should be false for an inherited virtual function
+7	37631	missing access check for deduction guide declarations
+8	38235	attribute((constructor)) accepts enum class as integer constan
+9	35850	returning a coroutine from a generic lambda segfaults
+10	36747	Structured bindings in conditions crash when using member get
+11	37265	[coroutines] co_return should [class.copy]/33 (namely, try to move first if auto variable)
+12	37275	packed attribute should not apply to base classes
+13	36181	Microsoft mangling cannot mangle injected class name type
+14	39769	Generic lambda in variable template in class template does not compile
+15	36222	Lambda passed to template argument deduction parsed as decomposition group
+16	39336	init-capture of initializer_list fails to extend lifetime
+17	38671	"""destructor cannot be declared as a template"" leads to segfault in Sema::LookupSpecialMember"
+18	38044	clang fails to consider the most specialized template definition when it's partialy specialized with multiple template template parameters
+19	37556	Improper symbol redefinition diagnostic for names in different declarative regions
+20	38257	operator& definition causes unexplained error passing pointer-to-member to template parameter
+21	35832	ambiguity accessing anonymous union member present in multiple bases despite explicit qualification
+22	38508	clang-cl handles /E and /P (preprocess only) incorrectly with PCH files
+23	36645	isCXX11ConstantExpr related segfault
+24	36748	Assertion failure laying out class hierarchy with inlined inheriting constructor

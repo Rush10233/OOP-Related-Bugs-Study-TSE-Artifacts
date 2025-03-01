@@ -1,0 +1,11 @@
+Commit:	5ada486
+./gcc/cp/init.cc	1002,1002
+./gcc/cp/init.cc	1016,1016
+./gcc/cp/typeck.cc	9358,9358
+./gcc/cp/typeck.cc	9360,9360
+./gcc/cp/typeck.cc	9364,9364
+./gcc/cp/typeck.cc	9368,9368
+./gcc/cp/typeck.cc	9371,9371
+./gcc/cp/typeck.cc	9375,9375
+./gcc/cp/typeck.cc	9378,9378
+./gcc/cp/typeck.cc	9396,9402

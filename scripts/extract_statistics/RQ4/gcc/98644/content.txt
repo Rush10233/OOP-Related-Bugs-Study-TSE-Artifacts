@@ -1,0 +1,24 @@
+return NULL_TREE;
+    }
+    
+
+    /* ALLOW_NON_CONSTANT is false if T is required to be a constant expression.
+       STRICT has the same sense as for constant_value_1: true if we only allow
+       conforming C++ constant expressions, or false if we want a constant value
+
+      else if (constexpr_dtor)
+        return r;
+      else if (non_constant_p && TREE_CONSTANT (r))
+
+      else if (non_constant_p)
+        return t;
+    
+
+    
+      if (!is_nondependent_constant_expression (t))
+        {
+
+          return t;
+        }
+      else if (CONSTANT_CLASS_P (t))
+

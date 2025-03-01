@@ -1,0 +1,22 @@
+/// \param InInitList true if we are initializing from an expression within
+      ///        an initializer list. This disallows narrowing conversions in C++11
+      ///        onwards.
+
+                             bool InInitList = false);
+
+                          bool InInitList);
+
+      if (const CXXConstructExpr *CCE = dyn_cast_or_null<CXXConstructExpr>(Init)){
+
+      if (Init && isa<ImplicitValueInitExpr>(Init)) {
+
+      llvm::ConstantInt *ConstNum = dyn_cast<llvm::ConstantInt>(NumElements);
+    
+      // If all elements have already been initialized, skip the whole loop.
+      if (ConstNum && ConstNum->getZExtValue() <= InitListElements) {
+        // If there was a Cleanup, deactivate it.
+        if (CleanupDominator)
+          DeactivateCleanupBlock(Cleanup, CleanupDominator);
+        return;
+      }
+

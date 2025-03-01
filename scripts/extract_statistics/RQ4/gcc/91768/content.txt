@@ -1,0 +1,87 @@
+extern int processing_template_parmlist;
+    extern bool dependent_type_p			(tree);
+    extern bool dependent_scope_p			(tree);
+
+    extern bool any_dependent_template_arguments_p  (const_tree);
+    extern bool any_erroneous_template_args_p       (const_tree);
+    extern bool dependent_template_p		(tree);
+
+          if (TREE_CODE (template_id) == TEMPLATE_ID_EXPR)
+    	SET_EXPR_LOCATION (template_id, combined_loc);
+        }
+
+      else
+        {
+          /* If it's not a class-template or a template-template, it should be
+
+        }
+    
+      /* cp_parser_lookup_name clears OBJECT_TYPE.  */
+
+    
+      /* Look up the name.  */
+      decl = cp_parser_lookup_name (parser, identifier,
+
+    
+      decl = strip_using_decl (decl);
+    
+
+      /* If DECL is a template, then the name was a template-name.  */
+      if (TREE_CODE (decl) == TEMPLATE_DECL)
+        {
+
+        }
+      else
+        {
+
+          bool found = false;
+    
+          for (lkp_iterator iter (MAYBE_BASELINK_FUNCTIONS (decl));
+    	   !found && iter; ++iter)
+    	if (TREE_CODE (*iter) == TEMPLATE_DECL)
+    	  found = true;
+    
+
+          if (!found
+    	  && (cxx_dialect > cxx17)
+
+    	  && cp_lexer_next_token_is (parser->lexer, CPP_LESS)
+    	  && tag_type == none_type)
+    	{
+    	  /* The "more functions" case.  Just use the OVERLOAD as normally.
+    	     We don't use is_overloaded_fn here to avoid considering
+    	     BASELINKs.  */
+    	  if (TREE_CODE (decl) == OVERLOAD
+    	      /* Name lookup found one function.  */
+
+    	    found = true;
+    	}
+    
+
+          if (!found)
+    	{
+    	  /* The name does not name a template.  */
+    	  cp_parser_error (parser, "expected template-name");
+    	  return error_mark_node;
+    	}
+
+        }
+    
+      return decl;
+
+    			       consider class templates.  */
+    			    : is_template ? LOOK_want::TYPE
+    			    : prefer_type_arg (tag_type));
+
+          parser->object_scope = object_type;
+          parser->qualifying_scope = NULL_TREE;
+        }
+
+    	  && !currently_open_class (scope));
+    }
+    
+
+    /* T is a SCOPE_REF.  Return whether it represents a non-static member of
+       an unknown base of 'this' (and is therefore instantiation-dependent).  */
+    
+

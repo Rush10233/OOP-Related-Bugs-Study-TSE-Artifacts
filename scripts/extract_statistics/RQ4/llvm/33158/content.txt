@@ -1,0 +1,28 @@
+IsNullPtr = V.isNullPointer();
+        }
+    
+
+    #ifndef NDEBUG
+          // We only allow a few types of invalid bases. Enforce that here.
+          if (BInvalid) {
+
+    #endif
+    
+          Base = B;
+
+          InvalidBase = BInvalid;
+          CallIndex = I;
+          Designator = SubobjectDesignator(getType(B));
+
+        }
+    
+        void setInvalid(APValue::LValueBase B, unsigned I = 0) {
+
+        return true;
+      }
+      bool ZeroInitialization(const Expr *E) {
+
+        return true;
+      }
+    
+

@@ -1,0 +1,2 @@
+Commit:	69f517a
+./gcc/cp/decl.c	4139,4142

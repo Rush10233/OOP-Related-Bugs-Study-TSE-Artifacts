@@ -1,0 +1,34 @@
+T.consumeOpen();
+        NoexceptType = EST_ComputedNoexcept;
+        NoexceptExpr = ParseConstantExpression();
+
+        // The argument must be contextually convertible to bool. We use
+        // ActOnBooleanCondition for this purpose.
+
+          NoexceptExpr = Actions.ActOnBooleanCondition(getCurScope(), KeywordLoc,
+                                                       NoexceptExpr.get());
+
+      } else {
+        // There is no argument.
+        NoexceptType = EST_BasicNoexcept;
+
+      } else if (OldParm->hasUnparsedDefaultArg()) {
+        NewParm->setUnparsedDefaultArg();
+        UnparsedDefaultArgInstantiations[OldParm].push_back(NewParm);
+
+    
+      NewParm->setHasInheritedDefaultArg(OldParm->hasInheritedDefaultArg());
+    
+
+    
+        // DR1330: In C++11, defer instantiation of a non-trivial
+        // exception specification.
+
+        if (SemaRef.getLangOpts().CPlusPlus11 &&
+            EPI.ExceptionSpec.Type != EST_None &&
+            EPI.ExceptionSpec.Type != EST_DynamicNone &&
+
+          FunctionDecl *ExceptionSpecTemplate = Tmpl;
+          if (EPI.ExceptionSpec.Type == EST_Uninstantiated)
+            ExceptionSpecTemplate = EPI.ExceptionSpec.SourceTemplate;
+

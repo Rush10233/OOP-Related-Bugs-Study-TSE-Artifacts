@@ -1,0 +1,33 @@
+tree
+
+    extern tree keep_unused_object_arg		(tree, tree, tree);
+
+      tree fn, call, obj = NULL_TREE;
+
+      if (TREE_CODE (TREE_TYPE (overload)) == METHOD_TYPE
+          /* For ARRAY_REF, operator[] is either a non-static member or newly
+    	 static member, never out of class and for the static member case
+    	 if user uses single index the operator[] needs to have a single
+    	 argument as well, but the function is called with 2 - the object
+    	 it is invoked on and the index.  */
+          || op == ARRAY_REF)
+
+          if (op == ARRAY_REF)
+    	obj = va_arg (p, tree);
+
+      if (obj)
+        return keep_unused_object_arg (call, obj, overload);
+
+      tree fn = overload;
+      if (TREE_CODE (TREE_TYPE (overload)) == METHOD_TYPE)
+        {
+          tree binfo = TYPE_BINFO (TREE_TYPE (object));
+          tree method = build_baselink (binfo, binfo, overload, NULL_TREE);
+          fn = build_min (COMPONENT_REF, TREE_TYPE (overload),
+    		      object, method, NULL_TREE);
+          object = NULL_TREE;
+        }
+
+      if (object)
+        return keep_unused_object_arg (call, object, overload);
+

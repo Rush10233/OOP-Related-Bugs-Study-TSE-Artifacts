@@ -1,0 +1,12 @@
+if (fparms == error_mark_node)
+    	    ok = false;
+
+      gcc_assert (arg_types != error_mark_node);
+    
+
+if (fparms == error_mark_node)
+    	    ok = false;
+
+      gcc_assert (arg_types != error_mark_node);
+    
+

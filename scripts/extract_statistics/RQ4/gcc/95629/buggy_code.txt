@@ -1,0 +1,2 @@
+if (trivial_fn_p (cand->fn))
+

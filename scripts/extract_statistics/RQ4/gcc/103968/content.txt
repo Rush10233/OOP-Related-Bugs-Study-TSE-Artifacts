@@ -1,0 +1,16 @@
+if (TREE_CODE (expression) == TREE_LIST)
+    	  return any_value_dependent_elements_p (expression);
+    
+
+    	return value_dependent_expression_p (expression);
+          }
+    
+
+if (TREE_CODE (expression) == TREE_LIST)
+    	  return any_value_dependent_elements_p (expression);
+    
+
+    	return value_dependent_expression_p (expression);
+          }
+    
+

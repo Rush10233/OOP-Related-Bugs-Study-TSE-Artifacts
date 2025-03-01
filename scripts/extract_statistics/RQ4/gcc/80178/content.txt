@@ -1,0 +1,79 @@
+;     and introduces new inheriting constructor handling.
+    ;     Default in G++ 7.
+    ;
+
+    ; Additional positive integers will be assigned as new versions of
+    ; the ABI become the default version of the ABI.
+    fabi-version=
+
+    	   && COMPLETE_TYPE_P (type)
+    	   && tree_int_cst_lt (TYPE_SIZE (type), TYPE_SIZE (integer_type_node)))
+        val = cp_perform_integral_promotions (val, complain);
+
+        {
+
+        }
+      return val;
+    }
+
+    	return error_mark_node;
+    
+          if (MAYBE_CLASS_TYPE_P (TREE_TYPE (fn)))
+
+        }
+      return convert_from_reference (fn);
+    }
+
+    extern bool scalarish_type_p			(const_tree);
+    extern bool type_has_nontrivial_default_init	(const_tree);
+    extern bool type_has_nontrivial_copy_init	(const_tree);
+
+    extern bool class_tmpl_impl_spec_p		(const_tree);
+    extern int zero_init_p				(const_tree);
+    extern bool check_abi_tag_redeclaration		(const_tree, const_tree, const_tree);
+
+    	{
+    	  relayout_decl (parms);
+    	  DECL_ARG_TYPE (parms) = type_passed_as (TREE_TYPE (parms));
+
+    	}
+          else
+    	/* grokparms or complete_type_or_else will have already issued
+
+          TREE_TYPE (decl) = fntype;
+        }
+      else
+
+    }
+    
+    /* True iff FN is an implicitly-defined default constructor.  */
+
+    #include "convert.h"
+    #include "gimplify.h"
+    #include "attribs.h"
+
+    
+    static tree bot_manip (tree *, int *, void *);
+    static tree bot_replace (tree *, int *, void *);
+
+        return 0;
+    }
+    
+
+    /* Returns true iff copying an object of type T (including via move
+       constructor) is non-trivial.  That is, T has no non-trivial copy
+
+    
+    bool
+
+    {
+
+    
+      if (CLASS_TYPE_P (t))
+        {
+          gcc_assert (COMPLETE_TYPE_P (t));
+
+        }
+      else
+        return 0;
+

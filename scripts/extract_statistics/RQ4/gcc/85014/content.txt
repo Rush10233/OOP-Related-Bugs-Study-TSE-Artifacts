@@ -1,0 +1,8 @@
+{
+          tree scope = qualifying_scope;
+          if (scope == NULL_TREE)
+
+          object = maybe_dummy_object (scope, NULL);
+        }
+    
+

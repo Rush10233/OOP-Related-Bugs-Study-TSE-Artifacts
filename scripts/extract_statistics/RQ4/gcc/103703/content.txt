@@ -1,0 +1,16 @@
+class_decl_loc_t *cdlguide = this;
+    
+      tree type = TREE_TYPE (type_decl);
+
+        {
+          /* For implicit instantiations of a primary template look up
+    	 the primary or partial specialization and use it as
+
+class_decl_loc_t *cdlguide = this;
+    
+      tree type = TREE_TYPE (type_decl);
+
+        {
+          /* For implicit instantiations of a primary template look up
+    	 the primary or partial specialization and use it as
+

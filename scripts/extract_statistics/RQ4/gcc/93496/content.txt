@@ -1,0 +1,8 @@
+elttype = cp_build_qualified_type
+    	  (elttype, cp_type_quals (elttype) | TYPE_QUAL_CONST);
+    	array = build_array_of_n_type (elttype, len);
+
+    	/* Take the address explicitly rather than via decay_conversion
+    	   to avoid the error about taking the address of a temporary.  */
+    	array = cp_build_addr_expr (array, complain);
+

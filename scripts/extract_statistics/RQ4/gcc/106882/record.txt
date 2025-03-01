@@ -1,0 +1,17 @@
+Commit:	78bc649
+./gcc/cp/call.cc	1883,1884
+./gcc/cp/pt.cc	30507,30518
+./gcc/cp/tree.cc	385,385
+./gcc/cp/typeck.cc	11045,11047
+./gcc/testsuite/g++.dg/conversion/pr41426.C	14,14
+./gcc/testsuite/g++.dg/conversion/pr41426.C	20,20
+./gcc/testsuite/g++.dg/conversion/pr41426.C	26,26
+./gcc/testsuite/g++.dg/conversion/pr41426.C	38,38
+./gcc/testsuite/g++.dg/conversion/pr41426.C	40,40
+./gcc/testsuite/g++.dg/cpp0x/elision_weak.C	12,12
+./gcc/testsuite/g++.dg/cpp0x/elision_weak.C	18,18
+./gcc/testsuite/g++.dg/cpp0x/move-return3.C	3,3
+./gcc/testsuite/g++.dg/cpp1y/decltype-auto2.C	11,11
+./gcc/testsuite/g++.dg/cpp1y/lambda-generic-89419.C	5,5
+./gcc/testsuite/g++.dg/cpp1y/lambda-generic-89419.C	16,16
+./gcc/testsuite/g++.dg/cpp1y/lambda-generic-89419.C	23,23

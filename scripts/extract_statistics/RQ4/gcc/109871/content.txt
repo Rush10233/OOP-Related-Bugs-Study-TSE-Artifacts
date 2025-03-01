@@ -1,0 +1,30 @@
+if (CONSTRUCTOR_NELTS (init_list) == 0
+          && TYPE_HAS_DEFAULT_CONSTRUCTOR (totype))
+        ;
+
+      /* If the class has a list ctor, try passing the list as a single
+         argument first, but only consider list ctors.  */
+      else if (TYPE_HAS_LIST_CTOR (totype))
+
+          if (any_strictly_viable (*candidates))
+    	return;
+        }
+    
+      /* Expand the CONSTRUCTOR into a new argument vec.  */
+      vec<tree, va_gc> *new_args;
+
+if (CONSTRUCTOR_NELTS (init_list) == 0
+          && TYPE_HAS_DEFAULT_CONSTRUCTOR (totype))
+        ;
+
+      /* If the class has a list ctor, try passing the list as a single
+         argument first, but only consider list ctors.  */
+      else if (TYPE_HAS_LIST_CTOR (totype))
+
+          if (any_strictly_viable (*candidates))
+    	return;
+        }
+    
+      /* Expand the CONSTRUCTOR into a new argument vec.  */
+      vec<tree, va_gc> *new_args;
+

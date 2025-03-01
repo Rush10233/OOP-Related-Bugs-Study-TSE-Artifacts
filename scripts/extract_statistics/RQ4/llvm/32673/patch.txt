@@ -1,0 +1,23 @@
+public:
+      void initializeLocal(ASTContext &Context, SourceLocation Loc) {
+        ArrayTypeLoc::initializeLocal(Context, Loc);
+        setSizeExpr(getTypePtr()->getSizeExpr());
+      }
+
+        TypeSourceInfo *NewDI;
+        if (!Args.getNumLevels())
+          NewDI = OldDI;
+        else if (auto PackTL = OldDI->getTypeLoc().getAs<PackExpansionTypeLoc>()) {
+          // Expand out the one and only element in each inner pack.
+          Sema::ArgumentPackSubstitutionIndexRAII SubstIndex(SemaRef, 0);
+          NewDI =
+              SemaRef.SubstType(PackTL.getPatternLoc(), Args,
+                                OldParam->getLocation(), OldParam->getDeclName());
+          if (!NewDI) return nullptr;
+          NewDI =
+              SemaRef.CheckPackExpansion(NewDI, PackTL.getEllipsisLoc(),
+                                         PackTL.getTypePtr()->getNumExpansions());
+        } else
+          NewDI = SemaRef.SubstType(OldDI, Args, OldParam->getLocation(),
+                                    OldParam->getDeclName());
+

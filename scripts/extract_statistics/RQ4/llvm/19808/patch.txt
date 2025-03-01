@@ -1,0 +1,2 @@
+getFromType()->isMemberPointerType() ||
+

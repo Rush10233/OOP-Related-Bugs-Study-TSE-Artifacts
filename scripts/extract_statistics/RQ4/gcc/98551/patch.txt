@@ -1,0 +1,4 @@
+&& CLASS_TYPE_P (TREE_TYPE (res))
+
+&& CLASS_TYPE_P (TREE_TYPE (res))
+

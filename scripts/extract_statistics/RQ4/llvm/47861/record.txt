@@ -1,0 +1,14 @@
+Commit:	9d1409d
+./clang/lib/Sema/SemaInit.cpp	6717,6717
+./clang/lib/Sema/SemaInit.cpp	7346,7347
+./clang/lib/Sema/SemaInit.cpp	7349,7350
+./clang/lib/Sema/SemaInit.cpp	7352,7352
+./clang/lib/Sema/SemaInit.cpp	7452,7453
+./clang/lib/Sema/SemaInit.cpp	7460,7460
+./clang/lib/Sema/SemaInit.cpp	7462,7462
+./clang/lib/Sema/SemaInit.cpp	7471,7471
+./clang/lib/Sema/SemaInit.cpp	7502,7502
+./clang/lib/Sema/SemaInit.cpp	7621,7621
+./clang/test/CXX/expr/expr.prim/expr.prim.lambda/p11-1y.cpp	57,59
+./clang/test/SemaCXX/conditional-expr.cpp	1,2
+./clang/test/SemaCXX/conditional-expr.cpp	409,409

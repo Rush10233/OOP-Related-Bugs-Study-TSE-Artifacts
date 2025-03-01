@@ -1,0 +1,56 @@
+args = add_extra_args (REQUIRES_EXPR_EXTRA_ARGS (t), args,
+    			 info.complain, info.in_decl);
+
+    extern tree add_extra_args			(tree, tree, tsubst_flags_t, tree);
+
+      /* Make a copy of the extra arguments so that they won't get changed
+         out from under us.  */
+      tree extra = copy_template_args (args);
+
+    add_extra_args (tree extra, tree args, tsubst_flags_t complain, tree in_decl)
+
+      if (uses_template_parms (extra))
+
+          /* This can happen after dependent substitution into a
+    	 requires-expr or a lambda that uses constexpr if.  */
+
+      args = add_extra_args (PACK_EXPANSION_EXTRA_ARGS (t), args, complain, in_decl);
+
+          if (!orig_arg)
+    	new_arg = NULL_TREE;
+          else if (TREE_CODE (orig_arg) == TREE_VEC)
+
+          tree orig_arg = TREE_VEC_ELT (orig_t, i);
+          if (orig_arg
+    	  && (PACK_EXPANSION_P (orig_arg) || ARGUMENT_PACK_P (orig_arg))
+
+    	args = add_extra_args (IF_STMT_EXTRA_ARGS (t), args, complain, in_decl);
+
+args = add_extra_args (REQUIRES_EXPR_EXTRA_ARGS (t), args,
+    			 info.complain, info.in_decl);
+
+    extern tree add_extra_args			(tree, tree, tsubst_flags_t, tree);
+
+      /* Make a copy of the extra arguments so that they won't get changed
+         out from under us.  */
+      tree extra = copy_template_args (args);
+
+    add_extra_args (tree extra, tree args, tsubst_flags_t complain, tree in_decl)
+
+      if (uses_template_parms (extra))
+
+          /* This can happen after dependent substitution into a
+    	 requires-expr or a lambda that uses constexpr if.  */
+
+      args = add_extra_args (PACK_EXPANSION_EXTRA_ARGS (t), args, complain, in_decl);
+
+          if (!orig_arg)
+    	new_arg = NULL_TREE;
+          else if (TREE_CODE (orig_arg) == TREE_VEC)
+
+          tree orig_arg = TREE_VEC_ELT (orig_t, i);
+          if (orig_arg
+    	  && (PACK_EXPANSION_P (orig_arg) || ARGUMENT_PACK_P (orig_arg))
+
+    	args = add_extra_args (IF_STMT_EXTRA_ARGS (t), args, complain, in_decl);
+

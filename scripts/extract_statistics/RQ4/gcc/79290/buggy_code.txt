@@ -1,0 +1,2 @@
+return build_simple_component_ref (ptrmem, member);
+

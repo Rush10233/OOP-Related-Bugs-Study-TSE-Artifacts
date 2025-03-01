@@ -1,0 +1,90 @@
+"%select{typedef|type alias|type alias template}0 "
+      "redefinition with different types%diff{ ($ vs $)|}1,2">;
+    def err_tag_reference_non_tag : Error<
+
+    def err_tag_reference_conflict : Error<
+
+    def err_dependent_tag_decl : Error<
+      "%select{declaration|definition}0 of "
+      "%select{struct|interface|union|class|enum}1 in a dependent scope">;
+
+      /// Common ways to introduce type names without a tag for use in diagnostics.
+      /// Keep in sync with err_tag_reference_non_tag.
+      enum NonTagKind {
+
+        NTK_Typedef,
+        NTK_TypeAlias,
+        NTK_Template,
+
+    
+      /// Given a non-tag type declaration, returns an enum useful for indicating
+      /// what kind of non-tag type this is.
+
+    
+      bool isAcceptableTagRedeclaration(const TagDecl *Previous,
+                                        TagTypeKind NewTag, bool isDefinition,
+
+      return Tag == TTK_Struct || Tag == TTK_Class || Tag == TTK_Interface;
+    }
+    
+
+      if (isa<TypedefDecl>(PrevDecl))
+        return NTK_Typedef;
+      else if (isa<TypeAliasDecl>(PrevDecl))
+
+        return NTK_TypeAliasTemplate;
+      else if (isa<TemplateTemplateParmDecl>(PrevDecl))
+        return NTK_TemplateTemplateArgument;
+
+    }
+    
+    /// \brief Determine whether a tag with a given kind is acceptable
+
+          // (non-redeclaration) lookup.
+          if ((TUK == TUK_Reference || TUK == TUK_Friend) &&
+              !Previous.isForRedeclaration()) {
+
+            Diag(PrevDecl->getLocation(), diag::note_declared_at);
+            Invalid = true;
+    
+
+    
+          // Diagnose implicit declarations introduced by elaborated types.
+          } else if (TUK == TUK_Reference || TUK == TUK_Friend) {
+
+            Diag(NameLoc, diag::err_tag_reference_conflict) << NTK;
+            Diag(PrevDecl->getLocation(), diag::note_previous_decl) << PrevDecl;
+            Invalid = true;
+
+        //   If the identifier resolves to a typedef-name or the simple-template-id
+        //   resolves to an alias template specialization, the
+        //   elaborated-type-specifier is ill-formed.
+
+        Diag(TAT->getLocation(), diag::note_declared_at);
+      }
+    
+
+      ClassTemplateDecl *ClassTemplate = dyn_cast<ClassTemplateDecl>(TD);
+    
+      if (!ClassTemplate) {
+
+        Diag(TD->getLocation(), diag::note_previous_use);
+        return true;
+      }
+
+            case LookupResult::FoundOverloaded:
+            case LookupResult::FoundUnresolvedValue: {
+              NamedDecl *SomeDecl = Result.getRepresentativeDecl();
+
+              SemaRef.Diag(SomeDecl->getLocation(), diag::note_declared_at);
+              break;
+            }
+
+                  Template.getAsTemplateDecl())) {
+            SemaRef.Diag(TL.getNamedTypeLoc().getBeginLoc(),
+                         diag::err_tag_reference_non_tag)
+
+            SemaRef.Diag(TAT->getLocation(), diag::note_declared_at);
+          }
+        }
+

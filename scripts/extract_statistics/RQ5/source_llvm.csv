@@ -1,0 +1,202 @@
+Accept Invalid	Template Instantiation
+Crash	Template Parsing
+Reject Valid	Template Instantiation
+Wrong Code	Template Instantiation
+Others	Friends
+Reject Valid	Overloading
+Reject Valid	Ctor & Dtor
+Crash	Member Access
+Crash	Ctor & Dtor
+Accept Invalid	Inherited Member Access
+Wrong Code	Template Instantiation
+Crash	Copy & Move
+Wrong Code	Template Instantiation
+Crash	Member Access
+Crash	Member Access
+Crash	Friends
+Diagnostic	Member Access
+Reject Valid	Override Control
+Diagnostic	Inherited Member Access
+Crash	Template Instantiation
+Reject Valid	Ctor & Dtor
+Reject Valid	Template Instantiation
+Crash	Template Parsing
+Crash	Member Access
+Reject Valid	Template Instantiation
+Crash	Template Instantiation
+Reject Valid	Template Parsing
+Crash	Ctor & Dtor
+Reject Valid	Copy & Move
+Wrong Code	Copy & Move
+Reject Valid	Inherited Member Access
+Wrong Code	Overloading
+Reject Valid	Overloading
+Accept Invalid	Constraint & Concepts
+Crash	Inherited Member Access
+Wrong Code	Multiple Inheritance
+Reject Valid	Template Instantiation
+Wrong Code	Template Instantiation
+Crash	Template Instantiation
+Reject Valid	Copy & Move
+Accept Invalid	Ctor & Dtor
+Crash	Copy & Move
+Wrong Code	Ctor & Dtor
+Reject Valid	Overloading
+Diagnostic	Member Access
+Crash	Ctor & Dtor
+Crash	Template Alias
+Crash	Template Instantiation
+Wrong Code	Ctor & Dtor
+Reject Valid	Class Scope
+Wrong Code	Friends
+Reject Valid	Overloading
+Accept Invalid	Overloading
+Others	Copy & Move
+Crash	Copy & Move
+Diagnostic	Friends
+Diagnostic	Class Scope
+Diagnostic	Ctor & Dtor
+Crash	Template Specialization
+Wrong Code	Class Scope
+Reject Valid	Inherited Ctor & Dtor
+Wrong Code	Multiple Inheritance
+Crash	Template Parsing
+Accept Invalid	Template Instantiation
+Crash	Template Specialization
+Crash	Ctor & Dtor
+Reject Valid	Class Scope
+Reject Valid	Ctor & Dtor
+Wrong Code	Class Scope
+Wrong Code	Ctor & Dtor
+Crash	Ctor & Dtor
+Crash	Ctor & Dtor
+Crash	Ctor & Dtor
+Crash	Template Parsing
+Wrong Code	Template Parsing
+Hang	Template Instantiation
+Reject Valid	Ctor & Dtor
+Crash	Template Parsing
+Diagnostic	Override Control
+Reject Valid	Member Access
+Wrong Code	Others
+Wrong Code	Class Scope
+Crash	Ctor & Dtor
+Crash	Ctor & Dtor
+Reject Valid	Inherited Ctor & Dtor
+Accept Invalid	Template Instantiation
+Wrong Code	Multiple Inheritance
+Crash	Casting
+Crash	Inherited Member Access
+Crash	Template Instantiation
+Crash	Ctor & Dtor
+Reject Valid	Ctor & Dtor
+Wrong Code	Ctor & Dtor
+Reject Valid	Class Scope
+Wrong Code	Template Specialization
+Others	Template Instantiation
+Reject Valid	Template Instantiation
+Accept Invalid	Casting
+Reject Valid	Casting
+Wrong Code	Overloading
+Accept Invalid	Constraint & Concepts
+Reject Valid	Copy & Move
+Crash	Ctor & Dtor
+Wrong Code	Copy & Move
+Crash	Ctor & Dtor
+Wrong Code	Override Control
+Wrong Code	Ctor & Dtor
+Reject Valid	Copy & Move
+Diagnostic	Friends
+Others	Others
+Wrong Code	Inherited Ctor & Dtor
+Crash	Inherited Member Access
+Wrong Code	Ctor & Dtor
+Crash	Multiple Inheritance
+Others	Inherited Member Access
+Crash	Template Instantiation
+Accept Invalid	Template Instantiation
+Reject Valid	Class Scope
+Reject Valid	Template Parsing
+Reject Valid	Template Parsing
+Crash	Template Instantiation
+Crash	Ctor & Dtor
+Crash	Constraint & Concepts
+Others	Template Instantiation
+Crash	Member Access
+Reject Valid	Template Specialization
+Crash	Ctor & Dtor
+Wrong Code	Template Parsing
+Crash	Template Specialization
+Crash	Template Specialization
+Reject Valid	Template Instantiation
+Reject Valid	Class Scope
+Reject Valid	Class Scope
+Crash	Template Instantiation
+Crash	Ctor & Dtor
+Accept Invalid	Template Instantiation
+Accept Invalid	Template Alias
+Reject Valid	Friends
+Reject Valid	Member Access
+Accept Invalid	Casting
+Crash	Casting
+Reject Valid	Casting
+Crash	Ctor & Dtor
+Crash	Ctor & Dtor
+Crash	Ctor & Dtor
+Accept Invalid	Member Access
+Crash	Template Instantiation
+Accept Invalid	Others
+Accept Invalid	Others
+Reject Valid	Ctor & Dtor
+Diagnostic	Overloading
+Diagnostic	Ctor & Dtor
+Diagnostic	Member Access
+Diagnostic	Ctor & Dtor
+Diagnostic	Class Scope
+Crash	Overloading
+Crash	Constraint & Concepts
+Crash	Inherited Member Access
+Crash	Multiple Inheritance
+Crash	Multiple Inheritance
+Wrong Code	Inherited Ctor & Dtor
+Crash	Casting
+Crash	Template Instantiation
+Reject Valid	Template Parsing
+Crash	Template Parsing
+Accept Invalid	Template Instantiation
+Crash	Template Parsing
+Reject Valid	Template Instantiation
+Accept Invalid	Multiple Inheritance
+Hang	Overloading
+Reject Valid	Template Specialization
+Crash	Template Parsing
+Crash	Template Specialization
+Reject Valid	Member Access
+Crash	Template Alias
+Reject Valid	Multiple Inheritance
+Reject Valid	Template Instantiation
+Crash	Template Instantiation
+Reject Valid	Others
+Reject Valid	Constraint & Concepts
+Accept Invalid	Ctor & Dtor
+Reject Valid	Overloading
+Wrong Code	Overloading
+Crash	Copy & Move
+Reject Valid	Copy & Move
+Accept Invalid	Ctor & Dtor
+Reject Valid	Inherited Ctor & Dtor
+Crash	Template Instantiation
+Wrong Code	Others
+Wrong Code	Copy & Move
+Reject Valid	Ctor & Dtor
+Wrong Code	Overloading
+Diagnostic	Template Instantiation
+Diagnostic	Class Scope
+Diagnostic	Member Access
+Diagnostic	Ctor & Dtor
+Diagnostic	Inherited Member Access
+Diagnostic	Template Instantiation
+Diagnostic	Copy & Move
+Diagnostic	Template Parsing
+Reject Valid	Constraint & Concepts
+Wrong Code	Constraint & Concepts

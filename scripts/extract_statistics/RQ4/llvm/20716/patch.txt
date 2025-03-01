@@ -1,0 +1,7 @@
+// Used when there is not templated element (tt-params).
+
+        auto *BasePrimaryTemplate =
+            dyn_cast_or_null<CXXRecordDecl>(TD->getTemplatedDecl());
+        if (!BasePrimaryTemplate)
+          continue;
+

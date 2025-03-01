@@ -1,0 +1,4 @@
+Commit:	f5d56cf
+./gcc/cp/semantics.c	1831,1831
+./gcc/testsuite/ChangeLog	9,9
+./gcc/testsuite/ChangeLog	13,13

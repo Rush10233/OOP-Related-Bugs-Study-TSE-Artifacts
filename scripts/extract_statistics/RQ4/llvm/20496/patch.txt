@@ -1,0 +1,9 @@
+ExprObjectKind &OK,
+
+        return CheckIncrementDecrementOperand(S, PR.get(), VK, OK, OpLoc,
+
+        OK = Op->getObjectKind();
+
+        resultType = CheckIncrementDecrementOperand(*this, Input.get(), VK, OK,
+                                                    OpLoc,
+

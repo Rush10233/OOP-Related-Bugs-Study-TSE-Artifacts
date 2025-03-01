@@ -1,0 +1,12 @@
+while (TREE_CODE (tsi_stmt (iter)) == DECL_EXPR)
+
+          gcc_assert (!tsi_end_p (iter));
+
+while (TREE_CODE (tsi_stmt (iter)) == DECL_EXPR)
+
+          gcc_assert (!tsi_end_p (iter));
+
+while (TREE_CODE (tsi_stmt (iter)) == DECL_EXPR)
+
+          gcc_assert (!tsi_end_p (iter));
+

@@ -1,0 +1,18 @@
+cp_genericize_target_expr (tree *stmt_p)
+    {
+      tree slot = TARGET_EXPR_SLOT (*stmt_p);
+      cp_genericize_init (&TARGET_EXPR_INITIAL (*stmt_p),
+    		      TARGET_EXPR_INITIAL (*stmt_p), slot);
+
+    }
+    
+    /* Genericization context.  */
+
+    is_local_temp (tree decl)
+    {
+      return (VAR_P (decl) && DECL_ARTIFICIAL (decl)
+
+    }
+    
+    /* Set various status flags when building an AGGR_INIT_EXPR object T.  */
+

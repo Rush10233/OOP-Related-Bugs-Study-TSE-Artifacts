@@ -1,0 +1,8 @@
+
+
+        if (Destructor->isDefaulted() && !Destructor->isDeleted()) {
+          if (Destructor->isTrivial() && !Destructor->hasAttr<DLLExportAttr>())
+            return;
+
+        }
+

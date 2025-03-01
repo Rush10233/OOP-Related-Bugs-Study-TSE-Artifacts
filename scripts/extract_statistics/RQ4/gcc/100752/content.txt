@@ -1,0 +1,22 @@
+cp_parser_parse_tentatively (parser);
+    
+          /* Parse the dependent declarator.  */
+
+    					 /*ctor_dtor_or_conv_p=*/NULL,
+    					 /*parenthesized_p=*/NULL,
+
+    
+          /* If we are parsing an abstract-declarator, we must handle the
+    	 case where the dependent declarator is absent.  */
+
+cp_parser_parse_tentatively (parser);
+    
+          /* Parse the dependent declarator.  */
+
+    					 /*ctor_dtor_or_conv_p=*/NULL,
+    					 /*parenthesized_p=*/NULL,
+
+    
+          /* If we are parsing an abstract-declarator, we must handle the
+    	 case where the dependent declarator is absent.  */
+

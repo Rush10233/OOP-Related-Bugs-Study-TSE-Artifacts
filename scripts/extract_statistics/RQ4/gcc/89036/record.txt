@@ -1,0 +1,4 @@
+Commit:	0c63a8e
+./gcc/cp/class.c	1137,1139
+Commit:	2a6473c
+./gcc/cp/class.c	1144,1146

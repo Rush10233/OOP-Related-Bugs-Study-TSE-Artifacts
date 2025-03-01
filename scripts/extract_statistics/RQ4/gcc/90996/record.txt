@@ -1,0 +1,5 @@
+Commit:	cda6396
+./gcc/cp/typeck2.c	1499,1509
+./gcc/cp/typeck2.c	1538,1544
+Commit:	d51af82
+./gcc/cp/tree.c	3250,3250

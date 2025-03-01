@@ -1,0 +1,5 @@
+m_value (value), m_loc (loc)
+      {
+        protected_set_expr_location (value, loc);
+      }
+

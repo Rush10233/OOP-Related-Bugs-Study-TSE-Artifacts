@@ -1,0 +1,141 @@
+/* In aggregate initialization of a variable, each element
+    	     initialization is a full-expression because there is no
+    	     enclosing expression.  */
+    	  gcc_assert (stmts_are_full_exprs_p ());
+    
+
+          if (tcleanup && !expr_noexcept_p (tcleanup, tf_none))
+
+          if (rinit && !TREE_SIDE_EFFECTS (rinit))
+
+    	  gcc_assert (TREE_OPERAND (init, 0) == decl);
+
+    split_nonconstant_init_1 (tree dest, tree init, bool nested)
+
+    	    if (tree cleanup = cxx_maybe_build_cleanup (dest,
+    							tf_warning_or_error))
+    	    finish_eh_cleanup (cleanup);
+
+    	      if (!split_nonconstant_init_1 (sub, value, true)
+
+    		  code = maybe_cleanup_point_expr_void (code);
+
+    		  if (tree cleanup
+    		      = cxx_maybe_build_cleanup (sub, tf_warning_or_error))
+    		    finish_eh_cleanup (cleanup);
+
+          if (split_nonconstant_init_1 (dest, init, false))
+
+tsubst_flags_t);
+
+    extern tree expand_vec_init_expr		(tree, tree, tsubst_flags_t);
+
+    	     its destructor.  This isn't right for arrays because each
+    	     element initialization is a full-expression.  */
+
+    		int from_array, tsubst_flags_t complain)
+
+      tree try_block = NULL_TREE;
+
+      iterator = get_temp_regvar (ptrdiff_type_node, maxindex);
+
+          try_block = begin_try_block ();
+
+    	  current_stmt_tree ()->stmts_are_full_exprs_p = 1;
+
+    	    one_init = expand_vec_init_expr (baseref, elt, complain);
+
+    	  current_stmt_tree ()->stmts_are_full_exprs_p = 0;
+
+      /* Make sure to cleanup any partially constructed elements.  */
+      if (flag_exceptions && TYPE_HAS_NONTRIVIAL_DESTRUCTOR (type)
+          && from_array != 2)
+        {
+          tree e;
+          tree m = cp_build_binary_op (input_location,
+    				   MINUS_EXPR, maxindex, iterator,
+    				   complain);
+    
+          /* Flatten multi-dimensional array since build_vec_delete only
+    	 expects one-dimensional array.  */
+          if (TREE_CODE (type) == ARRAY_TYPE)
+    	m = cp_build_binary_op (input_location,
+    				MULT_EXPR, m,
+    				/* Avoid mixing signed and unsigned.  */
+    				convert (TREE_TYPE (m),
+    					 array_type_nelts_total (type)),
+    				complain);
+    
+          finish_cleanup_try_block (try_block);
+          e = build_vec_delete_1 (input_location, rval, m,
+    			      inner_elt_type, sfk_complete_destructor,
+    			      /*use_global_delete=*/0, complain);
+          if (e == error_mark_node)
+    	errors = true;
+          finish_cleanup (e, try_block);
+        }
+    
+
+    expand_vec_init_expr (tree target, tree vec_init, tsubst_flags_t complain)
+
+    			 from_array, complain);
+
+    split_nonconstant_init_1 (tree dest, tree init, bool nested, vec<tree,va_gc> **flags)
+
+    	     than one per element.  */
+
+    				      tf_warning_or_error);
+
+    	  if (nested)
+    	    /* Also clean up the whole array if something later in an enclosing
+    	       init-list throws.  */
+    	    maybe_push_temp_cleanup (dest, flags);
+
+    	      tree sub;
+    
+    	      if (array_type_p)
+    		sub = build4 (ARRAY_REF, inner_type, dest, field_index,
+    			      NULL_TREE, NULL_TREE);
+    	      else
+    		sub = build3 (COMPONENT_REF, inner_type, dest, field_index,
+    			      NULL_TREE);
+    
+    	      if (!split_nonconstant_init_1 (sub, value, true, flags)
+
+    	      tree sub;
+
+    		  if (array_type_p)
+    		    sub = build4 (ARRAY_REF, inner_type, dest, field_index,
+    				  NULL_TREE, NULL_TREE);
+    		  else
+    		    sub = build3 (COMPONENT_REF, inner_type, dest, field_index,
+    				  NULL_TREE);
+    
+
+          /* Collect flags for disabling subobject cleanups once the complete
+    	 object is fully constructed.  */
+          vec<tree, va_gc> *flags = make_tree_vector ();
+
+          if (split_nonconstant_init_1 (dest, init, false, &flags))
+
+cp_gimplify_init_expr (tree *expr_p, gimple_seq *pre_p)
+
+      /* If we might need to clean up a partially constructed object, break down
+         the CONSTRUCTOR with split_nonconstant_init.  */
+      if (TREE_CODE (from) == CONSTRUCTOR
+          && flag_exceptions
+          && TREE_SIDE_EFFECTS (from)
+          && TYPE_HAS_NONTRIVIAL_DESTRUCTOR (TREE_TYPE (to)))
+        {
+          gimplify_expr (&to, pre_p, NULL, is_gimple_lvalue, fb_lvalue);
+          replace_placeholders (from, to);
+          from = split_nonconstant_init (to, from);
+          cp_genericize_tree (&from, false);
+          copy_if_shared (&from);
+          *expr_p = from;
+          return;
+        }
+    
+
+          cp_gimplify_init_expr (expr_p, pre_p);
+

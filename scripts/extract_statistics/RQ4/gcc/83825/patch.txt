@@ -1,0 +1,10 @@
+member_vec->qsort (resort_member_name_cmp);
+
+      if (!len)
+        return;
+    
+
+          member_vec->qsort (member_name_cmp);
+
+          member_vec->qsort (member_name_cmp);
+

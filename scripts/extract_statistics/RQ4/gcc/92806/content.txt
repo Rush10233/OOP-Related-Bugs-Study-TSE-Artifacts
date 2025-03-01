@@ -1,0 +1,8 @@
+m_value (value), m_loc (cp_expr_location (m_value)) {}
+    
+      cp_expr (tree value, location_t loc):
+
+    
+      /* Implicit conversions to tree.  */
+      operator tree () const { return m_value; }
+

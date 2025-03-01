@@ -1,0 +1,11 @@
+SET_PACK_EXPANSION_PATTERN (expr, TREE_VALUE (arg));
+
+    		    = tsubst_pack_expansion (expr, argvec,
+
+    		    {
+    		      TREE_VEC_ELT (expanded_arguments, i) =
+    			tree_cons (NULL_TREE,
+    				   TREE_VEC_ELT (expanded_exprs, i),
+    				   TREE_VEC_ELT (expanded_arguments, i));
+    		    }
+

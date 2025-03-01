@@ -1,0 +1,10 @@
+FOR_EACH_VEC_ELT (base_fndecls, j, base_fndecl)
+    	  if (base_fndecl)
+    	    {
+
+    	      /* Here we know it is a hider, and no overrider exists.  */
+
+    	    }
+          }
+    }
+

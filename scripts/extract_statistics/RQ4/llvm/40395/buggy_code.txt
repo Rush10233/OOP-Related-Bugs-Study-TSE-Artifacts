@@ -1,0 +1,68 @@
+: public Expr,
+
+      Stmt *SubExpr;
+    
+
+      Expr *getSubExpr() { return cast<Expr>(SubExpr); }
+      const Expr *getSubExpr() const { return cast<Expr>(SubExpr); }
+    
+
+      /// As with any mutator of the AST, be very careful
+      /// when modifying an existing AST to preserve its invariants.
+      void setSubExpr(Expr *E) { SubExpr = E; }
+    
+
+    def ExprWithCleanups : DStmt<Expr>;
+
+        if (ExprWithCleanups *EWC = dyn_cast<ExprWithCleanups>(S))
+          S = EWC->getSubExpr();
+
+                          isa<ExprWithCleanups>(OuterS)));
+
+        if (ExprWithCleanups *EWC = dyn_cast<ExprWithCleanups>(Rec))
+          Rec = EWC->getSubExpr()->IgnoreParenImpCasts();
+
+          } while (parent && isa<ExprWithCleanups>(parent));
+
+      if (const ExprWithCleanups *EWC = dyn_cast<ExprWithCleanups>(E))
+        E = EWC->getSubExpr();
+
+      if (auto *E = dyn_cast_or_null<ExprWithCleanups>(Arg))
+
+        : Expr(ExprWithCleanupsClass, subexpr->getType(),
+               subexpr->getValueKind(), subexpr->getObjectKind(),
+               subexpr->isTypeDependent(), subexpr->isValueDependent(),
+               subexpr->isInstantiationDependent(),
+               subexpr->containsUnexpandedParameterPack()),
+          SubExpr(subexpr) {
+
+        : Expr(ExprWithCleanupsClass, empty) {
+
+        if (const auto *EC = dyn_cast<ExprWithCleanups>(E))
+          E = EC->getSubExpr()->IgnoreParens();
+
+                   isa<ExprWithCleanups>(P))) {
+
+        if (auto *ewc = dyn_cast<ExprWithCleanups>(s))
+          s = ewc->getSubExpr();
+
+        if (const ExprWithCleanups *EWC = dyn_cast<ExprWithCleanups>(S)) {
+          S = EWC->getSubExpr();
+
+      else if (const auto *EWC = dyn_cast<ExprWithCleanups>(Cond))
+        return getTrylockCallExpr(EWC->getSubExpr(), C, Negate);
+
+    void CodeGenFunction::enterNonTrivialFullExpression(const ExprWithCleanups *E) {
+      assert(E->getNumObjects() != 0);
+      for (const ExprWithCleanups::CleanupObject &C : E->getObjects())
+        enterBlockScope(*this, C);
+
+      if (const ExprWithCleanups *ewc = dyn_cast<ExprWithCleanups>(init)) {
+        enterFullExpression(ewc);
+        init = ewc->getSubExpr();
+
+      if (const ExprWithCleanups *cleanups =
+            dyn_cast_or_null<ExprWithCleanups>(RV)) {
+        enterFullExpression(cleanups);
+        RV = cleanups->getSubExpr();
+

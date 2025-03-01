@@ -1,0 +1,12 @@
+{
+        tree temp = unary_complex_lvalue (ADDR_EXPR, object);
+        if (temp)
+          {
+    	temp = cp_build_fold_indirect_ref (temp);
+    	if (xvalue_p (object) && !xvalue_p (temp))
+    	  /* Preserve xvalue kind.  */
+    	  temp = move (temp);
+    	object = temp;
+          }
+      }
+

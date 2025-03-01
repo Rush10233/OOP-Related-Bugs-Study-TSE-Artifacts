@@ -1,0 +1,20 @@
+void
+    set_flags_from_callee (tree call)
+    {
+
+    
+      /* We check both the decl and the type; a function may be known not to
+         throw without being declared throw().  */
+
+        nothrow = true;
+    
+      if (!nothrow && at_function_scope_p () && cfun && cp_function_chain)
+
+    
+      /* Make a copy of this node.  */
+      t = copy_tree_r (tp, walk_subtrees, NULL);
+
+        set_flags_from_callee (*tp);
+      if (data.clear_location && EXPR_HAS_LOCATION (*tp))
+        SET_EXPR_LOCATION (*tp, input_location);
+

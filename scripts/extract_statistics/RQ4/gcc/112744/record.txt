@@ -1,0 +1,3 @@
+Commit:	e81e84e
+./gcc/cp/typeck.cc	3470,3470
+./gcc/cp/typeck.cc	3488,3489

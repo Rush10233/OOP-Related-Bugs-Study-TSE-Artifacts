@@ -1,0 +1,6 @@
+Commit:	3f92498
+./gcc/cp/pt.c	24330,24331
+./gcc/cp/pt.c	24357,24359
+Commit:	1a01386
+./gcc/cp/pt.c	24322,24323
+./gcc/cp/pt.c	24349,24351

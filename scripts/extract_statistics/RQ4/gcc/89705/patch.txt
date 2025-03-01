@@ -1,0 +1,8 @@
+/* A prvalue of non-class type is cv-unqualified.  */
+    	    if (TREE_CODE (ftype) != REFERENCE_TYPE && !CLASS_TYPE_P (ftype))
+    	      ftype = cv_unqualified (ftype);
+
+/* A prvalue of non-class type is cv-unqualified.  */
+    	    if (!TYPE_REF_P (ftype) && !CLASS_TYPE_P (ftype))
+    	      ftype = cv_unqualified (ftype);
+

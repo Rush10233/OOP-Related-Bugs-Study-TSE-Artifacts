@@ -1,0 +1,22 @@
+basetype = TYPE_MAIN_VARIANT (TREE_TYPE (instance));
+      gcc_assert (CLASS_TYPE_P (basetype));
+    
+      user_args = args == NULL ? NULL : *args;
+      /* Under DR 147 A::A() is an invalid constructor call,
+         not a functional cast.  */
+
+          return call;
+        }
+    
+
+      /* Process the argument list.  */
+      if (args != NULL && *args != NULL)
+        {
+          *args = resolve_args (*args, complain);
+          if (*args == NULL)
+    	return error_mark_node;
+
+        }
+    
+      /* Consider the object argument to be used even if we end up selecting a
+

@@ -1,0 +1,6 @@
+cp_walk_tree (&pattern, extract_locals_r, &data, &data.visited);
+
+cp_walk_tree (&pattern, extract_locals_r, &data, &data.visited);
+
+cp_walk_tree (&pattern, extract_locals_r, &data, &data.visited);
+

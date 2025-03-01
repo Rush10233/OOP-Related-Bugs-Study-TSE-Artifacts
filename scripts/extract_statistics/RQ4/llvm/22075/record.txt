@@ -1,0 +1,4 @@
+Commit:	29704e7
+./clang/include/clang/Sema/DeclSpec.h	2183,2183
+./clang/lib/Parse/ParseDecl.cpp	5332,5332
+./clang/lib/Parse/ParseDeclCXX.cpp	2040,2040

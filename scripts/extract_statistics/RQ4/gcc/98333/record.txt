@@ -1,0 +1,6 @@
+Commit:	7266ff2
+./gcc/cp/parser.c	25011,25030
+./gcc/cp/parser.c	25033,25035
+Commit:	60b589b
+./gcc/cp/parser.c	24094,24113
+./gcc/cp/parser.c	24116,24118

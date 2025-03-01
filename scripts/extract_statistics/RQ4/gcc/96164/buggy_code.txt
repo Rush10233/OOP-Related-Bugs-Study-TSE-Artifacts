@@ -1,0 +1,28 @@
+The explicit instantiation of a class template specialization
+    	 implies the instantiation of all of its members not
+    	 previously explicitly specialized in the translation unit
+    	 containing the explicit instantiation.
+    
+         Of course, we can't instantiate member template classes, since we
+         don't have any arguments for them.  Note that the standard is
+         unclear on whether the instantiation of the members are
+         *explicit* instantiations or not.  However, the most natural
+         interpretation is that it should be an explicit
+         instantiation.  */
+
+    	&& DECL_TEMPLATE_INSTANTIATION (fld))
+
+The explicit instantiation of a class template specialization
+    	 implies the instantiation of all of its members not
+    	 previously explicitly specialized in the translation unit
+    	 containing the explicit instantiation.
+    
+         Of course, we can't instantiate member template classes, since we
+         don't have any arguments for them.  Note that the standard is
+         unclear on whether the instantiation of the members are
+         *explicit* instantiations or not.  However, the most natural
+         interpretation is that it should be an explicit
+         instantiation.  */
+
+    	&& DECL_TEMPLATE_INSTANTIATION (fld))
+

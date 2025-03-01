@@ -1,0 +1,2 @@
+rhs = decay_conversion (rhs, complain);
+

@@ -1,0 +1,12 @@
+Commit:	2b2b1a9
+./clang/lib/Sema/SemaTemplateDeduction.cpp	106,107
+./clang/lib/Sema/SemaTemplateDeduction.cpp	111,111
+./clang/lib/Sema/SemaTemplateDeduction.cpp	456,459
+./clang/lib/Sema/SemaTemplateDeduction.cpp	490,494
+./clang/lib/Sema/SemaTemplateDeduction.cpp	1485,1486
+./clang/lib/Sema/SemaTemplateDeduction.cpp	1490,1491
+./clang/lib/Sema/SemaTemplateDeduction.cpp	1503,1503
+./clang/lib/Sema/SemaTemplateDeduction.cpp	1828,1829
+./clang/lib/Sema/SemaTemplateDeduction.cpp	1833,1833
+./clang/lib/Sema/SemaTemplateDeduction.cpp	1853,1853
+./clang/lib/Sema/SemaTemplateDeduction.cpp	1924,1924

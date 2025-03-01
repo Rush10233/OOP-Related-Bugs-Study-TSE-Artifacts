@@ -1,0 +1,2 @@
+return cp_build_bit_cast (EXPR_LOCATION (t), type, op0, complain);
+

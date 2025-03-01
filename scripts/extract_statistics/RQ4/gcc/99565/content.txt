@@ -1,0 +1,56 @@
+
+      /* Compare the hashes.  */
+      if (h0 == h1
+
+          /* Don't warn if any of the branches or their subexpressions comes
+    	 from a macro.  */
+          && !walk_tree_without_duplicates (&thenb, expr_from_macro_expansion_r,
+
+         warn here, because the COND_EXPR will be turned into OP1.  */
+      if (warn_duplicated_branches
+          && TREE_CODE (ret) == COND_EXPR
+
+        warning_at (EXPR_LOCATION (ret), OPT_Wduplicated_branches,
+    		"this condition has identical branches");
+    
+
+         warn here, because the COND_EXPR will be turned into ARG2.  */
+      if (warn_duplicated_branches
+          && (complain & tf_warning)
+
+        warning_at (EXPR_LOCATION (result), OPT_Wduplicated_branches,
+    		"this condition has identical branches");
+    
+
+    	    new_op2 = convert_to_void (op2, ICV_CAST, complain);
+    	  }
+    
+
+    	break;
+          }
+    
+
+    
+    	if (new_op1 != op1)
+    	  {
+
+    	    expr = t;
+    	  }
+    
+
+    	    flags &= ~OEP_ADDRESS_OF;
+    	    if (!OP_SAME (1))
+    	      {
+
+    		  {
+    		    if (TREE_OPERAND (arg0, 2)
+    			|| TREE_OPERAND (arg1, 2))
+
+      OEP_HASH_CHECK = 32,
+      /* Makes operand_equal_p handle more expressions:  */
+      OEP_LEXICOGRAPHIC = 64,
+
+    };
+    
+    /* Enum and arrays used for tree allocation stats.
+

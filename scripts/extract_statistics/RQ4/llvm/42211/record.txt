@@ -1,0 +1,3 @@
+Commit:	b074acb
+./clang/lib/AST/DeclCXX.cpp	2046,2048
+./clang/lib/AST/DeclCXX.cpp	2051,2051

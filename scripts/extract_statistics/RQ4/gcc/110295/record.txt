@@ -1,0 +1,8 @@
+Commit:	40aa486
+./gcc/dwarf2out.c	26123,26123
+Commit:	5a38133
+./gcc/dwarf2out.cc	26511,26511
+Commit:	6251409
+./gcc/dwarf2out.cc	26536,26536
+Commit:	b0856bb
+./gcc/dwarf2out.cc	26537,26537

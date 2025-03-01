@@ -1,0 +1,3 @@
+/* Static objects can be referred only if they was not optimized out yet.  */
+      if (!TREE_PUBLIC (decl) && !DECL_EXTERNAL (decl))
+

@@ -1,0 +1,88 @@
+SourceLocation NameLoc,
+                                              IdentifierInfo &Name);
+    
+
+      ParsedType getDestructorName(SourceLocation TildeLoc,
+                                   IdentifierInfo &II, SourceLocation NameLoc,
+                                   Scope *S, CXXScopeSpec &SS,
+
+      //===--------------------------------------------------------------------===//
+      // C++ Classes
+      //
+
+      bool isCurrentClassName(const IdentifierInfo &II, Scope *S,
+                              const CXXScopeSpec *SS = nullptr);
+      bool isCurrentClassNameTypo(IdentifierInfo *&II, const CXXScopeSpec *SS);
+
+            continue;
+          }
+    
+
+          ParsedType TypeRep = Actions.getTypeName(
+              *Tok.getIdentifierInfo(), Tok.getLocation(), getCurScope(), nullptr,
+              false, false, nullptr, false, false,
+
+            goto DoneWithDeclSpec;
+          }
+    
+          // Likewise, if this is a context where the identifier could be a template
+          // name, check whether this is a deduction guide declaration.
+          if (getLangOpts().CPlusPlus17 &&
+
+        if (AllowConstructorName && 
+            Actions.isCurrentClassName(*Id, getCurScope(), &SS)) {
+          // We have parsed a constructor name.
+
+          Result.setConstructorName(Ty, IdLoc, IdLoc);
+        } else if (getLangOpts().CPlusPlus17 &&
+                   AllowDeductionGuide && SS.isEmpty() &&
+
+              << TemplateId->Name
+              << FixItHint::CreateRemoval(
+                        SourceRange(TemplateId->LAngleLoc, TemplateId->RAngleLoc));
+
+            Result.setConstructorName(Ty, TemplateId->TemplateNameLoc,
+                                      TemplateId->RAngleLoc);
+            ConsumeAnnotationToken();
+
+      return true;
+    }
+    
+
+    /// isCurrentClassName - Determine whether the identifier II is the
+    /// name of the class type currently being defined. In the case of
+    /// nested classes, this will only return true if II is the name of
+    /// the innermost class.
+
+                                  const CXXScopeSpec *SS) {
+
+    }
+    
+    /// Determine whether the identifier II is a typo for the name of
+
+        DeclContext::lookup_result R = Record->lookup(Record->getDeclName());
+        for (DeclContext::lookup_iterator I = R.begin(), E = R.end(); I != E;
+             ++I) {
+
+              isa<IndirectFieldDecl>(D)) {
+
+              << D->getDeclName();
+            break;
+          }
+
+        if (isa<UsingDecl>(D) || isa<UsingPackDecl>(D))
+          continue;
+    
+
+        if (IsEquivalentForUsingDecl(Context, D, Target)) {
+          if (UsingShadowDecl *Shadow = dyn_cast<UsingShadowDecl>(*I))
+            PrevShadow = Shadow;
+
+                              Context.getTrivialTypeSourceInfo(Type, NameLoc));
+    }
+    
+
+    ParsedType Sema::getDestructorName(SourceLocation TildeLoc,
+                                       IdentifierInfo &II,
+                                       SourceLocation NameLoc,
+

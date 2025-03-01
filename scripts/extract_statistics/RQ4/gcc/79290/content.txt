@@ -1,0 +1,8 @@
+member = DECL_CHAIN (member))
+        if (DECL_NAME (member) == member_name)
+          break;
+
+    }
+    
+    /* Given an expression PTR for a pointer, return an expression
+

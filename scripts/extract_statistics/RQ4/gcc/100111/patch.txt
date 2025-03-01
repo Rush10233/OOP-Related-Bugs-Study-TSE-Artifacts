@@ -1,0 +1,80 @@
+if (!*valp)
+    	{
+    	  /* But do make sure we have something in *valp.  */
+    	  *valp = build_constructor (type, nullptr);
+    	  CONSTRUCTOR_NO_CLEARING (*valp) = no_zero_init;
+    	}
+
+bool empty_base = false;
+
+          tree reftype = refs->pop();
+
+    	{
+    	  empty_base = true;
+    	  break;
+    	}
+    
+          type = reftype;
+
+      if (*non_constant_p)
+        return t;
+    
+
+      gcc_checking_assert (!*valp || (same_type_ignoring_top_level_qualifiers_p
+    				  (TREE_TYPE (*valp), type)));
+      if (empty_base || !(same_type_ignoring_top_level_qualifiers_p
+    		      (TREE_TYPE (init), type)))
+        {
+          /* For initialization of an empty base, the original target will be
+           *(base*)this, evaluation of which resolves to the object
+           argument, which has the derived type rather than the base type.  In
+           this situation, just evaluate the initializer and return, since
+           there's no actual data to store, and we didn't build a CONSTRUCTOR.  */
+          empty_base = true;
+          gcc_assert (is_empty_class (TREE_TYPE (init)));
+          if (!*valp)
+    	{
+    	  /* But do make sure we have something in *valp.  */
+    	  *valp = build_constructor (type, nullptr);
+    	  CONSTRUCTOR_NO_CLEARING (*valp) = no_zero_init;
+    	}
+        }
+      else if (*valp && TREE_CODE (*valp) == CONSTRUCTOR
+    	   && TREE_CODE (init) == CONSTRUCTOR)
+
+    			     (TREE_TYPE (target), type) || empty_base);
+
+      if (lval)
+
+if (!*valp)
+    	{
+    	  /* But do make sure we have something in *valp.  */
+    	  *valp = build_constructor (type, NULL);
+    	  CONSTRUCTOR_NO_CLEARING (*valp) = no_zero_init;
+    	}
+
+else if (TREE_CODE (init) == CONSTRUCTOR
+    	   && !same_type_ignoring_top_level_qualifiers_p (TREE_TYPE (init),
+    							  type))
+        {
+          /* See above on initialization of empty bases.  */
+          gcc_assert (is_empty_class (TREE_TYPE (init)) && !lval);
+          return init;
+        }
+
+else if (TREE_CODE (init) == CONSTRUCTOR
+    	   && !same_type_ignoring_top_level_qualifiers_p (TREE_TYPE (init),
+    							  type))
+        {
+          /* See above on initialization of empty bases.  */
+          gcc_assert (is_empty_class (TREE_TYPE (init)) && !lval);
+          return init;
+        }
+
+if (!*valp)
+    	{
+    	  /* But do make sure we have something in *valp.  */
+    	  *valp = build_constructor (type, nullptr);
+    	  CONSTRUCTOR_NO_CLEARING (*valp) = no_zero_init;
+    	}
+

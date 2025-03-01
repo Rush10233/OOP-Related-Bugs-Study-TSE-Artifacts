@@ -1,0 +1,8 @@
+/* FIXME cp_fold ought to be a superset of maybe_constant_value so we don't
+         have to call both.  */
+      if (cxx_dialect >= cxx11)
+
+      return cp_fold_rvalue (x);
+    }
+    
+

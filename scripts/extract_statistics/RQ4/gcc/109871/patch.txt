@@ -1,0 +1,18 @@
+else if (CONSTRUCTOR_IS_DESIGNATED_INIT (init_list)
+    	   && !CP_AGGREGATE_TYPE_P (totype))
+        {
+          if (complain & tf_error)
+    	error ("designated initializers cannot be used with a "
+    	       "non-aggregate type %qT", totype);
+          return;
+        }
+
+else if (CONSTRUCTOR_IS_DESIGNATED_INIT (init_list)
+    	   && !CP_AGGREGATE_TYPE_P (totype))
+        {
+          if (complain & tf_error)
+    	error ("designated initializers cannot be used with a "
+    	       "non-aggregate type %qT", totype);
+          return;
+        }
+

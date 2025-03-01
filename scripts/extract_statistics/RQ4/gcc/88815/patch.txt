@@ -1,0 +1,20 @@
+CONSTRUCTOR_IS_DEPENDENT (in CONSTRUCTOR)
+
+    /* True if this CONSTRUCTOR is instantiation-dependent and needs to be
+       substituted.  */
+    #define CONSTRUCTOR_IS_DEPENDENT(NODE) \
+      (TREE_LANG_FLAG_1 (CONSTRUCTOR_CHECK (NODE)))
+    
+
+        case CONSTRUCTOR:
+          if (CONSTRUCTOR_IS_DEPENDENT (*tp))
+    	return *tp;
+          break;
+    
+
+      if (instantiation_dependent_expression_p (compound_literal)
+          || dependent_type_p (type))
+
+          /* And as instantiation-dependent.  */
+          CONSTRUCTOR_IS_DEPENDENT (compound_literal) = true;
+

@@ -1,0 +1,8 @@
+cp_declarator *target,
+    				    tree attributes)
+    {
+
+        return cp_error_declarator;
+    
+      if (code == INDIRECT_REF)
+

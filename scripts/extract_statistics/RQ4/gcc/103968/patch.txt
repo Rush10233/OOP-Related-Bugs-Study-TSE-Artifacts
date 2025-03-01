@@ -1,0 +1,10 @@
+if (TREE_CODE (type) == REFERENCE_TYPE
+    	    && has_value_dependent_address (expression))
+    	  return true;
+    
+
+if (TREE_CODE (type) == REFERENCE_TYPE
+    	    && has_value_dependent_address (expression))
+    	  return true;
+    
+

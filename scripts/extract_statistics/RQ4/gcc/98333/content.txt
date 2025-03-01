@@ -1,0 +1,36 @@
+maybe_end_member_template_processing ();
+    	}
+          vec_safe_truncate (unparsed_funs_with_default_args, 0);
+    
+          /* If there are noexcept-specifiers that have not yet been processed,
+
+          FOR_EACH_VEC_SAFE_ELT (unparsed_noexcepts, ix, decl)
+    	{
+    	  tree ctx = DECL_CONTEXT (decl);
+
+    	  maybe_end_member_template_processing ();
+    	}
+          vec_safe_truncate (unparsed_noexcepts, 0);
+
+          if (pushed_scope)
+    	pop_scope (pushed_scope);
+    
+
+maybe_end_member_template_processing ();
+    	}
+          vec_safe_truncate (unparsed_funs_with_default_args, 0);
+    
+          /* If there are noexcept-specifiers that have not yet been processed,
+
+          FOR_EACH_VEC_SAFE_ELT (unparsed_noexcepts, ix, decl)
+    	{
+    	  tree ctx = DECL_CONTEXT (decl);
+
+    	  maybe_end_member_template_processing ();
+    	}
+          vec_safe_truncate (unparsed_noexcepts, 0);
+
+          if (pushed_scope)
+    	pop_scope (pushed_scope);
+    
+

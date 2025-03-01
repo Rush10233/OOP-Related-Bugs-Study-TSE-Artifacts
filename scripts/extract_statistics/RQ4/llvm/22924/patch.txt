@@ -1,0 +1,157 @@
+"in implicit initialization of %select{"
+      "array element %1 with omitted initializer|"
+      "field %1 with omitted initializer|"
+      "trailing array elements in runtime-sized array new}0">;
+
+      /// \brief Determine whether this is an array new with an unknown bound.
+      bool isVariableLengthArrayNew() const {
+        return getKind() == EK_New && dyn_cast_or_null<IncompleteArrayType>(
+                                          getType()->getAsArrayTypeUnsafe());
+      }
+    
+
+      // Attempt to perform zero-initialization using memset.
+      auto TryMemsetInitialization = [&]() -> bool {
+        // FIXME: If the type is a pointer-to-data-member under the Itanium ABI,
+        // we can initialize with a memset to -1.
+        if (!CGM.getTypes().isZeroInitializable(ElementType))
+          return false;
+    
+        // Optimization: since zero initialization will just set the memory
+        // to all zeroes, generate a single memset to do it in one shot.
+    
+        // Subtract out the size of any elements we've already initialized.
+        auto *RemainingSize = AllocSizeWithoutCookie;
+        if (InitListElements) {
+          // We know this can't overflow; we check this when doing the allocation.
+          auto *InitializedSize = llvm::ConstantInt::get(
+              RemainingSize->getType(),
+              getContext().getTypeSizeInChars(ElementType).getQuantity() *
+                  InitListElements);
+          RemainingSize = Builder.CreateSub(RemainingSize, InitializedSize);
+        }
+    
+        // Create the memset.
+        Builder.CreateMemSet(CurPtr, Builder.getInt8(0), RemainingSize, false);
+        return true;
+      };
+    
+
+        // Initializing from a (braced) string literal is a special case; the init
+        // list element does not initialize a (single) array element.
+        if (ILE->isStringLiteralInit()) {
+          // Initialize the initial portion of length equal to that of the string
+          // literal. The allocation must be for at least this much; we emitted a
+          // check for that earlier.
+          AggValueSlot Slot =
+              AggValueSlot::forAddr(CurPtr, ElementType.getQualifiers(),
+                                    AggValueSlot::IsDestructed,
+                                    AggValueSlot::DoesNotNeedGCBarriers,
+                                    AggValueSlot::IsNotAliased);
+          EmitAggExpr(ILE->getInit(0), Slot);
+    
+          // Move past these elements.
+          InitListElements =
+              cast<ConstantArrayType>(ILE->getType()->getAsArrayTypeUnsafe())
+                  ->getSize().getZExtValue();
+          CurPtr =
+              Address(Builder.CreateInBoundsGEP(CurPtr.getPointer(),
+                                                Builder.getSize(InitListElements),
+                                                "string.init.end"),
+                      CurPtr.getAlignment().alignmentAtOffset(InitListElements *
+                                                              ElementSize));
+    
+          // Zero out the rest, if any remain.
+          llvm::ConstantInt *ConstNum = dyn_cast<llvm::ConstantInt>(NumElements);
+          if (!ConstNum || !ConstNum->equalsInt(InitListElements)) {
+            bool OK = TryMemsetInitialization();
+            (void)OK;
+            assert(OK && "couldn't memset character type?");
+          }
+          return;
+        }
+    
+
+        const InitListExpr *ILE = dyn_cast<InitListExpr>(E->getInitializer());
+        if (ILE && ILE->isStringLiteralInit())
+          minElements =
+              cast<ConstantArrayType>(ILE->getType()->getAsArrayTypeUnsafe())
+                  ->getSize().getZExtValue();
+        else if (ILE)
+
+      llvm::Optional<uint64_t> KnownArraySize;
+
+        // Let's see if this is a constant < 0. If so, we reject it out of hand,
+        // per CWG1464. Otherwise, if it's not a constant, we must have an
+        // unparenthesized array type.
+
+          // FIXME: Per CWG1464, we are required to check the value prior to
+          // converting to size_t. This will never find a negative array size in
+          // C++14 onwards, because Value is always unsigned here!
+
+            if (Value.isSigned() && Value.isNegative()) {
+              return ExprError(Diag(ArraySize->getLocStart(),
+                                    diag::err_typecheck_negative_array_size)
+                               << ArraySize->getSourceRange());
+            }
+    
+            if (!AllocType->isDependentType()) {
+
+              if (ActiveSizeBits > ConstantArrayType::getMaxSizeBits(Context))
+                return ExprError(Diag(ArraySize->getLocStart(),
+                                      diag::err_array_too_large)
+                                 << Value.toString(10)
+                                 << ArraySize->getSourceRange());
+
+    
+            KnownArraySize = Value.getZExtValue();
+
+      if (ArraySize && !isLegalArrayNewInitializer(initStyle, Initializer)) {
+        SourceRange InitRange(Inits[0]->getLocStart(),
+                              Inits[NumInits - 1]->getLocEnd());
+        Diag(StartLoc, diag::err_new_array_init_args) << InitRange;
+        return ExprError();
+
+        // The type we initialize is the complete type, including the array bound.
+        QualType InitType;
+        if (KnownArraySize)
+          InitType = Context.getConstantArrayType(
+              AllocType, llvm::APInt(Context.getTypeSize(Context.getSizeType()),
+                                     *KnownArraySize),
+              ArrayType::Normal, 0);
+        else if (ArraySize)
+          InitType =
+              Context.getIncompleteArrayType(AllocType, ArrayType::Normal, 0);
+        else
+          InitType = AllocType;
+    
+
+        InitializationSequence InitSeq(*this, Entity, Kind,
+                                       MultiExprArg(Inits, NumInits));
+
+        // FIXME: We should not create these in the first place.
+
+          else if (Entity.getKind() == InitializedEntity::EK_ArrayElement) {
+            bool IsTrailingArrayNewMember =
+                Entity.getParent() &&
+                Entity.getParent()->isVariableLengthArrayNew();
+
+              << (IsTrailingArrayNewMember ? 2 : /*array element*/0)
+              << Entity.getElementIndex();
+          }
+
+        if (const auto *CAType = dyn_cast<ConstantArrayType>(AType))
+
+        // For an array new with an unknown bound, ask for one additional element
+        // in order to populate the array filler.
+        if (Entity.isVariableLengthArrayNew())
+          ++NumElements;
+
+        // If there are any members of the array that get value-initialized, check
+        // that is possible. That happens if we know the bound and don't have
+        // enough elements, or if we're performing an array new with an unknown
+        // bound.
+
+        if ((maxElementsKnown && elementIndex < maxElements) ||
+            Entity.isVariableLengthArrayNew())
+

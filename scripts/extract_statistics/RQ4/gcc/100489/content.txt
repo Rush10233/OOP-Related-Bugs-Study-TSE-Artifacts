@@ -1,0 +1,68 @@
+}
+      else
+        {
+
+    
+          /* We must keep the CONSTRUCTOR's ELTS in FIELD order.
+    	 Usually we meet initializers in that order, but it is
+
+/* We already reshaped this.  */
+    	      if (field != d->cur->index)
+    		{
+
+    		  field = d->cur->index;
+    		}
+    	    }
+
+    		       d->cur->index);
+    	      return error_mark_node;
+    	    }
+
+    	}
+    
+          /* If we processed all the member of the class, we are done.  */
+
+    			  || identifier_p (ce->index));
+    	      if (ce->index == field || ce->index == DECL_NAME (field))
+    		next = ce->value;
+    	      else
+    		{
+    		  ce = NULL;
+
+    
+    		  if (ce->index == field || ce->index == DECL_NAME (field))
+    		    break;
+    		}
+    	    }
+    	  if (field)
+
+/* We already reshaped this.  */
+    	      if (field != d->cur->index)
+    		{
+
+    		  field = d->cur->index;
+    		}
+    	    }
+
+    		       d->cur->index);
+    	      return error_mark_node;
+    	    }
+
+    	}
+    
+          /* If we processed all the member of the class, we are done.  */
+
+    			  || identifier_p (ce->index));
+    	      if (ce->index == field || ce->index == DECL_NAME (field))
+    		next = ce->value;
+    	      else
+    		{
+    		  ce = NULL;
+
+    
+    		  if (ce->index == field || ce->index == DECL_NAME (field))
+    		    break;
+    		}
+    	    }
+    	  if (field)
+

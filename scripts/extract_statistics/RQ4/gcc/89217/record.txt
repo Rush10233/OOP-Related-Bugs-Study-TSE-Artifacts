@@ -1,0 +1,8 @@
+Commit:	b43e634
+./gcc/cp/constexpr.c	1321,1321
+./gcc/cp/semantics.c	2799,2800
+./gcc/cp/semantics.c	2802,2802
+./gcc/cp/semantics.c	2804,2804
+./gcc/cp/semantics.c	2806,2806
+./gcc/cp/semantics.c	2808,2809
+./gcc/cp/semantics.c	2845,2845

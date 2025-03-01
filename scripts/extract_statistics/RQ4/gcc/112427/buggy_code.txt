@@ -1,0 +1,4 @@
+TREE_OPERAND (t, i) = va_arg (p, tree);
+
+          datum = fold_build_pointer_plus (fold_convert (ptype, datum), component);
+

@@ -1,0 +1,3 @@
+Commit:	640b23d
+./gcc/cp/constexpr.c	6350,6351
+./gcc/cp/constexpr.c	6353,6353

@@ -1,0 +1,28 @@
+
+    	  processing_template_decl_sentinel ptds (/*reset*/false);
+    	  if (!currently_open_class (ctx))
+
+    	      if (!LOCAL_CLASS_P (ctx))
+    		push_to_top_level ();
+    	      else
+    		/* push_to_top_level would lose the necessary function context,
+    		   just reset processing_template_decl.  */
+    		processing_template_decl = 0;
+
+    	      if (!LOCAL_CLASS_P (ctx))
+    		pop_from_top_level ();
+
+
+    	  processing_template_decl_sentinel ptds (/*reset*/false);
+    	  if (!currently_open_class (ctx))
+
+    	      if (!LOCAL_CLASS_P (ctx))
+    		push_to_top_level ();
+    	      else
+    		/* push_to_top_level would lose the necessary function context,
+    		   just reset processing_template_decl.  */
+    		processing_template_decl = 0;
+
+    	      if (!LOCAL_CLASS_P (ctx))
+    		pop_from_top_level ();
+

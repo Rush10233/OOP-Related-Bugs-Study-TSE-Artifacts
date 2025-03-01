@@ -1,0 +1,8 @@
+gcc_assert (ANON_AGGR_TYPE_P (ictx));
+
+    	      while (true)
+
+    		    break;
+
+    	      /* And then the TYPE member with that anon aggr type.  */
+

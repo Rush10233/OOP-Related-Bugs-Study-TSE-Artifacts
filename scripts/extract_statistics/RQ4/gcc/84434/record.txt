@@ -1,0 +1,15 @@
+Commit:	56fc943
+./gcc/cp/name-lookup.c	1594,1597
+./gcc/cp/name-lookup.c	1602,1608
+./gcc/cp/name-lookup.c	1610,1610
+./gcc/cp/name-lookup.c	1612,1615
+./gcc/cp/name-lookup.c	1617,1618
+./gcc/cp/name-lookup.c	1620,1620
+./gcc/cp/name-lookup.c	1622,1635
+./gcc/cp/name-lookup.c	1637,1638
+./gcc/cp/name-lookup.c	1645,1647
+./gcc/cp/name-lookup.c	1650,1650
+./gcc/cp/name-lookup.c	1654,1655
+./gcc/cp/name-lookup.c	1674,1675
+./gcc/cp/name-lookup.c	1677,1678
+./gcc/cp/name-lookup.c	1680,1680

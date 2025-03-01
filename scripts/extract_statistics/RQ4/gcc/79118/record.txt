@@ -1,0 +1,10 @@
+Commit:	b20ba13
+./gcc/cp/constexpr.c	699,700
+./gcc/cp/constexpr.c	703,703
+./gcc/cp/constexpr.c	705,715
+./gcc/cp/constexpr.c	729,730
+./gcc/cp/constexpr.c	732,735
+./gcc/cp/constexpr.c	746,748
+./gcc/cp/constexpr.c	806,806
+./gcc/cp/constexpr.c	867,867
+./gcc/testsuite/ChangeLog	308,308

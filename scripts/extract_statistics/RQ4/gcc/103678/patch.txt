@@ -1,0 +1,12 @@
+type = TREE_TYPE (type);
+
+          if (TREE_CODE (type) == TYPENAME_TYPE)
+
+    	  type = resolve_typename_type (type, /*only_current_p=*/false);
+    	  if (TREE_CODE (type) == TYPENAME_TYPE)
+
+          type = maybe_process_partial_specialization (type);
+          if (type == error_mark_node)
+
+          type = TYPE_MAIN_DECL (type);
+

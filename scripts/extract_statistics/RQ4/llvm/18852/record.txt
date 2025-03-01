@@ -1,0 +1,5 @@
+Commit:	6fe42c9
+./clang/include/clang/Sema/TypoCorrection.h	308,308
+./clang/lib/Sema/SemaLookup.cpp	4549,4550
+./clang/lib/Sema/SemaLookup.cpp	4579,4581
+./clang/lib/Sema/SemaOverload.cpp	10388,10388

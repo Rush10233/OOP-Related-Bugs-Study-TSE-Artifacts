@@ -1,0 +1,4 @@
+if (type == NULL_TREE || is_auto (type))
+
+if (type == NULL_TREE || is_auto (type))
+

@@ -1,0 +1,20 @@
+cp_unevaluated u;
+
+        {
+          iloc_sentinel ils (EXPR_LOCATION (result));
+          result = cxx_constant_value (result);
+        }
+
+          PACK_EXPANSION_LOCAL_P (result) = PACK_EXPANSION_LOCAL_P (t);
+          PACK_EXPANSION_SIZEOF_P (result) = PACK_EXPANSION_SIZEOF_P (t);
+
+cp_unevaluated u;
+
+        {
+          iloc_sentinel ils (EXPR_LOCATION (result));
+          result = cxx_constant_value (result);
+        }
+
+          PACK_EXPANSION_LOCAL_P (result) = PACK_EXPANSION_LOCAL_P (t);
+          PACK_EXPANSION_SIZEOF_P (result) = PACK_EXPANSION_SIZEOF_P (t);
+

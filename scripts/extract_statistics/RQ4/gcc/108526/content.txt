@@ -1,0 +1,21 @@
+tree ctx = closure ? closure : DECL_CONTEXT (t);
+      bool member = ctx && TYPE_P (ctx);
+    
+
+      if (member && !closure)
+        ctx = tsubst_aggr_type (ctx, args,
+    			    complain, t, /*entering_scope=*/1);
+
+DECL_NAME (r) = make_conv_op_name (TREE_TYPE (type));
+    
+      tree parms = DECL_ARGUMENTS (t);
+
+        parms = DECL_CHAIN (parms);
+      parms = tsubst (parms, args, complain, t);
+      for (tree parm = parms; parm; parm = DECL_CHAIN (parm))
+        DECL_CONTEXT (parm) = r;
+
+        {
+          tree tparm = build_this_parm (r, closure, type_memfn_quals (type));
+          DECL_NAME (tparm) = closure_identifier;
+

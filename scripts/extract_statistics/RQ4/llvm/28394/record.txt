@@ -1,0 +1,4 @@
+Commit:	27cdf40
+./clang/include/clang/AST/ASTContext.h	2531,2531
+./clang/lib/AST/ASTContext.cpp	8497,8498
+./clang/lib/CodeGen/CodeGenModule.cpp	1598,1598

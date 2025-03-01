@@ -1,0 +1,22 @@
+bool UsableInConstantExpr =
+          Var->isUsableInConstantExpressions(SemaRef.Context);
+
+          OdrUseContext || (isEvaluatableContext(SemaRef) && UsableInConstantExpr);
+
+        // Per C++17 [temp.explicit]p10, we may instantiate despite an explicit
+        // instantiation declaration if a variable is usable in a constant
+        // expression (among other cases).
+        bool TryInstantiating =
+            TSK == TSK_ImplicitInstantiation ||
+            (TSK == TSK_ExplicitInstantiationDeclaration && UsableInConstantExpr);
+
+          } else if (!UsableInConstantExpr)
+
+            if (UsableInConstantExpr) {
+
+      //   Except for inline functions, const variables of literal types, variables
+      //   of reference types, [...] explicit instantiation declarations
+
+      if (TSK == TSK_ExplicitInstantiationDeclaration &&
+          !Var->isUsableInConstantExpressions(getASTContext()))
+

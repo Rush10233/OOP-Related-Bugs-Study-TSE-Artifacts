@@ -1,0 +1,48 @@
+else if (field_poverlapping_p (field)
+    	       && is_empty_class (TREE_TYPE (field)))
+
+    
+      if (decl && DECL_USER_ALIGN (decl))
+        alignment = size_int (DECL_ALIGN_UNIT (decl));
+      else
+        alignment = size_int (CLASSTYPE_ALIGN_UNIT (type));
+
+      if (TREE_CODE (rli->t) != UNION_TYPE
+          && layout_conflict_p (type,
+    			    offset,
+    			    offsets,
+    			    /*vbases_p=*/0))
+
+      if (decl && DECL_USER_ALIGN (decl))
+        {
+          rli->record_align = MAX (rli->record_align, DECL_ALIGN (decl));
+          if (warn_packed)
+    	rli->unpacked_align = MAX (rli->unpacked_align, DECL_ALIGN (decl));
+          TYPE_USER_ALIGN (rli->t) = 1;
+        }
+      else if (CLASSTYPE_USER_ALIGN (type))
+
+else if (field_poverlapping_p (field)
+    	       && is_empty_class (TREE_TYPE (field)))
+
+    
+      if (decl && DECL_USER_ALIGN (decl))
+        alignment = size_int (DECL_ALIGN_UNIT (decl));
+      else
+        alignment = size_int (CLASSTYPE_ALIGN_UNIT (type));
+
+      if (TREE_CODE (rli->t) != UNION_TYPE
+          && layout_conflict_p (type,
+    			    offset,
+    			    offsets,
+    			    /*vbases_p=*/0))
+
+      if (decl && DECL_USER_ALIGN (decl))
+        {
+          rli->record_align = MAX (rli->record_align, DECL_ALIGN (decl));
+          if (warn_packed)
+    	rli->unpacked_align = MAX (rli->unpacked_align, DECL_ALIGN (decl));
+          TYPE_USER_ALIGN (rli->t) = 1;
+        }
+      else if (CLASSTYPE_USER_ALIGN (type))
+

@@ -1,0 +1,7 @@
+else
+
+    	  type = error_mark_node;
+
+        for (tree p : pending_decls)
+          pushdecl (p);
+

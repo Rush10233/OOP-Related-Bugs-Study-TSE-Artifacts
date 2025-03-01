@@ -1,0 +1,9 @@
+if (!DECL_NAMESPACE_SCOPE_P (decl))
+    	{
+    	  error_at (location, "deduction guide %qD must be declared at "
+    		    "namespace scope", decl);
+    	  return NULL_TREE;
+    	}
+
+      if (rval && is_overloaded_fn (rval))
+

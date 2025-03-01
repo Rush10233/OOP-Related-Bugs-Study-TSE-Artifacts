@@ -1,0 +1,9 @@
+
+      /* Check for redeclaration and other discrepancies.  */
+      if (TREE_CODE (olddecl) == FUNCTION_DECL
+
+        {
+          if (TREE_CODE (newdecl) != FUNCTION_DECL)
+    	{
+    	  /* Avoid warnings redeclaring built-ins which have not been
+

@@ -1,0 +1,9 @@
+if (flag_exceptions && !in_cleanup && !processing_template_decl
+          && !expr_noexcept_p (tmp, tf_none))
+
+if (flag_exceptions && !in_cleanup && !processing_template_decl
+          && !expr_noexcept_p (tmp, tf_none))
+
+if (flag_exceptions && !in_cleanup && !processing_template_decl
+          && !expr_noexcept_p (tmp, tf_none))
+

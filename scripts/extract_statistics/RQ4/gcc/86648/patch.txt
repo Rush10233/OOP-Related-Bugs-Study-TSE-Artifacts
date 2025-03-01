@@ -1,0 +1,19 @@
+if (template_placeholder_p (t))
+    	{
+    	  t = TREE_TYPE (CLASS_PLACEHOLDER_TEMPLATE (t));
+    	  pp_cxx_unqualified_id (pp, TYPE_IDENTIFIER (t));
+    	  pp_string (pp, "<...auto...>");
+    	}
+          else if (TYPE_IDENTIFIER (t))
+
+          else if (template_placeholder_p (t))
+    	{
+    	  t = TREE_TYPE (CLASS_PLACEHOLDER_TEMPLATE (t));
+    	  pp_cxx_tree_identifier (pp, TYPE_IDENTIFIER (t));
+    	  pp_string (pp, "<...auto...>");
+    	}
+
+      tree t = make_auto_1 (auto_identifier, true);
+
+    	  || TYPE_IDENTIFIER (type) == decltype_auto_identifier))
+

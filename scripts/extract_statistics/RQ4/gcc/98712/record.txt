@@ -1,0 +1,2 @@
+Commit:	bb6194e
+./gcc/cp/class.c	7470,7470

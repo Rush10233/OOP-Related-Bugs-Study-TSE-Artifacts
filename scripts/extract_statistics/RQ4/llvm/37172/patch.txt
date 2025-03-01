@@ -1,0 +1,7 @@
+if (BaseClassDecl->isPolymorphic()) {
+
+          //   An aggregate is a class with [...] no virtual functions.
+          data().Aggregate = false;
+        }
+    
+

@@ -1,0 +1,16 @@
+for (; !same_type_ignoring_top_level_qualifiers_p (TREE_TYPE (*t),
+    							   TREE_TYPE (x));
+    	     x = TREE_OPERAND (x, 0))
+
+    	*t = x;
+    	*walk_subtrees = false;
+    	d->seen = true;
+
+for (; !same_type_ignoring_top_level_qualifiers_p (TREE_TYPE (*t),
+    							   TREE_TYPE (x));
+    	     x = TREE_OPERAND (x, 0))
+
+    	*t = unshare_expr (x);
+    	*walk_subtrees = false;
+    	d->seen = true;
+

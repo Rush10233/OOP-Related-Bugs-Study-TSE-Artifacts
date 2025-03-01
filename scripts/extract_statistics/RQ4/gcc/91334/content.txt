@@ -1,0 +1,18 @@
+if (is_delete_operator
+    	      || gimple_call_builtin_p (stmt, BUILT_IN_FREE))
+    	    {
+
+    	      tree ptr = gimple_call_arg (stmt, 0);
+    	      gimple *def_stmt;
+    	      tree def_callee;
+
+    		  || (is_gimple_call (stmt)
+    		      && gimple_call_operator_delete_p (as_a <gcall *> (stmt)))))
+    	    {
+
+    		{
+
+    		}
+    	    }
+    
+

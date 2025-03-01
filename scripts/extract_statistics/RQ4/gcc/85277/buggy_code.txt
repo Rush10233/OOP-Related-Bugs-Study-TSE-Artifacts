@@ -1,0 +1,14 @@
+if (INDIRECT_REF_P (expr))
+    	error ("second operand of %<offsetof%> is neither a single "
+    	       "identifier nor a sequence of member accesses and "
+    	       "array references");
+          else
+
+    	  if (TREE_CODE (expr) == COMPONENT_REF
+    	      || TREE_CODE (expr) == COMPOUND_EXPR)
+    	    expr = TREE_OPERAND (expr, 1);
+
+        pedwarn (loc, OPT_Winvalid_offsetof,
+    	     "offsetof within non-standard-layout type %qT is undefined",
+    	     TREE_TYPE (TREE_TYPE (object_ptr)));
+

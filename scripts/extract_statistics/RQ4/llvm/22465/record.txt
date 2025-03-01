@@ -1,0 +1,17 @@
+Commit:	cd8500e
+./clang/lib/CodeGen/CGExprScalar.cpp	1415,1415
+Commit:	6956e2e
+./clang/lib/AST/ItaniumMangle.cpp	2867,2867
+./clang/lib/AST/ItaniumMangle.cpp	2893,2894
+./clang/lib/AST/StmtPrinter.cpp	1697,1697
+./clang/lib/AST/StmtPrinter.cpp	1710,1710
+./clang/lib/AST/StmtPrinter.cpp	1879,1879
+./clang/lib/AST/StmtPrinter.cpp	1892,1892
+./clang/lib/Sema/SemaInit.cpp	3177,3178
+./clang/lib/Sema/SemaInit.cpp	3184,3186
+./clang/lib/Sema/SemaInit.cpp	3205,3205
+./clang/lib/Sema/SemaInit.cpp	3230,3230
+./clang/lib/Sema/SemaInit.cpp	3259,3259
+./clang/lib/Sema/SemaInit.cpp	3281,3281
+./clang/lib/Sema/SemaInit.cpp	3289,3292
+./clang/lib/Sema/SemaInit.cpp	3448,3450

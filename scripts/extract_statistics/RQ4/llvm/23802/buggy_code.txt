@@ -1,0 +1,4 @@
+// C++0x [expr.static.cast]p3:
+
+      // C++0x [expr.static.cast]p3:
+

@@ -1,0 +1,16 @@
+function_arg_info arg (type, argpos < n_named_args);
+          if (pass_by_reference (args_so_far_pnt, arg))
+    	{
+
+    	    {
+    	      /* We may have turned the parameter value into an SSA name.
+    		 Go back to the original parameter so we can take the
+
+function_arg_info arg (type, argpos < n_named_args);
+          if (pass_by_reference (args_so_far_pnt, arg))
+    	{
+
+    	    {
+    	      /* We may have turned the parameter value into an SSA name.
+    		 Go back to the original parameter so we can take the
+

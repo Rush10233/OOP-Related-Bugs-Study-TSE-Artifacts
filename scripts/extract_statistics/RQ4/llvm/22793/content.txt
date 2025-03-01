@@ -1,0 +1,18 @@
+case AR_Available:
+        case AR_NotYetIntroduced:
+          break;
+
+        case AR_Deprecated:
+          if (S.getCurContextAvailability() != AR_Deprecated)
+            S.EmitAvailabilityWarning(Sema::AD_Deprecation,
+
+      } else if (CXXDestructorDecl *Destructor =
+                     dyn_cast<CXXDestructorDecl>(Func)) {
+        Destructor = cast<CXXDestructorDecl>(Destructor->getFirstDecl());
+
+          DefineImplicitDestructor(Loc, Destructor);
+
+        if (Destructor->isVirtual() && getLangOpts().AppleKext)
+          MarkVTableUsed(Loc, Destructor->getParent());
+      } else if (CXXMethodDecl *MethodDecl = dyn_cast<CXXMethodDecl>(Func)) {
+

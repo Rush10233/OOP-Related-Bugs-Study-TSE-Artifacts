@@ -1,0 +1,3 @@
+&& !EMPTY_CONSTRUCTOR_P (init)
+    	      && !is_really_empty_class (fldtype, /*ignore_vptr*/false))
+

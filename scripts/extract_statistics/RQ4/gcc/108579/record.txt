@@ -1,0 +1,5 @@
+Commit:	e8109bd
+./gcc/cp/class.cc	4825,4827
+./gcc/cp/class.cc	4829,4829
+./gcc/cp/class.cc	4839,4841
+./gcc/cp/class.cc	4843,4843

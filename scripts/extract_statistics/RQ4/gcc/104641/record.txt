@@ -1,0 +1,7 @@
+Commit:	03c83cf
+./gcc/cp/decl.cc	4207,4210
+./gcc/cp/pt.cc	14899,14899
+./gcc/cp/pt.cc	16172,16173
+./gcc/cp/pt.cc	17080,17080
+./gcc/cp/pt.cc	20103,20103
+./gcc/cp/pt.cc	21063,21063

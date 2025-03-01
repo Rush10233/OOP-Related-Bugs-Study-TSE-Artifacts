@@ -1,0 +1,10 @@
+static bool isPtrOperatorToken(tok::TokenKind Kind, const LangOptions &Lang) {
+
+      // We parse rvalue refs in C++03, because otherwise the errors are scary.
+
+      return Kind == tok::amp || Kind == tok::ampamp;
+
+      if (!isPtrOperatorToken(Kind, getLangOpts())) {
+
+          if (isPtrOperatorToken(Tok.getKind(), getLangOpts())) {
+

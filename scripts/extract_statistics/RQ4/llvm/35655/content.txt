@@ -1,0 +1,16 @@
+QualType Sema::CheckNonTypeTemplateParameterType(TypeSourceInfo *&TSI,
+                                                     SourceLocation Loc) {
+      if (TSI->getType()->isUndeducedType()) {
+
+        //   An id-expression is type-dependent if it contains
+        //    - an identifier associated by name lookup with a non-type
+        //      template-parameter declared with a type that contains a
+
+        if (!NewTSI)
+          return true;
+    
+
+        if (NewTSI != NTTP->getTypeSourceInfo()) {
+          NTTP->setTypeSourceInfo(NewTSI);
+          NTTP->setType(NewTSI->getType());
+

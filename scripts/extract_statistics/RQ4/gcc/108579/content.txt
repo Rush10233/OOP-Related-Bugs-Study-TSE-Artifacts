@@ -1,0 +1,20 @@
+/* Might be trivial.  */;
+          else if (TREE_CODE (fn) == TEMPLATE_DECL)
+    	/* Templates are never special members.  */;
+
+    	TYPE_HAS_COMPLEX_COPY_CTOR (t) = true;
+
+    	TYPE_HAS_COMPLEX_MOVE_CTOR (t) = true;
+        }
+    
+
+    	/* Might be trivial.  */;
+          else if (TREE_CODE (fn) == TEMPLATE_DECL)
+    	/* Templates are never special members.  */;
+
+    	TYPE_HAS_COMPLEX_COPY_ASSIGN (t) = true;
+
+    	TYPE_HAS_COMPLEX_MOVE_ASSIGN (t) = true;
+        }
+    }
+

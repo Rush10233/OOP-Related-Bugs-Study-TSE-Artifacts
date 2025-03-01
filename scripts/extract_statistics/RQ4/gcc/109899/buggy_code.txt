@@ -1,0 +1,6 @@
+if (flag_exceptions && !in_cleanup && !expr_noexcept_p (tmp, tf_none))
+
+if (flag_exceptions && !in_cleanup && !expr_noexcept_p (tmp, tf_none))
+
+if (flag_exceptions && !in_cleanup && !expr_noexcept_p (tmp, tf_none))
+

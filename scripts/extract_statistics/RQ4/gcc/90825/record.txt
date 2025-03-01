@@ -1,0 +1,6 @@
+Commit:	d52a6e0
+./gcc/cp/constexpr.c	4813,4815
+./gcc/cp/typeck.c	1693,1693
+Commit:	68fcb6c
+./gcc/cp/constexpr.c	4768,4770
+./gcc/cp/typeck.c	1694,1694

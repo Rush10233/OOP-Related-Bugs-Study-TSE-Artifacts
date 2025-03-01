@@ -1,0 +1,4 @@
+if (DECL_USE_TEMPLATE (scope))
+    	f |= TFF_NO_FUNCTION_ARGUMENTS;
+          dump_function_decl (pp, scope, f);
+

@@ -1,0 +1,8 @@
+Commit:	888a985
+./gcc/cp/lambda.c	593,593
+./gcc/cp/parser.c	20674,20700
+./gcc/cp/semantics.c	2038,2038
+./gcc/cp/semantics.c	2058,2059
+./gcc/cp/semantics.c	2068,2068
+./gcc/cp/semantics.c	3598,3602
+./gcc/cp/semantics.c	3604,3669

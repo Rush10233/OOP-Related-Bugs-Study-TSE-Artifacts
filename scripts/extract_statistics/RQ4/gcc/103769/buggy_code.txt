@@ -1,0 +1,4 @@
+result = copy_node (t);
+
+result = copy_node (t);
+

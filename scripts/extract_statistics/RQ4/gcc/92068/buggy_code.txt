@@ -1,0 +1,6 @@
+gcc_assert (nargs == DECL_NTPARMS (maintmpl));
+
+gcc_assert (nargs == DECL_NTPARMS (maintmpl));
+
+gcc_assert (nargs == DECL_NTPARMS (maintmpl));
+

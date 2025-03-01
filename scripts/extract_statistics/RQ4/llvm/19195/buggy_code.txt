@@ -1,0 +1,50 @@
+const Expr *getExpr() const { return Field->getInClassInitializer(); }
+      Expr *getExpr() { return Field->getInClassInitializer(); }
+
+    def err_in_class_initializer_references_def_ctor : Error<
+      "defaulted default constructor of %0 cannot be used by non-static data "
+    
+
+      case CXXDefaultInitExprClass:
+        if (const Expr *E = cast<CXXDefaultInitExpr>(this)->getExpr())
+
+        Expr *DIE = CXXDefaultInitExpr::Create(SemaRef.Context,
+                                               Info.Ctor->getLocation(), Field);
+
+          Init = new (SemaRef.Context) CXXCtorInitializer(SemaRef.Context, Indirect,
+                                                          SourceLocation(),
+                                                          SourceLocation(), DIE,
+                                                          SourceLocation());
+
+          Init = new (SemaRef.Context) CXXCtorInitializer(SemaRef.Context, Field,
+                                                          SourceLocation(),
+                                                          SourceLocation(), DIE,
+                                                          SourceLocation());
+
+          else if (!F->isInvalidDecl())
+            // DR1351:
+            //   If the brace-or-equal-initializer of a non-static data member
+            //   invokes a defaulted default constructor of its class or of an
+            //   enclosing class in a potentially evaluated subexpression, the
+            //   program is ill-formed.
+            //
+            // This resolution is unworkable: the exception specification of the
+            // default constructor can be needed in an unevaluated context, in
+            // particular, in the operand of a noexcept-expression, and we can be
+            // unable to compute an exception specification for an enclosed class.
+            //
+            // We do not allow an in-class initializer to require the evaluation
+            // of the exception specification for any in-class initializer whose
+            // definition is not lexically complete.
+            Diag(Loc, diag::err_in_class_initializer_references_def_ctor) << MD;
+
+          else if (!F->isInvalidDecl())
+            Diag(CD->getLocation(),
+                 diag::err_in_class_initializer_references_def_ctor) << CD;
+
+          Expr *DIE = CXXDefaultInitExpr::Create(SemaRef.Context, Loc, Field);
+
+            ILE->setInit(Init, DIE);
+
+            ILE->updateInit(SemaRef.Context, Init, DIE);
+

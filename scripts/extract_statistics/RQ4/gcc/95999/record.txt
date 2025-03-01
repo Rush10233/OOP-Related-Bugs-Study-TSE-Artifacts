@@ -1,0 +1,3 @@
+Commit:	2185c97
+./gcc/cp/decl.cc	16266,16266
+./gcc/cp/decl.cc	16555,16555

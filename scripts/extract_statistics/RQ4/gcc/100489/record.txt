@@ -1,0 +1,10 @@
+Commit:	75c5c4a
+./gcc/cp/constexpr.c	3364,3366
+Commit:	64ba45c
+./gcc/cp/decl.c	6421,6424
+./gcc/cp/typeck2.c	1520,1532
+./gcc/cp/typeck2.c	1678,1690
+Commit:	e43f476
+./gcc/cp/decl.c	6391,6394
+./gcc/cp/typeck2.c	1514,1526
+./gcc/cp/typeck2.c	1672,1684

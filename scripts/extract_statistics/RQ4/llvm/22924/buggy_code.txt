@@ -1,0 +1,107 @@
+def BadArrayNewLength : DiagGroup<"bad-array-new-length">;
+
+      "in implicit initialization of %select{array element %1|field %1}0 "
+      "with omitted initializer">;
+
+    def warn_array_new_too_large : Warning<"array is too large (%0 elements)">,
+      // FIXME PR11644: ", will throw std::bad_array_new_length at runtime"
+      InGroup<BadArrayNewLength>;
+
+    def warn_typecheck_negative_array_new_size : Warning<"array size is negative">,
+      // FIXME PR11644: ", will throw std::bad_array_new_length at runtime"
+      InGroup<BadArrayNewLength>;
+
+      // Attempt to perform zero-initialization using memset.
+      auto TryMemsetInitialization = [&]() -> bool {
+        // FIXME: If the type is a pointer-to-data-member under the Itanium ABI,
+        // we can initialize with a memset to -1.
+        if (!CGM.getTypes().isZeroInitializable(ElementType))
+          return false;
+    
+        // Optimization: since zero initialization will just set the memory
+        // to all zeroes, generate a single memset to do it in one shot.
+    
+        // Subtract out the size of any elements we've already initialized.
+        auto *RemainingSize = AllocSizeWithoutCookie;
+        if (InitListElements) {
+          // We know this can't overflow; we check this when doing the allocation.
+          auto *InitializedSize = llvm::ConstantInt::get(
+              RemainingSize->getType(),
+              getContext().getTypeSizeInChars(ElementType).getQuantity() *
+                  InitListElements);
+          RemainingSize = Builder.CreateSub(RemainingSize, InitializedSize);
+        }
+    
+        // Create the memset.
+        Builder.CreateMemSet(CurPtr, Builder.getInt8(0), RemainingSize, false);
+        return true;
+      };
+    
+
+        if (const InitListExpr *ILE = dyn_cast<InitListExpr>(E->getInitializer()))
+
+        // Let's see if this is a constant < 0. If so, we reject it out of
+        // hand. Otherwise, if it's not a constant, we must have an unparenthesized
+        // array type.
+        //
+        // Note: such a construct has well-defined semantics in C++11: it throws
+        // std::bad_array_new_length.
+
+            if (Value < llvm::APSInt(
+                            llvm::APInt::getNullValue(Value.getBitWidth()),
+                                     Value.isUnsigned())) {
+              if (getLangOpts().CPlusPlus11)
+                Diag(ArraySize->getLocStart(),
+                     diag::warn_typecheck_negative_array_new_size)
+                  << ArraySize->getSourceRange();
+              else
+                return ExprError(Diag(ArraySize->getLocStart(),
+                                      diag::err_typecheck_negative_array_size)
+                                 << ArraySize->getSourceRange());
+            } else if (!AllocType->isDependentType()) {
+
+              if (ActiveSizeBits > ConstantArrayType::getMaxSizeBits(Context)) {
+                if (getLangOpts().CPlusPlus11)
+                  Diag(ArraySize->getLocStart(),
+                       diag::warn_array_new_too_large)
+                    << Value.toString(10)
+                    << ArraySize->getSourceRange();
+                else
+                  return ExprError(Diag(ArraySize->getLocStart(),
+                                        diag::err_array_too_large)
+                                   << Value.toString(10)
+                                   << ArraySize->getSourceRange());
+              }
+
+      QualType InitType = AllocType;
+
+      if (ResultType->isArrayType() || ArraySize) {
+        if (!isLegalArrayNewInitializer(initStyle, Initializer)) {
+          SourceRange InitRange(Inits[0]->getLocStart(),
+                                Inits[NumInits - 1]->getLocEnd());
+          Diag(StartLoc, diag::err_new_array_init_args) << InitRange;
+          return ExprError();
+        }
+        if (InitListExpr *ILE = dyn_cast_or_null<InitListExpr>(Initializer)) {
+          // We do the initialization typechecking against the array type
+          // corresponding to the number of initializers + 1 (to also check
+          // default-initialization).
+          unsigned NumElements = ILE->getNumInits() + 1;
+          InitType = Context.getConstantArrayType(AllocType,
+              llvm::APInt(Context.getTypeSize(Context.getSizeType()), NumElements),
+                                                  ArrayType::Normal, 0);
+        }
+
+        InitializationSequence InitSeq(*this, Entity, Kind, MultiExprArg(Inits, NumInits));
+
+          else if (Entity.getKind() == InitializedEntity::EK_ArrayElement)
+
+              << /*array element*/0 << Entity.getElementIndex();
+
+        if (const ConstantArrayType *CAType = dyn_cast<ConstantArrayType>(AType))
+
+        // Check if there are any members of the array that get value-initialized.
+        // If so, check if doing that is possible.
+
+        if (maxElementsKnown && elementIndex < maxElements)
+

@@ -1,0 +1,17 @@
+Commit:	bb3d7b5
+./clang/include/clang/Basic/DiagnosticSemaKinds.td	5206,5206
+./clang/lib/Sema/SemaInit.cpp	6788,6788
+./clang/test/CXX/dcl.dcl/dcl.spec/dcl.constexpr/p9.cpp	20,20
+./clang/test/CXX/dcl.dcl/dcl.spec/dcl.constexpr/p9.cpp	37,37
+./clang/test/CXX/dcl.decl/dcl.fct.def/dcl.fct.def.default/p2.cpp	39,39
+./clang/test/CXX/dcl.decl/dcl.fct.def/dcl.fct.def.default/p2.cpp	122,122
+./clang/test/CXX/dcl.decl/dcl.init/p6.cpp	13,13
+./clang/test/CXX/dcl.decl/dcl.init/p6.cpp	15,15
+./clang/test/CXX/dcl.decl/dcl.init/p6.cpp	21,21
+./clang/test/CXX/drs/dr0xx.cpp	855,855
+./clang/test/CXX/drs/dr4xx.cpp	1204,1204
+./clang/test/SemaCXX/constant-expression-cxx11.cpp	1180,1180
+./clang/test/SemaCXX/constexpr-value-init.cpp	17,17
+./clang/test/SemaCXX/constexpr-value-init.cpp	26,26
+./clang/test/SemaCXX/constexpr-value-init.cpp	28,28
+./clang/test/SemaCXX/cxx0x-cursory-default-delete.cpp	28,28

@@ -1,0 +1,8 @@
+Commit:	f630645
+./gcc/cp/parser.c	22027,22028
+./gcc/cp/parser.c	22031,22032
+./gcc/testsuite/g++.dg/parse/saved1.C	4,5
+Commit:	99585d8
+./gcc/cp/parser.c	22173,22174
+./gcc/cp/parser.c	22177,22178
+./gcc/testsuite/g++.dg/parse/saved1.C	4,5

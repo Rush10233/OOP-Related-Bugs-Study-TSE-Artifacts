@@ -1,0 +1,77 @@
+def fatal_too_many_errors
+      : Error<"too many errors emitted, stopping now">, DefaultFatal;
+    
+
+    def note_declared_at : Note<"declared here">;
+    def note_previous_definition : Note<"previous definition is here">;
+    def note_previous_declaration : Note<"previous declaration is here">;
+
+    
+    let Component = "Sema" in {
+    let CategoryName = "Semantic Issue" in {
+    def note_previous_decl : Note<"%0 declared here">;
+    def note_entity_declared_at : Note<"%0 declared here">;
+    def note_callee_decl : Note<"%0 declared here">;
+
+    
+    #include <cstddef>
+    
+
+    namespace clang {
+      /// The amount of stack space that Clang would like to be provided with.
+      /// If less than this much is available, we may be unable to reach our
+      /// template instantiation depth limit and other similar limits.
+      constexpr size_t DesiredStackSize = 8 << 20;
+
+    } // end namespace clang
+    
+    #endif // LLVM_CLANG_BASIC_STACK_H
+
+    
+      void addImplicitTypedef(StringRef Name, QualType T);
+    
+
+    public:
+      Sema(Preprocessor &pp, ASTContext &ctxt, ASTConsumer &consumer,
+           TranslationUnitKind TUKind = TU_Complete,
+
+    
+      void PrintStats() const;
+    
+
+      /// Helper class that creates diagnostics with optional
+      /// template instantiation stacks.
+      ///
+
+      Sanitizers.cpp
+      SourceLocation.cpp
+      SourceManager.cpp
+
+      TargetInfo.cpp
+      Targets.cpp
+      Targets/AArch64.cpp
+
+      assert(!getFrontendOpts().ShowHelp && "Client must handle '-help'!");
+      assert(!getFrontendOpts().ShowVersion && "Client must handle '-version'!");
+    
+
+      // FIXME: Take this as an argument, once all the APIs we used have moved to
+      // taking it as an input instead of hard-coding llvm::errs.
+      raw_ostream &OS = llvm::errs();
+
+    #include "clang/AST/StmtCXX.h"
+    #include "clang/Basic/DiagnosticOptions.h"
+    #include "clang/Basic/PartialDiagnostic.h"
+
+    #include "clang/Basic/TargetInfo.h"
+    #include "clang/Lex/HeaderSearch.h"
+    #include "clang/Lex/Preprocessor.h"
+
+      assert(DelayedTypos.empty() && "Uncorrected typos!");
+    }
+    
+
+    /// makeUnavailableInSystemHeader - There is an error in the current
+    /// context.  If we're still in a system header, and we can plausibly
+    /// make the relevant declaration unavailable instead of erroring, do
+

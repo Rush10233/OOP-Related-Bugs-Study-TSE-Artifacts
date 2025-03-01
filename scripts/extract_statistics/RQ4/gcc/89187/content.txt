@@ -1,0 +1,48 @@
+{
+    	tree new_node = copy_node (src);
+    
+
+    	if (!fn_args)
+    	  fn_args = tgt = new_node;
+    	else
+
+    		  gcc_assert (clone_parm);
+    		  DECL_ABSTRACT_ORIGIN (clone_parm) = NULL;
+    		  args[parmno] = clone_parm;
+
+    		  clone_parm = TREE_CHAIN (clone_parm);
+    		}
+    	      if (fn_parm_typelist)
+
+{
+    	tree new_node = copy_node (src);
+    
+
+    	if (!fn_args)
+    	  fn_args = tgt = new_node;
+    	else
+
+    		  gcc_assert (clone_parm);
+    		  DECL_ABSTRACT_ORIGIN (clone_parm) = NULL;
+    		  args[parmno] = clone_parm;
+
+    		  clone_parm = TREE_CHAIN (clone_parm);
+    		}
+    	      if (fn_parm_typelist)
+
+{
+    	tree new_node = copy_node (src);
+    
+
+    	if (!fn_args)
+    	  fn_args = tgt = new_node;
+    	else
+
+    		  gcc_assert (clone_parm);
+    		  DECL_ABSTRACT_ORIGIN (clone_parm) = NULL;
+    		  args[parmno] = clone_parm;
+
+    		  clone_parm = TREE_CHAIN (clone_parm);
+    		}
+    	      if (fn_parm_typelist)
+

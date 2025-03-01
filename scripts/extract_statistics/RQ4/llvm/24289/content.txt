@@ -1,0 +1,34 @@
+ClassScopeSpecializationPattern;
+    
+      /// \brief Mapping from materialized temporaries with static storage duration
+
+        MaterializedTemporaryValues;
+    
+      /// \brief Representation of a "canonical" template template parameter that
+
+                                              bool MayCreate) {
+      assert(E && E->getStorageDuration() == SD_Static &&
+             "don't need to cache the computed value for this temporary");
+
+    
+
+    }
+    
+    bool ASTContext::AtomicUsesUnsupportedLibcall(const AtomicExpr *E) const {
+
+      if (Init == E->GetTemporaryExpr())
+        MaterializedType = E->getType();
+    
+
+        return Slot;
+    
+      // FIXME: If an externally-visible declaration extends multiple temporaries,
+
+        GV->setComdat(TheModule.getOrInsertComdat(GV->getName()));
+      if (VD->getTLSKind())
+        setTLSMode(GV, *VD);
+
+      return GV;
+    }
+    
+

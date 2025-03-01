@@ -1,0 +1,22 @@
+const DeclSpec &DS = D.getDeclSpec();
+      if (DS.hasTypeSpecifier() && !D.isInvalidType()) {
+
+          << SourceRange(DS.getTypeSpecTypeLoc())
+
+      } else if (DS.getTypeQualifiers() && !D.isInvalidType()) {
+        // It's also plausible that the user writes type qualifiers in the wrong
+        // place, such as:
+        //   struct S { const operator int(); };
+        // FIXME: we could provide a fixit to move the qualifiers onto the
+        // conversion type.
+        Diag(D.getIdentifierLoc(), diag::err_conv_function_with_complex_decl)
+            << SourceRange(D.getIdentifierLoc()) << 0;
+        D.setInvalidType();
+
+      if (DS.isExplicitSpecified())
+        Diag(DS.getExplicitSpecLoc(),
+             getLangOpts().CPlusPlus11
+                 ? diag::warn_cxx98_compat_explicit_conversion_functions
+                 : diag::ext_explicit_conversion_functions)
+            << SourceRange(DS.getExplicitSpecLoc());
+

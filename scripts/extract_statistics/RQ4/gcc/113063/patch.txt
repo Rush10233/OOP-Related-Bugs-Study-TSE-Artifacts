@@ -1,0 +1,13 @@
+int cp_noexcept_operand_;
+
+        s.cp_noexcept_operand_ = ::cp_noexcept_operand;
+        ::cp_noexcept_operand = 0;
+
+        ::cp_noexcept_operand = this->cp_noexcept_operand_;
+
+bool push_to_top = maybe_push_to_top_level (fndecl);
+
+      maybe_pop_from_top_level (push_to_top);
+
+cp_evaluated ev;
+

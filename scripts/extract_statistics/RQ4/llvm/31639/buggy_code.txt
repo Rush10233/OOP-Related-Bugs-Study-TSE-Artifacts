@@ -1,0 +1,118 @@
+/// The number of diagnose_if attributes that this overload triggered.
+        /// If any of the triggered attributes are errors, this won't count
+        /// diagnose_if warnings.
+        unsigned NumTriggeredDiagnoseIfs = 0;
+    
+        /// Basically a TinyPtrVector<DiagnoseIfAttr *> that doesn't own the vector:
+        /// If NumTriggeredDiagnoseIfs is 0 or 1, this is a DiagnoseIfAttr *,
+        /// otherwise it's a pointer to an array of `NumTriggeredDiagnoseIfs`
+        /// DiagnoseIfAttr *s.
+        llvm::PointerUnion<DiagnoseIfAttr *, DiagnoseIfAttr **> DiagnoseIfInfo;
+    
+        /// Gets an ArrayRef for the data at DiagnoseIfInfo. Note that this may give
+        /// you a pointer into DiagnoseIfInfo.
+        ArrayRef<DiagnoseIfAttr *> getDiagnoseIfInfo() const {
+          auto *Ptr = NumTriggeredDiagnoseIfs <= 1
+                          ? DiagnoseIfInfo.getAddrOfPtr1()
+                          : DiagnoseIfInfo.get<DiagnoseIfAttr **>();
+          return {Ptr, NumTriggeredDiagnoseIfs};
+        }
+    
+
+        // Allocator for ConversionSequenceLists and DiagnoseIfAttr* arrays.
+        // We store the first few of each of these inline to avoid allocation for
+        // small sets.
+
+        /// Make a DiagnoseIfAttr* array in a block of memory that will live for
+        /// as long as this OverloadCandidateSet. Returns a pointer to the start
+        /// of that array.
+        DiagnoseIfAttr **addDiagnoseIfComplaints(ArrayRef<DiagnoseIfAttr *> CA);
+    
+
+                              Expr *ThisArg, ArrayRef<Expr *> Args,
+
+                              Expr *ThisArg, ArrayRef<Expr *> Args,
+
+                                      Expr *ThisArg,
+
+      /// Check the diagnose_if attributes on the given function. Returns the
+      /// first succesful fatal attribute, or null if calling Function(Args) isn't
+      /// an error.
+
+      /// This only considers ArgDependent DiagnoseIfAttrs.
+
+      /// This will populate Nonfatal with all non-error DiagnoseIfAttrs that
+      /// succeed. If this function returns non-null, the contents of Nonfatal are
+      /// unspecified.
+      DiagnoseIfAttr *
+      checkArgDependentDiagnoseIf(FunctionDecl *Function, ArrayRef<Expr *> Args,
+                                  SmallVectorImpl<DiagnoseIfAttr *> &Nonfatal,
+                                  bool MissingImplicitThis = false,
+                                  Expr *ThisArg = nullptr);
+
+      /// Check the diagnose_if expressions on the given function. Returns the
+      /// first succesful fatal attribute, or null if using Function isn't
+      /// an error.
+
+      /// This ignores all ArgDependent DiagnoseIfAttrs.
+
+      /// This will populate Nonfatal with all non-error DiagnoseIfAttrs that
+      /// succeed. If this function returns non-null, the contents of Nonfatal are
+      /// unspecified.
+      DiagnoseIfAttr *
+      checkArgIndependentDiagnoseIf(FunctionDecl *Function,
+                                    SmallVectorImpl<DiagnoseIfAttr *> &Nonfatal);
+    
+      /// Emits the diagnostic contained in the given DiagnoseIfAttr at Loc. Also
+      /// emits a note about the location of said attribute.
+      void emitDiagnoseIfDiagnostic(SourceLocation Loc, const DiagnoseIfAttr *DIA);
+
+                     ArrayRef<const Expr *> Args, bool IsMemberFunction,
+                     SourceLocation Loc, SourceRange Range,
+
+    /// functions, and NULL arguments passed to non-NULL parameters.
+
+                         ArrayRef<const Expr *> Args, bool IsMemberFunction,
+                         SourceLocation Loc, SourceRange Range,
+                         VariadicCallType CallType) {
+
+      checkCall(FDecl, Proto, Args, /*IsMemberFunction=*/true, Loc, SourceRange(), 
+                CallType);
+
+      }
+      checkCall(FDecl, Proto, llvm::makeArrayRef(Args, NumArgs), 
+
+      checkCall(Method, nullptr, Args,
+                /*IsMemberFunction=*/false, lbrac, Method->getSourceRange(), 
+
+      checkCall(NDecl, Proto,
+
+      checkCall(/*FDecl=*/nullptr, Proto,
+
+      SmallVector<DiagnoseIfAttr *, 4> DiagnoseIfWarnings;
+
+        if (const DiagnoseIfAttr *A =
+                checkArgIndependentDiagnoseIf(FD, DiagnoseIfWarnings)) {
+          emitDiagnoseIfDiagnostic(Loc, A);
+
+        }
+
+      for (const auto *W : DiagnoseIfWarnings)
+        emitDiagnoseIfDiagnostic(Loc, W);
+    
+
+    
+      SmallVector<DiagnoseIfAttr *, 4> Nonfatal;
+      if (const DiagnoseIfAttr *Attr = S.checkArgDependentDiagnoseIf(
+              Callee, ArgExprs, Nonfatal, /*MissingImplicitThis=*/true)) {
+        S.emitDiagnoseIfDiagnostic(Fn->getLocStart(), Attr);
+        return;
+      }
+    
+      for (const auto *W : Nonfatal)
+        S.emitDiagnoseIfDiagnostic(Fn->getLocStart(), W);
+
+                               /*ThisArg=*/nullptr,
+
+                /*ThisArg=*/nullptr, llvm::makeArrayRef(&Arg, NumArgs), OCS, true);
+

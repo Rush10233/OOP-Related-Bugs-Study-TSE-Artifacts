@@ -1,0 +1,6 @@
+Commit:	ee26baf
+./gcc/cp/constexpr.c	3164,3164
+./gcc/cp/constexpr.c	3863,3864
+./gcc/cp/constexpr.c	3870,3870
+./gcc/cp/constexpr.c	4670,4676
+./gcc/cp/constexpr.c	4772,4772

@@ -1,0 +1,15 @@
+if (MD->isInlined() &&
+
+            // MinGW does not import or export inline methods.
+
+def note_due_to_dllexported_class : Note<
+      "due to '%0' being dllexported%select{|; try compiling in C++11 mode}1">;
+
+            DiagnosticErrorTrap Trap(S.Diags);
+
+            if (Trap.hasErrorOccurred()) {
+              S.Diag(ClassAttr->getLocation(), diag::note_due_to_dllexported_class)
+                  << Class->getName() << !S.getLangOpts().CPlusPlus11;
+              break;
+            }
+

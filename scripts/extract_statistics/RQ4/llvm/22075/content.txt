@@ -1,0 +1,87 @@
+"attribute %0 ignored, because it is not attached to a declaration">,
+      InGroup<IgnoredAttributes>;
+    def err_expected_method_body : Error<"expected method body">;
+
+    def err_invalid_token_after_toplevel_declarator : Error<
+      "expected ';' after top level declarator">;
+    def err_invalid_token_after_declarator_suggest_equal : Error<
+
+                                                     VirtSpecifiers &VS,
+                                                     ExprResult &BitfieldSize,
+                                                     LateParsedAttrList &LateAttrs);
+
+      void ParseCXXClassMemberDeclaration(AccessSpecifier AS, AttributeList *Attr,
+                      const ParsedTemplateInfo &TemplateInfo = ParsedTemplateInfo(),
+                      ParsingDeclRAIIObject *DiagsFromTParams = nullptr);
+
+        VS_Sealed = 4
+      };
+    
+
+    
+      bool SetSpecifier(Specifier VS, SourceLocation Loc,
+                        const char *&PrevSpec);
+
+    
+      static const char *getSpecifierName(Specifier VS);
+    
+
+      SourceLocation getLastLocation() const { return LastLocation; }
+
+    
+    private:
+      unsigned Specifiers;
+
+    
+      SourceLocation VS_overrideLoc, VS_finalLoc;
+
+      SourceLocation LastLocation;
+    };
+    
+
+        if (getLangOpts().CPlusPlus) {
+          // FIXME: Accept these components in any order, and produce fixits to
+          // correct the order if the user gets it wrong. Ideally we should deal
+
+    
+          // Parse cv-qualifier-seq[opt].
+          ParseTypeQualifierListOpt(DS, AR_NoAttributesParsed,
+
+        BitfieldSize = ParseConstantExpression();
+        if (BitfieldSize.isInvalid())
+          SkipUntil(tok::comma, StopAtSemi | StopBeforeMatch);
+
+        ParseOptionalCXX11VirtSpecifierSeq(
+            VS, getCurrentClass().IsInterface,
+            DeclaratorInfo.getDeclSpec().getFriendSpecLoc());
+
+    
+      // If a simple-asm-expr is present, parse it.
+      if (Tok.is(tok::kw_asm)) {
+
+              Diag(Attr->getLoc(), diag::warn_gcc_attribute_location);
+            Attr = Attr->getNext();
+          }
+
+        }
+      }
+    
+
+      return false;
+    }
+    
+
+    /// ParseCXXClassMemberDeclaration - Parse a C++ class member declaration.
+    ///
+    ///       member-declaration:
+
+    
+    bool VirtSpecifiers::SetSpecifier(Specifier VS, SourceLocation Loc,
+                                      const char *&PrevSpec) {
+
+      LastLocation = Loc;
+
+    
+      if (Specifiers & VS) {
+        PrevSpec = getSpecifierName(VS);
+

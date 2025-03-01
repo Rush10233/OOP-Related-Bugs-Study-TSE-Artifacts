@@ -1,0 +1,3 @@
+if (const CXXNewExpr *NE =
+              getNewExprFromInitListOrExpr(Field->getInClassInitializer())) {
+

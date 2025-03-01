@@ -1,0 +1,8 @@
+case ICK_Boolean_Conversion:  // Bools are integers too.
+        if (!FromType->isIntegralOrUnscopedEnumerationType()) {
+          // Boolean conversions can be from pointers and pointers to members
+          // [conv.bool], and those aren't considered narrowing conversions.
+          return NK_Not_Narrowing;
+        }  // Otherwise, fall through to the integral case.
+      case ICK_Integral_Conversion: {
+

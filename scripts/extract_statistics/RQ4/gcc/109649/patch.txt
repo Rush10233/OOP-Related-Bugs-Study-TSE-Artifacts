@@ -1,0 +1,78 @@
+if (template_class_depth (current_class_type) == 0)
+    		  {
+    		    decl = check_explicit_specialization
+    		      (unqualified_id, decl, template_count,
+    		       2 * funcdef_flag + 4);
+    		    if (decl == error_mark_node)
+    		      return error_mark_node;
+    		  }
+    
+
+    	 So ask check_explicit_specialization to find a matching template.  */
+
+          tree spec = check_explicit_specialization (DECL_NAME (function),
+    						 function, /* tcount */0,
+    						 /* friend flag */4,
+    						 /* attrlist */NULL_TREE);
+          if (spec != error_mark_node)
+    	matched = spec;
+
+          /* CLASS_TEMPLATE_DEPTH counts the number of template headers for
+    	 the enclosing class.  FRIEND_DEPTH counts the number of template
+    	 headers used for this friend declaration.  TEMPLATE_MEMBER_P is
+    	 true if a template header in FRIEND_DEPTH is intended for
+    	 DECLARATOR.  For example, the code
+    
+    	   template <class T> struct A {
+    	     template <class U> struct B {
+    	       template <class V> template <class W>
+    		 friend void C<V>::f(W);
+    	     };
+    	   };
+    
+    	 will eventually give the following results
+    
+    	 1. CLASS_TEMPLATE_DEPTH equals 2 (for `T' and `U').
+    	 2. FRIEND_DEPTH equals 2 (for `V' and `W').
+    	 3. TEMPLATE_MEMBER_P is true (for `W').  */
+    
+          int class_template_depth = template_class_depth (current_class_type);
+          int friend_depth = current_template_depth - class_template_depth;
+          /* We will figure this out later.  */
+          bool template_member_p = false;
+    
+
+          if (friend_depth)
+    	{
+    	  if (!uses_template_parms_level (ctype, class_template_depth
+    						 + friend_depth))
+    	    template_member_p = true;
+    	}
+    
+
+    
+    	  if (decl)
+    	    add_friend (current_class_type, decl, /*complain=*/true);
+
+          int is_friend_template = PROCESSING_REAL_TEMPLATE_DECL_P ();
+
+    		      && ! funcdef_flag && ! is_friend_template
+
+    	  if (is_friend_template
+    	      || template_class_depth (current_class_type) != 0)
+
+          if (decl == error_mark_node)
+    	return error_mark_node;
+    
+          add_friend (current_class_type,
+    		  is_friend_template ? DECL_TI_TEMPLATE (decl) : decl,
+    		  /*complain=*/true);
+        }
+
+DECL_TEMPLATE_INFO (function) = build_template_info (fns, NULL_TREE);
+
+      if (!class_template_depth && DECL_IMPLICIT_INSTANTIATION (decl)
+          && TREE_CODE (DECL_TI_TEMPLATE (decl)) != TEMPLATE_DECL)
+
+          DECL_TEMPLATE_INFO (decl) = build_template_info (old, NULL_TREE);
+

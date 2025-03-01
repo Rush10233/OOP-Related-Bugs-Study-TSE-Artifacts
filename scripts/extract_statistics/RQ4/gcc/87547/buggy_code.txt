@@ -1,0 +1,2 @@
+type = non_reference (TREE_TYPE (exp));
+

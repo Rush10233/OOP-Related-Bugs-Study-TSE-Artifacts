@@ -1,0 +1,296 @@
+bool IsDeleted : 1;
+      bool IsTrivial : 1; // sunk from CXXMethodDecl
+      bool HasImplicitReturnZero : 1;
+    
+      /// \brief End part of this FunctionDecl's source range.
+      ///
+
+          IsInline(isInlineSpecified), IsInlineSpecified(isInlineSpecified),
+          IsVirtualAsWritten(false), IsPure(false), HasInheritedPrototype(false),
+          HasWrittenPrototype(true), IsDeleted(false), IsTrivial(false),
+
+          TemplateOrSpecialization(),
+          DNLoc(NameInfo.getInfo()) {}
+    
+
+      bool hasImplicitReturnZero() const { return HasImplicitReturnZero; }
+      void setHasImplicitReturnZero(bool IRZ) { HasImplicitReturnZero = IRZ; }
+    
+      /// \brief Whether this function has a prototype, either because one
+      /// was explicitly written or because it was "inherited" by merging
+      /// a declaration without a prototype with a declaration that has a
+
+        /// \brief Whether we have already declared a destructor within the class.
+        bool DeclaredDestructor : 1;
+    
+        /// NumBases - The number of base class specifiers in Bases.
+        unsigned NumBases;
+    
+
+      /// This value is used for lazy creation of destructors.
+      bool hasDeclaredDestructor() const { return data().DeclaredDestructor; }
+    
+      /// getConversions - Retrieve the overload set containing all of the
+      /// conversion functions in this class.
+      UnresolvedSetImpl *getConversionFunctions() {
+
+      let Spellings = ["dllimport"];
+    }
+    
+
+    def FastCall : InheritableAttr {
+      let Spellings = ["fastcall", "__fastcall"];
+    }
+    
+
+    def Format : InheritableAttr {
+      let Spellings = ["format"];
+      let Args = [StringArgument<"Type">, IntArgument<"FormatIdx">,
+
+      let Spellings = ["overloadable"];
+    }
+    
+
+    def Ownership : InheritableAttr {
+      let Spellings = ["ownership_holds", "ownership_returns", "ownership_takes"];
+      let Args = [EnumArgument<"OwnKind", "OwnershipKind",
+
+        HasTrivialDestructor(true), ComputedVisibleConversions(false),
+        DeclaredDefaultConstructor(false), DeclaredCopyConstructor(false), 
+        DeclaredCopyAssignment(false), DeclaredDestructor(false),
+
+    }
+    
+    CXXRecordDecl::CXXRecordDecl(Kind K, TagKind TK, DeclContext *DC,
+
+    
+      // If the member function is marked 'final', we know that it can't be
+      // overridden and can therefore devirtualize it.
+
+        return true;
+    
+      // Similarly, if the class itself is marked 'final' it can't be overridden
+      // and we can therefore devirtualize the member function call.
+
+        return true;
+    
+      if (const DeclRefExpr *DRE = dyn_cast<DeclRefExpr>(Base)) {
+
+      if (!Record->getIdentifier())
+        return;
+    
+
+    
+      // C++ [class]p2:
+      //   [...] The class-name is also inserted into the scope of the
+
+      //   If a class is marked with the class-virt-specifier final and it appears
+      //   as a base-type-specifier in a base-clause (10 class.derived), the program
+      //   is ill-formed.
+
+        Diag(BaseLoc, diag::err_class_marked_final_used_as_base) 
+          << CXXBaseDecl->getDeclName();
+        Diag(CXXBaseDecl->getLocation(), diag::note_previous_decl)
+
+      //   the program is ill-formed.
+      bool HasOverriddenMethods = 
+        MD->begin_overridden_methods() != MD->end_overridden_methods();
+
+        Diag(MD->getLocation(), 
+                     diag::err_function_marked_override_not_overriding)
+          << MD->getDeclName();
+
+      //   if a virtual member function that is neither implicitly-declared nor a 
+      //   destructor overrides a member function of a base class and it is not
+      //   marked with the virt-specifier override, the program is ill-formed.
+
+        llvm::SmallVector<const CXXMethodDecl*, 4> 
+          OverriddenMethods(MD->begin_overridden_methods(), 
+                            MD->end_overridden_methods());
+
+    /// C++0x [class.virtual]p3.
+    bool Sema::CheckIfOverriddenFunctionIsMarkedFinal(const CXXMethodDecl *New,
+                                                      const CXXMethodDecl *Old) {
+
+        return false;
+    
+      Diag(New->getLocation(), diag::err_final_function_overridden)
+
+               diag::override_keyword_only_allowed_on_virtual_member_functions)
+            << "override" << FixItHint::CreateRemoval(VS.getOverrideLoc());
+        } else
+
+      }
+      if (VS.isFinalSpecified()) {
+        CXXMethodDecl *MD = dyn_cast<CXXMethodDecl>(Member);
+
+               diag::override_keyword_only_allowed_on_virtual_member_functions)
+          << "final" << FixItHint::CreateRemoval(VS.getFinalLoc());
+        } else
+
+      }
+    
+      CheckOverrideControl(Member);
+
+    
+      Instantiation->setTagKind(Pattern->getTagKind());
+    
+      // Do substitution on the base class specifiers.
+      if (SubstBaseSpecifiers(Instantiation, Pattern, TemplateArgs))
+        Invalid = true;
+
+      if (D->isPure())
+        SemaRef.CheckPureMethod(Method, SourceRange());
+    
+      Method->setAccess(D->getAccess());
+    
+      SemaRef.CheckOverrideControl(Method);
+
+      FD->IsDeleted = Record[Idx++];
+      FD->IsTrivial = Record[Idx++];
+      FD->HasImplicitReturnZero = Record[Idx++];
+      FD->EndRangeLoc = ReadSourceLocation(Record, Idx);
+    
+      // Read in the parameters.
+
+      Data.DeclaredCopyConstructor = Record[Idx++];
+      Data.DeclaredCopyAssignment = Record[Idx++];
+      Data.DeclaredDestructor = Record[Idx++];
+    
+      Data.NumBases = Record[Idx++];
+      if (Data.NumBases)
+
+      Record.push_back(Data.DeclaredCopyConstructor);
+      Record.push_back(Data.DeclaredCopyAssignment);
+      Record.push_back(Data.DeclaredDestructor);
+    
+      Record.push_back(Data.NumBases);
+      if (Data.NumBases > 0)
+
+      Record.push_back(D->isDeleted());
+      Record.push_back(D->isTrivial());
+      Record.push_back(D->hasImplicitReturnZero());
+      Writer.AddSourceLocation(D->getLocEnd(), Record);
+    
+      Record.push_back(D->param_size());
+
+/// will be modified to account for adjustments to the types of the
+      /// function parameters.
+      ///
+      /// \param Loc The location of the entity whose type involves this
+      /// function type or, if there is no such entity, the location of the
+      /// type that will have function type.
+      ///
+      /// \param Entity The name of the entity that involves the function
+      /// type, if known.
+      ///
+
+      /// Otherwise, returns a NULL type.
+      QualType BuildFunctionType(QualType T,
+                                 llvm::MutableArrayRef<QualType> ParamTypes,
+                                 SourceLocation Loc, DeclarationName Entity,
+
+    
+      QualType BuildMemberPointerType(QualType T, QualType Class,
+                                      SourceLocation Loc,
+
+    /// \brief Strips various properties off an implicit instantiation
+    /// that has just been explicitly specialized.
+    static void StripImplicitInstantiation(NamedDecl *D) {
+      D->dropAttrs();
+    
+      if (FunctionDecl *FD = dyn_cast<FunctionDecl>(D)) {
+        FD->setInlineSpecified(false);
+
+      }
+    }
+    
+
+    
+      if (FunctionType) {
+        *FunctionType = BuildFunctionType(ResultType, ParamTypes,
+                                          Function->getLocation(),
+                                          Function->getDeclName(),
+
+        if (FunctionType->isNull() || Trap.hasErrorOccurred())
+          return TDK_SubstitutionFailure;
+      }
+
+    
+      NewParm->setScopeInfo(OldParm->getFunctionScopeDepth(),
+                            OldParm->getFunctionScopeIndex() + indexAdjustment);
+
+      return NewParm;  
+    }
+    
+
+    
+    QualType Sema::BuildFunctionType(QualType T,
+                                     llvm::MutableArrayRef<QualType> ParamTypes,
+                                     SourceLocation Loc, DeclarationName Entity,
+
+      if (T->isArrayType() || T->isFunctionType()) {
+        Diag(Loc, diag::err_func_returning_array_function)
+          << T->isFunctionType() << T;
+
+      if (Invalid)
+        return QualType();
+    
+      return Context.getFunctionType(T, ParamTypes, EPI);
+    }
+    
+
+      /// Subclasses may override this routine to provide different behavior.
+      QualType RebuildFunctionProtoType(QualType T,
+                                        llvm::MutableArrayRef<QualType> ParamTypes,
+
+    
+      /// \brief Build a new unprototyped function type.
+      QualType RebuildFunctionNoProtoType(QualType ResultType);
+
+          T->getNumArgs() != ParamTypes.size() ||
+          !std::equal(T->arg_type_begin(), T->arg_type_end(), ParamTypes.begin())) {
+        Result = getDerived().RebuildFunctionProtoType(ResultType, ParamTypes,
+
+        if (Result.isNull())
+          return QualType();
+      }
+
+        return ExprError();
+      }
+    
+
+      QualType exprResultType =
+          getDerived().TransformType(exprFunctionType->getResultType());
+    
+
+    
+      QualType functionType =
+        getDerived().RebuildFunctionProtoType(exprResultType, paramTypes,
+
+      blockScope->FunctionType = functionType;
+    
+      // Set the parameters on the block decl.
+
+    QualType TreeTransform<Derived>::RebuildFunctionProtoType(
+        QualType T,
+        llvm::MutableArrayRef<QualType> ParamTypes,
+
+                                       getDerived().getBaseLocation(),
+                                       getDerived().getBaseEntity(),
+
+    }
+    
+    template<typename Derived>
+
+/// \brief Strips various properties off an implicit instantiation
+    /// that has just been explicitly specialized.
+    static void StripImplicitInstantiation(NamedDecl *D) {
+
+    
+
+        FD->setInlineSpecified(false);
+    }
+    
+    /// \brief Compute the diagnostic location for an explicit instantiation
+

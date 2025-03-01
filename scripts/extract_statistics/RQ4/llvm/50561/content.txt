@@ -1,0 +1,8 @@
+->containsUnexpandedParameterPack())
+              ContainsUnexpandedParameterPack = true;
+          }
+
+        } else {
+          llvm_unreachable("unexpcted template parameter type");
+        }
+

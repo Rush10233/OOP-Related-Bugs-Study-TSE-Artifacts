@@ -1,0 +1,10 @@
+decl = BASELINK_FUNCTIONS (decl);
+          if (really_overloaded_fn (decl))
+
+          decl = OVL_FIRST (decl);
+
+decl = BASELINK_FUNCTIONS (decl);
+          if (really_overloaded_fn (decl))
+
+          decl = OVL_FIRST (decl);
+

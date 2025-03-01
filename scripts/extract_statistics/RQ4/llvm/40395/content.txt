@@ -1,0 +1,250 @@
+}
+    };
+    
+
+    //===----------------------------------------------------------------------===//
+    // Primary Expressions.
+    //===----------------------------------------------------------------------===//
+
+    /// potentially-evaluated block literal.  The lifetime of a block
+    /// literal is the extent of the enclosing scope.
+    class ExprWithCleanups final
+
+          private llvm::TrailingObjects<ExprWithCleanups, BlockDecl *> {
+    public:
+      /// The type of objects that are kept in the cleanup.
+
+      friend class ASTStmtReader;
+      friend TrailingObjects;
+    
+      ExprWithCleanups(EmptyShell, unsigned NumObjects);
+      ExprWithCleanups(Expr *SubExpr, bool CleanupsHaveSideEffects,
+                       ArrayRef<CleanupObject> Objects);
+
+        return getObjects()[i];
+      }
+    
+      bool cleanupsHaveSideEffects() const {
+        return ExprWithCleanupsBits.CleanupsHaveSideEffects;
+      }
+    
+      SourceLocation getBeginLoc() const LLVM_READONLY {
+        return SubExpr->getBeginLoc();
+      }
+
+    DEF_TRAVERSE_STMT(SwitchStmt, {})
+    DEF_TRAVERSE_STMT(WhileStmt, {})
+    
+
+    DEF_TRAVERSE_STMT(CXXDependentScopeMemberExpr, {
+      TRY_TO(TraverseNestedNameSpecifierLoc(S->getQualifierLoc()));
+      TRY_TO(TraverseDeclarationNameInfo(S->getMemberNameInfo()));
+
+    def GenericSelectionExpr : DStmt<Expr>;
+    def PseudoObjectExpr : DStmt<Expr>;
+    
+
+    // Atomic expressions
+    def AtomicExpr : DStmt<Expr>;
+    
+
+    def CXXConstructExpr : DStmt<Expr>;
+    def CXXInheritedCtorInitExpr : DStmt<Expr>;
+    def CXXBindTemporaryExpr : DStmt<Expr>;
+
+    def CXXTemporaryObjectExpr : DStmt<CXXConstructExpr>;
+    def CXXUnresolvedConstructExpr : DStmt<Expr>;
+    def CXXDependentScopeMemberExpr : DStmt<Expr>;
+
+          /// A MS-style AsmStmt record.
+          STMT_MSASM,
+    
+
+          /// A PredefinedExpr record.
+          EXPR_PREDEFINED,
+    
+
+        return cast<Expr>(getEssential((Stmt*)E));
+      }
+      static Stmt *getEssential(Stmt *S) {
+
+        if (Expr *E = dyn_cast<Expr>(S))
+          S = E->IgnoreParenCasts();
+        return S;
+
+        }
+        while (OuterS && (isa<ParenExpr>(OuterS) ||
+                          isa<CastExpr>(OuterS) ||
+
+    
+        if (!OuterS)
+          return std::make_pair(prevStmt, nextStmt);
+
+    
+        RecContainer = StmtE;
+        Rec = Init->IgnoreParenImpCasts();
+
+        RecRange = Rec->getSourceRange();
+        if (SM.isMacroArgExpansion(RecRange.getBegin()))
+          RecRange.setBegin(SM.getImmediateSpellingLoc(RecRange.getBegin()));
+
+          Stmt *parent = E;
+          do {
+            parent = StmtMap->getParentIgnoreParenImpCasts(parent);
+
+    
+          if (ReturnStmt *retS = dyn_cast_or_null<ReturnStmt>(parent)) {
+            std::string note = "remove the cast and change return type of function "
+
+    bool trans::isPlusOne(const Expr *E) {
+      if (!E)
+        return false;
+
+    
+      if (const ObjCMessageExpr *
+            ME = dyn_cast<ObjCMessageExpr>(E->IgnoreParenCasts()))
+
+             "Default argument is not yet instantiated!");
+    
+      Expr *Arg = getInit();
+
+        return E->getSubExpr();
+    
+      return Arg;
+
+        // These never have a side-effect.
+        return false;
+    
+
+      case CallExprClass:
+      case CXXOperatorCallExprClass:
+      case CXXMemberCallExprClass:
+
+    ExprWithCleanups::ExprWithCleanups(Expr *subexpr,
+                                       bool CleanupsHaveSideEffects,
+                                       ArrayRef<CleanupObject> objects)
+
+      ExprWithCleanupsBits.CleanupsHaveSideEffects = CleanupsHaveSideEffects;
+      ExprWithCleanupsBits.NumObjects = objects.size();
+      for (unsigned i = 0, e = objects.size(); i != e; ++i)
+
+    }
+    
+    ExprWithCleanups::ExprWithCleanups(EmptyShell empty, unsigned numObjects)
+
+      ExprWithCleanupsBits.NumObjects = numObjects;
+    }
+    
+
+      case Expr::DesignatedInitUpdateExprClass:
+        return Cl::CL_PRValue;
+    
+
+        // Next come the complicated cases.
+      case Expr::SubstNonTypeTemplateParmExprClass:
+        return ClassifyInternal(Ctx,
+
+        // If we're doing a variable assignment from e.g. malloc(N), there will
+        // probably be a cast of some kind. In exotic cases, we might also see a
+        // top-level ExprWithCleanups. Ignore them either way.
+
+    
+        if (const auto *Cast = dyn_cast<CastExpr>(E))
+          E = Cast->getSubExpr()->IgnoreParens();
+
+        return
+          CheckICE(cast<SubstNonTypeTemplateParmExpr>(E)->getReplacement(), Ctx);
+    
+
+      case Expr::ParenExprClass:
+        return CheckICE(cast<ParenExpr>(E)->getSubExpr(), Ctx);
+      case Expr::GenericSelectionExprClass:
+
+      case Expr::CXXInheritedCtorInitExprClass:
+        llvm_unreachable("unexpected statement kind");
+    
+
+      // FIXME: invent manglings for all these.
+      case Expr::BlockExprClass:
+      case Expr::ChooseExprClass:
+
+    
+      // Ignore parents that don't guarantee consumption.
+      while (P && (isa<ParenExpr>(P) || isa<CastExpr>(P) ||
+
+        DirectChild = P;
+        P = getParent(P);
+      }
+
+      while (s != lasts) {
+        lasts = s;
+    
+
+    
+        if (auto *mte = dyn_cast<MaterializeTemporaryExpr>(s))
+          s = mte->GetTemporaryExpr();
+
+    //  Expr printing methods.
+    //===----------------------------------------------------------------------===//
+    
+
+    void StmtPrinter::VisitDeclRefExpr(DeclRefExpr *Node) {
+      if (const auto *OCED = dyn_cast<OMPCapturedExprDecl>(Node->getDecl())) {
+        OCED->getInit()->IgnoreImpCasts()->printPretty(OS, nullptr, Policy);
+
+      VisitStmt(S);
+    }
+    
+
+    void StmtProfiler::VisitDeclRefExpr(const DeclRefExpr *S) {
+      VisitExpr(S);
+      if (!Canonical)
+
+      while (S) {
+        if (const Expr *Ex = dyn_cast<Expr>(S))
+          S = Ex->IgnoreParens();
+
+          continue;
+        }
+        if (const OpaqueValueExpr *OVE = dyn_cast<OpaqueValueExpr>(S)) {
+
+        return getTrylockCallExpr(PE->getSubExpr(), C, Negate);
+      else if (const auto *CE = dyn_cast<ImplicitCastExpr>(Cond))
+        return getTrylockCallExpr(CE->getSubExpr(), C, Negate);
+
+      else if (const auto *DRE = dyn_cast<DeclRefExpr>(Cond)) {
+        const Expr *E = LocalVarMap.lookupExpr(DRE->getDecl(), C);
+        return getTrylockCallExpr(E, C, Negate);
+
+                 cast<BinaryConditionalOperator>(S), Ctx);
+    
+      // We treat these as no-ops
+
+      case Stmt::ParenExprClass:
+        return translate(cast<ParenExpr>(S)->getSubExpr(), Ctx);
+      case Stmt::ExprWithCleanupsClass:
+
+    /// Enter a full-expression with a non-trivial number of objects to
+    /// clean up.  This is in this file because, at the moment, the only
+    /// kind of cleanup object is a BlockDecl*.
+
+    }
+    
+    /// Find the layout for the given block in a linked list and remove it.
+
+    
+      // If we're emitting a value with lifetime, we have to do the
+    
+
+      }
+      CodeGenFunction::RunCleanupsScope Scope(*this);
+    
+
+      // exception to our over-conservative rules about not jumping to
+      // statements following block literals with non-trivial cleanups.
+      RunCleanupsScope cleanupScope(*this);
+
+      }
+    
+      // FIXME: Clean this up by using an LValue for ReturnTemp,
+

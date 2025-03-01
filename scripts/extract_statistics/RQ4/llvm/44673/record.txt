@@ -1,0 +1,3 @@
+Commit:	5702dad
+./clang/lib/Parse/ParseDecl.cpp	5196,5197
+./clang/lib/Parse/ParseDecl.cpp	5200,5200

@@ -1,0 +1,12 @@
+void initializeLocal(ASTContext &Context, SourceLocation Loc);
+
+    void UnaryTransformTypeLoc::initializeLocal(ASTContext &Context,
+                                           SourceLocation Loc) {
+        setKWLoc(Loc);
+        setRParenLoc(Loc);
+        setLParenLoc(Loc);
+        this->setUnderlyingTInfo(
+            Context.getTrivialTypeSourceInfo(getTypePtr()->getBaseType(), Loc));
+    }
+    
+

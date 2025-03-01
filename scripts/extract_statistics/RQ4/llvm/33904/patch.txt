@@ -1,0 +1,33 @@
+bool PartialOverloading = false,
+                          bool FirstArgumentIsBase = false);
+
+        const bool FirstArgumentIsBase = !UME->isImplicitAccess() && UME->getBase();
+
+                              /*PartialOverloading=*/true,
+                              FirstArgumentIsBase);
+
+                                     bool PartialOverloading,
+                                     bool FirstArgumentIsBase) {
+
+          ArrayRef<Expr *> FunctionArgs = Args;
+
+            if (Args.size() > 0) {
+              if (Expr *E = Args[0]) {
+                // Use the explit base to restrict the lookup:
+                ObjectType = E->getType();
+                ObjectClassification = E->Classify(Context);
+              } // .. else there is an implit base.
+              FunctionArgs = Args.slice(1);
+            }
+
+                               ObjectClassification, FunctionArgs, CandidateSet,
+
+            // Slice the first argument (which is the base) when we access
+            // static method as non-static
+            if (Args.size() > 0 && (!Args[0] || (FirstArgumentIsBase && isa<CXXMethodDecl>(FD) &&
+                                                 !isa<CXXConstructorDecl>(FD)))) {
+              assert(cast<CXXMethodDecl>(FD)->isStatic());
+              FunctionArgs = Args.slice(1);
+            }
+            AddOverloadCandidate(FD, F.getPair(), FunctionArgs, CandidateSet,
+

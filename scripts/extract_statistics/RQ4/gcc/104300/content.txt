@@ -1,0 +1,140 @@
+if (TREE_CODE (from) == TARGET_EXPR)
+        if (tree init = TARGET_EXPR_INITIAL (from))
+          {
+
+    	  {
+    	    /* If this was changed by cp_genericize_target_expr, we need to
+    	       walk into it to replace uses of the slot.  */
+
+    
+    /* Perform any pre-gimplification folding of C++ front end trees to
+       GENERIC.
+
+         the middle-end.  As for now we have most foldings only on GENERIC
+    
+         GIMPLE-form.  */
+    
+
+    static tree
+
+    {
+
+      tree stmt = *stmt_p;
+      enum tree_code code = TREE_CODE (stmt);
+    
+
+          if (TREE_CODE (PTRMEM_CST_MEMBER (stmt)) == FUNCTION_DECL
+    	  && DECL_IMMEDIATE_FUNCTION_P (PTRMEM_CST_MEMBER (stmt)))
+    	{
+
+    	    error_at (PTRMEM_CST_LOCATION (stmt),
+    		      "taking address of an immediate function %qD",
+    		      PTRMEM_CST_MEMBER (stmt));
+
+    
+      *stmt_p = stmt = cp_fold (*stmt_p);
+    
+
+        {
+          /* Don't walk subtrees of stmts we've already walked once, otherwise
+    	 we can have exponential complexity with e.g. lots of nested
+
+    	}
+          break;
+    
+
+        case INIT_EXPR:
+
+          break;
+    
+        case TARGET_EXPR:
+
+          break;
+    
+        default:
+
+    void
+    cp_fold_function (tree fndecl)
+    {
+
+    }
+    
+    /* Turn SPACESHIP_EXPR EXPR into GENERIC.  */
+
+      if (processing_template_decl)
+        return x;
+      x = cp_fully_fold (x);
+
+      return x;
+    }
+    
+
+    #define VEC_INIT_EXPR_VALUE_INIT(NODE) \
+      TREE_LANG_FLAG_1 (VEC_INIT_EXPR_CHECK (NODE))
+    
+
+    /* The condition under which this MUST_NOT_THROW_EXPR actually blocks
+       exceptions.  NULL_TREE means 'true'.  */
+    #define MUST_NOT_THROW_COND(NODE) \
+
+       && TARGET_EXPR_INITIAL (NODE)				\
+       && !VOID_TYPE_P (TREE_TYPE (TARGET_EXPR_INITIAL (NODE))))
+    
+
+    /* True if EXPR expresses direct-initialization of a TYPE.  */
+    #define DIRECT_INIT_EXPR_P(TYPE,EXPR)					\
+      (TREE_CODE (EXPR) == TARGET_EXPR && TREE_LANG_FLAG_2 (EXPR)		\
+
+          && from_array != 2)
+        init = TARGET_EXPR_INITIAL (init);
+    
+
+    
+      bool direct_init = false;
+      if (from_array && init && BRACE_ENCLOSED_INITIALIZER_P (init)
+
+    
+    	  num_initialized_elts++;
+    
+
+    	  if (digested)
+    	    one_init = build2 (INIT_EXPR, type, baseref, elt);
+
+    	  else if (MAYBE_CLASS_TYPE_P (type) || TREE_CODE (type) == ARRAY_TYPE)
+    	    one_init = build_aggr_init (baseref, elt, 0, complain);
+    	  else
+
+    tree
+    build_vec_init_expr (tree type, tree init, tsubst_flags_t complain)
+    {
+
+    
+      tree elt_init;
+      if (init && TREE_CODE (init) == CONSTRUCTOR
+
+    
+    	  bool elt_last = last && idx == CONSTRUCTOR_NELTS (init) - 1;
+    
+
+    	  if (TREE_CODE (value) == CONSTRUCTOR)
+    	    {
+    	      if (!split_nonconstant_init_1 (sub, value, elt_last, flags)
+
+    		  num_split_elts++;
+    		}
+    	    }
+
+    	    {
+
+    					      flags));
+    
+    	      /* Mark element for removal.  */
+
+    	 initializer-clause until later so we can use a loop.  */
+          TREE_TYPE (init) = init_list_type_node;
+          init = build_vec_init_expr (type, init, complain);
+
+        }
+      return init;
+    }
+

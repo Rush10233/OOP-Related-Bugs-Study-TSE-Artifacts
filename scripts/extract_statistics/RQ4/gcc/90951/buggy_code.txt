@@ -1,0 +1,9 @@
+initializer, it's value-initialized.  */
+      tree val = build_value_init (elem_type, tf_warning_or_error);
+
+initializer, it's value-initialized.  */
+      tree val = build_value_init (elem_type, tf_warning_or_error);
+
+initializer, it's value-initialized.  */
+      tree val = build_value_init (elem_type, tf_warning_or_error);
+

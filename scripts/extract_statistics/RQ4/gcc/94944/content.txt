@@ -1,0 +1,11 @@
+push_deferring_access_checks (dk_no_deferred);
+    	  input_location = DECL_SOURCE_LOCATION (fn);
+    
+
+    	    {
+    	      /* If needed, set current_class_ptr for the benefit of
+
+    	    }
+    
+    	  /* If this function is represented by a TEMPLATE_DECL, then
+

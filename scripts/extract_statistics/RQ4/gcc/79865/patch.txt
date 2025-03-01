@@ -1,0 +1,23 @@
+bool id_expr = TREE_CODE (fns) == TEMPLATE_ID_EXPR;
+    	if (id_expr)
+    	  fns = TREE_OPERAND (fns, 0);
+
+    	  {
+    	    tree fn = OVL_CURRENT (fns);
+    
+    	    if ((!id_expr || TREE_CODE (fn) == TEMPLATE_DECL)
+    		&& DECL_NONSTATIC_MEMBER_FUNCTION_P (fn))
+    	      {
+    		/* Found a non-static member.  Capture this.  */
+    		lambda_expr_this_capture (lam, true);
+    		break;
+    	      }
+    	  }
+
+      /* Don't add decls after definition.  */
+      gcc_assert (TYPE_BEING_DEFINED (current_class_type)
+    	      /* We can add lambda types when late parsing default
+    		 arguments.  */
+    	      || LAMBDA_TYPE_P (TREE_TYPE (decl)));
+    
+

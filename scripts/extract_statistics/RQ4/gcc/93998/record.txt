@@ -1,0 +1,13 @@
+Commit:	6b9ce2b
+./gcc/cp/ChangeLog	1,1
+./gcc/cp/constexpr.c	5477,5479
+Commit:	21cd858
+./gcc/cp/constexpr.c	1029,1029
+./gcc/cp/constexpr.c	1042,1043
+./gcc/cp/constexpr.c	2088,2089
+./gcc/cp/constexpr.c	2138,2138
+./gcc/cp/constexpr.c	4638,4638
+./gcc/cp/constexpr.c	4662,4662
+./gcc/cp/constexpr.c	5028,5033
+./gcc/cp/constexpr.c	5083,5083
+./gcc/cp/constexpr.c	5086,5086

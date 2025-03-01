@@ -1,0 +1,8 @@
+&& !(strict & UNIFY_ALLOW_INTEGER)
+    	      && TEMPLATE_PARM_LEVEL (parm) <= TMPL_ARGS_DEPTH (targs))
+    	    {
+
+    	      RECUR_AND_CHECK_FAILURE (tparms, targs,
+    				       tparm, atype,
+    				       UNIFY_ALLOW_NONE, explain_p);
+

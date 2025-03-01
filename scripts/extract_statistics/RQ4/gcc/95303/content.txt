@@ -1,0 +1,8 @@
+case UNBOUND_CLASS_TEMPLATE:
+          pp_cxx_unqualified_id (pp, TYPE_NAME (t));
+          if (tree ti = TYPE_TEMPLATE_INFO_MAYBE_ALIAS (t))
+
+          break;
+    
+        case BIT_NOT_EXPR:
+

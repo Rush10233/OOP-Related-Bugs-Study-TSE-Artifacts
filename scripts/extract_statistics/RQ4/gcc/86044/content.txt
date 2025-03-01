@@ -1,0 +1,22 @@
+return r;
+    }
+    
+    /* If T represents a constant expression returns its reduced value.
+       Otherwise return error_mark_node.  If T is dependent, then
+       return NULL.  */
+
+    						 tsubst_flags_t = tf_warning_or_error,
+    						 bool = false);
+    extern tree fold_simple				(tree);
+    extern bool reduced_constant_expression_p       (tree);
+    extern bool is_instantiation_of_constexpr       (tree);
+    extern bool var_in_constexpr_fn                 (tree);
+
+    	      && (DECL_ARTIFICIAL (fn)
+    		  || nothrow_libfn_p (fn)))
+    	    return TREE_NOTHROW (fn) ? NULL_TREE : fn;
+
+    	}
+          if (!TYPE_NOTHROW_P (type))
+    	return fn;
+

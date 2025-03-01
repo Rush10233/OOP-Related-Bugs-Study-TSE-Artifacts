@@ -1,0 +1,11 @@
+- Fix crash when diagnosing default comparison method.
+      (`#62791 <https://github.com/llvm/llvm-project/issues/62791>`_) and
+      (`#62102 <https://github.com/llvm/llvm-project/issues/62102>`_).
+
+            QualType RecordType = FD->getParamDecl(0)
+                                      ->getType()
+                                      .getNonReferenceType()
+                                      .getUnqualifiedType();
+
+                << (int)DFK.asComparison() << RecordType;
+

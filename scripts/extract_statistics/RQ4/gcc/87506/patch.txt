@@ -1,0 +1,9 @@
+if (TREE_CODE (temp) == EMPTY_CLASS_EXPR)
+        return build0 (EMPTY_CLASS_EXPR, type);
+
+if (TREE_CODE (temp) == EMPTY_CLASS_EXPR)
+        return build0 (EMPTY_CLASS_EXPR, type);
+
+if (TREE_CODE (temp) == EMPTY_CLASS_EXPR)
+        return build0 (EMPTY_CLASS_EXPR, type);
+

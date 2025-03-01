@@ -1,0 +1,18 @@
+}
+    }
+    
+
+    /* If we might need to clean up a partially constructed object, break down the
+       CONSTRUCTOR with split_nonconstant_init.  Also expand VEC_INIT_EXPR at this
+       point.  If initializing TO with FROM is non-trivial, overwrite *REPLACE with
+
+      tree init = NULL_TREE;
+      if (TREE_CODE (from) == VEC_INIT_EXPR)
+        init = expand_vec_init_expr (to, from, tf_warning_or_error);
+
+    	   && TREE_SIDE_EFFECTS (from)
+
+        {
+          to = cp_stabilize_reference (to);
+          replace_placeholders (from, to);
+

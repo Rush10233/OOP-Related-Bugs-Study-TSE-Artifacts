@@ -1,0 +1,16 @@
+if (initializer == NULL_TREE
+    	  || (TREE_CODE (initializer) == TREE_LIST
+    	      && TREE_CHAIN (initializer))
+
+    	      && CONSTRUCTOR_NELTS (initializer) != 1))
+    	{
+    	  error_at (loc, "invalid initializer for structured binding "
+
+if (initializer == NULL_TREE
+    	  || (TREE_CODE (initializer) == TREE_LIST
+    	      && TREE_CHAIN (initializer))
+
+    	      && CONSTRUCTOR_NELTS (initializer) != 1))
+    	{
+    	  error_at (loc, "invalid initializer for structured binding "
+

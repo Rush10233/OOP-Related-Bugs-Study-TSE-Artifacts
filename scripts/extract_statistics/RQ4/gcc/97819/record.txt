@@ -1,0 +1,4 @@
+Commit:	85ef4b8
+./gcc/cp/pt.c	26392,26392
+./gcc/cp/pt.c	26394,26394
+./gcc/cp/pt.c	26403,26408

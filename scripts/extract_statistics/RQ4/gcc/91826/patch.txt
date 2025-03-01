@@ -1,0 +1,81 @@
+/* Returns true if ROOT (a non-alias namespace, class, or function)
+       encloses CHILD.  CHILD may be either a class type or a namespace
+       (maybe alias).  */
+
+      gcc_checking_assert ((TREE_CODE (root) == NAMESPACE_DECL
+    			&& !DECL_NAMESPACE_ALIAS (root))
+    		       || TREE_CODE (root) == FUNCTION_DECL
+    		       || CLASS_TYPE_P (root));
+      gcc_checking_assert (TREE_CODE (child) == NAMESPACE_DECL
+    		       || CLASS_TYPE_P (child));
+
+      /* The global namespace encloses everything.  Early-out for the
+         common case.  */
+
+      /* Search CHILD until we reach namespace scope.  */
+
+    
+
+      if (TREE_CODE (root) != NAMESPACE_DECL)
+        /* Failed to meet the non-namespace we were looking for.  */
+        return false;
+    
+      if (tree alias = DECL_NAMESPACE_ALIAS (child))
+        child = alias;
+
+      return is_nested_namespace (root, child);
+
+/* Returns true if ROOT (a non-alias namespace, class, or function)
+       encloses CHILD.  CHILD may be either a class type or a namespace
+       (maybe alias).  */
+
+      gcc_checking_assert ((TREE_CODE (root) == NAMESPACE_DECL
+    			&& !DECL_NAMESPACE_ALIAS (root))
+    		       || TREE_CODE (root) == FUNCTION_DECL
+    		       || CLASS_TYPE_P (root));
+      gcc_checking_assert (TREE_CODE (child) == NAMESPACE_DECL
+    		       || CLASS_TYPE_P (child));
+
+      /* The global namespace encloses everything.  Early-out for the
+         common case.  */
+
+      /* Search CHILD until we reach namespace scope.  */
+
+    
+
+      if (TREE_CODE (root) != NAMESPACE_DECL)
+        /* Failed to meet the non-namespace we were looking for.  */
+        return false;
+    
+      if (tree alias = DECL_NAMESPACE_ALIAS (child))
+        child = alias;
+
+      return is_nested_namespace (root, child);
+
+/* Returns true if ROOT (a non-alias namespace, class, or function)
+       encloses CHILD.  CHILD may be either a class type or a namespace
+       (maybe alias).  */
+
+      gcc_checking_assert ((TREE_CODE (root) == NAMESPACE_DECL
+    			&& !DECL_NAMESPACE_ALIAS (root))
+    		       || TREE_CODE (root) == FUNCTION_DECL
+    		       || CLASS_TYPE_P (root));
+      gcc_checking_assert (TREE_CODE (child) == NAMESPACE_DECL
+    		       || CLASS_TYPE_P (child));
+
+      /* The global namespace encloses everything.  Early-out for the
+         common case.  */
+
+      /* Search CHILD until we reach namespace scope.  */
+
+    
+
+      if (TREE_CODE (root) != NAMESPACE_DECL)
+        /* Failed to meet the non-namespace we were looking for.  */
+        return false;
+    
+      if (tree alias = DECL_NAMESPACE_ALIAS (child))
+        child = alias;
+
+      return is_nested_namespace (root, child);
+

@@ -1,0 +1,16 @@
+Method->getType()->castAs<FunctionProtoType>()))
+              return ExprError();
+    
+
+          } else {
+            // We matched a built-in operator. Convert the arguments, then
+            // break out so that we will build the appropriate built-in
+
+                            Method->getType()->castAs<FunctionProtoType>()))
+        return ExprError();
+    
+
+    }
+    
+    /// BuildLiteralOperatorCall - Build a UserDefinedLiteral by creating a call to
+

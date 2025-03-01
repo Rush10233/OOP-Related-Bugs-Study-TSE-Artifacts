@@ -1,0 +1,10 @@
+Commit:	c2bb88c
+./clang/include/clang/Parse/Parser.h	1281,1287
+./clang/include/clang/Parse/Parser.h	1317,1318
+./clang/include/clang/Parse/Parser.h	1327,1331
+./clang/include/clang/Parse/Parser.h	1376,1377
+./clang/include/clang/Parse/Parser.h	1383,1387
+./clang/include/clang/Parse/Parser.h	3243,3243
+./clang/include/clang/Sema/Scope.h	325,326
+./clang/include/clang/Sema/Sema.h	2869,2870
+./clang/include/clang/Sema/Sema.h	6792,6792

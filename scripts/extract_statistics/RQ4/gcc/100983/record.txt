@@ -1,0 +1,3 @@
+Commit:	8d980e8
+./gcc/cp/decl.c	10045,10050
+./gcc/cp/search.c	1229,1229

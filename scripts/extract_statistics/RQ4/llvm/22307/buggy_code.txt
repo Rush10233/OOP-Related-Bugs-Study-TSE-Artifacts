@@ -1,0 +1,10 @@
+// This needs to happen first so that 'inline' propagates.
+          NewFD->setPreviousDeclaration(cast<FunctionDecl>(OldDecl));
+    
+          if (isa<CXXMethodDecl>(NewFD))
+            NewFD->setAccess(OldDecl->getAccess());
+
+          if (FunctionDecl *OldFD = FD->getPreviousDecl()) {
+
+            Diag(OldFD->getLocation(), diag::note_previous_declaration);
+

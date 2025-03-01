@@ -1,0 +1,2 @@
+x = maybe_constant_value (x);
+

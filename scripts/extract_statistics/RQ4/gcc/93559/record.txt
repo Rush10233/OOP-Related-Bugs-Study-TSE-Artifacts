@@ -1,0 +1,2 @@
+Commit:	fa0c6e2
+./gcc/cp/decl.c	5992,5992

@@ -1,0 +1,140 @@
+t = TREE_CHAIN (t);
+      if (t == void_list_node)
+        return true;
+      return false;
+    }
+    
+
+      return false;
+    }
+    
+
+    /* Returns true iff T, an element of an OVERLOAD chain, is a usual
+       deallocation function (3.7.4.2 [basic.stc.dynamic.deallocation]).  */
+    
+
+          || primary_template_specialization_p (t))
+        return false;
+    
+
+      bool global = DECL_NAMESPACE_SCOPE_P (t);
+      tree chain = FUNCTION_ARG_CHAIN (t);
+      if (!chain)
+
+        chain = TREE_CHAIN (chain);
+      if (chain == void_list_node
+          || ((!global || flag_sized_deallocation)
+
+        return true;
+      if (aligned_deallocation_fn_p (t))
+        return true;
+
+    		  /* We need a cookie to determine the array size.  */
+    		  want_size = false;
+    	      }
+
+    	    gcc_assert (fn_size != elt_size);
+    	    if (want_size == elt_size)
+    	      fn = elt;
+
+    	  args->quick_push (addr);
+    	  if (destroying)
+    	    args->quick_push (destroying);
+
+    	    args->quick_push (size);
+    	  if (aligned_deallocation_fn_p (fn))
+    	    {
+
+return std_destroying_delete_t_p (type) ? type : NULL_TREE;
+    }
+    
+
+    {
+
+    
+
+    
+    static bool
+
+    {
+
+    
+      /* A template instance is never a usual deallocation function,
+         regardless of its signature.  */
+      if (TREE_CODE (t) == TEMPLATE_DECL
+
+         - optionally, a parameter of type std::align_val_t.  */
+      bool global = DECL_NAMESPACE_SCOPE_P (t);
+      tree chain = FUNCTION_ARG_CHAIN (t);
+
+    }
+    
+    /* Build a call to operator delete.  This has to be handled very specially,
+
+    {
+      tree fn = NULL_TREE;
+      tree fns, fnname, type, t;
+
+    
+      if (addr == error_mark_node)
+        return error_mark_node;
+
+        for (lkp_iterator iter (MAYBE_BASELINK_FUNCTIONS (fns)); iter; ++iter)
+          {
+    	tree elt = *iter;
+
+    	  {
+    	    if (!fn)
+    	      {
+    		fn = elt;
+
+    		continue;
+    	      }
+    
+    	    /* -- If any of the deallocation functions is a destroying
+    	       operator delete, all deallocation functions that are not
+    	       destroying operator deletes are eliminated from further
+    	       consideration.  */
+
+    	      {
+
+    		continue;
+    	      }
+    
+
+    	    if (aligned_new_threshold)
+    	      {
+    		bool want_align = type_has_new_extended_alignment (type);
+
+    		  {
+
+    		    continue;
+    		  }
+    	      }
+
+    		  /* We need a cookie to determine the array size.  */
+    		  want_size = false;
+    	      }
+
+    	  }
+          }
+    
+
+    	}
+          else
+    	{
+
+    	  if (destroying)
+    	    {
+    	      /* Strip const and volatile from addr but retain the type of the
+
+    	  args->quick_push (addr);
+    	  if (destroying)
+    	    args->quick_push (destroying);
+
+    	    args->quick_push (size);
+
+    	    {
+    	      tree al = build_int_cst (align_type_node, TYPE_ALIGN_UNIT (type));
+    	      args->quick_push (al);
+

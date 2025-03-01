@@ -1,0 +1,32 @@
+
+      if (die != NULL && die->die_parent == NULL)
+        add_child_die (context_die, die);
+
+        {
+          if (early_dwarf)
+    	dwarf2out_imported_module_or_decl_1 (decl_or_origin, DECL_NAME (decl_or_origin),
+
+
+      if (die != NULL && die->die_parent == NULL)
+        add_child_die (context_die, die);
+
+        {
+          if (early_dwarf)
+    	dwarf2out_imported_module_or_decl_1 (decl_or_origin, DECL_NAME (decl_or_origin),
+
+
+      if (die != NULL && die->die_parent == NULL)
+        add_child_die (context_die, die);
+
+        {
+          if (early_dwarf)
+    	dwarf2out_imported_module_or_decl_1 (decl_or_origin, DECL_NAME (decl_or_origin),
+
+
+      if (die != NULL && die->die_parent == NULL)
+        add_child_die (context_die, die);
+
+        {
+          if (early_dwarf)
+    	dwarf2out_imported_module_or_decl_1 (decl_or_origin, DECL_NAME (decl_or_origin),
+

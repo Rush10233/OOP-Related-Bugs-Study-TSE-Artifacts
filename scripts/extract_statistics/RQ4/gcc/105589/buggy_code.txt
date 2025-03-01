@@ -1,0 +1,10 @@
+/* The AGGR_INIT_EXPR tweaking below breaks in templates.  */
+      gcc_assert (!processing_template_decl
+    	      || (SCALAR_TYPE_P (type) || TREE_CODE (type) == ARRAY_TYPE));
+    
+
+/* The AGGR_INIT_EXPR tweaking below breaks in templates.  */
+      gcc_assert (!processing_template_decl
+    	      || (SCALAR_TYPE_P (type) || TREE_CODE (type) == ARRAY_TYPE));
+    
+

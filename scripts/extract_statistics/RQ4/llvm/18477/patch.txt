@@ -1,0 +1,41 @@
+
+
+    
+      void ActOnStartCXXInClassMemberInitializer();
+      void ActOnFinishCXXInClassMemberInitializer(Decl *VarDecl,
+                                                  SourceLocation EqualLoc,
+                                                  Expr *Init);
+
+      Actions.ActOnStartCXXInClassMemberInitializer();
+    
+
+      Actions.ActOnFinishCXXInClassMemberInitializer(MI.Field, EqualLoc,
+                                                     Init.release());
+
+    /// \brief Enter a new C++ default initializer scope. After calling this, the
+    /// caller must call \ref ActOnFinishCXXInClassMemberInitializer, even if
+    /// parsing or instantiating the initializer failed.
+    void Sema::ActOnStartCXXInClassMemberInitializer() {
+      // Create a synthetic function scope to represent the call to the constructor
+      // that notionally surrounds a use of this initializer.
+      PushFunctionScope();
+    }
+    
+    /// \brief This is invoked after parsing an in-class initializer for a
+    /// non-static C++ class member, and after instantiating an in-class initializer
+    /// in a class template. Such actions are deferred until the class is complete.
+    void Sema::ActOnFinishCXXInClassMemberInitializer(Decl *D,
+                                                      SourceLocation InitLoc,
+                                                      Expr *InitExpr) {
+      // Pop the notional constructor scope we created earlier.
+      PopFunctionScopeInfo(0, D);
+    
+
+          ActOnStartCXXInClassMemberInitializer();
+
+          Expr *Init = NewInit.take();
+          assert((!Init || !isa<ParenListExpr>(Init)) &&
+                 "call-style init in class");
+          ActOnFinishCXXInClassMemberInitializer(NewField, Init->getLocStart(),
+                                                 Init);
+

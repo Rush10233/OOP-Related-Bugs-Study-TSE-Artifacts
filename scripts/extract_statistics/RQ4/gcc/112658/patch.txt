@@ -1,0 +1,9 @@
+else if (complain & tf_error)
+    	build_const_cast_1 (loc, type, value, tf_error, &valid_p);
+
+    	  result = build_const_cast_1 (loc, type, result, tf_none, &valid_p);
+
+/* If we ran into a problem, make sure we complained.  */
+    	  gcc_assert (seen_error ());
+    
+

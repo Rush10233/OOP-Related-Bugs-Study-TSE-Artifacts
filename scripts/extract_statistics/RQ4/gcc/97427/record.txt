@@ -1,0 +1,10 @@
+Commit:	b39a402
+./gcc/cp/constexpr.c	2370,2370
+./gcc/cp/constexpr.c	2372,2372
+./gcc/cp/constexpr.c	2374,2374
+./gcc/cp/constexpr.c	2541,2553
+Commit:	62d1958
+./gcc/cp/constexpr.c	2518,2518
+./gcc/cp/constexpr.c	2520,2520
+./gcc/cp/constexpr.c	2522,2522
+./gcc/cp/constexpr.c	2689,2701

@@ -1,0 +1,6 @@
+/* We should have fixed this in reshape_init.  */
+    	gcc_unreachable ();
+
+/* We should have fixed this in reshape_init.  */
+    	gcc_unreachable ();
+

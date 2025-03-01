@@ -1,0 +1,8 @@
+"%<.%s%> designator used multiple times in "
+    			  "the same initializer list",
+    			  IDENTIFIER_POINTER (designator));
+
+    	      }
+    	    else
+    	      IDENTIFIER_MARKED (designator) = 1;
+

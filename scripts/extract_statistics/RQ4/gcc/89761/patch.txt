@@ -1,0 +1,4 @@
+if (TREE_CODE (arg_pack) == ARGUMENT_PACK_SELECT)
+    
+        arg_pack = ARGUMENT_PACK_SELECT_FROM_PACK (arg_pack);
+

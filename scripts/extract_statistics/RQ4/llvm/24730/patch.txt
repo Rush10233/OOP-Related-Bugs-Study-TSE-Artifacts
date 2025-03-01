@@ -1,0 +1,5 @@
+const Expr *InitExpr = Field->getInClassInitializer();
+      if (!InitExpr)
+        return EndOfTU ? NoMismatch : AnalyzeLater;
+      if (const CXXNewExpr *NE = getNewExprFromInitListOrExpr(InitExpr)) {
+

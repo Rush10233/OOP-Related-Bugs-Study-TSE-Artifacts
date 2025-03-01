@@ -1,0 +1,154 @@
+23625	Assertion failed: !SpecializedTemplate.is<SpecializedPartialSpecialization*>() && "Already set to a class template partial specialization!"
+24938	constexpr variables do not accept bitshift with results of constexpr functions
+25689	defaulted destructor pervents using constexpr on defaulted copy/move-operator
+25692	User-declared destructor makes all the defaulted assignment operators non-constexpr defined
+24409	Linker error on Clang on Windows targeting gcc when exporting individual member functions
+25429	Optimizing loop with sizeof("literal")
+23303	Default template argument not being picked up when there's a forward declaration with no default template argument
+25731	Compilation error in namespace alias (7.3.2) due to r253283
+23558	BOOST + MSVC
+22192	When printing an ambiguous-overload error that causes a substitution failure, print the candidates
+23802	cast-expression from lvalue to rvalue reference fails while reinterpret_cast for the same conversion works
+22435	Partial ordering finds candidate to be more specialized despite contrary P/A pair
+24030	Class declaration in the same declarative region as using declaration - Missing diagnostic message
+22710	Valid return type deduction for lambda functions not valid in C++14
+24440	Fold expressions not evaluated when directly cast with a C-style cast
+23029	[cwg777] Diagnostic issued for function parameter pack following a default argument
+24770	wrong template partial specialization instantiated in constexpr context
+25449	Compiler crashed when function returns auto
+23334	crash in Sema::CleanupVarDeclMarking with [=] lambda
+25740	attribute visibility problems when using operator overloading (new/delete)
+23602	clang++ fails to compile libstdc++ debug/vector with -D_GLIBCXX_DEBUG -std=c++11 with libstdc++ 5.1+
+22197	False warning: unsequenced modification and access to
+23808	segmentation fault in std::unique_ptr virtual destructor
+22444	[MSVC] 'mutable' must be allowed to be applied to references
+24033	Redeclaration inconsistency between struct and int
+22748	Incorrect handling of /openmp- compiler option in --drive-mode=cl mode.
+24473	Variable template cannot be used as dependent name
+23034	GCC ABI incompatibility visible in forward_as_tuple
+24798	clang crashes on invalid code on x86_64-linux-gnu
+24816	clang: error: clang frontend command failed due to signal
+25472	__attribute__((deprecated)) doesn't appear for implicit construction of rvalues [-Wdeprecated-declarations]
+23402	Variable template instantiations in template arguments not considered constant expression
+25823	"error in backend" with -mno-sse
+22250	"Uncorrected typos!" assertion failure on invalid
+23824	clang allows invalid lambda expression in decltype
+22465	An extra InitListExpr in r227424 likely caused by DR1467
+24058	Suspicious warning on non-deducible parameter pack
+22759	(Brace-) Copy-Initialization of lambda-member variables of class-templates fails with “error: excess elements in struct initializer”
+24511	clang segfaults on anonymous struct code
+23103	Crash in Register Scavenger
+24857	Crash when building Qt code
+25513	is_constructible<int (int)> should be false
+23414	[AArch64]Clang crash on an assertion when calling a NEON intrinsic with incorrect type in CPP file
+25849	Wrong code produced by -fslp-vectorize-aggressive
+23629	Crash with constexpr virtual function
+22257	Assertion failed: (DISubprogram(Scope).describes(MF->getFunction())), function getOrCreateRegularScope, file LexicalScopes.cpp, line 179
+23828	[ms] "Expected MSInheritanceAttr on the CXXRecordDecl!" assert when passing address of base class member function through subclass access path
+22491	[cwg948] "type name does not allow constexpr specifier to be specified" using constexpr in condition
+24070	crash Assertion failed: ((isDependent || !ObjectType->isIncompleteType()) && "Caller should have completed object type")
+22763	Explicit template instantiations do not instantiate explicitly defaulted special members
+24526	clang exiting with no error and no object file generated
+23107	Constructor inheritance on template not working correctly
+24863	crasher: "typedef &decltype(auto)::x T;"
+25529	fatal error: error in backend: Starting a function before ending the previous one! (MinGW64/MSYS2)
+23421	ICE when using __underlying_type builtin trait in template alias or function template signature
+25857	Clang hangs in template instantiation after diagnosing C++11 narrowing in NTTP.
+23638	crashed compiling ICU in chromium on Linux
+22307	Template may multiply define friend function
+23840	SFINAE failure with variadic non-type template parameter
+22492	[cwg1204] Range-for rejects constexpr on loop variable
+24077	Corrupted member initialization via initialization list when in a lambda nested in a templated function
+22789	bootstrap failure on linux
+24568	Regression (crash) about write to read-only variable
+23120	clang segfault involving diagnostics, constexpr default initialization, and user-defined literals
+24893	Crash on class containing function named free()
+25542	Crash when deleting a member with an initialiser of a class template
+23428	Aarch64: libstdc++ std::thread, when compiled with clang, "pure virtual method called"
+25890	Possibility pass a pointer as an array dimension in new-expr
+23657	no matching constructor for initialization of 'string' (aka 'basic_string<char>')
+22310	incorrect function overloading resolution with initializer-list param
+23849	Implement CWG 1579: Return by converting move constructor
+22493	Assertion `VD->isThisDeclarationADefinition() && !VD->isExternallyVisible() && "Broken AliasAttr handled late!"
+24097	clang produces hidden symbol when gcc produces a default one
+22793	Crash when explicitly instantiating a class template with a protected defaulted dtor, after a use of that dtor
+24587	Assertion failed: !T->isDependentType()
+23135	[C++11/14] Body of constexpr function templates instantiated too eagerly in unevaluated operands
+24903	clang fails to use constexpr variable template as default value of non-type template argument
+25586	Compliler crash.
+23429	IBM Power8 (ppc64le): libstdc++ std::thread, when compiled with clang, "pure virtual method called"
+25910	clang allows two var definitions with the same mangled name
+23658	List-initialization not considering conversions
+22327	Accepts-invalid (?): clang allows accessing private typedef of specialization in the specialization's template
+23853	Assertion `isa<LabelDecl>(D) && "declaration not instantiated in this scope"' failed -- in instantiation of struct inside lambda inside template struct
+22565	static constexpr floating member incorrectly identified as odr-used
+22809	struct type alias with 'using' doesn't match correct constructor when defined inside the class
+24597	constexpr: Read of object whose lifetime has ended
+23140	Typo correction of pointer-to-member operand raises "placeholders should have been weeded out by now" assertion
+24921	Specializing template methods with enum parameters not working in 3.7
+25601	malloc(): smallbin double linked list corrupted when building AOSP
+23432	[CRASH REPORT] BitcoinArmory caused this (3.4.1 compiles the same code fine)
+23661	[3.5] Crash when creating tuple with at least 5 elements using libc++
+22328	std::index_sequence_for<T...>::size() returns always 1
+23855	Generic lambda causes linker error when capturing non-POD object with implicit copy ctor
+22566	Expected narrowing conversion during list initialization of bool from double
+24121	[OPENMP] canonical loop rejected when comparison has implicit conversions or destruction
+22845	[C++14] new expression should cause compilation error if expression in a noptr-new-declarator is erroneous
+24612	clang accepts "constexpr void f() { throw; }"
+25100	clang++ reaches UNREACHABLE code at lib/AST/StmtProfile.cpp:851
+23156	gcc5 defines __GLIBCXX_TYPE_INT_N_0 and __GLIBCXX_BITSIZE_INT_N_0 in C++ mode
+25619	no matching conversion for functional-style cast from 'void' to 'X'
+23441	Compile time optimization generates wrong results with AVX intrinsics
+23667	Clang fails to dllexport explicit class template specialization definition with previous explicit template specialization declaration
+22352	single-element initializer_list and overload resolution
+23856	Generic lambda init-captures can't be captured again
+22588	Error when explicitly specify template parameters for variadic template function that uses variadic arguments in return type specification
+24164	Lifetime of temporaries created in init-captures
+22855	Assertion failed: Ptr must be a pointer to Val type!
+24626	clang incorrectly deduces ambiguous template from base class
+25117	Assertion `Kind.getKind() == InitializationKind::IK_Copy || Kind.isExplicitCast() || Kind.getKind() == InitializationKind::IK_DirectList' failed
+23165	abort with "pure virtual method called", when a virtual function is called on a POD temporary passed as an argument (in program compiled w/ clang trunk -std=c++11)
+24987	spec cpu2006 benchmark 400 perlbench : compiler segfaults with O3 flto
+25635	MSVC __declspec(property) - Indexed accessor property not supported correctly (clang 4.2.1)
+23484	Clang fail: Assertion `!Old || Old->getCachedLinkage() == D->getCachedLinkage()' failed
+23707	Code in the false branch of an "if" is executed
+22354	generic lambda capture fails with undefined reference to custom copy ctor
+23892	Crash in WinCOFFObjectWriter::recordRelocation related to EH
+22591	Compilation of exported class gives errors when class is not copyable and/or copy-assignable
+24212	ICE on use of alias template resulting in array type nested within class template
+22877	Missing destructors for default arguments created during list-initialization of array
+24629	Crash on explicit instantiation
+25181	Crash on invalid when class template method definition is moved inline without removing the template or classname
+23186	Type correction leads to null dereference
+24989	Regression: Lambda with no return behaves differently from lambda with empty return
+25636	MSVC __declspec(property) - Indexed accessor property not supported correctly (clang 4.2.1)
+23513	msvc14 Compilation failed
+23716	Frontend crashes on clang::Sema::tryCaptureVariable
+22367	Incomplete AST related to std::initializer_list
+23904	[DR1591] Clang cannot deduce the template parameter when function parameter type is reference to array and template argument is braced-init-list
+22601	defaulted class template parameters dropped when rededucing template template parameter
+24246	Assertion failed: isa<X>(Val) && "cast<Ty>() argument of incompatible type!", include/llvm/Support/Casting.h, line 237
+22924	support braced-init-list of exact size + array new with no default ctor as an extension
+24630	-Wnonnull should not warn when in an unevaluated context.
+25250	Template argument deduction via alias template fails spuriously
+23194	Assertion failed: (isa<LabelDecl>(D) && "declaration not instantiated in this scope")
+25022	A void* handler doesn't catch nullptr_t, violating 15.3p3.4
+25656	gcc cxx11 abi and clang
+23514	Out-of-sequence initialiser causes clang to crash
+22079	implement cwg1941 to support inheriting constructor SFINAE
+23733	[Windows] Clang doesn't support std::atomic<function pointer> with Microsoft's STL
+22388	Constructor inheritance trouble, and crash on error
+23931	Clang allows a virtual member function inside a union
+22639	clang fails to propagate constness to union member in template
+24289	non-deterministic Codegen crash for function static initializer_list
+22939	char16_t & char32_t for LLVM-vs2014(_xp)
+24651	bootstrap on windows is broken
+25264	Segfault when using undefined variable in lambda that is assigned to std::function
+23215	Pure virtual warning for qualified calls
+25055	[cwg616] member access on a prvalue should produce an xvalue, not a prvalue
+25661	Clang frontend doesn't deal with class member function pointer passed as template argument correctly on Windows
+23526	Clang fails to apply const to a function typedef.
+22117	clang crashes on c++14 lambda -- clang ToT (trunk 225356)
+23740	dependent expr created by delayed typo correction leads to crash
+22396	clang: infinite loop in clang::Sema::CreateOverloadedBinOp on invalid input
+23942	Some invalid pure-specifiers incorrectly accepted

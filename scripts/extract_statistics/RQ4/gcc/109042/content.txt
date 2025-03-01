@@ -1,0 +1,18 @@
+get emitted.  */
+          for (i = unemitted_tinfo_decls->length ();
+    	   unemitted_tinfo_decls->iterate (--i, &t);)
+
+    	  {
+    	    reconsider = true;
+    	    unemitted_tinfo_decls->unordered_remove (i);
+
+          /* Emit it right away if not emitted already.  */
+          if (DECL_INITIAL (tinfo) == NULL_TREE)
+    	{
+    	  bool ok = emit_tinfo_decl (tinfo);
+    	  gcc_assert (ok);
+
+    	}
+        }
+    }
+

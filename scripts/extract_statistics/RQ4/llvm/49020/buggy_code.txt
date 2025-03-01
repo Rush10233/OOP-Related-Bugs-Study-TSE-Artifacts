@@ -1,0 +1,7 @@
+unsigned &StructuredIndex);
+
+                                              unsigned &StructuredIndex) {
+
+        CheckSubElementType(Entity, IList, CurrentObjectType, Index,
+                            StructuredList, StructuredIndex);
+

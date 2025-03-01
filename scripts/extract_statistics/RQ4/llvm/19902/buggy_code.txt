@@ -1,0 +1,4 @@
+diag::err_attribute_dllimport_static_field_definition);
+
+          VD->setInvalidDecl();
+

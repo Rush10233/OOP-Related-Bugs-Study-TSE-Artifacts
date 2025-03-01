@@ -1,0 +1,4 @@
+Result->setKind(DD && !DD->isDeleted()
+                            ? SpecialMemberOverloadResult::Success
+                            : SpecialMemberOverloadResult::NoMemberOrDeleted);
+

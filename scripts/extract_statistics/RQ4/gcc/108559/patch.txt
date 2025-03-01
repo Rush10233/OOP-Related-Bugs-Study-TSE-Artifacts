@@ -1,0 +1,22 @@
+/* True if any of the element initializers in CTOR are TARGET_EXPRs that are
+       not expected to elide, e.g. because unsafe_copy_elision_p is true.  */
+    
+    static bool
+    any_non_eliding_target_exprs (tree ctor)
+    {
+      for (const constructor_elt &e : *CONSTRUCTOR_ELTS (ctor))
+        {
+          if (TREE_CODE (e.value) == TARGET_EXPR
+    	  && !TARGET_EXPR_ELIDING_P (e.value))
+    	return true;
+        }
+      return false;
+    }
+    
+
+      else if (TREE_CODE (from) == CONSTRUCTOR
+
+    	   && ((flag_exceptions
+    		&& TYPE_HAS_NONTRIVIAL_DESTRUCTOR (TREE_TYPE (from)))
+    	       || any_non_eliding_target_exprs (from)))
+

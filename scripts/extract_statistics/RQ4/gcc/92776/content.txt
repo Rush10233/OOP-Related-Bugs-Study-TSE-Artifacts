@@ -1,0 +1,16 @@
+return coerced_args;
+    }
+    
+
+    /* Returns 1 if template args OT and NT are equivalent.  */
+    
+    int
+
+      if (nt == any_targ_node || ot == any_targ_node)
+        return true;
+    
+
+      if (TREE_CODE (nt) == TREE_VEC)
+        /* For member templates */
+        return TREE_CODE (ot) == TREE_VEC && comp_template_args (ot, nt);
+

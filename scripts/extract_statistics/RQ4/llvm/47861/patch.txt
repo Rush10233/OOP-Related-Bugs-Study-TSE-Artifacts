@@ -1,0 +1,135 @@
+def note_lambda_capture_initializer : Note<
+      "%select{implicitly |}2captured%select{| by reference}3"
+      "%select{%select{ due to use|}2 here|"
+      " via initialization of lambda capture %0}1">;
+
+    /// Determine if this is a compound assignment operator.
+    inline bool isCompoundAssignmentOperator(OverloadedOperatorKind Kind) {
+      return Kind >= OO_PlusEqual && Kind <= OO_PipeEqual;
+    }
+    
+
+        TemporaryCopy,
+        LambdaCaptureInit,
+
+      union {
+        const Decl *D = nullptr;
+        const LambdaCapture *Capture;
+      };
+
+      IndirectLocalPathEntry(EntryKind K, Expr *E, const LambdaCapture *Capture)
+          : Kind(K), E(E), Capture(Capture) {}
+
+    
+      // Assume that all assignment operators with a "normal" return type return
+      // *this, that is, an lvalue reference that is the same type as the implicit
+      // object parameter (or the LHS for a non-member operator$=).
+      OverloadedOperatorKind OO = FD->getDeclName().getCXXOverloadedOperator();
+      if (OO == OO_Equal || isCompoundAssignmentOperator(OO)) {
+        QualType RetT = FD->getReturnType();
+        if (RetT->isLValueReferenceType()) {
+          ASTContext &Ctx = FD->getASTContext();
+          QualType LHST;
+          auto *MD = dyn_cast<CXXMethodDecl>(FD);
+          if (MD && MD->isCXXInstanceMember())
+            LHST = Ctx.getLValueReferenceType(MD->getThisObjectType());
+          else
+            LHST = MD->getParamDecl(0)->getType();
+          if (Ctx.hasSameType(RetT, LHST))
+            return true;
+        }
+      }
+    
+
+        LambdaExpr::capture_iterator CapI = LE->capture_begin();
+
+          assert(CapI != LE->capture_end());
+          const LambdaCapture &Cap = *CapI++;
+
+          if (Cap.capturesVariable())
+            Path.push_back({IndirectLocalPathEntry::LambdaCaptureInit, E, &Cap});
+
+          if (Cap.capturesVariable())
+            Path.pop_back();
+        }
+      }
+    
+      // Assume that a copy or move from a temporary references the same objects
+      // that the temporary does.
+      if (auto *CCE = dyn_cast<CXXConstructExpr>(Init)) {
+        if (CCE->getConstructor()->isCopyOrMoveConstructor()) {
+          if (auto *MTE = dyn_cast<MaterializeTemporaryExpr>(CCE->getArg(0))) {
+            Expr *Arg = MTE->getSubExpr();
+            Path.push_back({IndirectLocalPathEntry::TemporaryCopy, Arg,
+                            CCE->getConstructor()});
+            visitLocalsRetainedByInitializer(Path, Arg, Visit, true,
+                                             /*EnableLifetimeWarnings*/false);
+            Path.pop_back();
+          }
+
+    /// Whether a path to an object supports lifetime extension.
+    enum PathLifetimeKind {
+      /// Lifetime-extend along this path.
+      Extend,
+      /// We should lifetime-extend, but we don't because (due to technical
+      /// limitations) we can't. This happens for default member initializers,
+      /// which we don't clone for every use, so we don't have a unique
+      /// MaterializeTemporaryExpr to update.
+      ShouldExtend,
+      /// Do not lifetime extend along this path.
+      NoExtend
+    };
+    
+
+    /// supposed to lifetime-extend along.
+    static PathLifetimeKind
+    shouldLifetimeExtendThroughPath(const IndirectLocalPath &Path) {
+      PathLifetimeKind Kind = PathLifetimeKind::Extend;
+
+        if (Elem.Kind == IndirectLocalPathEntry::DefaultInit)
+          Kind = PathLifetimeKind::ShouldExtend;
+        else if (Elem.Kind != IndirectLocalPathEntry::LambdaCaptureInit)
+          return PathLifetimeKind::NoExtend;
+
+      return Kind;
+
+        case IndirectLocalPathEntry::TemporaryCopy:
+
+    
+        case IndirectLocalPathEntry::LambdaCaptureInit:
+          if (!Path[I].Capture->capturesVariable())
+            continue;
+          return Path[I].E->getSourceRange();
+
+          switch (shouldLifetimeExtendThroughPath(Path)) {
+          case PathLifetimeKind::Extend:
+
+          case PathLifetimeKind::ShouldExtend:
+
+            break;
+    
+          case PathLifetimeKind::NoExtend:
+
+            break;
+
+              Diag(DiagLoc, shouldLifetimeExtendThroughPath(Path) !=
+                                    PathLifetimeKind::NoExtend
+
+          case IndirectLocalPathEntry::TemporaryCopy:
+
+          case IndirectLocalPathEntry::VarInit: {
+
+    
+          case IndirectLocalPathEntry::LambdaCaptureInit:
+            if (!Elem.Capture->capturesVariable())
+              break;
+            // FIXME: We can't easily tell apart an init-capture from a nested
+            // capture of an init-capture.
+            const VarDecl *VD = Elem.Capture->getCapturedVar();
+            Diag(Elem.Capture->getLocation(), diag::note_lambda_capture_initializer)
+                << VD << VD->isInitCapture() << Elem.Capture->isExplicit()
+                << (Elem.Capture->getCaptureKind() == LCK_ByRef) << VD
+                << nextPathEntryRange(Path, I + 1, L);
+            break;
+          }
+

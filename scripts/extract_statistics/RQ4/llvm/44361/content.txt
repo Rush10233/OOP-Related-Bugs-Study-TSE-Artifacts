@@ -1,0 +1,8 @@
+}
+        }
+    
+
+        return new (Context) CXXBaseSpecifier(SpecifierRange, Virtual,
+                                              Class->getTagKind() == TTK_Class,
+                                              Access, TInfo, EllipsisLoc);
+

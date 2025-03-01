@@ -1,0 +1,35 @@
+if (auto_var_p (lhs_ref.ref))
+    	continue;
+    
+          if (DECL_P (lhs_ref.ref))
+
+    	  if (!POINTER_TYPE_P (TREE_TYPE (lhs_ref.ref))
+    	      || lhs_ref.deref > 0)
+    	    continue;
+
+          else if (TREE_CODE (lhs_ref.ref) == SSA_NAME)
+
+    	  tree var = SSA_NAME_VAR (lhs_ref.ref);
+    	  if (TREE_CODE (var) == PARM_DECL && DECL_BY_REFERENCE (var))
+    	    /* Avoid by-value arguments transformed into by-reference.  */
+    	    continue;
+    
+    	}
+          else if (TREE_CODE (lhs_ref.ref) == MEM_REF)
+    	{
+    	  tree arg = TREE_OPERAND (lhs_ref.ref, 0);
+    	  if (TREE_CODE (arg) == SSA_NAME)
+    	    {
+    	      gimple *def_stmt = SSA_NAME_DEF_STMT (arg);
+    	      if (!gimple_nop_p (def_stmt))
+    		return;
+    	    }
+
+    	  if (DECL_P (lhs_ref.ref))
+    	    loc = DECL_SOURCE_LOCATION (lhs_ref.ref);
+    	  else if (EXPR_HAS_LOCATION (lhs_ref.ref))
+    	    loc = EXPR_LOCATION (lhs_ref.ref);
+    
+    	  if (loc != UNKNOWN_LOCATION)
+    	    inform (loc, "%qE declared here", lhs_ref.ref);
+

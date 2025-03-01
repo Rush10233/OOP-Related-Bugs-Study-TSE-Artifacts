@@ -1,0 +1,50 @@
+static bool is_admissible_throw_operand_or_catch_parameter (tree, bool,
+    							    tsubst_flags_t);
+
+          if (!is_admissible_throw_operand_or_catch_parameter (decl, false,
+    							   tf_warning_or_error))
+
+      if (exp && !is_admissible_throw_operand_or_catch_parameter (exp,
+    							      /*is_throw=*/true,
+    							      complain))
+        return error_mark_node;
+
+    static bool
+    complete_ptr_ref_or_void_ptr_p (tree type, tree from, tsubst_flags_t complain)
+
+      type = complete_type_or_maybe_complain (type, from, complain);
+
+        return false;
+
+      const bool is_ptr = TYPE_PTR_P (type);
+
+          else if (!complete_type_or_maybe_complain (core, from, complain))
+    	return false;
+
+      return true;
+
+    is_admissible_throw_operand_or_catch_parameter (tree t, bool is_throw,
+    						tsubst_flags_t complain)
+
+         an incomplete type, an abstract class type, or an rvalue reference
+
+      if (!complete_ptr_ref_or_void_ptr_p (type, expr, complain))
+
+      else if (abstract_virtuals_error (is_throw ? ACU_THROW : ACU_CATCH, type,
+    				    complain))
+
+          if (complain & tf_error)
+    	error ("cannot declare %<catch%> parameter to be of rvalue "
+    	       "reference type %qT", type);
+
+          if (complain & tf_error)
+    	{
+    	  if (is_throw)
+    	    error_at (cp_expr_loc_or_input_loc (expr),
+    		      "cannot throw expression of type %qT because it involves "
+    		      "types of variable size", type);
+    	  else
+    	    error ("cannot catch type %qT because it involves types of "
+    		   "variable size", type);
+    	}
+

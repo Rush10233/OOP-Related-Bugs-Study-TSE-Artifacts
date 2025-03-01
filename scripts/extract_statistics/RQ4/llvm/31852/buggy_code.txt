@@ -1,0 +1,28 @@
+Obj->template getSectionContentsAsArray<Elf32_Word>(&Sec));
+
+!((NewQType->isDependentType() || OldQType->isDependentType()) &&
+              New->isLocalExternDecl())) {
+
+        if ((NewQType->isDependentType() || OldQType->isDependentType()) &&
+            New->isLocalExternDecl()) {
+          // It's OK if we couldn't merge types for a local function declaraton
+          // if either the old or new type is dependent. We'll merge the types
+          // when we instantiate the function.
+
+        }
+
+      // Any declarations should be put into redeclaration chains except for
+      // friend declaration in a dependent context that names a function in
+      // namespace scope.
+
+      // This allows to compile code like:
+
+      //       void func();
+      //       template<typename T> class C1 { friend void func() { } };
+      //       template<typename T> class C2 { friend void func() { } };
+
+      // This code snippet is a valid code unless both templates are instantiated.
+      return !(D->getLexicalDeclContext()->isDependentContext() &&
+               D->getDeclContext()->isFileContext() &&
+               D->getFriendObjectKind() != Decl::FOK_None);
+

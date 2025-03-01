@@ -1,0 +1,197 @@
+	Unnamed: 0	Issue ID	Title
+0	0	98620	SFINAE code in class specialization generates warnings
+1	1	98626	UBSAN: vec.h:591:30: runtime error: member access within null pointer of type 'struct vec'
+2	2	98711	internal compiler error on instantiation of c++20 template class with 2 constrained and disabled destructors
+3	3	98714	[c++14] Nested type with variadic template class argument can't be expanded into using outer variadic types
+4	4	98579	[11 Regression] ICE: in output_constructor_regular_field, at varasm.c:5491 since r11-2720-g91e6226f880b0482
+5	5	98687	[11 Regression] ICE tree check: expected tree that contains ‘decl minimal’ structure, have ‘overload’ in diagnose_name_conflict, at cp/name-lookup.c:2729 since r11-6652-g796ead19f85372e5
+6	6	98742	[11 Regression] ICE: tree check: expected class 'type', have 'exceptional' (error_mark) in finish_omp_clauses, at cp/semantics.c:7435 since r11-6752-ga6d22fb21c6f1ad7
+7	7	98624	UBSAN: gcc/cp/module.cc:5895:29: runtime error: member call on null pointer of type 'struct module_state'
+8	8	98659	[11 Regression] ICE tree check: expected tree that contains ‘decl common’ structure, have ‘error_mark’ in maybe_instantiate_noexcept, at cp/pt.c:25445 since r11-6476-gaf362af18f405c34
+9	9	98938	throw calls move constructor
+10	10	98802	[10 Regression] class template argument deduce guide leads infinite recursive since r10-4719-g9b41ebbcdf9e3328
+11	11	98994	[11 Regression] Empty type with [[no_unique_address]] in union with constructor is not a constant expression since r11-6918
+12	12	98744	[11 Regression] ICE in gimple_call_arg, at gimple.h:3246 since r11-6735-g424deca72b63e644
+13	13	98551	[10/11 Regression] ICE in replace_result_decl, at cp/constexpr.c:2150
+14	14	98604	Passing constexpr by const reference causes excessive memory usage during compilation
+15	15	99016	[9/10/11 Regression] Internal compiler error from decltype of binary operator when one operand is a prvalue function call
+16	16	99208	[modules] ICE with partitions & instantiations of linkage-typedef structs
+17	17	98972	internal compiler error: Segmentation fault signal terminated program cc1plus
+18	18	99103	Initializer-list constructors in CTAD for vector is still wrong
+19	19	99213	Suboptimal pretty printing of local class type when type's context contains a class template specialization
+20	20	98545	[11 Regression] ICE in write_expression, at cp/mangle.c:3352
+21	21	98843	Building simple c++ modules example fails but successful with -save-temps
+22	22	98515	"[11 Regression] Possible regression causing ""is protected within this context"" error"
+23	23	98625	UBSAN: gcc/cp/module.cc:977:15: runtime error: left shift of negative value -1
+24	24	98805	exception abort on mac os 11 (big sur)
+25	25	98770	[modules] including certain stdlib headers in the global module fragment of different modules causes conflicting global module declarations
+26	26	98570	[8/9/10/11 Regression] ICE: canonical types differ for identical types
+27	27	98745	[11 Regression] ICE: Segmentation fault (in print_mem_ref / c_pretty_printer::primary_expression)
+28	28	98844	Deduction guides don't inhibit the aggregate deduction candidate
+29	29	99040	[modules] partitions & using declarations
+30	30	99119	Class Types in Non-Type Template Parameters - ICE with templates nested
+31	31	98976	[constexpr, coroutines] co_return in a switch statement doesn't make a generic lambda non-constexpr
+32	32	99423	[modules] ICE tree check: expected tree_vec, have ggc_freed in lookup_template_class_1, at cp/pt.c:9803
+33	33	99116	[11 Regression] ICE in set_identifier_type_value_with_scope, at cp/name-lookup.c:4764
+34	34	99071	[modules] ICE with initializer_list & iostream
+35	35	99132	[11 Regression] ICE in C++20 mode for constexpr not_null evaluation -- in cxx_eval_indirect_ref, at cp/constexpr.c:4905
+36	36	99153	[11 Regression] ICE: depset::hash::make_dependency
+37	37	98707	ICE using std::string in a module partition
+38	38	99566	designated initialization rejects explicit constructor
+39	39	98951	gcc/cp/call.c: 4 * member functions can be marked const
+40	40	99640	Internal compiler error: in lookup_template_class_1, at cp/pt.c:9895
+41	41	99335	Comma Operator Evaluation Order - C++ 11 and newer
+42	42	99500	[11 Regression] ICE: tree check: expected tree that contains 'decl minimal' structure, have 'error_mark' in cp_parser_requirement_parameter_list, at cp/parser.c:28828
+43	43	99251	[11 Regression] inconsistent -Wnonnull warning behaviour with dynamic_cast
+44	44	99344	[modules] import failure with intermediate namespace
+45	45	99366	[11 Regression] Partial specialization with constrained placeholder NTTP is not more specialized
+46	46	99425	[modules] ICE tree check: expected tree_vec, have tree_list in lookup_template_class_1, at cp/pt.c:9803
+47	47	98741	[modules] ICE/SIGSEGV reading compiled module cluster
+48	48	99393	Unoptimized tailcall with char and short as parameter (x86)
+49	49	99389	[modules] bad serialization of data
+50	50	99170	[modules] ICE in get_merge_kind with std::string NSDMI
+51	51	99482	[modules] ICE tree check: expected tree_vec, have addr_expr in lookup_template_class_1, at cp/pt.c:9803
+52	52	99483	[modules] ICE tree check: expected tree_vec, have bind_expr in lookup_template_class_1, at cp/pt.c:9803
+53	53	99424	[modules] ICE tree check: expected tree_vec, have error_mark in lookup_template_class_1, at cp/pt.c:9803
+54	54	99365	[11 Regression] ICE on partial specialization with constrained placeholder NTTP
+55	55	99248	[modules] ICE expected binding_vector, have overload in lookup_elaborated_type_1, at cp/name-lookup.c:8013
+56	56	99543	ICE module compilation ../../gcc/toplev.c:327
+57	57	99509	"[OpenMP] 'omp declare target' for global variable → ""hasn't been marked to be included in the offloaded code"""
+58	58	99528	[modules] ICE with iostream& vector
+59	59	99481	[modules] ICE tree check: expected template_decl, have function_decl in decl_value, at cp/module.cc:7938
+60	60	99108	ICE in ix86_get_function_versions_dispatcher, at config/i386/i386-features.c:2862
+61	61	99480	[modules] ICE in import_entity_index, at cp/module.cc:3952
+62	62	99484	[modules] ICE same canonical type node for different types ‘void’ and ‘std::__void_t<_Op<_Args ...> >’
+63	63	99239	[modules] internal compiler error: in duplicate_decls
+64	64	99047	ICE on simple task coroutine example
+65	65	99565	[11 Regression] Bogus identical branches warning when returning references to union members
+66	66	99775	segmentation fault on template variable as template parameter
+67	67	98642	"[10 Regression] wrong ""use of deleted function"" error"
+68	68	99427	[modules] in system headers: non-constant condition for static assertion
+69	69	98990	[10 Regression] ICE when two overloaded functions return `auto &&` and one accepts an `auto` parameter since r10-6571-ga6ee556c7659877b
+70	70	98611	[concepts][10 Regression] ICE in get_underlying_template, at cp/pt.c:6494 since r10-3735-gcb57504a55015891
+71	71	99284	[modules] ICE in key_mergeable, at cp/module.cc:10441
+72	72	99586	Use of class template identifier checked for CTAD before instantiation
+73	73	99833	[8/9 Regression] structured binding + if init + generic lambda = internal compiler error
+74	74	99283	[modules] ICE in assert_definition, at cp/module.cc:4608
+75	75	99897	ICE Segmentation fault when operator appear in template parameter-list
+76	76	100210	[[nodiscard]] constructor causes warning on arm-linux-gnueabihf
+77	77	98810	[9/10 Regression] [C++20] ICE in tsubst_copy, at cp/pt.c:16771
+78	78	99747	[modules] ICE in make_dependency, at cp/module.cc:12396
+79	79	99855	[modules] ICE Error reporting routines re-entered.
+80	80	99844	[9/10 Regression] ICE: unexpected expression 'B' of kind template_parm_index
+81	81	99864	Abbreviated member function template doesn't compile with default function argument
+82	82	99697	ICE for class template partial specialization over non-template (structural class template) parameter of deduced class type
+83	83	99374	[8/9/10 Regression] C++17/20 mode fails to recognise pointer-to-member functions of incomplete types in conditional expression
+84	84	99120	[8/9/10 Regression] ICE in -Wshadow in templated member function
+85	85	100421	Internal compiler error when overload resolution fails for prospective destructors.
+86	86	100466	compilation of assignment from initialization list to an object with array member T[N] and non-trivial constructor of T is very slow
+87	87	99831	[10 Regression] ICE: in reshape_init, at cp/decl.c:6720
+88	88	99806	[10 Regression] ICE: in tsubst_copy, at cp/pt.c:17247
+89	89	98899	[10 Regression] ICE in tsubst_copy, at cp/pt.c:16198 since r10-1280-g78f7607db4c53f8c
+90	90	99994	internal compiler error: trying to capture 'f' in instantiation of generic lambda within constraints_satisfied_p
+91	91	99086	including <iterator> and defaulting spaceship operator causes compiler segfault
+92	92	100078	[11 Regression] Rejected code since r11-8137-g84081e2c6bd43a67
+93	93	100101	[11 Regression] ICE with -Wzero-as-null-pointer-constant
+94	94	99803	[9/10/11 Regression] ICE: in make_typename_type, at cp/decl.c:4057
+95	95	100122	template substitution triggers a segfault
+96	96	99033	[9 Regression] ICE in tree_to_poly_int64, at tree.c:3091
+97	97	99362	[10 Regression] invalid unused result
+98	98	100234	[11/12 Regression] Coroutines ICE
+99	99	100807	initialization of global struct with large array leads to huge assembly
+100	100	100296	[10.x regression] offsetof with non-constant-expression offset no longer accepted in C++ mode
+101	101	100240	Compiler crashes with segmentation fault on a chrono library using nvcc
+102	102	99200	__PRETTY_FUNCTION__ used as template parameter causes internal compiler error (segmentation fault)
+103	103	100928	[c++20] ICE with structural type value returned from constexpr function as template argument
+104	104	100963	[11/12 Regression] GCC 11 regression: templated constructor with std::initializer_list<T> is not selected
+105	105	100517	[12 Regression] ICE in rvalue, at cp/tree.c:946 since r12-620-g7a5dd3ed49d1b328
+106	106	99032	GCC accepts attributes on friend declarations (not definitions)
+107	107	100498	SFINAE and static inline function
+108	108	100997	[c++20] parse error when id-expression of constructor is simple-template-id
+109	109	100649	[9/10/11/12 Regression] ICE in coerce_template_parms (releases) or cxx_eval_constant_expression (trunk)
+110	110	100596	[12 Regression] error: attribute appertains to a friend declaration that is not a definition since r12-786-g149061188c7c6ddf
+111	111	100367	[11/12 Regression] Internal compiler error when std::lexicographical_compare_three_way third and fourth argument are reverse iterators
+112	112	100261	[11/12 Regression] ICE: tree check: expected var_decl or type_decl, have error_mark in emit_tinfo_decl, at cp/rtti.c:1643
+113	113	100205	[11/12 Regression] error: invalid use of non-static data member
+114	114	100634	[11/12 Regression] ICE in convert_nontype_argument, at cp/pt.c:7653
+115	115	100659	[11/12 Regression] ICE in supplement_binding_1, at cp/name-lookup.c:2702 since r11-5003-gd50310408f54e380
+116	116	100675	std::string_view::find in constexpr function is not constant expression
+117	117	101174	[12 Regression] CTAD causes instantiation of invalid class specialization since r12-926
+118	118	100723	[9/10/11/12] ICE in tsubst when using std::variant in templated class using CTAD
+119	119	99611	Code compilation issue using templates
+120	120	100054	[11 Regression] internal compiler error: in get_nsdmi
+121	121	100746	NRVO should not introduce aliasing
+122	122	100827	[10/11/12 Regression] Compiler crash with Boost.Bimap and Boost.Xpressive
+123	123	100835	defaulted equality gives wrong answer, if constexpr
+124	124	101277	Assert in constructor generates code for statically checkable expression
+125	125	100797	[10/11 Regression] using declaration causing virtual call with wrongly adjusted this pointer
+126	126	100277	ICE on cuda host code
+127	127	101247	ICE when using static constexpr bool defined in parent-class in nested class constructor requires-clause
+128	128	100599	ICE in tree check: accessed elt 2 of ‘tree_vec’ with 1 elts in tsubst, at cp/pt.c:15649
+129	129	100859	[12 Regression][OpenMP] ICE in tsubst_omp_clauses, at cp/pt.c:17520 since r12-1108-g9a5de4d5af1c10a8
+130	130	101509	Rejects valid construction call with type inference
+131	131	99009	[9/10 Regression] ICE in type_dependent_expression_p, at cp/pt.c:27265
+132	132	100862	using enum member access fail
+133	133	100957	[12 Regression] ICE: Segmentation fault (in copy_tree_body_r)
+134	134	99969	g++ incorrectly thinks a private destructor is available
+135	135	100956	"Unused variable warnings ignore ""if constexpr"" blocks where variables are conditionally used"
+136	136	100979	Nested CTAD fails when the outer object is direct initialized and the inner object is list initialized
+137	137	100065	Conditional explicit doesn't work for deduction guide
+138	138	99262	The decltype-specifier that denotes a destructor in a function call is rejected by GCC
+139	139	101695	calling incorrect destructor of same-name class in anonymous namespaces in separate translation units
+140	140	101032	Regression on parser with g++11 using experimental c++20 (compiles under c++17)
+141	141	101850	Initialising a struct/class variable to itself does not fail at compile time (but throws std::bad_alloc at run time, as expected)
+142	142	101119	Missing the check about modify global variable for __attribute__((const)) function
+143	143	100901	error: array used as initializer on compiling coroutine with initializer list with shared_ptr in it
+144	144	100796	[11 Regression] GCC does not honor #pragma diagnostic ignored when using the integrated preprocessor
+145	145	101888	constexpr default comparison member function disregards the base class
+146	146	100423	Internal compiler error when evaluating a requires-expression referencing variables from outer scope in a function invocation.
+147	147	101040	[11/12 Regression] Internal compiler error: in get_or_insert_ctor_field, at cp/constexpr.c:3571 since r11-7980-gc3d3bb0f03dbd025
+148	148	99495	constexpr virtual destructor is used before its definition
+149	149	100109	[9/10/11 Regression] ICE: unexpected expression 'E' of kind template_parm_index
+150	150	100231	[C++17] Variable template specialization inside a class gives compilation error
+151	151	102038	another case of template function signature incorrectly dropping top-level cv-qualifier with function parameter of decltype from qualified-id of array member variable of template class
+152	152	98832	CTAD fails for alias template of aggregate with specified undeducible template parameter
+153	153	101458	An invalid covaraint return type is accepted
+154	154	99664	Overriding virtual function with different return type (and not covariant) is allowed to compile, when it shouldn’t be
+155	155	100763	Diagnostics of type alias is missing scope
+156	156	100279	[ICE in trunk] ICE caused by negative double NTTP. Error: Two symbols with same comdat_group are not linked by the same_comdat_group list.
+157	157	102167	Constexpr virtual destructors confuse memory leak detection during constant evaluation
+158	158	101498	gcc accepts template code with 'auto' as subtype
+159	159	98554	why the explicit conversion function whose return type is a derived class is not a candidate in the context of direct-initialization for an object of class type
+160	160	101771	"The keyword ""typename"" is illegal used in a using-declaration that introduces the non-type declarations"
+161	161	101775	G++ drops namespace prefix of argument in the referenced function symbol
+162	162	101800	mingw-64 link error with constexpr static variable definition
+163	163	101840	Friendship must be extended on default argument initializer
+164	164	101848	Template metaprogramming errors in v11.1
+165	165	99613	Static variable destruction order race condition
+166	166	99650	ICE when trying to form reference to void in structured binding
+167	167	100828	Arbitrary limit on constraint complexity
+168	168	99318	[10 Regression] -Wdeprecated-declarations where non-should be?
+169	169	99429	[10/11 Regression] ICE for bool return from <=>
+170	170	101663	[11/12 Regression] GCC crashes when assigning one single_view to another.
+171	171	102406	ICE on array declaration sized by a struct member
+172	172	100281	ICE with SImode pointer assignment in C++
+173	173	102444	class definition not allowed to change meaning of previously used name
+174	174	101907	ICE in build_special_member_call (with co_await and initializer list)
+175	175	102488	ICE with default constexpr operator== on class with bitfield
+176	176	101945	[C++] ICE on recursive atomic constraint
+177	177	101355	incorrect `this' in destructor calls when compiling coroutines with ubsan
+178	178	102065	[C++20] Substitution failure of function instantiates its argument
+179	179	102042	specialization after instantiation error possibly rooted from mis-calculating template function signature of parameter of array of template function
+180	180	100718	parameter packs not expanded error with a type member which has the same name as a pack
+181	181	101460	Useless cascade of overload resolution errors for invalid expression
+182	182	99617	gcc/cp/coroutines.cc:2807: member variables not initialised in constructor ?
+183	183	102590	structured binding inside for all loop thinks it is type depedent when it is not (inside a template)
+184	184	101592	ICE in wide_int_to_tree, at tree.c:1427
+185	185	102212	The explicit conversion function should be permitted in direct-initialization of a reference
+186	186	102234	internal compiler error: in type_memfn_rqual, at cp/typeck.c:10389
+187	187	101883	class template argument deduction in non-type template parameter allows explicit deduction guide
+188	188	102248	-Wstringop-overflow false positive
+189	189	102228	lookup_anon_field is quadratic
+190	190	99745	ICE when parameter pack not expanded in bit field
+191	191	102293	[10/11/12 Regression] ICE when compiling Boost.Xpressive (in value_dependent_expression_p, at cp/pt.c:26730)
+192	192	102535	__is_trivially_constructible rejects some trivial cases in aggregate initializations
+193	193	102723	ICE in get_partitioning_class, at symtab.c:2092
+194	194	101725	simple requirement of parameter in defaulted non-type template parameter considered non-dependent
+195	195	102379	missing -Wnarrowing even in instantiated template

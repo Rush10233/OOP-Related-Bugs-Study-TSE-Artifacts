@@ -1,0 +1,23 @@
+bool try_list_ctor = false;
+
+          try_list_ctor = TYPE_HAS_LIST_CTOR (type);
+          if (try_list_ctor && CONSTRUCTOR_NELTS (init) == 1
+
+    	    try_list_ctor = false;
+
+          if (try_list_ctor || is_std_init_list (type))
+
+      /* If this is list-initialization and the class has a list constructor, first
+
+      tree list_cands = NULL_TREE;
+      if (try_list_ctor && cands)
+        for (lkp_iterator iter (cands); iter; ++iter)
+          {
+    	tree dg = *iter;
+
+          }
+      if (list_cands)
+        {
+          fndecl = perform_dguide_overload_resolution (list_cands, args, tf_none);
+    
+

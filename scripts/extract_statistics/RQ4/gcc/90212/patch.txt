@@ -1,0 +1,27 @@
+
+    	      if (want_rval)
+    		/* Since we're doing an lvalue-rvalue conversion, this might
+    		   not be an odr-use, so evaluate the variable directly. */
+    		return RECUR (DECL_CAPTURED_VARIABLE (t), rval);
+    
+
+    		  if (decl_constant_var_p (cap))
+
+
+    	      if (want_rval)
+    		/* Since we're doing an lvalue-rvalue conversion, this might
+    		   not be an odr-use, so evaluate the variable directly. */
+    		return RECUR (DECL_CAPTURED_VARIABLE (t), rval);
+    
+
+    		  if (decl_constant_var_p (cap))
+
+
+    	      if (want_rval)
+    		/* Since we're doing an lvalue-rvalue conversion, this might
+    		   not be an odr-use, so evaluate the variable directly. */
+    		return RECUR (DECL_CAPTURED_VARIABLE (t), rval);
+    
+
+    		  if (decl_constant_var_p (cap))
+

@@ -1,0 +1,3 @@
+Commit:	7c9d4e0
+./clang/lib/Parse/ParseDeclCXX.cpp	2469,2469
+./clang/lib/Parse/ParseDeclCXX.cpp	2477,2477

@@ -1,0 +1,77 @@
+// Allocator for ConversionSequenceLists. We store the first few of these
+        // inline to avoid allocation for small sets.
+
+        /// FIXME: Now that this only allocates ImplicitConversionSequences, do we
+        /// want to un-generalize this?
+
+                              ArrayRef<Expr *> Args,
+
+                              ArrayRef<Expr *> Args,
+
+      /// Emit diagnostics for the diagnose_if attributes on Function, ignoring any
+      /// non-ArgDependent DiagnoseIfAttrs.
+
+      /// Argument-dependent diagnose_if attributes should be checked each time a
+      /// function is used as a direct callee of a function call.
+
+      /// Returns true if any errors were emitted.
+      bool diagnoseArgDependentDiagnoseIfAttrs(const FunctionDecl *Function,
+                                               const Expr *ThisArg,
+                                               ArrayRef<const Expr *> Args,
+                                               SourceLocation Loc);
+
+      /// Emit diagnostics for the diagnose_if attributes on Function, ignoring any
+      /// ArgDependent DiagnoseIfAttrs.
+
+      /// Argument-independent diagnose_if attributes should be checked on every use
+      /// of a function.
+
+      /// Returns true if any errors were emitted.
+      bool diagnoseArgIndependentDiagnoseIfAttrs(const FunctionDecl *Function,
+                                                 SourceLocation Loc);
+
+                     const Expr *ThisArg, ArrayRef<const Expr *> Args,
+                     bool IsMemberFunction, SourceLocation Loc, SourceRange Range,
+
+    /// functions, NULL arguments passed to non-NULL parameters, and diagnose_if
+    /// attributes.
+
+                         const Expr *ThisArg, ArrayRef<const Expr *> Args,
+                         bool IsMemberFunction, SourceLocation Loc,
+                         SourceRange Range, VariadicCallType CallType) {
+
+    
+      if (FD)
+        diagnoseArgDependentDiagnoseIfAttrs(FD, ThisArg, Args, Loc);
+
+      checkCall(FDecl, Proto, /*ThisArg=*/nullptr, Args, /*IsMemberFunction=*/true,
+                Loc, SourceRange(), CallType);
+
+    
+      Expr *ImplicitThis = nullptr;
+
+        ImplicitThis = Args[0];
+
+      } else if (IsMemberFunction)
+        ImplicitThis =
+            cast<CXXMemberCallExpr>(TheCall)->getImplicitObjectArgument();
+    
+      checkCall(FDecl, Proto, ImplicitThis, llvm::makeArrayRef(Args, NumArgs),
+
+      checkCall(Method, nullptr, /*ThisArg=*/nullptr, Args,
+                /*IsMemberFunction=*/false, lbrac, Method->getSourceRange(),
+
+      checkCall(NDecl, Proto, /*ThisArg=*/nullptr,
+
+      checkCall(/*FDecl=*/nullptr, Proto, /*ThisArg=*/nullptr,
+
+        if (diagnoseArgIndependentDiagnoseIfAttrs(FD, Loc))
+
+    
+      if (CheckFunctionCall(Method, CE,
+                            Method->getType()->castAs<FunctionProtoType>()))
+        return ExprError();
+    
+
+                llvm::makeArrayRef(&Arg, NumArgs), OCS, true);
+

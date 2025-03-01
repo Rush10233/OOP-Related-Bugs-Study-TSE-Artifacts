@@ -1,0 +1,42 @@
+for (unsigned i = 0; i < comps.length(); ++i)
+        {
+          tree comp = comps[i];
+
+          tree ctype = TREE_TYPE (comp);
+          comp_cat_tag tag = cat_tag_for (ctype);
+          /* build_comparison_op already checked this.  */
+
+    	      continue;
+    	    }
+    
+
+    	  tree overload = NULL_TREE;
+    	  tree comp = build_new_op (field_loc, code, flags, lhs_mem, rhs_mem,
+    				    NULL_TREE, &overload,
+
+    	      bad = true;
+    	      continue;
+    	    }
+
+    	  comps.safe_push (comp);
+    	}
+          if (code == SPACESHIP_EXPR && is_auto (rettype))
+
+    	{
+    	  tree comp = comps[i];
+    	  tree eq, retval = NULL_TREE, if_ = NULL_TREE;
+
+    	  if (info.defining)
+
+    	  /* Spaceship is specified to use !=, but for the comparison category
+    	     types, != is equivalent to !(==), so let's use == directly.  */
+    	  if (code == EQ_EXPR)
+
+    	      finish_return_stmt (retval);
+    	      finish_else_clause (if_);
+    	      finish_if_stmt (if_);
+
+    	    }
+    	}
+          if (info.defining)
+

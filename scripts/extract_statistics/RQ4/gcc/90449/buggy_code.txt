@@ -1,0 +1,12 @@
+static void warn_about_ambiguous_bases (tree);
+
+    warn_about_ambiguous_bases (tree t)
+
+    	warning (0, "direct base %qT inaccessible in %qT due to ambiguity",
+    		 basetype, t);
+
+    	  warning (OPT_Wextra, "virtual base %qT inaccessible in %qT due "
+    		   "to ambiguity", basetype, t);
+
+      warn_about_ambiguous_bases (t);
+

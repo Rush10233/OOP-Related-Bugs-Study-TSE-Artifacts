@@ -1,0 +1,10 @@
+Commit:	42a9e4e
+./gcc/cp/pt.c	10734,10751
+Commit:	2902f2d
+./gcc/cp/pt.c	10733,10741
+./gcc/testsuite/g++.dg/cpp2a/concepts-memtmpl4.C	27,27
+Commit:	1b57a9f
+./gcc/cp/pt.c	10736,10753
+Commit:	2e345e4
+./gcc/cp/pt.c	10731,10739
+./gcc/testsuite/g++.dg/cpp2a/concepts-memtmpl4.C	27,27

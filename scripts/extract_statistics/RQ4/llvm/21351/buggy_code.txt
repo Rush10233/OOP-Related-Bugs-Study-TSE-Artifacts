@@ -1,0 +1,16 @@
+if (const TemplateTemplateParmDecl *TTP
+                                         = dyn_cast<TemplateTemplateParmDecl>(ND)) {
+
+        return;
+      }
+
+      mangleUnscopedName(ND->getTemplatedDecl());
+
+      if (const TemplateTemplateParmDecl *TTP
+                                         = dyn_cast<TemplateTemplateParmDecl>(ND)) {
+
+        return;
+
+      manglePrefix(getEffectiveDeclContext(ND), NoFunction);
+      mangleUnqualifiedName(ND->getTemplatedDecl());
+

@@ -1,0 +1,23 @@
+? SourceRange(LBraceLoc, RBraceLoc)
+            : Kind.getParenOrBraceRange();
+    
+
+        if (auto *Shadow = dyn_cast<ConstructorUsingShadowDecl>(
+                Step.Function.FoundDecl.getDecl())) {
+
+            return ExprError();
+        }
+
+    
+        CurInit = S.CheckForImmediateInvocation(
+            CXXTemporaryObjectExpr::Create(
+
+                Entity.getType().getNonLValueExprType(S.Context), TSInfo,
+                ConstructorArgs, ParenOrBraceRange, HadMultipleCandidates,
+                IsListInitialization, IsStdInitListInitialization,
+                ConstructorInitRequiresZeroInit),
+
+      } else {
+        CXXConstructExpr::ConstructionKind ConstructKind =
+          CXXConstructExpr::CK_Complete;
+

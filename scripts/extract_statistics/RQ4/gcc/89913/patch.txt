@@ -1,0 +1,4 @@
+/* The underlying type may have been ill-formed. Don't proceed.  */
+          if (!orig_type)
+    	break;
+

@@ -1,0 +1,47 @@
+(cp_parser *, bool, bool, bool, bool);
+
+        = (cp_parser_global_scope_opt (parser, /*current_scope_valid_p=*/false)
+           != NULL_TREE);
+
+    					    declarator_p)
+
+    				     bool is_declaration)
+
+          bool template_keyword_p;
+
+          else
+    	template_keyword_p = false;
+
+          if (template_keyword_p
+    	  && (!parser->scope
+    	      || (TYPE_P (parser->scope)
+    		  && dependent_type_p (parser->scope))))
+
+    	  /* We're optimizing away the call to cp_parser_lookup_name, but we
+    	     still need to do this.  */
+    	  parser->context->object_type = NULL_TREE;
+    	  return identifier;
+
+/* Tell cp_parser_lookup_name that there was an object, even though it's
+           type-dependent.  */
+        parser->context->object_type = unknown_type_node;
+
+         to a template-id, so we save it here.  */
+      scope = parser->scope;
+
+          if (object_type == unknown_type_node)
+    	/* The object is type-dependent, so we can't look anything up; we used
+    	   this to get the DR 141 behavior.  */
+    	object_type = NULL_TREE;
+
+tree scope;
+      bool typename_p;
+      cp_token *token;
+
+      token = cp_lexer_peek_token (parser->lexer);
+
+      scope = parser->scope ? parser->scope : parser->context->object_type;
+
+      typename_p = (typename_keyword_p && scope && TYPE_P (scope)
+    		&& dependent_type_p (scope));
+

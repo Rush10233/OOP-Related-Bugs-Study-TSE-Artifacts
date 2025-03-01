@@ -1,0 +1,4 @@
+Result = Actions.CorrectDelayedTyposInExpr(ParseExpression());
+
+            /*IsInlineAsmIdentifier=*/false, &Replacement);
+

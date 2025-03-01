@@ -1,0 +1,9 @@
+Commit:	2b7204c
+./gcc/cp/except.cc	1339,1339
+./gcc/cp/except.cc	1341,1341
+Commit:	193321d
+./gcc/cp/except.cc	1348,1348
+./gcc/cp/except.cc	1350,1350
+Commit:	8dfc52a
+./gcc/cp/except.cc	1360,1360
+./gcc/cp/except.cc	1362,1362

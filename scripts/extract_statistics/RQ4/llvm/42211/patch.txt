@@ -1,0 +1,35 @@
+// FIXME: IsHidden reads from Overriding from the middle of a remove_if
+          // over the same sequence! Is this guaranteed to work?
+
+      llvm::SmallVector<CXXMethodDecl*, 4> FinalOverriders;
+      auto AddFinalOverrider = [&](CXXMethodDecl *D) {
+        // If this function is overridden by a candidate final overrider, it is not
+        // a final overrider.
+        for (CXXMethodDecl *OtherD : FinalOverriders) {
+          if (declaresSameEntity(D, OtherD) || recursivelyOverrides(OtherD, D))
+            return;
+        }
+    
+        // Other candidate final overriders might be overridden by this function.
+        FinalOverriders.erase(
+            std::remove_if(FinalOverriders.begin(), FinalOverriders.end(),
+                           [&](CXXMethodDecl *OtherD) {
+                             return recursivelyOverrides(D, OtherD);
+                           }),
+            FinalOverriders.end());
+    
+        FinalOverriders.push_back(D);
+      };
+    
+
+        if (CXXMethodDecl *D = this->getCorrespondingMethodInClass(Base))
+          AddFinalOverrider(D);
+
+      return FinalOverriders.size() == 1 ? FinalOverriders.front() : nullptr;
+
+      // If there final overrider in the dynamic type is ambiguous, we can't
+      // devirtualize this call.
+      if (!DevirtualizedMethod)
+        return nullptr;
+    
+

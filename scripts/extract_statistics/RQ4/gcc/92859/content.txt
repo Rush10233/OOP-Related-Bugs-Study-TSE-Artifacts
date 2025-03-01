@@ -1,0 +1,24 @@
+
+      if (TREE_TYPE (expr) != unknown_type_node)
+        {
+
+          return;
+        }
+    
+
+
+      if (TREE_TYPE (expr) != unknown_type_node)
+        {
+
+          return;
+        }
+    
+
+
+      if (TREE_TYPE (expr) != unknown_type_node)
+        {
+
+          return;
+        }
+    
+

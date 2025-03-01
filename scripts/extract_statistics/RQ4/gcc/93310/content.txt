@@ -1,0 +1,16 @@
+break;
+    
+        case OBJ_TYPE_REF:
+
+    
+        case PLACEHOLDER_EXPR:
+          /* Use of the value or address of the current object.  */
+
+break;
+    
+        case OBJ_TYPE_REF:
+
+    
+        case PLACEHOLDER_EXPR:
+          /* Use of the value or address of the current object.  */
+

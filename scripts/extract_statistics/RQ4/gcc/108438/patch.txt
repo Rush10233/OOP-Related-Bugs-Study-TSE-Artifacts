@@ -1,0 +1,2 @@
+cp_parser_require_end_of_template_parameter_list (parser);
+

@@ -1,0 +1,17 @@
+/// that appear in constant initializers to their evaluated values.  These are
+      /// allocated in a std::map because their address must be stable.
+      llvm::DenseMap<const MaterializeTemporaryExpr *, APValue *>
+
+      if (MayCreate) {
+        APValue *&MTVI = MaterializedTemporaryValues[E];
+        if (!MTVI)
+          MTVI = new (*this) APValue;
+        return MTVI;
+      }
+
+      return MaterializedTemporaryValues.lookup(E);
+
+      if (llvm::Constant *Slot = MaterializedGlobalTemporaryMap[E])
+
+      MaterializedGlobalTemporaryMap[E] = GV;
+

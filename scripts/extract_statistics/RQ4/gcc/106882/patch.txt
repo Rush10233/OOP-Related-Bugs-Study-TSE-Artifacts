@@ -1,0 +1,60 @@
+cpp_define (pfile, "__cpp_implicit_move=202207L");
+
+    	  /* Unless it's really a C++20 lvalue being treated as an xvalue.
+    	     But in C++23, such an expression is just an xvalue, not a special
+    	     lvalue, so the binding is once again ill-formed.  */
+    	  && !(cxx_dialect == cxx20
+
+    extern bool unparenthesized_id_or_class_member_access_p (tree);
+
+    /* Return true if INIT is an unparenthesized id-expression or an
+       unparenthesized class member access.  Used for the argument of
+       decltype(auto).  */
+    
+    bool
+    unparenthesized_id_or_class_member_access_p (tree init)
+    {
+      STRIP_ANY_LOCATION_WRAPPER (init);
+    
+      /* We need to be able to tell '(r)' and 'r' apart (when it's of
+         reference type).  Only the latter is an id-expression.  */
+      if (REFERENCE_REF_P (init)
+          && !REF_PARENTHESIZED_P (init))
+        init = TREE_OPERAND (init, 0);
+      return (DECL_P (init)
+    	  || ((TREE_CODE (init) == COMPONENT_REF
+    	       || TREE_CODE (init) == SCOPE_REF)
+    	      && !REF_PARENTHESIZED_P (init)));
+    }
+    
+
+      /* In C++23, we must deduce the type to int&& for code like
+           decltype(auto) f(int&& x) { return (x); }
+         or
+           auto&& f(int x) { return x; }
+         so we use treat_lvalue_as_rvalue_p.  But don't do it for
+           decltype(auto) f(int x) { return x; }
+         where we should deduce 'int' rather than 'int&&'; transmogrifying
+         INIT to an rvalue would break that.  */
+      tree r;
+      if (cxx_dialect >= cxx23
+          && context == adc_return_type
+          && (!AUTO_IS_DECLTYPE (auto_node)
+    	  || !unparenthesized_id_or_class_member_access_p (init))
+          && (r = treat_lvalue_as_rvalue_p (maybe_undo_parenthesized_ref (init),
+    					/*return*/true)))
+        init = r;
+    
+
+          const bool id = unparenthesized_id_or_class_member_access_p (init);
+
+      return (lvalue_kind (ref) & clk_rvalueref);
+
+          /* Until C++23, this was only interesting for class type, but in C++23,
+    	 we should do the below when we're converting rom/to a class/reference
+    	 (a non-scalar type).  */
+    	if ((cxx_dialect < cxx23
+    	     ? CLASS_TYPE_P (functype)
+    	     : !SCALAR_TYPE_P (functype) || !SCALAR_TYPE_P (TREE_TYPE (retval)))
+    	    && (moved = treat_lvalue_as_rvalue_p (retval, /*return*/true)))
+

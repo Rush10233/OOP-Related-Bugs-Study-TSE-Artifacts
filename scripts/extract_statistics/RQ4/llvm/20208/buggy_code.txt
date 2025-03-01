@@ -1,0 +1,4 @@
+"%select{| requires a user-provided default constructor}1">;
+
+            << DestType << (bool)DestType->getAs<RecordType>();
+

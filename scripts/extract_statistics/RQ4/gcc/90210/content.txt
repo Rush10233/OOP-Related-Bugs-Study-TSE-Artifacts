@@ -1,0 +1,40 @@
+tree type = TREE_TYPE (tmpl);
+    
+      bool try_list_ctor = false;
+
+    
+      releasing_vec rv_args = NULL;
+      vec<tree,va_gc> *&args = *&rv_args;
+      if (init == NULL_TREE)
+        args = make_tree_vector ();
+      else if (BRACE_ENCLOSED_INITIALIZER_P (init))
+        {
+
+          try_list_ctor = TYPE_HAS_LIST_CTOR (type);
+          if (try_list_ctor && CONSTRUCTOR_NELTS (init) == 1)
+    	{
+
+      if (cands == error_mark_node)
+        return error_mark_node;
+    
+
+      bool elided = false;
+
+        {
+          for (lkp_iterator iter (cands); !elided && iter; ++iter)
+    	if (DECL_NONCONVERTING_P (STRIP_TEMPLATE (*iter)))
+
+          --cp_unevaluated_operand;
+        }
+    
+
+        {
+
+    
+
+    
+
+        }
+    
+      /* If CTAD succeeded but the type doesn't have any explicit deduction
+

@@ -1,0 +1,24 @@
+/* This is only useful in a template.  */
+
+      tree fnname;
+      if(TREE_CODE (e) == MODOP_EXPR)
+        fnname = ovl_op_identifier (true, TREE_CODE (TREE_OPERAND (e, 1)));
+      else
+        fnname = ovl_op_identifier (false, TREE_CODE (e));
+      if (!fnname || fnname == assign_op_identifier)
+
+    	{
+    	  result = build_min_nt_loc (loc, COMPOUND_EXPR, op1, op2);
+    	  maybe_save_operator_binding (result);
+    	  return result;
+    	}
+
+    	{
+    	  tree op = build_min_nt_loc (loc, modifycode, NULL_TREE, NULL_TREE);
+    	  tree rval = build_min_nt_loc (loc, MODOP_EXPR, lhs, op, rhs);
+    	  maybe_save_operator_binding (rval);
+    	  return rval;
+    	}
+
+          tree op = build_nt (modifycode, NULL_TREE, NULL_TREE);
+

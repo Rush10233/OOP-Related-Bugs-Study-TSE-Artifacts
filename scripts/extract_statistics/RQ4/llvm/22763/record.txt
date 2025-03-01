@@ -1,0 +1,3 @@
+Commit:	39bcd4e
+./clang/include/clang/AST/DeclCXX.h	2064,2064
+./clang/test/CodeGenCXX/cxx11-special-members.cpp	42,42

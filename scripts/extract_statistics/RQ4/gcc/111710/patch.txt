@@ -1,0 +1,99 @@
+#define DECL_MODULE_KEYED_DECLS_P(NODE) \
+      (DECL_LANG_SPECIFIC (DECL_MODULE_CHECK (NODE))->u.base.module_keyed_decls_p)
+
+      unsigned concept_p : 1;		   /* applies to vars and functions */
+
+      /* The following four apply to VAR, FUNCTION, TYPE, CONCEPT, & NAMESPACE
+
+      unsigned module_purview_p : 1;	   /* in named-module purview */
+      unsigned module_attach_p : 1;		   /* attached to named module */
+      unsigned module_import_p : 1;		   /* from an import */
+      unsigned module_entity_p : 1;		   /* is in the entitity ary & hash */
+    
+      unsigned module_keyed_decls_p : 1;	   /* has keys, applies to all decls */
+    
+      /* 11 spare bits.  */
+
+      WB (lang->u.base.module_keyed_decls_p);
+
+      RB (lang->u.base.module_keyed_decls_p);
+
+      if (DECL_LANG_SPECIFIC (inner)
+
+      if (DECL_LANG_SPECIFIC (inner)
+
+      if (TREE_CODE (t) == LAMBDA_EXPR
+          && CLASSTYPE_LAMBDA_EXPR (TREE_TYPE (t)))
+        {
+          existing = CLASSTYPE_LAMBDA_EXPR (TREE_TYPE (t));
+          back_refs[~tag] = existing;
+        }
+    
+
+    		{
+    		  /* Lambdas attached to fields are keyed to its class.  */
+    		  if (TREE_CODE (scope) == FIELD_DECL)
+    		    scope = TYPE_NAME (DECL_CONTEXT (scope));
+    		  if (DECL_LANG_SPECIFIC (scope)
+    		      && DECL_MODULE_KEYED_DECLS_P (scope))
+    		    {
+    		      mk = MK_keyed;
+    		      break;
+    		    }
+    		}
+
+    	    gcc_checking_assert (TREE_CODE (scope) == VAR_DECL
+    				 || TREE_CODE (scope) == FIELD_DECL
+    				 || TREE_CODE (scope) == PARM_DECL
+    				 || TREE_CODE (scope) == TYPE_DECL);
+    	    /* Lambdas attached to fields are keyed to the class.  */
+    	    if (TREE_CODE (scope) == FIELD_DECL)
+    	      scope = TYPE_NAME (DECL_CONTEXT (scope));
+
+          else if (mk == MK_keyed
+    	       && DECL_LANG_SPECIFIC (name)
+    	       && DECL_MODULE_KEYED_DECLS_P (name))
+    	{
+    	  gcc_checking_assert (TREE_CODE (container) == NAMESPACE_DECL
+    			       || TREE_CODE (container) == TYPE_DECL);
+    	  if (auto *set = keyed_table->get (name))
+    	    if (key.index < set->length ())
+    	      {
+    		existing = (*set)[key.index];
+    		if (existing)
+    		  {
+    		    gcc_checking_assert
+    		      (DECL_IMPLICIT_TYPEDEF_P (existing));
+    		    if (inner != decl)
+    		      existing
+    			= CLASSTYPE_TI_TEMPLATE (TREE_TYPE (existing));
+    		  }
+    	      }
+    	}
+
+    	    if (is_attached
+    		&& !(state->is_module () || state->is_partition ()))
+
+      /* We only need to deal with lambdas attached to var, field,
+         parm, or type decls.  */
+      if (TREE_CODE (ctx) != VAR_DECL
+          && TREE_CODE (ctx) != FIELD_DECL
+          && TREE_CODE (ctx) != PARM_DECL
+          && TREE_CODE (ctx) != TYPE_DECL)
+
+      /* For fields, key it to the containing type to handle deduplication
+         correctly.  */
+      if (TREE_CODE (ctx) == FIELD_DECL)
+        ctx = TYPE_NAME (DECL_CONTEXT (ctx));
+    
+
+    	{
+    	  pushclass (type);
+    	  start_lambda_scope (TYPE_NAME (type));
+    	}
+
+    	{
+    	  finish_lambda_scope ();
+    	  popclass ();
+    	}
+

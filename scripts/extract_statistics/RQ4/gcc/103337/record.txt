@@ -1,0 +1,11 @@
+Commit:	b94c95f
+./gcc/cp/decl.c	6413,6413
+./gcc/cp/decl.c	6431,6431
+./gcc/cp/decl.c	6491,6493
+./gcc/testsuite/g++.dg/ext/flexary3.C	19,19
+Commit:	e8cd3ed
+Commit:	e3e191b
+./gcc/cp/decl.cc	6602,6602
+./gcc/cp/decl.cc	6620,6620
+./gcc/cp/decl.cc	6686,6688
+./gcc/testsuite/g++.dg/ext/flexary3.C	19,19

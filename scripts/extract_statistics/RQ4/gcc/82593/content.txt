@@ -1,0 +1,34 @@
+
+    extern tree finish_case_label			(location_t, tree, tree);
+    extern tree cxx_maybe_build_cleanup		(tree, tsubst_flags_t);
+
+    
+    /* in decl2.c */
+    extern void record_mangling			(tree, bool);
+
+       initializer.  If it does, an error is issued.  Returns true if CE
+       is valid, i.e., does not have a designated initializer.  */
+    
+
+    check_array_designated_initializer (constructor_elt *ce,
+    				    unsigned HOST_WIDE_INT index)
+    {
+
+    
+    	  if (!cp_parser_parse_definitely (parser))
+    	    designator = NULL_TREE;
+
+    	  if (designator)
+    	    /* Warn the user that they are using an extension.  */
+    	    pedwarn (loc, OPT_Wpedantic,
+
+    
+      FOR_EACH_VEC_SAFE_ELT (v, i, ce)
+        {
+
+    	ce->index = size_int (i);
+
+          gcc_assert (ce->value);
+          ce->value
+    	= massage_init_elt (TREE_TYPE (type), ce->value, nested, complain);
+

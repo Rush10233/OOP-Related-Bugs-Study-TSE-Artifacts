@@ -1,0 +1,64 @@
+
+          if (TREE_CODE (t) == INTEGER_CST
+    	  && TYPE_PTR_P (TREE_TYPE (t))
+
+    	  && !integer_zerop (t))
+    	{
+    	  if (!ctx->quiet)
+
+
+          if (TREE_CODE (t) == INTEGER_CST
+    	  && TYPE_PTR_P (TREE_TYPE (t))
+
+    	  && !integer_zerop (t))
+    	{
+    	  if (!ctx->quiet)
+
+
+          if (TREE_CODE (t) == INTEGER_CST
+    	  && TYPE_PTR_P (TREE_TYPE (t))
+
+    	  && !integer_zerop (t))
+    	{
+    	  if (!ctx->quiet)
+
+return t;
+    		  }
+    	      }
+
+    	    else
+    	      {
+    		/* This detects for example:
+
+
+          if (TREE_CODE (t) == INTEGER_CST
+    	  && TYPE_PTR_P (TREE_TYPE (t))
+
+    	  && !integer_zerop (t))
+    	{
+    	  if (!ctx->quiet)
+
+return t;
+    		  }
+    	      }
+
+    	    else
+    	      {
+    		/* This detects for example:
+
+return t;
+    		  }
+    	      }
+
+    	    else
+    	      {
+    		/* This detects for example:
+
+return t;
+    		  }
+    	      }
+
+    	    else
+    	      {
+    		/* This detects for example:
+

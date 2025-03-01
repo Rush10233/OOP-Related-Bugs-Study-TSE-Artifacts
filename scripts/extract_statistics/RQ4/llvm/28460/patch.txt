@@ -1,0 +1,13 @@
+// If the superclass is in a system header, there's nothing that can be done.
+      // The `delete` (where we emit the warning) can be in a system header,
+      // what matters for this warning is where the deleted type is defined.
+      if (getSourceManager().isInSystemHeader(PointeeRD->getLocation()))
+        return;
+    
+
+InGroup<DeleteNonVirtualDtor>, DefaultIgnore, ShowInSystemHeader;
+
+      "non-virtual destructor">, InGroup<DeleteNonVirtualDtor>, ShowInSystemHeader;
+
+      if (!dtor || dtor->isVirtual() || !CallCanBeVirtual || isUnevaluatedContext())
+

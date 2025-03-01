@@ -1,0 +1,5 @@
+/* Unshare the result.  */
+
+      if (r == t || (TREE_CODE (t) == TARGET_EXPR
+    		 && TARGET_EXPR_INITIAL (t) == r))
+

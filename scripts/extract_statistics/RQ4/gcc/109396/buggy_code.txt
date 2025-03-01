@@ -1,0 +1,26 @@
+if ((warn_init_self || warn_uninitialized)
+
+          else
+
+       assignment.  */
+
+    static void
+
+        return;
+
+        return;
+
+        return;
+
+        return;
+
+        return;
+
+      if (cp_tree_equal (lhs, arg))
+        {
+          auto_diagnostic_group d;
+          if (warning_at (loc, OPT_Wself_move,
+    		      "moving %qE of type %qT to itself", orig_lhs, type))
+    	inform (loc, "remove %<std::move%> call");
+        }
+

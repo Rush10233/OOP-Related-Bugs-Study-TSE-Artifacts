@@ -1,0 +1,2 @@
+result = build_const_cast_1 (loc, type, result, false, &valid_p);
+

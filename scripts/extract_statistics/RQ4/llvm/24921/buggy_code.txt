@@ -1,0 +1,9 @@
+TemplateArgs = NewArgs;
+
+                  ExplicitTemplateArgs, FT, Specialization, Info)) {
+
+      FD->setFunctionTemplateSpecialization(Specialization->getPrimaryTemplate(),
+                                            TemplArgs, /*InsertPos=*/nullptr,
+                                        SpecInfo->getTemplateSpecializationKind(),
+                                            ExplicitTemplateArgs);
+

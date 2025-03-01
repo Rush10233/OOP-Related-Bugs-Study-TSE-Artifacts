@@ -1,0 +1,13 @@
+RequireCompleteDeclContext(D.getCXXScopeSpec(), DC))
+          return nullptr;
+    
+
+        if (isa<CXXRecordDecl>(DC) && !cast<CXXRecordDecl>(DC)->hasDefinition()) {
+          Diag(D.getIdentifierLoc(),
+               diag::err_member_def_undefined_record)
+            << Name << DC << D.getCXXScopeSpec().getRange();
+
+          if (diagnoseQualifiedDeclaration(D.getCXXScopeSpec(), DC,
+                                          Name, D.getIdentifierLoc())) {
+            if (DC->isRecord())
+

@@ -1,0 +1,8 @@
+bool function_body
+
+           && current_binding_level->level_chain->kind == sk_function_parms);
+
+bool function_body
+
+           && current_binding_level->level_chain->kind == sk_function_parms);
+

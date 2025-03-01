@@ -1,0 +1,8 @@
+result = build_over_call (cand, LOOKUP_NORMAL, ocomplain);
+    	    }
+    
+
+    	    /* There won't be a CALL_EXPR.  */;
+    	  else if (result && result != error_mark_node)
+    	    {
+

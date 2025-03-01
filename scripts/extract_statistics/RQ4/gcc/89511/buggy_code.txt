@@ -1,0 +1,4 @@
+else if (UNSCOPED_ENUM_P (qscope))
+
+else if (UNSCOPED_ENUM_P (qscope))
+

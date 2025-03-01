@@ -1,0 +1,12 @@
+Commit:	4efa395
+./clang/lib/Sema/SemaDecl.cpp	1837,1838
+./clang/lib/Sema/SemaDecl.cpp	3378,3380
+./clang/lib/Sema/SemaDeclCXX.cpp	8687,8689
+Commit:	391a98a
+./clang/lib/Sema/SemaDeclCXX.cpp	8689,8692
+./clang/lib/Sema/SemaDeclCXX.cpp	8694,8694
+./clang/lib/Sema/SemaDeclCXX.cpp	8696,8696
+./clang/lib/Sema/SemaDeclCXX.cpp	8700,8700
+./clang/lib/Sema/SemaDeclCXX.cpp	8707,8707
+./clang/lib/Sema/SemaDeclCXX.cpp	8724,8725
+./clang/test/CXX/temp/temp.res/temp.local/p6.cpp	6,6

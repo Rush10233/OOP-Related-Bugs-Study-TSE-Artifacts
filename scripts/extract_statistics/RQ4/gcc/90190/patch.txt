@@ -1,0 +1,13 @@
+if (!BRACE_ENCLOSED_INITIALIZER_P (elt))
+    	    {
+    	      tree etype = TREE_TYPE (elt);
+    	      tree tparms = (INNERMOST_TEMPLATE_PARMS
+    			     (DECL_TEMPLATE_PARMS (tmpl)));
+    	      tree targs = make_tree_vec (TREE_VEC_LENGTH (tparms));
+    	      int err = unify (tparms, targs, type, etype,
+    			       UNIFY_ALLOW_DERIVED, /*explain*/false);
+    	      if (err == 0)
+    		try_list_ctor = false;
+    	      ggc_free (targs);
+    	    }
+

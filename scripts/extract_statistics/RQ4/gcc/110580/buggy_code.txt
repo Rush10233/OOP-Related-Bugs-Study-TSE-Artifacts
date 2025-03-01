@@ -1,0 +1,2 @@
+tree parms = DECL_INNERMOST_TEMPLATE_PARMS (templ);
+

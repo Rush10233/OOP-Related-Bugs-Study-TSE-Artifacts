@@ -1,0 +1,9 @@
+Commit:	49f0c04
+./gcc/cp/call.c	7355,7356
+./gcc/cp/call.c	7358,7365
+./gcc/cp/call.c	8237,8237
+./gcc/cp/decl.c	14642,14642
+./gcc/cp/tree.c	3601,3601
+./gcc/cp/tree.c	3604,3604
+./gcc/cp/tree.c	3606,3606
+./gcc/cp/tree.c	3611,3613

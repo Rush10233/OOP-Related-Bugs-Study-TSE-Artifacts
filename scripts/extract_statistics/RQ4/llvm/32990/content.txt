@@ -1,0 +1,74 @@
+if (auto *CD = dyn_cast<CXXConstructorDecl>(MD)) {
+        GD = GlobalDecl(CD, toCXXCtorType(Type));
+      } else {
+
+        GD = GlobalDecl(cast<CXXDestructorDecl>(MD), toCXXDtorType(Type));
+      }
+    
+
+      return nullptr;
+    }
+    
+
+    bool CGCXXABI::NeedsVTTParameter(GlobalDecl GD) {
+      return false;
+    }
+
+      virtual bool useThunkForDtorVariant(const CXXDestructorDecl *Dtor,
+                                          CXXDtorType DT) const = 0;
+    
+
+      /// Emit destructor variants required by this ABI.
+      virtual void EmitCXXDestructors(const CXXDestructorDecl *D) = 0;
+    
+
+    void CodeGenModule::setDLLImportDLLExport(llvm::GlobalValue *GV,
+                                              GlobalDecl GD) const {
+      const auto *D = dyn_cast<NamedDecl>(GD.getDecl());
+
+      if (const auto *Dtor = dyn_cast_or_null<CXXDestructorDecl>(D)) {
+
+      }
+      setDLLImportDLLExport(GV, D);
+    }
+
+    
+      GVALinkage Linkage = getContext().GetGVALinkageForFunction(D);
+    
+
+    
+      if (isa<CXXConstructorDecl>(D) &&
+          cast<CXXConstructorDecl>(D)->isInheritingConstructor() &&
+
+        return DT != Dtor_Base;
+      }
+    
+
+      void EmitCXXDestructors(const CXXDestructorDecl *D) override;
+    
+      const CXXRecordDecl *
+
+      return Added;
+    }
+    
+
+    void MicrosoftCXXABI::EmitCXXDestructors(const CXXDestructorDecl *D) {
+      // The TU defining a dtor is only guaranteed to emit a base destructor.  All
+      // other destructor variants are delegating thunks.
+
+                                             const CXXDestructorDecl *DD,
+                                             CXXDtorType Type, bool ForVirtualBase,
+                                             bool Delegating, Address This) {
+
+      CGCallee Callee = CGCallee::forDirect(
+                              CGM.getAddrOfCXXStructor(DD, getFromDtorType(Type)),
+                                            DD);
+
+    
+    static void emitCXXDestructor(CodeGenModule &CGM, const CXXDestructorDecl *dtor,
+                                  StructorType dtorType) {
+
+    
+      // The base destructor is equivalent to the base destructor of its
+      // base class if there is exactly one non-virtual base class with a
+

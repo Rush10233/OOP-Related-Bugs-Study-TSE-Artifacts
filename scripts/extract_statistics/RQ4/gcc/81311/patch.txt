@@ -1,0 +1,57 @@
+/* True iff C is a conversion that binds a reference to a prvalue.  */
+    
+    static bool
+    conv_binds_ref_to_prvalue (conversion *c)
+    {
+      if (c->kind != ck_ref_bind)
+        return false;
+      if (c->need_temporary_p)
+        return true;
+    
+      c = next_conversion (c);
+    
+      if (c->kind == ck_rvalue)
+        return true;
+      if (c->kind == ck_user && TREE_CODE (c->type) != REFERENCE_TYPE)
+        return true;
+    
+      return false;
+    }
+    
+
+      /* Core issue 2327: P0135 doesn't say how to handle the case where the
+         argument to the copy constructor ends up being a prvalue after
+         conversion.  Let's do the normal processing, but pretend we aren't
+         actually using the copy constructor.  */
+      bool force_elide = false;
+      if (cxx_dialect >= cxx17
+          && cand->num_convs == 1
+          && DECL_COMPLETE_CONSTRUCTOR_P (fn)
+          && (DECL_COPY_CONSTRUCTOR_P (fn)
+    	  || DECL_MOVE_CONSTRUCTOR_P (fn))
+          && conv_binds_ref_to_prvalue (convs[0]))
+        {
+          force_elide = true;
+          goto not_really_used;
+        }
+    
+
+     not_really_used:
+    
+
+      if (! flag_elide_constructors && !force_elide)
+
+    	   && (force_elide || cp_noexcept_operand == 0))
+
+    		    || force_elide
+
+          if (!trivial && !force_elide)
+
+      gcc_assert (!force_elide);
+    
+
+    	  && !TYPE_HAS_LIST_CTOR (class_type)
+    	  && CONSTRUCTOR_NELTS (arg) == 1)
+    	arg = CONSTRUCTOR_ELT (arg, 0)->value;
+    
+

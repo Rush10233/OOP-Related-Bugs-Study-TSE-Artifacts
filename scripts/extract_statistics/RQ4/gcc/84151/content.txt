@@ -1,0 +1,24 @@
+if (TREE_CODE (TREE_TYPE (fn)) != METHOD_TYPE
+    		  && !is_dummy_object (instance)
+    		  && TREE_SIDE_EFFECTS (instance))
+
+    	      else if (call != error_mark_node
+    		       && DECL_DESTRUCTOR_P (cand->fn)
+    		       && !VOID_TYPE_P (TREE_TYPE (call)))
+
+if (TREE_CODE (TREE_TYPE (fn)) != METHOD_TYPE
+    		  && !is_dummy_object (instance)
+    		  && TREE_SIDE_EFFECTS (instance))
+
+    	      else if (call != error_mark_node
+    		       && DECL_DESTRUCTOR_P (cand->fn)
+    		       && !VOID_TYPE_P (TREE_TYPE (call)))
+
+if (TREE_CODE (TREE_TYPE (fn)) != METHOD_TYPE
+    		  && !is_dummy_object (instance)
+    		  && TREE_SIDE_EFFECTS (instance))
+
+    	      else if (call != error_mark_node
+    		       && DECL_DESTRUCTOR_P (cand->fn)
+    		       && !VOID_TYPE_P (TREE_TYPE (call)))
+

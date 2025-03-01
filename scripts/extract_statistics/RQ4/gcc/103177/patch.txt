@@ -1,0 +1,20 @@
+if (protect == 1 && lfi.ambiguous)
+        {
+          if (complain & tf_error)
+    	{
+    	  error ("request for member %qD is ambiguous", name);
+    	  print_candidates (lfi.ambiguous);
+    	}
+          return error_mark_node;
+        }
+    
+      if (!rval)
+        return NULL_TREE;
+    
+
+      if (protect && !really_overloaded_fn (rval))
+
+    	return error_mark_node;
+
+      if (is_overloaded_fn (rval)
+

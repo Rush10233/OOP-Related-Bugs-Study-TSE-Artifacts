@@ -1,0 +1,29 @@
+
+         we disregard block-scope declarations of "operator new".  */
+      fns = lookup_name_real (fnname, 0, 1, /*block_p=*/false, 0, 0);
+    
+      if (align_arg)
+        {
+
+
+         we disregard block-scope declarations of "operator new".  */
+      fns = lookup_name_real (fnname, 0, 1, /*block_p=*/false, 0, 0);
+    
+      if (align_arg)
+        {
+
+up in the global scope.
+    
+         we disregard block-scope declarations of "operator new".  */
+
+    
+      if (align_arg)
+        {
+
+
+         we disregard block-scope declarations of "operator new".  */
+      fns = lookup_name (fnname, LOOK_where::NAMESPACE);
+    
+      if (align_arg)
+        {
+

@@ -1,0 +1,16 @@
+nargs = call_expr_nargs (non_dep);
+    
+      expected_nargs = cp_tree_code_length (op);
+
+        expected_nargs += 1;
+      gcc_assert (nargs == expected_nargs);
+    
+
+nargs = call_expr_nargs (non_dep);
+    
+      expected_nargs = cp_tree_code_length (op);
+
+        expected_nargs += 1;
+      gcc_assert (nargs == expected_nargs);
+    
+

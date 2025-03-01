@@ -1,0 +1,56 @@
+	Issue ID	Title
+0	26137	Let Wdelete-non-virtual-dtor also fire on explicit destructor calls, not just on destructor calls via delete
+1	26297	Clang incorrectly rejects pointers-to-incomplete-classes as covariant return types when dropping cv-qualifiers
+2	26893	sizeof non-static member of struct nested within class template (-std=c++11)
+3	26841	[accepts-invalid] Member template inside a local class
+4	27155	Template argument deduction for base class fails
+5	27601	[regression] libstdc++4.9 get tuple element by type broke by [267453]: Refactor traversal of bases in deduction of template parameters from base classes of an argument to use CXXRecordDecl::forallBases.
+6	27810	[ms] clang-cl emits definitions for methods of inner classes of template classes of the template has a dllimported instantiation declaration
+7	26050	missing diagnostic for shadowing non-type template parameter with various kinds of entity
+8	26298	msvc exceptions crash clang.exe
+9	26257	"Assertion `!Parents.empty() && ""Found node that is not in the parent map.""' failed in ast matcher"
+10	26362	clang 3.8.0.rc1 fails to build with gcc 4.8.1
+11	28047	clang crashes on valid C++ code: Assertion `parmDepth < FunctionTypeDepth.getDepth()' failed
+12	27129	Template alias crashes template diffing
+13	26935	[ms][dll] Defining a dllimport function should cause it to be exported
+14	26748	clang-cl fails to compile atlctrlw.h header from WTL (delayed template instantiation)
+15	28096	Clang++ selects wrong constructor in return statement (lvalue instead of rvalue)
+16	27342	Segfault with function SFINAE in valid code
+17	27080	"lambda + ""get"" function call with explicit template parameter + duplicate ""return"" = backtrace (no ""using std""): #include <memory> int main () { []() { return get<0> (0); return 0; }; }"
+18	26511	ICE using (I think) inherited constructor template in a local class
+19	28595	some elements of the free array captured in lambda expression can't be destructed when exception happens
+20	27811	[ms] clang-cl emits scalar deleting ctor and vtable for templates with dllimported instantiation declaration
+21	26448	Ternary operator: Incorrect value category
+22	27015	clang crashes when compiling generic lambda with template parameter
+23	29136	[windows/arm] extraneous C++ object destructor call added when objects are passed by value
+24	26354	regression: Compilation hangs with -O2 -mavx for certain input (valid code)
+25	26738	clang-cl fails to compile atlctrlw.h header from WTL
+26	28978	Assertion in setImplicitMoveConstructorIsDeleted() fails
+27	27576	Clang compiler segmentation fault
+28	28060	clang crashes on valid C++11 code: Assertion `Lookup.size() == 1' failed
+29	28885	Regression concerning inheriting constructor
+30	28080	clang-cl does not accept incomplete type in exception specification
+31	28100	clang crashes on valid C++11 code: Assertion `!SpecInfo->isExplicitSpecialization()' failed
+32	27047	clang crashes on valid C++11 code
+33	28394	out-of-line declaration of C++17 inline variables should make definition non-discardable
+34	30844	Using override on a overridden destructor produces an error
+35	28023	"clang crashes on C++ code with shadowed template parameter: Assertion `Access != AS_none && ""Access specifier is AS_none inside a record decl""' failed"
+36	28195	Clang allows ambiguous derived-to-base pointer conversion.
+37	28683	clang fails to properly handle a certain template definition involving pointers to member functions
+38	27994	"clang crashes on valid C++11 code: Assertion `!isNull() && ""Cannot retrieve a NULL type pointer""' failed"
+39	28494	"clang crashes on invalid C++14 code with __make_integer_seq: Assertion `isa<FunctionTemplateDecl>(Template) && ""Only function templates are possible here""' failed"
+40	28623	"segmentation fault on invalid code with ""clang++ -std=c++11"" on x86_64-linux-gnu"
+41	30586	Clang-cl Friend class error: elaborated type refers to a type alias
+42	26724	ICE on complex lambda calls
+43	28470	constexpr if statement not taking explicit operator bool
+44	29099	Clang crashes when parsing lambda with try catch and undefined identifiers
+45	30361	clang segfaults when compiling template member function that calls destructor
+46	27666	Regression(r268727): clang-cl crashes parsing qos2.h
+47	28360	clang-cl crash on an overload resolution + template deduction
+48	28651	clang crashes on C++ code invoking __builtin_alloca with undeclared identifier
+49	26586	Clang crashes with internal compiler error when compiling a simple program with templates
+50	30449	Segfault when move-assigning a std::map with an aligned Key
+51	28072	Compilation of a function in a large C++ project with -flto leads to bitcode files that can't be linked together with llvm-link
+52	28105	"clang crashes on C++ code with invalid default argument for constructor: Assertion `Val && ""isa<> used on a null pointer""' failed"
+53	30305	Inheriting constructors import special members -- Causes runtime slicing
+54	30440	crash on valid c++ code on x86_64-linux-gnu with -std=c++14 (void {anonymous}::CXXNameMangler::mangleFunctionParam(const clang::ParmVarDecl*): Assertion `parmDepth < FunctionTypeDepth.getDepth()' failed.)

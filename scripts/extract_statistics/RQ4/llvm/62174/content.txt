@@ -1,0 +1,25 @@
+return OldM == NewM;
+    }
+    
+
+      return isa<UsingShadowDecl>(D) ||
+             isa<UnresolvedUsingTypenameDecl>(D) ||
+             isa<UnresolvedUsingValueDecl>(D);
+    }
+    
+
+    static void RemoveUsingDecls(LookupResult &R) {
+      LookupResult::Filter F = R.makeFilter();
+      while (F.hasNext())
+
+          F.erase();
+    
+      F.done();
+
+        // containing the two f's declared in X, but neither of them
+        // matches.
+    
+        RemoveUsingDecls(Previous);
+      }
+    
+

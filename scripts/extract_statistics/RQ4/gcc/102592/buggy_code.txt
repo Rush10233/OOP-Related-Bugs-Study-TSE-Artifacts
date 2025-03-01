@@ -1,0 +1,87 @@
+: _M_pathname(_S_convert(__first, __last))
+
+    	_M_append(_S_convert(__first, __last));
+
+    	_M_concat(_S_convert(__first, __last));
+
+        template<typename _Iter>
+          static auto
+          _S_convert(_Iter __first, _Iter __last)
+          { return _S_convert(__detail::__string_from_range(__first, __last)); }
+    
+
+: _M_pathname(_S_convert(__first, __last))
+
+    	_M_append(_S_convert(__first, __last));
+
+    	_M_concat(_S_convert(__first, __last));
+
+        template<typename _Iter>
+          static auto
+          _S_convert(_Iter __first, _Iter __last)
+          { return _S_convert(__detail::__string_from_range(__first, __last)); }
+    
+
+// either a basic_string_view or basic_string containing the
+
+        inline basic_string_view<_CharT, _Traits>
+
+        inline const basic_string_view<_CharT, _Traits>&
+
+        inline auto
+
+          if constexpr (is_pointer_v<decay_t<_Source>>)
+    	return basic_string_view{&*__source};
+
+    	  using value_type
+    	    = typename iterator_traits<_Source>::value_type;
+    	  basic_string<value_type> __str;
+
+      template<typename _Tp>
+        using __value_t = typename remove_reference_t<
+          decltype(__detail::__effective_range(std::declval<_Tp>()))>::value_type;
+
+      template<typename _Tp, typename _Val = __value_t<_Tp>>
+
+      template<typename _Tp, typename _Val = __value_t<_Tp>>
+
+      // Create a string or string view from an iterator range.
+
+          static_assert(__is_encoded_char<_EcharT>);
+
+    #if __cpp_lib_concepts
+          constexpr bool __contiguous = std::contiguous_iterator<_InputIterator>;
+    #else
+          constexpr bool __contiguous
+    	= is_pointer_v<decltype(std::__niter_base(__first))>;
+    #endif
+          if constexpr (__contiguous)
+
+    	  const auto* __f = std::__to_address(std::__niter_base(__first));
+    	  const auto* __l = std::__to_address(std::__niter_base(__last));
+    	  return basic_string_view<_EcharT>(__f, __l - __f);
+
+    	// Conversion requires contiguous characters, so create a string.
+    	return basic_string<_EcharT>(__first, __last);
+
+        // basic_string_view<value_type> from a range (either the effective
+        // range of a Source parameter, or a pair of InputIterator parameters),
+
+        // If the value_type of the range value type is path::value_type,
+        // no encoding conversion is performed. If the range is contiguous
+        // a string_view
+    
+        static string_type
+        _S_convert(string_type __str)
+        { return __str; }
+    
+
+          _S_convert(const _Tp& __str)
+
+    	if constexpr (is_same_v<_Tp, string_type>)
+    	  return __str;
+    	else if constexpr (is_same_v<_Tp, basic_string_view<value_type>>)
+    	  return __str;
+    	else if constexpr (is_same_v<typename _Tp::value_type, value_type>)
+    	  return basic_string_view<value_type>(__str.data(), __str.size());
+

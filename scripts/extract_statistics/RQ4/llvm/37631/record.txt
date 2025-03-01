@@ -1,0 +1,3 @@
+Commit:	e863297
+./clang/include/clang/Basic/DiagnosticSemaKinds.td	2118,2120
+./clang/lib/Sema/SemaDeclCXX.cpp	3110,3113

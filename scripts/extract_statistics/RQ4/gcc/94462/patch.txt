@@ -1,0 +1,4 @@
+&& DECL_ARTIFICIAL (olddecl)
+          /* A C++20 implicit friend operator== uses the normal path (94462).  */
+          && !DECL_HIDDEN_FRIEND_P (olddecl))
+

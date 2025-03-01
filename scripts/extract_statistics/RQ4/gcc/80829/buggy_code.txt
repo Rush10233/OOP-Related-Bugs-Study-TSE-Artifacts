@@ -1,0 +1,4 @@
+CONSTRUCTOR_NO_IMPLICIT_ZERO (result) = false;
+
+CONSTRUCTOR_NO_IMPLICIT_ZERO (result) = false;
+

@@ -1,0 +1,4 @@
+if (!type || !CLASS_TYPE_P (type) || !processing_template_decl)
+
+if (!type || !CLASS_TYPE_P (type) || !processing_template_decl)
+

@@ -1,0 +1,4 @@
+time to implicitly capture a dependent type.  */
+
+          && dependent_type_p (TREE_TYPE (decl)))
+

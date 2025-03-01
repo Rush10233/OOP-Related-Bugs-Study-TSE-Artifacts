@@ -1,0 +1,21 @@
+
+
+    	  /* NAME may refer to a static data member, in which case there is
+    	     one copy of the data member that is shared by all the objects of
+    	     the class.  So NAME can be unambiguously referred to even if
+    	     there are multiple indirect base classes containing NAME.  */
+    	  const base_access ba = [scope, name] ()
+    	    {
+    	      if (identifier_p (name))
+    		{
+    		  tree m = lookup_member (scope, name, /*protect=*/0,
+    					  /*want_type=*/false, tf_none);
+    		  if (!m || shared_member_p (m))
+    		    return ba_any;
+    		}
+    	      return ba_check;
+    	    } ();
+    
+
+    	  access_path = lookup_base (object_type, scope, ba, NULL, complain);
+

@@ -1,0 +1,32 @@
+and where the reference binding (if any) binds directly.  */
+    
+      for (conversion *c = conv;
+
+           c = next_conversion (c))
+        {
+          switch (c->kind)
+    	{
+    	  /* A conversion function is OK.  If it isn't constexpr, we'll
+    	     complain later that the argument isn't constant.  */
+    	case ck_user:
+
+    	  /* The lvalue-to-rvalue conversion is OK.  */
+    	case ck_rvalue:
+    	  /* Array-to-pointer and function-to-pointer.  */
+
+if (any_strictly_viable (*candidates))
+    	return;
+        }
+
+    
+      /* Expand the CONSTRUCTOR into a new argument vec.  */
+      vec<tree, va_gc> *new_args;
+
+        instantiate_type (type, expr, complain);
+      else if (invalid_nonstatic_memfn_p (loc, expr, complain))
+        /* We gave an error.  */;
+
+      else
+        {
+          range_label_for_type_mismatch label (TREE_TYPE (expr), type);
+

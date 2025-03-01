@@ -1,0 +1,2 @@
+if (!TREE_TYPE (dest) || !INDIRECT_TYPE_P (TREE_TYPE (dest)))
+

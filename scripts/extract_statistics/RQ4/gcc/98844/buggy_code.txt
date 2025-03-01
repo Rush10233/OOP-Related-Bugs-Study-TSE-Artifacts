@@ -1,0 +1,3 @@
+if (tree guide = maybe_aggr_guide (tmpl, init, args))
+        cands = lookup_add (guide, cands);
+

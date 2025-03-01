@@ -1,0 +1,26 @@
+{
+      if (identifier_p (member))
+        {
+
+    	{
+
+    	  if (abi_warn_or_compat_version_crosses (11))
+    	    G.need_abi_warning = 1;
+    	}
+
+      else if (dependent_name (expr))
+        {
+          tree name = dependent_name (expr);
+
+          write_unqualified_id (name);
+        }
+      else
+
+    the nullptr expression.
+    
+    Version 15, which first appeared in G++ 11, changes the mangling of
+
+    
+    See also @option{-Wabi}.
+    
+

@@ -1,0 +1,13 @@
+Commit:	ef2ace6
+./gcc/cp/init.c	42,43
+./gcc/cp/init.c	1841,1842
+./gcc/cp/init.c	1857,1857
+./gcc/cp/init.c	1913,1913
+./gcc/cp/init.c	1930,1931
+./gcc/cp/init.c	1947,1947
+./gcc/cp/init.c	2016,2016
+./gcc/cp/init.c	2035,2035
+./gcc/cp/init.c	2061,2061
+./gcc/cp/init.c	2099,2099
+./gcc/cp/init.c	2107,2107
+./gcc/testsuite/g++.dg/cpp0x/pr78765.C	11,11

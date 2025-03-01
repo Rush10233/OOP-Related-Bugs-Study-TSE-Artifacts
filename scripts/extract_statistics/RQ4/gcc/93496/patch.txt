@@ -1,0 +1,2 @@
+array = finish_compound_literal (array, new_ctor, complain, fcl_c99);
+

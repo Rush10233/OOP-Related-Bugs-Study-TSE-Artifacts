@@ -1,0 +1,17 @@
+/* Prune explicit deduction guides in copy-initialization context.  */
+
+      if (flags & LOOKUP_ONLYCONVERTING)
+
+      if (call == error_mark_node
+          && (complain & tf_warning_or_error))
+
+          error ("class template argument deduction failed:");
+
+          ++cp_unevaluated_operand;
+          call = build_new_function_call (cands, &args, complain | tf_decltype);
+          --cp_unevaluated_operand;
+
+          if (elided)
+    	inform (input_location, "explicit deduction guides not considered "
+    		"for copy-initialization");
+

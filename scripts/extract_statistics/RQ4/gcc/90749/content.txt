@@ -1,0 +1,17 @@
+DECL_INSTANTIATING_NSDMI_P (member) = 1;
+    
+    	  bool pushed = false;
+
+    	    {
+    	      push_to_top_level ();
+
+    	      pushed = true;
+    	    }
+    
+    	  gcc_checking_assert (!processing_template_decl);
+    
+
+    
+    	  start_lambda_scope (member);
+    
+

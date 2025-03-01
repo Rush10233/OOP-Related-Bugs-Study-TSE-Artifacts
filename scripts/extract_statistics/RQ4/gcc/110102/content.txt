@@ -1,0 +1,16 @@
+if (has_non_trivial_temporaries (first))
+        return NULL_TREE;
+    
+
+      init_elttype = cp_build_qualified_type (init_elttype, TYPE_QUAL_CONST);
+      tree arr = build_array_of_n_type (init_elttype, CONSTRUCTOR_NELTS (init));
+      return finish_compound_literal (arr, init, tf_none);
+
+if (has_non_trivial_temporaries (first))
+        return NULL_TREE;
+    
+
+      init_elttype = cp_build_qualified_type (init_elttype, TYPE_QUAL_CONST);
+      tree arr = build_array_of_n_type (init_elttype, CONSTRUCTOR_NELTS (init));
+      arr = finish_compound_literal (arr, init, tf_none);
+

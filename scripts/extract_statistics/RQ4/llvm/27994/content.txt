@@ -1,0 +1,13 @@
+QualType Sema::getCurrentThisType() {
+      DeclContext *DC = getFunctionLevelDeclContext();
+      QualType ThisTy = CXXThisTypeOverride;
+
+      if (CXXMethodDecl *method = dyn_cast<CXXMethodDecl>(DC)) {
+        if (method && method->isInstance())
+          ThisTy = method->getThisType(Context);
+      }
+
+      }
+    
+      // If we are within a lambda's call operator, the cv-qualifiers of 'this'
+

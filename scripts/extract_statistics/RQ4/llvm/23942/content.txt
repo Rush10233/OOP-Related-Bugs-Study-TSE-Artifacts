@@ -1,0 +1,16 @@
+}
+    }
+    
+
+    /// AddInitializerToDecl - Adds the initializer Init to the
+    /// declaration dcl. If DirectInit is true, this is C++ direct
+    /// initialization rather than copy initialization.
+
+        // With declarators parsed the way they are, the parser cannot
+        // distinguish between a normal initializer and a pure-specifier.
+        // Thus this grotesque test.
+
+          CheckPureMethod(Method, Init->getSourceRange());
+        else {
+          Diag(Method->getLocation(), diag::err_member_function_initialization)
+

@@ -1,0 +1,8 @@
+Commit:	aeb50b3
+./clang/include/clang/Basic/DiagnosticSemaKinds.td	6454,6454
+./clang/include/clang/Sema/DeclSpec.h	1496,1496
+./clang/lib/Parse/ParseDecl.cpp	4728,4728
+./clang/lib/Sema/SemaDeclCXX.cpp	6820,6820
+./clang/lib/Sema/SemaDeclCXX.cpp	6854,6856
+./clang/test/CXX/drs/dr3xx.cpp	1222,1222
+./clang/test/SemaCXX/conversion-function.cpp	175,180

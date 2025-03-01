@@ -1,0 +1,47 @@
+static int complete_ptr_ref_or_void_ptr_p (tree, tree);
+    static bool is_admissible_throw_operand_or_catch_parameter (tree, bool);
+
+          if (!is_admissible_throw_operand_or_catch_parameter (decl, false))
+
+      if (exp != NULL_TREE)
+        {
+          if (!is_admissible_throw_operand_or_catch_parameter (exp, true))
+    	return error_mark_node;
+        }
+
+    static int
+    complete_ptr_ref_or_void_ptr_p (tree type, tree from)
+
+      int is_ptr;
+    
+
+      type = complete_type_or_else (type, from);
+
+        return 0;
+
+      is_ptr = TYPE_PTR_P (type);
+
+          else if (!complete_type_or_else (core, from))
+    	return 0;
+
+      return 1;
+
+    is_admissible_throw_operand_or_catch_parameter (tree t, bool is_throw)
+
+         an incomplete type, an abstract class type, or an rvalue reference 
+
+      if (!complete_ptr_ref_or_void_ptr_p (type, expr))
+
+      else if (abstract_virtuals_error (is_throw ? ACU_THROW : ACU_CATCH, type))
+
+          error ("cannot declare %<catch%> parameter to be of rvalue "
+    	     "reference type %qT", type);
+
+          if (is_throw)
+    	error_at (cp_expr_loc_or_input_loc (expr),
+    		  "cannot throw expression of type %qT because it involves "
+    		  "types of variable size", type);
+          else
+    	error ("cannot catch type %qT because it involves types of "
+    	       "variable size", type);
+

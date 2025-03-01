@@ -1,0 +1,2 @@
+Diag(NewFD->getLocation(), diag::err_constexpr_virtual);
+

@@ -1,0 +1,26 @@
+if (!RD || (RD->isUnion() && !RD->field_empty()))
+        return true;
+
+        if (isReadByLvalueToRvalueConversion(Field->getType()))
+
+    /// Determine if a class has any fields that might need to be copied by a
+    /// trivial copy or move operation.
+    static bool hasFields(const CXXRecordDecl *RD) {
+      if (!RD || RD->isEmpty())
+        return false;
+      for (auto *FD : RD->fields()) {
+        if (FD->isUnnamedBitfield())
+          continue;
+        return true;
+      }
+      for (auto &Base : RD->bases())
+        if (hasFields(Base.getType()->getAsCXXRecordDecl()))
+          return true;
+      return false;
+    }
+    
+
+           (MD->isTrivial() && hasFields(MD->getParent())))) {
+
+           (Definition->isTrivial() && hasFields(Definition->getParent())))) {
+

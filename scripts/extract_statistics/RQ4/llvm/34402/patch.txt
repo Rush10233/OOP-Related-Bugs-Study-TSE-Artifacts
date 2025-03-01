@@ -1,0 +1,6 @@
+for (auto &Candidate : CandidateSet) {
+          if (Candidate.Function && Candidate.Function->isDeleted())
+            continue;
+
+        }
+

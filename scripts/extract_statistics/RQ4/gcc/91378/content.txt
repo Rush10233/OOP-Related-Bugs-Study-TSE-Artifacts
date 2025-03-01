@@ -1,0 +1,54 @@
+}
+          else if (push_tinst_level (fn))
+    	{
+
+    	  push_access_scope (fn);
+    	  push_deferring_access_checks (dk_no_deferred);
+    	  input_location = DECL_SOURCE_LOCATION (fn);
+    
+    	  /* If needed, set current_class_ptr for the benefit of
+    	     tsubst_copy/PARM_DECL.  */
+    	  tree tdecl = DECL_TEMPLATE_RESULT (DECL_TI_TEMPLATE (fn));
+
+    					/*function_p=*/false,
+    					/*i_c_e_p=*/true);
+    
+    	  /* Build up the noexcept-specification.  */
+    	  spec = build_noexcept_spec (noex, tf_warning_or_error);
+    
+
+    	  pop_deferring_access_checks ();
+    	  pop_access_scope (fn);
+    	  pop_tinst_level ();
+
+    	}
+          else
+    	spec = noexcept_false_spec;
+
+}
+          else if (push_tinst_level (fn))
+    	{
+
+    	  push_access_scope (fn);
+    	  push_deferring_access_checks (dk_no_deferred);
+    	  input_location = DECL_SOURCE_LOCATION (fn);
+    
+    	  /* If needed, set current_class_ptr for the benefit of
+    	     tsubst_copy/PARM_DECL.  */
+    	  tree tdecl = DECL_TEMPLATE_RESULT (DECL_TI_TEMPLATE (fn));
+
+    					/*function_p=*/false,
+    					/*i_c_e_p=*/true);
+    
+    	  /* Build up the noexcept-specification.  */
+    	  spec = build_noexcept_spec (noex, tf_warning_or_error);
+    
+
+    	  pop_deferring_access_checks ();
+    	  pop_access_scope (fn);
+    	  pop_tinst_level ();
+
+    	}
+          else
+    	spec = noexcept_false_spec;
+

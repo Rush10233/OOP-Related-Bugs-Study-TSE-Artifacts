@@ -1,0 +1,16 @@
+&& ! (DECL_LANG_SPECIFIC (decl)
+    		     && DECL_NOT_REALLY_EXTERN (decl)))
+    	{
+
+    	}
+          /* A variable definition.  */
+          else if (DECL_FUNCTION_SCOPE_P (decl) && !TREE_STATIC (decl))
+
+&& ! (DECL_LANG_SPECIFIC (decl)
+    		     && DECL_NOT_REALLY_EXTERN (decl)))
+    	{
+
+    	}
+          /* A variable definition.  */
+          else if (DECL_FUNCTION_SCOPE_P (decl) && !TREE_STATIC (decl))
+

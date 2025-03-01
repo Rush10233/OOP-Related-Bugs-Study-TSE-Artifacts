@@ -1,0 +1,9 @@
+
+      /* Push any access checks inside the firewall we're about to create.  */
+      vec<deferred_access_check, va_gc> *checks = get_deferred_access_checks ();
+      pop_deferring_access_checks ();
+
+        return templ;
+
+      reopen_deferring_access_checks (checks);
+

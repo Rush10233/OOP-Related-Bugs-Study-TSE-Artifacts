@@ -1,0 +1,48 @@
+return error_mark_node;
+        }
+    
+
+      if (!want_pointer)
+        {
+          rvalue = !lvalue_p (expr);
+
+         template (even in instantiate_non_dependent_expr), we don't have vtables
+         set up properly yet, and the value doesn't matter there either; we're
+         just interested in the result of overload resolution.  */
+
+        {
+          expr = build_nop (ptr_target_type, expr);
+          goto indout;
+
+return error_mark_node;
+        }
+    
+
+      if (!want_pointer)
+        {
+          rvalue = !lvalue_p (expr);
+
+         template (even in instantiate_non_dependent_expr), we don't have vtables
+         set up properly yet, and the value doesn't matter there either; we're
+         just interested in the result of overload resolution.  */
+
+        {
+          expr = build_nop (ptr_target_type, expr);
+          goto indout;
+
+return error_mark_node;
+        }
+    
+
+      if (!want_pointer)
+        {
+          rvalue = !lvalue_p (expr);
+
+         template (even in instantiate_non_dependent_expr), we don't have vtables
+         set up properly yet, and the value doesn't matter there either; we're
+         just interested in the result of overload resolution.  */
+
+        {
+          expr = build_nop (ptr_target_type, expr);
+          goto indout;
+

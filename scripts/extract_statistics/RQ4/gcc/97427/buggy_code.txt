@@ -1,0 +1,40 @@
+/* Remember the object we are constructing.  */
+
+      if (DECL_CONSTRUCTOR_P (fun))
+
+          /* In a constructor, it should be the first `this' argument.
+
+    	  if (new_obj
+    	      && CLASS_TYPE_P (TREE_TYPE (new_obj))
+    	      && CP_TYPE_CONST_P (TREE_TYPE (new_obj)))
+    	    {
+    	      /* Subobjects might not be stored in ctx->global->values but we
+    		 can get its CONSTRUCTOR by evaluating *this.  */
+    	      tree e = cxx_eval_constant_expression (ctx, new_obj,
+    						     /*lval*/false,
+    						     non_constant_p,
+    						     overflow_p);
+    	      if (TREE_CODE (e) == CONSTRUCTOR && !*non_constant_p)
+    		TREE_READONLY (e) = true;
+    	    }
+
+/* Remember the object we are constructing.  */
+
+      if (DECL_CONSTRUCTOR_P (fun))
+
+          /* In a constructor, it should be the first `this' argument.
+
+    	  if (new_obj
+    	      && CLASS_TYPE_P (TREE_TYPE (new_obj))
+    	      && CP_TYPE_CONST_P (TREE_TYPE (new_obj)))
+    	    {
+    	      /* Subobjects might not be stored in ctx->global->values but we
+    		 can get its CONSTRUCTOR by evaluating *this.  */
+    	      tree e = cxx_eval_constant_expression (ctx, new_obj,
+    						     /*lval*/false,
+    						     non_constant_p,
+    						     overflow_p);
+    	      if (TREE_CODE (e) == CONSTRUCTOR && !*non_constant_p)
+    		TREE_READONLY (e) = true;
+    	    }
+

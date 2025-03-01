@@ -1,0 +1,104 @@
+cplus_decl_attributes (&decl, *attrlist, 0);
+    		*attrlist = NULL_TREE;
+    
+
+    		tree scope = ctype ? ctype : in_namespace;
+    		decl = do_friend (scope, unqualified_id, decl,
+    				  flags, funcdef_flag);
+
+    	 is replaced with the specialization chosen by deduction from the
+    	 friend declaration or discarded if deduction fails."
+    
+
+          SET_DECL_IMPLICIT_INSTANTIATION (function);
+
+        }
+    
+      if (!matched)
+
+        error ("friend declaration %qD may not have virt-specifiers",
+    	   decl);
+    
+      if (TREE_CODE (declarator) == TEMPLATE_ID_EXPR)
+        {
+          declarator = TREE_OPERAND (declarator, 0);
+          if (!identifier_p (declarator))
+    	declarator = OVL_NAME (declarator);
+        }
+    
+      if (ctype)
+        {
+
+          tree cname = TYPE_NAME (ctype);
+          if (TREE_CODE (cname) == TYPE_DECL)
+    	cname = DECL_NAME (cname);
+
+    
+          grokclassfn (ctype, decl, flags);
+    
+
+          /* A nested class may declare a member of an enclosing class
+    	 to be a friend, so we do lookup here even if CTYPE is in
+    	 the process of being defined.  */
+
+    	       || (class_template_depth && friend_depth))
+    	      && decl && TREE_CODE (decl) == FUNCTION_DECL)
+    	    decl = DECL_TI_TEMPLATE (decl);
+
+    	}
+          else
+    	error ("",
+
+      else
+        {
+          /* Namespace-scope friend function.  */
+
+    
+          if (funcdef_flag)
+    	SET_DECL_FRIEND_CONTEXT (decl, current_class_type);
+
+    
+    	     the containing template class.  */
+    	  int warn = (warn_nontemplate_friend
+
+    		      && current_template_parms
+    		      && uses_template_parms (decl));
+    
+
+    	    /* We can't call pushdecl for a template class, since in
+    	       general, such a declaration depends on template
+    	       parameters.  Instead, we call pushdecl when the class
+
+    		}
+    	    }
+    	}
+    
+
+    
+      return decl;
+    }
+
+
+    	 So tell check_explicit_specialization to look for a match.  */
+          SET_DECL_IMPLICIT_INSTANTIATION (function);
+
+          matched = function;
+        }
+    
+
+      if (decl == error_mark_node)
+        return error_mark_node;
+    
+
+        /* "[if no non-template match is found,] each remaining function template
+           is replaced with the specialization chosen by deduction from the
+           friend declaration or discarded if deduction fails."
+
+    
+    	 So tell check_explicit_specialization to look for a match.  */
+          SET_DECL_IMPLICIT_INSTANTIATION (decl);
+
+          return;
+        }
+    
+

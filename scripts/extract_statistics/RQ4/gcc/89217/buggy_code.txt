@@ -1,0 +1,16 @@
+static tree
+
+      if (instantiation_dependent_expression_p (compound_literal)
+          || dependent_type_p (type))
+
+          TREE_TYPE (compound_literal) = type;
+
+          TREE_HAS_CONSTRUCTOR (compound_literal) = 1;
+
+          CONSTRUCTOR_IS_DEPENDENT (compound_literal) = true;
+
+    	CONSTRUCTOR_C99_COMPOUND_LITERAL (compound_literal) = 1;
+          return compound_literal;
+
+      compound_literal = digest_init_flags (type, compound_literal, LOOKUP_NORMAL,
+

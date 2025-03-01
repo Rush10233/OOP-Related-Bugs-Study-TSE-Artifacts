@@ -1,0 +1,18 @@
+/* [basic.lval]
+    
+         Non-class rvalues always have cv-unqualified types.  */
+
+      if (!CLASS_TYPE_P (type) && cv_qualified_p (type))
+
+/* [basic.lval]
+    
+         Non-class rvalues always have cv-unqualified types.  */
+
+      if (!CLASS_TYPE_P (type) && cv_qualified_p (type))
+
+/* [basic.lval]
+    
+         Non-class rvalues always have cv-unqualified types.  */
+
+      if (!CLASS_TYPE_P (type) && cv_qualified_p (type))
+

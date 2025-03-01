@@ -1,0 +1,8 @@
+if (TREE_CODE (arg) != INTEGER_CST)
+
+          return (tree_int_cst_equal (parm, arg)
+
+if (TREE_CODE (arg) != INTEGER_CST)
+
+          return (tree_int_cst_equal (parm, arg)
+

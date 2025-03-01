@@ -1,0 +1,19 @@
+/* The number of parms for f' is the number of parms for A plus
+    	     non-deduced parms of f.  */
+
+    	  /* First copy over the parms of A.  */
+
+    		TREE_VEC_ELT (gtparms, j++) = elt;
+
+    		unsigned level = 1;
+
+      if (!tried_array_deduction)
+        for (int i =  0; i < len; ++i)
+          if (! TREE_VEC_ELT (targs, i))
+    	{
+    	  try_array_deduction (tparms, targs, TREE_TYPE (tmpl));
+    	  tried_array_deduction = true;
+    	  if (TREE_VEC_ELT (targs, i))
+    	    goto again;
+    	}
+

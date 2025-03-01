@@ -1,0 +1,32 @@
+if (!flag_exceptions)
+        return;
+
+      tree last_split_elt = NULL_TREE;
+
+    		  last_split_elt = field_index;
+
+    	      last_split_elt = field_index;
+
+    	      /* Push cleanups for any preceding members with constant
+    		 initialization.  */
+    	      if (CLASS_TYPE_P (type))
+    		for (tree prev = (last_split_elt ?
+    				  DECL_CHAIN (last_split_elt)
+    				  : TYPE_FIELDS (type));
+    		     ; prev = DECL_CHAIN (prev))
+    		  {
+    		    prev = next_initializable_field (prev);
+    		    if (prev == field_index)
+    		      break;
+    		    tree ptype = TREE_TYPE (prev);
+    		    if (type_build_dtor_call (ptype))
+    		      {
+    			tree pcref = build3 (COMPONENT_REF, ptype, dest, prev,
+    					     NULL_TREE);
+    			maybe_push_temp_cleanup (pcref, flags);
+    		      }
+    		  }
+    
+
+    	      last_split_elt = field_index;
+

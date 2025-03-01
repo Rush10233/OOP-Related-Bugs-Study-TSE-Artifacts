@@ -1,0 +1,3 @@
+Commit:	29e411b
+./clang/lib/Sema/SemaTemplateInstantiateDecl.cpp	4249,4251
+./clang/lib/Sema/SemaTemplateInstantiateDecl.cpp	4258,4258

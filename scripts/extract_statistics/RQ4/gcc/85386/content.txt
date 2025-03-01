@@ -1,0 +1,8 @@
+{
+          gcc_assert (processing_template_decl
+    		  || TREE_CODE (expr) == DEFERRED_NOEXCEPT);
+
+          return build_tree_list (expr, NULL_TREE);
+        }
+    }
+

@@ -1,0 +1,18 @@
+,Accept Invalid,Reject Valid,Crash,Wrong Code,Hang,Efficiency,Diagnostic,Others
+Member Access,4,10,12,2,0,0,6,1
+Class Scope,6,24,15,1,1,0,4,2
+Friends,3,0,6,0,0,0,0,0
+Ctor & Dtor,10,34,49,25,1,5,9,3
+Copy & Move,3,7,4,5,0,0,7,2
+Overloading,0,9,18,6,0,0,1,0
+Inherited Member Access,1,7,9,2,0,0,2,0
+Multiple Inheritance,1,2,4,2,0,0,2,0
+Inherited Ctor & Dtor,0,7,8,7,0,0,2,1
+Override Control,1,0,4,0,0,0,3,0
+Casting,2,4,4,0,0,0,3,0
+Template Alias,2,9,22,0,1,0,0,0
+Template Parsing,2,5,11,0,0,0,1,0
+Constraint & Concepts,4,22,19,1,0,0,2,0
+Template Specialization,1,2,9,1,0,0,2,0
+Template Instantiation,6,30,36,2,0,1,1,1
+Others,1,5,10,1,0,0,3,0

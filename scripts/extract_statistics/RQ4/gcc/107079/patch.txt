@@ -1,0 +1,4 @@
+init = maybe_constant_init (expr, var, /*manifestly_const_eval=*/true);
+
+init = maybe_constant_init (expr, var, /*manifestly_const_eval=*/true);
+

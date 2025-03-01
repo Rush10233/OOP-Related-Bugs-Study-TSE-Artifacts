@@ -1,0 +1,10 @@
+if (TREE_CODE (value) == CONSTRUCTOR && cp_has_mutable_p (type))
+    	/* Poison this CONSTRUCTOR so it can't be copied to another
+    	   constexpr variable.  */
+    	CONSTRUCTOR_MUTABLE_POISON (value) = true;
+
+if (TREE_CODE (value) == CONSTRUCTOR && cp_has_mutable_p (type))
+    	/* Poison this CONSTRUCTOR so it can't be copied to another
+    	   constexpr variable.  */
+    	CONSTRUCTOR_MUTABLE_POISON (value) = true;
+

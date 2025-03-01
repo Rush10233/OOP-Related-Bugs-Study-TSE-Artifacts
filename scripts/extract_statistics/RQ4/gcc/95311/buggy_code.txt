@@ -1,0 +1,24 @@
+tree aref;
+
+      aref = build_vtbl_ref (cp_build_fold_indirect_ref (instance_ptr), idx);
+
+tree obtype = TREE_TYPE (TREE_TYPE (instance_ptr));
+    
+      /* Leave the INDIRECT_REF unfolded so cp_ubsan_maybe_instrument_member_call
+         can find instance_ptr.  */
+      tree ind = build1 (INDIRECT_REF, obtype, instance_ptr);
+
+      tree aref = build_vtbl_ref (ind, idx);
+
+    	 OBJ_TYPE_REF_EXPR is ptr->vptr[N] and OBJ_TYPE_REF_OBJECT is ptr.  */
+
+          while (*opp != op)
+    	{
+    	  if (TREE_CODE (*opp) == COMPOUND_EXPR)
+    	    opp = &TREE_OPERAND (*opp, 1);
+    	  else
+    	    opp = &TREE_OPERAND (*opp, 0);
+    	}
+
+      if (op)
+

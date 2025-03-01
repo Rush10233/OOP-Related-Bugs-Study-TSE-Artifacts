@@ -1,0 +1,19 @@
+tree off = TREE_OPERAND (sub, 1);
+
+    	{
+    	  tree obj = TREE_OPERAND (op00, 0);
+    	  while (TREE_CODE (obj) == COMPONENT_REF
+    		 && tree_int_cst_sign_bit (off))
+    	    {
+    	      /* Canonicalize this object/offset pair by iteratively absorbing
+    		 the innermost component into the offset until the offset is
+    		 nonnegative, so that cxx_fold_indirect_ref_1 can identify
+    		 more folding opportunities.  */
+    	      tree field = TREE_OPERAND (obj, 1);
+    	      off = int_const_binop (PLUS_EXPR, off, byte_position (field));
+    	      obj = TREE_OPERAND (obj, 0);
+    	    }
+    	  return cxx_fold_indirect_ref_1 (ctx, loc, type, obj,
+    					  tree_to_uhwi (off), empty_base);
+    	}
+

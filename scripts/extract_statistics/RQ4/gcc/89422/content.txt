@@ -1,0 +1,30 @@
+set_constraints (r, ci);
+          }
+    
+
+      /* Set up the DECL_TEMPLATE_INFO for R.  There's no need to do
+         this in the special friend case mentioned above where
+         GEN_TMPL is NULL.  */
+
+    	   && !grok_op_properties (r, /*complain=*/true))
+        return error_mark_node;
+    
+      /* Possibly limit visibility based on template args.  */
+      DECL_VISIBILITY (r) = VISIBILITY_DEFAULT;
+      if (DECL_VISIBILITY_SPECIFIED (t))
+
+set_constraints (r, ci);
+          }
+    
+
+      /* Set up the DECL_TEMPLATE_INFO for R.  There's no need to do
+         this in the special friend case mentioned above where
+         GEN_TMPL is NULL.  */
+
+    	   && !grok_op_properties (r, /*complain=*/true))
+        return error_mark_node;
+    
+      /* Possibly limit visibility based on template args.  */
+      DECL_VISIBILITY (r) = VISIBILITY_DEFAULT;
+      if (DECL_VISIBILITY_SPECIFIED (t))
+

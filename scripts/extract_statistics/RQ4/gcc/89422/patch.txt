@@ -1,0 +1,12 @@
+if (DECL_FRIEND_P (t) && DECL_FRIEND_CONTEXT (t))
+        SET_DECL_FRIEND_CONTEXT (r,
+    			     tsubst (DECL_FRIEND_CONTEXT (t),
+    				     args, complain, in_decl));
+    
+
+if (DECL_FRIEND_P (t) && DECL_FRIEND_CONTEXT (t))
+        SET_DECL_FRIEND_CONTEXT (r,
+    			     tsubst (DECL_FRIEND_CONTEXT (t),
+    				     args, complain, in_decl));
+    
+

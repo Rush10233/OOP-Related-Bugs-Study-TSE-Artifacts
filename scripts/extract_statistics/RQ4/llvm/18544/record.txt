@@ -1,0 +1,4 @@
+Commit:	8347c34
+./clang/lib/AST/Decl.cpp	2307,2308
+./clang/lib/AST/Decl.cpp	2339,2339
+./clang/lib/AST/Decl.cpp	2380,2380

@@ -1,0 +1,3 @@
+Commit:	637cac4
+./clang/lib/Sema/SemaDeclCXX.cpp	1178,1178
+./clang/lib/Sema/SemaDeclCXX.cpp	1181,1181

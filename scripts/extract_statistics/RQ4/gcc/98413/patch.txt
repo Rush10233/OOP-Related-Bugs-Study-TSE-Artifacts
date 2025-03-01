@@ -1,0 +1,5 @@
+if (!INTEGRAL_TYPE_P (type) && !POINTER_TYPE_P (type))
+        return false;
+
+    
+

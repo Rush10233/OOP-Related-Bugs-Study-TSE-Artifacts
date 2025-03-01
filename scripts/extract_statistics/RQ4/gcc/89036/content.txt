@@ -1,0 +1,14 @@
+}
+        }
+    
+      current_fns = ovl_insert (method, current_fns, via_using);
+    
+      if (!COMPLETE_TYPE_P (type) && !DECL_CONV_FN_P (method)
+
+}
+        }
+    
+      current_fns = ovl_insert (method, current_fns, via_using);
+    
+      if (!COMPLETE_TYPE_P (type) && !DECL_CONV_FN_P (method)
+

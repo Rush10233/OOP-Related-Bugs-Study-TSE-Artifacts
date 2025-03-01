@@ -1,0 +1,8 @@
+Commit:	e13a792
+./gcc/cp/typeck2.c	657,657
+Commit:	2ab5c3d
+./gcc/cp/typeck2.c	527,527
+Commit:	6550198
+./gcc/cp/typeck2.c	527,527
+Commit:	e54c8a8
+./gcc/cp/typeck2.c	664,664

@@ -1,0 +1,124 @@
+static void construct_virtual_base (tree, tree);
+    static bool expand_aggr_init_1 (tree, tree, tree, tree, int, tsubst_flags_t);
+    static bool expand_default_init (tree, tree, tree, tree, int, tsubst_flags_t);
+    static int member_init_ok_or_else (tree, tree, tree);
+    static void expand_virtual_init (tree, tree);
+    static tree sort_mem_initializers (tree, tree);
+
+      return build_zero_init (type, NULL_TREE, /*static_storage_p=*/false);
+    }
+    
+
+    
+
+    perform_target_ctor (tree init)
+    {
+      tree decl = current_class_ref;
+      tree type = current_class_type;
+    
+
+      if (type_build_dtor_call (type))
+        {
+          tree expr = build_delete (input_location,
+
+    	  && TYPE_HAS_NONTRIVIAL_DESTRUCTOR (type))
+    	finish_eh_cleanup (expr);
+        }
+
+    }
+    
+    /* Return the non-static data initializer for FIELD_DECL MEMBER.  */
+
+    	     "of the underlying array", member, begin);
+    }
+    
+
+    /* Initialize MEMBER, a FIELD_DECL, with INIT, a TREE_LIST of
+       arguments.  If TREE_LIST is void_type_node, an empty initializer
+
+    
+    static void
+
+    {
+      tree decl;
+      tree type = TREE_TYPE (member);
+
+      if (decl == error_mark_node)
+        return;
+    
+
+          && TREE_CHAIN (init) == NULL_TREE)
+        {
+          tree val = TREE_VALUE (init);
+
+    	warning_at (DECL_SOURCE_LOCATION (current_function_decl),
+    		    OPT_Winit_self, "%qD is initialized with itself",
+    		    member);
+
+        }
+    
+      if (array_of_unknown_bound_p (type))
+
+    	 do aggregate-initialization.  */
+        }
+    
+
+      if (init == void_type_node)
+        {
+          /* mem() means value-initialization.  */
+
+    	    diagnose_uninitialized_cst_or_ref_member (core_type,
+    						      /*using_new=*/false,
+    						      /*complain=*/true);
+
+    	}
+    
+          maybe_warn_list_ctor (member, init);
+
+    						tf_warning_or_error));
+        }
+    
+
+      if (type_build_dtor_call (type))
+        {
+          tree expr;
+
+      if (!COMPLETE_TYPE_P (current_class_type))
+        return;
+    
+
+      if (mem_inits
+          && TYPE_P (TREE_PURPOSE (mem_inits))
+          && same_type_p (TREE_PURPOSE (mem_inits), current_class_type))
+        {
+          /* Delegating constructor. */
+          gcc_assert (TREE_CHAIN (mem_inits) == NULL_TREE);
+
+          return;
+        }
+    
+
+    			      flags,
+                                  tf_warning_or_error);
+    	  expand_cleanup_for_base (subobject, NULL_TREE);
+
+    	}
+          else if (!ABSTRACT_CLASS_TYPE_P (current_class_type))
+    	/* C++14 DR1658 Means we do not have to construct vbases of
+
+          iloc_sentinel ils (EXPR_LOCATION (TREE_TYPE (mem_inits)));
+    
+          perform_member_init (TREE_PURPOSE (mem_inits),
+
+          mem_inits = TREE_CHAIN (mem_inits);
+        }
+    }
+
+    
+    are printed.
+    
+
+    @item -Wno-invalid-memory-model
+    @opindex Winvalid-memory-model
+    @opindex Wno-invalid-memory-model
+

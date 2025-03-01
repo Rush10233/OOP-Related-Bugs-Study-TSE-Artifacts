@@ -1,0 +1,10 @@
+bool isQualifiedMemberAccess(Expr *E);
+
+    bool Sema::isQualifiedMemberAccess(Expr *E) {
+
+        if (!First->getType()->isOverloadableType() ||
+            (Op == OO_Amp && getSema().isQualifiedMemberAccess(First))) {
+          // The argument is not of overloadable type, or this is an expression
+          // of the form &Class::member, so try to create a built-in unary
+          // operation.
+

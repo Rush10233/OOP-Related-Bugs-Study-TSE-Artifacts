@@ -1,0 +1,17 @@
+else if (cxx_dialect >= cxx20 && dependent_scope_p (context))
+
+       This can happen when forming a C++20 alias template deduction guide, as in
+       PR96199.  */
+
+      if (cxx_dialect < cxx20)
+
+if (!is_this_parameter (ob))
+
+else if (cxx_dialect >= cxx17 && dependent_scope_p (context))
+
+          inner = tsubst (inner, args, complain, in_decl);
+
+else if (cxx_dialect >= cxx2a && dependent_scope_p (context))
+
+          new_type = tsubst (TREE_TYPE (t), args, complain, in_decl);
+

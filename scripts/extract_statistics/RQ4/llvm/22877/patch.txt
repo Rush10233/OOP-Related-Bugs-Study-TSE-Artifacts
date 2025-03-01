@@ -1,0 +1,15 @@
+{
+          // C++1z [class.temporary]p5:
+          //   when a default constructor is called to initialize an element of
+          //   an array with no corresponding initializer [...] the destruction of
+          //
+          //   the construction of the next array element, if any
+          CodeGenFunction::RunCleanupsScope CleanupsScope(CGF);
+          LValue elementLV =
+            CGF.MakeAddrLValue(Address(currentElement, elementAlign), elementType);
+          if (filler)
+            EmitInitializationToLValue(filler, elementLV);
+          else
+            EmitNullInitializationToLValue(elementLV);
+        }
+

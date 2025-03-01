@@ -1,0 +1,33 @@
+extern bool maybe_warn_self_move		(location_t, tree, tree);
+
+      if ((warn_init_self || warn_uninitialized || warn_self_move)
+
+          else if (!maybe_warn_self_move (input_location, member,
+    				      TREE_VALUE (init)))
+
+       assignment.  Return true if we warned.  */
+
+    bool
+
+        return false;
+
+        return false;
+
+        return false;
+
+        return false;
+
+        return false;
+
+      if (cp_tree_equal (lhs, arg)
+          /* Also warn in a member-initializer-list, as in : i(std::move(i)).  */
+          || (TREE_CODE (lhs) == FIELD_DECL
+    	  && TREE_CODE (arg) == COMPONENT_REF
+    	  && cp_tree_equal (TREE_OPERAND (arg, 0), current_class_ref)
+    	  && TREE_OPERAND (arg, 1) == lhs))
+        if (warning_at (loc, OPT_Wself_move,
+    		    "moving %qE of type %qT to itself", orig_lhs, type))
+          return true;
+    
+      return false;
+

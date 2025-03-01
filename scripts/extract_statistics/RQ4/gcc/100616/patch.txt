@@ -1,0 +1,39 @@
+tt_nttp_var,		/* NTTP_OBJECT VAR_DECL.  */
+
+    
+          if (DECL_NTTP_OBJECT_P (decl))
+    	{
+    	  /* A NTTP parm object.  */
+    	  if (streaming_p ())
+    	    i (tt_nttp_var);
+    	  tree_node (tparm_object_argument (decl));
+    	  tree_node (DECL_NAME (decl));
+    	  int tag = insert (decl);
+    	  if (streaming_p ())
+    	    dump (dumper::TREE)
+    	      && dump ("Wrote nttp object:%d %N", tag, DECL_NAME (decl));
+    	  return false;
+    	}
+    
+
+        case tt_nttp_var:
+          /* An NTTP object. */
+          {
+    	tree init = tree_node ();
+    	tree name = tree_node ();
+    	if (!get_overrun ())
+    	  {
+    	    res = get_template_parm_object (init, name);
+    	    int tag = insert (res);
+    	    dump (dumper::TREE)
+    	      && dump ("Created nttp object:%d %N", tag, name);
+    	  }
+          }
+          break;
+    
+
+          if (TREE_CODE (decl) == VAR_DECL && DECL_NTTP_OBJECT_P (decl))
+    	/* Ignore NTTP objects.  */
+    	return false;
+    
+

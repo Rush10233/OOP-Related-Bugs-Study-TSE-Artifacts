@@ -1,0 +1,10 @@
+Commit:	cfea7b8
+./gcc/cp/constraint.cc	923,923
+./gcc/cp/constraint.cc	927,927
+./gcc/cp/constraint.cc	934,934
+./gcc/cp/pt.c	2221,2221
+Commit:	59c6831
+./gcc/cp/constraint.cc	938,938
+./gcc/cp/constraint.cc	942,942
+./gcc/cp/constraint.cc	954,954
+./gcc/cp/pt.c	2210,2210

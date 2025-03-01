@@ -1,0 +1,15 @@
+if (VOID_TYPE_P (type))
+        return true;
+    
+
+    }
+    
+    /* Process a trait expression.  */
+
+    {
+      bool is_decl = false, complained = false;
+    
+      /* Avoid duplicate error message.  */
+      if (TREE_CODE (type) == ERROR_MARK)
+        return false;
+

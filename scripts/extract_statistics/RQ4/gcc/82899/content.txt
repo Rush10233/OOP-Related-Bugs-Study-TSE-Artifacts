@@ -1,0 +1,40 @@
+This will also create any varinfo structures necessary for fields
+       of DECL.  DECL is a function parameter if HANDLE_PARAM is set.
+       HANDLED_STRUCT_TYPE is used to register struct types reached by following
+
+    
+    static varinfo_t
+    create_variable_info_for_1 (tree decl, const char *name, bool add_id,
+
+    {
+      varinfo_t vi, newvi;
+      tree decl_type = TREE_TYPE (decl);
+
+          vi->size = vi->fullsize;
+          vi->is_full_var = true;
+          if (POINTER_TYPE_P (decl_type)
+
+    	vi->only_restrict_pointers = 1;
+          if (vi->only_restrict_pointers
+    	  && !type_contains_placeholder_p (TREE_TYPE (decl_type))
+
+    {
+      tree t;
+      bitmap handled_struct_type = NULL;
+
+    
+      /* For each incoming pointer argument arg, create the constraint ARG
+         = NONLOCAL or a dummy variable if it is a restrict qualified
+
+    
+          varinfo_t p
+    	= create_variable_info_for_1 (t, alias_get_name (t), false, true,
+
+          insert_vi_for_tree (t, p);
+    
+          make_param_constraints (p);
+
+        }
+    
+      if (handled_struct_type != NULL)
+

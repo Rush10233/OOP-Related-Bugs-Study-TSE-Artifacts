@@ -1,0 +1,8 @@
+&& omp_var_to_track (stmt))
+        omp_cxx_notice_variable (wtd->omp_ctx, stmt);
+    
+
+      if (wtd->handle_invisiref_parm_p && is_invisiref_parm (stmt))
+        {
+          *stmt_p = convert_from_reference (stmt);
+

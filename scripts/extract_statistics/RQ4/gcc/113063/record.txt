@@ -1,0 +1,7 @@
+Commit:	6e7088d
+Commit:	c880fca
+Commit:	7f26997
+./gcc/cp/method.cc	1773,1774
+./gcc/cp/method.cc	1798,1801
+./gcc/cp/method.cc	1846,1849
+Commit:	7830d92

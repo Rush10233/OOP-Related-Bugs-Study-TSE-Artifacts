@@ -1,0 +1,4 @@
+if (!literal_type_p (TREE_TYPE (t)))
+
+if (!literal_type_p (TREE_TYPE (t)))
+

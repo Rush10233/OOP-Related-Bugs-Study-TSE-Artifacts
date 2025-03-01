@@ -1,0 +1,26 @@
+the CLASSTPYE_TI_TEMPLATE for S<int*> will be S, not the S<T*>.
+    
+       For a member class template, CLASSTYPE_TI_TEMPLATE always refers to the
+       partial instantiation rather than the primary template.  CLASSTYPE_TI_ARGS
+       are for the primary template if the partial instantiation isn't
+       specialized, or for the explicit specialization if it is, e.g.
+    
+          template <class T> class C { template <class U> class D; }
+          template <> template <class U> class C<int>::D;  */
+
+    		  CLASSTYPE_TI_ARGS (inst)
+    		    = elt.args = INNERMOST_TEMPLATE_ARGS (elt.args);
+
+    
+    	  if (DECL_CLASS_TEMPLATE_P (found)
+    	      && CLASSTYPE_TEMPLATE_SPECIALIZATION (TREE_TYPE (found)))
+    	    {
+    	      /* If this partial instantiation is specialized, we want to
+    		 use it for hash table lookup.  */
+    	      elt.tmpl = found;
+    	      elt.args = arglist = INNERMOST_TEMPLATE_ARGS (arglist);
+    	      hash = spec_hasher::hash (&elt);
+    	    }
+
+          gcc_checking_assert (*slot == NULL);
+

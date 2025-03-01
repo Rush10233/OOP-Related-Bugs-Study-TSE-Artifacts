@@ -1,0 +1,62 @@
+TYPE_PTRMEMFUNC_FLAG (t) = 1;
+    
+      field = build_decl (input_location, FIELD_DECL, pfn_identifier, type);
+
+      fields = field;
+    
+      field = build_decl (input_location, FIELD_DECL, delta_identifier, 
+    		      delta_type_node);
+
+      DECL_CHAIN (field) = fields;
+      fields = field;
+    
+
+        {
+          dw_die_ref die = lookup_decl_die (decl);
+    
+
+             was not enabled at compile-time or the target doesn't support
+    	 the LTO early debug scheme.  */
+          if (! die && in_lto_p)
+
+    	{
+    	  /* We get called via the symtab code invoking late_global_decl
+    	     for symbols that are optimized out.
+
+    	    && (!type
+    		|| types_compatible_p
+    		     (TREE_TYPE (gimple_assign_lhs (use_stmt)), type))
+
+    	continue;
+    
+          /* Check if we can move the loads.  The def stmt of the virtual use
+
+           || alignment_support_scheme == dr_explicit_realign)
+          && !compute_in_loop)
+        {
+
+    				    alignment_support_scheme, NULL_TREE,
+    				    &at_loop);
+          if (alignment_support_scheme == dr_explicit_realign_optimized)
+
+        {
+          for (tree *tem = &BLOCK_VARS (t); *tem; )
+    	{
+
+    	    {
+    	      gcc_assert (TREE_CODE (*tem) != RESULT_DECL
+    			  && TREE_CODE (*tem) != PARM_DECL);
+
+TYPE_PTRMEMFUNC_FLAG (t) = 1;
+    
+      field = build_decl (input_location, FIELD_DECL, pfn_identifier, type);
+
+      fields = field;
+    
+      field = build_decl (input_location, FIELD_DECL, delta_identifier, 
+    		      delta_type_node);
+
+      DECL_CHAIN (field) = fields;
+      fields = field;
+    
+

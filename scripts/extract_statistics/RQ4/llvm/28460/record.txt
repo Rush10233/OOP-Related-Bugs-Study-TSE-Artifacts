@@ -1,0 +1,6 @@
+Commit:	a22742b
+Commit:	6be4924
+./clang/include/clang/Basic/DiagnosticSemaKinds.td	6420,6420
+./clang/include/clang/Basic/DiagnosticSemaKinds.td	6425,6425
+./clang/lib/Sema/SemaExprCXX.cpp	3287,3287
+./clang/test/SemaCXX/destructor.cpp	215,226

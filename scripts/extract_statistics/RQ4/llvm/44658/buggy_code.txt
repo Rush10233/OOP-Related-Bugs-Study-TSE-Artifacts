@@ -1,0 +1,6 @@
+MultiLevelTemplateArgumentList MLTAL =
+        getTemplateInstantiationArgs(Decl, nullptr, /*RelativeToPrimary*/true);
+    
+
+            MLTAL.getInnermost(), SourceRange());
+

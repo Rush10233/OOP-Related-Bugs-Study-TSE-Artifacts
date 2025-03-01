@@ -1,0 +1,4 @@
+if (const auto *spec = dyn_cast<ClassTemplateSpecializationDecl>(ND))
+        return getVisibilityOf(spec->getSpecializedTemplate()->getTemplatedDecl(),
+                               kind);
+

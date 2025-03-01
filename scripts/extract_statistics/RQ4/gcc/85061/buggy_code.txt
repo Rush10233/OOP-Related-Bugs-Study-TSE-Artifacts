@@ -1,0 +1,2 @@
+gcc_assert (VAR_P (t));
+

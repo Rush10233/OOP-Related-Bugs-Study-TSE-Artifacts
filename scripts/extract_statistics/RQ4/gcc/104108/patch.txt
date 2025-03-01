@@ -1,0 +1,10 @@
+bool val_dep_p = value_dependent_expression_p (expr);
+
+    	  /* EXPR may have become value-dependent.  */
+    	  val_dep_p = value_dependent_expression_p (expr);
+
+bool val_dep_p = value_dependent_expression_p (expr);
+
+    	  /* EXPR may have become value-dependent.  */
+    	  val_dep_p = value_dependent_expression_p (expr);
+

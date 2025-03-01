@@ -1,0 +1,2 @@
+if (!staticp && !friendp && !FUNC_OR_METHOD_TYPE_P (type))
+

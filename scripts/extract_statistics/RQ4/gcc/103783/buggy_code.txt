@@ -1,0 +1,10 @@
+bool
+
+      return compparms (TYPE_ARG_TYPES (TREE_TYPE (fn1)),
+    		    TYPE_ARG_TYPES (TREE_TYPE (fn2)));
+
+bool
+
+      return compparms (TYPE_ARG_TYPES (TREE_TYPE (fn1)),
+    		    TYPE_ARG_TYPES (TREE_TYPE (fn2)));
+

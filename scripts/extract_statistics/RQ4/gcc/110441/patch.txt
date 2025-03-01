@@ -1,0 +1,2 @@
+return cp_build_compound_expr (a, result, tf_error);
+

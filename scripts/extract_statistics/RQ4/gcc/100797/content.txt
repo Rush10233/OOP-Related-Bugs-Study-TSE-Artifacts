@@ -1,0 +1,84 @@
+|| CLASSTYPE_FINAL (TYPE_METHOD_BASETYPE (TREE_TYPE (fn))))
+    	flags |= LOOKUP_NONVIRTUAL;
+    
+          /* [class.mfct.nonstatic]: If a nonstatic member function of a class
+    	 X is called for an object that is not of type X, or of a type
+    	 derived from X, the behavior is undefined.
+
+          gcc_assert (TYPE_PTR_P (parmtype));
+          /* Convert to the base in which the function was declared.  */
+          gcc_assert (cand->conversion_path != NULL_TREE);
+          /* Check that the base class is accessible.  */
+          if (!accessible_base_p (TREE_TYPE (argtype),
+    			      BINFO_TYPE (cand->conversion_path), true))
+
+          /* If fn was found by a using declaration, the conversion path
+    	 will be to the derived class, not the base declaring fn. We
+    	 must convert from derived to base.  */
+
+    				TREE_TYPE (parmtype), ba_unique,
+    				NULL, complain);
+
+    				       base_binfo, 1, complain);
+    
+          argarray[j++] = converted_arg;
+
+if (base_binfo == error_mark_node)
+    	    return error_mark_node;
+    	}
+    
+          /* If we know the dynamic type of the object, look up the final overrider
+    	 in the BINFO.  */
+          if (DECL_VINDEX (fn) && (flags & LOOKUP_NONVIRTUAL) == 0
+    	  && resolves_to_fixed_type_p (arg))
+    	{
+
+    	}
+    
+
+          argarray[j++] = converted_arg;
+          parm = TREE_CHAIN (parm);
+          if (first_arg != NULL_TREE)
+
+|| CLASSTYPE_FINAL (TYPE_METHOD_BASETYPE (TREE_TYPE (fn))))
+    	flags |= LOOKUP_NONVIRTUAL;
+    
+          /* [class.mfct.nonstatic]: If a nonstatic member function of a class
+    	 X is called for an object that is not of type X, or of a type
+    	 derived from X, the behavior is undefined.
+
+          gcc_assert (TYPE_PTR_P (parmtype));
+          /* Convert to the base in which the function was declared.  */
+          gcc_assert (cand->conversion_path != NULL_TREE);
+          /* Check that the base class is accessible.  */
+          if (!accessible_base_p (TREE_TYPE (argtype),
+    			      BINFO_TYPE (cand->conversion_path), true))
+
+          /* If fn was found by a using declaration, the conversion path
+    	 will be to the derived class, not the base declaring fn. We
+    	 must convert from derived to base.  */
+
+    				TREE_TYPE (parmtype), ba_unique,
+    				NULL, complain);
+
+    				       base_binfo, 1, complain);
+    
+          argarray[j++] = converted_arg;
+
+if (base_binfo == error_mark_node)
+    	    return error_mark_node;
+    	}
+    
+          /* If we know the dynamic type of the object, look up the final overrider
+    	 in the BINFO.  */
+          if (DECL_VINDEX (fn) && (flags & LOOKUP_NONVIRTUAL) == 0
+    	  && resolves_to_fixed_type_p (arg))
+    	{
+
+    	}
+    
+
+          argarray[j++] = converted_arg;
+          parm = TREE_CHAIN (parm);
+          if (first_arg != NULL_TREE)
+

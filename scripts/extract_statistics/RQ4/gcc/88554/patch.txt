@@ -1,0 +1,7 @@
+&& current_class_ref
+
+    		  (TREE_TYPE (valtype), TREE_TYPE (current_class_ref))
+    	      && global_dc->option_enabled (OPT_Wreturn_type,
+    					    global_dc->option_state))
+    	    add_return_star_this_fixit (&richloc, fndecl);
+

@@ -1,0 +1,13 @@
+OdrUseContext || (isEvaluatableContext(SemaRef) &&
+                            Var->isUsableInConstantExpressions(SemaRef.Context));
+
+        bool TryInstantiating = TSK == TSK_ImplicitInstantiation;
+
+          } else if (!Var->isUsableInConstantExpressions(SemaRef.Context))
+
+            if (Var->isUsableInConstantExpressions(SemaRef.Context)) {
+
+      //   Except for inline functions, [...] explicit instantiation declarations
+
+      if (TSK == TSK_ExplicitInstantiationDeclaration)
+

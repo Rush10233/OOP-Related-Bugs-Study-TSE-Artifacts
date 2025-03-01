@@ -1,0 +1,16 @@
+/* This is for distinguishing between real templates and template
+    	     template parameters */
+    	  TREE_TYPE (parm) = t;
+
+    	  decl = parm;
+    	}
+          else
+
+/* This is for distinguishing between real templates and template
+    	     template parameters */
+    	  TREE_TYPE (parm) = t;
+
+    	  decl = parm;
+    	}
+          else
+

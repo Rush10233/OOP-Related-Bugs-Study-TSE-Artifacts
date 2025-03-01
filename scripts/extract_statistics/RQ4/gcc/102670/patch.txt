@@ -1,0 +1,12 @@
+else if (koenig_p
+    		 && (identifier_p (function)
+    		     || (TREE_CODE (function) == TEMPLATE_ID_EXPR
+    			 && identifier_p (TREE_OPERAND (function, 0)))))
+
+    
+    	    if (TREE_CODE (function) == TEMPLATE_ID_EXPR)
+    	      /* Use tsubst_copy to substitute through the template arguments
+    		 of the template-id without performing unqualified lookup of
+    		 the template name.  */
+    	      function = tsubst_copy (function, args, complain, in_decl);
+

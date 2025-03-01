@@ -1,0 +1,20 @@
+case CPTK_IS_UNION:
+          inform (loc, "  %qT is not a union", t1);
+          break;
+
+          gcc_unreachable ();
+
+        }
+    }
+    
+
+case CPTK_IS_UNION:
+          inform (loc, "  %qT is not a union", t1);
+          break;
+
+          gcc_unreachable ();
+
+        }
+    }
+    
+

@@ -1,0 +1,14 @@
+{
+        case COMPOUND_EXPR:
+          return build_x_compound_expr (input_location, left, right, complain);
+        default:
+          return build_x_binary_op (input_location, code,
+                                    left, TREE_CODE (left),
+
+{
+        case COMPOUND_EXPR:
+          return build_x_compound_expr (input_location, left, right, complain);
+        default:
+          return build_x_binary_op (input_location, code,
+                                    left, TREE_CODE (left),
+

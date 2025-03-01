@@ -1,0 +1,8 @@
+if (Args[0]->getType()->isIncompleteType())
+          return false;
+    
+
+        SmallVector<OpaqueValueExpr, 2> OpaqueArgExprs;
+        SmallVector<Expr *, 2> ArgExprs;
+        ArgExprs.reserve(Args.size() - 1);
+

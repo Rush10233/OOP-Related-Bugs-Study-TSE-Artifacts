@@ -1,0 +1,8 @@
+if (MAYBE_CLASS_TYPE_P (c1) && DERIVED_FROM_P (c2, c1)
+
+if (MAYBE_CLASS_TYPE_P (c1) && DERIVED_FROM_P (c2, c1)
+
+if (MAYBE_CLASS_TYPE_P (c1) && DERIVED_FROM_P (c2, c1)
+
+if (MAYBE_CLASS_TYPE_P (c1) && DERIVED_FROM_P (c2, c1)
+

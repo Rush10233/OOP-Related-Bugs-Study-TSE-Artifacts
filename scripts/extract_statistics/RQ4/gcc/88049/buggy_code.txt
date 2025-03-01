@@ -1,0 +1,3 @@
+gcc_checking_assert (!type_in_anonymous_namespace_p (DECL_CONTEXT (decl))
+    		       && DECL_ASSEMBLER_NAME_SET_P (decl));
+

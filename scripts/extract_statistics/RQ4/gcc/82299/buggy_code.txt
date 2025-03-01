@@ -1,0 +1,8 @@
+return cp_build_c_cast (type, elt, tf_warning_or_error);
+
+    	rhs = cp_build_c_cast (type, elt, complain);
+
+return cp_build_c_cast (type, elt, tf_warning_or_error);
+
+    	rhs = cp_build_c_cast (type, elt, complain);
+

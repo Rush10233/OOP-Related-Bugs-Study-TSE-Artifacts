@@ -1,0 +1,19 @@
+static bool isReadByLvalueToRvalueConversion(const CXXRecordDecl *RD);
+
+      return !RD || isReadByLvalueToRvalueConversion(RD);
+    }
+    static bool isReadByLvalueToRvalueConversion(const CXXRecordDecl *RD) {
+      // FIXME: A trivial copy of a union copies the object representation, even if
+      // the union is empty.
+      if (RD->isUnion())
+        return !RD->field_empty();
+
+        if (!Field->isUnnamedBitfield() &&
+            isReadByLvalueToRvalueConversion(Field->getType()))
+
+           (MD->isTrivial() &&
+            isReadByLvalueToRvalueConversion(MD->getParent())))) {
+
+           (Definition->isTrivial() &&
+            isReadByLvalueToRvalueConversion(Definition->getParent())))) {
+

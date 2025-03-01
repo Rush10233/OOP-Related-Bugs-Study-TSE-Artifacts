@@ -1,0 +1,105 @@
+cand->reason = arg_conversion_rejection (NULL_TREE, -2,
+    						       rettype, totype);
+    	    }
+
+    	  else if (DECL_NONCONVERTING_P (cand->fn)
+    		   && ics->rank > cr_exact)
+    	    {
+
+}
+    
+    /* CAND is a constructor candidate in joust in C++17 and up.  If it copies a
+
+    
+    static bool
+
+    {
+      tree fn = cand->fn;
+      if (!DECL_COPY_CONSTRUCTOR_P (fn) && !DECL_MOVE_CONSTRUCTOR_P (fn))
+
+    			   (conv->type, DECL_CONTEXT (fn)));
+          z_candidate *uc = conv->cand;
+          if (DECL_CONV_FN_P (uc->fn))
+
+        }
+      return false;
+    }
+
+    	}
+        }
+    
+      for (i = 0; i < len; ++i)
+        {
+          conversion *t1 = cand1->convs[i + off1];
+
+      if (winner)
+        return winner;
+    
+      /* DR 495 moved this tiebreaker above the template ones.  */
+      /* or, if not that,
+         the  context  is  an  initialization by user-defined conversion (see
+
+          }
+      }
+    
+
+      /* or, if not that,
+         F1 is a non-template function and F2 is a template function
+         specialization.  */
+
+rettype, totype,
+    						       EXPR_LOCATION (expr));
+    	    }
+
+    	  else if (DECL_NONCONVERTING_P (cand->fn)
+    		   && ics->rank > cr_exact)
+    	    {
+
+winner->warnings = cw;
+    }
+    
+
+    /* Compare two candidates for overloading as described in
+       [over.match.best].  Return values:
+    
+
+    	}
+        }
+    
+
+      for (i = 0; i < len; ++i)
+        {
+          conversion *t1 = cand1->convs[i + off1];
+
+      if (winner)
+        return winner;
+    
+
+      /* DR 495 moved this tiebreaker above the template ones.  */
+      /* or, if not that,
+         the  context  is  an  initialization by user-defined conversion (see
+
+winner->warnings = cw;
+    }
+    
+
+    /* Compare two candidates for overloading as described in
+       [over.match.best].  Return values:
+    
+
+    	}
+        }
+    
+
+      for (i = 0; i < len; ++i)
+        {
+          conversion *t1 = cand1->convs[i + off1];
+
+      if (winner)
+        return winner;
+    
+
+      /* DR 495 moved this tiebreaker above the template ones.  */
+      /* or, if not that,
+         the  context  is  an  initialization by user-defined conversion (see
+

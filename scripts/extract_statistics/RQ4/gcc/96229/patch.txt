@@ -1,0 +1,20 @@
+/* Associate constraints with the type.  */
+      if (flag_concepts)
+        type = associate_classtype_constraints (type);
+    
+
+    /* A template declaration can be substituted for a constrained
+       template template parameter only when the argument is no more
+       constrained than the parameter.  */
+    
+
+/* Associate constraints with the type.  */
+      if (flag_concepts)
+        type = associate_classtype_constraints (type);
+    
+
+    /* A template declaration can be substituted for a constrained
+       template template parameter only when the argument is no more
+       constrained than the parameter.  */
+    
+

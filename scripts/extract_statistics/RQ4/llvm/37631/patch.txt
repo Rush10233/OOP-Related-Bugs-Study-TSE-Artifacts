@@ -1,0 +1,41 @@
+"deduction guide template contains "
+      "%select{a template parameter|template parameters}0 that cannot be "
+      "deduced">;
+    def err_deduction_guide_wrong_access : Error<
+      "deduction guide has different access from the corresponding "
+      "member template">;
+    def note_deduction_guide_template_access : Note<
+      "member template declared %0 here">;
+    def note_deduction_guide_access : Note<
+      "deduction guide declared %0 by intervening access specifier">;
+
+        NamedDecl *NonTemplateMember = Member;
+        if (FunctionTemplateDecl *FunTmpl = dyn_cast<FunctionTemplateDecl>(Member))
+          NonTemplateMember = FunTmpl->getTemplatedDecl();
+        else if (VarTemplateDecl *VarTmpl = dyn_cast<VarTemplateDecl>(Member))
+          NonTemplateMember = VarTmpl->getTemplatedDecl();
+    
+
+        if (NonTemplateMember != Member)
+          NonTemplateMember->setAccess(AS);
+    
+        // C++ [temp.deduct.guide]p3:
+        //   A deduction guide [...] for a member class template [shall be
+        //   declared] with the same access [as the template].
+        if (auto *DG = dyn_cast<CXXDeductionGuideDecl>(NonTemplateMember)) {
+          auto *TD = DG->getDeducedTemplate();
+          if (AS != TD->getAccess()) {
+            Diag(DG->getLocStart(), diag::err_deduction_guide_wrong_access);
+            Diag(TD->getLocStart(), diag::note_deduction_guide_template_access)
+              << TD->getAccess();
+            const AccessSpecDecl *LastAccessSpec = nullptr;
+            for (const auto *D : cast<CXXRecordDecl>(CurContext)->decls()) {
+              if (const auto *AccessSpec = dyn_cast<AccessSpecDecl>(D))
+                LastAccessSpec = AccessSpec;
+            }
+            assert(LastAccessSpec && "differing access with no access specifier");
+            Diag(LastAccessSpec->getLocStart(), diag::note_deduction_guide_access)
+              << AS;
+          }
+        }
+

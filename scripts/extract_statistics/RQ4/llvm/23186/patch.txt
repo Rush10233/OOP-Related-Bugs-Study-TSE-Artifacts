@@ -1,0 +1,8 @@
+Result =
+              Actions.CorrectDelayedTyposInExpr(ParseExpression(), [](Expr *E) {
+                return E->hasPlaceholderType() ? ExprError() : E;
+              });
+
+            /*IsInlineAsmIdentifier=*/false,
+            Tok.is(tok::r_paren) ? nullptr : &Replacement);
+

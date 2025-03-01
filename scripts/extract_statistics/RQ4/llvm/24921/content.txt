@@ -1,0 +1,48 @@
+
+      // No problems found with the new argument list, propagate changes back
+      // to caller.
+
+    
+      return false;
+    }
+
+      UnresolvedSet<8> Candidates;
+      TemplateSpecCandidateSet FailedCandidates(FD->getLocation());
+    
+
+      DeclContext *FDLookupContext = FD->getDeclContext()->getRedeclContext();
+      for (LookupResult::iterator I = Previous.begin(), E = Previous.end();
+             I != E; ++I) {
+
+            }
+          }
+    
+
+          // C++ [temp.expl.spec]p11:
+          //   A trailing template-argument can be left unspecified in the
+          //   template-id naming an explicit function template specialization
+
+          FunctionDecl *Specialization = nullptr;
+          if (TemplateDeductionResult TDK = DeduceTemplateArguments(
+                  cast<FunctionTemplateDecl>(FunTmpl->getFirstDecl()),
+
+            // Template argument deduction failed; record why it failed, so
+            // that we can provide nifty diagnostics.
+            FailedCandidates.addCandidate()
+
+          }
+    
+          // Record this candidate.
+
+          Candidates.addDecl(Specialization, I.getAccess());
+        }
+      }
+
+      // Take copies of (semantic and syntactic) template argument lists.
+      const TemplateArgumentList* TemplArgs = new (Context)
+        TemplateArgumentList(Specialization->getTemplateSpecializationArgs());
+
+    
+      // The "previous declaration" for this function template specialization is
+      // the prior function template specialization.
+

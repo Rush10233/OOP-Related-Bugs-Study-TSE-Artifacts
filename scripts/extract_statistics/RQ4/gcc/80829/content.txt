@@ -1,0 +1,32 @@
+return t;
+    }
+    
+
+    /* Subroutine of cxx_eval_constant_expression.
+       Evaluate the call expression tree T in the context of OLD_CALL expression
+       evaluation.  */
+
+    
+      /* The result of a constexpr function must be completely initialized.  */
+      if (TREE_CODE (result) == CONSTRUCTOR)
+
+    
+      pop_cx_call_context ();
+      return unshare_constructor (result);
+
+return t;
+    }
+    
+
+    /* Subroutine of cxx_eval_constant_expression.
+       Evaluate the call expression tree T in the context of OLD_CALL expression
+       evaluation.  */
+
+    
+      /* The result of a constexpr function must be completely initialized.  */
+      if (TREE_CODE (result) == CONSTRUCTOR)
+
+    
+      pop_cx_call_context ();
+      return unshare_constructor (result);
+

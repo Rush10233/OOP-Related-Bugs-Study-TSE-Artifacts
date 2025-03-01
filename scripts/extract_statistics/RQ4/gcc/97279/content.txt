@@ -1,0 +1,47 @@
+void
+    maybe_save_operator_binding (tree e)
+    {
+
+      if (!processing_template_decl)
+        return;
+    
+      tree cfn = current_function_decl;
+      if (!cfn)
+        return;
+    
+
+        return;
+    
+      tree attributes = DECL_ATTRIBUTES (cfn);
+
+        {
+          if (type_dependent_expression_p (op1)
+    	  || type_dependent_expression_p (op2))
+
+          op1 = build_non_dependent_expr (op1);
+          op2 = build_non_dependent_expr (op2);
+        }
+
+      tree orig_lhs = lhs;
+      tree orig_rhs = rhs;
+      tree overload = NULL_TREE;
+    
+      if (lhs == error_mark_node || rhs == error_mark_node)
+        return cp_expr (error_mark_node, loc);
+
+          if (modifycode == NOP_EXPR
+    	  || type_dependent_expression_p (lhs)
+    	  || type_dependent_expression_p (rhs))
+
+    
+          lhs = build_non_dependent_expr (lhs);
+          rhs = build_non_dependent_expr (rhs);
+        }
+    
+      if (modifycode != NOP_EXPR)
+        {
+
+          tree rval = build_new_op (loc, MODIFY_EXPR, LOOKUP_NORMAL,
+    				lhs, rhs, op, &overload, complain);
+          if (rval)
+

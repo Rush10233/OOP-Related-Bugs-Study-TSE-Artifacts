@@ -1,0 +1,5 @@
+
+
+    	  access_path = lookup_base (object_type, scope, ba_check,
+    				     NULL, complain);
+

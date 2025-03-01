@@ -1,0 +1,78 @@
+/* If OBJECT is of const class type, evaluate it to a CONSTRUCTOR and set
+       its TREE_READONLY flag according to READONLY_P.  Used for constexpr
+       'tors to detect modifying const objects in a constexpr context.  */
+    
+    static void
+    cxx_set_object_constness (const constexpr_ctx *ctx, tree object,
+    			  bool readonly_p, bool *non_constant_p,
+    			  bool *overflow_p)
+    {
+      if (CLASS_TYPE_P (TREE_TYPE (object))
+          && CP_TYPE_CONST_P (TREE_TYPE (object)))
+        {
+          /* Subobjects might not be stored in ctx->global->values but we
+    	 can get its CONSTRUCTOR by evaluating *this.  */
+          tree e = cxx_eval_constant_expression (ctx, object, /*lval*/false,
+    					     non_constant_p, overflow_p);
+          if (TREE_CODE (e) == CONSTRUCTOR && !*non_constant_p)
+    	TREE_READONLY (e) = readonly_p;
+        }
+    }
+    
+
+      /* Remember the object we are constructing or destructing.  */
+
+      if (DECL_CONSTRUCTOR_P (fun) || DECL_DESTRUCTOR_P (fun))
+
+          /* In a cdtor, it should be the first `this' argument.
+
+    	  /* If this is a constexpr destructor, the object's const and volatile
+    	     semantics are no longer in effect; see [class.dtor]p5.  */
+    	  if (new_obj && DECL_DESTRUCTOR_P (fun))
+    	    cxx_set_object_constness (ctx, new_obj, /*readonly_p=*/false,
+    				      non_constant_p, overflow_p);
+    
+
+    	  if (new_obj && DECL_CONSTRUCTOR_P (fun))
+    	    cxx_set_object_constness (ctx, new_obj, /*readonly_p=*/true,
+    				      non_constant_p, overflow_p);
+
+/* If OBJECT is of const class type, evaluate it to a CONSTRUCTOR and set
+       its TREE_READONLY flag according to READONLY_P.  Used for constexpr
+       'tors to detect modifying const objects in a constexpr context.  */
+    
+    static void
+    cxx_set_object_constness (const constexpr_ctx *ctx, tree object,
+    			  bool readonly_p, bool *non_constant_p,
+    			  bool *overflow_p)
+    {
+      if (CLASS_TYPE_P (TREE_TYPE (object))
+          && CP_TYPE_CONST_P (TREE_TYPE (object)))
+        {
+          /* Subobjects might not be stored in ctx->global->values but we
+    	 can get its CONSTRUCTOR by evaluating *this.  */
+          tree e = cxx_eval_constant_expression (ctx, object, /*lval*/false,
+    					     non_constant_p, overflow_p);
+          if (TREE_CODE (e) == CONSTRUCTOR && !*non_constant_p)
+    	TREE_READONLY (e) = readonly_p;
+        }
+    }
+    
+
+      /* Remember the object we are constructing or destructing.  */
+
+      if (DECL_CONSTRUCTOR_P (fun) || DECL_DESTRUCTOR_P (fun))
+
+          /* In a cdtor, it should be the first `this' argument.
+
+    	  /* If this is a constexpr destructor, the object's const and volatile
+    	     semantics are no longer in effect; see [class.dtor]p5.  */
+    	  if (new_obj && DECL_DESTRUCTOR_P (fun))
+    	    cxx_set_object_constness (ctx, new_obj, /*readonly_p=*/false,
+    				      non_constant_p, overflow_p);
+    
+
+    	  if (new_obj && DECL_CONSTRUCTOR_P (fun))
+    	    cxx_set_object_constness (ctx, new_obj, /*readonly_p=*/true,
+    				      non_constant_p, overflow_p);
+

@@ -1,0 +1,11 @@
+if (DECL_P (op))
+        {
+          tree ctx = CP_DECL_CONTEXT (op);
+
+          if (TYPE_P (ctx) && dependent_type_p (ctx))
+    	return true;
+
+        }
+    
+      return false;
+

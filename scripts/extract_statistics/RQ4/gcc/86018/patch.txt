@@ -1,0 +1,75 @@
+tree objfn = lookup_template_function (DECL_NAME (callop),
+    					     DECL_TI_ARGS (callop));
+          objfn = build_min (COMPONENT_REF, NULL_TREE,
+    			 instance, objfn, NULL_TREE);
+
+    	    tree a = tgt;
+    	    if (DECL_PACK_P (tgt))
+    	      {
+    		a = make_pack_expansion (a);
+    		PACK_EXPANSION_LOCAL_P (a) = true;
+    	      }
+
+    	    if (decltype_call)
+    	      {
+    		/* Avoid capturing variables in this context.  */
+    		++cp_unevaluated_operand;
+    		CALL_EXPR_ARG (decltype_call, ix) = forward_parm (tgt);
+    		--cp_unevaluated_operand;
+    	      }
+
+    	/* Stripped-down processing for a call in a thunk.  Specifically, in
+    	   the thunk template for a generic lambda.  */
+    	if (CALL_FROM_THUNK_P (t))
+    	  {
+    	    tree thisarg = NULL_TREE;
+    	    if (TREE_CODE (function) == COMPONENT_REF)
+    	      {
+    		thisarg = TREE_OPERAND (function, 0);
+    		if (TREE_CODE (thisarg) == INDIRECT_REF)
+    		  thisarg = TREE_OPERAND (thisarg, 0);
+    		function = TREE_OPERAND (function, 1);
+    		if (TREE_CODE (function) == BASELINK)
+    		  function = BASELINK_FUNCTIONS (function);
+    	      }
+    	    /* We aren't going to do normal overload resolution, so force the
+    	       template-id to resolve.  */
+    	    function = resolve_nondeduced_context (function, complain);
+    	    for (unsigned i = 0; i < nargs; ++i)
+    	      {
+    		/* In a thunk, pass through args directly, without any
+    		   conversions.  */
+    		tree arg = (*call_args)[i];
+    		while (TREE_CODE (arg) != PARM_DECL)
+    		  arg = TREE_OPERAND (arg, 0);
+    		(*call_args)[i] = arg;
+    	      }
+    	    if (thisarg)
+    	      {
+    		/* Shift the other args over to make room.  */
+    		vec_safe_push (call_args, (*call_args)[nargs-1]);
+    		for (int i = nargs-1; i > 0; --i)
+    		  (*call_args)[i] = (*call_args)[i-1];
+    		(*call_args)[0] = thisarg;
+    	      }
+    	    ret = build_call_a (function, call_args->length (),
+    				call_args->address ());
+    	    /* The thunk location is not interesting.  */
+    	    SET_EXPR_LOCATION (ret, UNKNOWN_LOCATION);
+    	    CALL_FROM_THUNK_P (ret) = true;
+    	    if (CLASS_TYPE_P (TREE_TYPE (ret)))
+    	      CALL_EXPR_RETURN_SLOT_OPT (ret) = true;
+    
+    	    release_tree_vector (call_args);
+    	    RETURN (ret);
+    	  }
+    
+
+    	    if (op || ord || rev)
+
+          /* The call in a (lambda) thunk needs no conversions.  */
+          if (TREE_CODE (retval) == CALL_EXPR
+    	  && CALL_FROM_THUNK_P (retval))
+    	converted = true;
+    
+

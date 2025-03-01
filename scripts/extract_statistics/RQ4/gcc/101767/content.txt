@@ -1,0 +1,31 @@
+return error_mark_node;
+    	    }
+    
+
+    	  if (!field || TREE_CODE (field) != FIELD_DECL)
+    	    {
+    	      if (complain & tf_error)
+
+return error_mark_node;
+    	    }
+    
+
+    	  if (!field || TREE_CODE (field) != FIELD_DECL)
+    	    {
+    	      if (complain & tf_error)
+
+return error_mark_node;
+    	    }
+    
+
+    	  if (!field || TREE_CODE (field) != FIELD_DECL)
+    	    {
+    	      if (complain & tf_error)
+
+return error_mark_node;
+    	    }
+    
+    	  if (!field || TREE_CODE (field) != FIELD_DECL)
+    	    {
+    	      if (complain & tf_error)
+

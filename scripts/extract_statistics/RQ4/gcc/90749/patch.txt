@@ -1,0 +1,8 @@
+tree ctx = DECL_CONTEXT (member);
+    	  if (!currently_open_class (ctx)
+    	      && !LOCAL_CLASS_P (ctx))
+
+    	      push_nested_class (ctx);
+
+    	  inject_this_parameter (ctx, TYPE_UNQUALIFIED);
+

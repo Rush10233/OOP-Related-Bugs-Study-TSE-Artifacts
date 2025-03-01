@@ -1,0 +1,3 @@
+tree s = build_fold_indirect_ref_loc (loc,
+    						      CALL_EXPR_ARG (x, 0));
+

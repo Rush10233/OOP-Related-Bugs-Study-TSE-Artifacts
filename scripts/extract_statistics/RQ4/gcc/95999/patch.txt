@@ -1,0 +1,4 @@
+if (TREE_CODE (value) != INTEGER_CST)
+
+    	      if (TREE_CODE (prev_value) != INTEGER_CST)
+

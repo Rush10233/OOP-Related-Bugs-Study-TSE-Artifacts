@@ -1,0 +1,29 @@
+if (TemplateTypeParmDecl *TTP =
+              GetContainedInventedTypeParmVisitor().Visit(OldDI->getType())) {
+        if (const TypeConstraint *TC = TTP->getTypeConstraint()) {
+
+              FindInstantiatedDecl(TTP->getLocation(), TTP, TemplateArgs));
+          // We will first get here when instantiating the abbreviated function
+          // template's described function, but we might also get here later.
+          // Make sure we do not instantiate the TypeConstraint more than once.
+
+            // TODO: Concepts: do not instantiate the constraint (delayed constraint
+            // substitution)
+            const ASTTemplateArgumentListInfo *TemplArgInfo
+
+        return nullptr;
+      QualType T = adjustFunctionTypeForInstantiation(SemaRef.Context, D, TInfo);
+    
+
+      NestedNameSpecifierLoc QualifierLoc = D->getQualifierLoc();
+      if (QualifierLoc) {
+        QualifierLoc = SemaRef.SubstNestedNameSpecifierLoc(QualifierLoc,
+
+        return nullptr;
+      QualType T = adjustFunctionTypeForInstantiation(SemaRef.Context, D, TInfo);
+    
+
+      NestedNameSpecifierLoc QualifierLoc = D->getQualifierLoc();
+      if (QualifierLoc) {
+        QualifierLoc = SemaRef.SubstNestedNameSpecifierLoc(QualifierLoc,
+

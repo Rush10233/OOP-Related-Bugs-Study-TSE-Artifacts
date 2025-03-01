@@ -1,0 +1,8 @@
+{
+      if (DECL_ABSTRACT_P (decl))
+        return decl;
+
+    
+      symtab_node *n = symtab_node::get_for_asmname
+    		     (DECL_ASSEMBLER_NAME (decl));
+

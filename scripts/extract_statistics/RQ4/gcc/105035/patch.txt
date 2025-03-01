@@ -1,0 +1,12 @@
+/* Non-FIELD_DECL operands can appear in C++ templates.  */
+    		    if (TREE_CODE (field0) != FIELD_DECL
+    			|| TREE_CODE (field1) != FIELD_DECL
+    			|| !operand_equal_p (DECL_FIELD_OFFSET (field0),
+    					     DECL_FIELD_OFFSET (field1), flags)
+
+/* Non-FIELD_DECL operands can appear in C++ templates.  */
+    		    if (TREE_CODE (field0) != FIELD_DECL
+    			|| TREE_CODE (field1) != FIELD_DECL
+    			|| !operand_equal_p (DECL_FIELD_OFFSET (field0),
+    					     DECL_FIELD_OFFSET (field1), flags)
+

@@ -1,0 +1,19 @@
+{
+          tree type = TREE_TYPE (postfix_expression);
+          /* If we don't have a (type-dependent) object of class type, use
+    	 typeof to figure out the type of the object.  */
+          if (type == NULL_TREE)
+    	type = finish_typeof (postfix_expression);
+          parser->context->object_type = type;
+        }
+
+         to a template-id, so we save it here.  Consider object scope too,
+         so that make_typename_type below can use it (cp_parser_template_name
+         considers object scope also).  This may happen with code like
+    
+           p->template A<T>::a()
+    
+          where we first want to look up A<T>::a in the class of the object
+          expression, as per [basic.lookup.classref].  */
+      scope = parser->scope ? parser->scope : parser->context->object_type;
+

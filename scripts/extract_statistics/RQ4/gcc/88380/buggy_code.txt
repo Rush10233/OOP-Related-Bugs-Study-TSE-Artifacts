@@ -1,0 +1,10 @@
+to zero.  However, avoid issuing the warning for flexible
+    	     array members since they need not have any elements.  */
+    	  if ((TREE_CODE (fldtype) != ARRAY_TYPE || TYPE_DOMAIN (fldtype))
+    	      && (complain & tf_warning)
+
+to zero.  However, avoid issuing the warning for flexible
+    	     array members since they need not have any elements.  */
+    	  if ((TREE_CODE (fldtype) != ARRAY_TYPE || TYPE_DOMAIN (fldtype))
+    	      && (complain & tf_warning)
+

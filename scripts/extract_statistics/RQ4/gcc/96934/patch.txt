@@ -1,0 +1,2 @@
+init = fold_ctor_reference (TREE_TYPE (arg), init, base_off, 0, array,
+

@@ -1,0 +1,32 @@
+
+          /* Record the initialization.  */
+          TREE_VALUE (subobject_init) = TREE_VALUE (init);
+
+          next_subobject = subobject_init;
+        }
+    
+
+      /* Initialize the data members.  */
+      while (mem_inits)
+        {
+
+          perform_member_init (TREE_PURPOSE (mem_inits),
+    			   TREE_VALUE (mem_inits));
+          mem_inits = TREE_CHAIN (mem_inits);
+
+    
+      in_base_initializer = 0;
+    
+
+    }
+    
+    /* Parse a mem-initializer-id.
+
+              if (decl)
+                {
+                  init = build_tree_list (decl, init);
+
+                  TREE_CHAIN (init) = inits;
+                  inits = init;
+                }
+

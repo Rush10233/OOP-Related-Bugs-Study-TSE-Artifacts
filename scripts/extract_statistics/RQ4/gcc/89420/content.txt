@@ -1,0 +1,13 @@
+tree
+    build_explicit_specifier (tree expr, tsubst_flags_t complain)
+    {
+
+        /* Wait for instantiation, tsubst_function_decl will handle it.  */
+        return expr;
+    
+
+      expr = build_converted_constant_expr (boolean_type_node, expr, complain);
+      expr = cxx_constant_value (expr);
+      return expr;
+    }
+

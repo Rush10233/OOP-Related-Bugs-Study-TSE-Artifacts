@@ -1,0 +1,7 @@
+Commit:	d282582
+./clang/include/clang/Sema/Sema.h	2710,2710
+./clang/lib/Sema/SemaCodeComplete.cpp	4401,4401
+./clang/lib/Sema/SemaOverload.cpp	6346,6346
+./clang/lib/Sema/SemaOverload.cpp	6353,6357
+./clang/lib/Sema/SemaOverload.cpp	6360,6360
+./clang/lib/Sema/SemaOverload.cpp	6363,6363

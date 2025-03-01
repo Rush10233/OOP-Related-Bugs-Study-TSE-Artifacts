@@ -1,0 +1,21 @@
+{
+          /* This isn't actually constant, so unset TREE_CONSTANT.
+    	 Don't clear TREE_CONSTANT on ADDR_EXPR, as the middle-end requires
+    	 it to be set if it is invariant address, even when it is not
+    	 a valid C++ constant expression.  Wrap it with a NOP_EXPR
+    	 instead.  */
+          if (EXPR_P (r) && TREE_CODE (r) != ADDR_EXPR)
+    	r = copy_node (r);
+          else if (TREE_CODE (r) == CONSTRUCTOR)
+    	r = build1 (VIEW_CONVERT_EXPR, TREE_TYPE (r), r);
+          else
+    	r = build_nop (TREE_TYPE (r), r);
+          TREE_CONSTANT (r) = false;
+        }
+
+          if (TREE_OVERFLOW_P (t))
+    	{
+    	  t = build_nop (TREE_TYPE (t), t);
+    	  TREE_CONSTANT (t) = false;
+    	}
+

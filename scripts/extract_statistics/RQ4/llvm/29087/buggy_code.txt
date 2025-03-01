@@ -1,0 +1,8 @@
+if (isa<FunctionTemplateDecl>(ND))
+
+            const CXXConstructorDecl *Constructor = cast<CXXConstructorDecl>(ND);
+
+            if (isa<FunctionTemplateDecl>(ND))
+
+            const CXXConstructorDecl *Constructor = cast<CXXConstructorDecl>(ND);
+

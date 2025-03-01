@@ -1,0 +1,38 @@
+for the (integer) index of the matching constructor_elt within CTOR.  */
+    
+    static constructor_elt *
+
+    {
+      /* Check the hint first.  */
+      if (pos_hint >= 0 && (unsigned)pos_hint < CONSTRUCTOR_NELTS (ctor)
+
+    	{
+    	  /* If we built a new CONSTRUCTOR, attach it now so that other
+    	     initializers can refer to it.  */
+
+    	}
+          else if (TREE_CODE (type) == UNION_TYPE)
+    	/* Otherwise if we're constructing a non-aggregate union member, set
+    	   the active union member now so that we can later detect and diagnose
+    	   if its initializer attempts to activate another member.  */
+
+          tree elt = cxx_eval_constant_expression (&new_ctx, value,
+    					       lval,
+    					       non_constant_p, overflow_p);
+
+      /* And then find/build up our initializer for the path to the subobject
+         we're initializing.  */
+      tree *valp;
+
+        valp = ctx->global->values.get (object);
+      else
+        valp = NULL;
+
+          vec_safe_push (indexes, index);
+    
+          constructor_elt *cep
+
+          index_pos_hints.safe_push (cep - CONSTRUCTOR_ELTS (*valp)->begin());
+    
+          if (code == UNION_TYPE)
+

@@ -1,0 +1,39 @@
+// If we're in a context where the identifier could be a class name,
+          // check whether this is a constructor declaration.
+          if (getLangOpts().CPlusPlus && DSContext == DeclSpecContext::DSC_class &&
+              Actions.isCurrentClassName(*Tok.getIdentifierInfo(), getCurScope()) &&
+              isConstructorDeclarator(/*Unqualified*/true))
+            goto DoneWithDeclSpec;
+    
+
+          ParsedType Ty = Actions.getTypeName(*Id, IdLoc, getCurScope(), &SS, false,
+                                              false, nullptr,
+                                              /*IsCtorOrDtorName=*/true,
+                                              /*NonTrivialTypeSourceInfo=*/true);
+
+            ParsedType Ty =
+                Actions.getTypeName(*TemplateId->Name, TemplateId->TemplateNameLoc,
+                                    getCurScope(), &SS, false, false, nullptr,
+                                    /*IsCtorOrDtorName=*/true,
+                                    /*NontrivialTypeSourceInfo=*/true);
+
+    bool Sema::isCurrentClassName(const IdentifierInfo &II, Scope *,
+
+      assert(getLangOpts().CPlusPlus && "No class names in C!");
+    
+      CXXRecordDecl *CurDecl;
+      if (SS && SS->isSet() && !SS->isInvalid()) {
+        DeclContext *DC = computeDeclContext(*SS, true);
+        CurDecl = dyn_cast_or_null<CXXRecordDecl>(DC);
+      } else
+        CurDecl = dyn_cast_or_null<CXXRecordDecl>(CurContext);
+    
+      if (CurDecl && CurDecl->getIdentifier())
+        return &II == CurDecl->getIdentifier();
+      return false;
+
+          NamedDecl *D = *I;
+          if ((isa<FieldDecl>(D) && Record->hasUserDeclaredConstructor()) ||
+
+            Diag(D->getLocation(), diag::err_member_name_of_class)
+

@@ -1,0 +1,83 @@
+// with internal linkage.
+        return isVisible(Old) || New->isExternallyVisible();
+      }
+
+    
+    public:
+      typedef OpaquePtr<DeclGroupRef> DeclGroupPtrTy;
+
+            continue;
+        }
+    
+
+      }
+    
+      Filter.done();
+
+      if (New->isInvalidDecl())
+        return;
+    
+
+      VarTemplateDecl *NewTemplate = New->getDescribedVarTemplate();
+    
+      // Verify the old decl was also a variable or variable template.
+
+        return New->setInvalidDecl();
+      }
+    
+      // Ensure the template parameters are compatible.
+      if (NewTemplate &&
+          !TemplateParameterListsAreEqual(NewTemplate->getTemplateParameters(),
+
+      assert(!R.isAmbiguous() && !R.empty());
+    
+      // Check if we have a previous declaration with the same name.
+
+        PrevDecl = nullptr;
+    
+      NamedDecl *ND = R.getFoundDecl();
+
+      return LookupResult::isVisible(*this, const_cast<NamedDecl*>(D));
+    }
+    
+
+    /// \brief Retrieve the visible declaration corresponding to D, if any.
+    ///
+    /// This routine determines whether the declaration D is visible in the current
+
+}
+      }
+      assert(!R.isAmbiguous() && !R.empty());
+
+    
+      // Check if we have a previous declaration with the same name.
+      LookupResult PrevR(*this, Alias, AliasLoc, LookupOrdinaryName,
+                         ForRedeclaration);
+
+    
+
+    
+
+        if (NamespaceAliasDecl *AD = dyn_cast<NamespaceAliasDecl>(PrevDecl)) {
+          // We already have an alias with the same name that points to the same
+          // namespace; check that it matches.
+
+            Diag(AliasLoc, diag::err_redefinition_different_namespace_alias)
+              << Alias;
+            Diag(PrevDecl->getLocation(), diag::note_previous_namespace_alias)
+              << AD->getNamespace();
+            return nullptr;
+          }
+
+          unsigned DiagID = isa<NamespaceDecl>(PrevDecl)
+                                ? diag::err_redefinition
+                                : diag::err_redefinition_different_kind;
+
+        NamespaceAliasDecl::Create(Context, CurContext, NamespaceLoc, AliasLoc,
+                                   Alias, SS.getWithLocInContext(Context),
+                                   IdentLoc, ND);
+
+    
+      PushOnScopeChains(AliasDecl, S);
+      return AliasDecl;
+

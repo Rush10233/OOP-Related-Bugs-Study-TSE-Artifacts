@@ -1,0 +1,155 @@
+//===----------------------------------------------------------------------===//
+    // Wrapper Expressions.
+    //===----------------------------------------------------------------------===//
+    
+    /// FullExpr - Represents a "full-expression" node.
+    class FullExpr : public Expr {
+    protected:
+     Stmt *SubExpr;
+    
+     FullExpr(StmtClass SC, Expr *subexpr)
+        : Expr(SC, subexpr->getType(),
+               subexpr->getValueKind(), subexpr->getObjectKind(),
+               subexpr->isTypeDependent(), subexpr->isValueDependent(),
+               subexpr->isInstantiationDependent(),
+               subexpr->containsUnexpandedParameterPack()), SubExpr(subexpr) {}
+      FullExpr(StmtClass SC, EmptyShell Empty)
+        : Expr(SC, Empty) {}
+    public:
+      const Expr *getSubExpr() const { return cast<Expr>(SubExpr); }
+      Expr *getSubExpr() { return cast<Expr>(SubExpr); }
+    
+      /// As with any mutator of the AST, be very careful when modifying an
+      /// existing AST to preserve its invariants.
+      void setSubExpr(Expr *E) { SubExpr = E; }
+    
+      static bool classof(const Stmt *T) {
+        return T->getStmtClass() >= firstFullExprConstant &&
+               T->getStmtClass() <= lastFullExprConstant;
+      }
+    };
+    
+    /// ConstantExpr - An expression that occurs in a constant context.
+    struct ConstantExpr : public FullExpr {
+      ConstantExpr(Expr *subexpr)
+        : FullExpr(ConstantExprClass, subexpr) {}
+    
+      /// Build an empty constant expression wrapper.
+      explicit ConstantExpr(EmptyShell Empty)
+        : FullExpr(ConstantExprClass, Empty) {}
+    
+      SourceLocation getBeginLoc() const LLVM_READONLY {
+        return SubExpr->getBeginLoc();
+      }
+      SourceLocation getEndLoc() const LLVM_READONLY {
+        return SubExpr->getEndLoc();
+      }
+    
+      static bool classof(const Stmt *T) {
+        return T->getStmtClass() == ConstantExprClass;
+      }
+    
+      // Iterators
+      child_range children() { return child_range(&SubExpr, &SubExpr+1); }
+      const_child_range children() const {
+        return const_child_range(&SubExpr, &SubExpr + 1);
+      }
+    };
+    
+
+        : public FullExpr,
+
+    DEF_TRAVERSE_STMT(ConstantExpr, {})
+    
+
+    // Wrapper expressions
+    def FullExpr : DStmt<Expr, 1>;
+    def ConstantExpr : DStmt<FullExpr>;
+    
+
+    def ExprWithCleanups : DStmt<FullExpr>;
+
+          /// A constant expression context.
+          EXPR_CONSTANT,
+    
+
+        if (FullExpr *FE = dyn_cast<FullExpr>(S))
+          S = FE->getSubExpr();
+
+                          isa<FullExpr>(OuterS)));
+
+        if (FullExpr *FE = dyn_cast<FullExpr>(Rec))
+          Rec = FE->getSubExpr()->IgnoreParenImpCasts();
+
+          } while (parent && isa<FullExpr>(parent));
+
+      if (const FullExpr *FE = dyn_cast<FullExpr>(E))
+        E = FE->getSubExpr();
+
+      if (auto *E = dyn_cast_or_null<FullExpr>(Arg))
+
+      case ConstantExprClass:
+        // FIXME: Move this into the "return false;" block above.
+        return cast<ConstantExpr>(this)->getSubExpr()->HasSideEffects(
+            Ctx, IncludePossibleEffects);
+    
+
+        : FullExpr(ExprWithCleanupsClass, subexpr) {
+
+        : FullExpr(ExprWithCleanupsClass, empty) {
+
+      case Expr::ConstantExprClass:
+        return ClassifyInternal(Ctx, cast<ConstantExpr>(E)->getSubExpr());
+    
+
+        if (const auto *FE = dyn_cast<FullExpr>(E))
+          E = FE->getSubExpr()->IgnoreParens();
+
+      case Expr::ConstantExprClass:
+        return CheckICE(cast<ConstantExpr>(E)->getSubExpr(), Ctx);
+    
+
+      case Expr::ConstantExprClass:
+        E = cast<ConstantExpr>(E)->getSubExpr();
+        goto recurse;
+    
+
+                   isa<FullExpr>(P))) {
+
+        if (auto *fe = dyn_cast<FullExpr>(s))
+          s = fe->getSubExpr();
+
+    void StmtPrinter::VisitConstantExpr(ConstantExpr *Node) {
+      PrintExpr(Node->getSubExpr());
+    }
+    
+
+    void StmtProfiler::VisitConstantExpr(const ConstantExpr *S) {
+      VisitExpr(S);
+    }
+    
+
+        if (const FullExpr *FE = dyn_cast<FullExpr>(S)) {
+          S = FE->getSubExpr();
+
+      else if (const auto *FE = dyn_cast<FullExpr>(Cond))
+        return getTrylockCallExpr(FE->getSubExpr(), C, Negate);
+
+      case Stmt::ConstantExprClass:
+        return translate(cast<ConstantExpr>(S)->getSubExpr(), Ctx);
+
+    void CodeGenFunction::enterNonTrivialFullExpression(const FullExpr *E) {
+      if (const auto EWC = dyn_cast<ExprWithCleanups>(E)) {
+        assert(EWC->getNumObjects() != 0);
+        for (const ExprWithCleanups::CleanupObject &C : EWC->getObjects())
+          enterBlockScope(*this, C);
+      }
+
+      if (const FullExpr *fe = dyn_cast<FullExpr>(init)) {
+        enterFullExpression(fe);
+        init = fe->getSubExpr();
+
+      if (const FullExpr *fe = dyn_cast_or_null<FullExpr>(RV)) {
+        enterFullExpression(fe);
+        RV = fe->getSubExpr();
+

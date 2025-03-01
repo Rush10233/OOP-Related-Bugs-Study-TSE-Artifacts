@@ -1,0 +1,78 @@
+/* Build a new template argument list with template arguments corresponding
+       to the parameters used in an atomic constraint.  */
+
+    tree
+    get_mapped_args (tree map)
+
+      /* Find the mapped parameter with the highest level.  */
+      int count = 0;
+      for (tree p = map; p; p = TREE_CHAIN (p))
+        {
+          int level;
+          int index;
+          template_parm_level_and_index (TREE_VALUE (p), &level, &index);
+          if (level > count)
+            count = level;
+        }
+
+      auto_vec< vec<tree> > lists (count);
+      lists.quick_grow_cleared (count);
+
+    	list.safe_grow_cleared (index + 1, true);
+
+      tree args = make_tree_vec (lists.length ());
+
+      args = get_mapped_args (map);
+
+    	diagnose_atomic_constraint (t, map, result, info);
+
+        diagnose_atomic_constraint (t, map, result, info);
+
+    /* Diagnose a substitution failure in the atomic constraint T when applied
+       with the instantiated parameter mapping MAP.  */
+
+    diagnose_atomic_constraint (tree t, tree map, tree result, sat_info info)
+
+      tree args = get_mapped_args (map);
+
+    extern tree get_mapped_args			(tree);
+
+/* Build a new template argument list with template arguments corresponding
+       to the parameters used in an atomic constraint.  */
+
+    tree
+    get_mapped_args (tree map)
+
+      /* Find the mapped parameter with the highest level.  */
+      int count = 0;
+      for (tree p = map; p; p = TREE_CHAIN (p))
+        {
+          int level;
+          int index;
+          template_parm_level_and_index (TREE_VALUE (p), &level, &index);
+          if (level > count)
+            count = level;
+        }
+
+      auto_vec< vec<tree> > lists (count);
+      lists.quick_grow_cleared (count);
+
+    	list.safe_grow_cleared (index + 1, true);
+
+      tree args = make_tree_vec (lists.length ());
+
+      args = get_mapped_args (map);
+
+    	diagnose_atomic_constraint (t, map, result, info);
+
+        diagnose_atomic_constraint (t, map, result, info);
+
+    /* Diagnose a substitution failure in the atomic constraint T when applied
+       with the instantiated parameter mapping MAP.  */
+
+    diagnose_atomic_constraint (tree t, tree map, tree result, sat_info info)
+
+      tree args = get_mapped_args (map);
+
+    extern tree get_mapped_args			(tree);
+

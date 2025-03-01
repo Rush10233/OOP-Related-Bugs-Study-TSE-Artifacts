@@ -1,0 +1,67 @@
+{
+    	  cand->second_conv = build_identity_conv (totype, NULL_TREE);
+    
+
+    	     set, then this is copy-initialization.  In that case, "The
+    	     result of the call is then used to direct-initialize the
+    	     object that is the destination of the copy-initialization."
+
+    	     We represent this in the conversion sequence with an
+    	     rvalue conversion, which means a constructor call.  */
+    	  if (!TYPE_REF_P (totype)
+
+    	      && !(convflags & LOOKUP_NO_TEMP_BIND))
+    	    cand->second_conv
+    	      = build_conv (ck_rvalue, totype, cand->second_conv);
+
+      expr = convert_like_real (next_conversion (convs), expr, fn, argnum,
+    			    convs->kind == ck_ref_bind
+    			    ? issue_conversion_warnings : false, 
+
+      if (expr == error_mark_node)
+        return error_mark_node;
+    
+
+We represent this in the conversion sequence with an
+    	     rvalue conversion, which means a constructor call.  */
+    	  if (!TYPE_REF_P (totype)
+
+    	      && !(convflags & LOOKUP_NO_TEMP_BIND))
+    	    cand->second_conv
+    	      = build_conv (ck_rvalue, totype, cand->second_conv);
+
+          break;
+        };
+    
+      expr = convert_like (next_conversion (convs), expr, fn, argnum,
+    		       convs->kind == ck_ref_bind
+    		       ? issue_conversion_warnings : false,
+
+      if (expr == error_mark_node)
+        return error_mark_node;
+    
+
+{
+    	  cand->second_conv = build_identity_conv (totype, NULL_TREE);
+    
+
+    	     set, then this is copy-initialization.  In that case, "The
+    	     result of the call is then used to direct-initialize the
+    	     object that is the destination of the copy-initialization."
+
+    	     We represent this in the conversion sequence with an
+    	     rvalue conversion, which means a constructor call.  */
+    	  if (!TYPE_REF_P (totype)
+
+    	      && !(convflags & LOOKUP_NO_TEMP_BIND))
+    	    cand->second_conv
+    	      = build_conv (ck_rvalue, totype, cand->second_conv);
+
+      expr = convert_like_real (next_conversion (convs), expr, fn, argnum,
+    			    convs->kind == ck_ref_bind
+    			    ? issue_conversion_warnings : false, 
+
+      if (expr == error_mark_node)
+        return error_mark_node;
+    
+

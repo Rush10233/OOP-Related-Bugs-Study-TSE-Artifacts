@@ -1,0 +1,7 @@
+
+      if (type_in_anonymous_namespace_p (DECL_CONTEXT (decl)))
+        /* There can't be any other declarations.  */
+        return decl;
+    
+      gcc_checking_assert (DECL_ASSEMBLER_NAME_SET_P (decl));
+

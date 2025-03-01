@@ -1,0 +1,121 @@
+by unsafe_copy_elision_p{,_opt}.  */
+
+        /* unsafe_copy_elision_p_opt must have said this is OK.  */
+
+    /* Return 2 if T refers to a base, 1 if a potentially-overlapping field,
+       neither of which can be used for return by invisible reference.  We avoid
+       doing C++17 mandatory copy elision for either of these cases.
+
+       This returns non-zero even if the type of T has no tail padding that other
+       data could be allocated into, because that depends on the particular ABI.
+       unsafe_copy_elision_p_opt does consider whether there is padding.  */
+
+    int
+
+        return 2;
+
+      if (DECL_FIELD_IS_BASE (t))
+        return 2;
+      if (lookup_attribute ("no_unique_address", DECL_ATTRIBUTES (t)))
+        return 1;
+      return 0;
+
+    /* True IFF EXP is a prvalue that represents return by invisible reference.  */
+
+    init_by_return_slot_p (tree exp)
+
+    	 into the target, so look at them.  */
+
+    	if (init_by_return_slot_p (op))
+
+          return init_by_return_slot_p (TREE_OPERAND (init, 2));
+
+    /* We can't elide a copy from a function returning by value to a
+       potentially-overlapping subobject, as the callee might clobber tail padding.
+       Return true iff this could be that case.
+    
+       Places that use this function (or _opt) to decide to elide a copy should
+       probably use make_safe_copy_elision instead.  */
+    
+    static bool
+    unsafe_copy_elision_p (tree target, tree exp)
+    {
+      return unsafe_return_slot_p (target) && init_by_return_slot_p (exp);
+    }
+    
+    /* As above, but for optimization allow more cases that are actually safe.  */
+    
+    static bool
+    unsafe_copy_elision_p_opt (tree target, tree exp)
+    {
+      tree type = TYPE_MAIN_VARIANT (TREE_TYPE (exp));
+      /* It's safe to elide the copy for a class with no tail padding.  */
+      if (!is_empty_class (type)
+          && tree_int_cst_equal (TYPE_SIZE (type), CLASSTYPE_SIZE (type)))
+        return false;
+      return unsafe_copy_elision_p (target, exp);
+    }
+    
+    /* Try to make EXP suitable to be used as the initializer for TARGET,
+       and return whether we were successful.  */
+    
+    bool
+    make_safe_copy_elision (tree target, tree exp)
+    {
+      int uns = unsafe_return_slot_p (target);
+      if (!uns)
+        return true;
+      if (init_by_return_slot_p (exp))
+        return false;
+      if (uns == 1)
+        return true;
+      return make_base_init_ok (exp);
+    }
+    
+
+          bool unsafe = unsafe_copy_elision_p_opt (fa, arg);
+
+    extern int unsafe_return_slot_p			(tree);
+    extern bool make_safe_copy_elision		(tree, tree);
+
+    		  /* We may need to add a copy constructor call if
+    		     the field has [[no_unique_address]].  */
+
+    		      /* But not if the initializer is an implicit ctor call
+    			 we just built in digest_init.  */
+    		      if (TREE_CODE (value) == TARGET_EXPR
+    			  && TARGET_EXPR_LIST_INIT_P (value)
+    			  && make_safe_copy_elision (sub, value))
+    			goto build_init;
+    
+    		      tree name = (DECL_FIELD_IS_BASE (field_index)
+    				   ? base_ctor_identifier
+    				   : complete_ctor_identifier);
+
+    			(sub, name, &args, inner_type,
+
+    		    {
+    		    build_init:
+    		      code = build2 (INIT_EXPR, inner_type, sub, value);
+    		    }
+
+/* We may need to add a copy constructor call if
+    		     the field has [[no_unique_address]].  */
+
+    		      /* But not if the initializer is an implicit ctor call
+    			 we just built in digest_init.  */
+    		      if (TREE_CODE (value) == TARGET_EXPR
+    			  && TARGET_EXPR_LIST_INIT_P (value))
+    			{
+    			  tree init = TARGET_EXPR_INITIAL (value);
+    			  if (init && TREE_CODE (init) == AGGR_INIT_EXPR
+    			      && AGGR_INIT_VIA_CTOR_P (init))
+    			    goto build_init;
+    			}
+    
+
+    		    {
+    		    build_init:
+    		      code = build2 (INIT_EXPR, inner_type, sub, value);
+    		    }
+

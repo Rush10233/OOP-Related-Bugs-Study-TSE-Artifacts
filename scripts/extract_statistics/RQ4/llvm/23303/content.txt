@@ -1,0 +1,42 @@
+
+      TemplateName getUnderlying() const;
+    
+
+      /// \brief Determines whether this is a dependent template name.
+      bool isDependent() const;
+    
+
+      return Storage.dyn_cast<DependentTemplateName *>();
+    }
+    
+
+    bool TemplateName::isDependent() const {
+      if (TemplateDecl *Template = getAsTemplateDecl()) {
+        if (isa<TemplateTemplateParmDecl>(Template))
+
+            Arg = getPackSubstitutedTemplateArgument(getSema(), Arg);
+          }
+    
+
+          assert(!Template.isNull() && Template.getAsTemplateDecl() &&
+                 "Wrong kind of template template argument");
+          return Template.getAsTemplateDecl();
+
+            Arg = getPackSubstitutedTemplateArgument(getSema(), Arg);
+          }
+    
+
+          assert(!Template.isNull() && "Null template template argument");
+
+    
+          Template = getSema().Context.getSubstTemplateTemplateParm(TTP, Template);
+          return Template;
+
+    
+        TemplateArgument Arg = SubstPack->getArgumentPack();
+        Arg = getPackSubstitutedTemplateArgument(getSema(), Arg);
+
+      }
+    
+      return inherited::TransformTemplateName(SS, Name, NameLoc, ObjectType,
+

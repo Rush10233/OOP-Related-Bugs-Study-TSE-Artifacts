@@ -1,0 +1,2 @@
+Commit:	6b7e4af
+./gcc/lto/lto-symtab.c	1088,1089

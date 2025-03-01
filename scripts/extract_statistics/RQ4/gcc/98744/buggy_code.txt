@@ -1,0 +1,2 @@
+if (!fn || DECL_HAS_IN_CHARGE_PARM_P (fn))
+

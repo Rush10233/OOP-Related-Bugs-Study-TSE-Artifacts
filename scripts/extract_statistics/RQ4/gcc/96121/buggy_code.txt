@@ -1,0 +1,22 @@
+static void perform_member_init (tree, tree);
+
+    /* Initialize current class with INIT, a TREE_LIST of
+       arguments for a target constructor. If TREE_LIST is void_type_node,
+       an empty initializer list was given.  */
+
+    static void
+
+      finish_expr_stmt (build_aggr_init (decl, init,
+    				     LOOKUP_NORMAL|LOOKUP_DELEGATING_CONS,
+    				     tf_warning_or_error));
+
+       list was given; if NULL_TREE no initializer was given.  */
+
+    perform_member_init (tree member, tree init)
+
+      if (warn_init_self && init && TREE_CODE (init) == TREE_LIST
+
+          perform_target_ctor (TREE_VALUE (mem_inits));
+
+    			   TREE_VALUE (mem_inits));
+

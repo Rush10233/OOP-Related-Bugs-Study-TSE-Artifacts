@@ -1,0 +1,3 @@
+set_instantiating_module (TYPE_NAME (type));
+    
+

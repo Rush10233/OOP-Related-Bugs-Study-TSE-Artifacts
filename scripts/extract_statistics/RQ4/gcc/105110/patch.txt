@@ -1,0 +1,4 @@
+/* Deduce it from the non-type argument.  As above, ignore
+    		 top-level quals here too.  */
+    	      tree atype = cv_unqualified (TREE_TYPE (arg));
+

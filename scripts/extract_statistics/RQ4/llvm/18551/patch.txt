@@ -1,0 +1,2 @@
+if (resultType->isScalarType() && !isScopedEnumerationType(resultType)) {
+

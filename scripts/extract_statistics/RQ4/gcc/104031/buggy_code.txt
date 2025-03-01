@@ -1,0 +1,3 @@
+TARGET_EXPR_INITIAL (*stmt_p),
+    		      TARGET_EXPR_SLOT (*stmt_p));
+

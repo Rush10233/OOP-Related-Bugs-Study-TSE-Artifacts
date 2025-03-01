@@ -1,0 +1,42 @@
+case BOUND_TEMPLATE_TEMPLATE_PARM:
+    	    {
+    	      tree tinfo = TYPE_TEMPLATE_INFO (t);
+    	      /* We might need to substitute into the types of non-type
+    		 template parameters.  This also lowers the level of
+    		 the ttp appropriately.  */
+    	      tree tmpl = tsubst (TI_TEMPLATE (tinfo), args,
+    				  complain, in_decl);
+    	      if (tmpl == error_mark_node)
+    		return error_mark_node;
+    	      tree argvec = tsubst (TI_ARGS (tinfo), args,
+    				    complain, in_decl);
+    	      if (argvec == error_mark_node)
+    		return error_mark_node;
+    	      r = lookup_template_class (tmpl, argvec, in_decl, NULL_TREE,
+    					 /*entering_scope=*/false, complain);
+    	      r = cp_build_qualified_type (r, cp_type_quals (t), complain);
+    	      break;
+    	    }
+    
+
+case BOUND_TEMPLATE_TEMPLATE_PARM:
+    	    {
+    	      tree tinfo = TYPE_TEMPLATE_INFO (t);
+    	      /* We might need to substitute into the types of non-type
+    		 template parameters.  This also lowers the level of
+    		 the ttp appropriately.  */
+    	      tree tmpl = tsubst (TI_TEMPLATE (tinfo), args,
+    				  complain, in_decl);
+    	      if (tmpl == error_mark_node)
+    		return error_mark_node;
+    	      tree argvec = tsubst (TI_ARGS (tinfo), args,
+    				    complain, in_decl);
+    	      if (argvec == error_mark_node)
+    		return error_mark_node;
+    	      r = lookup_template_class (tmpl, argvec, in_decl, NULL_TREE,
+    					 /*entering_scope=*/false, complain);
+    	      r = cp_build_qualified_type (r, cp_type_quals (t), complain);
+    	      break;
+    	    }
+    
+

@@ -1,0 +1,8 @@
+if (conv->check_narrowing)
+        /* Brace elision is imperfect.  */
+        return false;
+
+if (conv->check_narrowing)
+        /* Brace elision is imperfect.  */
+        return false;
+

@@ -1,0 +1,22 @@
+else if (field_poverlapping_p (field) && is_empty_class (type))
+
+      alignment = size_int (CLASSTYPE_ALIGN_UNIT (type));
+
+      if (layout_conflict_p (type,
+    			 offset,
+    			 offsets,
+    			 /*vbases_p=*/0))
+
+      if (CLASSTYPE_USER_ALIGN (type))
+
+else if (field_poverlapping_p (field) && is_empty_class (type))
+
+      alignment = size_int (CLASSTYPE_ALIGN_UNIT (type));
+
+      if (layout_conflict_p (type,
+    			 offset,
+    			 offsets,
+    			 /*vbases_p=*/0))
+
+      if (CLASSTYPE_USER_ALIGN (type))
+

@@ -1,0 +1,52 @@
+/* Remove symbol from symbol table.  */
+      void remove (void);
+    
+
+      /* Dump symtab node to F.  */
+      void dump (FILE *f);
+    
+
+      /* Expand function specified by node.  */
+      void expand (void);
+    
+      /* Creates a wrapper from cgraph_node to TARGET node. Thunk is used for this
+         kind of wrapper method.  */
+      void create_wrapper (cgraph_node *target);
+
+       inlined in others.
+    
+       ??? It may make more sense to use one body for inlining and other
+
+    
+    void
+
+    {
+      /* Reset our data structures so we can analyze the function again.  */
+      analyzed = false;
+      definition = false;
+      alias = false;
+      transparent_alias = false;
+      weakref = false;
+      cpp_implicit_alias = false;
+    
+      remove_all_references ();
+
+    }
+    
+    /* Return true when there are references to the node.  INCLUDE_SELF is
+
+        = mangled_decls->find_slot_with_hash (id, IDENTIFIER_HASH_VALUE (id),
+    					  INSERT);
+    
+
+         decl takes precedence.  */
+      if (*slot && DECL_ARTIFICIAL (*slot) && DECL_IGNORED_P (*slot))
+
+    	{
+
+    	}
+
+    
+      if (!*slot)
+        *slot = decl;
+

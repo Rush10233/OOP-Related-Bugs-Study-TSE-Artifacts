@@ -1,0 +1,8 @@
+if (cxx_dialect >= cxx14)
+    	    /* Handle NSDMI that refer to the object being initialized.  */
+    	    replace_placeholders (arg, to);
+
+if (cxx_dialect >= cxx14)
+    	    /* Handle NSDMI that refer to the object being initialized.  */
+    	    replace_placeholders (arg, to);
+

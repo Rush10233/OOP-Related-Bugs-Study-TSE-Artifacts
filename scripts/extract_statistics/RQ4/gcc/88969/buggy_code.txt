@@ -1,0 +1,4 @@
+/* If the function is a destroying operator delete declared in class type
+    	   C, the type of its first parameter shall be C*.  */
+    	ptrtype = TYPE_POINTER_TO (DECL_CONTEXT (decl));
+

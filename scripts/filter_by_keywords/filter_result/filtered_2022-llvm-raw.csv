@@ -1,0 +1,6 @@
+	53354   Segfault from constraining partial specialization on nested template type
+0	52970   SFINAEing p.x on a pointer wrongly tries to complete the pointee's type
+1	56864   Failure to parse cast + fold expression
+2	57135   [clang] Assertion failure in case of nested ArrayInitLoopExpr using -std=c++17
+3	53012   ICE on invalid: clang::Sema::AttachBaseSpecifiers: Stack dump
+4	53893   [clang, C++2a] killed due to result of NTTP lambda used in template parameters list of other NTTP lambda

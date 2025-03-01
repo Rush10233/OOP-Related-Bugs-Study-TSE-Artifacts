@@ -1,0 +1,5 @@
+clk_class = 4,    /* A prvalue of class or array type.  */
+
+          if (CLASS_TYPE_P (TREE_TYPE (ref))
+    	  || TREE_CODE (TREE_TYPE (ref)) == ARRAY_TYPE)
+

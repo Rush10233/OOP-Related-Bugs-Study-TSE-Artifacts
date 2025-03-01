@@ -1,0 +1,40 @@
+bool saw_complete = false;
+
+    	  if (COMPLETE_TYPE_P (closure))
+    	    /* We're instantiating a generic lambda op(), the containing
+    	       scope may be gone.  */
+    	    saw_complete = true;
+    
+
+    	      if (!containing_function && !saw_complete)
+
+bool saw_complete = false;
+
+    	  if (COMPLETE_TYPE_P (closure))
+    	    /* We're instantiating a generic lambda op(), the containing
+    	       scope may be gone.  */
+    	    saw_complete = true;
+    
+
+    	      if (!containing_function && !saw_complete)
+
+bool saw_complete = false;
+
+    	  if (COMPLETE_TYPE_P (closure))
+    	    /* We're instantiating a generic lambda op(), the containing
+    	       scope may be gone.  */
+    	    saw_complete = true;
+    
+
+    	      if (!containing_function && !saw_complete)
+
+bool saw_complete = false;
+
+    	  if (COMPLETE_TYPE_P (closure))
+    	    /* We're instantiating a generic lambda op(), the containing
+    	       scope may be gone.  */
+    	    saw_complete = true;
+    
+
+    	      if (!containing_function && !saw_complete)
+

@@ -1,0 +1,18 @@
+interest.  */
+    	if (BASELINK_P (fns))
+    	  fns = BASELINK_FUNCTIONS (fns);
+
+    	for (; fns; fns = OVL_NEXT (fns))
+
+          }
+    }
+    
+
+      /* We should see only one DECL at a time.  */
+      gcc_assert (DECL_CHAIN (decl) == NULL_TREE);
+    
+
+      /* Set up access control for DECL.  */
+      TREE_PRIVATE (decl)
+        = (current_access_specifier == access_private_node);
+

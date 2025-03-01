@@ -1,0 +1,16 @@
+type = strip_typedefs (pat, remove_attributes, flags);
+    	    if (type != pat)
+    	      {
+
+    		PACK_EXPANSION_PATTERN (result) = type;
+    	      }
+    	  }
+
+Ts pack, resulting in an error.  */
+    	    if (type != pat && uses_parameter_packs (type))
+    	      {
+
+    		PACK_EXPANSION_PATTERN (result) = type;
+    	      }
+    	  }
+

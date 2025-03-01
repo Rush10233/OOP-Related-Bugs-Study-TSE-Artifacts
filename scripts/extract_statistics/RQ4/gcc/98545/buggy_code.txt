@@ -1,0 +1,8 @@
+if (abi_version_at_least (11) && IDENTIFIER_ANY_OP_P (member))
+
+    	  write_string ("on");
+
+          gcc_assert (!IDENTIFIER_ANY_OP_P (name));
+
+    @code{__alignof__} to be distinct from that of @code{alignof}.
+

@@ -1,0 +1,44 @@
+/* Set CURRENT_ACCESS_SPECIFIER based on the protection of DECL.  */
+    
+    void
+    set_current_access_from_decl (tree decl)
+    {
+      if (TREE_PRIVATE (decl))
+        current_access_specifier = access_private_node;
+      else if (TREE_PROTECTED (decl))
+        current_access_specifier = access_protected_node;
+      else
+        current_access_specifier = access_public_node;
+    }
+    
+
+          auto cas = make_temp_override (current_access_specifier);
+          set_current_access_from_decl (using_decl);
+
+    extern void set_current_access_from_decl (tree);
+
+          auto cas = make_temp_override (current_access_specifier);
+          set_current_access_from_decl (TYPE_NAME (enumtype));
+
+/* Set CURRENT_ACCESS_SPECIFIER based on the protection of DECL.  */
+    
+    void
+    set_current_access_from_decl (tree decl)
+    {
+      if (TREE_PRIVATE (decl))
+        current_access_specifier = access_private_node;
+      else if (TREE_PROTECTED (decl))
+        current_access_specifier = access_protected_node;
+      else
+        current_access_specifier = access_public_node;
+    }
+    
+
+          auto cas = make_temp_override (current_access_specifier);
+          set_current_access_from_decl (using_decl);
+
+    extern void set_current_access_from_decl (tree);
+
+          auto cas = make_temp_override (current_access_specifier);
+          set_current_access_from_decl (TYPE_NAME (enumtype));
+

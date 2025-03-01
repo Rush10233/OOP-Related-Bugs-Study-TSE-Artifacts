@@ -1,0 +1,6 @@
+Commit:	6fcf6e5
+./gcc/cp/name-lookup.c	2805,2805
+./gcc/cp/name-lookup.c	2817,2818
+Commit:	812230c
+./gcc/cp/name-lookup.c	3312,3312
+./gcc/cp/name-lookup.c	3324,3325

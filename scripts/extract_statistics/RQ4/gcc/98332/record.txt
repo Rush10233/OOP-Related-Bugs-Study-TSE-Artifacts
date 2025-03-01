@@ -1,0 +1,6 @@
+Commit:	96de87b
+./gcc/cp/constexpr.c	1527,1527
+./gcc/cp/constexpr.c	4551,4551
+Commit:	97014e4
+./gcc/cp/constexpr.c	1467,1467
+./gcc/cp/constexpr.c	4142,4142

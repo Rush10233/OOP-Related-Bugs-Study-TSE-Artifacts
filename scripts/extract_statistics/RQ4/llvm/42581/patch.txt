@@ -1,0 +1,147 @@
+def warn_stack_exhausted : Warning<
+      "stack nearly exhausted; compilation time may suffer, and "
+      "crashes due to stack overflow are likely">,
+      InGroup<DiagGroup<"stack-exhausted">>, NoSFINAE;
+    
+
+    #include "llvm/ADT/STLExtras.h"
+    #include "llvm/Support/Compiler.h"
+    
+
+    
+      /// Call this once on each thread, as soon after starting the thread as
+      /// feasible, to note the approximate address of the bottom of the stack.
+      void noteBottomOfStack();
+    
+      /// Determine whether the stack is nearly exhausted.
+      bool isStackNearlyExhausted();
+    
+      void runWithSufficientStackSpaceSlow(llvm::function_ref<void()> Diag,
+                                           llvm::function_ref<void()> Fn);
+    
+      /// Run a given function on a stack with "sufficient" space. If stack space
+      //
+      inline void runWithSufficientStackSpace(llvm::function_ref<void()> Diag,
+                                              llvm::function_ref<void()> Fn) {
+    #ifdef LLVM_ENABLE_THREADS
+        if (LLVM_UNLIKELY(isStackNearlyExhausted()))
+          runWithSufficientStackSpaceSlow(Diag, Fn);
+        else
+          Fn();
+    #else
+        if (LLVM_UNLIKELY(isStackNearlyExhausted()))
+          Diag();
+        Fn();
+    #endif
+      }
+
+      bool WarnedStackExhausted = false;
+    
+
+      /// Warn that the stack is nearly exhausted.
+      void warnStackExhausted(SourceLocation Loc);
+    
+      /// Run some code with "sufficient" stack space. (Currently, at least 256K is
+      /// guaranteed). Produces a warning if we're low on stack space and allocates
+      /// more in that case. Use this in code that may recurse deeply (for example,
+      /// in template instantiation) to avoid stack overflow.
+      void runWithSufficientStackSpace(SourceLocation Loc,
+                                       llvm::function_ref<void()> Fn);
+    
+
+      Stack.cpp
+
+    //===--- Stack.h - Utilities for dealing with stack space -------*- C++ -*-===//
+    //
+    // Part of the LLVM Project, under the Apache License v2.0 with LLVM Exceptions.
+    // See https://llvm.org/LICENSE.txt for license information.
+    // SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+    //
+    //===----------------------------------------------------------------------===//
+    ///
+    /// \file
+    /// Defines utilities for dealing with stack allocation and stack space.
+    ///
+    //===----------------------------------------------------------------------===//
+    
+    #include "clang/Basic/Stack.h"
+    #include "llvm/ADT/Optional.h"
+    #include "llvm/Support/CrashRecoveryContext.h"
+    
+    static LLVM_THREAD_LOCAL void *BottomOfStack = nullptr;
+    
+    static void *getStackPointer() {
+    #if __GNUC__ || __has_builtin(__builtin_frame_address)
+      return __builtin_frame_address(0);
+    #elif defined(_MSC_VER)
+      return _AddressOfReturnAddress();
+    #else
+      char CharOnStack = 0;
+      // The volatile store here is intended to escape the local variable, to
+      // prevent the compiler from optimizing CharOnStack into anything other
+      // than a char on the stack.
+      //
+      // Tested on: MSVC 2015 - 2019, GCC 4.9 - 9, Clang 3.2 - 9, ICC 13 - 19.
+      char *volatile Ptr = &CharOnStack;
+      return Ptr;
+    #endif
+    }
+    
+    void clang::noteBottomOfStack() {
+      if (!BottomOfStack)
+        BottomOfStack = getStackPointer();
+    }
+    
+    bool clang::isStackNearlyExhausted() {
+      // We consider 256 KiB to be sufficient for any code that runs between checks
+      // for stack size.
+      constexpr size_t SufficientStack = 256 << 10;
+    
+      // If we don't know where the bottom of the stack is, hope for the best.
+      if (!BottomOfStack)
+        return false;
+    
+      intptr_t StackDiff = (intptr_t)getStackPointer() - (intptr_t)BottomOfStack;
+      size_t StackUsage = (size_t)std::abs(StackDiff);
+    
+      // If the stack pointer has a surprising value, we do not understand this
+      // stack usage scheme. (Perhaps the target allocates new stack regions on
+      // demand for us.) Don't try to guess what's going on.
+      if (StackUsage > DesiredStackSize)
+        return false;
+    
+      return StackUsage >= DesiredStackSize - SufficientStack;
+    }
+    
+    void clang::runWithSufficientStackSpaceSlow(llvm::function_ref<void()> Diag,
+                                                llvm::function_ref<void()> Fn) {
+      llvm::CrashRecoveryContext CRC;
+      CRC.RunSafelyOnThread([&] {
+        noteBottomOfStack();
+        Diag();
+        Fn();
+      }, DesiredStackSize);
+    }
+
+      // Mark this point as the bottom of the stack if we don't have somewhere
+      // better. We generally expect frontend actions to be invoked with (nearly)
+      // DesiredStackSpace available.
+      noteBottomOfStack();
+    
+
+    #include "clang/Basic/Stack.h"
+
+    void Sema::warnStackExhausted(SourceLocation Loc) {
+      // Only warn about this once.
+      if (!WarnedStackExhausted) {
+        Diag(Loc, diag::warn_stack_exhausted);
+        WarnedStackExhausted = true;
+      }
+    }
+    
+    void Sema::runWithSufficientStackSpace(SourceLocation Loc,
+                                           llvm::function_ref<void()> Fn) {
+      clang::runWithSufficientStackSpace([&] { warnStackExhausted(Loc); }, Fn);
+    }
+    
+

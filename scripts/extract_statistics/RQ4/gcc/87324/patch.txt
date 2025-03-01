@@ -1,0 +1,2 @@
+(*v)[i].index = error_mark_node;
+

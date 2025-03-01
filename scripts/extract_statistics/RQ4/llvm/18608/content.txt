@@ -1,0 +1,12 @@
+// arguments for the remaining parameters), don't make the call.
+      if (Args.size() < NumArgsInProto) {
+        if (Args.size() < MinArgs) {
+
+          TypoCorrection TC;
+          if (FDecl && (TC = TryTypoCorrectionForCall(
+                            *this, DeclarationNameInfo(FDecl->getDeclName(),
+
+                            Args))) {
+            unsigned diag_id =
+                MinArgs == NumArgsInProto && !Proto->isVariadic()
+

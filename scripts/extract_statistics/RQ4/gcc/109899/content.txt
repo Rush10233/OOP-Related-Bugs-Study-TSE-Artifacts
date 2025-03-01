@@ -1,0 +1,24 @@
+
+      /* If one destructor throws, keep trying to clean up the rest, unless we're
+         already in a build_vec_init cleanup.  */
+
+        {
+          loop = build2 (TRY_CATCH_EXPR, void_type_node, loop,
+    		     unshare_expr (loop));
+
+
+      /* If one destructor throws, keep trying to clean up the rest, unless we're
+         already in a build_vec_init cleanup.  */
+
+        {
+          loop = build2 (TRY_CATCH_EXPR, void_type_node, loop,
+    		     unshare_expr (loop));
+
+
+      /* If one destructor throws, keep trying to clean up the rest, unless we're
+         already in a build_vec_init cleanup.  */
+
+        {
+          loop = build2 (TRY_CATCH_EXPR, void_type_node, loop,
+    		     unshare_expr (loop));
+

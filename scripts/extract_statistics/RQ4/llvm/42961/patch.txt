@@ -1,0 +1,2 @@
+Record->hasAttr<TrivialABIAttr>() || Record->isUnion()) &&
+

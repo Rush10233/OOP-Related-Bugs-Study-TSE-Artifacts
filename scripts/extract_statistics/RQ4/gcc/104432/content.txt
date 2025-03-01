@@ -1,0 +1,52 @@
+if (really_overloaded_fn (fns))
+    	{
+    	  if (DECL_TEMPLATE_INFO (fn)
+
+    	    {
+
+    
+    	      if (OVL_SINGLE_P (fns))
+    		/* If the original overload set consists of a single function
+
+    }
+    
+    /* OLDFNS is a lookup set of member functions from some class template, and
+
+    
+    static tree
+
+    {
+      /* Record all member functions from the old lookup set OLDFNS into
+         VISIBLE_SET.  */
+
+          if (TREE_CODE (fn) == USING_DECL)
+    	{
+    	  /* FIXME: Punt on (dependent) USING_DECL for now; mapping
+
+    	  gcc_checking_assert (DECL_DEPENDENT_P (fn));
+    	  return newfns;
+    	}
+          else
+
+        }
+    
+      /* Returns true iff (a less specialized version of) FN appeared in
+         the old lookup set OLDFNS.  */
+
+          return visible_set.contains (fn);
+
+          return visible_set.contains (DECL_TI_TEMPLATE (fn));
+        else
+
+      };
+    
+      bool lookup_changed_p = false;
+
+    	     performed in an incomplete-class context, within which
+    	     later-declared members ought to remain invisible.  */
+    	  BASELINK_FUNCTIONS (baselink)
+
+    	  BASELINK_FUNCTIONS_MAYBE_INCOMPLETE_P (baselink) = true;
+    	}
+    
+

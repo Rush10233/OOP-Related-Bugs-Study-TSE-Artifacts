@@ -1,0 +1,2 @@
+if (t == NULL_TREE || t == error_mark_node)
+

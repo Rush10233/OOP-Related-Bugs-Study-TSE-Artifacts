@@ -1,0 +1,21 @@
+if (isTemplateInstantiation(Var->getTemplateSpecializationKind()) &&
+              !Var->getDefinition()) {
+            SourceLocation PointOfInstantiation = E->getExprLoc();
+            InstantiateVariableDefinition(PointOfInstantiation, Var);
+
+    
+            // If we don't already have a point of instantiation, and we managed to
+            // instantiate a definition, this is the point of instantiation.
+            // Otherwise, we don't request an end-of-TU instantiation, so this is
+            // not a point of instantiation.
+            // FIXME: Is this really the right behavior?
+            if (Var->getPointOfInstantiation().isInvalid() && Def) {
+              assert(Var->getTemplateSpecializationKind() ==
+                         TSK_ImplicitInstantiation &&
+                     "explicit instantiation with no point of instantiation");
+              Var->setTemplateSpecializationKind(
+                  Var->getTemplateSpecializationKind(), PointOfInstantiation);
+
+            // Update the type to the newly instantiated definition's type both
+            // here and within the expression.
+

@@ -1,0 +1,57 @@
+if (!lvalue_p (init))
+    	    eltinit = move (eltinit);
+    	  eltinit = force_rvalue (eltinit, tf_warning_or_error);
+
+    	}
+          if (*non_constant_p && !ctx->quiet)
+    	break;
+
+          else
+    	CONSTRUCTOR_APPEND_ELT (*p, idx, eltinit);
+          /* Reuse the result of cxx_eval_constant_expression call
+
+          if (reuse
+    	  && max > 1
+
+    	{
+    	  if (new_ctx.ctor != ctx->ctor)
+    	    eltinit = new_ctx.ctor;
+
+if (!real_lvalue_p (init))
+    	    eltinit = move (eltinit);
+    	  eltinit = force_rvalue (eltinit, tf_warning_or_error);
+
+    	}
+          if (*non_constant_p && !ctx->quiet)
+    	break;
+
+          else
+    	CONSTRUCTOR_APPEND_ELT (*p, idx, eltinit);
+          /* Reuse the result of cxx_eval_constant_expression call
+
+          if (reuse
+    	  && max > 1
+
+    	{
+    	  if (new_ctx.ctor != ctx->ctor)
+    	    eltinit = new_ctx.ctor;
+
+if (!lvalue_p (init))
+    	    eltinit = move (eltinit);
+    	  eltinit = force_rvalue (eltinit, tf_warning_or_error);
+
+    	}
+          if (*non_constant_p && !ctx->quiet)
+    	break;
+
+          else
+    	CONSTRUCTOR_APPEND_ELT (*p, idx, eltinit);
+          /* Reuse the result of cxx_eval_constant_expression call
+
+          if (reuse
+    	  && max > 1
+
+    	{
+    	  if (new_ctx.ctor != ctx->ctor)
+    	    eltinit = new_ctx.ctor;
+

@@ -1,0 +1,10 @@
+if (DECL_VIRTUAL_P (field))
+    	    /* Don't compare vptr fields.  */
+    	    continue;
+    
+
+if (DECL_VIRTUAL_P (field))
+    	    /* Don't compare vptr fields.  */
+    	    continue;
+    
+

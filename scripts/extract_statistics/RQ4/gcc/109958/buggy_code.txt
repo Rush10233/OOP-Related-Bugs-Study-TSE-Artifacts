@@ -1,0 +1,9 @@
+overload = build_overload (method, current_fns);
+      if (using_decl && TREE_CODE (overload) == OVERLOAD)
+        OVL_USED (overload) = true;
+
+          && !really_overloaded_fn (rval)
+          && !(TREE_CODE (rval) == FUNCTION_DECL
+    	   && DECL_NONSTATIC_MEMBER_FUNCTION_P (rval)))
+        perform_or_defer_access_check (basetype_path, rval, rval);
+

@@ -1,0 +1,4 @@
+if (VAR_P (tmp))
+    	return RECUR (DECL_INITIAL (tmp), want_rval);
+          return true;
+

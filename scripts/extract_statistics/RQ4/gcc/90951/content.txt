@@ -1,0 +1,24 @@
+}
+    
+      /* If it's within the array bounds but doesn't have an explicit
+
+      return cxx_eval_constant_expression (ctx, val, lval, non_constant_p,
+    				       overflow_p);
+    }
+
+}
+    
+      /* If it's within the array bounds but doesn't have an explicit
+
+      return cxx_eval_constant_expression (ctx, val, lval, non_constant_p,
+    				       overflow_p);
+    }
+
+}
+    
+      /* If it's within the array bounds but doesn't have an explicit
+
+      return cxx_eval_constant_expression (ctx, val, lval, non_constant_p,
+    				       overflow_p);
+    }
+

@@ -1,0 +1,6 @@
+if (!want_rval && decl_constant_var_p (cap))
+
+if (!want_rval && decl_constant_var_p (cap))
+
+if (!want_rval && decl_constant_var_p (cap))
+

@@ -1,0 +1,5 @@
+Commit:	708935b
+./gcc/cp/constexpr.c	3356,3358
+./gcc/cp/constexpr.c	3389,3432
+./gcc/cp/constexpr.c	3435,3435
+./gcc/cp/constexpr.c	3442,3521

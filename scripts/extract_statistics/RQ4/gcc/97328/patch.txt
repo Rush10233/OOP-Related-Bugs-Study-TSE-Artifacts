@@ -1,0 +1,22 @@
+&& TREE_CODE (index) != FIELD_DECL
+          && TREE_CODE (index) != RANGE_EXPR)
+
+        {
+          if (index == NULL_TREE || TREE_CODE (index) == RANGE_EXPR)
+    	/* There's no well-defined subobject for this index.  */
+    	new_ctx.object = NULL_TREE;
+          else
+    	new_ctx.object = build_ctor_subob_ref (index, type, ctx->object);
+        }
+
+&& TREE_CODE (index) != FIELD_DECL
+          && TREE_CODE (index) != RANGE_EXPR)
+
+        {
+          if (index == NULL_TREE || TREE_CODE (index) == RANGE_EXPR)
+    	/* There's no well-defined subobject for this index.  */
+    	new_ctx.object = NULL_TREE;
+          else
+    	new_ctx.object = build_ctor_subob_ref (index, type, ctx->object);
+        }
+

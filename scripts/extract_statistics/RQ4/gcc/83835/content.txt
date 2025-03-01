@@ -1,0 +1,16 @@
+{
+    	  if (is_dummy_object (instance))
+    	    return arg;
+
+    	  if ((complain & tf_error)
+    	      && (flags & LOOKUP_DELEGATING_CONS))
+    	    check_self_delegation (arg);
+
+{
+    	  if (is_dummy_object (instance))
+    	    return arg;
+
+    	  if ((complain & tf_error)
+    	      && (flags & LOOKUP_DELEGATING_CONS))
+    	    check_self_delegation (arg);
+

@@ -1,0 +1,30 @@
+&& DECL_INHERITED_CTOR (current_function_decl))
+    	return expr;
+    
+
+          /* Fall through.  */
+        case ck_base:
+          if (convs->kind == ck_base && !convs->need_temporary_p)
+
+    	flags |= LOOKUP_ONLYCONVERTING;
+          if (convs->rvaluedness_matches_p)
+    	flags |= LOOKUP_PREFER_RVALUE;
+          expr = build_temp (expr, totype, flags, &diag_kind, complain);
+          if (diag_kind && complain)
+    	{
+
+&& DECL_INHERITED_CTOR (current_function_decl))
+    	return expr;
+    
+
+          /* Fall through.  */
+        case ck_base:
+          if (convs->kind == ck_base && !convs->need_temporary_p)
+
+          if (convs->rvaluedness_matches_p)
+    	/* standard_conversion got LOOKUP_PREFER_RVALUE.  */
+    	flags |= LOOKUP_PREFER_RVALUE;
+          expr = build_temp (expr, totype, flags, &diag_kind, complain);
+          if (diag_kind && complain)
+    	{
+

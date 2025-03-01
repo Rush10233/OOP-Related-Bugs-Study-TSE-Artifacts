@@ -1,0 +1,10 @@
+/* In an NSDMI build_base_path defers building conversions to virtual
+    	 bases, and we handle it here.  */
+          tree basetype = TYPE_MAIN_VARIANT (TREE_TYPE (TREE_TYPE (*t)));
+          vec<tree, va_gc> *vbases = CLASSTYPE_VBASECLASSES (current_class_type);
+          int i; tree binfo;
+          FOR_EACH_VEC_SAFE_ELT (vbases, i, binfo)
+    	if (BINFO_TYPE (binfo) == basetype)
+    	  break;
+          *t = build_base_path (PLUS_EXPR, TREE_OPERAND (*t, 0), binfo, true,
+

@@ -1,0 +1,4 @@
+if (value == error_mark_node)
+
+    	      if (error_operand_p (prev_value))
+

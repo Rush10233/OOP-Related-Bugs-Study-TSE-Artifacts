@@ -1,0 +1,24 @@
+conversion *bad_direct_conv = nullptr;
+
+    	{
+    	  if (!cand->second_conv->bad_p)
+    	    return cand->second_conv;
+    
+    	  /* Direct reference binding wasn't successful and yielded a bad
+    	     conversion.  Proceed with trying to go through a temporary
+    	     instead, and if that also fails then we'll return this bad
+    	     conversion rather than no conversion for sake of better
+    	     diagnostics.  */
+    	  bad_direct_conv = cand->second_conv;
+    	}
+
+        return bad_direct_conv ? bad_direct_conv : nullptr;
+
+          if (bad_direct_conv)
+    	return bad_direct_conv;
+    
+
+        return bad_direct_conv ? bad_direct_conv : nullptr;
+
+    	      return bad_direct_conv ? bad_direct_conv : nullptr;
+

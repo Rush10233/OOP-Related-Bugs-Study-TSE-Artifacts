@@ -1,0 +1,4 @@
+Commit:	5fa27d9
+./gcc/cp/decl.cc	14224,14224
+./gcc/cp/decl.cc	14230,14230
+./gcc/cp/parser.cc	25105,25106

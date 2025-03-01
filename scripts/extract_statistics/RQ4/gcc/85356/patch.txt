@@ -1,0 +1,17 @@
+if (!type_dependent_expression_p (old_decl))
+        {
+          maybe_instantiate_noexcept (new_decl);
+          maybe_instantiate_noexcept (old_decl);
+        }
+
+      if (TREE_CODE (expr) != DEFERRED_NOEXCEPT
+          && (!processing_template_decl
+    	  || (flag_noexcept_type && !value_dependent_expression_p (expr))))
+
+          expr = instantiate_non_dependent_expr (expr);
+
+      if (processing_template_decl
+          && (!flag_noexcept_type || type_dependent_expression_p (fn)))
+
+    	  spec = build_noexcept_spec (noex, tf_warning_or_error);
+

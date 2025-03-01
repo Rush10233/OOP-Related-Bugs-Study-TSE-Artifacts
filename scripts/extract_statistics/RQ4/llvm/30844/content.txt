@@ -1,0 +1,16 @@
+
+      // See if we're deleting a function which is already known to override a
+      // non-deleted virtual function.
+
+        bool IssuedDiagnostic = false;
+        for (CXXMethodDecl::method_iterator I = MD->begin_overridden_methods(),
+                                            E = MD->end_overridden_methods();
+
+            Diag((*I)->getLocation(), diag::note_overridden_virtual_function);
+          }
+        }
+
+      }
+    
+      // C++11 [basic.start.main]p3:
+

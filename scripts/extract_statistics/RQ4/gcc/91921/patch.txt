@@ -1,0 +1,7 @@
+auto_diagnostic_group d;
+
+    	      if (warning_at (location_of (base_fndecl),
+    			      OPT_Woverloaded_virtual,
+    			      "%qD was hidden", base_fndecl))
+    		inform (location_of (fns), "  by %qD", fns);
+

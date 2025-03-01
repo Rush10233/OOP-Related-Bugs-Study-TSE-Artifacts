@@ -1,0 +1,79 @@
+	Unnamed: 0	Issue ID	Title
+0	0	108364	Construction from prvalue erroneously uses move-constructor
+1	1	108488	segfault with -fmodules-ts and class-scope friend declaration first in uninstantiated template
+2	2	108513	[13 Regression] Bad initializer-list construction of std::vector
+3	3	108587	"`decltype(x) x;` in struct declaration causes ""changes meaning of"" error"
+4	4	108559	[13 Regression] A new crash with using a simple class, inheritance and a function
+5	5	108627	A new crash with using a simple class, inheritance and a function (version 2)
+6	6	108579	[13 Regression] Requires-expression that checks constructor on non-template constructor of template class got rejected
+7	7	108897	Comparing pointer to field in rvalue class is not considered constant expression
+8	8	108966	Inheriting consteval constructor makes it constexpr in the derived class
+9	9	108606	[13 Regression] ICE in potential_constant_expression_1 with friend function declaration inside a local class of a generic/templated lambda
+10	10	108702	[13 Regression] ICE in get_partitioning_class, at symtab.cc:2096 since r13-4161-g32d16fe9d7e347bc
+11	11	108275	pointer to member field is not checked for accessibility inside a template argument
+12	12	108302	void fn (uint8_t auto... args); leads to internal compiler error: Segmentation fault
+13	13	108503	[13 Regression] ICE in get_array_or_vector_nelts, at cp/constexpr.cc:4119
+14	14	109070	ICE in class template member function overloads distinguished by non-functionally-equivalent constraints and return type
+15	15	108496	[13 Regression] NRV ICE since r13-4469
+16	16	108542	[13 Regression] ICE in instantiate_type, at cp/class.cc:8833
+17	17	108972	[13 Regression] ICE: tree check: expected tree that contains 'decl common' structure, have 'error_mark' in compare_lambda_template_head, at cp/lambda.cc:1551 since r13-3601-g2b0e81d5cc2f7e1d
+18	18	108676	template parameters are misprinted in function signature
+19	19	109172	[10/11/12/13 Regression] g++ calls a private destructor with the keyword throw after the try-block
+20	20	109185	ICE in get_partitioning_class, at symtab.cc:2096
+21	21	109204	Compiler emits unknows assembly instruction with -O3 level
+22	22	109222	Confusing error for declaring an enum class with unknown type
+23	23	109235	nodiscard attribute on class not copied to the constructors
+24	24	108698	[13 Regression] decltype ((T() + ‘excess_precision_expr’ not supported by dump_expr<expression error>)) median(ndarray<T>) [with T = double]’: since r13-3290-g98e341130f87984a
+25	25	108333	[10/11/12/13/trunk Regression] no_unique_address and direct-non-list-initialization is rejected
+26	26	108683	Move Occurs when initializing an aggregate base
+27	27	109307	[13 Regression] constructors fails typecheck on initializer list assignment
+28	28	108586	Using std::array instead of a plain array results in different (worse?) code in array zero initialization
+29	29	108613	[12/13 Regression] GCC12 internal compiler error on __int128_t in type_traits header
+30	30	109382	Error inside virtual function of class template does not show point of instantiation/use, only shows where the function is defined.
+31	31	109421	Compilation takes a long time for struct that contains a large default-initialized array
+32	32	108266	[13 Regression] ICE during cxx_eval_constant_expression on IMPLICIT_CONV_EXPR since r13-4564
+33	33	108755	ICE in use_thunk at cp/method.cc:317
+34	34	109277	[13 Regression] type_traits:1417:30: error: invalid use of incomplete type ‘class v8::internal::WasmArray’
+35	35	109420	[13 Regression] lookup of 'struct T::X' at instantiation time does not ignore non-type bindings of 'X' since r13-6098-g46711ff8e60d64
+36	36	109523	List-initializing constructor of std::vector is selected erroneously
+37	37	108437	[13 Regression] ICE in build_min_non_dep_op_overload, at cp/tree.cc:3710
+38	38	109001	“no declaration matches” for complicated non-type template parameters
+39	39	108597	[11/12/13 Regression] internal compiler error with -Wduplicated-cond
+40	40	108479	ICE in type_memfn_rqual, at cp/typeck.cc:10994
+41	41	108576	False positive for -Werror=return-type
+42	42	108286	[12 Regression] OpenMP Target directive causes internal compiler error
+43	43	108570	[concept] GCC tries to instantiate additional unneeded operator.
+44	44	108550	[10/11/12 Regression] the type 'const auto' of 'constexpr' variable is not literal
+45	45	109042	[13 Regression] ICE in emit_support_tinfo_1, at cp/rtti.cc:1584
+46	46	109159	[10/11/12 Regression] explicit constructor is used in copy-initialization
+47	47	109663	False positive? Converting from initializer list would use explicit constructor
+48	48	108526	[13 Regression] ICE in start_preparsed_function with static on generic lambdas inside a template
+49	49	108706	[13 Regression] Indefinite recursion when compiling gcc/testsuite/g++.dg/cpp23/static-operator-call5.C w/ -g
+50	50	108474	static structured binding undefined reference
+51	51	109168	bogus error: 'X' is not a valid template argument of type 'Y' because 'X' is not a variable
+52	52	109039	[12 Regression] Miscompilation with no_unique_address and bitfields
+53	53	109730	[12/13/14 regression] ICE in contains_struct_check since r12-9441-g94569d91bd4c60
+54	54	109291	type alias template rejects pack
+55	55	109309	Untranslated text in diagnostic
+56	56	109320	[13 Regression] ICE in coerce_template_parameter_pack, at cp/pt.cc:8795
+57	57	109321	[13 Regression] ICE in iterative_hash_template_arg, at cp/pt.cc:1727
+58	58	108887	[13 Regression] ICE in process_function_and_variable_attributes since r13-3601
+59	59	108303	lookup fails with requires clause on non-template friend function of a class template
+60	60	109397	"[concepts] Unexpected ""satisfaction of atomic constraint ... depends on itself"""
+61	61	109651	[13 Regression] ICE in lookup_template_class since r14-11-g2245459c85a3f4
+62	62	109425	mismatched argument pack lengths while expanding
+63	63	109468	assign to default with three way comparison causes internal compiler error
+64	64	109514	[13 regression] -Werror=dangling-pointer false positive on fheroes-1.0.3 (lambdas)
+65	65	109888	GCC 13 Fails to Compile Code with Explicit Constructor for std::array in Template Class
+66	66	109937	Spurious ambiguous overload error when class with explicit template ctor is assigned to from an braced-init-list initializing an aggregate
+67	67	109319	[12 Regression] ICE in build_min_non_dep_op_overload, at cp/tree.cc:3793 since r12-5510
+68	68	109357	[12 Regression] internal compiler error in cp/constexpr.cc:1685
+69	69	109556	[13/14 Regression] internal compiler error: in iterative_hash_template_arg, at cp/pt.cc:1927
+70	70	109630	internal compiler error: in final_scan_insn_1, at final.c:3078 6480 | }, to attach another half /tmp/ccdNSTWA.out
+71	71	110037	GCC accepts private member access of enclosing class through friend function of inner class
+72	72	109864	explicit constructor considered during overload resolution leads to ambiguity
+73	73	110078	[13 regression] Excessive memory usage constructing std::variant from a high-index alternative.
+74	74	109923	Template friend function defined in a template class becomes a friend of all instantiations, not one
+75	75	109531	[13/14 Regression] Checking ICE with hash table checking failed: equal operator returns true for a pair of values with a different hash value since r13-3292-gc2565a31c1622a
+76	76	109669	Internal Compiler Error when zero-initializing std::array
+77	77	108607	[12 Regression] ICE in potential_constant_expression_1, at cp/constexpr.cc:10003

@@ -1,0 +1,8 @@
+cp_parser_error (parser, "expected template-name");
+    	  return error_mark_node;
+    	}
+
+    	/* Repeat the lookup at instantiation time.  */
+    	decl = identifier;
+        }
+

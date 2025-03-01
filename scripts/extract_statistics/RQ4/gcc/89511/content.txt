@@ -1,0 +1,16 @@
+/*is_declaration=*/true);
+      if (!qscope)
+        qscope = global_namespace;
+
+        qscope = CP_TYPE_CONTEXT (qscope);
+    
+      if (access_declaration_p && cp_parser_error_occurred (parser))
+
+/*is_declaration=*/true);
+      if (!qscope)
+        qscope = global_namespace;
+
+        qscope = CP_TYPE_CONTEXT (qscope);
+    
+      if (access_declaration_p && cp_parser_error_occurred (parser))
+

@@ -1,0 +1,46 @@
+
+      tree type = TREE_TYPE (tmpl);
+    
+
+      bool list_init_p = false;
+    
+      releasing_vec rv_args = NULL;
+
+      else if (BRACE_ENCLOSED_INITIALIZER_P (init))
+        {
+          list_init_p = true;
+
+    	  && !CONSTRUCTOR_IS_DESIGNATED_INIT (init))
+    	{
+    	  /* As an exception, the first phase in 16.3.1.7 (considering the
+
+    	     specialization of C.  */
+    	  tree elt = CONSTRUCTOR_ELT (init, 0)->value;
+    	  if (is_spec_or_derived (TREE_TYPE (elt), tmpl))
+
+    	}
+
+    	args = make_tree_vector_single (init);
+          else
+    	args = make_tree_vector_from_ctor (init);
+
+    
+      tree fndecl = error_mark_node;
+    
+
+         try deducing from the list as a single argument, as [over.match.list].  */
+
+    	if (is_list_ctor (dg))
+    	  list_cands = lookup_add (dg, list_cands);
+
+          if (fndecl == error_mark_node)
+    	{
+    	  /* That didn't work, now try treating the list as a sequence of
+    	     arguments.  */
+    	  release_tree_vector (args);
+    	  args = make_tree_vector_from_ctor (init);
+
+    	}
+        }
+    
+

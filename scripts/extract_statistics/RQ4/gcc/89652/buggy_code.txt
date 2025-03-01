@@ -1,0 +1,20 @@
+hash_set<tree> *save_exprs;
+
+    	  hash_set<tree> save_exprs;
+
+    	  for (hash_set<tree>::iterator iter = save_exprs.begin();
+    	       iter != save_exprs.end(); ++iter)
+    	    ctx_with_save_exprs.values->remove (*iter);
+
+      hash_set<tree> save_exprs;
+
+          for (hash_set<tree>::iterator iter = save_exprs.begin();
+    	   iter != save_exprs.end(); ++iter)
+    	new_ctx.values->remove (*iter);
+
+      for (hash_set<tree>::iterator iter = save_exprs.begin();
+           iter != save_exprs.end(); ++iter)
+        new_ctx.values->remove (*iter);
+
+    	    ctx->save_exprs->add (t);
+

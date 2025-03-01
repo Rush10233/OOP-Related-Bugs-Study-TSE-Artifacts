@@ -1,0 +1,52 @@
+
+    	  /* Do the initialization itself.  */
+    	  init = add_stmt_to_compound (begin, init);
+
+    	}
+          else
+
+    
+
+    
+          finish_expr_stmt (init);
+    
+
+
+    	  /* Do the initialization itself.  */
+    	  init = add_stmt_to_compound (begin, init);
+
+    	}
+          else
+
+    
+
+    
+          finish_expr_stmt (init);
+    
+
+
+    	  /* Do the initialization itself.  */
+    	  init = add_stmt_to_compound (begin, init);
+
+    	}
+          else
+
+    
+
+    
+          finish_expr_stmt (init);
+    
+
+
+    	  /* Do the initialization itself.  */
+    	  init = add_stmt_to_compound (begin, init);
+
+    	}
+          else
+
+    
+
+    
+          finish_expr_stmt (init);
+    
+

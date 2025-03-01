@@ -1,0 +1,4 @@
+Commit:	1f6acb1
+./gcc/cp/class.c	7601,7601
+Commit:	7f5753d
+./gcc/cp/class.c	7131,7131

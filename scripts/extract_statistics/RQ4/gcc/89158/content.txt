@@ -1,0 +1,16 @@
+return expr;
+    	  }
+    
+
+    
+    	/* Pass LOOKUP_NO_CONVERSION so rvalue/base handling knows not to allow
+    	   any more UDCs.  */
+
+return expr;
+    	  }
+    
+
+    
+    	/* Pass LOOKUP_NO_CONVERSION so rvalue/base handling knows not to allow
+    	   any more UDCs.  */
+

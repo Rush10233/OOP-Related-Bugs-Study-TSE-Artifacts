@@ -1,0 +1,8 @@
+if (CXXMethodDecl *MD = dyn_cast<CXXMethodDecl>(Fn)) {
+
+        // If this function was implicitly deleted because it was defaulted,
+        // explain why it was deleted.
+        if (IssuedDiagnostic && MD->isDefaulted())
+          ShouldDeleteSpecialMember(MD, getSpecialMember(MD), nullptr,
+                                    /*Diagnose*/true);
+

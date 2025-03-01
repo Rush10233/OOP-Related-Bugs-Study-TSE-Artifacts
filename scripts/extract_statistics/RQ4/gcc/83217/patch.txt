@@ -1,0 +1,8 @@
+type = complete_type (TREE_TYPE (type));
+          if (type == error_mark_node)
+    	goto error_out;
+
+type = complete_type (TREE_TYPE (type));
+          if (type == error_mark_node)
+    	goto error_out;
+

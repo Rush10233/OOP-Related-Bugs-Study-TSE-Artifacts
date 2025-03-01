@@ -1,0 +1,4 @@
+if (tree *result = hash_map_safe_get (decl_satisfied_cache, saved_t))
+
+        hash_map_safe_put<hm_ggc> (decl_satisfied_cache, saved_t, result);
+

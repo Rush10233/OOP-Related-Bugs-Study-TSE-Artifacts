@@ -1,0 +1,3 @@
+Commit:	93a49d2
+./gcc/cp/decl.c	1454,1454
+./gcc/cp/decl.c	1456,1456

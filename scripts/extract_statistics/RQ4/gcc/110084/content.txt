@@ -1,0 +1,24 @@
+}
+      determine_visibility (r);
+      if (DECL_DEFAULTED_OUTSIDE_CLASS_P (r)
+
+          && !processing_template_decl)
+        defaulted_late_check (r);
+    
+
+}
+      determine_visibility (r);
+      if (DECL_DEFAULTED_OUTSIDE_CLASS_P (r)
+
+          && !processing_template_decl)
+        defaulted_late_check (r);
+    
+
+if (DECL_SECTION_NAME (t))
+        set_decl_section_name (r, t);
+      if (DECL_DEFAULTED_OUTSIDE_CLASS_P (r)
+
+          && !processing_template_decl)
+        defaulted_late_check (r);
+    
+

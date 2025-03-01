@@ -1,0 +1,116 @@
+static tree cp_parser_late_noexcept_specifier
+      (cp_parser *, tree);
+    static void noexcept_override_late_checks
+
+    
+    static void cp_parser_initial_pragma
+      (cp_token *);
+
+    	  /* The finish_struct call above performed various override checking,
+    	     but it skipped unparsed noexcept-specifier operands.  Now that we
+    	     have resolved them, check again.  */
+
+    
+    	  /* Remove any member-function parameters from the symbol table.  */
+    	  pop_injected_parms ();
+
+    }
+    
+    /* Perform late checking of overriding function with respect to their
+
+    
+    static void
+
+    {
+
+      tree base_binfo;
+    
+      if (DECL_STATIC_FUNCTION_P (fndecl))
+
+static tree cp_parser_late_noexcept_specifier
+      (cp_parser *, tree);
+    static void noexcept_override_late_checks
+
+    
+    static void cp_parser_initial_pragma
+      (cp_token *);
+
+    	  /* The finish_struct call above performed various override checking,
+    	     but it skipped unparsed noexcept-specifier operands.  Now that we
+    	     have resolved them, check again.  */
+
+    
+    	  /* Remove any member-function parameters from the symbol table.  */
+    	  pop_injected_parms ();
+
+    }
+    
+    /* Perform late checking of overriding function with respect to their
+
+    
+    static void
+
+    {
+
+      tree base_binfo;
+    
+      if (DECL_STATIC_FUNCTION_P (fndecl))
+
+static tree cp_parser_late_noexcept_specifier
+      (cp_parser *, tree);
+    static void noexcept_override_late_checks
+
+    
+    static void cp_parser_initial_pragma
+      (cp_token *);
+
+    	  /* The finish_struct call above performed various override checking,
+    	     but it skipped unparsed noexcept-specifier operands.  Now that we
+    	     have resolved them, check again.  */
+
+    
+    	  /* Remove any member-function parameters from the symbol table.  */
+    	  pop_injected_parms ();
+
+    }
+    
+    /* Perform late checking of overriding function with respect to their
+
+    
+    static void
+
+    {
+
+      tree base_binfo;
+    
+      if (DECL_STATIC_FUNCTION_P (fndecl))
+
+static tree cp_parser_late_noexcept_specifier
+      (cp_parser *, tree);
+    static void noexcept_override_late_checks
+
+    
+    static void cp_parser_initial_pragma
+      (cp_token *);
+
+    	  /* The finish_struct call above performed various override checking,
+    	     but it skipped unparsed noexcept-specifier operands.  Now that we
+    	     have resolved them, check again.  */
+
+    
+    	  /* Remove any member-function parameters from the symbol table.  */
+    	  pop_injected_parms ();
+
+    }
+    
+    /* Perform late checking of overriding function with respect to their
+
+    
+    static void
+
+    {
+
+      tree base_binfo;
+    
+      if (DECL_STATIC_FUNCTION_P (fndecl))
+

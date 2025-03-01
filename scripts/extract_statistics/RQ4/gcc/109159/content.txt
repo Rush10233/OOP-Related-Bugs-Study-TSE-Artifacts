@@ -1,0 +1,8 @@
+/* Now the explicit specifier might have been deduced; check if this
+         declaration is explicit.  If it is and we're ignoring non-converting
+         constructors, don't add this function to the set of candidates.  */
+
+        return NULL;
+    
+      if (DECL_CONSTRUCTOR_P (fn) && nargs == 2)
+

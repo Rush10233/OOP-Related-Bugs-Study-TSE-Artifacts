@@ -1,0 +1,31 @@
+DECL_NONADDRESSABLE_P (field) = 1;
+
+      DECL_NONADDRESSABLE_P (field) = 1;
+
+          /* We may have to generate full debug late for LTO in case debug
+
+    	dwarf2out_decl (decl);
+          else if (die)
+
+    	    /* We cannot replace a load that may throw or is volatile.
+    	       For volatiles the transform can change the number of
+    	       executions if the load is inside a loop but the address
+    	       computations outside (PR91812).  We could relax this
+    	       if we guard against that appropriately.  For loads that can
+    	       throw we could relax things if the moved loads all are
+    	       known to not throw.  */
+    	    && !stmt_can_throw_internal (cfun, use_stmt)
+    	    && !gimple_has_volatile_ops (use_stmt)))
+
+          msq = vect_setup_realignment (first_stmt_info_for_drptr
+    				    ? first_stmt_info_for_drptr
+    				    : first_stmt_info, gsi, &realignment_token,
+
+    	  if (TREE_CODE (*tem) != LABEL_DECL
+    	      && (TREE_CODE (*tem) != VAR_DECL
+    		  || !auto_var_in_fn_p (*tem, DECL_CONTEXT (*tem))))
+
+DECL_NONADDRESSABLE_P (field) = 1;
+
+      DECL_NONADDRESSABLE_P (field) = 1;
+

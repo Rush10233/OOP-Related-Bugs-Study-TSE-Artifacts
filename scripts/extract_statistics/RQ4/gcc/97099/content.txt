@@ -1,0 +1,32 @@
+}
+    	}
+    
+
+          /* [class.compare.default]: A definition of a comparison operator as
+    	 defaulted that appears in a class shall be the first declaration of
+    	 that function.  */
+
+    			  "%<gnu_inline%> attribute");
+    	      else
+    		return G_("%q+D redeclared inline without "
+
+    	    }
+    	}
+    
+
+               If a friend function template declaration specifies a
+               default template-argument, that declaration shall be a
+               definition and shall be the only declaration of the
+               function template in the translation unit.  */
+
+              && TREE_CODE (ot) == FUNCTION_DECL && DECL_FRIEND_P (ot)
+
+                                           /*is_primary=*/true,
+    				       /*is_partial=*/false,
+                                           /*is_friend_decl=*/2))
+            return G_("redeclaration of friend %q#D "
+
+    
+          return NULL;
+        }
+

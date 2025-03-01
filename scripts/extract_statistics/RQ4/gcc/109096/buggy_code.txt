@@ -1,0 +1,16 @@
+else if (DECL_C_BIT_FIELD (field))
+
+        if (TREE_CODE (field) == FIELD_DECL)
+
+else if (DECL_C_BIT_FIELD (field))
+
+        if (TREE_CODE (field) == FIELD_DECL)
+
+else if (DECL_C_BIT_FIELD (field))
+
+        if (TREE_CODE (field) == FIELD_DECL)
+
+else if (DECL_C_BIT_FIELD (field))
+
+        if (TREE_CODE (field) == FIELD_DECL)
+

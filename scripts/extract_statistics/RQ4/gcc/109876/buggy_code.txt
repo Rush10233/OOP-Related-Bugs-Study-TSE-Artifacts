@@ -1,0 +1,12 @@
+tree type;
+
+      type = TREE_TYPE (decl);
+
+    	    TREE_CONSTANT (decl) = 1;
+
+tree type;
+
+      type = TREE_TYPE (decl);
+
+    	    TREE_CONSTANT (decl) = 1;
+

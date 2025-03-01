@@ -1,0 +1,22 @@
+else
+    		return PICFLAG_ERRONEOUS;
+    	    }
+
+    
+    	  /* Warn when some struct elements are implicitly initialized
+
+    	      && !EMPTY_CONSTRUCTOR_P (init))
+    	    warning (OPT_Wmissing_field_initializers,
+    		     "missing initializer for member %qD", field);
+
+else
+    		return PICFLAG_ERRONEOUS;
+    	    }
+
+    
+    	  /* Warn when some struct elements are implicitly initialized
+
+    	      && !EMPTY_CONSTRUCTOR_P (init))
+    	    warning (OPT_Wmissing_field_initializers,
+    		     "missing initializer for member %qD", field);
+

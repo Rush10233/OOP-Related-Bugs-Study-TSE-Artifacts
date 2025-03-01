@@ -1,0 +1,4 @@
+Commit:	f59aeab
+./gcc/cp/constexpr.c	4166,4167
+Commit:	7ac2056
+./gcc/cp/constexpr.c	4445,4446

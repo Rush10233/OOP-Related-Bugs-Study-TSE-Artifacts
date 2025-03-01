@@ -1,0 +1,48 @@
+else if (VOID_TYPE_P (TREE_TYPE (x)))
+    	{
+    	  if (TREE_CODE (op0) == INTEGER_CST)
+    	    {
+    	      /* If the condition is constant, fold can fold away
+    		 the COND_EXPR.  If some statement-level uses of COND_EXPR
+    		 have one of the branches NULL, avoid folding crash.  */
+    	      if (!op1)
+    		op1 = build_empty_stmt (loc);
+    	      if (!op2)
+    		op2 = build_empty_stmt (loc);
+    	    }
+    	  else
+    	    {
+    	      /* Otherwise, don't bother folding a void condition, since
+    		 it can't produce a constant value.  */
+    	      if (op0 != TREE_OPERAND (x, 0)
+    		  || op1 != TREE_OPERAND (x, 1)
+    		  || op2 != TREE_OPERAND (x, 2))
+    		x = build3_loc (loc, code, TREE_TYPE (x), op0, op1, op2);
+    	      break;
+    	    }
+    	}
+
+else if (VOID_TYPE_P (TREE_TYPE (x)))
+    	{
+    	  if (TREE_CODE (op0) == INTEGER_CST)
+    	    {
+    	      /* If the condition is constant, fold can fold away
+    		 the COND_EXPR.  If some statement-level uses of COND_EXPR
+    		 have one of the branches NULL, avoid folding crash.  */
+    	      if (!op1)
+    		op1 = build_empty_stmt (loc);
+    	      if (!op2)
+    		op2 = build_empty_stmt (loc);
+    	    }
+    	  else
+    	    {
+    	      /* Otherwise, don't bother folding a void condition, since
+    		 it can't produce a constant value.  */
+    	      if (op0 != TREE_OPERAND (x, 0)
+    		  || op1 != TREE_OPERAND (x, 1)
+    		  || op2 != TREE_OPERAND (x, 2))
+    		x = build3_loc (loc, code, TREE_TYPE (x), op0, op1, op2);
+    	      break;
+    	    }
+    	}
+

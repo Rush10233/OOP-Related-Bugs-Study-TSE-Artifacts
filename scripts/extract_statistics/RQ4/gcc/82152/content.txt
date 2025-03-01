@@ -1,0 +1,16 @@
+// FIXME cache artificial deduction guides
+        for (tree fns = CLASSTYPE_CONSTRUCTORS (type); fns; fns = OVL_NEXT (fns))
+          {
+
+    	tree fn = OVL_CURRENT (fns);
+    	tree guide = build_deduction_guide (fn, outer_args, complain);
+    	cands = ovl_cons (guide, cands);
+
+// FIXME cache artificial deduction guides
+      for (ovl_iterator iter (CLASSTYPE_CONSTRUCTORS (type)); iter; ++iter)
+        {
+
+          tree guide = build_deduction_guide (*iter, outer_args, complain);
+          if (guide == error_mark_node)
+    	return error_mark_node;
+

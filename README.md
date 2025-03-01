@@ -34,6 +34,21 @@ As shown in the paper, to conduct the bug-type taxonomy, we have manually analyz
 |6|224|15|0.938|
 |Total|688|48| |
 
+### Bug Number Distribution by Year
+***
+
+The following table is the supplement to Table &#8544 that shows the bug distribution in each year:
+
+|**Year**|**2014**|**2015**|**2016**|**2017**|**2018**|**2019**|**2020**|**2021**|**2022**|**2013**|
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+|**Reports_GCC**||||509|675|511|580|548|358|220|
+|**Bugs_GCC**||||64|118|102|93|91|45|73|
+|**Reports_LLVM**|219|154|154|132|80|68|111|58|13|16|
+|**Bugs_LLVM**|49|29|31|19|15|25|14|9|4|7|
+
+
+
+
 
 
 

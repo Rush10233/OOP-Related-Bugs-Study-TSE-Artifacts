@@ -1,0 +1,13 @@
+while (ANON_AGGR_TYPE_P (ictx))
+
+    		    goto found;
+
+    
+    	      /* Not found, e.g. FIELD is a member of a base class.  */
+    	      if (complain & tf_error)
+    		error ("%qD is not a direct member of %qT", field, type);
+    	      return error_mark_node;
+    
+    	    found:
+    	      /* Now find the TYPE member with that anon aggr type.  */
+

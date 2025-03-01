@@ -1,0 +1,4 @@
+if (CONSTRUCTOR_NELTS (expr) == 1)
+
+          if (try_list_ctor && CONSTRUCTOR_NELTS (init) == 1)
+

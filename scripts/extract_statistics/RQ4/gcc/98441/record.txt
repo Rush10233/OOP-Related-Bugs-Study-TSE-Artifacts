@@ -1,0 +1,3 @@
+Commit:	6c59b8a
+./gcc/cp/decl.c	12244,12244
+./gcc/cp/decl.c	12246,12247

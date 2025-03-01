@@ -1,0 +1,74 @@
+tree templ = TREE_OPERAND (var, 0);
+      tree arglist = TREE_OPERAND (var, 1);
+    
+      tree parms = DECL_TEMPLATE_PARMS (templ);
+      arglist = coerce_innermost_template_parms (parms, arglist, templ, complain,
+    					     /*req_all*/true,
+
+      deferring_access_check_sentinel acs (dk_no_deferred);
+    
+      /* Determine what specialization of the original template to
+
+      t = most_specialized_partial_spec (type, tf_warning_or_error);
+      if (t == error_mark_node)
+        return error_mark_node;
+      else if (t)
+
+          /* We need to determine if we're using a partial or explicit
+    	 specialization now, because the type of the variable could be
+    	 different.  */
+
+          tree elt = most_specialized_partial_spec (tid, complain);
+          if (elt == error_mark_node)
+    	pattern = error_mark_node;
+
+      tree outer_args = NULL_TREE;
+      tree tmpl, args;
+    
+
+      if (TYPE_P (target))
+        {
+          tree tinfo = CLASSTYPE_TEMPLATE_INFO (target);
+          tmpl = TI_TEMPLATE (tinfo);
+          args = TI_ARGS (tinfo);
+
+        }
+      else if (TREE_CODE (target) == TEMPLATE_ID_EXPR)
+        {
+          tmpl = TREE_OPERAND (target, 0);
+          args = TREE_OPERAND (target, 1);
+
+        }
+      else if (VAR_P (target))
+        {
+          tree tinfo = DECL_TEMPLATE_INFO (target);
+          tmpl = TI_TEMPLATE (tinfo);
+          args = TI_ARGS (tinfo);
+
+        }
+      else
+        gcc_unreachable ();
+    
+
+      tree main_tmpl = most_general_template (tmpl);
+    
+      /* For determining which partial specialization to use, only the
+
+      if (variable_template_specialization_p (d))
+        {
+          /* Look up an explicit specialization, if any.  */
+
+          if (elt && elt != error_mark_node)
+    	{
+    	  td = TREE_VALUE (elt);
+
+deferring_access_check_sentinel acs (dk_no_deferred);
+    
+      /* Determine what specialization of the original template to
+
+      t = most_specialized_partial_spec (type, tf_warning_or_error);
+
+      if (t == error_mark_node)
+        return error_mark_node;
+      else if (t)
+

@@ -1,0 +1,5 @@
+tree op01 = TREE_OPERAND (sub, 1);
+
+    	return cxx_fold_indirect_ref_1 (ctx, loc, type, TREE_OPERAND (op00, 0),
+    					tree_to_uhwi (op01), empty_base);
+

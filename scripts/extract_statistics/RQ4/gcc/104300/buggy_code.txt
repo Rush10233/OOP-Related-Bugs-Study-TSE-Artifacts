@@ -1,0 +1,34 @@
+if (VOID_TYPE_P (TREE_TYPE (init))
+    	    && TREE_CODE (init) != AGGR_INIT_EXPR)
+
+       Note:  The folding of none-omp cases is something to move into
+
+    cp_fold_r (tree *stmt_p, int *walk_subtrees, void *data)
+
+    	  if (!((hash_set<tree> *) data)->add (stmt))
+
+      if (((hash_set<tree> *) data)->add (stmt))
+
+          cp_genericize_init_expr (stmt_p);
+
+          cp_genericize_target_expr (stmt_p);
+
+      hash_set<tree> pset;
+      cp_walk_tree (&DECL_SAVED_TREE (fndecl), cp_fold_r, &pset, NULL);
+
+      hash_set<tree> pset;
+      cp_walk_tree (&x, cp_fold_r, &pset, NULL);
+
+      if (init && TREE_CODE (init) == VEC_INIT_EXPR)
+        init = VEC_INIT_EXPR_INIT (init);
+
+    	  else if (TREE_CODE (elt) == VEC_INIT_EXPR)
+    	    one_init = expand_vec_init_expr (baseref, elt, complain, flags);
+
+      if (init && TREE_CODE (init) == VEC_INIT_EXPR)
+        return init;
+
+    	  else if (TREE_CODE (value) == VEC_INIT_EXPR)
+
+    	      add_stmt (expand_vec_init_expr (sub, value, tf_warning_or_error,
+

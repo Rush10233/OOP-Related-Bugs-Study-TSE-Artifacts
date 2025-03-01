@@ -1,0 +1,36 @@
+if (level == 0 || level > ftpi->max_depth)
+
+    	    type = tsubst (type, args, complain, in_decl);
+
+          if (template_placeholder_p (t))
+    	{
+    	  tree tmpl = CLASS_PLACEHOLDER_TEMPLATE (t);
+    	  tmpl = tsubst_copy (tmpl, args, complain, in_decl);
+    	  if (TREE_CODE (tmpl) == TEMPLATE_TEMPLATE_PARM)
+    	    tmpl = TEMPLATE_TEMPLATE_PARM_TEMPLATE_DECL (tmpl);
+    
+    	  if (tmpl != CLASS_PLACEHOLDER_TEMPLATE (t))
+    	    return make_template_placeholder (tmpl);
+    	  else
+    	    return t;
+    	}
+          /* Fall through.  */
+
+    		  if (tree ci = PLACEHOLDER_TYPE_CONSTRAINTS_INFO (t))
+
+    		    PLACEHOLDER_TYPE_CONSTRAINTS_INFO (r) = ci;
+
+       TEMPLATE_TYPE_PARM with a level one deeper than the actual template parms,
+       by default.  If set_canonical is true, we set TYPE_CANONICAL on it.  */
+
+    make_auto_1 (tree name, bool set_canonical,
+    	     int level = current_template_depth + 1)
+
+        (0, level, level, TYPE_NAME (au), NULL_TREE);
+
+    /* Return a C++17 deduction placeholder for class template TMPL.
+       There are represented as an 'auto' with the special level 0 and
+       CLASS_PLACEHOLDER_TEMPLATE set.  */
+
+      tree t = make_auto_1 (auto_identifier, false, /*level=*/0);
+

@@ -1,0 +1,10 @@
+Commit:	ba1b6a1
+./clang/lib/Sema/SemaInit.cpp	3113,3113
+./clang/lib/Sema/SemaInit.cpp	3132,3145
+./clang/lib/Sema/SemaInit.cpp	3225,3225
+./clang/lib/Sema/SemaInit.cpp	3231,3234
+./clang/lib/Sema/SemaInit.cpp	3248,3249
+./clang/lib/Sema/SemaInit.cpp	3265,3266
+./clang/lib/Sema/SemaInit.cpp	3442,3442
+./clang/lib/Sema/SemaInit.cpp	3452,3453
+./clang/lib/Sema/SemaInit.cpp	3522,3527

@@ -1,0 +1,7 @@
+if (isa<CXXRecordDecl>(getDeclContext())) return false;
+      assert(getDeclContext()->getRedeclContext()->isTranslationUnit());
+
+      assert(getDeclContext()->getRedeclContext()->isTranslationUnit());
+
+      assert(getDeclContext()->getRedeclContext()->isTranslationUnit());
+

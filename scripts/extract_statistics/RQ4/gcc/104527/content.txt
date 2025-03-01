@@ -1,0 +1,234 @@
+tree ci = build_tree_list (t, info.context);
+    
+      tree atom = build1 (ATOMIC_CONSTR, ci, map);
+
+      if (!info.generate_diagnostics ())
+        {
+          /* Cache the ATOMIC_CONSTRs that we return, so that sat_hasher::equal
+
+        return boolean_true_node;
+    }
+    
+
+    
+
+    {
+
+      /* No map, no arguments.  */
+      if (!map)
+        return NULL_TREE;
+    
+
+    
+      /* Place each argument at its corresponding position in the argument
+         list. Note that the list will be sparse (not all arguments supplied),
+         but instantiation is guaranteed to only use the parameters in the
+         mapping, so null arguments would never be used.  */
+
+      for (tree p = map; p; p = TREE_CHAIN (p))
+        {
+          int level;
+
+          /* Insert the argument into its corresponding position.  */
+          vec<tree> &list = lists[level - 1];
+          if (index >= (int)list.length ())
+
+          list[index] = TREE_PURPOSE (p);
+        }
+    
+      /* Build the new argument list.  */
+
+      for (unsigned i = 0; i != lists.length (); ++i)
+        {
+          vec<tree> &list = lists[i];
+
+        }
+      SET_NON_DEFAULT_TEMPLATE_ARGS_COUNT (args, 0);
+    
+
+      return args;
+    }
+    
+
+        }
+    
+      /* Rebuild the argument vector from the parameter mapping.  */
+
+    
+      /* Apply the parameter mapping (i.e., just substitute).  */
+      tree expr = ATOMIC_CONSTR_EXPR (t);
+
+      if (!same_type_p (TREE_TYPE (result), boolean_type_node))
+        {
+          if (info.noisy ())
+
+          return cache.save (inst_cache.save (error_mark_node));
+        }
+    
+
+        }
+      result = satisfaction_value (result);
+      if (result == boolean_false_node && info.diagnose_unsatisfaction_p ())
+
+    
+      return cache.save (inst_cache.save (result));
+    }
+
+        }
+    }
+    
+
+    
+    static void
+
+    {
+      /* If the constraint is already ill-formed, we've previously diagnosed
+         the reason. We should still say why the constraints aren't satisfied.  */
+
+      /* Generate better diagnostics for certain kinds of expressions.  */
+      tree expr = ATOMIC_CONSTR_EXPR (t);
+      STRIP_ANY_LOCATION_WRAPPER (expr);
+      switch (TREE_CODE (expr))
+        {
+        case TRAIT_EXPR:
+
+          PACK_EXPANSION_SIZEOF_P (in *_PACK_EXPANSION)
+          OVL_USING_P (in OVERLOAD)
+          IMPLICIT_CONV_EXPR_NONTYPE_ARG (in IMPLICIT_CONV_EXPR)
+
+       2: IDENTIFIER_KIND_BIT_2 (in IDENTIFIER_NODE)
+          ICS_THIS_FLAG (in _CONV)
+          DECL_INITIALIZED_BY_CONSTANT_EXPRESSION_P (in VAR_DECL)
+
+    #define ATOMIC_CONSTR_MAP_INSTANTIATED_P(NODE) \
+      TREE_LANG_FLAG_0 (ATOMIC_CONSTR_CHECK (NODE))
+    
+
+    /* The expression of an atomic constraint. */
+    #define ATOMIC_CONSTR_EXPR(NODE) \
+      CONSTR_EXPR (ATOMIC_CONSTR_CHECK (NODE))
+
+    extern tree tsubst_constraint                   (tree, tree, tsubst_flags_t, tree);
+    extern tree tsubst_constraint_info              (tree, tree, tsubst_flags_t, tree);
+    extern tree tsubst_parameter_mapping		(tree, tree, tsubst_flags_t, tree);
+    
+    struct processing_constraint_expression_sentinel
+    {
+
+tree ci = build_tree_list (t, info.context);
+    
+      tree atom = build1 (ATOMIC_CONSTR, ci, map);
+
+      if (!info.generate_diagnostics ())
+        {
+          /* Cache the ATOMIC_CONSTRs that we return, so that sat_hasher::equal
+
+        return boolean_true_node;
+    }
+    
+
+    
+
+    {
+
+      /* No map, no arguments.  */
+      if (!map)
+        return NULL_TREE;
+    
+
+    
+      /* Place each argument at its corresponding position in the argument
+         list. Note that the list will be sparse (not all arguments supplied),
+         but instantiation is guaranteed to only use the parameters in the
+         mapping, so null arguments would never be used.  */
+
+      for (tree p = map; p; p = TREE_CHAIN (p))
+        {
+          int level;
+
+          /* Insert the argument into its corresponding position.  */
+          vec<tree> &list = lists[level - 1];
+          if (index >= (int)list.length ())
+
+          list[index] = TREE_PURPOSE (p);
+        }
+    
+      /* Build the new argument list.  */
+
+      for (unsigned i = 0; i != lists.length (); ++i)
+        {
+          vec<tree> &list = lists[i];
+
+        }
+      SET_NON_DEFAULT_TEMPLATE_ARGS_COUNT (args, 0);
+    
+
+      return args;
+    }
+    
+
+        }
+    
+      /* Rebuild the argument vector from the parameter mapping.  */
+
+    
+      /* Apply the parameter mapping (i.e., just substitute).  */
+      tree expr = ATOMIC_CONSTR_EXPR (t);
+
+      if (!same_type_p (TREE_TYPE (result), boolean_type_node))
+        {
+          if (info.noisy ())
+
+          return cache.save (inst_cache.save (error_mark_node));
+        }
+    
+
+        }
+      result = satisfaction_value (result);
+      if (result == boolean_false_node && info.diagnose_unsatisfaction_p ())
+
+    
+      return cache.save (inst_cache.save (result));
+    }
+
+        }
+    }
+    
+
+    
+    static void
+
+    {
+      /* If the constraint is already ill-formed, we've previously diagnosed
+         the reason. We should still say why the constraints aren't satisfied.  */
+
+      /* Generate better diagnostics for certain kinds of expressions.  */
+      tree expr = ATOMIC_CONSTR_EXPR (t);
+      STRIP_ANY_LOCATION_WRAPPER (expr);
+      switch (TREE_CODE (expr))
+        {
+        case TRAIT_EXPR:
+
+          IMPLICIT_CONV_EXPR_NONTYPE_ARG (in IMPLICIT_CONV_EXPR)
+          BASELINK_FUNCTIONS_MAYBE_INCOMPLETE_P (in BASELINK)
+          BIND_EXPR_VEC_DTOR (in BIND_EXPR)
+
+       2: IDENTIFIER_KIND_BIT_2 (in IDENTIFIER_NODE)
+          ICS_THIS_FLAG (in _CONV)
+          DECL_INITIALIZED_BY_CONSTANT_EXPRESSION_P (in VAR_DECL)
+
+    #define ATOMIC_CONSTR_MAP_INSTANTIATED_P(NODE) \
+      TREE_LANG_FLAG_0 (ATOMIC_CONSTR_CHECK (NODE))
+    
+
+    /* The expression of an atomic constraint. */
+    #define ATOMIC_CONSTR_EXPR(NODE) \
+      CONSTR_EXPR (ATOMIC_CONSTR_CHECK (NODE))
+
+    extern tree tsubst_constraint                   (tree, tree, tsubst_flags_t, tree);
+    extern tree tsubst_constraint_info              (tree, tree, tsubst_flags_t, tree);
+    extern tree tsubst_parameter_mapping		(tree, tree, tsubst_flags_t, tree);
+    
+    struct processing_constraint_expression_sentinel
+    {
+

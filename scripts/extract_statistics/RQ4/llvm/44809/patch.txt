@@ -1,0 +1,40 @@
+auto *Inst = cast_or_null<TemplateTypeParmDecl>(
+
+          if (Inst && !Inst->getTypeConstraint()) {
+
+      if (TemplateParams && TemplateParams->size()) {
+        auto *LastParam =
+            dyn_cast<TemplateTypeParmDecl>(TemplateParams->asArray().back());
+        if (LastParam && LastParam->isImplicit() &&
+            LastParam->hasTypeConstraint()) {
+          // In abbreviated templates, the type-constraints of invented template
+          // type parameters are instantiated with the function type, invalidating
+          // the TemplateParameterList which relied on the template type parameter
+          // not having a type constraint. Recreate the TemplateParameterList with
+          // the updated parameter list.
+          TemplateParams = TemplateParameterList::Create(
+              SemaRef.Context, TemplateParams->getTemplateLoc(),
+              TemplateParams->getLAngleLoc(), TemplateParams->asArray(),
+              TemplateParams->getRAngleLoc(), TemplateParams->getRequiresClause());
+        }
+      }
+    
+
+      if (TemplateParams && TemplateParams->size()) {
+        auto *LastParam =
+            dyn_cast<TemplateTypeParmDecl>(TemplateParams->asArray().back());
+        if (LastParam && LastParam->isImplicit() &&
+            LastParam->hasTypeConstraint()) {
+          // In abbreviated templates, the type-constraints of invented template
+          // type parameters are instantiated with the function type, invalidating
+          // the TemplateParameterList which relied on the template type parameter
+          // not having a type constraint. Recreate the TemplateParameterList with
+          // the updated parameter list.
+          TemplateParams = TemplateParameterList::Create(
+              SemaRef.Context, TemplateParams->getTemplateLoc(),
+              TemplateParams->getLAngleLoc(), TemplateParams->asArray(),
+              TemplateParams->getRAngleLoc(), TemplateParams->getRequiresClause());
+        }
+      }
+    
+

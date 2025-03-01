@@ -1,0 +1,8 @@
+if (!Func->isConstexpr())
+        return false;
+    
+      if (Func->isImplicitlyInstantiable() || !Func->isUserProvided())
+        return true;
+      auto *CCD = dyn_cast<CXXConstructorDecl>(Func);
+      return CCD && CCD->getInheritedConstructor();
+

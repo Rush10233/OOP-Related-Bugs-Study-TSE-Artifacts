@@ -1,0 +1,8 @@
+const NonTypeTemplateParmDecl *NTTP, QualType NullPtrType,
+        TemplateDeductionInfo &Info,
+        SmallVectorImpl<DeducedTemplateArgument> &Deduced) {
+
+      return DeduceNonTypeTemplateArgument(S, TemplateParams, NTTP,
+                                           DeducedTemplateArgument(Value),
+                                           Value->getType(), Info, Deduced);
+

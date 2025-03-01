@@ -1,0 +1,40 @@
+returns (tree *jump_target)
+    {
+      return *jump_target
+
+    }
+    
+    static bool
+
+    
+        case GOTO_EXPR:
+          *jump_target = TREE_OPERAND (t, 0);
+
+          break;
+    
+        case LOOP_EXPR:
+
+          DECL_CONSTRAINT_VAR_P (in a PARM_DECL)
+          TEMPLATE_DECL_COMPLEX_ALIAS_P (in TEMPLATE_DECL)
+          DECL_INSTANTIATING_NSDMI_P (in a FIELD_DECL)
+
+       3: DECL_IN_AGGR_P.
+       4: DECL_C_BIT_FIELD (in a FIELD_DECL)
+          DECL_ANON_UNION_VAR_P (in a VAR_DECL)
+
+    #define LABEL_DECL_CONTINUE(NODE) \
+      DECL_LANG_FLAG_1 (LABEL_DECL_CHECK (NODE))
+    
+
+    /* True if NODE was declared with auto in its return type, but it has
+       started compilation and so the return type might have been changed by
+       return type deduction; its declared return type should be found in
+
+      if (DECL_DESTRUCTOR_P (decl1)
+          || (DECL_CONSTRUCTOR_P (decl1)
+    	  && targetm.cxx.cdtor_returns_this ()))
+
+    
+      start_fname_decls ();
+    
+

@@ -1,0 +1,5 @@
+if (D->getDeclName()) {
+          DeclContext::lookup_result Found = ParentDC->lookup(D->getDeclName());
+
+                                            E->getMemberNameInfo(),
+

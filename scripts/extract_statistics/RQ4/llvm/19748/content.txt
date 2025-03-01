@@ -1,0 +1,83 @@
+ParsedType &CastTy,
+                                            SourceLocation &RParenLoc);
+    
+
+      ExprResult ParseCompoundLiteralExpression(ParsedType Ty,
+                                                      SourceLocation LParenLoc,
+                                                      SourceLocation RParenLoc);
+
+                                                            : CastExpr;
+        ParsedType CastTy;
+        SourceLocation RParenLoc;
+
+    
+        switch (ParenExprType) {
+        case SimpleExpr:   break;    // Nothing else to do.
+
+                                 bool isTypeCast, ParsedType &CastTy,
+                                 SourceLocation &RParenLoc) {
+      assert(Tok.is(tok::l_paren) && "Not a paren expr!");
+
+      BalancedDelimiterTracker T(*this, tok::l_paren);
+      if (T.consumeOpen())
+        return ExprError();
+
+    
+        TypeResult Ty = ParseTypeName();
+        T.consumeClose();
+
+        RParenLoc = T.getCloseLocation();
+        ExprResult SubExpr = ParseCastExpression(/*isUnaryExpression=*/false);
+    
+
+        // if stopIfCastExpr is false, we need to determine the context past the
+        // parens, so we defer to ParseCXXAmbiguousParenExpression for that.
+        if (isAmbiguousTypeId && !stopIfCastExpr) {
+
+          RParenLoc = T.getCloseLocation();
+          return res;
+        }
+
+        } else {          
+          // Match the ')'.
+          T.consumeClose();
+
+          RParenLoc = T.getCloseLocation();
+          if (Tok.is(tok::l_brace)) {
+            ExprType = CompoundLiteral;
+
+    ExprResult
+    Parser::ParseCXXAmbiguousParenExpression(ParenParseOption &ExprType,
+                                             ParsedType &CastTy,
+
+      assert(getLangOpts().CPlusPlus && "Should only be called for C++!");
+      assert(ExprType == CastExpr && "Compound literals are not ambiguous!");
+      assert(isTypeIdInParens() && "Not a type-id!");
+
+          // Try parsing the cast-expression that may follow.
+          // If it is not a cast-expression, NotCastExpr will be true and no token
+          // will be consumed.
+
+          Result = ParseCastExpression(false/*isUnaryExpression*/,
+                                       false/*isAddressofOperand*/,
+                                       NotCastExpr,
+
+      if (ParseAs >= CompoundLiteral) {
+        // Parse the type declarator.
+        DeclSpec DS(AttrFactory);
+        Declarator DeclaratorInfo(DS, Declarator::TypeNameContext);
+
+    
+        // Match the ')'.
+        Tracker.consumeClose();
+
+    
+        if (ParseAs == CompoundLiteral) {
+          ExprType = CompoundLiteral;
+
+          TypeResult Ty = ParseTypeName();
+
+                                                Tracker.getOpenLocation(),
+                                                Tracker.getCloseLocation());
+        }
+

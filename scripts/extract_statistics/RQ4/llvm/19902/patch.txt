@@ -1,0 +1,18 @@
+def warn_attribute_dllimport_static_field_definition : Warning<
+      "definition of dllimport static field">,
+      InGroup<DiagGroup<"dllimport-static-field-def">>;
+
+          // We allow definitions of dllimport class template static data members
+          // with a warning.
+          bool IsClassTemplateMember =
+              cast<CXXRecordDecl>(VD->getFirstDecl()->getDeclContext())
+                  ->getDescribedClassTemplate();
+    
+
+               IsClassTemplateMember
+                   ? diag::warn_attribute_dllimport_static_field_definition
+                   : diag::err_attribute_dllimport_static_field_definition);
+
+          if (!IsClassTemplateMember)
+            VD->setInvalidDecl();
+

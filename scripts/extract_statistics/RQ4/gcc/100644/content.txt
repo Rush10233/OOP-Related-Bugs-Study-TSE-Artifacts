@@ -1,0 +1,16 @@
+{
+      if (cand->viable < 1)
+        return false;
+
+      int len = cand->num_convs;
+      for (int i = 0; i < len; ++i)
+        if (!perfect_conversion_p (cand->convs[i]))
+
+{
+      if (cand->viable < 1)
+        return false;
+
+      int len = cand->num_convs;
+      for (int i = 0; i < len; ++i)
+        if (!perfect_conversion_p (cand->convs[i]))
+

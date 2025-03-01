@@ -1,0 +1,13 @@
+Commit:	352c21c
+./gcc/cp/pt.cc	24563,24563
+Commit:	987fc81
+./gcc/cp/pt.cc	24605,24605
+Commit:	e04376b
+./gcc/cp/error.cc	2694,2694
+./gcc/cp/pt.cc	3763,3769
+./gcc/cp/pt.cc	8460,8460
+./gcc/cp/pt.cc	8467,8467
+./gcc/cp/pt.cc	8472,8472
+./gcc/cp/pt.cc	8760,8760
+./gcc/cp/pt.cc	8763,8763
+./gcc/cp/pt.cc	20059,20061

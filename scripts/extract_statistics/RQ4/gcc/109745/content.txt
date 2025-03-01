@@ -1,0 +1,32 @@
+return code;
+    }
+    
+
+    /* Perform appropriate conversions on the initial value of a variable,
+       store it in the declaration DECL,
+       and print any error messages that are appropriate.
+
+          else
+    	value = fold_non_dependent_init (value, tf_warning_or_error,
+    					 /*manifestly_const_eval=*/true, decl);
+
+          const_init = (reduced_constant_expression_p (value)
+    		    || error_operand_p (value));
+          DECL_INITIALIZED_BY_CONSTANT_EXPRESSION_P (decl) = const_init;
+
+return code;
+    }
+    
+
+    /* Perform appropriate conversions on the initial value of a variable,
+       store it in the declaration DECL,
+       and print any error messages that are appropriate.
+
+          else
+    	value = fold_non_dependent_init (value, tf_warning_or_error,
+    					 /*manifestly_const_eval=*/true, decl);
+
+          const_init = (reduced_constant_expression_p (value)
+    		    || error_operand_p (value));
+          DECL_INITIALIZED_BY_CONSTANT_EXPRESSION_P (decl) = const_init;
+

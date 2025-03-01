@@ -1,0 +1,329 @@
+bool value_init = VEC_INIT_EXPR_VALUE_INIT (t);
+      if (!init || !BRACE_ENCLOSED_INITIALIZER_P (init))
+        ;
+
+        {
+          /* Handle {} as value-init.  */
+          init = NULL_TREE;
+
+       constructor calls until gimplification time; now we only do it to set
+       VEC_INIT_EXPR_IS_CONSTEXPR.
+    
+
+       value-initialization), or another array to copy.  */
+    
+    static tree
+
+          || !CLASS_TYPE_P (inner_type))
+        /* No interesting initialization to do.  */
+        return integer_zero_node;
+
+        return build_value_init (inner_type, complain);
+    
+      releasing_vec argvec;
+
+      TREE_SIDE_EFFECTS (init) = true;
+      SET_EXPR_LOCATION (init, input_location);
+    
+
+      VEC_INIT_EXPR_VALUE_INIT (init) = value_init;
+    
+      return init;
+
+A program that calls for default-initialization or
+         value-initialization of an entity of reference type is ill-formed.  */
+    
+      if (CLASS_TYPE_P (type) && type_build_ctor_call (type))
+        {
+          tree ctor
+    	= build_special_member_call (NULL_TREE, complete_ctor_identifier,
+    				     NULL, type, LOOKUP_NORMAL, complain);
+          if (ctor == error_mark_node || TREE_CONSTANT (ctor))
+    	return ctor;
+
+          tree fn = NULL_TREE;
+          if (TREE_CODE (ctor) == CALL_EXPR)
+    	fn = get_callee_fndecl (ctor);
+
+if (TREE_CODE (from) == TARGET_EXPR)
+        if (tree init = TARGET_EXPR_INITIAL (from))
+          {
+
+    	  {
+    	    /* If this was changed by cp_genericize_target_expr, we need to
+    	       walk into it to replace uses of the slot.  */
+
+    
+    /* Perform any pre-gimplification folding of C++ front end trees to
+       GENERIC.
+
+         the middle-end.  As for now we have most foldings only on GENERIC
+    
+         GIMPLE-form.  */
+    
+
+    static tree
+
+    {
+
+      tree stmt = *stmt_p;
+      enum tree_code code = TREE_CODE (stmt);
+    
+
+          if (TREE_CODE (PTRMEM_CST_MEMBER (stmt)) == FUNCTION_DECL
+    	  && DECL_IMMEDIATE_FUNCTION_P (PTRMEM_CST_MEMBER (stmt)))
+    	{
+
+    	    error_at (PTRMEM_CST_LOCATION (stmt),
+    		      "taking address of an immediate function %qD",
+    		      PTRMEM_CST_MEMBER (stmt));
+
+    
+      *stmt_p = stmt = cp_fold (*stmt_p);
+    
+
+        {
+          /* Don't walk subtrees of stmts we've already walked once, otherwise
+    	 we can have exponential complexity with e.g. lots of nested
+
+    	}
+          break;
+    
+
+        case INIT_EXPR:
+
+          break;
+    
+        case TARGET_EXPR:
+
+          break;
+    
+        default:
+
+    void
+    cp_fold_function (tree fndecl)
+    {
+
+    }
+    
+    /* Turn SPACESHIP_EXPR EXPR into GENERIC.  */
+
+      if (processing_template_decl)
+        return x;
+      x = cp_fully_fold (x);
+
+      return x;
+    }
+    
+
+    #define VEC_INIT_EXPR_VALUE_INIT(NODE) \
+      TREE_LANG_FLAG_1 (VEC_INIT_EXPR_CHECK (NODE))
+    
+
+    /* The condition under which this MUST_NOT_THROW_EXPR actually blocks
+       exceptions.  NULL_TREE means 'true'.  */
+    #define MUST_NOT_THROW_COND(NODE) \
+
+       && TARGET_EXPR_INITIAL (NODE)				\
+       && !VOID_TYPE_P (TREE_TYPE (TARGET_EXPR_INITIAL (NODE))))
+    
+
+    /* True if EXPR expresses direct-initialization of a TYPE.  */
+    #define DIRECT_INIT_EXPR_P(TYPE,EXPR)					\
+      (TREE_CODE (EXPR) == TARGET_EXPR && TREE_LANG_FLAG_2 (EXPR)		\
+
+          && from_array != 2)
+        init = TARGET_EXPR_INITIAL (init);
+    
+
+    
+      bool direct_init = false;
+      if (from_array && init && BRACE_ENCLOSED_INITIALIZER_P (init)
+
+    
+    	  num_initialized_elts++;
+    
+
+    	  if (digested)
+    	    one_init = build2 (INIT_EXPR, type, baseref, elt);
+
+    	  else if (MAYBE_CLASS_TYPE_P (type) || TREE_CODE (type) == ARRAY_TYPE)
+    	    one_init = build_aggr_init (baseref, elt, 0, complain);
+    	  else
+
+    tree
+    build_vec_init_expr (tree type, tree init, tsubst_flags_t complain)
+    {
+
+    
+      tree elt_init;
+      if (init && TREE_CODE (init) == CONSTRUCTOR
+
+    
+    	  bool elt_last = last && idx == CONSTRUCTOR_NELTS (init) - 1;
+    
+
+    	  if (TREE_CODE (value) == CONSTRUCTOR)
+    	    {
+    	      if (!split_nonconstant_init_1 (sub, value, elt_last, flags)
+
+    		  num_split_elts++;
+    		}
+    	    }
+
+    	    {
+
+    					      flags));
+    
+    	      /* Mark element for removal.  */
+
+    	 initializer-clause until later so we can use a loop.  */
+          TREE_TYPE (init) = init_list_type_node;
+          init = build_vec_init_expr (type, init, complain);
+
+        }
+      return init;
+    }
+
+A program that calls for default-initialization or
+         value-initialization of an entity of reference type is ill-formed.  */
+    
+      if (CLASS_TYPE_P (type) && type_build_ctor_call (type))
+        {
+          tree ctor
+    	= build_special_member_call (NULL_TREE, complete_ctor_identifier,
+    				     NULL, type, LOOKUP_NORMAL, complain);
+          if (ctor == error_mark_node || TREE_CONSTANT (ctor))
+    	return ctor;
+
+          tree fn = NULL_TREE;
+          if (TREE_CODE (ctor) == CALL_EXPR)
+    	fn = get_callee_fndecl (ctor);
+
+if (TREE_CODE (TREE_TYPE (t)) == VECTOR_TYPE)
+    	    /* An initialized vector would have a VECTOR_CST.  */
+    	    return false;
+
+    	    {
+    	      /* There must be a valid constant initializer at every array
+    		 index.  */
+
+    {
+      tree atype = TREE_TYPE (t);
+      tree init = VEC_INIT_EXPR_INIT (t);
+
+    				lval, non_constant_p, overflow_p);
+      if (*non_constant_p)
+        return t;
+
+    
+        case VEC_INIT_EXPR:
+          {
+
+    	hash_set<tree> pset;
+    	cp_walk_tree (expr_p, cp_fold_r, &pset, NULL);
+    	cp_genericize_tree (expr_p, false);
+    	copy_if_shared (expr_p);
+    	ret = GS_OK;
+          }
+          break;
+    
+
+    extern bool vla_type_p				(tree);
+    extern tree build_array_copy			(tree);
+    extern tree build_vec_init_expr			(tree, tree, tsubst_flags_t);
+
+    extern void diagnose_non_constexpr_vec_init	(tree);
+    extern tree hash_tree_cons			(tree, tree, tree);
+    extern tree hash_tree_chain			(tree, tree);
+
+          && from_array != 2)
+        init = TARGET_EXPR_INITIAL (init);
+    
+
+      bool direct_init = false;
+      if (from_array && init && BRACE_ENCLOSED_INITIALIZER_P (init)
+          && CONSTRUCTOR_NELTS (init) == 1)
+        {
+          tree elt = CONSTRUCTOR_ELT (init, 0)->value;
+
+    	{
+    	  direct_init = DIRECT_LIST_INIT_P (init);
+    	  init = elt;
+
+    	  current_stmt_tree ()->stmts_are_full_exprs_p = 1;
+    	  if (digested)
+    	    one_init = build2 (INIT_EXPR, type, baseref, elt);
+
+    	  else if (MAYBE_CLASS_TYPE_P (type) || TREE_CODE (type) == ARRAY_TYPE)
+    	    one_init = build_aggr_init (baseref, elt, 0, complain);
+    	  else
+
+      else if (init == void_type_node)
+        return build_value_init (inner_type, complain);
+    
+      releasing_vec argvec;
+
+        {
+
+          tree init_type = strip_array_types (TREE_TYPE (init));
+          tree dummy = build_dummy_object (init_type);
+          if (!lvalue_p (init))
+
+    tree
+    build_vec_init_expr (tree type, tree init, tsubst_flags_t complain)
+    {
+
+        {
+
+        }
+
+      else
+        elt_init = build_vec_init_elt (type, init, complain);
+    
+
+      if (init == void_type_node)
+        {
+          value_init = true;
+          init = NULL_TREE;
+        }
+    
+
+      init = build2 (VEC_INIT_EXPR, type, slot, init);
+      TREE_SIDE_EFFECTS (init) = true;
+      SET_EXPR_LOCATION (init, input_location);
+
+      return init;
+    }
+    
+
+    /* Give a helpful diagnostic for a non-constexpr VEC_INIT_EXPR in a context
+       that requires a constant expression.  */
+    
+
+    #define PICFLAG_NOT_ALL_CONSTANT 2
+    #define PICFLAG_NOT_ALL_SIMPLE 4
+    #define PICFLAG_SIDE_EFFECTS 8
+
+    
+    /* Given an initializer INIT, return the flag (PICFLAG_*) which better
+       describe it.  */
+
+    
+    	if (next)
+    	  {
+
+    		&& (initializer_constant_valid_p (next, TREE_TYPE (next))
+
+    	      {
+    		tree range = build2 (RANGE_EXPR, size_type_node,
+    				     build_int_cst (size_type_node, i),
+
+          if (!(picflags & PICFLAG_NOT_ALL_SIMPLE))
+    	TREE_STATIC (init) = 1;
+        }
+
+      return init;
+    }
+    
+

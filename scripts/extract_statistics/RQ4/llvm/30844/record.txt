@@ -1,0 +1,6 @@
+Commit:	86b1bfa
+./clang/lib/Sema/SemaDeclCXX.cpp	13853,13853
+./clang/test/CXX/class.derived/class.abstract/p16.cpp	34,35
+./clang/test/CXX/class.derived/class.abstract/p16.cpp	37,38
+./clang/test/CXX/class.derived/class.abstract/p16.cpp	40,40
+./clang/test/CXX/special/class.dtor/p5-0x.cpp	93,93

@@ -1,0 +1,16 @@
+//   The operand of the decltype specifier is an unevaluated operand.
+          EnterExpressionEvaluationContext Unevaluated(Actions, Sema::Unevaluated,
+                                                       nullptr,/*IsDecltype=*/true);
+
+          if (Result.isInvalid()) {
+            DS.SetTypeSpecError();
+            if (SkipUntil(tok::r_paren, StopAtSemi | StopBeforeMatch)) {
+
+        Res = Actions.ActOnIdExpression(
+            getCurScope(), ScopeSpec, TemplateKWLoc, Name, Tok.is(tok::l_paren),
+            isAddressOfOperand, std::move(Validator),
+
+        if (!Res.isInvalid() && !Res.get()) {
+          UnconsumeToken(Replacement);
+          return ParseCastExpression(isUnaryExpression, isAddressOfOperand,
+

@@ -1,0 +1,16 @@
+if (tree *p = hash_map_safe_get (normalized_map, tmpl))
+
+      if (tree ci = get_constraints (decl))
+
+        hash_map_safe_put<hm_ggc> (normalized_map, tmpl, norm);
+
+          if (targs != error_mark_node)
+
+if (tree *p = hash_map_safe_get (normalized_map, tmpl))
+
+      if (tree ci = get_constraints (decl))
+
+        hash_map_safe_put<hm_ggc> (normalized_map, tmpl, norm);
+
+          if (targs != error_mark_node)
+

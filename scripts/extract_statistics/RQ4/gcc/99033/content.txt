@@ -1,0 +1,108 @@
+
+          /* Iterate over the array elements, building initializations.  */
+          if (nelts)
+
+          else
+    	max_index = array_type_nelts (type);
+    
+
+    
+          /* A zero-sized array, which is accepted as an extension, will
+    	 have an upper bound of -1.  */
+
+    	{
+    	  constructor_elt ce;
+    
+    	  /* If this is a one element array, we just use a regular init.  */
+
+    	    ce.index = size_zero_node;
+    	  else
+    	    ce.index = build2 (RANGE_EXPR, sizetype, size_zero_node,
+
+    
+
+    	  if (ce.value)
+    	    {
+    	      vec_alloc (v, 1);
+
+
+          /* Iterate over the array elements, building initializations.  */
+          if (nelts)
+
+          else
+    	max_index = array_type_nelts (type);
+    
+
+    
+          /* A zero-sized array, which is accepted as an extension, will
+    	 have an upper bound of -1.  */
+
+    	{
+    	  constructor_elt ce;
+    
+    	  /* If this is a one element array, we just use a regular init.  */
+
+    	    ce.index = size_zero_node;
+    	  else
+    	    ce.index = build2 (RANGE_EXPR, sizetype, size_zero_node,
+
+    
+
+    	  if (ce.value)
+    	    {
+    	      vec_alloc (v, 1);
+
+
+          /* Iterate over the array elements, building initializations.  */
+          if (nelts)
+
+          else
+    	max_index = array_type_nelts (type);
+    
+
+    
+          /* A zero-sized array, which is accepted as an extension, will
+    	 have an upper bound of -1.  */
+
+    	{
+    	  constructor_elt ce;
+    
+    	  /* If this is a one element array, we just use a regular init.  */
+
+    	    ce.index = size_zero_node;
+    	  else
+    	    ce.index = build2 (RANGE_EXPR, sizetype, size_zero_node,
+
+    
+
+    	  if (ce.value)
+    	    {
+    	      vec_alloc (v, 1);
+
+
+          /* Iterate over the array elements, building initializations.  */
+          if (nelts)
+
+          else
+    	max_index = array_type_nelts (type);
+    
+
+    
+          /* A zero-sized array, which is accepted as an extension, will
+    	 have an upper bound of -1.  */
+
+    	{
+    	  constructor_elt ce;
+    
+    	  /* If this is a one element array, we just use a regular init.  */
+
+    	    ce.index = size_zero_node;
+    	  else
+    	    ce.index = build2 (RANGE_EXPR, sizetype, size_zero_node,
+
+    
+
+    	  if (ce.value)
+    	    {
+    	      vec_alloc (v, 1);
+

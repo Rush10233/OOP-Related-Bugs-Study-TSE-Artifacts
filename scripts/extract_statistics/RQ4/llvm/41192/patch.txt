@@ -1,0 +1,4 @@
+case tok::coloncolon:         // struct foo {...} ::        a::b;
+
+      case tok::kw_decltype:        // struct foo {...} decltype  (a)::b;
+

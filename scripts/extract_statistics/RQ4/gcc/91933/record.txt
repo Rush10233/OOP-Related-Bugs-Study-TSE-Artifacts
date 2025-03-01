@@ -1,0 +1,6 @@
+Commit:	92e9b2a
+./gcc/cp/class.c	361,363
+Commit:	4acb3af
+./gcc/cp/class.c	360,362
+Commit:	945c2af
+./gcc/cp/class.c	361,363

@@ -1,0 +1,7 @@
+/* Early in template argument deduction substitution, we don't
+    	   want to reduce the level of 'auto', or it will be confused
+    	   with a normal template parm in subsequent deduction.  */
+    	if (is_auto (t) && (complain & tf_partial))
+    	  return t;
+    
+

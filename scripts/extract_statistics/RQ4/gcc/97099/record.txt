@@ -1,0 +1,6 @@
+Commit:	2ec58cf
+./gcc/cp/decl.c	3056,3056
+./gcc/cp/decl.c	3060,3061
+./gcc/cp/decl.c	3066,3066
+./gcc/cp/decl.c	3068,3068
+./gcc/cp/decl.c	3073,3073

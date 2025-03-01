@@ -1,0 +1,30 @@
+if (!field)
+    	return true;
+    
+
+          if (!constexpr_context_p)
+    	{
+    	  if (CP_TYPE_CONST_P (type))
+    	    {
+    	      if (complain & tf_error)
+
+    	    }
+    	  else
+    	    {
+
+    		error_at (DECL_SOURCE_LOCATION (decl),
+    			  "uninitialized variable %qD in %<constexpr%> "
+    			  "function", decl);
+
+    	      cp_function_chain->invalid_constexpr = true;
+    	    }
+    	}
+
+    		  "uninitialized variable %qD in %<constexpr%> context",
+    		  decl);
+    
+
+    	{
+    	  tree defaulted_ctor;
+    
+

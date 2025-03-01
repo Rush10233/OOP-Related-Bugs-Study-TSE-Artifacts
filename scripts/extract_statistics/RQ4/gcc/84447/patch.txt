@@ -1,0 +1,13 @@
+if (DECL_DELETED_FN (fn))
+        {
+          if (complain & tf_error)
+    	mark_used (fn);
+          return error_mark_node;
+        }
+
+          if (!trivial)
+
+    	   && trivial_fn_p (fn))
+
+      else if (trivial_fn_p (fn))
+

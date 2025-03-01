@@ -1,0 +1,18 @@
+if (DECL_CLASS_SCOPE_P (decl)
+    	  && current_access_specifier != declared_access (TYPE_NAME (type)))
+    	{
+    	  error_at (location, "deduction guide %qD must have the same access "
+    			      "as %qT", decl, type);
+    	  inform (location_of (type), "  declared here");
+    	}
+
+      else if (decl_context == FIELD && sfk == sfk_deduction_guide)
+        /* Treat class-scope deduction guides as static member functions
+           so that they get a FUNCTION_TYPE instead of a METHOD_TYPE.  */
+        staticp = 2;
+
+      if (rval && is_overloaded_fn (rval)
+          /* Don't use a BASELINK for class-scope deduction guides since
+    	 they're not actually member functions.  */
+          && !dguide_name_p (name))
+

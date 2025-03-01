@@ -1,0 +1,6 @@
+Commit:	832c119
+./gcc/cp/class.c	732,736
+./gcc/cp/class.c	738,738
+./gcc/cp/cp-ubsan.c	128,128
+./gcc/cp/cp-ubsan.c	131,137
+./gcc/cp/cp-ubsan.c	153,153

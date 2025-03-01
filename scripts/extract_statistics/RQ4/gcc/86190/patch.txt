@@ -1,0 +1,11 @@
+/* We call shorten_compare only for diagnostics.  */
+    	  tree xop0 = fold_simple (op0);
+    	  tree xop1 = fold_simple (op1);
+    	  tree xresult_type = result_type;
+
+    			   &xresultcode);
+
+          warning_sentinel w (warn_sign_conversion, short_compare);
+
+warning_sentinel w (warn_sign_conversion, short_compare);
+

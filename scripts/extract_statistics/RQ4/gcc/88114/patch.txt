@@ -1,0 +1,13 @@
+/* For abstract classes, the destructor has been removed from the
+         vtable (in class.c's build_vtbl_initializer).  For a compiler-
+         generated destructor, it hence might not have been generated in
+         this translation unit - and with '#pragma interface' it might
+         never get generated.  */
+      if (CLASSTYPE_PURE_VIRTUALS (ctype)
+          && TYPE_HAS_NONTRIVIAL_DESTRUCTOR (ctype)
+          && DECL_DEFAULTED_IN_CLASS_P(CLASSTYPE_DESTRUCTOR(ctype)))
+        note_vague_linkage_fn (CLASSTYPE_DESTRUCTOR(ctype));
+    
+
+             We could just let c_parse_final_cleanups handle synthesizing
+

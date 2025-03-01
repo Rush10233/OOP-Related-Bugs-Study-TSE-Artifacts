@@ -1,0 +1,39 @@
+class FunctionCallFilterCCC : public CorrectionCandidateCallback {
+    public:
+      FunctionCallFilterCCC(Sema &SemaRef, unsigned NumArgs,
+
+    
+      virtual bool ValidateCandidate(const TypoCorrection &candidate);
+    
+     private:
+      unsigned NumArgs;
+      bool HasExplicitTemplateArgs;
+
+    };
+    
+    // @brief Callback class that effectively disabled typo correction
+
+    }
+    
+    FunctionCallFilterCCC::FunctionCallFilterCCC(Sema &SemaRef, unsigned NumArgs,
+
+      WantTypeSpecifiers = SemaRef.getLangOpts().CPlusPlus;
+      WantRemainingKeywords = false;
+    }
+
+                return true;
+          }
+        }
+
+      }
+      return false;
+    }
+
+      LookupResult R(SemaRef, ULE->getName(), ULE->getNameLoc(),
+                     Sema::LookupOrdinaryName);
+      FunctionCallFilterCCC Validator(SemaRef, Args.size(),
+
+      NoTypoCorrectionCCC RejectAll;
+      CorrectionCandidateCallback *CCC = AllowTypoCorrection ?
+          (CorrectionCandidateCallback*)&Validator :
+

@@ -1,0 +1,17 @@
+typedef llvm::iterator_range<MethodVFTableLocationsTy::const_iterator>
+        method_locations_range;
+    
+
+      method_locations_range vtable_locations() const {
+        return method_locations_range(MethodVFTableLocations.begin(),
+                                      MethodVFTableLocations.end());
+
+    
+        for (const auto &I : Builder.vtable_locations()) {
+          GlobalDecl GD = I.first;
+          MethodVFTableLocation NewLoc = I.second;
+          auto M = NewMethodLocations.find(GD);
+          if (M == NewMethodLocations.end() || NewLoc < M->second)
+            NewMethodLocations[GD] = NewLoc;
+        }
+

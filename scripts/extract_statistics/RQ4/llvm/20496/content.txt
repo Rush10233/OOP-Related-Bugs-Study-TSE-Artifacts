@@ -1,0 +1,32 @@
+/// doesn't need to call UsualUnaryConversions or UsualArithmeticConversions.
+    static QualType CheckIncrementDecrementOperand(Sema &S, Expr *Op,
+                                                   ExprValueKind &VK,
+
+                                                   SourceLocation OpLoc,
+                                                   bool IsInc, bool IsPrefix) {
+      if (Op->isTypeDependent())
+
+      } else if (ResType->isPlaceholderType()) {
+        ExprResult PR = S.CheckPlaceholderExpr(Op);
+        if (PR.isInvalid()) return QualType();
+
+                                              IsInc, IsPrefix);
+      } else if (S.getLangOpts().AltiVec && ResType->isVectorType()) {
+        // OK! ( C/C++ Language Extensions for CBEA(Version 2.6) 10.3 )
+
+      // operand.
+      if (IsPrefix && S.getLangOpts().CPlusPlus) {
+        VK = VK_LValue;
+
+        return ResType;
+      } else {
+        VK = VK_RValue;
+
+      case UO_PreDec:
+      case UO_PostInc:
+      case UO_PostDec:
+
+                                                    Opc == UO_PreInc ||
+                                                    Opc == UO_PostInc,
+                                                    Opc == UO_PreInc ||
+

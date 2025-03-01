@@ -1,0 +1,4 @@
+if (TREE_HAS_CONSTRUCTOR (instance))
+
+if (TREE_HAS_CONSTRUCTOR (instance))
+

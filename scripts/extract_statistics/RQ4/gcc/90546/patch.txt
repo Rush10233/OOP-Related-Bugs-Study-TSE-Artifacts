@@ -1,0 +1,9 @@
+/* Limit this to non-templates for now (PR90546).  */
+    		   && !cand->template_decl
+
+/* Limit this to non-templates for now (PR90546).  */
+    		   && !cand->template_decl
+
+/* Limit this to non-templates for now (PR90546).  */
+    		   && !cand->template_decl
+

@@ -1,0 +1,97 @@
+else if (CONSTRUCTOR_NELTS (init) == 0)
+
+       We assume that init is either NULL_TREE, void_type_node (indicating
+
+      else if (init == void_type_node)
+
+      if (cxx_dialect >= cxx11
+          && potential_constant_expression (elt_init))
+        VEC_INIT_EXPR_IS_CONSTEXPR (init) = true;
+
+/* The AGGR_INIT_EXPR tweaking below breaks in templates.  */
+      gcc_assert (!processing_template_decl
+    	      || (SCALAR_TYPE_P (type) || TREE_CODE (type) == ARRAY_TYPE));
+    
+
+if (VOID_TYPE_P (TREE_TYPE (init))
+    	    && TREE_CODE (init) != AGGR_INIT_EXPR)
+
+       Note:  The folding of none-omp cases is something to move into
+
+    cp_fold_r (tree *stmt_p, int *walk_subtrees, void *data)
+
+    	  if (!((hash_set<tree> *) data)->add (stmt))
+
+      if (((hash_set<tree> *) data)->add (stmt))
+
+          cp_genericize_init_expr (stmt_p);
+
+          cp_genericize_target_expr (stmt_p);
+
+      hash_set<tree> pset;
+      cp_walk_tree (&DECL_SAVED_TREE (fndecl), cp_fold_r, &pset, NULL);
+
+      hash_set<tree> pset;
+      cp_walk_tree (&x, cp_fold_r, &pset, NULL);
+
+      if (init && TREE_CODE (init) == VEC_INIT_EXPR)
+        init = VEC_INIT_EXPR_INIT (init);
+
+    	  else if (TREE_CODE (elt) == VEC_INIT_EXPR)
+    	    one_init = expand_vec_init_expr (baseref, elt, complain, flags);
+
+      if (init && TREE_CODE (init) == VEC_INIT_EXPR)
+        return init;
+
+    	  else if (TREE_CODE (value) == VEC_INIT_EXPR)
+
+    	      add_stmt (expand_vec_init_expr (sub, value, tf_warning_or_error,
+
+/* The AGGR_INIT_EXPR tweaking below breaks in templates.  */
+      gcc_assert (!processing_template_decl
+    	      || (SCALAR_TYPE_P (type) || TREE_CODE (type) == ARRAY_TYPE));
+    
+
+else if (cxx_dialect >= cxx20
+    		   && TREE_CODE (TREE_TYPE (t)) == ARRAY_TYPE)
+
+      tree r = cxx_eval_vec_init_1 (ctx, atype, init,
+    				VEC_INIT_EXPR_VALUE_INIT (t),
+
+    	location_t loc = input_location;
+    	tree init = VEC_INIT_EXPR_INIT (*expr_p);
+    	int from_array = (init && TREE_CODE (TREE_TYPE (init)) == ARRAY_TYPE);
+    	gcc_assert (EXPR_HAS_LOCATION (*expr_p));
+    	input_location = EXPR_LOCATION (*expr_p);
+    	*expr_p = build_vec_init (VEC_INIT_EXPR_SLOT (*expr_p), NULL_TREE,
+    				  init, VEC_INIT_EXPR_VALUE_INIT (*expr_p),
+    				  from_array,
+    				  tf_warning_or_error);
+
+    	input_location = loc;
+
+          if (TREE_CODE (TREE_TYPE (elt)) == ARRAY_TYPE)
+
+      gcc_assert (init == NULL_TREE
+    	      || (same_type_ignoring_top_level_qualifiers_p
+    		  (type, TREE_TYPE (init))));
+    
+
+      if (init)
+
+      tree slot;
+      bool value_init = false;
+      tree elt_init;
+      if (init && TREE_CODE (init) == CONSTRUCTOR)
+
+          gcc_assert (!BRACE_ENCLOSED_INITIALIZER_P (init));
+          /* We built any needed constructor calls in digest_init.  */
+          elt_init = init;
+
+      slot = build_local_temp (type);
+
+    	    picflags |= picflag_from_initializer (next);
+    	    if (len > i+1
+
+    		    == null_pointer_node))
+

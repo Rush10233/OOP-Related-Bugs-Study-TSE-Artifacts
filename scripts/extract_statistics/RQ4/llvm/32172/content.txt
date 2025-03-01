@@ -1,0 +1,10 @@
+
+        // Deduce any 'auto's in the loop variable as 'DependentTy'. We'll fill
+        // them in properly when we instantiate the loop.
+
+          LoopVar->setType(SubstAutoType(LoopVar->getType(), Context.DependentTy));
+
+      } else if (!BeginDeclStmt.get()) {
+        SourceLocation RangeLoc = RangeVar->getLocation();
+    
+

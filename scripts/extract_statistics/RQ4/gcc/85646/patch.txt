@@ -1,0 +1,30 @@
+/* maybe_thunk_body clears TREE_PUBLIC and DECL_ABSTRACT_P on the
+    	 maybe-in-charge 'tor variants; in that case we need to check one of
+    
+    	 maybe_clone_body we haven't yet copied the linkage to the clones.  */
+
+    	  && !DECL_ABSTRACT_P (decl)
+
+    	     but have no TEMPLATE_INFO, so don't try to check it.  */
+    	  template_decl = NULL_TREE;
+
+/* maybe_thunk_body clears TREE_PUBLIC and DECL_ABSTRACT_P on the
+    	 maybe-in-charge 'tor variants; in that case we need to check one of
+    
+    	 maybe_clone_body we haven't yet copied the linkage to the clones.  */
+
+    	  && !DECL_ABSTRACT_P (decl)
+
+    	     but have no TEMPLATE_INFO, so don't try to check it.  */
+    	  template_decl = NULL_TREE;
+
+/* maybe_thunk_body clears TREE_PUBLIC and DECL_ABSTRACT_P on the
+    	 maybe-in-charge 'tor variants; in that case we need to check one of
+    
+    	 maybe_clone_body we haven't yet copied the linkage to the clones.  */
+
+    	  && !DECL_ABSTRACT_P (decl)
+
+    	     but have no TEMPLATE_INFO, so don't try to check it.  */
+    	  template_decl = NULL_TREE;
+

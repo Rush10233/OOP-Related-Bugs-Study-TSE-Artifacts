@@ -1,0 +1,21 @@
+cp_evaluated (bool reset = true)
+
+      { if (reset)
+          cp_unevaluated_operand = c_inhibit_evaluation_warnings = 0; }
+
+      (cp_parser *, int = 0, bool * = NULL, bool = false);
+
+      is false, NON_CONSTANT_P should be NULL.  If ALLOW_NON_CONSTANT_P is
+      greater than 1, this isn't really a constant-expression, only a
+      potentially constant-evaluated expression.  If STRICT_P is true,
+
+    			       int allow_non_constant_p,
+
+    
+      /* A manifestly constant-evaluated expression is evaluated even in an
+         unevaluated operand.  */
+      cp_evaluated ev (/*reset if*/allow_non_constant_p <= 1);
+    
+
+    					/*allow_non_constant_p=*/2,
+

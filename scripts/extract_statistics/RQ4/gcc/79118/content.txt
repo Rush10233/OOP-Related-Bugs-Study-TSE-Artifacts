@@ -1,0 +1,61 @@
+return body;
+    }
+    
+
+    
+    static bool
+
+    {
+
+    
+      if (TREE_CODE (ctype) == UNION_TYPE)
+        {
+
+          return false;
+        }
+    
+
+        {
+
+    	{
+    	  index = CONSTRUCTOR_ELT (body, i)->index;
+    	  /* Skip base and vtable inits.  */
+    	  if (TREE_CODE (index) != FIELD_DECL
+    	      || DECL_ARTIFICIAL (index))
+    	    continue;
+    	}
+
+          for (; field != index; field = DECL_CHAIN (field))
+    	{
+    	  tree ftype;
+
+    	    continue;
+
+    	  ftype = strip_array_types (TREE_TYPE (field));
+    	  if (type_has_constexpr_default_constructor (ftype))
+    	    {
+
+    	}
+          if (field == NULL_TREE)
+    	break;
+
+          field = DECL_CHAIN (field);
+        }
+    
+
+        }
+    
+      if (DECL_CONSTRUCTOR_P (fun)
+
+        return NULL;
+    
+      /* Create the constexpr function table if necessary.  */
+
+    	  body = massage_constexpr_body (fun, DECL_SAVED_TREE (fun));
+    	  require_potential_rvalue_constant_expression (body);
+    	  if (DECL_CONSTRUCTOR_P (fun))
+
+    	}
+        }
+      input_location = save_loc;
+

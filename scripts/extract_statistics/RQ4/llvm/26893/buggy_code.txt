@@ -1,0 +1,4 @@
+if (!isAddressOfOperand &&
+          isa<CXXMethodDecl>(DC) &&
+          cast<CXXMethodDecl>(DC)->isInstance()) {
+

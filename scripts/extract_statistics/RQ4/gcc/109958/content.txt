@@ -1,0 +1,32 @@
+know the type of the expression.  Otherwise, we must wait
+    	 until overload resolution has been performed.  */
+          functions = BASELINK_FUNCTIONS (member);
+
+          if (TREE_CODE (functions) == FUNCTION_DECL
+    	  && DECL_STATIC_FUNCTION_P (functions))
+    	type = TREE_TYPE (functions);
+
+        {
+          tree fn = BASELINK_FUNCTIONS (TREE_OPERAND (arg, 1));
+    
+
+          /* We can only get here with a single static member
+    	 function.  */
+          gcc_assert (TREE_CODE (fn) == FUNCTION_DECL
+
+return false;
+    
+      /* Add the new binding.  */
+
+    
+      if (conv_p)
+        TYPE_HAS_CONVERSION (type) = 1;
+
+        only the first call to "f" is valid.  However, if the function is
+        static, we can check.  */
+      if (rval && protect 
+
+    
+      if (errstr && protect)
+        {
+

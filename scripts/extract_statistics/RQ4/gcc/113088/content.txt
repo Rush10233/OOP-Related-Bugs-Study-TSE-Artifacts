@@ -1,0 +1,30 @@
+}
+    
+          /* Skip past other decls, they can't contain a return.  */
+
+    	tsi_next (&iter);
+
+    
+          /* Wrap the rest of the STATEMENT_LIST in a CLEANUP_STMT.  */
+          tree stmts = NULL_TREE;
+
+}
+    
+          /* Skip past other decls, they can't contain a return.  */
+
+    	tsi_next (&iter);
+
+    
+          /* Wrap the rest of the STATEMENT_LIST in a CLEANUP_STMT.  */
+          tree stmts = NULL_TREE;
+
+return;
+    
+          /* Skip past other decls, they can't contain a return.  */
+
+    	tsi_next (&iter);
+
+    
+          /* Wrap the rest of the STATEMENT_LIST in a CLEANUP_STMT.  */
+          tree stmts = NULL_TREE;
+

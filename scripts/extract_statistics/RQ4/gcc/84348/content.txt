@@ -1,0 +1,8 @@
+{
+    		error ("%qE is neither function nor member function; "
+    		       "cannot be declared friend", unqualified_id);
+
+    	      }
+    	    decl = NULL_TREE;
+    	  }
+

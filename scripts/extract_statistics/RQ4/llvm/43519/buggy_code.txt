@@ -1,0 +1,3 @@
+Member = dyn_cast_or_null<CXXMethodDecl>(
+                HandleMemberPointerAccess(Info, BE, ThisVal, false));
+

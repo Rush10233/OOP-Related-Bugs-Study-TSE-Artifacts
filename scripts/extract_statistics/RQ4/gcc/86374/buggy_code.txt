@@ -1,0 +1,12 @@
+bool entering_scope;
+
+          entering_scope = (template_parm_scope_p ()
+    			&& cp_lexer_next_token_is (parser->lexer,
+    						   CPP_SCOPE));
+
+          context = tsubst (DECL_CONTEXT (gen_tmpl), arglist,
+    			complain, in_decl);
+
+context = tsubst (DECL_CONTEXT (gen_tmpl), arglist,
+    			complain, in_decl);
+

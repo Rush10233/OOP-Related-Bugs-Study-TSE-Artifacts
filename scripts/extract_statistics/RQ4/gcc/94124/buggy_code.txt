@@ -1,0 +1,5 @@
+if (reuse)
+    	new_init = unshare_constructor (new_init);
+    
+          vec_safe_truncate (CONSTRUCTOR_ELTS (new_init), nelts);
+

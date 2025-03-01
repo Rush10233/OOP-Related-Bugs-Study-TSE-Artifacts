@@ -1,0 +1,6 @@
+adl_type (TREE_TYPE (expr));
+
+adl_type (TREE_TYPE (expr));
+
+adl_type (TREE_TYPE (expr));
+

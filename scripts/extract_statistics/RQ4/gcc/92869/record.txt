@@ -1,0 +1,2 @@
+Commit:	c20f7e9
+./gcc/cp/class.c	7477,7477

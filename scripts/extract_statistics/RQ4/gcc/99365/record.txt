@@ -1,0 +1,6 @@
+Commit:	7723f56
+./gcc/cp/pt.c	23686,23686
+./gcc/cp/pt.c	29617,29623
+./gcc/cp/pt.c	29625,29628
+./gcc/cp/pt.c	29630,29660
+./gcc/cp/pt.c	29662,29662

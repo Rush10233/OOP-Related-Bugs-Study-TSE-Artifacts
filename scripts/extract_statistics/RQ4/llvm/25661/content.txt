@@ -1,0 +1,11 @@
+if (!MemPtrArg)
+            return Sema::TDK_NonDeducedMismatch;
+    
+
+          if (Sema::TemplateDeductionResult Result
+                = DeduceTemplateArgumentsByTypeMatch(S, TemplateParams,
+
+                                                     Info, Deduced,
+                                                     TDF & TDF_IgnoreQualifiers))
+            return Result;
+

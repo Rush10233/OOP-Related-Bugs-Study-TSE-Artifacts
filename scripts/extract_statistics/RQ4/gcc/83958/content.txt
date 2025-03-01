@@ -1,0 +1,16 @@
+type = complete_type (TREE_TYPE (type));
+          if (type == error_mark_node)
+    	goto error_out;
+
+        }
+    
+      tree eltype = NULL_TREE;
+
+type = complete_type (TREE_TYPE (type));
+          if (type == error_mark_node)
+    	goto error_out;
+
+        }
+    
+      tree eltype = NULL_TREE;
+

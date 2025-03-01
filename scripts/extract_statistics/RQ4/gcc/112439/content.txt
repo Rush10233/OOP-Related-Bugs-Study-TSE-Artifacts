@@ -1,0 +1,16 @@
+object.  Make a note of this fact by marking the CONSTRUCTOR
+         TREE_READONLY.  */
+      if (TREE_CODE (t) == INIT_EXPR
+
+          && TREE_CODE (*valp) == CONSTRUCTOR
+          && TYPE_READONLY (type))
+        {
+
+object.  Make a note of this fact by marking the CONSTRUCTOR
+         TREE_READONLY.  */
+      if (TREE_CODE (t) == INIT_EXPR
+
+          && TREE_CODE (*valp) == CONSTRUCTOR
+          && TYPE_READONLY (type))
+        {
+

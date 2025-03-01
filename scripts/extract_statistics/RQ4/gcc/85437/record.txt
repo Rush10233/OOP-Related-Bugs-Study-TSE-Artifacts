@@ -1,0 +1,17 @@
+Commit:	9085533
+./gcc/cp/constexpr.c	1825,1826
+./gcc/cp/constexpr.c	4584,4584
+./gcc/cp/constexpr.c	4600,4611
+./gcc/cp/typeck.c	7417,7417
+./gcc/cp/typeck.c	7428,7428
+./gcc/cp/typeck.c	7454,7454
+./gcc/cp/typeck.c	7465,7465
+./gcc/cp/typeck.c	7481,7481
+./gcc/testsuite/g++.dg/cpp0x/addressof1.C	21,21
+./gcc/testsuite/g++.dg/cpp0x/addressof1.C	23,23
+./gcc/testsuite/g++.dg/cpp0x/addressof1.C	34,34
+./gcc/testsuite/g++.dg/cpp0x/addressof1.C	36,36
+./gcc/testsuite/g++.dg/cpp0x/addressof1.C	79,80
+./gcc/testsuite/g++.dg/cpp0x/constexpr-cast.C	7,8
+./gcc/testsuite/g++.dg/cpp0x/constexpr-nullptr-2.C	102,104
+./gcc/testsuite/g++.dg/cpp0x/constexpr-pmf1.C	2,3

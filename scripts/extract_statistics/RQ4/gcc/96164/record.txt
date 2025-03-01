@@ -1,0 +1,6 @@
+Commit:	6a0a16f
+./gcc/cp/pt.c	24975,24985
+./gcc/cp/pt.c	24991,24991
+Commit:	bea7a39
+./gcc/cp/pt.c	24931,24941
+./gcc/cp/pt.c	24947,24947

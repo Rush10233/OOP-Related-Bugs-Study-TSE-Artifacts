@@ -1,0 +1,24 @@
+def err_typecheck_ambiguous_condition : Error<
+      "conversion %diff{from $ to $|between types}0,1 is ambiguous">;
+    def err_typecheck_nonviable_condition : Error<
+
+    def err_typecheck_nonviable_condition_incomplete : Error<
+      "no viable conversion%diff{ from $ to incomplete type $|}0,1">;
+    def err_typecheck_deleted_function : Error<
+
+                              diag::err_typecheck_nonviable_condition_incomplete,
+                                   Args[0]->getType(), Args[0]->getSourceRange()))
+            S.Diag(Kind.getLocation(), diag::err_typecheck_nonviable_condition)
+
+              << Args[0]->getType() << Args[0]->getSourceRange()
+              << DestType.getNonReferenceType();
+    
+
+                                 diag::err_typecheck_nonviable_condition_incomplete,
+                                 From->getType(), From->getSourceRange()))
+          Diag(From->getLocStart(), diag::err_typecheck_nonviable_condition)
+
+      } else
+        return false;
+      CandidateSet.NoteCandidates(*this, OCD_AllCandidates, From);
+

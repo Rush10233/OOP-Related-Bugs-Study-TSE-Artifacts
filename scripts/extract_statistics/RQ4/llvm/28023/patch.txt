@@ -1,0 +1,10 @@
+if (PrevDecl && PrevDecl->isTemplateParameter()) {
+        // Maybe we will complain about the shadowed template parameter.
+        DiagnoseTemplateParameterShadow(NameLoc, PrevDecl);
+        // Just pretend that we didn't see the previous declaration.
+        PrevDecl = nullptr;
+      }
+    
+
+        }
+

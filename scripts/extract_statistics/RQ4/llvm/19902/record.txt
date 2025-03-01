@@ -1,0 +1,3 @@
+Commit:	547f536
+./clang/lib/Sema/SemaDecl.cpp	9065,9065
+./clang/lib/Sema/SemaDecl.cpp	9067,9067

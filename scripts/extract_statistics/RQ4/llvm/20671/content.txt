@@ -1,0 +1,123 @@
+return;
+      }
+    
+
+      // Call the LateTemplateParser callback if there is a need to late parse
+      // a templated function definition.
+      if (!Pattern && PatternDecl->isLateTemplateParsed() &&
+
+          Function->setInvalidDecl();
+        } else if (Function->getTemplateSpecializationKind()
+                     == TSK_ExplicitInstantiationDefinition) {
+
+          PendingInstantiations.push_back(
+            std::make_pair(Function, PointOfInstantiation));
+        }
+
+      // Copy the inner loc start from the pattern.
+      Function->setInnerLocStart(PatternDecl->getInnerLocStart());
+    
+      EnterExpressionEvaluationContext EvalContext(*this,
+                                                   Sema::PotentiallyEvaluated);
+    
+
+/// cycle detection at the end of the TU.
+      llvm::SmallVector<CXXConstructorDecl*, 4> DelegatingCtorDecls;
+    
+
+      /// \brief Callback to the parser to parse templated functions when needed.
+      typedef void LateTemplateParserCB(void *P, const FunctionDecl *FD);
+      LateTemplateParserCB *LateTemplateParser;
+
+      void DefineImplicitDestructor(SourceLocation CurrentLocation,
+                                    CXXDestructorDecl *Destructor);
+    
+
+      /// \brief Declare all inherited constructors for the given class.
+      ///
+      /// \param ClassDecl The class declaration into which the inherited
+
+          // This is a C++ destructor declaration.
+          if (DC->isRecord()) {
+            R = CheckDestructorDeclarator(D, R, SC);
+
+    
+
+                                              D.getSourceRange().getBegin(),
+                                              NameInfo, R, TInfo,
+                                              isInline,
+                                              /*isImplicitlyDeclared=*/false);
+
+            isVirtualOkay = true;
+
+          } else {
+            Diag(D.getIdentifierLoc(), diag::err_destructor_not_member);
+    
+
+              Convs->setAccess(I, (*I)->getAccess());
+    
+            if (!CXXRecord->isDependentType()) {
+
+              // Add any implicitly-declared members to this class.
+              AddImplicitlyDeclaredMembersToClass(CXXRecord);
+    
+
+    
+        if (!Completed)
+          Record->completeDefinition();
+
+      } else {
+        ObjCIvarDecl **ClsFields =
+          reinterpret_cast<ObjCIvarDecl**>(RecFields.data());
+
+    
+        if (const RecordType *BaseType = B->getType()->getAs<RecordType>())
+          ExceptSpec.CalledDecl(
+
+      }
+
+      // Virtual base-class destructors.
+      for (CXXRecordDecl::base_class_iterator B = ClassDecl->vbases_begin(),
+                                           BEnd = ClassDecl->vbases_end();
+           B != BEnd; ++B) {
+        if (const RecordType *BaseType = B->getType()->getAs<RecordType>())
+          ExceptSpec.CalledDecl(
+
+      }
+
+      // Field destructors.
+      for (RecordDecl::field_iterator F = ClassDecl->field_begin(),
+                                   FEnd = ClassDecl->field_end();
+           F != FEnd; ++F) {
+        if (const RecordType *RecordTy
+            = Context.getBaseElementType(F->getType())->getAs<RecordType>())
+          ExceptSpec.CalledDecl(
+
+      }
+    
+      return ExceptSpec;
+
+      //   inline public member of its class.
+    
+      ImplicitExceptionSpecification Spec =
+
+      FunctionProtoType::ExtProtoInfo EPI = Spec.getEPI();
+    
+      // Create the actual destructor declaration.
+
+      }
+    }
+    
+
+    /// \brief Builds a statement that copies the given entity from \p From to
+    /// \c To.
+    ///
+
+    
+    bool Sema::CheckOverridingFunctionExceptionSpec(const CXXMethodDecl *New,
+                                                    const CXXMethodDecl *Old) {
+
+      return CheckExceptionSpecSubset(PDiag(diag::err_override_exception_spec),
+                                      PDiag(diag::note_overridden_virtual_function),
+                                      Old->getType()->getAs<FunctionProtoType>(),
+

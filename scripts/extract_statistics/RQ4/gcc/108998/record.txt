@@ -1,0 +1,6 @@
+Commit:	58d2a4c
+./gcc/cp/pt.c	13047,13047
+Commit:	09c5937
+./gcc/cp/pt.cc	13138,13138
+Commit:	9056d0d
+./gcc/cp/pt.cc	13172,13172

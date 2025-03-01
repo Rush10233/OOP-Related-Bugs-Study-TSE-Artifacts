@@ -1,0 +1,33 @@
+int = LOOKUP_NORMAL,
+    						 tree = NULL_TREE);
+
+    				 LOOKUP_IMPLICIT, /*tmpl=*/in_decl);
+
+    			     argvec, tmpl, complain));
+
+    					 complain, adc_unify, targs,
+    					 LOOKUP_NORMAL,
+    					 TPARMS_PRIMARY_TEMPLATE (tparms));
+
+       Additionally for adc_unify contexts TMPL is the template for which TYPE
+       is a template parameter type.
+    
+       For partial-concept-ids, extra args from OUTER_TARGS, TMPL and the current
+       scope may be appended to the list of deduced template arguments prior to
+       determining constraint satisfaction as appropriate.  */
+
+    		   tsubst_flags_t complain /* = tf_warning_or_error */,
+    		   auto_deduction_context context /* = adc_unspecified */,
+    		   tree outer_targs /* = NULL_TREE */,
+    		   int flags /* = LOOKUP_NORMAL */,
+    		   tree tmpl /* = NULL_TREE */)
+
+      if (tree ctmpl = CLASS_PLACEHOLDER_TEMPLATE (auto_node))
+
+        return do_class_deduction (type, ctmpl, init, flags, complain);
+
+          tree full_targs = outer_targs;
+          if (context == adc_unify && tmpl)
+    	full_targs = add_outermost_template_args (tmpl, full_targs);
+          full_targs = add_to_template_args (full_targs, targs);
+

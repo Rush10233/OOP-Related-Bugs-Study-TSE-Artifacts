@@ -1,0 +1,10 @@
+Commit:	33b153f
+./gcc/cp/constexpr.cc	4317,4319
+./gcc/cp/constexpr.cc	5098,5099
+./gcc/cp/constexpr.cc	5264,5264
+./gcc/cp/constexpr.cc	5309,5309
+Commit:	2c6e76f
+./gcc/cp/constexpr.cc	4278,4280
+./gcc/cp/constexpr.cc	5043,5044
+./gcc/cp/constexpr.cc	5209,5209
+./gcc/cp/constexpr.cc	5254,5254

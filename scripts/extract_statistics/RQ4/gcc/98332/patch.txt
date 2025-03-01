@@ -1,0 +1,8 @@
+if (ce->value && TREE_CODE (ce->value) == CONSTRUCTOR)
+
+          if (*non_constant_p)
+
+if (ce->value && TREE_CODE (ce->value) == CONSTRUCTOR)
+
+          if (*non_constant_p)
+

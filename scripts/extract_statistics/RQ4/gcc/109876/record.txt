@@ -1,0 +1,8 @@
+Commit:	7308b4d
+./gcc/cp/decl.cc	8219,8219
+./gcc/cp/decl.cc	8239,8239
+./gcc/cp/decl.cc	8429,8429
+Commit:	8911879
+./gcc/cp/decl.cc	8203,8203
+./gcc/cp/decl.cc	8223,8223
+./gcc/cp/decl.cc	8413,8413

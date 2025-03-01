@@ -1,0 +1,33 @@
+/// Get the template name to substitute when this template name is used as a
+      /// template template argument. This refers to the most recent declaration of
+      /// the template, including any default template arguments.
+      TemplateName getNameToSubstitute() const;
+    
+
+    TemplateName TemplateName::getNameToSubstitute() const {
+      TemplateDecl *Decl = getAsTemplateDecl();
+    
+      // Substituting a dependent template name: preserve it as written.
+      if (!Decl)
+        return *this;
+    
+      // If we have a template declaration, use the most recent non-friend
+      // declaration of that template.
+      Decl = cast<TemplateDecl>(Decl->getMostRecentDecl());
+      while (Decl->getFriendObjectKind()) {
+        Decl = cast<TemplateDecl>(Decl->getPreviousDecl());
+        assert(Decl && "all declarations of template are friends");
+      }
+      return TemplateName(Decl);
+    }
+    
+
+          TemplateName Template = Arg.getAsTemplate().getNameToSubstitute();
+
+          TemplateName Template = Arg.getAsTemplate().getNameToSubstitute();
+
+          assert(!Template.getAsQualifiedTemplateName() &&
+                 "template decl to substitute is qualified?");
+
+        return Arg.getAsTemplate().getNameToSubstitute();
+

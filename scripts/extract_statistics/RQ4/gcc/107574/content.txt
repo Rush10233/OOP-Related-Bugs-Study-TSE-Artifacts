@@ -1,0 +1,16 @@
+}
+    
+    	if (TREE_CODE (op) == PTRMEM_CST && !TYPE_PTRMEM_P (type))
+
+    
+    	if (TREE_CODE (op) == PTRMEM_CST && tcode == NOP_EXPR)
+    	  {
+
+}
+    
+    	if (TREE_CODE (op) == PTRMEM_CST && !TYPE_PTRMEM_P (type))
+
+    
+    	if (TREE_CODE (op) == PTRMEM_CST && tcode == NOP_EXPR)
+    	  {
+

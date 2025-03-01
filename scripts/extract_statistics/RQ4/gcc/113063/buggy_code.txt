@@ -1,0 +1,13 @@
+bool nested = (current_function_decl != NULL_TREE);
+      tree context = decl_function_context (fndecl);
+
+      if (! context)
+        push_to_top_level ();
+      else if (nested)
+        push_function_context ();
+
+      if (! context)
+        pop_from_top_level ();
+      else if (nested)
+        pop_function_context ();
+

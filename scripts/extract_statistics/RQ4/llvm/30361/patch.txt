@@ -1,0 +1,16 @@
+if (auto Name = D->getDeclName()) {
+          DeclarationNameInfo NameInfo(Name, D->getLocation());
+          Name = SubstDeclarationNameInfo(NameInfo, TemplateArgs).getName();
+          if (!Name)
+            return nullptr;
+          DeclContext::lookup_result Found = ParentDC->lookup(Name);
+
+      DeclarationNameInfo MemberNameInfo = E->getMemberNameInfo();
+      if (MemberNameInfo.getName()) {
+        MemberNameInfo = getDerived().TransformDeclarationNameInfo(MemberNameInfo);
+        if (!MemberNameInfo.getName())
+          return ExprError();
+      }
+
+                                            MemberNameInfo,
+

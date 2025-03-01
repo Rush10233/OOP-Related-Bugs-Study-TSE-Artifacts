@@ -1,0 +1,13 @@
+if (!warn_redundant_tags)
+        return;
+    
+
+      /* Look up the NAME to see if it unambiguously refers to the TYPE.  */
+      push_deferring_access_checks (dk_no_check);
+
+      pop_deferring_access_checks ();
+
+      push_deferring_access_checks (dk_no_check);
+
+      pop_deferring_access_checks ();
+

@@ -1,0 +1,10 @@
+else if (code == EXCESS_PRECISION_EXPR
+    	   && TREE_CODE (TREE_OPERAND (expr, 0)) == REAL_CST)
+        write_template_arg_literal (fold_convert (TREE_TYPE (expr),
+    					      TREE_OPERAND (expr, 0)));
+
+      else if (code == EXCESS_PRECISION_EXPR
+    	   && TREE_CODE (TREE_OPERAND (node, 0)) == REAL_CST)
+        write_template_arg_literal (fold_convert (TREE_TYPE (node),
+    					      TREE_OPERAND (node, 0)));
+

@@ -1,0 +1,789 @@
+bug_id,Creation Date,Last Modified Date,Importance,Symptom,Title
+100474,2021-05-07,2023-05-22,P3 normal ,crash,"ICE: in diagnose_trait_expr, at cp/constraint.cc:3706"
+97533,2020-10-22,2021-04-27,P3 normal ,crash,ICE encountering operator() within lambda expression within templated struct
+85464,2018-04-19,2018-04-19,P2 normal ,diagnostic,[7 Regression] Wignored-qualifiers is emitted by cc1plus without diagnostics when triggered by a cast operator.
+102592,2021-10-04,2021-10-13,P2 normal ,wrong_output,[11/12 Regression] heap-use-after-free when constructing std::filesystem::path from iterator pair
+91466,2019-08-15,2020-01-29,P3 normal ,rejects_valid,"[concepts] indicates ""used in its own initializer"" when not, constraint order change passes compilation."
+105925,2022-06-11,2022-06-24,P3 normal ,rejects_valid,"[11/12/13 Regression] Could not convert '{{0, 0.0}}' from '<brace-enclosed initializer list>' to 'X' since "
+85866,2018-05-22,2018-05-23,P3 normal ,rejects_valid,[8/9 Regression] too few arguments to function when sfinae on calling pointer to member function
+83374,2017-12-11,2019-07-05,P3 normal ,accepts_invalid,[DR1813] Bad std::is_standard_layout with two base class subobjects of the same type
+79503,2017-02-14,2017-02-20,P3 normal ,rejects_valid,[7 Regression] [new inheriting ctors] spurious bad candidate from same or derived type
+89331,2019-02-13,2019-04-03,P2 normal ,crash,"[8/9 Regression] internal compiler error: in build_simple_base_path, at cp/class.c:589"
+100644,2021-05-18,2022-07-19,P3 normal ,rejects_valid,[11/12 regression] Deleted move constructor prevents templated constructor from being used
+85067,2018-03-24,2018-03-27,P4 normal ,crash,[8 Regression] ICE with volatile parameter in defaulted copy-constructor
+93138,2020-01-02,2020-01-06,P3 normal ,others,[10 regression] elaborated type specifier visibility check problem
+91921,2019-09-26,2020-02-13,P3 normal ,diagnostic,Incomplete -Woverloaded-virtual warning when base class is in system header
+82294,2017-09-22,2019-01-08,P3 normal ,others,Array of objects with constexpr constructors initialized from space-inefficient memory image
+90951,2019-06-20,2020-02-26,P2 normal ,rejects_valid,[8/9 Regression] error initializing a constexpr array of a struct with const member
+89512,2019-02-26,2019-08-30,P2 normal ,crash,"[7 Regression] ICE in get_expr_operands, at tree-ssa-operands.c:882"
+87425,2018-09-24,2018-09-25,P3 normal ,crash,[9 Regression] ICE with virtual assignment operator
+92082,2019-10-13,2020-01-27,P3 normal ,others,ICE with concepts
+104173,2022-01-21,2022-01-24,P1 normal ,rejects_valid,[12 Regression] wrong overload resolution for ref-qualifiers
+79377,2017-02-04,2017-02-15,P2 normal ,crash,[6 Regression] ICE with increment operator in -fpermissive mode
+90801,2019-06-09,2024-11-19,P3 normal ,efficient/hang,A recurring hang
+85901,2018-05-24,2020-10-15,P3 normal ,diagnostic,"Error message contains ""#'offset_type' not supported by simple_type_specifier#)#'offset_type' not supported by direct_abstract_declarator#"""
+82643,2017-10-20,2022-03-11,P3 normal ,rejects_valid,lambda capture breaks constexpr-ness of non-static const constexpr member call on non-constexpr value/variable
+91933,2019-09-30,2022-05-13,P2 normal ,rejects_valid,"[9 Regression] ICE: tree check: expected class 'type', have 'exceptional' (error_mark) in build_simple_base_path, at cp/class.c:541"
+89212,2019-02-05,2019-02-26,P2 normal ,crash,[8 Regression] ICE in fold_convert_loc at fold-const.c:2552
+101040,2021-06-12,2021-07-07,P3 normal ,crash,"[11/12 Regression] Internal compiler error: in get_or_insert_ctor_field, at cp/constexpr.c:3571 since "
+88830,2019-01-13,2019-01-14,P1 normal ,crash,[9 Regression] ice in maybe_emit_vtables
+92062,2019-10-11,2019-10-22,P3 normal ,wrong_output,[9 Regression] ODR-use by static_assert ignored for static member of class template
+103081,2021-11-04,2024-12-19,P3 normal ,crash,"[ICE] with ""using enum"""
+80913,2017-05-29,2017-05-30,P3 normal ,others,[8 regression] Infinite loop in cc1plus with stat hack patch
+95074,2020-05-12,2021-12-03,P3 normal ,accepts_invalid,Function found via ADL when it should not
+99008,2021-02-08,2021-10-14,P2 normal ,crash,"[10 Regression] ICE in set_constraints, at cp/constraint.cc:1256"
+89422,2019-02-20,2019-05-01,P2 normal ,crash,"[8 Regression] ICE in field_byte_offset, at dwarf2out.c:19086"
+103703,2021-12-14,2022-05-25,P3 normal ,crash,ICE with -Wmismatched-tags with friends and templates
+85761,2018-05-12,2018-06-03,P2 normal ,accepts_invalid,[8/9 Regression] ICE on invalid in rtl with uncaptured constexpr
+84708,2018-03-05,2018-03-05,P3 normal ,crash,"[8 Regression] internal compiler error: in lambda_expr_this_capture, at cp/lambda.c:772"
+105265,2022-04-13,2022-05-13,P2 normal ,wrong_output,[9 Regression] temporary object not destructed causing memory leaks
+104300,2022-01-31,2022-02-07,P1 normal ,crash,"[12 Regression] ICE in gimplify_var_or_parm_decl, at gimplify.c:2977 since "
+102050,2021-08-24,2021-12-22,P3 normal ,rejects_valid,Nonempty list-initialization rejects constructor with defaulted std::initializer_list
+93496,2020-01-29,2020-01-31,P3 normal ,wrong_output,Miscompile of range-for over braced-init-list in constructor of class with virtual inheritance
+94124,2020-03-10,2020-03-12,P1 normal ,rejects_valid,[10 Regression] conversion from ‘<brace-enclosed initializer list>’ to ‘F’ is ambiguous since 
+97186,2020-09-24,2020-09-24,P3 normal ,others,[11 Regression] ICE: Segmentation fault (in maybe_instantiate_noexcept)
+90749,2019-06-04,2020-05-25,P2 normal ,crash,"[8/9/10 Regression] ICE in enclosing_instantiation_of, at cp/pt.c:13462"
+92732,2019-11-29,2020-02-14,P3 normal ,rejects_valid,Bit-field of scoped enumeration type cannot be initialized
+98642,2021-01-12,2021-03-29,P1 normal ,rejects_valid,"[10 Regression] wrong ""use of deleted function"" error"
+97279,2020-10-03,2021-12-08,P3 normal ,wrong_output,GCC ignores the operation definition of the template
+107329,2022-10-20,2023-01-24,P1 normal ,crash,"[13 Regression] ICE in gimplify_expr, at gimplify.cc:17118 since "
+96078,2020-07-06,2021-03-11,P2 normal ,diagnostic,[10 Regression] flatten attribute on constructor and destructor causes spurious warning
+93143,2020-01-03,2020-01-10,P1 normal ,wrong_output,[10 Regression] Multiple calls to static constexpr member function gives wrong code
+96994,2020-09-09,2021-04-20,P3 normal ,wrong_output,Missing code from consteval constructor initializing const variable
+100752,2021-05-25,2022-02-01,P2 normal ,rejects_valid,[11 Regression] error: cannot call member function ‘void S::f()’ without object
+85646,2018-05-04,2018-09-04,P2 normal ,rejects_valid,[7/8/9 Regression] Incorrect lambda visibility with -fvisibility=hidden
+84993,2018-03-20,2018-10-11,P3 normal ,diagnostic,Combination of fieldnames and accessor suggestions for misspelled private fields
+83835,2018-01-14,2018-02-16,P3 normal ,rejects_valid,[7/8 Regression] constexpr constructor rejected in c++17 mode (regression WRT c++14)
+83956,2018-01-20,2018-01-26,P3 normal ,rejects_valid,[8 regression] error: use of deleted function ‘{anonymous}::a::~a()’
+84851,2018-03-13,2018-10-24,P3 enhancement ,diagnostic,missing -Wclass-memaccess for a memcpy in a copy ctor with a non-trivial member
+86473,2018-07-11,2021-12-08,P3 normal ,rejects_valid,a problem in member lookup?
+83825,2018-01-13,2018-01-16,P4 normal ,crash,"[8 Regression] ICE on invalid C++ code with shadowed identifiers: in operator[], at vec.h:826"
+84426,2018-02-16,2018-02-27,P4 normal ,crash,[8 Regression] ICE with conflicting class member names
+81942,2017-08-23,2017-10-19,P3 normal ,crash,ICE on empty constexpr constructor with C++14
+92068,2019-10-11,2020-03-15,P2 normal ,crash,[8/9/10 Regression] ICE on invalid in process_partial_specialization
+105110,2022-03-30,2024-09-02,P3 normal ,rejects_valid,NTTP type deduction fails when dependent of previous NTTPs
+99389,2021-03-04,2021-03-05,P3 normal ,others,[modules] bad serialization of data
+94951,2020-05-05,2021-10-25,P2 normal ,diagnostic,[8/9 Regression] dereferencing type-punned pointer will break strict-aliasing rules when using super class for a template type
+100205,2021-04-22,2021-05-19,P3 normal ,rejects_valid,[11/12 Regression] error: invalid use of non-static data member
+89419,2019-02-20,2019-02-23,P2 normal ,crash,[8/9 Regression] ICE in is_normal_capture_proxy starting with 
+100517,2021-05-11,2021-05-11,P3 normal ,crash,"[12 Regression] ICE in rvalue, at cp/tree.c:946 since "
+100838,2021-05-30,2022-05-13,P2 normal ,wrong_output,[11 Regression] -fno-elide-constructors for C++14 missing required destructor call since 
+94590,2020-04-14,2020-05-07,P3 normal ,accepts_invalid,Incorrectly accepts invalid C++11 braced initialisation of double from long double if sizeof(long double)==sizeof(double)
+80415,2017-04-13,2018-10-28,P1 normal ,rejects_valid,"[7 Regression]  bogus ""invalid initialization of reference"" error"
+101532,2021-07-20,2022-05-11,P1 normal ,crash,"[12 Regression] ICE in finish_expr_stmt, at cp/semantics.c:859"
+93905,2020-02-24,2020-02-26,P3 normal ,rejects_valid,[8 Regression] Cannot use Derived type of Base containing both enum and protected destructor
+82110,2017-09-06,2021-11-03,P3 normal ,rejects_valid,"Concept for default constructing works with new T, not with new T[1]"
+90199,2019-04-22,2020-09-20,P3 normal ,crash,"ICE: tree check: expected complex_cst, have plus_expr in output_constant, at varasm.c:4994"
+98329,2020-12-16,2021-01-14,P1 normal ,crash,"[11 Regression] ICE in cp_build_bit_cast, at cp/semantics.c:10730"
+103480,2021-11-29,2022-05-10,P2 normal ,diagnostic,[10 Regression] -Werror=useless-cast with constexpr destructor
+81888,2017-08-18,2017-12-16,P2 normal ,rejects_valid,[7 Regression] Structured bindings stopped working
+96229,2020-07-17,2020-10-13,P3 normal ,accepts_invalid,Invalid specialization accepted when also constrained in base template template parameter
+102191,2021-09-03,2023-11-17,P3 normal ,rejects_valid,[C++20] Can't return prvalue with potentially-throwing destructor during constant evaluation
+89652,2019-03-11,2019-03-14,P1 normal ,others,[9 Regression] ICE during constexpr evaluation
+96560,2020-08-10,2021-06-11,P3 normal ,rejects_valid,Substitution triggers compile-time error when it shouldn't
+86374,2018-07-02,2022-12-27,P1 normal ,rejects_valid,[8/9 regression] template member name lookup problem
+85060,2018-03-24,2018-04-03,P2 normal ,rejects_valid,"[7/8 Regression] Object cannot call its inherited member function ""without object"""
+84578,2018-02-26,2018-03-02,P2 normal ,crash,[6/7 Regression] ICE with flexible array member and constexpr
+86763,2018-07-31,2018-08-17,P2 normal ,wrong_output,[7 Regression] Wrong code comparing member of copy of a 237 byte object with nontrivial default constructor on x86-64 arch
+84222,2018-02-05,2018-06-25,P2 normal ,diagnostic,[6/7 Regression] [[deprecated]] class complains about internal class usage
+87651,2018-10-19,2020-02-26,P2 normal ,rejects_valid,[8 Regression] inner class with template template friend declaration of same name fails to compile
+84296,2018-02-08,2018-02-26,P3 normal ,others,[8 Regression] ICE in finish_member_declaration
+87531,2018-10-05,2018-12-13,P3 normal ,wrong_output,[8/9 Regression] assignment operator does nothing if performed as a call via operator=
+85031,2018-03-22,2018-03-22,P3 normal ,crash,internal compiler error: Segmentation fault (field_accessor_p()/dfs_locate_field_accessor_pre())
+85241,2018-04-05,2023-07-07,P3 normal ,rejects_valid,"Requires-expressions, fold expressions, and member function templates with dependent parameters don't play nicely"
+85558,2018-04-28,2019-03-13,P3 normal ,crash,ICE in make_rtl_for_nonlocal_decl when using static member of template class
+86018,2018-05-31,2022-02-01,P3 normal ,diagnostic,Incorrect unused warning for int passed by reference to lambda
+84375,2018-02-13,2018-02-16,P4 normal ,crash,[8 Regression] ICE with friend in local class
+85014,2018-03-21,2021-05-14,P4 minor ,crash,"[8 Regression] internal compiler error: in lookup_base, at cp/search.c:185"
+92918,2019-12-12,2022-05-12,P2 normal ,rejects_valid,[9/10 Regression] Does not do name lookup when using from base class
+102045,2021-08-24,2022-03-28,P2 normal ,others,[11 regression] constructor is not being instantiated
+100111,2021-04-16,2022-05-12,P2 normal ,crash,[10 Regression] `-fno-elide-constructors` with `constexpr` ctors causes ICE in GCC 10.3
+98744,2021-01-19,2021-01-22,P1 normal ,wrong_output,"[11 Regression] ICE in gimple_call_arg, at gimple.h:3246 since "
+103177,2021-11-10,2022-03-15,P3 normal ,diagnostic,incorrect error message for ambiguous lookup with a static member function from a private base
+80431,2017-04-14,2021-12-09,P3 normal ,wrong_output,"Use of ""this"" pointer in member initializer causes constructor not to be called (or ICE on gcc 7)"
+104641,2022-02-22,2022-03-12,P3 normal ,rejects_valid,Deduction guide for member template class rejected at class scope when used with typename dependant type
+90138,2019-04-18,2019-04-19,P4 normal ,crash,[7/8 Regression] ICE on invalid in contains_struct_check()
+95678,2020-06-15,2020-06-16,P3 normal ,crash,"[9 Regression] ICE in dependent_type_p, at cp/pt.c:25610"
+79501,2017-02-14,2022-05-25,P3 normal ,rejects_valid,member deduction guide not recognized
+92776,2019-12-03,2020-01-30,P3 normal ,others,Can't define member function out of line with non-type template parameter
+98570,2021-01-06,2021-02-03,P2 normal ,crash,[8/9/10/11 Regression] ICE: canonical types differ for identical types
+99374,2021-03-03,2021-04-09,P2 normal ,rejects_valid,[8/9/10 Regression] C++17/20 mode fails to recognise pointer-to-member functions of incomplete types in conditional expression
+98332,2020-12-16,2021-09-11,P3 normal ,crash,"[10/11 Regression] ICE in unshare_constructor, at cp/constexpr.c:1527 since "
+93559,2020-02-03,2020-02-05,P1 normal ,crash,[10 Regression] ICE: side-effects element in no-side-effects CONSTRUCTOR
+94024,2020-03-03,2021-06-25,P3 normal ,diagnostic,Error message has misleading source location for constructor member initialisation.
+99033,2021-02-09,2021-04-22,P2 normal ,crash,"[9 Regression] ICE in tree_to_poly_int64, at tree.c:3091"
+97523,2020-10-21,2020-11-19,P1 normal ,rejects_valid,"[11 Regression] bogus ""would use explicit constructor"" error for new[]()"
+93238,2020-01-12,2021-09-21,P1 normal ,crash,"[10 Regression] ICE in tree check: expected integer_cst, have mult_expr in to_wide, at tree.h:5855 since "
+104425,2022-02-07,2022-02-08,P3 normal ,rejects_valid,SFINAE hard error on failed resolution of << for defined class in namespace
+103341,2021-11-20,2022-04-12,P2 normal ,crash,[11 Regression] ICE type of variable instantiation constrained on template parameter
+89481,2019-02-24,2019-02-26,P3 normal ,others,constexpr function allows writing one active union member and reading another
+90171,2019-04-19,2019-05-07,P3 normal ,others,"[9 Regression] ICE in build_op_delete_call, at cp/call.c:6630"
+99613,2021-03-16,2021-09-11,P3 normal ,wrong_output,Static variable destruction order race condition
+88554,2018-12-19,2019-01-08,P1 normal ,crash,[9 Regression] Segfault ICE when falling off the end of a reference-returning friend operator
+84520,2018-02-22,2018-02-27,P2 normal ,crash,[6/7/8 Regression] ICE with lambda and static member function
+84820,2018-03-11,2019-11-14,P2 normal ,accepts_invalid,[7 Regression]  Bogus pointer-to-member accepted within template
+86953,2018-08-14,2021-05-14,P2 normal ,crash,"[8 Regression] compiler crashes with constexpr operator== and specific struct (cxx_eval_bit_field_ref, at cp/constexpr.c:2704)"
+87506,2018-10-03,2019-08-30,P2 normal ,crash,[7 Regression] ICE with inherited constexpr constructor with const argument
+87571,2018-10-10,2021-05-14,P2 normal ,crash,"[8 Regression] ICE in friend_accessible_p, accessing protected member of template friend inside template class"
+83912,2018-01-17,2024-05-01,P3 normal ,rejects_valid,"[constexpr] struct with a pointer to one of its members, returned by a function, is not a constant expression"
+94041,2020-03-05,2024-11-29,P1 normal ,wrong_output,[10 Regression] temporary object destructor called before the end of the full-expression since 
+70272,2016-03-17,2024-10-26,P2 normal ,wrong_output,[5 Regression] -flifetime-dse miscompilation starting with 
+94175,2020-03-14,2020-03-20,P1 normal ,others,[10 Regression] Passing constexpr empty class variable to function since 
+93310,2020-01-17,2020-12-09,P3 normal ,wrong_output,Incorrect constexpr virtual evaluation inside a constructor
+90538,2019-05-20,2019-08-12,P3 normal ,others,[9/10 Regression] Redeclaration error when expanding parameter pack multiple times in a lambda
+94102,2020-03-09,2021-04-29,P3 normal ,rejects_valid,Variadic template deduction guide issue - error: 'In instantiation of'
+89761,2019-03-18,2021-08-12,P3 normal ,crash,"[9 Regression] ICE: tree check: expected class 'expression', have 'exceptional' (argument_pack_select)"
+99844,2021-03-31,2021-04-08,P2 normal ,crash,[9/10 Regression] ICE: unexpected expression 'B' of kind template_parm_index
+95371,2020-05-27,2020-06-01,P3 normal ,crash,[10/11 Regression] ICE concepts with template template parameter since 
+80746,2017-05-15,2020-02-06,P3 normal ,others,[concepts] ICE evaluating constraints for concepts with dependent template parameters
+94926,2020-05-02,2020-05-28,P3 normal ,accepts_invalid,[9/10/11 regression] invalid use of incomplete type not recogniced for static self reference of templated struct since 
+98930,2021-02-02,2021-10-05,P3 normal ,crash,ICE with static variable in template function used as template argument
+89217,2019-02-06,2019-02-17,P1 normal ,rejects_valid,"[9 Regression] ICE tree check: expected constructor, have error_mark in split_nonconstant_init_1"
+103968,2022-01-10,2022-03-28,P2 normal ,crash,[11 Regression] ICE and segfault when instantiating template with lvalue ref argument and nested template type
+88979,2019-01-22,2019-03-13,P3 normal ,rejects_valid,[C++20] P0634R3 not working for constructor parameter types
+96199,2020-07-14,2023-03-09,P2 normal ,others,[10/11 Regression] internal compiler error: in tsubst_copy with CTAD for alias templates
+93248,2020-01-13,2020-03-16,P2 normal ,crash,[8/9/10 Regression] ICE in decltype of template constructor with default argument within a class template since 
+101988,2021-08-19,2022-01-27,P1 normal ,accepts_invalid,[12 Regression] Accepts invalid new-expression of array of deduced class template
+97679,2020-11-02,2022-05-04,P2 normal ,crash,[10 Regression] [concepts] ICE with CTAD for a nested class template with constrained constructor
+98844,2021-01-27,2021-02-12,P3 normal ,accepts_invalid,Deduction guides don't inhibit the aggregate deduction candidate
+105734,2022-05-26,2022-06-01,P2 normal ,rejects_valid,"[12/13 Regression]: Incorrect ""error: invalid use of 'auto'"" for explicit destructor inside a template"
+94775,2020-04-26,2021-04-09,P2 normal ,crash,"[8/9/10 Regression] ICE in strip_typedefs, at cp/tree.c:1734 since "
+92103,2019-10-15,2020-11-25,P3 normal ,rejects_valid,constraints not checked on nested class template
+91826,2019-09-19,2024-09-25,P2 normal ,rejects_valid,[8/9/10 Regression] Unexpected behavior when class defined with namespace alias
+100502,2021-05-10,2022-05-15,P1 normal ,crash,[11/12 Regression] ICE in enforce_access at cp/semantics.c:368 since 
+96840,2020-08-29,2021-12-30,P3 normal ,rejects_valid,[11 Regression] Recursive substitution in constrained commutative operator
+98413,2020-12-21,2020-12-23,P1 normal ,crash,[11 Regression] ICE on placement new and member pointer
+89050,2019-01-24,2021-08-27,P3 normal ,rejects_valid,[8 Regression] GCC sometimes requires this to be captured when doing overload resolution but selecting a static member function
+90546,2019-05-20,2020-02-26,P2 normal ,wrong_output,[9/10 Regression] Incorrect template argument deduction for conversion functions
+91377,2019-08-06,2020-04-04,P2 normal ,crash,"[8/9/10 Regression] ICE with non-static block scope constexpr, captured in lambda, used as template parameter"
+95999,2020-06-30,2022-03-10,P4 trivial ,crash,"[9/10/11/12 Regression] ICE in tree check: expected integer_cst, have var_decl in get_len, at tree.h:5951"
+101767,2021-08-03,2022-05-12,P1 normal ,rejects_valid,[11 Regression] Aggregate initialization fails for struct that has both unnamed struct and union fields
+95369,2020-05-27,2021-07-27,P3 normal ,accepts_invalid,braced-init-list with designated initializers as template-argument rejected
+80178,2017-03-24,2017-05-19,P3 normal ,wrong_output,Class with deleted copy and move constructors uses wrong argument passing ABI
+79064,2017-01-11,2021-08-12,P3 normal ,rejects_valid,Cannot overload member function templates on type of literal
+104647,2022-02-22,2023-02-02,P2 normal ,crash,"[10/11/12/13 Regression] ICE in get_or_insert_ctor_field, at cp/constexpr.cc:3705 since "
+92134,2019-10-17,2019-10-30,P3 normal ,accepts_invalid,static constinit members incorrectly compile
+107280,2022-10-16,2023-03-15,P2 normal ,crash,"[10/11 Regression] ICE: tree check: expected constructor, have view_convert_expr in cxx_eval_store_expression, at cp/constexpr.cc:5928"
+93805,2020-02-18,2022-05-27,P2 normal ,diagnostic,[9 Regression] A suspicious -Werror=noexcept warning since 
+79796,2017-03-01,2017-03-07,P2 normal ,crash,[5 Regression] ICE with NSDMI and this pointer
+103936,2022-01-07,2022-01-07,P3 blocker ,crash,[12 Regression] ICE with cs[5]{}
+100963,2021-06-08,2021-06-08,P3 normal ,wrong_output,[11/12 Regression] GCC 11 regression: templated constructor with std::initializer_list<T> is not selected
+92907,2019-12-11,2020-01-22,P3 normal ,wrong_output,"noexcept does not consider ""const"" in member functions"
+103783,2021-12-21,2022-01-10,P3 normal ,rejects_valid,Ambiguous overload between constrained static member and unconstrained non-static member
+104846,2022-03-08,2024-10-31,P4 normal ,crash,"[10/11/12 Regression] ICE: tree check: expected function_decl, have field_decl in grokmethod, at cp/decl.cc:17999"
+79474,2017-02-12,2017-10-18,P3 normal ,others,Multiple definitions of user-defined conversion operator cause ICE (internal compiler error)
+100763,2021-05-26,2021-07-22,P3 normal ,diagnostic,Diagnostics of type alias is missing scope
+82299,2017-09-22,2017-10-06,P3 normal ,diagnostic,-Wuseless-cast errors on typed enums used in member data initializers in c++1z
+79746,2017-02-28,2021-07-18,P3 normal ,others,[7 Regression] Confusing -Wunused-but-set-parameter warning with virtual inheritance
+99365,2021-03-03,2021-03-07,P1 normal ,rejects_valid,[11 Regression] ICE on partial specialization with constrained placeholder NTTP
+101098,2021-06-16,2022-12-07,P3 normal ,others,[11/12 Regression] ICE with explicit specialization of constrained function template
+98644,2021-01-12,2023-05-21,P2 normal ,crash,"[10/11 Regression] [concepts] ICE in satisfaction_value, at cp/constraint.cc:2825"
+96623,2020-08-15,2021-01-22,P1 normal ,crash,"[11 Regression] ICE in inject_parm_decls, at cp/parser.c:23893"
+91606,2019-08-30,2019-10-16,P3 normal ,wrong_output,[9 regression] Optimization leads to invalid code
+85277,2018-04-07,2018-04-09,P1 normal ,diagnostic,[8 Regression] Broken diagnostic for offsetof with static member function
+84434,2018-02-18,2018-03-01,P1 normal ,others,"[8 Regression] internal compiler error: tree check: expected var_decl or field_decl or function_decl or type_decl or template_decl, have using_decl in build_deduction_guide, at cp/pt.c:25636"
+86823,2018-08-01,2021-05-14,P2 normal ,accepts_invalid,[8 Regression] private member template struct/class is publicly accessible
+85141,2018-03-31,2018-04-05,P2 normal ,crash,[6/7/8 Regression] ICE with pointer arithmetic of static member function address
+88183,2018-11-24,2020-02-24,P2 normal ,crash,[8 Regression] Fold expression with operator .* inside an polymorphic lambda
+84590,2018-02-27,2018-03-02,P2 normal ,others,"[7 Regression] -fsanitize=undefined internal compiler error: tree check: expected constructor, have target_expr in split_nonconstant_init_1, at cp/typeck2.c:629"
+87652,2018-10-19,2020-02-26,P2 normal ,rejects_valid,[8 Regression] inner class template of outer class template can't access friend's protected data member
+88528,2018-12-17,2019-11-14,P2 normal ,crash,[7 Regression] ICE with templated operator bool() in gcc 7
+85061,2018-03-24,2018-03-28,P3 normal ,crash,ICE with __builtin_offsetof applied to static member
+87547,2018-10-08,2021-07-31,P3 normal ,wrong_output,G++ reports bad type names for bit-field members
+88578,2018-12-22,2022-05-11,P3 normal ,wrong_output,Static C++ objects with flexible array members overlap when initializes are non-const
+86190,2018-06-18,2018-08-02,P3 normal ,diagnostic,[6/7 Regression] -Wsign-conversion ignores explicit conversion in some cases
+87530,2018-10-05,2020-09-17,P3 normal ,accepts_invalid,copy elision in return statement doesn't check for rvalue reference to object type
+84605,2018-02-27,2021-05-14,P4 normal ,crash,"[8 Regression] internal compiler error: in xref_basetypes, at cp/decl.c:13818"
+104476,2022-02-09,2022-05-13,P2 normal ,rejects_valid,[11 Regression] using-decl shadowed by member function when in incomplete-class context
+104432,2022-02-07,2022-02-09,P1 normal ,others,[12 Regression] ICE in operator() from filter_memfn_lookup since 
+94549,2020-04-10,2020-04-22,P1 normal ,rejects_valid,"[10 Regression] Inherited and constrained constructors are ""ambiguous"" even if they aren't"
+100983,2021-06-09,2022-02-22,P3 normal ,rejects_valid,Deduction guide for member template class rejected at class scope
+93286,2020-01-16,2020-05-15,P1 normal ,crash,"[10 Regression] ICE: tree check: did not expect class ‘type’, have ‘type’ (reference_type) in convert_from_reference, at cp/cvt.c:550 since "
+105803,2022-06-01,2022-06-02,P3 normal ,crash,[13 regression] ICE at gcc/cp/pt.cc:27737 after 
+88757,2019-01-08,2019-01-23,P1 normal ,rejects_valid,[9 Regression] GCC wrongly treats dependent name as a type when it should be treated as a value
+88815,2019-01-12,2019-01-27,P1 normal ,wrong_output,[9 Regression] is_constexpr (based on narrowing conversion and expression SFINAE) broken
+94944,2020-05-04,2022-02-18,P3 normal ,rejects_valid,compile error accessing member function of dependent base class template in noexcept specification
+82152,2017-09-08,2018-04-06,P2 normal ,crash,[7 Regression] ICE on invalid code in C++17 mode if inheriting constructors are used
+100065,2021-04-13,2021-06-09,P3 normal ,accepts_invalid,Conditional explicit doesn't work for deduction guide
+79504,2017-02-14,2021-12-22,P3 normal ,rejects_valid,Overload resolution in trailing-return-type ignores reference qualifier and leads to recursive template instantiation.
+90210,2019-04-23,2020-10-01,P3 normal ,accepts_invalid,[C++17] CTAD forbidding explicit deduction guide for copy-list-initialization
+90916,2019-06-18,2020-01-14,P1 normal ,crash,"[10 Regression] ICE in retrieve_specialization, at cp/pt.c:1258"
+101181,2021-06-23,2024-02-02,P2 normal ,crash,[11/12 Regression] ICE when using an alias template
+106969,2022-09-19,2023-04-28,P2 normal ,rejects_valid,[12 Regression] member function constness incorrectly propagates to local class member function return type deduction
+97297,2020-10-05,2020-10-06,P3 normal ,rejects_valid,typename wrongly required in out-of-class member function definitions
+89913,2019-04-01,2022-05-27,P4 minor ,crash,[9 Regression] ICE with invalid using declaration
+105518,2022-05-07,2022-12-15,P3 normal ,rejects_valid,[rejects valid] nested lambda using an outer type alias fails with constexpr integer in that alias
+100032,2021-04-11,2022-05-13,P2 normal ,accepts_invalid,[9/10 Regression] renaming alias template that also adds cv-qualifiers is deemed equivalent to underlying template
+79687,2017-02-23,2017-03-14,P3 normal ,wrong_output,[5/6 Regression] Wrong code with pointer-to-member
+106882,2022-09-07,2024-02-06,P3 normal ,rejects_valid,passing X as 'this' argument discards qualifiers
+89705,2019-03-13,2019-05-07,P2 normal ,rejects_valid,"[7/8 Regression] ICE in convert_like_real, at cp/call.c:7334"
+93046,2019-12-23,2024-03-14,P3 normal ,crash,[10 Regression] ICE in cp_gimplify_init_expr
+100209,2021-04-22,2021-11-06,P3 normal ,rejects_valid,multiple inheritance with crtp pattern fails on sequentioal member access
+90938,2019-06-19,2020-03-05,P2 normal ,rejects_valid,"[9 Regression] Initializing array with {1} works, but not {0}"
+103337,2021-11-19,2022-03-23,P3 normal ,rejects_valid,rejects-valid brace elision inside designated initializer
+89974,2019-04-04,2019-04-04,P3 normal ,rejects_valid,ICE on a definition of a non-type specialization on a struct object with pointer to member function
+101803,2021-08-06,2022-06-02,P3 normal ,rejects_valid,CTAD fails for nested designated initializers
+101405,2021-07-10,2022-01-20,P2 normal ,crash,"[12 Regression] internal compiler error: in reshape_init_class, at cp/decl.c:6483"
+96876,2020-08-31,2022-02-09,P3 normal ,accepts_invalid,missing check for destructibility of base classes in aggregate initialization
+89214,2019-02-05,2019-05-07,P2 normal ,crash,"[7/8 Regression] ICE in digest_init_r, at cp/typeck2.c:1211 with -std=c++17"
+98423,2020-12-23,2024-11-07,P3 normal ,rejects_valid,The defaulted default constructor defined as deleted when one of variant member has a default member initializer
+104225,2022-01-25,2022-05-11,P2 normal ,accepts_invalid,[9 Regression] accepts-invalid new expression that uses deleted implicit default constructor of class specialization
+88969,2019-01-22,2019-01-25,P1 normal ,crash,"[9 Regression] ICE in build_op_delete_call, at cp/call.c:6509"
+94470,2020-04-03,2024-05-01,P2 normal ,rejects_valid,[9 Regression] Constexpr variable initialization with self-modifying constructor incorrectly rejected since 
+80935,2017-05-31,2019-04-25,P3 normal ,rejects_valid,[C++1z] incorrect error 'uninitialized variable in constexpr function' when conditionally declaring variable inside lambda inside template class
+90243,2019-04-25,2020-01-17,P3 normal ,diagnostic,diagnostic notes that belong to a suppressed error about an uninitialized variable in a constexpr function are still shown
+82899,2017-11-08,2018-05-18,P3 normal ,others,*this in constructors could not alias with reference input parameters of the same type
+93413,2020-01-24,2022-11-03,P3 normal ,rejects_valid,Defaulted constexpr Destructor not being found during constant evaluation
+89392,2019-02-18,2019-09-02,P3 normal ,crash,"[7 Regression] ICE in bitmap_bit_p, at bitmap.c:978"
+95567,2020-06-07,2021-10-06,P3 normal ,wrong_output,"Defaulted virtual <=> has the wrong behavior, vtable is checked when it should not be"
+94932,2020-05-03,2020-12-01,P2 normal ,crash,"[10/11 Regression] ICE in ovl_skip_hidden, at cp/tree.c:2292 since "
+99251,2021-02-24,2021-03-02,P3 normal ,diagnostic,[11 Regression] inconsistent -Wnonnull warning behaviour with dynamic_cast
+96003,2020-06-30,2021-06-15,P3 normal ,diagnostic,[11 Regression] spurious -Wnonnull calling a member on the result of static_cast
+94492,2020-04-05,2022-07-06,P3 normal ,diagnostic,no way to silence -Wdeprecated-copy for aggregates
+92106,2019-10-15,2019-10-22,P3 normal ,crash,[8 Regression] ICE with structured bindings and -Wreturn-local-addr
+92582,2019-11-19,2020-01-14,P1 normal ,others,[10 Regression] internal compiler error: Segmentation fault with concept on constructor
+103700,2021-12-14,2022-11-09,P3 normal ,rejects_valid,Incomplete type not causing constraints to fail
+82833,2017-11-04,2021-07-19,P3 normal ,crash,[concepts] Out-of-line definition of nested class template errors with constraint (ICE)
+84330,2018-02-12,2019-11-14,P4 normal ,crash,[7 Regression] [concepts] ICE with broken constraint
+90858,2019-06-12,2020-01-28,P3 normal ,rejects_valid,Pointer to member is treated as non-constexpr
+80456,2017-04-18,2021-05-21,P3 normal ,rejects_valid,[9/10 Regression] calling constexpr member function from volatile-qualified member function: error: ‘this’ is not a constant expression
+98333,2020-12-16,2021-10-01,P2 normal ,crash,"[10 Regression] ICE in check_qualified_type, at tree.c:6593 since "
+101717,2021-08-02,2022-05-13,P2 normal ,crash,[9 Regression] ICE capturing static member within stateless generic lambda
+92531,2019-11-15,2020-01-17,P2 normal ,crash,"[9 Regression] ICE in uses_template_parms, at cp/pt.c:10471"
+84098,2018-01-29,2018-01-30,P1 normal ,crash,[8 Regression] ICE when using a lambda in a in-class static member initialization
+84447,2018-02-18,2019-01-08,P1 normal ,crash,[8 Regression] ICE with inherited deleted constructor and default argument
+85545,2018-04-26,2018-04-27,P1 normal ,crash,[8 Regression] ICE with static_cast of pointer-to-member-function
+84445,2018-02-18,2018-03-03,P2 normal ,crash,[7 Regression] ICE with __builtin_launder and virtual function
+85662,2018-05-05,2018-06-25,P2 normal ,rejects_valid,"[8/9 Regression] ""error: non-constant condition for static assertion"" from __builtin_offsetof in C++"
+85356,2018-04-11,2019-11-14,P2 normal ,crash,[7 Regression] ICE with operator=
+86521,2018-07-14,2024-01-03,P2 normal ,rejects_valid,[8 Regression] GCC 8 selects incorrect overload of ref-qualified conversion operator template
+88368,2018-12-05,2021-05-14,P2 normal ,rejects_valid,[8 Regression] Improper ``use of deleted function''
+84927,2018-03-17,2018-03-22,P2 normal ,crash,[7 Regression] ICE with NSDMI and reference
+88114,2018-11-20,2019-01-11,P3 normal ,wrong_output,"""virtual ~destructor() = default"": Destructor not created"
+84306,2018-02-09,2018-07-03,P3 normal ,wrong_output,"Wrong overload selected with -std=c++17, explicit and {}"
+85883,2018-05-23,2020-05-14,P3 normal ,rejects_valid,class template argument deduction fails in new-expression
+86439,2018-07-09,2021-12-08,P3 normal ,rejects_valid,CTAD with deleted copy constructor fails due to deduction-guide taking by value
+85493,2018-04-22,2022-02-21,P3 normal ,accepts_invalid,decltype can use deleted constructor and deleted template function in template function
+85743,2018-05-11,2022-05-27,P3 normal ,rejects_valid,Cannot call template member function inside a variadic lambda unless specifying `this`
+94616,2020-04-16,2021-05-14,P3 normal ,wrong_output,[8 Regression] Incorrect destruction for partially built objects
+79077,2017-01-12,2017-02-03,P1 normal ,wrong_output,[7 regression][new inheriting ctors]  bad code for inherited ctor
+101194,2021-06-24,2022-05-27,P3 normal ,rejects_valid,[9 Regression] aggregate init requires default constructor
+94885,2020-04-30,2024-04-10,P3 normal ,accepts_invalid,[10 Regression] Functional cast from int to empty class type with empty base incorrectly accepted with -std=c++2a
+80073,2017-03-16,2017-03-17,P1 normal ,crash,[7 Regression] ICE with virtual base
+95311,2020-05-25,2020-06-01,P3 normal ,crash,[11 Regression] ICE in cp_ubsan_maybe_instrument_member_call at gcc/cp/cp-ubsan.c:136 since 
+100797,2021-05-27,2021-06-01,P2 normal ,wrong_output,[10/11 Regression] using declaration causing virtual call with wrongly adjusted this pointer
+99664,2021-03-19,2021-07-16,P3 normal ,accepts_invalid,"Overriding virtual function with different return type (and not covariant) is allowed to compile, when it shouldn’t be"
+80956,2017-06-02,2019-11-14,P2 normal ,crash,[7 Regression] ICE with abstract class vector
+106304,2022-07-14,2022-10-14,P3 normal ,crash,"[modules] ICE compiling dynamic_cast in constexpr function (in tree_node, at cp/module.cc:9183)"
+99815,2021-03-29,2021-03-31,P1 normal ,crash,"[11 Regression] ICE: in placeholder_type_constraint_dependent_p, at cp/pt.c:28193"
+100138,2021-04-18,2024-01-15,P3 normal ,others,ICE with constructor constrained (C++20 Concepts) by parameter pack length
+99180,2021-02-20,2023-07-07,P2 normal ,crash,[10 Regression] ICE with alias template and empty parameter pack
+98611,2021-01-09,2021-03-31,P3 normal ,others,"[concepts][10 Regression] ICE in get_underlying_template, at cp/pt.c:6494 since "
+88986,2019-01-22,2021-05-14,P4 normal ,crash,"[8 Regression] ICE: tree check: expected tree that contains 'decl minimal' structure, have 'error_mark' in member_vec_binary_search, at cp/name-lookup.c:1136"
+93207,2020-01-08,2020-04-14,P3 normal ,rejects_valid,[concepts] Variadic concepts refuse to compile when function definition is not inline
+103346,2021-11-21,2023-11-16,P3 normal ,crash,"ICE on template specialization via alias template with a non-type parameter pack, and fold expression on lambda calls"
+97819,2020-11-13,2021-12-08,P3 normal ,rejects_valid,Pack expansion in member initializer lists nested with their parameter list got rejected.
+82239,2017-09-18,2020-10-20,P3 normal ,others,Parentheses around constexpr template member break static_assert
+96330,2020-07-27,2021-03-06,P3 normal ,rejects_valid,Constexpr variables cannot be used in the template context.
+100592,2021-05-14,2021-11-07,P3 normal ,rejects_valid,"Bogus ""qualifiers cannot be applied"" error with reference type produced by dependent alias template"
+81236,2017-06-27,2021-12-09,P3 normal ,crash,Crash when calling a template member function from generic lambda
+91768,2019-09-14,2021-12-04,P3 normal ,rejects_valid,gcc try to resolve member of dependent type too soon
+105842,2022-06-03,2022-07-27,P3 normal ,rejects_valid,rejects-valid: static member function overload set constrained by concepts for class template results in ambiguous call
+102137,2021-08-30,2022-03-09,P3 normal ,accepts_invalid,class template argument deduction with template template parameter allows explicit deduction guide
+91907,2019-09-25,2022-12-26,P3 normal ,rejects_valid,['17] Constexpr of member function pointer as template parameter results in inconsistent diagnostics
+92944,2019-12-15,2022-01-27,P3 normal ,rejects_valid,[concepts] redefinition error when using constrained structure template inside namespace
+79308,2017-01-31,2019-06-09,P3 normal ,crash,"ICE on specialization of nested template classes (in finish_member_declaration, at cp/semantics.c:2963)"
+89511,2019-02-26,2019-05-07,P2 normal ,crash,"[7/8 Regression] ICE in push_using_decl_1, at cp/name-lookup.c:3845"
+93614,2020-02-06,2021-12-04,P3 normal ,rejects_valid,C++ compile error with struct in template class and < operator
+94799,2020-04-27,2021-12-08,P2 normal ,rejects_valid,[8/9/10 Regression] Calling a member template function fails
+92859,2019-12-08,2019-12-19,P3 normal ,wrong_output,compiler treats enum type as an integer during overload resolution when a bit-field of this enum is considered
+105589,2022-05-13,2022-10-04,P1 normal ,crash,[12/13 Regression] [ICE] templated type alias over std::array with bound type in template function fails
+99120,2021-02-16,2021-04-09,P2 normal ,crash,[8/9/10 Regression] ICE in -Wshadow in templated member function
+100862,2021-06-01,2021-06-07,P3 normal ,rejects_valid,using enum member access fail
+103749,2021-12-16,2021-12-17,P3 normal ,diagnostic,Misleading error message on template/non-template conflict
+93400,2020-01-23,2020-01-25,P3 normal ,crash,"[10 Regression] ICE: in tsubst, at cp/pt.c:15142 on friends with concepts"
+91845,2019-09-20,2019-09-24,P4 normal ,crash,"[8/9/10 Regression] ICE: tree check: expected class 'type', have 'exceptional' (error_mark) in build_m_component_ref, at cp/typeck2.c:2086"
+80575,2017-04-30,2021-07-23,P3 normal ,others,unnecessary virtual function table support in member function call
+80043,2017-03-14,2017-06-17,P3 normal ,crash,[6/7 Regression] ICE with pointer-to-member-function and -fpermissive
+107574,2022-11-08,2024-01-13,P2 normal ,crash,[10/11 Regression] ICE: tree check in cp_fold_convert with ptr to member field cast inside a class not completed and inherent since 
+82980,2017-11-14,2022-08-08,P2 normal ,rejects_valid,"[9/10 Regression] template keyword should not be required for captured decl of the ""base"" type since "
+107938,2022-11-30,2023-03-04,P2 normal ,crash,[11/12 Regression] ICE directly returning `this` of `extern` variable in template since 
+94772,2020-04-26,2020-04-27,P1 normal ,rejects_valid,[10 Regression] constructing constexpr variables fail with delegated constexpr constructors
+89836,2019-03-26,2019-03-28,P3 normal ,rejects_valid,converted constant expression of type bool and explicit conversion functions
+90448,2019-05-13,2024-10-26,P2 normal ,rejects_valid,[8/9/10/11 Regression] decltype-based lambda parameter pack is rejected
+89158,2019-02-02,2019-02-06,P2 normal ,rejects_valid,[8 Regression] by-value capture of ICE variable isn't an lvalue?
+81675,2017-08-02,2023-03-01,P2 normal ,diagnostic,[6 Regression] attribute(noreturn) of destructor in :? not honored
+82461,2017-10-07,2018-01-29,P2 normal ,rejects_valid,[7 Regression] Temporary required for brace-initializing (non-literal-type) member variable
+88857,2019-01-15,2019-05-07,P2 normal ,crash,[7/8 Regression] ICE in build_value_init
+100489,2021-05-08,2021-10-14,P2 normal ,crash,[10/11/12 Regression] ICE in cp/constexpr.c:3556
+82593,2017-10-17,2017-12-19,P3 normal ,others,"Internal compiler error: in process_init_constructor_array, at cp/typeck2.c:1294"
+93107,2019-12-30,2023-05-08,P3 normal ,rejects_valid,unable to deduce initializer_list<auto> from function template
+88875,2019-01-16,2019-01-18,P1 normal ,rejects_valid,[9 regression] initializer_list and explicit ctor
+106366,2022-07-20,2022-07-22,P3 normal ,rejects_valid,CTAD fails to prioritize initializer_list when done via Deduction guide and inherited CTORS
+104031,2022-01-14,2022-01-18,P1 normal ,wrong_output,[12 regression] Global nested constructors generate invalid code since 
+104182,2022-01-22,2024-10-31,P1 critical ,wrong_output,[12 Regression] Wrong code since 
+92869,2019-12-09,2019-12-11,P3 normal ,wrong_output,[10 Regression] C++17 wrongly reports aggregate type as not-aggregate (when explicitly defaulted ctors are added)
+100054,2021-04-12,2021-05-20,P1 normal ,crash,[11 Regression] internal compiler error: in get_nsdmi
+92745,2019-12-01,2020-02-26,P2 normal ,rejects_valid,[9 Regression] Initializing array with vec4 results in compile error
+82873,2017-11-07,2021-12-03,P3 normal ,wrong_output,Generated copy constructor calls constructors for 0-sized array members
+79606,2017-02-19,2017-02-20,P3 normal ,crash,[7 Regression] ICE with NSDMI and this pointer in template
+79461,2017-02-10,2017-10-11,P2 normal ,crash,[5 Regression] [C++1z] ICE when capturing a variable in a lambda in a constexpr constructor
+80186,2017-03-25,2017-05-09,P3 normal ,crash,ICE on C++ code with invalid constructor: Segmentation fault (program cc1plus)
+98712,2021-01-17,2022-11-03,P3 normal ,wrong_output,Incorrect defaulted operator== at compile time and runtime when declared constexpr and inheriting (c++20)
+93675,2020-02-11,2020-02-13,P3 normal ,others,Starship operator on a hidden friend operator does not work
+95629,2020-06-10,2020-06-28,P3 normal ,crash,consteval operator== crashes compiler
+93480,2020-01-28,2022-12-26,P3 normal ,rejects_valid,Defaulted <=> doesn't expand array elements
+94462,2020-04-02,2020-04-07,P1 normal ,crash,"[10 Regression] ICE in duplicate_decls, at cp/decl.c:1456 since "
+91098,2019-07-05,2019-08-28,P3 normal ,crash,"[10 Regression] internal compiler error: tree check: expected var_decl or field_decl or function_decl or type_decl or template_decl, have using_decl in build_deduction_guide, at cp/pt.c:27167"
+92806,2019-12-04,2021-08-23,P3 normal ,diagnostic,Suboptimal diagnostic for concept that depends on non-bool value
+95303,2020-05-24,2020-07-07,P3 normal ,diagnostic,[concepts] Member type of class template is incorrectly printed in diagnostics when it fails to satisfy a concept
+79679,2017-02-22,2017-02-23,P3 normal ,wrong_output,[7 Regression] [C++17] Missing destruction of temporary within constructor's mem-initializer-list
+92001,2019-10-05,2019-10-08,P3 normal ,diagnostic,missing -Wclass-memaccess with array as first argument to memset
+92385,2019-11-05,2023-06-25,P3 normal ,efficient/hang,extremely long and memory intensive compilation for brace construction of array member
+90449,2019-05-13,2019-06-11,P3 normal ,diagnostic,No way to turn off warning about inaccessible base
+83205,2017-11-29,2017-12-16,P3 normal ,crash,ICE on structured binding with ill-formed negative std::tuple_size<T>::value
+96164,2020-07-11,2023-03-15,P3 normal ,others,Constraints and explicit template instantiation
+98486,2020-12-31,2021-10-06,P3 normal ,accepts_invalid,Variable template specialization doesn't account for primary's constraints
+105351,2022-04-22,2023-04-18,P3 normal ,others,[concepts] Constraint checking does correctly match static member attributes
+98551,2021-01-05,2021-01-09,P2 normal ,crash,"[10/11 Regression] ICE in replace_result_decl, at cp/constexpr.c:2150"
+90691,2019-05-31,2024-04-04,P2 normal ,diagnostic,[9 regression] -Wsign-compare false-positive with constant
+90212,2019-04-23,2024-03-26,P2 normal ,rejects_valid,[8 Regression] by-ref capture of constexpr class object rejected
+97427,2020-10-14,2021-01-05,P3 normal ,rejects_valid,constexpr destructor for const object incorrectly rejected as modifying const object
+83116,2017-11-22,2017-12-19,P2 normal ,wrong_output,[6 Regression] Statement with no effect causes wrong code of static object constexpr method
+98745,2021-01-19,2021-01-19,P3 normal ,crash,[11 Regression] ICE: Segmentation fault (in print_mem_ref / c_pretty_printer::primary_expression)
+91378,2019-08-06,2024-02-26,P2 normal ,others,[9 regression] [C++17] ICE in type_dependent_expression_p with noexcept and deduced return type
+105035,2022-03-23,2022-12-07,P2 normal ,crash,"[11 Regression] tree check: expected field_decl, have identifier_node in operand_equal_p, at fold-const.c:3335 since "
+99565,2021-03-12,2021-03-25,P1 normal ,diagnostic,[11 Regression] Bogus identical branches warning when returning references to union members
+84850,2018-03-13,2018-03-21,P1 normal ,diagnostic,[8 Regression] -Wclass-memaccess on a memcpy in a copy assignment operator with no nontrivial bases or members
+85437,2018-04-17,2024-01-13,P1 normal ,rejects_valid,[8 Regression] member pointer static upcast rejected in a constexpr context
+85739,2018-05-10,2018-06-03,P2 normal ,crash,"[8/9 Regression] internal compiler error: in finish_member_declaration, at cp/semantics.c:3057"
+88049,2018-11-15,2021-05-14,P2 normal ,crash,[8 Regression] ICE in lto_symtab_prevailing_virtual_decl at gcc/lto/lto-symtab.c:1075 since r23
+86610,2018-07-20,2023-03-01,P2 normal ,rejects_valid,[8/9 Regression] non-const operator erroneously called in lambda in templated function
+83796,2018-01-11,2021-07-31,P2 normal ,accepts_invalid,[7 Regression] Abstract classes allowed to be instantiated when initialised as default parameter to function or constructor
+85659,2018-05-05,2018-06-25,P3 normal ,others,[6/7 Regression] ICE with inline assembly inside virtual function
+87820,2018-10-30,2022-03-09,P3 normal ,accepts_invalid,Explicit user-defined casting inside a template class working in implicit conversion inside function template
+84001,2018-01-23,2018-01-24,P3 normal ,crash,ICE in dependent_type_p cp/pt.c:23567 when using member type of template parameter in template list
+84140,2018-01-30,2020-02-05,P3 normal ,rejects_valid,Inline friends are not constrained by concepts
+85806,2018-05-16,2021-11-11,P3 normal ,rejects_valid,"[concepts] Hard error for ""invalid use of non-static data member"" in a requires expression"
+88515,2018-12-15,2020-02-05,P3 normal ,rejects_valid,[concepts] id-expression that names non-static data member rejected in requires-expression
+84449,2018-02-18,2018-03-03,P4 normal ,crash,[7 Regression] ICE with constexpr and deleted destructor
+84348,2018-02-12,2019-11-14,P4 normal ,crash,[7 Regression] ICE with invalid friend declaration
+108438,2023-01-17,2024-06-08,P4 normal ,crash,"[11/12/13/14/15 Regression] ICE in cxx_eval_constant_expression, at cp/constexpr.cc:7611"
+108468,2023-01-19,2023-08-11,P2 normal ,crash,[11 Regression] ICE in most_specialized_partial_spec/builtin_guide_p in C++20 mode
+108526,2023-01-24,2023-03-07,P1 normal ,crash,[13 Regression] ICE in start_preparsed_function with static on generic lambdas inside a template
+108606,2023-01-30,2023-03-01,P1 normal ,crash,[13 Regression] ICE in potential_constant_expression_1 with friend function declaration inside a local class of a generic/templated lambda
+109241,2023-03-21,2024-05-22,P1 normal ,crash,[12/13/14 Regression] ICE Segmentation fault for statement expression with a local type inside inside a generic lambda inside a generic lambda since 
+109247,2023-03-22,2024-03-10,P3 normal ,rejects_valid,[13/14 Regression] optional<T> o; o = {x}; wants to use explicit optional(U) constructor since 
+109277,2023-03-24,2023-04-13,P3 normal ,rejects_valid,[13 Regression] type_traits:1417:30: error: invalid use of incomplete type ‘class v8::internal::WasmArray’
+109320,2023-03-28,2023-03-29,P1 normal ,crash,"[13 Regression] ICE in coerce_template_parameter_pack, at cp/pt.cc:8795"
+109739,2023-05-04,2024-06-17,P3 normal ,others,bogus warning due to -Wmissing-field-initializers in C++20 with designated initializers on struct with empty base class
+109745,2023-05-05,2023-05-12,P2 normal ,accepts_invalid,[13 Regression] Incorrect code generated with -O1 when having a constexpr object modifying a mutable member
+109761,2023-05-06,2023-08-09,P3 normal ,rejects_valid,[11/12 Regression] Nested class destructor's noexcept specification incorrectly considered as too loose compared to the outer class
+109876,2023-05-16,2023-12-12,P2 normal ,rejects_valid,[11/12 Regression] initializer_list not usable in constant expressions in a template
+109923,2023-05-21,2023-06-03,P3 normal ,accepts_invalid,"Template friend function defined in a template class becomes a friend of all instantiations, not one"
+110064,2023-05-31,2023-07-19,P3 normal ,diagnostic,spurious missing initializer for member for anonymous
+110075,2023-06-01,2024-03-01,P3 normal ,diagnostic,Bogus -Wdangling-reference
+110122,2023-06-05,2023-07-19,P3 normal ,rejects_valid,"[13/14 Regression] using an aggregate with a member variable with a user defined copy constructor in a class NTTP causes capture and use of the `this` pointer in a generic lambda to produce the following error ""-copy ctor- used before its definition"""
+110463,2023-06-28,2023-07-01,P3 normal ,accepts_invalid,[13/14 Regression] Mutable subobject is usable in a constant expression
+110566,2023-07-05,2023-08-21,P2 normal ,crash,"[13 Regression] ICE when instantiating function template with template template parameter with 2 or more auto parameters with a dependent member template, ICE in tsubst, at cp/pt.cc:16135"
+110809,2023-07-25,2024-01-24,P3 normal ,crash,"ICE: in unify, at cp/pt.cc:25226 with floating-point NTTPs"
+111286,2023-09-04,2024-02-05,P2 normal ,crash,[12/13/14 Regression] ICE on functional cast empty brace-init-list to const array reference
+111705,2023-10-05,2023-11-27,P3 normal ,rejects_valid,[12/13 Regression] use of concepted copy constructored struct inside a template function messes up with -fchecking=2
+111710,2023-10-05,2024-02-29,P3 normal ,others,[modules] ICE when compiling module where a lambda is assigned to a field in an exported class
+112427,2023-11-07,2023-11-15,P1 normal ,crash,"[14 regression] ICE when building Minetest (internal compiler error: tree check: expected tree that contains ‘decl common’ structure, have ‘identifier_node’ in get_inner_reference, at expr.cc:7931) since "
+112436,2023-11-08,2024-02-13,P3 normal ,rejects_valid,SFINAE-unfriendly error on throwing pointer to incomplete type
+112439,2023-11-08,2024-02-02,P3 normal ,rejects_valid,[13/14 Regression] Modification of a member overlapping with a [[no_unique_address]] member in the constructor is incorrectly rejected in constant evaluation since 
+112619,2023-11-19,2023-11-24,P1 normal ,crash,"[14 regression] ICE when building libcrafter (tree check: expected statement_list, have modify_expr in tsi_start, at tree-iterator.h:57) since "
+112632,2023-11-20,2025-01-15,P1 normal ,rejects_valid,[14 Regression]  Non-type template parameter created with converting constructor sometimes has original type
+112765,2023-11-29,2023-11-29,P3 normal ,diagnostic,[14 regression] -Wparentheses warning even when extra parens are present
+113063,2023-12-18,2024-09-05,P3 normal ,crash,Strange linker error in special case involving local class with defaulted spaceship operator and static assert
+113083,2023-12-19,2024-03-22,P1 normal ,crash,"[14 Regression][arm] ICE in fold_convert_loc, at fold-const.cc:2602 since "
+113088,2023-12-19,2024-01-24,P2 normal ,crash,[12/13 Regression] Segmentation fault with empty try/catch following try/catch with returns + noexcept destructor
+113141,2023-12-26,2024-05-01,P2 normal ,crash,[13 Regression] ICE on conversion to reference in aggregate initialization
+89403,2019-02-19,2019-08-30,P2 normal ,crash,"[7 Regression] ICE in maybe_clone_body, at cp/optimize.c:693"
+103711,2021-12-14,2022-01-28,P3 normal ,wrong_output,Virtual base destroyed twice when an exception is thrown in a derived class' constructor called from a delegated constructor
+91334,2019-08-02,2019-08-11,P1 normal ,others,[10 Regression] ICE in propagate_necessity at gcc/tree-ssa-dce.c:813 since 
+82764,2017-10-28,2018-05-03,P2 normal ,crash,"[7/8 Regression] ICE in output_constructor_regular_field, at varasm.c:5030"
+93803,2020-02-18,2020-02-26,P1 normal ,crash,[10 Regression] ICE: segmentation fault with constant initialization of class having a [[no_unique_address]] field
+96052,2020-07-04,2020-08-04,P3 normal ,accepts_invalid,"Unlike Clang, alignment specifier is ignored on empty no_unique_address members"
+79825,2017-03-03,2017-03-03,P1 normal ,diagnostic,[7 Regression] Uninitialized uses in aggregate copies of empty structs (missed DCE in C++ gimplify)
+88690,2019-01-04,2020-02-24,P2 normal ,crash,"[8 Regression] c++17 internal compiler error: in output_constructor_regular_field, at varasm.c:5031"
+81164,2017-06-21,2017-06-29,P2 normal ,crash,[7/8 Regression] ICE in inherited_ctor_binfo_1 when using virtual inheritance
+95466,2020-06-01,2020-06-01,P3 normal ,crash,"[11 Regression] ICE in tree_operand_check, at tree.h:3794 since "
+82336,2017-09-27,2021-08-12,P2 normal ,others,[6 Regression] GCC requires but does not emit defaulted constructors in certain cases
+93633,2020-02-08,2020-02-09,P3 normal ,others,ICE on consteval virtual
+80829,2017-05-19,2017-06-19,P3 normal ,rejects_valid,[7/8 Regression] Use of constexpr constructors with base type instantiation fails compilation
+103769,2021-12-19,2022-11-30,P2 normal ,crash,[11 Regression] checking ICE in hashtab_chk_error with alias template and pack expansion after 
+108090,2022-12-14,2022-12-15,P3 normal ,rejects_valid,pack expansion of using declarations doesn't properly handle dependent conversion function names
+89917,2019-04-01,2020-02-25,P2 normal ,crash,[8 Regression] ICE with lambda in variadic template hierarchy
+101247,2021-06-29,2021-07-13,P3 normal ,crash,ICE when using static constexpr bool defined in parent-class in nested class constructor requires-clause
+79865,2017-03-04,2017-03-14,P3 normal ,crash,ICE calling member function with template parameter from generic lambda
+91230,2019-07-23,2019-08-03,P3 normal ,rejects_valid,[9/10 Regression] Template function containing lambda expression that has auto parameter and uses __PRETTY_FUNCTION__ does not compile
+89420,2019-02-20,2019-02-22,P2 normal ,crash,[9 Regression] ICE: unexpected expression 'int()' of kind cast_expr
+104108,2022-01-19,2022-03-29,P2 normal ,rejects_valid,[10 Regression] [c++17+] template alias inside template with static field of template class rejected since 
+99683,2021-03-20,2021-05-01,P3 normal ,rejects_valid,Deduction failure when using CTAD of CNTTP inside a deduction guide
+101698,2021-07-30,2022-05-13,P2 normal ,wrong_output,[9 Regression] Template type conversion operator from base class preferred over matching overload
+105623,2022-05-16,2022-10-22,P2 normal ,rejects_valid,[12/13 regression][rejects valid] invalid use of auto when deducing return type of base class template
+90505,2019-05-16,2020-03-04,P2 normal ,rejects_valid,[9 Regression] g++ rejects valid code
+92593,2019-11-20,2020-02-05,P4 normal ,crash,[10 Regression] ICE with CTAD using undeclared constraint
+95486,2020-06-02,2021-05-20,P3 normal ,crash,ICE for alias CTAD with non-dependent argument and constrained constructor
+96647,2020-08-17,2020-09-09,P3 normal ,rejects_valid,Can't resolve pointer to overloaded member with auto return type
+97099,2020-09-18,2020-09-21,P3 normal ,accepts_invalid,[temp.deduct.guide]p3 not implemented properly
+91759,2019-09-12,2021-05-04,P2 normal ,accepts_invalid,[8/9 Regression] g++ accepts ill-formed deduction guides in wrong scope since 
+104235,2022-01-26,2022-01-26,P1 normal ,crash,"[12 Regression] ICE: in cp_parser_template_id, at cp/parser.cc"
+101783,2021-08-04,2022-02-04,P3 normal ,rejects_valid,unnecessary error when top level cv qualifier is dropped
+97328,2020-10-07,2020-10-22,P2 normal ,crash,"[10 Regression] ICE in verify_ctor_sanity, at cp/constexpr.c:3995 since "
+89744,2019-03-17,2021-05-14,P2 normal ,crash,[8 Regression] ICE with specialization of nested template class
+103678,2021-12-13,2022-01-27,P3 normal ,rejects_valid,[concepts] Constrained partial specialization of dependent template conflicts with unconstrained partial specialization
+100374,2021-05-01,2022-07-21,P3 normal ,rejects_valid,Type-constraints of member function templates should not be substituted into during implicit instantiation
+100616,2021-05-15,2022-10-18,P3 normal ,others,[modules] ICE when a variable of class taking a non-type template argument is defined both inside and outside the module
+94632,2020-04-17,2020-04-18,P1 normal ,crash,[10 Regression] canonical types differ for identical types since 
+98802,2021-01-23,2021-02-04,P3 normal ,rejects_valid,[10 Regression] class template argument deduce guide leads infinite recursive since 
+89390,2019-02-18,2019-02-23,P3 normal ,crash,"[9 Regression] ICE in get_string, at spellcheck-tree.h:46"
+102670,2021-10-09,2022-01-11,P3 normal ,rejects_valid,"Erroneous ""missing template arguments"" message for wrapper of ADL function template"
+98249,2020-12-11,2022-05-13,P2 normal ,rejects_valid,[9 Regression] Improper ADL on the `arg` in `new (arg) T`
+91911,2019-09-26,2024-02-19,P3 normal ,rejects_valid,Strange interaction between CTAD and decltype
+83187,2017-11-27,2017-11-29,P3 normal ,others,"[8 regression] internal compiler error: in get_alias_set, at alias.c:923"
+89682,2019-03-12,2019-03-18,P1 normal ,rejects_valid,[9 Regression] g++9 incorrectly disallows using private static method as default arg to ctor of template type
+96204,2020-07-15,2022-11-30,P3 normal ,rejects_valid,gcc complains about private member access in SFINAE context
+98231,2020-12-11,2021-01-13,P1 normal ,rejects_valid,[11 Regression] bogus error: no match for ‘operator<<’
+103714,2021-12-14,2021-12-19,P2 normal ,accepts_invalid,[11/12 Regression] name lookup in requires-clause finds wrong thing
+79290,2017-01-30,2017-01-31,P1 normal ,rejects_valid,"[7 Regression] forming pointer to member function tries to access ""__pfn"""
+90124,2019-04-17,2019-04-17,P1 normal ,rejects_valid,[9 Regression] Compilation of llvm PDBContext.cpp fails.
+105761,2022-05-28,2022-08-25,P3 normal ,crash,[11/12/13 Regression] ICE on hidden friend definition defined in base type since 
+107461,2022-10-30,2023-03-03,P1 normal ,rejects_valid,[12 Regression] ambiguity error for friend with templated constexpr argument
+107484,2022-11-01,2023-04-04,P1 normal ,accepts_invalid,[13 Regression] ICE: Segmentation fault (in decls_match)
+79519,2017-02-14,2017-04-12,P2 normal ,crash,[5/6 Regression] ICE deleting template friend function
+102786,2021-10-15,2024-12-05,P3 normal ,rejects_valid,[c++20] virtual pmf sometimes rejected as not a constant
+98441,2020-12-25,2021-01-07,P1 normal ,rejects_valid,[11 Regression] member function pointer incorrectly parsed as having trailing return type
+89387,2019-02-18,2019-02-19,P1 normal ,crash,[9 Regression] ICE in maybe_generic_this_capture at gcc/cp/lambda.c:945 since 
+85764,2018-05-12,2018-06-12,P2 normal ,rejects_valid,[8/9 Regression] bogus ‘this’ was not captured for this lambda function error
+100493,2021-05-09,2021-12-15,P3 normal ,diagnostic,"Lambda default copy capture that captures ""this"" cannot be used in both C++17 and C++20 modes"
+90623,2019-05-24,2020-07-23,P3 normal ,crash,compilation error with fold expression and parameter pack
+107755,2022-11-19,2023-02-01,P2 normal ,crash,"[10/11 Regression] ICE: in fold_convert_loc, at fold-const.c:2435, with -Wlogical-op, implicit user-defined conversion operator, template function, logical operator, and conditional operator"
+106675,2022-08-18,2023-02-15,P2 normal ,crash,[10 Regression] g++ crashes on funky operators
+103455,2021-11-28,2022-05-11,P2 normal ,crash,[9 Regression] internal compiler error: in dependent_type_p since 
+101442,2021-07-13,2022-05-13,P2 normal ,wrong_output,"[9 Regression] Destructor not called for a temporary object, if it's bound to a ref member of an object subject to NRVO"
+107065,2022-09-28,2023-05-04,P3 normal ,wrong_output,GCC treats rvalue as an lvalue
+96934,2020-09-04,2021-08-17,P3 normal ,wrong_output,[9 Regression] Copy initialization of struct involving aggregate array initialization miscompiles in GCC 9
+89315,2019-02-12,2019-02-17,P1 normal ,rejects_valid,[9 Regression] Cannot convert to std::initializer_list - fails with gcc9 works with gcc8
+92604,2019-11-20,2021-07-27,P3 normal ,accepts_invalid,GCC accepts invalid conversion from designated initializer list
+90190,2019-04-19,2021-05-14,P2 normal ,rejects_valid,[8 regression] CTAD confuses with {one element} initializer_list
+83227,2017-11-30,2018-02-16,P2 normal ,crash,[7 Regression] internal compiler error: in process_init_constructor_array
+99700,2021-03-21,2022-05-11,P3 normal ,accepts_invalid,[10 Regression] uninitialized variable accepted as a constant expression in C++ 20
+90825,2019-06-10,2019-09-24,P3 normal ,crash,[9 Regression] g++: internal compiler error: Segmentation fault signal terminated program cc1plus
+79118,2017-01-17,2017-01-24,P1 normal ,crash,"[7 Regression] internal compiler error: in cxx_eval_bit_field_ref, at cp/constexpr.c:2258"
+91179,2019-07-16,2021-04-15,P3 normal ,diagnostic,Spurious -Wconversion warning after promotion
+101073,2021-06-14,2023-03-05,P2 normal ,crash,"[10/11/12/13 Regression] ICE in cxx_eval_constant_expression, at cp/constexpr.c:6941"
+83058,2017-11-20,2017-11-28,P3 normal ,crash,"[6/7/8 Regression] ICE on C++ code with negative array index: in warn_placement_new_too_small, at cp/init.c:2666"
+96121,2020-07-08,2021-11-19,P3 normal ,diagnostic,Uninitialized variable copying in member initialized list not diagnosed
+89187,2019-02-04,2019-08-30,P2 normal ,crash,"[7 Regression] ICE in initialize_argument_information, at calls.c:2023"
+89914,2019-04-01,2019-04-08,P4 normal ,crash,"[9 Regression] ICE in nothrow_spec_p, at cp/except.c:1238"
+81796,2017-08-10,2017-08-11,P3 normal ,others,error: no matching function for call to ‘S2::operator delete(void*)’
+90996,2019-06-25,2022-05-27,P2 normal ,crash,"[9 Regression] ICE in gimplify_expr, at gimplify.c:13495"
+94074,2020-03-06,2020-03-11,P1 normal ,rejects_valid,[10 Regression] bogus modifying a const object error with const COMPONENT_REF
+81311,2017-07-04,2022-05-13,P2 normal ,wrong_output,[7 Regression] An std::ref argument calls copy constructor instead of template constructor in C++17 mode
+96533,2020-08-08,2023-07-13,P3 normal ,crash,ICE with three-way comparison when error occurs in templated operator< overload and -Wunused-parameter
+97121,2020-09-19,2021-11-04,P3 normal ,crash,ICE (segfault) on incorrect default three-way comparison declaration
+96299,2020-07-23,2021-10-13,P3 normal ,rejects_valid,Defaulted operator <=> implicitly deleted when a member has operator < and operator == and return type is specified
+98545,2021-01-05,2021-01-22,P1 normal ,crash,"[11 Regression] ICE in write_expression, at cp/mangle.c:3352"
+99213,2021-02-23,2021-02-25,P3 normal ,diagnostic,Suboptimal pretty printing of local class type when type's context contains a class template specialization
+88795,2019-01-10,2021-10-12,P3 normal ,crash,ICE on class-template argument deduction if non-type parameter has indirection
+89532,2019-02-28,2019-03-01,P1 normal ,crash,"[9 Regression] internal compiler error: in type_has_nontrivial_copy_init, at cp/tree.c:4024"
+83217,2017-11-29,2018-04-04,P3 normal ,efficient/hang,Compiler segfault: structured binding by reference to a templated type via a pointer
+98620,2021-01-11,2021-01-12,P3 normal ,diagnostic,SFINAE code in class specialization generates warnings
+103991,2022-01-12,2022-01-17,P1 normal ,diagnostic,[12 Regression] Bogus -Wreturn-type with constexpr if and local var with destructor
+80916,2017-05-30,2024-04-08,P2 normal ,diagnostic,"[8 Regression] Spurious ""declared 'static' but never defined"" warni"
+95328,2020-05-26,2021-08-05,P3 normal ,rejects_valid,"structured binding of template type inside template function is reported as ""incomplete class type"""
+82075,2017-09-01,2019-09-01,P3 normal ,rejects_valid,structured binding fails with empty base class
+89036,2019-01-24,2019-02-14,P2 normal ,crash,[8 Regression] ICE if destructor has a requires
+94719,2020-04-22,2020-04-22,P3 normal ,crash,ICE with constrained inherited constructor template from class template since 
+94819,2020-04-28,2020-04-29,P3 normal ,rejects_valid,"[10 Regression] Inherited and constrained constructors are ""ambiguous"" even if they aren't Pt. 2"
+104527,2022-02-14,2023-05-22,P2 normal ,crash,"[11 Regression] ICE: tree check: accessed elt 1 of 'tree_vec' with 0 elts in hash, at cp/constraint.cc:2486"
+100828,2021-05-30,2021-08-11,P3 normal ,rejects_valid,Arbitrary limit on constraint complexity
+82507,2017-10-10,2020-02-05,P3 normal ,others,[concepts] premature substitution into constraint of non-template member function
+87327,2018-09-17,2021-08-05,P2 normal ,rejects_valid,"[8 Regression] Calling member functions on captured constexpr variables ""is not a constant expression"""
+107079,2022-09-28,2023-06-30,P2 normal ,crash,[10/11 Regression] ICE initializing lifetime-extended constexpr variable that stores its this pointer
+93169,2020-01-06,2020-02-20,P1 normal ,wrong_output,[10 regression] Variable incorrectly put into readonly section.
+93998,2020-03-02,2020-03-03,P1 normal ,crash,"[10 Regression] ICE in adjust_temp_type, at cp/constexpr.c:1426"
+99980,2021-04-08,2023-12-27,P3 normal ,rejects_valid,Delayed parsing of noexcept doesn't work in member function template
+106925,2022-09-13,2022-10-14,P2 normal ,crash,[12/13 Regression] ICE in maybe_splice_retval_cleanup at gcc/cp/except.cc:1330 since 
+84314,2018-02-09,2018-02-21,P1 normal ,others,[8 Regression] Another ICE in finish_member_declaration
+88548,2018-12-18,2021-01-23,P1 normal ,accepts_invalid,[9 Regression] this accepted in static member functions
+86747,2018-07-30,2020-02-26,P2 normal ,rejects_valid,[8 Regression] rejects-valid with redundant friend declaration
+83958,2018-01-21,2018-03-03,P2 normal ,crash,[7 Regression] ICE: Segmentation fault (in find_decomp_class_base)
+84558,2018-02-25,2018-06-25,P2 normal ,crash,[6 Regression] ICE with invalid constexpr constructor
+87436,2018-09-25,2019-11-14,P2 normal ,efficient/hang,[7 Regression] G++ produces >300MB .rodata section to initialize struct with big array
+85148,2018-03-31,2018-04-04,P2 normal ,crash,[6/7/8 Regression] ICE with NSDMI and this pointer
+85262,2018-04-06,2018-04-10,P2 normal ,rejects_valid,[6/7/8 Regression] Trouble with constructor and -fpermissive
+87480,2018-10-01,2020-02-26,P2 normal ,rejects_valid,"[8 Regression] SFINAE constructor not matched, only in templated function"
+87554,2018-10-08,2020-02-26,P2 normal ,crash,"[8 Regression] internal compiler error: in record_reference, at cgraphbuild.c:64"
+88123,2018-11-20,2021-05-14,P2 normal ,rejects_valid,[8 Regression] faulty qualified name lookup of overloaded operator within generic lambda via using-directive
+88380,2018-12-05,2020-02-26,P2 normal ,wrong_output,"[8 Regression] Sequence of not-explicitly initialised, initialised, variable length generates no initialiser"
+87150,2018-08-30,2019-08-13,P2 normal ,accepts_invalid,[8 Regression] move ctor wrongly chosen in return stmt (derived vs. base)
+87750,2018-10-25,2019-03-09,P2 normal ,rejects_valid,[8/9 Regression] Failed compilation / parsing of template member call after 'using' declaration
+84892,2018-03-15,2018-03-21,P3 normal ,diagnostic,Missing accessor hint for private field
+88110,2018-11-20,2018-11-20,P3 normal ,crash,"[9 Regression] ICE (segfault) with -std=C++2a in cxx_eval_constant_expression when trying to evaluate nonoverridden ""virtual ... = 0"" function of a base class"
+84151,2018-01-31,2021-12-02,P3 normal ,others,[6 Regression] g++ generates two identical loads in a volatile-qualified member function.
+84698,2018-03-04,2019-06-18,P3 normal ,crash,ICE when using noexcept(noexcept()) declaration on global friend function of template class
+85363,2018-04-12,2021-08-12,P3 normal ,wrong_output,Throwing exception from member constructor (brace initializer vs initializer list)
+87378,2018-09-21,2019-03-06,P3 normal ,diagnostic,False -Wredundant-move (derived vs. base)
+88252,2018-11-28,2022-03-21,P3 normal ,accepts_invalid,Deduction guide assume the constructor parameter is a forwarding reference if constructor defined outside class
+88580,2018-12-23,2022-04-30,P3 normal ,rejects_valid,Parameter pack expansion fails (variadic constructor template inside a variadic class template)
+83895,2018-01-16,2018-01-22,P3 normal ,others,[8 Regression] -Wparentheses warns about pointer-to-member typedefs
+84494,2018-02-20,2021-02-01,P3 normal ,wrong_output,Invalid constexpr with default assignment operator
+84689,2018-03-03,2021-04-22,P3 normal ,rejects_valid,is_invocable is true even for call operator via ambiguous base
+84692,2018-03-03,2021-07-23,P3 normal ,crash,Class template argument deduction ICE for template's member template
+85146,2018-03-31,2021-10-01,P3 normal ,crash,ICE with __direct_bases for declared but not defined struct
+85155,2018-04-02,2021-04-27,P3 normal ,diagnostic,Suboptimal error messages when using noexcept(false) on defaulted dtor
+85386,2018-04-12,2018-04-12,P3 normal ,others,ICE when applying noexcept operator to default constructor
+85415,2018-04-16,2021-12-08,P3 normal ,others,"internal compiler error: in finish_member_declaration, at cp/semantics.c:2984"
+86044,2018-06-04,2019-04-23,P3 normal ,rejects_valid,noexcept(false) of constexpr member function ignored
+86970,2018-08-16,2023-12-15,P3 normal ,rejects_valid,"Rejected constexpr expression involving lambdas and inheritance, ""use of this in a constant expression"""
+87324,2018-09-15,2018-09-19,P3 normal ,others,g++ ICE with overriding initializers: Segmentation fault
+88118,2018-11-20,2023-12-30,P3 enhancement ,others,GCC keeps unnecessary calls to new
+84694,2018-03-03,2018-03-05,P4 normal ,crash,"[8 Regression] internal compiler error: tree check: expected tree that contains 'decl minimal' structure, have 'identifier_node' in do_friend, at cp/friend.c:498"
+86648,2018-07-23,2019-01-17,P1 normal ,crash,[9 Regression] ICE on class template argument deduction
+108437,2023-01-17,2023-01-19,P1 normal ,crash,"[13 Regression] ICE in build_min_non_dep_op_overload, at cp/tree.cc:3710"
+108559,2023-01-26,2023-02-01,P1 normal ,crash,"[13 Regression] A new crash with using a simple class, inheritance and a function"
+108579,2023-01-28,2023-02-03,P3 normal ,rejects_valid,[13 Regression] Requires-expression that checks constructor on non-template constructor of template class got rejected
+108698,2023-02-07,2023-02-09,P1 normal ,others,[13 Regression] decltype ((T() + ‘excess_precision_expr’ not supported by dump_expr<expression error>)) median(ndarray<T>) [with T = double]’: since  
+108887,2023-02-22,2023-03-30,P1 normal ,crash,[13 Regression] ICE in process_function_and_variable_attributes since 
+108998,2023-03-02,2024-03-11,P1 normal ,crash,"[12 Regression] ICE in tsubst, at cp/pt.cc:16037"
+109039,2023-03-06,2023-03-20,P2 normal ,wrong_output,[12 Regression] Miscompilation with no_unique_address and bitfields
+109042,2023-03-06,2023-03-07,P1 normal ,crash,"[13 Regression] ICE in emit_support_tinfo_1, at cp/rtti.cc:1584"
+109096,2023-03-10,2023-05-04,P3 normal ,wrong_output,__has_unique_object_representations does not account for unnamed bitfield
+109159,2023-03-16,2023-04-28,P2 normal ,accepts_invalid,[10/11/12 Regression] explicit constructor is used in copy-initialization
+109160,2023-03-16,2023-05-09,P3 normal ,crash,[Valid code] Constraint on deduced NTTP from method call causes ICE/Segfault.
+109172,2023-03-17,2023-03-18,P3 normal ,accepts_invalid,[10/11/12/13 Regression] g++ calls a private destructor with the keyword throw after the try-block
+109319,2023-03-28,2023-04-18,P2 normal ,crash,"[12 Regression] ICE in build_min_non_dep_op_overload, at cp/tree.cc:3793 since "
+109396,2023-04-03,2024-05-28,P3 enhancement ,diagnostic,Winit-self doesn't warn when std::move()-d
+109506,2023-04-13,2023-09-30,P3 normal ,accepts_invalid,[11/12 regression] -fchecking=2 causes some template constructor not be instantiated when used with NSDMI
+109514,2023-04-14,2023-04-16,P3 normal ,others,[13 regression] -Werror=dangling-pointer false positive on fheroes-1.0.3 (lambdas)
+109531,2023-04-17,2023-04-28,P3 normal ,crash,[13/14 Regression] Checking ICE with  hash table checking failed: equal operator returns true for a pair of values with a different hash value since 
+109649,2023-04-27,2023-05-03,P3 normal ,accepts_invalid,[13/14 Regression] GCC accepts invalid inaccessible friend declaration of member function
+109678,2023-04-29,2023-08-11,P2 normal ,efficient/hang,[13/14 Regression] exponential time behavior on std::variant
+109751,2023-05-05,2023-10-16,P3 normal ,rejects_valid,[13/14 Regression] boost iterator_interface fails concept check starting in gcc-13
+109871,2023-05-16,2024-02-12,P3 normal ,accepts_invalid,error: call of overloaded ... is ambiguous (std::vector vs designated initializers)
+109899,2023-05-17,2024-01-15,P2 normal ,crash,"[12/13 Regression] ICE in check_noexcept_r, at cp/except.cc:1065"
+109958,2023-05-24,2024-06-10,P2 normal ,crash,"[11/12/13/14/15 Regression] ICE: in build_ptrmem_type, at cp/decl.cc:11066 taking the address of bound static member function brought into derived class by using-declaration"
+110084,2023-06-02,2024-02-06,P2 normal ,crash,[12/13/14 Regression] defaulted constexpr operator== causes crash
+110102,2023-06-03,2023-06-23,P3 normal ,accepts_invalid,"[13 regression] initializer_list ctors of containers skip Allocator_traits::construct, copies move-only type"
+110197,2023-06-09,2023-08-21,P2 normal ,rejects_valid,[13 Regression] Empty constexpr object constructor erronously claims out of range access
+110295,2023-06-17,2023-12-15,P2 normal ,crash,[11 Regression] ICE in dwarf2out_finish with local class with inherited operator delete in a templated function and -g
+110395,2023-06-24,2023-06-25,P3 normal ,efficient/hang,GCOV stuck in an infinite loop with large std::array
+110441,2023-06-27,2023-07-15,P3 normal ,rejects_valid,c++17: temporary causes static member function call to confuse required copy elision
+110524,2023-07-03,2023-07-27,P3 normal ,crash,[C++20] ICE with use of function template name with no prior declaration in decltype
+110535,2023-07-03,2023-07-19,P3 normal ,crash,Internal error when performing a surrogate call with unsatisfied constraints
+110580,2023-07-06,2023-07-11,P3 normal ,accepts_invalid,[14 Regression] gcc fails to typecheck nix-2.16.1 source: error: invalid initialization of reference of type
+110927,2023-08-07,2023-08-16,P3 normal ,rejects_valid,GCC fails to parse dependent type in concept through partial specialization
+111272,2023-09-01,2024-01-12,P3 normal ,diagnostic,[13/14 Regression] Truncated error messages with -std=c++23 and -std=c++26
+112301,2023-10-30,2024-03-04,P3 normal ,wrong_output,[12/13/14 regression] Double destruction of returned object when exiting the scope causes an exception which gets rethrown since 
+112482,2023-11-11,2023-12-14,P3 normal ,rejects_valid,error when auto(x) is used in a variable initializer (block scope)
+112594,2023-11-17,2024-01-19,P3 normal ,rejects_valid,Non-type template parameter created with converting constructor sometimes has original type
+112658,2023-11-21,2024-05-13,P2 normal ,wrong_output,[12/13 Regression] ICE: finish_expr_stmt with casting an temp array to pointer and constructor call
+112744,2023-11-28,2023-11-30,P3 normal ,rejects_valid,Nested name specifier wrongly produces ambiguity in accessing static field
+113031,2023-12-15,2024-01-01,P1 normal ,crash,[14 Regression] ICE in cxx_fold_indirect_ref_1 starting with 
+113064,2023-12-18,2024-01-04,P3 normal ,rejects_valid,assignement from temporary sometimes invokes copy-assign instead of move-assign operator
+34796,2008-01-15,2008-01-20,P3 normal ,rejects_valid,[4.3 Regression] Too strict error checking for assumed-shaped array
+28039,2006-06-15,2010-04-24,P3 enhancement ,diagnostic,Warn when ignoring extra characters in the format specification
+19452,2005-01-14,2012-02-04,P2 minor ,others,Not detecting a function does not throw
+48545,2011-04-10,2011-04-11,P3 critical ,others,dereferencing does not work as expected
+32898,2007-07-25,2007-08-24,P2 normal ,accepts_invalid,[4.2/4.3 regression] Definition of variable N::i outside namespace N not rejected
+36810,2008-07-11,2008-07-11,P3 normal ,others,"""make"" asked me to report this error [GNU Fortran is not working]"
+73666,,,,,
+32172,2007-05-31,2007-06-01,P3 enhancement ,others,Behavior of -ffast-math
+19993,2005-02-16,2005-07-23,P1 normal ,others,-mlong-double-128 weirdness
+38671,2008-12-30,2012-01-16,P2 normal ,others,[4.4/4.5/4.6/4.7 Regression] selecting one IV instead of three
+27941,2006-06-07,2008-06-08,P3 minor ,others,offsetof produces possibly erroneous warnings
+21351,2005-05-03,2005-07-23,P2 normal ,crash,internal compiler error with sse
+23629,2005-08-30,2005-08-30,P2 normal ,others,-finstrument-functions + -finline-functions produces incorrect output.
+47176,2011-01-05,2011-01-05,P3 normal ,others,libgo doesn't compile if libunicode is installed
+30305,2006-12-26,2006-12-26,P3 normal ,others,[link-failure] .debug_info causes undefined reference.
+19681,2005-01-29,2005-07-23,P2 normal ,others,extension loading currently incorrect
+30844,2007-02-18,2007-02-20,P3 normal ,others,"invalid ""Can't find method"" error"
+20496,2005-03-16,2024-03-10,P2 enhancement ,others,"""-1"" is inconsistently printed in tree dumps"
+42581,2010-01-02,2010-01-04,P3 normal ,others,"""gcc -v"" doesn't work with lto"
+31222,2007-03-16,2007-04-07,P3 normal ,rejects_valid,Rejected: implicitly-typed dummys used in initialization expressions
+28337,2006-07-11,2007-02-03,P1 normal ,crash,[4.0 regression] ICE with string literals in templates
+40323,2009-06-01,2009-06-03,P1 normal ,efficient/hang,[4.5 Regression] compiling just takes forever and doesn't really process
+44361,2010-06-01,2010-06-05,P3 normal ,others,-Wunused-but-set-variable vs. explicit void cast
+42276,2009-12-04,2016-09-30,P3 normal ,others,"When creating cross-gcj compiler, libjvm gets installed in system library paths"
+27155,2006-04-14,2006-05-28,P3 normal ,others,Transfer of character to integer array and vice versa still doesn't work
+44671,2010-06-25,2010-06-28,P3 normal ,others,[4.6 Regression] Partial inlining breaks C++
+23303,2005-08-09,2005-11-02,P2 minor ,others,[4.1 Regression] 4.1 generates sall + addl instead of leal
+24289,2005-10-09,2005-10-09,P2 normal ,others,"libjava fails to build if GNU make 3.81 betas are used (caused by feature addition, not bug, in 3.81beta --> will still happen with 3.81 final)"
+37265,2008-08-28,2008-09-09,P3 normal ,others,"[4.4 Regression] mt_allocator.cc:646: ICE: in gt_ggc_m_S, at ggc-page.c:1281"
+28096,2006-06-20,2006-09-30,P1 normal ,wrong_output,[4.2 regression] fdlibm/strtod.c miscompiled at -O2
+37172,2008-08-20,2008-08-20,P3 normal ,others,g++ should not cast const iterator to non-const by default
+33904,2007-10-26,2007-11-12,P3 normal ,rejects_valid,"OpenMP: Default(shared) and wrong ""lastprivate variable is private in outer context"""
+50779,2011-10-18,2024-10-25,P3 major ,rejects_valid,always_inline function fails to inline
+44809,2010-07-04,2010-07-04,P3 normal ,others,[4.6 Regression] Mozilla build fails in gimplification.
+47270,2011-01-12,2013-12-24,P4 normal ,others,[4.7/4.8/4.9 Regression] GCC produces unnecessary code on -O2 and -O3 levels
+42211,2009-11-29,2009-12-13,P1 normal ,crash,[4.5 Regression] Segmentation fault with graphite -floop-interchange
+34970,2008-01-25,2008-01-26,P3 normal ,others,[4.3 regression] name mangling broken for __attributte__((fastcall))
+18876,2004-12-07,2007-05-04,P2 normal ,crash,"Bug box, Assert_Failure at namet.adb:630, on legal program"
+48687,2011-04-19,2011-04-19,P3 normal ,diagnostic,"for errors from -pedantic,  -Werror reports ""[-Werror=edantic]"""
+22591,2005-07-21,2005-07-27,P2 critical ,wrong_output,[4.0 regression] wrong alias information causes an incorrect redundant load elimination
+49020,2011-05-17,2011-05-18,P3 normal ,others,Invalid std::strchr prototype in cstring
+35039,2008-01-31,2016-10-07,P3 normal ,others,ICE in Linux-2.6.23 (fs/nfs/nfs4proc.c) when cross-compile with gcc-4.0.0
+20744,2005-04-04,2005-06-05,P2 normal ,wrong_output,[4.0 only] size= isn't implemented correctly
+27027,2006-04-04,2016-09-30,P3 normal ,others,task cancellation and native Eclipse
+20930,2005-04-10,2005-06-13,P2 normal ,others,[4.0 Regression] gfortran.dg/backspace.f execution test
+51484,2011-12-09,2011-12-09,P3 normal ,others,Can't create C++ executable with -profile-generate
+68024,2015-10-19,2015-10-21,P3 normal ,others,Diagnose variadic functions defined without prototypes
+30559,2007-01-23,2007-02-19,P3 normal ,efficient/hang,[4.3 Regression] compiler loops forever with flag -O3
+37903,2008-10-23,2008-11-01,P4 normal ,wrong_output,[4.3/4.4 Regression] wrong-code for complicated vector subscripts
+26182,2006-02-08,2006-02-25,P3 normal ,wrong_output,(min|max)loc with scalar mask aborts at runtime
+42513,2009-12-26,2010-05-12,P3 normal ,others,-ftree-vectorize and zlib: firefox crashes with segmentation faults on start
+19808,2005-02-07,2021-11-23,P2 enhancement ,diagnostic,miss a warning about uninitialized member usage in member initializer list in constructor
+30595,2007-01-26,2009-02-06,P3 normal ,others,gcc3.4.6 generates incorrect ppc32 code for combination of bitfields and shifts
+22354,2005-07-07,2021-07-24,P2 enhancement ,accepts_invalid,g++ accepts specialization without declaration
+42961,2010-02-04,2013-04-12,P2 normal ,others,[4.6 regression] IRA register preferencing bug
+30586,2007-01-25,2007-01-28,P3 normal ,others,[4.2/4.3 regression] Namespace pollution in c++ headers
+18544,2004-11-18,2004-11-22,P2 normal ,crash,[4.0 regression] ICE with -ftree-vectorize
+43232,2010-03-02,2010-03-02,P3 normal ,others,.eh_frame section created despite -fno-exceptions
+36747,2008-07-07,2008-09-17,P3 normal ,crash,"ICE in set_uids_in_ptset, at tree-ssa-structalias.c:4785  with -O"
+37918,2008-10-26,2009-03-31,P3 normal ,wrong_output,[4.2 Regression] bitfield shift fails with optimizer (-O2)
+47555,2011-01-31,2011-02-03,P3 normal ,efficient/hang,[4.4 Regression] Huge memory usage when optimizing
+19104,2004-12-21,2014-12-09,P2 enhancement ,others,in range test not noticed
+31701,2007-04-25,2007-05-26,P3 normal ,wrong_output,[4.1/4.2/4.3 Regression] SH: wrong epilogue for sibling calls
+37631,2008-09-23,2008-09-29,P3 minor ,others,non-volatile asm passes volatile asm (-O3)
+53354,2012-05-15,2012-05-15,P3 normal ,others,%z# asm specifier could be extended to support immediate constraints
+24730,2005-11-08,2005-11-13,P3 minor ,others,"""Phlegmatic work"" when moving cursor with arrow keys in JTextField"
+20259,2005-03-01,2005-07-23,P2 normal ,others,iostream functions/methods declared
+42778,2010-01-17,2018-12-13,P3 normal ,others,Superfluous stack management code is generated
+18477,2004-11-14,2005-07-23,P2 normal ,diagnostic,Wsequence-point false positive
+22465,2005-07-13,2005-07-23,P2 normal ,others,[4.1 Regression] gcc/doc/tm.texi:9284: Cross reference to nonexistent node
+36055,2008-04-26,2009-11-23,P3 minor ,others,Missed optimisation of QI register loads
+22855,2005-02-04,2005-07-23,P3 normal ,others,javax.swing.text.DefaultStyledDocument not implemented in 0.13
+19195,2004-12-29,2005-06-04,P2 normal ,crash,"gfortran: ICE in final_scan_insn, at final.c:1843"
+18542,2004-11-18,2004-12-16,P2 normal ,crash,[3.4 regression] ICE: output_operand: invalid expression as operand
+27811,2006-05-29,2006-06-06,P3 normal ,others,FAIL: g++.dg/opt/
+40395,2009-06-10,2009-06-10,P3 normal ,others,Variable values calculated differently depending on storage class
+47805,2011-02-18,2018-06-25,P3 normal ,rejects_valid,[OOP] Overridding hidden (private) TPB is rejected
+62102,2014-08-12,2014-10-14,P3 normal ,crash,[5 Regression]: gcc.dg/torture/
+22075,2005-06-15,2005-07-23,P2 normal ,others,"bootstrap fails when comparing stage 2 with stage 3 due to use of obsoleted ""tail +16c"" syntax"
+19741,2005-02-01,2023-12-06,P2 minor ,diagnostic,suboptimal error message for template functions (as opposed to non-templates)
+34644,2008-01-02,2008-01-03,P3 normal ,others,"Ada runtime build failure on OpenBSD, missing clearenv()"
+28394,2006-07-16,2006-11-01,P3 major ,accepts_invalid,Ada: Ambiguous call not detected when using dotted notation
+33189,2007-08-25,2007-08-31,P3 normal ,others,"read(blah, fmt=*) is accepted, but read(blah, '*') not."
+28105,2006-06-20,2013-06-22,P3 normal ,diagnostic,Check for memory allocations bigger than size_t
+19010,2004-12-15,2004-12-15,P2 normal ,others,sse and mmx parameter passing broken
+21942,2005-06-06,2007-07-02,P2 normal ,others,boehm-gc doesn't compile on Solaris 10/amd64
+43390,2010-03-16,2010-03-22,P3 normal ,crash,[4.5 Regression] ICE: integral result type precision does  not match field size of BIT_FIELD_REF
+33158,2007-08-23,2023-05-06,P3 enhancement ,others,missed store sinking opportunity
+23828,2005-09-12,2005-09-25,P2 minor ,others,local calling convention not used when using --combine
+44658,2010-06-24,2010-07-17,P3 normal ,others,ARM/NEON VSHLL instruction/intrinsic must allow shifts by 0
+22056,2005-06-13,2005-06-16,P2 normal ,others,gcc.dg/
+47175,2011-01-05,2011-01-05,P3 normal ,others,"no predefined macros __amd64, __amd64__, __x86_64 __x86_64__ in prepocessor"
+42111,2009-11-19,2021-08-12,P3 normal ,others,Failure in gcc.dg/cleanup-13.c on older x86 boxes
+25731,2006-01-10,2006-01-23,P3 normal ,wrong_output,Complex values passed in wrong registers
+37768,2008-10-08,2008-10-09,P3 normal ,others,bogus warnings on x86_64-mingw32 due to attribute((format(printf))) breakage
+36181,2008-05-08,2018-06-29,P3 normal ,crash,Simple for loop generates ICE with -ftree-parallelize-loops=2
+40238,2009-05-24,2009-05-25,P3 normal ,crash,"[4.5 Regression] ICE in gimple_verify_flow_info, at tree-cfg.c:4603"
+20227,2005-02-27,2006-05-30,P3 minor ,others,[m68k] long double -> double cast fails with -0.0
+23802,2005-09-09,2005-09-29,P2 normal ,others,[mingw32] sleep malfunction
+47861,2011-02-23,2011-02-24,P3 trivial ,others,static variables inside member functions
+42980,2010-02-05,2024-10-14,P3 normal ,others,"GCC parallel ""make install"" failures"
+25689,2006-01-06,2022-07-22,P3 enhancement ,diagnostic,missed diagnostic about assignment used as truth value.
+31639,2007-04-20,2007-07-23,P3 normal ,crash,"[4.1/4.2/4.3] ICE in gfc_conv_constant, at fortran/trans-const.c:348 with len"
+34402,2007-12-09,2009-12-10,P3 normal ,accepts_invalid,Diagnose illegal initialization of derived type containing allocatable component
+60082,2014-02-05,2015-02-24,P3 major ,others,Certain Cilk keywords executable Hanging for -O1
+19178,2004-12-28,2005-07-23,P2 normal ,others,internal compiler error: verify_stmts
+22877,2005-02-15,2005-07-23,P3 normal ,others,NullPointerException in Parser.classClosed with -encoding UTF-8
+45087,2010-07-26,2010-07-29,P3 normal ,rejects_valid,-fwhole-program: Miscompiled due to wrong decls
+19352,2005-01-09,2005-12-30,P2 enhancement ,others,Recursive IO functions are not allowed (F2003)
+23186,2005-08-01,2005-09-20,P2 normal ,others,g++.dg/other/
+28885,2006-08-29,2006-10-31,P3 normal ,others,ICE passing components of array of derived type
+29087,2006-09-14,2006-09-21,P3 normal ,crash,[4.1 Regression] More than 35000 switch cases crash cc1plus
+20445,2005-03-12,2005-07-23,P2 critical ,others,garbage returned when trying to get the second word of a double value
+19172,2004-12-28,2005-07-23,P2 normal ,others,strcpy bug? or mine?
+32992,2007-08-05,2007-08-20,P3 normal ,wrong_output,[4.1/4.2/4.3 Regression] Incorrect code generated for anonymous union and return
+30831,2007-02-17,2007-02-20,P3 normal ,others,Writing (transforming) XML fails
+38205,2008-11-20,2009-03-23,P3 normal ,others,Tranformational function SUM rejected in initialization expressions
+44699,2010-06-28,2011-01-25,P3 blocker ,others,[4.6 Regression] Bootstrap failure for x86_64-apple-darwin10: ICE while compiling genmodes.c
+18746,2004-12-01,2004-12-01,P2 normal ,crash,[4.0 Regression] segfault with cc1 compiled with checking disabled
+35655,2008-03-21,2009-04-09,P3 normal ,others,[m68hc11] Segmentation fault when compiling libgcc2.c
+33471,2007-09-18,2007-09-18,P3 normal ,others,"[4.3 regression] internal compiler error: in extract_insn, at recog.c:1990"
+51547,2011-12-14,2011-12-28,P3 normal ,rejects_valid,"auto, type deduction, reference collapsing and const: invalid initialization of reference of type 'const X&&' from expression of type 'const X'"
+46790,2010-12-03,2011-02-28,P1 major ,wrong_output,[4.6 regression] EH failures in libstdc++ testsuite with --gc-sections and GNU ld 2.18
+52970,2012-04-13,2015-10-20,P3 normal ,others,OpenMP Scoping Incorrect for Arrays of Parameters
+28064,2006-06-16,2008-10-15,P3 normal ,others,.debug_str is used only when optimizing
+24921,2005-11-17,2005-11-17,P3 normal ,others,iostat on read
+30361,2007-01-03,2021-09-17,P3 normal ,others,"Documentation: Example usage of __attribute__((visibility(""hidden""))) misleading"
+35027,2008-01-30,2008-02-23,P3 normal ,diagnostic,"""too short to be a PCH file"" warning should be conditional on -Winvalid-PCH"
+42205,2009-11-28,2009-12-23,P1 normal ,crash,[4.5 Regression] [graphite] internal compiler error: verify_ssa failed with -ffast-math -floop-interchange
+41677,2009-10-11,2009-10-11,P3 normal ,others,[4.5 regression] Revision 152642 caused gcc.target/i386/
+49724,2011-07-13,2011-07-16,P3 normal ,others,[4.6/4.7 Regression] FAIL: gnat.dg/socket1.adb execution test
+62174,2014-08-18,2014-09-03,P3 normal ,rejects_valid,Component declarations overwrite types of Cray Pointee variables
+37556,2008-09-17,2008-09-30,P3 minor ,crash,[4.4 regression] ICE with invalid typedef
+28060,2006-06-16,2007-03-30,P3 normal ,others,segfault in cairoDrawGlyphVector
+27047,2006-04-05,2006-04-05,P3 normal ,others,gfortran print flush in dll
+22307,2005-07-05,2007-09-21,P2 normal ,others,Missing tests for actual library functions
+26841,2006-03-24,2006-03-24,P3 normal ,others,extern inline fails to create external definition in C99 mode
+31852,2007-05-07,2018-07-04,P3 enhancement ,others,Missing __builtin_memchr
+43519,2010-03-25,2010-04-06,P3 normal ,others,[graphite] Bootstrap with Graphite enabled fails in Java libs
+18551,2004-11-18,2005-03-20,P2 normal ,wrong_output,wrong asm output for -mcall-prologues with g++
+18506,2004-11-15,2007-12-20,P2 enhancement ,others,Altivec definitions of vec_init
+20771,2005-04-05,2012-07-09,P2 normal ,others,Duplicate PCH test names
+23514,2005-08-22,2005-08-23,P2 normal ,others,fixed point error cause Ada exception block does NOT work
+22793,2004-10-30,2005-07-23,P3 normal ,others,incorrect parameter type in constructor java.awt.image.IndexColorModel
+19876,2005-02-10,2005-02-11,P2 normal ,efficient/hang,[4.0 Regression] g++ starts eating all the memory and the CPU
+20268,2005-03-01,2005-03-31,P3 normal ,others,"With optimization, generating incomplete debug information"
+20671,2005-03-28,2021-07-21,P2 enhancement ,others,Poor bit-field code generation
+23931,2005-09-17,2006-03-28,P2 normal ,others,ToolKit.createImage() throws unexpected IllegalArgumentException
+23942,2005-09-18,2005-09-26,P2 normal ,efficient/hang,[4.1 Regression] loop problem / testcase takes very long time to compile
+19879,2005-02-10,2015-12-05,P2 enhancement ,others,Ada shared libraries should go in libdir
+21969,2005-06-08,2005-06-29,P2 normal ,crash,ICE on float __attribute__((vector_size(2048)))
+20346,2005-03-06,2005-07-23,P2 normal ,others,"valid code fails: include of #define inside extern ""C"""
+23215,2005-08-03,2012-01-11,P2 minor ,others,libobjc doesn't work on windows.
+28460,2006-07-22,2008-07-04,P2 normal ,wrong_output,[4.1 Regression] g++ emits bogus namespace DIE
+40858,2009-07-25,2010-10-16,P3 normal ,others,FAIL: g++.dg/debug/dwarf2/typedef1.C
+42126,2009-11-20,2009-11-21,P3 normal ,others,gcc optimizes line away/optimizes to an endless loop
+48656,2011-04-17,2011-04-28,P3 normal ,rejects_valid,[4.6 regression] [C++0x] cannot call member function without object
+20716,2005-04-01,2005-07-23,P2 normal ,others,"Error gfortran and in ""gfortran.fortran-torture/execute/backspace.f90"""
+19240,2005-01-03,2005-01-04,P2 normal ,others,"[4.0 Regression] runtime performance regression in floating point heavy code, x86/SSE"
+19066,2004-12-18,2005-07-23,P2 enhancement ,others,the URL and URLConnection class should be enhanced
+32990,2007-08-04,2007-08-14,P3 normal ,others,[Regression] gdb has symbol table issues
+64088,2014-11-26,2014-11-27,P3 normal ,others,"[5 Regression] ICE: in fold_abs_const, at fold-const.c:15550"
+32673,2007-07-08,2007-07-10,P3 normal ,accepts_invalid,Wrongly allowed: Statement function with subobject of constant
+56864,2013-04-07,2013-10-25,P1 normal ,others,"[4.9 regression] FAIL: gcc.dg/vect/costmodel/ppc/costmodel-vect-76b.c scan-tree-dump-times vect ""vectorized 1 loops"" 0"
+53012,2012-04-16,2017-01-21,P3 normal ,rejects_valid,unrelated friend operators in same namespace interfere with operator resolution outside of namespace
+21332,2005-05-02,2005-06-02,P1 critical ,wrong_output,[4.1 Regression] -ftree-vrp  makes a loop doesn't execute a body
+26134,2006-02-06,2011-03-16,P3 normal ,others,fold *(float*)(&complex_float_var) into REALPART_EXPR<complex_float_var>
+26893,2006-03-27,2007-01-20,P3 normal ,others,"[4.1 only] kinds.h not generated, causing failure"
+28195,2006-06-28,2006-06-29,P3 normal ,others,<< (shift operator) does rotate operation
+22396,2005-07-10,2006-01-07,P2 normal ,others,bootstrap of f95 enabled gcc fails because gfortran.1 is missing
+25661,2006-01-04,2006-01-28,P3 normal ,others,Wrong long double to float conversion
+22017,2005-06-11,2006-02-16,P2 critical ,wrong_output,[3.4/4.0/4.1/4.2 Regression] Error to pass struct parameter when compile with -mrtd
+41607,2009-10-06,2009-10-06,P3 normal ,others,Cannot build LTO without stdint.h
+41192,2009-08-30,2009-09-13,P3 normal ,others,"NAMELIST input with just a comment (""&NAME ! comment \"") fails"
+23421,2005-08-16,2005-08-16,P2 normal ,others,unsigned long to float conversion by casting unsigned long* to float* fails in -O2 builds.
+35832,2008-04-05,2008-04-06,P3 normal ,diagnostic,Better error message for wrong arguments to I/O statements
+38257,2008-11-24,2008-12-01,P3 normal ,crash,[4.4 regression] ICE with auto and #pragma omp parallel
+28023,2006-06-14,2008-01-12,P3 normal ,others,documentation error max-inline-recursive-depth
+19748,2005-02-02,2005-07-23,P2 normal ,others,aggressive no-inline options still cause inlining
+42694,2010-01-11,2024-08-04,P3 enhancement ,others,"Compiler could optimize pow (x, 0.75) into sqrt (x) * sqrt (sqrt (x))"
+22566,2005-07-20,2005-07-23,P2 normal ,others,Incorrect overload resolution on mutable field.
+21367,2005-05-03,2005-06-02,P2 enhancement ,others,"VRP does not fold ""if (a == b)"" in a certain situation"
+22310,2005-07-05,2005-07-06,P2 normal ,crash,[4.1 Regression] ICE in in first_vi_for_offset
+28978,2006-09-07,2006-09-07,P3 normal ,others,Problem compiling gcc 4.1.1
+19729,2005-01-31,2005-05-18,P2 normal ,others,libgcj DSASignature.java null pointer exception
+22673,2003-03-26,2005-07-23,P3 normal ,others,Incorrect synchronization in java.util.logging.ErrorManager
+22763,2004-08-02,2005-07-23,P3 normal ,others,FAQ does not mention that integrating Classpath in Sun's JVM is very hard.
+27994,2006-06-12,2006-06-12,P3 normal ,others,Applet doesn't fit in browser window
+40313,2009-05-30,2009-05-31,P4 normal ,crash,"SH: ICE in dwarf2out_begin_epilogue, at dwarf2out.c:2689"
+40682,2009-07-08,2009-10-07,P3 enhancement ,others,[C++0x] Require direct binding of short-lived references to rvalues
+22924,2005-04-24,2005-07-23,P3 normal ,others,Protege fails on loading due to missing metal l 'n' f classes.
+64923,2015-02-03,2015-02-03,P3 normal ,others,[s390] Generated code uses struct padding instead of just the bitfield
+21803,2005-05-28,2010-05-28,P2 enhancement ,others,[ia64] gcc produces really odd predicated code
+18852,2004-12-05,2005-07-23,P2 critical ,crash,[3.4 Regression] 8 tests fail: SIGSEGV for stack growth failure
+19902,2005-02-11,2005-02-23,P2 normal ,others,"ACATS cxa3004 cxb3006 fail at compile time ""ambiguous expression"""
+20208,2005-02-25,2005-03-09,P2 normal ,crash,[4.0/4.1 Regression] No array-to-pointer decay happens for template functions
+18608,2004-11-22,2007-09-04,P2 enhancement ,others,Configuration documentation mentions wrong flag
+19767,2005-02-02,2006-02-28,P2 normal ,efficient/hang,[3.4 only] CSE hang on very simple code with -O2 -ftracer
+41743,2009-10-18,2012-08-16,P3 normal ,others,Missing loop optimisation
+50590,2011-10-02,2011-10-02,P3 normal ,others,Initializing a variable to itself yields garbage/UB and no warning.
+44673,2010-06-25,2012-03-02,P3 enhancement ,others,"static const variable works in if/else, fails at linking in ternary"
+50561,2011-09-28,2012-02-15,P1 normal ,others,[4.7 regression] ICE when compiling zlib with -O2 -floop-flatten -floop-strip-mine

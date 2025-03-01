@@ -1,0 +1,16 @@
+if (nsdmi == error_mark_node)
+    		    *spec_p = error_mark_node;
+    		  else if (*spec_p != error_mark_node
+    			   && !expr_noexcept_p (nsdmi, complain))
+
+      bool pushed = false;
+      if (CLASSTYPE_TEMPLATE_INSTANTIATION (ctype))
+        pushed = push_tinst_level (decl);
+
+      if (pushed)
+        pop_tinst_level ();
+
+      if (list == error_mark_node || add == error_mark_node)
+        return error_mark_node;
+    
+

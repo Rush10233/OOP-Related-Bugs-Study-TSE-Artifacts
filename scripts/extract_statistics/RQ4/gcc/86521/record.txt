@@ -1,0 +1,13 @@
+Commit:	2b6565d
+Commit:	29aef9f
+./gcc/cp/call.cc	12563,12564
+./gcc/cp/call.cc	12567,12567
+./gcc/cp/call.cc	12583,12586
+./gcc/cp/call.cc	12738,12758
+./gcc/cp/call.cc	12920,12924
+./gcc/testsuite/g++.dg/cpp0x/overload-conv-4.C	20,22
+Commit:	6d5d5cb
+Commit:	edaff7c
+./gcc/testsuite/g++.dg/cpp0x/overload-conv-3.C	20,20
+Commit:	c93117e
+./gcc/testsuite/g++.dg/cpp0x/overload-conv-3.C	20,20

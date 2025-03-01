@@ -1,0 +1,13 @@
+WantObjCSuper(false),
+            IsObjCIvarLookup(false) {}
+
+        return AllowNonTypes;
+
+      for (TypoCorrection::const_decl_iterator CDecl = candidate.begin(),
+                                               CDeclEnd = candidate.end();
+           CDecl != CDeclEnd; ++CDecl) {
+        if (!isa<TypeDecl>(*CDecl))
+          return true;
+
+      return WantTypeSpecifiers;
+

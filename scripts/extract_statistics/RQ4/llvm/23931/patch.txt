@@ -1,0 +1,9 @@
+def err_virtual_in_union : Error<
+      "unions cannot have virtual functions">;
+
+    
+          // C++ [class.union]p2
+          //   A union can have member functions, but not virtual functions.
+          if (isVirtual && Parent->isUnion())
+            Diag(D.getDeclSpec().getVirtualSpecLoc(), diag::err_virtual_in_union);
+

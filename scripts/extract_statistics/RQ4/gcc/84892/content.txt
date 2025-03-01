@@ -1,0 +1,8 @@
+that the "this" parameter is const.  */
+      if (const_p)
+        {
+
+    	return false;
+        }
+    
+

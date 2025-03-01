@@ -1,0 +1,77 @@
+tmpl = most_general_template (tmpl);
+      }
+    
+
+      /* If we're not diagnosing errors, use cached constraints, if any.  */
+      if (!diag)
+
+          return *p;
+    
+      tree norm = NULL_TREE;
+
+        {
+          push_access_scope_guard pas (decl);
+          norm = get_normalized_constraints_from_info (ci, tmpl, diag);
+        }
+    
+      if (!diag)
+
+    
+      return norm;
+    }
+
+    		    if (declspecs->gnu_thread_keyword_p)
+    		      SET_DECL_GNU_TLS_P (decl);
+    		  }
+
+    	      }
+    	    else
+    	      {
+
+          targs = coerce_template_parms (parms, explicit_targs, fns,
+    				     tf_warning_or_error,
+    				     /*req_all*/true, /*use_defarg*/true);
+
+            templates = tree_cons (targs, fns, templates);
+        }
+      else for (lkp_iterator iter (fns); iter; ++iter)
+
+tmpl = most_general_template (tmpl);
+      }
+    
+
+      /* If we're not diagnosing errors, use cached constraints, if any.  */
+      if (!diag)
+
+          return *p;
+    
+      tree norm = NULL_TREE;
+
+        {
+          push_nested_class_guard pncs (DECL_CONTEXT (d));
+    
+
+        }
+    
+      if (!diag)
+
+    
+      return norm;
+    }
+
+    		    if (declspecs->gnu_thread_keyword_p)
+    		      SET_DECL_GNU_TLS_P (decl);
+    		  }
+
+    	      }
+    	    else
+    	      {
+
+          targs = coerce_template_parms (parms, explicit_targs, fns,
+    				     tf_warning_or_error,
+    				     /*req_all*/true, /*use_defarg*/true);
+
+            templates = tree_cons (targs, fns, templates);
+        }
+      else for (lkp_iterator iter (fns); iter; ++iter)
+

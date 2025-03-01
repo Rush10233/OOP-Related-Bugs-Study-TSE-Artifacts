@@ -1,0 +1,14 @@
+Commit:	9a5338e
+./gcc/cp/class.c	3244,3244
+./gcc/cp/decl2.c	5653,5653
+./gcc/cp/method.c	1482,1482
+./gcc/cp/method.c	2720,2722
+./gcc/cp/method.c	2797,2800
+./gcc/cp/method.c	2802,2802
+Commit:	9a5338e
+./gcc/cp/class.c	3244,3244
+./gcc/cp/decl2.c	5653,5653
+./gcc/cp/method.c	1482,1482
+./gcc/cp/method.c	2720,2722
+./gcc/cp/method.c	2797,2800
+./gcc/cp/method.c	2802,2802

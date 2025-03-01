@@ -1,0 +1,6 @@
+if (!TARGET_EXPR_DIRECT_INIT_P (t)
+    	  && !literal_type_p (TREE_TYPE (t)))
+
+if (!TARGET_EXPR_DIRECT_INIT_P (t)
+    	  && !literal_type_p (TREE_TYPE (t)))
+

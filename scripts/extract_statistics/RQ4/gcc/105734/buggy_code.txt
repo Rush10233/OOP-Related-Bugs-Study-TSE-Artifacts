@@ -1,0 +1,4 @@
+if (type == NULL_TREE)
+
+if (type == NULL_TREE)
+

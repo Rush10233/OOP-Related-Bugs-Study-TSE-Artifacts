@@ -1,0 +1,16 @@
+}
+    	}
+    
+
+          /* If this is a bitfield, now convert to the lowered type.  */
+          if (type != TREE_TYPE (field))
+    	next = cp_convert_and_check (TREE_TYPE (field), next, complain);
+
+}
+    	}
+    
+
+          /* If this is a bitfield, now convert to the lowered type.  */
+          if (type != TREE_TYPE (field))
+    	next = cp_convert_and_check (TREE_TYPE (field), next, complain);
+

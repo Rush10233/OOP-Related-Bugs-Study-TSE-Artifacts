@@ -1,0 +1,16 @@
+bool PartialOverloading = false);
+
+                              /*PartialOverloading=*/true);
+
+                                     bool PartialOverloading) {
+
+            if (Expr *E = Args[0]) {
+              // Use the explit base to restrict the lookup:
+              ObjectType = E->getType();
+              ObjectClassification = E->Classify(Context);
+            } // .. else there is an implit base.
+
+                               ObjectClassification, Args.slice(1), CandidateSet,
+
+            AddOverloadCandidate(FD, F.getPair(), Args, CandidateSet,
+

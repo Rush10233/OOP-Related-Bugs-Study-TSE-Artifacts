@@ -1,0 +1,7 @@
+&& CP_DECL_CONTEXT (fndecl) == abi_node);
+
+    	      /* As with __cxa_atexit in get_atexit_node.  */
+    	      DECL_CONTEXT (dcast_fn) = FROB_CONTEXT (current_namespace);
+    	      DECL_SOURCE_LOCATION (dcast_fn) = BUILTINS_LOCATION;
+    	      dcast_fn = pushdecl (dcast_fn, /*hiding=*/true);
+

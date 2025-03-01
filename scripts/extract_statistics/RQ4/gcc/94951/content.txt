@@ -1,0 +1,96 @@
+return rval;
+    }
+    
+
+    /* The implementation of the above, and of indirection implied by other
+       constructs.  If DO_FOLD is true, fold away INDIRECT_REF of ADDR_EXPR.  */
+    
+
+    	  /* If a warning is issued, mark it to avoid duplicates from
+    	     the backend.  This only needs to be done at
+    	     warn_strict_aliasing > 2.  */
+
+    	}
+    
+          if (VOID_TYPE_P (t))
+
+          expr = cp_build_addr_expr (expr, complain);
+    
+          if (warn_strict_aliasing > 2)
+
+    
+          if (expr != error_mark_node)
+    	expr = build_reinterpret_cast_1
+
+    
+          if (warn_strict_aliasing <= 2)
+    	/* strict_aliasing_warning STRIP_NOPs its expr.  */
+
+    
+          return build_nop_reinterpret (type, expr);
+        }
+
+return rval;
+    }
+    
+
+    /* The implementation of the above, and of indirection implied by other
+       constructs.  If DO_FOLD is true, fold away INDIRECT_REF of ADDR_EXPR.  */
+    
+
+    	  /* If a warning is issued, mark it to avoid duplicates from
+    	     the backend.  This only needs to be done at
+    	     warn_strict_aliasing > 2.  */
+
+    	}
+    
+          if (VOID_TYPE_P (t))
+
+          expr = cp_build_addr_expr (expr, complain);
+    
+          if (warn_strict_aliasing > 2)
+
+    
+          if (expr != error_mark_node)
+    	expr = build_reinterpret_cast_1
+
+    
+          if (warn_strict_aliasing <= 2)
+    	/* strict_aliasing_warning STRIP_NOPs its expr.  */
+
+    
+          return build_nop_reinterpret (type, expr);
+        }
+
+return rval;
+    }
+    
+
+    /* The implementation of the above, and of indirection implied by other
+       constructs.  If DO_FOLD is true, fold away INDIRECT_REF of ADDR_EXPR.  */
+    
+
+    	  /* If a warning is issued, mark it to avoid duplicates from
+    	     the backend.  This only needs to be done at
+    	     warn_strict_aliasing > 2.  */
+
+    	}
+    
+          if (VOID_TYPE_P (t))
+
+          expr = cp_build_addr_expr (expr, complain);
+    
+          if (warn_strict_aliasing > 2)
+
+    
+          if (expr != error_mark_node)
+    	expr = build_reinterpret_cast_1
+
+    
+          if (warn_strict_aliasing <= 2)
+    	/* strict_aliasing_warning STRIP_NOPs its expr.  */
+
+    
+          return build_nop_reinterpret (type, expr);
+        }
+

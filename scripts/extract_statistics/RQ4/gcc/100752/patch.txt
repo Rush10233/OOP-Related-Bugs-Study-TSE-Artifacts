@@ -1,0 +1,8 @@
+declarator = cp_parser_declarator (parser, dcl_kind, flags,
+
+    					 member_p, friend_p, static_p);
+
+declarator = cp_parser_declarator (parser, dcl_kind, flags,
+
+    					 member_p, friend_p, static_p);
+

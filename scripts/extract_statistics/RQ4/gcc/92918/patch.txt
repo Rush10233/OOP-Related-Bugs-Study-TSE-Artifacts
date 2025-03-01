@@ -1,0 +1,133 @@
+tree ass_op = build_lang_decl (USING_DECL, assign_op_identifier,
+    				     NULL_TREE);
+          DECL_CONTEXT (ass_op) = t;
+          USING_DECL_SCOPE (ass_op) = t;
+          DECL_DEPENDENT_P (ass_op) = true;
+          DECL_ARTIFICIAL (ass_op) = true;
+          DECL_CHAIN (ass_op) = TYPE_FIELDS (t);
+          TYPE_FIELDS (t) = ass_op;
+
+old_decl = bval;
+
+old_decl = bval;
+
+{
+    	  if (fn == method)
+    	    /* Don't add the same one twice.  */
+    	    return false;
+    	  continue;
+    	}
+
+          else if (iter.using_p ()
+    	       ||  (flag_new_inheriting_ctors
+    		    && DECL_INHERITED_CTOR (fn)))
+
+    	  /* Remove the inherited function.  */
+
+    /* If DECL is a non-dependent using of non-ctor function members, push them
+       and return true, otherwise return false.  Called from
+       finish_member_declaration.  */
+    
+    bool
+    maybe_push_used_methods (tree decl)
+    {
+      if (TREE_CODE (decl) != USING_DECL)
+        return false;
+      tree used = strip_using_decl (decl);
+      if (!used || !is_overloaded_fn (used))
+        return false;
+    
+      /* Add the functions to CLASSTYPE_MEMBER_VEC so that overload resolution
+         works within the class body.  */
+      for (tree f : ovl_range (used))
+        {
+          if (DECL_CONSTRUCTOR_P (f))
+    	/* Inheriting constructors are handled separately.  */
+    	return false;
+    
+          bool added = add_method (current_class_type, f, true);
+    
+          if (added)
+    	alter_access (current_class_type, f, current_access_specifier);
+    
+          /* If add_method returns false because f was already declared, look
+    	 for a duplicate using-declaration.  */
+          else
+    	for (tree d = TYPE_FIELDS (current_class_type); d; d = DECL_CHAIN (d))
+    	  if (TREE_CODE (d) == USING_DECL
+    	      && DECL_NAME (d) == DECL_NAME (decl)
+    	      && same_type_p (USING_DECL_SCOPE (d), USING_DECL_SCOPE (decl)))
+    	    {
+    	      diagnose_name_conflict (decl, d);
+    	      break;
+    	    }
+        }
+      return true;
+    }
+    
+
+      cp_emit_debug_info_for_using (decl, t);
+    
+      if (is_overloaded_fn (decl))
+        /* Handled in maybe_push_used_methods.  */
+        return;
+    
+      tree name = DECL_NAME (using_decl);
+      tree old_value = lookup_member (t, name, /*protect=*/0, /*want_type=*/false,
+    				  tf_warning_or_error);
+
+          error_at (DECL_SOURCE_LOCATION (using_decl), "%qD invalid in %q#T "
+    		"because of local method %q#D with same name",
+    		using_decl, t, old_value);
+          inform (DECL_SOURCE_LOCATION (old_value),
+    	      "local method %q#D declared here", old_value);
+          return;
+
+      tree access = declared_access (using_decl);
+
+      if (USING_DECL_UNRELATED_P (using_decl))
+
+          auto cas = make_temp_override (current_access_specifier, access);
+
+    	if (DECL_DECLARES_FUNCTION_P (x))
+
+          if (!get_class_binding_direct (t, assign_op_identifier, false))
+    	{
+    	  tree ass_op = build_lang_decl (USING_DECL, assign_op_identifier,
+    					 NULL_TREE);
+    	  DECL_CONTEXT (ass_op) = t;
+    	  USING_DECL_SCOPE (ass_op) = t;
+    	  DECL_DEPENDENT_P (ass_op) = true;
+    	  DECL_ARTIFICIAL (ass_op) = true;
+    	  DECL_CHAIN (ass_op) = TYPE_FIELDS (t);
+    	  TYPE_FIELDS (t) = ass_op;
+    	}
+
+    extern bool maybe_push_used_methods		(tree);
+
+    extern void diagnose_name_conflict		(tree, tree);
+
+    /* Diagnose a name conflict between DECL and BVAL.
+
+       This is non-static so maybe_push_used_methods can use it and avoid changing
+       the diagnostic for inherit/using4.C; otherwise it should not be used from
+       outside this file.  */
+    
+    void
+
+    	       && DECL_DEPENDENT_P (decl)
+
+    	/* The new dependent using beats an old overload.  */
+
+    	       && DECL_DEPENDENT_P (bval)
+
+    	/* The old dependent using beats a new overload.  */
+    	return true;
+
+    	/* The new overload set contains the old one.  */
+
+        /* Avoid debug info for class-scope USING_DECLS for now, we'll
+           call cp_emit_debug_info_for_using later. */
+
+    	   || maybe_push_used_methods (decl)
+

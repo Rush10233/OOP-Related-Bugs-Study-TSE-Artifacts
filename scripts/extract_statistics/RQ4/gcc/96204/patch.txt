@@ -1,0 +1,24 @@
+instantiate.  */
+
+          tree tid = lookup_template_variable (tmpl, targ_ptr);
+
+      tree decl;
+
+          decl = TYPE_NAME (target);
+
+          decl = DECL_TEMPLATE_RESULT (tmpl);
+
+          decl = target;
+
+      push_access_scope_guard pas (decl);
+      deferring_access_check_sentinel acs (dk_no_deferred);
+    
+
+          tree elt = most_specialized_partial_spec (d, tf_warning_or_error);
+
+instantiate; do this relative to the scope of the class for
+         sake of access checking.  */
+      push_nested_class (type);
+
+      pop_nested_class ();
+

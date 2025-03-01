@@ -1,0 +1,6 @@
+Commit:	e7a9f08
+./gcc/cp/name-lookup.c	9119,9119
+./gcc/cp/name-lookup.c	9127,9133
+./gcc/cp/typeck.c	7277,7277
+./gcc/cp/typeck.c	8941,8941
+./gcc/cp/typeck.c	8951,8953

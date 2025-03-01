@@ -1,0 +1,12 @@
+tree save_ccp = current_class_ptr;
+          tree save_ccr = current_class_ref;
+
+          current_class_ptr = save_ccp;
+          current_class_ref = save_ccr;
+
+tree save_ccp = current_class_ptr;
+          tree save_ccr = current_class_ref;
+
+          current_class_ptr = save_ccp;
+          current_class_ref = save_ccr;
+

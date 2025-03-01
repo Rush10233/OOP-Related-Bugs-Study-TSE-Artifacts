@@ -1,0 +1,52 @@
+
+      void setLexicalDeclContext(DeclContext *DC);
+    
+
+      /// isDefinedOutsideFunctionOrMethod - This predicate returns true if this
+      /// scoped decl is defined outside the current function or method.  This is
+      /// roughly global variables and functions, but also handles enums (which
+
+        return RD->getDescribedClassTemplate();
+      else if (auto *VD = dyn_cast<VarDecl>(this))
+        return VD->getDescribedVarTemplate();
+
+    
+      return nullptr;
+    }
+    
+
+    const DeclContext *Decl::getParentFunctionOrMethod() const {
+      for (const DeclContext *DC = getDeclContext();
+           DC && !DC->isTranslationUnit() && !DC->isNamespace(); 
+
+    /// EmitTopLevelDecl - Emit code for a single top level declaration.
+    void CodeGenModule::EmitTopLevelDecl(Decl *D) {
+      // Ignore dependent declarations.
+
+        return;
+    
+      switch (D->getKind()) {
+      case Decl::CXXConversion:
+      case Decl::CXXMethod:
+      case Decl::Function:
+        EmitGlobal(cast<FunctionDecl>(D));
+        // Always provide some coverage mapping
+        // even for the functions that aren't emitted.
+
+    
+      case Decl::Var:
+      case Decl::Decomposition:
+      case Decl::VarTemplateSpecialization:
+        EmitGlobal(cast<VarDecl>(D));
+        if (auto *DD = dyn_cast<DecompositionDecl>(D))
+
+          DI->EmitUsingDirective(cast<UsingDirectiveDecl>(*D));
+        return;
+      case Decl::CXXConstructor:
+        getCXXABI().EmitCXXConstructors(cast<CXXConstructorDecl>(D));
+        break;
+      case Decl::CXXDestructor:
+        getCXXABI().EmitCXXDestructors(cast<CXXDestructorDecl>(D));
+        break;
+    
+

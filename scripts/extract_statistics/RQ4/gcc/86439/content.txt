@@ -1,0 +1,90 @@
+functions.  */
+    
+    static void
+
+    			      struct z_candidate *candidates)
+    {
+      tree targs = NULL_TREE;
+
+        print_z_candidates (loc, candidates);
+    }
+    
+
+    /* Return an expression for a call to FN (a namespace-scope function,
+       or a static member function) with the ARGS.  This may change
+       ARGS.  */
+
+    						 tree from_type, tree to_type,
+    						 tree fndecl, int parmnum);
+    extern void maybe_inform_about_fndecl_for_bogus_argument_init (tree, int);
+
+    
+    
+    /* A class for recording information about access failures (e.g. private
+
+        if (tree guide = maybe_aggr_guide (tmpl, init, args))
+          cands = lookup_add (guide, cands);
+    
+
+    
+      /* If this is list-initialization and the class has a list constructor, first
+         try deducing from the list as a single argument, as [over.match.list].  */
+
+          }
+      if (list_cands)
+        {
+
+    
+
+    	{
+    	  /* That didn't work, now try treating the list as a sequence of
+    	     arguments.  */
+
+    	     "user-declared constructors", type);
+          return error_mark_node;
+        }
+
+        {
+          error ("cannot deduce template arguments of %qT, as it has no viable "
+    	     "deduction guides", type);
+          return error_mark_node;
+        }
+    
+
+    
+
+        {
+          if (complain & tf_warning_or_error)
+    	{
+    	  error ("class template argument deduction failed:");
+
+    	  if (elided)
+    	    inform (input_location, "explicit deduction guides not considered "
+    		    "for copy-initialization");
+
+         constructor is chosen, the initialization is ill-formed.  */
+      else if (flags & LOOKUP_ONLYCONVERTING)
+        {
+
+    	{
+    	  if (complain & tf_warning_or_error)
+    	    {
+
+    
+      /* If CTAD succeeded but the type doesn't have any explicit deduction
+         guides, this deduction might not be what the user intended.  */
+
+        {
+
+    	  && warning (OPT_Wctad_maybe_unsupported,
+    		      "%qT may not intend to support class template argument "
+    		      "deduction", type))
+    	inform (input_location, "add a deduction guide to suppress this "
+    		"warning");
+        }
+    
+
+    }
+    
+    /* Replace occurrences of 'auto' in TYPE with the appropriate type deduced
+

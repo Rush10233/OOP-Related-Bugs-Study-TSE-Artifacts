@@ -1,0 +1,8 @@
+// morally virtual bases.
+        for (const auto &I : Base->vbases())
+          VBasesSeen.insert(I.getType()->getAsCXXRecordDecl());
+
+      }
+    
+      // Sort the paths into buckets, and if any of them are ambiguous, extend all
+

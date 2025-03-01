@@ -1,0 +1,11 @@
+if (processing_template_decl)
+        {
+          orig_args = args == NULL ? NULL : make_tree_vector_copy (*args);
+          instance = build_non_dependent_expr (instance);
+          if (args != NULL)
+    	make_args_non_dependent (*args);
+        }
+    
+
+          user_args = *args;
+

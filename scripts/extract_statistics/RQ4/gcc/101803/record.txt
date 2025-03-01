@@ -1,0 +1,8 @@
+Commit:	52dd840
+./gcc/cp/decl.c	6608,6608
+./gcc/cp/decl.c	6762,6762
+./gcc/cp/decl.c	6764,6764
+./gcc/cp/decl.c	6766,6766
+./gcc/cp/pt.c	28830,28835
+Commit:	0c0907f
+./gcc/cp/cp-tree.h	4506,4507

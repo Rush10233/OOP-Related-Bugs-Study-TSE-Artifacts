@@ -1,0 +1,101 @@
+
+    
+    namespace clang {
+    namespace threadSafety {
+
+    
+
+    
+
+    
+
+    
+    
+
+      friend class BeforeSet;
+
+    
+    
+
+    
+    bool getStaticBooleanValue(Expr* E, bool& TCond) {
+
+    
+
+    inline bool neverReturns(const CFGBlock* B) {
+
+    void runThreadSafetyAnalysis(AnalysisDeclContext &AC,
+                                 ThreadSafetyHandler &Handler,
+                                 BeforeSet **BSet) {
+
+    
+    void threadSafetyCleanup(BeforeSet* Cache) {
+      delete Cache;
+    }
+    
+
+    LockKind getLockKindFromAccessKind(AccessKind AK) {
+
+    
+    }} // end namespace clang::threadSafety
+
+    
+    
+    namespace clang {
+    namespace threadSafety {
+
+    std::string getSourceLiteralString(const clang::Expr *CE) {
+
+    namespace til {
+    
+
+    static bool isIncompletePhi(const SExpr *E) {
+      if (const auto *Ph = dyn_cast<Phi>(E))
+        return Ph->status() == Phi::PH_Incomplete;
+
+    }  // end namespace til
+    
+    
+
+    
+    
+    inline bool isCalleeArrow(const Expr *E) {
+
+    
+    const ValueDecl *getValueDeclFromSExpr(const til::SExpr *E) {
+
+    bool hasCppPointerType(const til::SExpr *E) {
+
+    
+
+    const CXXMethodDecl* getFirstVirtualDecl(const CXXMethodDecl *D) {
+
+    inline void maybeUpdateVD(til::SExpr *E, const ValueDecl *VD) {
+
+    
+    
+    } // end namespace threadSafety
+    
+    } // end namespace clang
+
+    namespace clang {
+    namespace threadSafety {
+    namespace til {
+    
+    
+    StringRef getUnaryOpcodeString(TIL_UnaryOpcode Op) {
+
+    
+    StringRef getBinaryOpcodeString(TIL_BinaryOpcode Op) {
+
+    const SExpr *getCanonicalVal(const SExpr *E) {
+
+    SExpr *simplifyToCanonicalVal(SExpr *E) {
+
+    void simplifyIncompleteArg(til::Phi *Ph) {
+
+    
+    }  // end namespace til
+    }  // end namespace threadSafety
+    }  // end namespace clang
+

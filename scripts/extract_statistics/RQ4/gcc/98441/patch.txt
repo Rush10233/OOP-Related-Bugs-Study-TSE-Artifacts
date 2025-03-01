@@ -1,0 +1,7 @@
+if (!late_return_type)
+
+    		    if (!funcdecl_p)
+    		      /* auto (*fp)() = f; is OK.  */;
+    		    else if (current_class_type
+    			     && LAMBDA_TYPE_P (current_class_type))
+

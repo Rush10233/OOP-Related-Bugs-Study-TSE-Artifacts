@@ -1,0 +1,6 @@
+VirtSpecifiers() : Specifiers(0) { }
+
+          // with the virt-specifier-seq and pure-specifier in the same way.
+
+      } else
+

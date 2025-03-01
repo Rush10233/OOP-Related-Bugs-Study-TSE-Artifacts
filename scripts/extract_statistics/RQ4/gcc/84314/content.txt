@@ -1,0 +1,23 @@
+TYPE_CANONICAL.  */;
+          else if (TYPE_STRUCTURAL_EQUALITY_P (ttype)
+    	       || !comp_type_attributes (ntype, ttype))
+
+          else if (TYPE_CANONICAL (ntype) == ntype)
+    	TYPE_CANONICAL (ntype) = TYPE_CANONICAL (ttype);
+    
+
+ttype = (lang_hooks.types.copy_lang_qualifiers
+    		 (ttype, TYPE_MAIN_VARIANT (otype)));
+    
+
+    
+          TYPE_ATTRIBUTES (ntype) = attribute;
+    
+          hashval_t hash = type_hash_canon_hash (ntype);
+          ntype = type_hash_canon (hash, ntype);
+    
+
+          else if (TYPE_CANONICAL (ntype) == ntype)
+    	TYPE_CANONICAL (ntype) = TYPE_CANONICAL (ttype);
+    
+

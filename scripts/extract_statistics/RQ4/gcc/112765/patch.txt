@@ -1,0 +1,6 @@
+suppress_warning (STRIP_REFERENCE_REF (r), OPT_Wparentheses);
+
+      t = STRIP_REFERENCE_REF (t);
+
+          suppress_warning (STRIP_REFERENCE_REF (*expr), OPT_Wparentheses);
+

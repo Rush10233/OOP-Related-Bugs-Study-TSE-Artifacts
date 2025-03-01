@@ -1,0 +1,12 @@
+Commit:	70356f7
+./gcc/cp/decl.c	7449,7450
+./gcc/cp/decl.c	7452,7453
+./gcc/testsuite/g++.dg/cpp1z/decomp10.C	14,14
+./gcc/testsuite/g++.dg/cpp1z/decomp3.C	54,61
+./gcc/testsuite/g++.dg/cpp1z/decomp3.C	64,65
+Commit:	c3fce73
+./gcc/cp/decl.c	7489,7490
+./gcc/cp/decl.c	7492,7493
+./gcc/testsuite/g++.dg/cpp1z/decomp10.C	14,14
+./gcc/testsuite/g++.dg/cpp1z/decomp3.C	54,61
+./gcc/testsuite/g++.dg/cpp1z/decomp3.C	64,65

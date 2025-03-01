@@ -1,0 +1,16 @@
+public InheritingConcreteTypeLoc<ArrayTypeLoc,
+                                         DependentSizedArrayTypeLoc,
+                                         DependentSizedArrayType> {
+
+    };
+    
+    class VariableArrayTypeLoc :
+
+      transformFunctionTypeParam(ParmVarDecl *OldParam,
+                                 MultiLevelTemplateArgumentList &Args) {
+        TypeSourceInfo *OldDI = OldParam->getTypeSourceInfo();
+
+        if (!NewDI)
+          return nullptr;
+    
+

@@ -1,0 +1,20 @@
+// A template constructor is never a copy constructor.
+            // FIXME: However, it may actually be selected at the actual overload
+            // resolution point.
+
+              continue;
+
+            if (Constructor->isCopyConstructor(FoundTQs)) {
+              FoundConstructor = true;
+              const FunctionProtoType *CPT
+
+          bool FoundConstructor = false;
+          for (const auto *ND : Self.LookupConstructors(RD)) {
+            // FIXME: In C++0x, a constructor template can be a default constructor.
+
+              continue;
+
+            if (Constructor->isDefaultConstructor()) {
+              FoundConstructor = true;
+              const FunctionProtoType *CPT
+

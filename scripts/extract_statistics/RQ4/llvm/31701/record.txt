@@ -1,0 +1,7 @@
+Commit:	24a2ebe
+./clang/lib/AST/ASTContext.cpp	9024,9024
+Commit:	39259ff
+./clang/lib/AST/ASTContext.cpp	8386,8386
+./clang/test/CodeGenCXX/dllimport.cpp	584,584
+./clang/test/CodeGenCXX/typeid-cxx11.cpp	21,22
+./clang/test/CodeGenObjC/local-static-block.m	56,56

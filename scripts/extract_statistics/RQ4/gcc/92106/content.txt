@@ -1,0 +1,24 @@
+tree base = DECL_DECOMP_BASE (whats_returned);
+    	  if (TREE_CODE (TREE_TYPE (base)) == REFERENCE_TYPE)
+    	    {
+
+    	    }
+    	}
+          if (TREE_CODE (valtype) == REFERENCE_TYPE)
+
+tree base = DECL_DECOMP_BASE (whats_returned);
+    	  if (TYPE_REF_P (TREE_TYPE (base)))
+    	    {
+
+    	    }
+    	}
+          bool w = false;
+
+tree base = DECL_DECOMP_BASE (whats_returned);
+    	  if (TYPE_REF_P (TREE_TYPE (base)))
+    	    {
+
+    	    }
+    	}
+          bool w = false;
+

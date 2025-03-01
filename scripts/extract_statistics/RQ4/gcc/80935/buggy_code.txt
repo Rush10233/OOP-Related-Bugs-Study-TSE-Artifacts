@@ -1,0 +1,22 @@
+if (!DECL_TEMPLATE_INSTANTIATION (current_function_decl))
+
+    	    if (DECL_CONTEXT (x)
+    		&& !DECL_DECLARED_CONSTEXPR_P (DECL_CONTEXT (x)))
+
+    	  error_at (DECL_SOURCE_LOCATION (decl),
+    		    "uninitialized variable %qD in %<constexpr%> function",
+    		    decl);
+
+if (!DECL_TEMPLATE_INSTANTIATION (current_function_decl))
+
+    	    if (DECL_CONTEXT (x)
+    		&& !DECL_DECLARED_CONSTEXPR_P (DECL_CONTEXT (x)))
+
+    	  error_at (DECL_SOURCE_LOCATION (decl),
+    		    "uninitialized variable %qD in %<constexpr%> function",
+    		    decl);
+
+error_at (DECL_SOURCE_LOCATION (decl),
+    		    "uninitialized variable %qD in %<constexpr%> function",
+    		    decl);
+

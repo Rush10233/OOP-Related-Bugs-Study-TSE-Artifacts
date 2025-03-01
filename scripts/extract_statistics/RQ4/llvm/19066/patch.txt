@@ -1,0 +1,13 @@
+assert(Components.size() && "vftable can't be empty");
+
+    static bool isDirectVBase(const CXXRecordDecl *Base, const CXXRecordDecl *RD) {
+      for (const auto &B : RD->bases()) {
+        if (B.isVirtual() && B.getType()->getAsCXXRecordDecl() == Base)
+          return true;
+      }
+      return false;
+    }
+    
+
+        if (isDirectVBase(NextBase, RD)) {
+

@@ -1,0 +1,16 @@
+return RECUR (DECL_VALUE_EXPR (t), rval);
+    	}
+          if (want_rval
+
+    	  && !type_dependent_expression_p (t)
+    	  && !decl_maybe_constant_var_p (t)
+    	  && (strict
+
+            STRIP_NOPS (x);
+            if (is_this_parameter (x) && !is_capture_proxy (x))
+    	  {
+
+    	      {
+    		if (flags & tf_error)
+    		  constexpr_error (loc, fundef_p, "use of %<this%> in a "
+

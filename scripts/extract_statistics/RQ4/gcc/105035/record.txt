@@ -1,0 +1,4 @@
+Commit:	51b5fa6
+./gcc/fold-const.c	3340,3341
+Commit:	d937c6e
+./gcc/fold-const.cc	3360,3361

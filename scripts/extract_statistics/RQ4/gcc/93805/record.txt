@@ -1,0 +1,3 @@
+Commit:	ca6c722
+./gcc/cp/except.c	1163,1163
+./gcc/cp/method.c	1991,1991

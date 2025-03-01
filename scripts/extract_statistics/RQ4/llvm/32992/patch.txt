@@ -1,0 +1,15 @@
+static void ReferenceDllExportedMembers(Sema &S, CXXRecordDecl *Class) {
+
+        // Defined static variables that are members of an exported base
+        // class must be marked export too.
+        auto *VD = dyn_cast<VarDecl>(Member);
+        if (VD && Member->getAttr<DLLExportAttr>() &&
+            VD->getStorageClass() == SC_Static &&
+            TSK == TSK_ImplicitInstantiation)
+          S.MarkVariableReferenced(VD->getLocation(), VD);
+    
+
+        // Calling ReferenceDllExportedMembers might cause the current function to
+
+          ReferenceDllExportedMembers(*this, Class);
+

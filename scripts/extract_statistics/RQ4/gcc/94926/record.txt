@@ -1,0 +1,7 @@
+Commit:	c83027f
+./gcc/cp/constexpr.c	99,100
+./gcc/cp/decl.c	7470,7471
+./gcc/cp/decl.c	7473,7476
+./gcc/cp/decl.c	7481,7481
+./gcc/cp/decl.c	10174,10174
+./gcc/testsuite/g++.dg/cpp1z/pr86648.C	4,4

@@ -1,0 +1,25 @@
+
+    static HOST_WIDE_INT find_array_ctor_elt (tree ary, tree dindex,
+    					  bool insert = false);
+
+    
+    /* Returns true iff FUN is an instantiation of a constexpr function
+       template or a defaulted constexpr function.  */
+
+    	    /* An initialized vector would have a VECTOR_CST.  */
+    	    return false;
+    	  else if (cxx_dialect >= cxx20
+    		   && TREE_CODE (TREE_TYPE (t)) == ARRAY_TYPE)
+
+    	  else if (cxx_dialect >= cxx20
+    		   && TREE_CODE (TREE_TYPE (t)) == UNION_TYPE)
+    	    {
+
+          for (; field; field = next_initializable_field (DECL_CHAIN (field)))
+    	if (!is_really_empty_class (TREE_TYPE (field), /*ignore_vptr*/false))
+    	  return false;
+
+          if (CONSTRUCTOR_NO_CLEARING (t))
+    	/* All the fields are initialized.  */
+    	CONSTRUCTOR_NO_CLEARING (t) = false;
+

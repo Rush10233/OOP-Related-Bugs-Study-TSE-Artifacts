@@ -1,0 +1,18 @@
+name, scope);
+    		  return error_mark_node;
+    		}
+
+    	      if (TREE_SIDE_EFFECTS (object))
+    		val = build2 (COMPOUND_EXPR, TREE_TYPE (val), object, val);
+    	      return val;
+
+    	      return error_mark_node;
+    	    }
+    
+
+    	  /* Find the base of OBJECT_TYPE corresponding to SCOPE.  */
+
+    	  if (access_path == error_mark_node)
+    	    return error_mark_node;
+    	  if (!access_path)
+

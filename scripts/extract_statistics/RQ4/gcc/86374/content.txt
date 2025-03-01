@@ -1,0 +1,29 @@
+else if (DECL_TYPE_TEMPLATE_P (templ)
+    	   || DECL_TEMPLATE_TEMPLATE_PARM_P (templ))
+        {
+          /* In "template <typename T> ... A<T>::", A<T> is the abstract A
+    	 template (rather than some instantiation thereof) only if
+    	 is not nested within some other construct.  For example, in
+    	 "template <typename T> void f(T) { A<T>::", A<T> is just an
+    	 instantiation of A.  */
+
+          template_id
+    	= finish_template_type (templ, arguments, entering_scope);
+        }
+
+    	  return found;
+    	}
+    
+
+          if (context == error_mark_node)
+    	return error_mark_node;
+    
+
+return found;
+    	}
+    
+
+          if (context == error_mark_node)
+    	return error_mark_node;
+    
+

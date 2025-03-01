@@ -1,0 +1,9 @@
+qsort (member_vec->address (), member_vec->length (),
+    	     sizeof (tree), resort_member_name_cmp);
+
+          qsort (member_vec->address (), member_vec->length (),
+    	     sizeof (tree), member_name_cmp);
+
+          qsort (member_vec->address (), member_vec->length (),
+    	     sizeof (tree), member_name_cmp);
+

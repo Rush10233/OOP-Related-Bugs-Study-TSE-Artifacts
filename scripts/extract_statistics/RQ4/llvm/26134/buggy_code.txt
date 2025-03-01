@@ -1,0 +1,7 @@
+EnterExpressionEvaluationContext Unevaluated(Actions,
+                                                     Sema::ConstantEvaluated);
+
+      EnterExpressionEvaluationContext Unevaluated(SemaRef, Sema::Unevaluated);
+
+Sema::ContextRAII SavedContext(SemaRef, Template->getDeclContext());
+

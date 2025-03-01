@@ -1,0 +1,10 @@
+Commit:	7ed1cd9
+./gcc/cp/decl.c	16336,16343
+./gcc/cp/decl.c	16345,16346
+./gcc/cp/pt.c	193,193
+./gcc/cp/pt.c	26435,26447
+Commit:	f1feb74
+./gcc/cp/decl.c	16289,16296
+./gcc/cp/decl.c	16298,16299
+./gcc/cp/pt.c	193,193
+./gcc/cp/pt.c	26446,26458

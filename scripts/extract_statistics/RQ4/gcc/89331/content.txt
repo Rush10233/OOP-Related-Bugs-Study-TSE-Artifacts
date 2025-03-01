@@ -1,0 +1,16 @@
+return expr;
+        }
+    
+
+      if (TREE_CODE (expr) == PSEUDO_DTOR_EXPR)
+        {
+          error ("cannot apply %<offsetof%> to destructor %<~%T%>",
+
+    	  tree binfo;
+    	  base_kind kind;
+    
+
+    	  binfo = lookup_base (access_path ? access_path : object_type,
+    			       member_scope, ba_unique, &kind, complain);
+    	  if (binfo == error_mark_node)
+

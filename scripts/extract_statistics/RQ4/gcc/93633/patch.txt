@@ -1,0 +1,12 @@
+if (VAR_P (obj)
+    	    && DECL_NAME (obj) == heap_identifier
+    	    && TREE_CODE (objtype) == ARRAY_TYPE)
+    	  objtype = TREE_TYPE (objtype);
+    	if (!CLASS_TYPE_P (objtype))
+    	  {
+    	    if (!ctx->quiet)
+    	      error_at (loc, "expression %qE is not a constant expression", t);
+    	    *non_constant_p = true;
+    	    return t;
+    	  }
+

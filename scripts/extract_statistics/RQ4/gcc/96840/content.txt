@@ -1,0 +1,47 @@
+We don't always want to do so, in order to avoid emitting duplicate
+         diagnostics in some cases.  */
+      bool diagnose_instability;
+
+    };
+    
+    struct sat_hasher : ggc_ptr_hash<sat_entry>
+
+    	   mapping, we set this flag (in satisfy_atom) only if substitution
+    	   into its mapping previously failed.  */
+    	entry->diagnose_instability = true;
+
+          *slot = entry;
+        }
+      else
+
+      if (!entry)
+        return NULL_TREE;
+    
+
+      else
+        return entry->result;
+    }
+
+      if (!entry)
+        return result;
+    
+
+      if (entry->result && result != entry->result)
+        {
+          if (info.quiet ())
+
+    static tree
+    satisfy_atom (tree t, tree args, sat_info info)
+    {
+
+      satisfaction_cache cache (t, args, info);
+      if (tree r = cache.get ())
+        return r;
+    
+      /* Perform substitution quietly.  */
+      subst_info quiet (tf_none, NULL_TREE);
+    
+      /* Instantiate the parameter mapping.  */
+      tree map = tsubst_parameter_mapping (ATOMIC_CONSTR_MAP (t), args, quiet);
+      if (map == error_mark_node)
+

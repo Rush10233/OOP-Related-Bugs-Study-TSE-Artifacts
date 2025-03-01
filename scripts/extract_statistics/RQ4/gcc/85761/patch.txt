@@ -1,0 +1,20 @@
+temp_override<location_t> l (input_location);
+    	  if (loc != UNKNOWN_LOCATION)
+    	    input_location = loc;
+
+          if (location_wrapper_p (expr))
+    	{
+    	  loc = EXPR_LOCATION (expr);
+    	  recurse_op[0] = true;
+    	}
+
+temp_override<location_t> l (input_location);
+    	  if (loc != UNKNOWN_LOCATION)
+    	    input_location = loc;
+
+          if (location_wrapper_p (expr))
+    	{
+    	  loc = EXPR_LOCATION (expr);
+    	  recurse_op[0] = true;
+    	}
+

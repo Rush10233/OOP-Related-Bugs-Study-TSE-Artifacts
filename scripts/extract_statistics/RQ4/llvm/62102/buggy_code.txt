@@ -1,0 +1,4 @@
+<< (int)DFK.asComparison()
+                << Context.getTagDeclType(
+                       cast<CXXRecordDecl>(FD->getLexicalDeclContext()));
+

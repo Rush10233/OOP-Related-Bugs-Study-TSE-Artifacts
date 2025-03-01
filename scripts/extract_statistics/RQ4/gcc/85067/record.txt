@@ -1,0 +1,3 @@
+Commit:	153dba6
+./gcc/cp/method.c	2192,2192
+./gcc/testsuite/g++.dg/cpp0x/constexpr-68754.C	6,6

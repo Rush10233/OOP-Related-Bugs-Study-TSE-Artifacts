@@ -1,0 +1,36 @@
+/* If totype isn't a reference, and LOOKUP_ONLYCONVERTING is
+
+    	      && cxx_dialect < cxx17
+    	      && (flags & LOOKUP_ONLYCONVERTING)
+
+    			    c_cast_p, complain & ~tf_no_cleanup);
+
+/* If totype isn't a reference, and LOOKUP_ONLYCONVERTING is
+
+    	      && (flag_elide_constructors || (flags & LOOKUP_ONLYCONVERTING))
+
+      tsubst_flags_t sub_complain = complain;
+      if (!flag_elide_constructors)
+        sub_complain &= ~tf_no_cleanup;
+
+    		       c_cast_p, sub_complain);
+
+/* If totype isn't a reference, and LOOKUP_ONLYCONVERTING is
+
+    	      && cxx_dialect < cxx17
+    	      && (flags & LOOKUP_ONLYCONVERTING)
+
+    		       c_cast_p, complain & ~tf_no_cleanup);
+
+&& cxx_dialect < cxx17
+    	      && (flags & LOOKUP_ONLYCONVERTING)
+
+    		       c_cast_p, complain & ~tf_no_cleanup);
+
+/* If totype isn't a reference, and LOOKUP_ONLYCONVERTING is
+
+    	      && cxx_dialect < cxx17
+    	      && (flags & LOOKUP_ONLYCONVERTING)
+
+    			    c_cast_p, complain & ~tf_no_cleanup);
+

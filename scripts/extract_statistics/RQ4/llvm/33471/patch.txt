@@ -1,0 +1,11 @@
+// For conversion operators, 'operator auto' should only match
+      // 'operator auto'.  Since 'auto' is not a type, it shouldn't be considered
+      // as a candidate for template substitution.
+      auto *ContainedDeducedType =
+          R.getLookupName().getCXXNameType()->getContainedDeducedType();
+      if (R.getLookupName().getNameKind() ==
+              DeclarationName::CXXConversionFunctionName &&
+          ContainedDeducedType && ContainedDeducedType->isUndeducedType())
+        return Found;
+    
+

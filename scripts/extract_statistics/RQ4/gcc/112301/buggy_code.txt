@@ -1,0 +1,2 @@
+CLEANUP_EH_ONLY (*tp) = 1;
+

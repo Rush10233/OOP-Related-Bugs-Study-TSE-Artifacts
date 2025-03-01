@@ -1,0 +1,120 @@
+args = regen_args;
+        }
+    
+
+        return boolean_true_node;
+    
+      /* Get the normalized constraints.  */
+
+      else
+        args = add_outermost_template_args (t, args);
+    
+
+        return boolean_true_node;
+    
+      tree result = boolean_true_node;
+
+    extern tree lookup_template_variable		(tree, tree);
+    extern int uses_template_parms			(tree);
+    extern bool uses_template_parms_level		(tree, int);
+
+    extern bool in_template_function		(void);
+    extern bool need_generic_capture		(void);
+    extern tree instantiate_class_template		(tree);
+
+        {
+          tree tinfo = get_template_info (type);
+    
+
+    	  && uses_template_parms (INNERMOST_TEMPLATE_ARGS (TI_ARGS (tinfo))))
+    	++depth;
+    
+
+    /* Returns true if the signature of DECL depends on any template parameter from
+       its enclosing class.  */
+    
+
+    uses_outer_template_parms (tree decl)
+    {
+      int depth = template_class_depth (CP_DECL_CONTEXT (decl));
+
+    	    return true;
+    	}
+        }
+
+      tree ci = get_constraints (decl);
+      if (ci)
+        ci = CI_ASSOCIATED_CONSTRAINTS (ci);
+
+    }
+    
+    /* Returns TRUE iff INST is an instantiation we don't need to do in an
+
+          return false;
+        }
+    
+
+      /* Always dependent, on the number of arguments if nothing else.  */
+      if (TREE_CODE (expression) == EXPR_PACK_EXPANSION)
+        return true;
+
+args = regen_args;
+        }
+    
+
+        return boolean_true_node;
+    
+      /* Get the normalized constraints.  */
+
+      else
+        args = add_outermost_template_args (t, args);
+    
+
+        return boolean_true_node;
+    
+      tree result = boolean_true_node;
+
+    extern tree lookup_template_variable		(tree, tree);
+    extern bool uses_template_parms			(tree);
+    extern bool uses_template_parms_level		(tree, int);
+
+    extern bool in_template_function		(void);
+    extern bool need_generic_capture		(void);
+    extern tree instantiate_class_template		(tree);
+
+        {
+          tree tinfo = get_template_info (type);
+    
+
+    	  && uses_template_parms (INNERMOST_TEMPLATE_ARGS (TI_ARGS (tinfo))))
+    	++depth;
+    
+
+    /* Returns true if the signature of DECL depends on any template parameter from
+       its enclosing class.  */
+    
+
+    uses_outer_template_parms (tree decl)
+    {
+      int depth = template_class_depth (CP_DECL_CONTEXT (decl));
+
+    	    return true;
+    	}
+        }
+
+      tree ci = get_constraints (decl);
+      if (ci)
+        ci = CI_ASSOCIATED_CONSTRAINTS (ci);
+
+    }
+    
+    /* Returns TRUE iff INST is an instantiation we don't need to do in an
+
+          return false;
+        }
+    
+
+      /* Always dependent, on the number of arguments if nothing else.  */
+      if (TREE_CODE (expression) == EXPR_PACK_EXPANSION)
+        return true;
+

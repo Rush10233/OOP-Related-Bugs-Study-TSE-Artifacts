@@ -1,0 +1,24 @@
+/* Create the function.  */
+      fn_type = build_method_type_directly (type, return_type, parameter_types);
+      if (raises)
+
+      fn = build_lang_decl (FUNCTION_DECL, name, fn_type);
+      if (kind != sfk_inheriting_constructor)
+        DECL_SOURCE_LOCATION (fn) = DECL_SOURCE_LOCATION (TYPE_NAME (type));
+
+          if (copy_fn_p (fn) > 0)
+    	{
+    	  saw_copy = true;
+
+    	    return false;
+    	}
+        }
+
+          return (trait_expr_value (CPTK_HAS_TRIVIAL_CONSTRUCTOR, type1, type2) 
+    	      || (CLASS_TYPE_P (type1)
+    		  && (t = locate_ctor (type1))
+
+    
+        case CPTK_HAS_TRIVIAL_CONSTRUCTOR:
+          type1 = strip_array_types (type1);
+

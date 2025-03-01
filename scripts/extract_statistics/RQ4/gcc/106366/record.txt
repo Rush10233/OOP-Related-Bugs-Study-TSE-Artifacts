@@ -1,0 +1,8 @@
+Commit:	b585af3
+./gcc/cp/pt.cc	30243,30243
+./gcc/cp/pt.cc	30253,30254
+./gcc/cp/pt.cc	30264,30264
+./gcc/cp/pt.cc	30266,30266
+./gcc/cp/pt.cc	30313,30313
+./gcc/cp/pt.cc	30315,30319
+./gcc/cp/pt.cc	30322,30326

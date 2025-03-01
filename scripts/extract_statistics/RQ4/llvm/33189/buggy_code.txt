@@ -1,0 +1,6 @@
+if (R.empty())
+        return nullptr;
+
+      CXXDestructorDecl *Dtor = cast<CXXDestructorDecl>(R.front());
+      return Dtor;
+

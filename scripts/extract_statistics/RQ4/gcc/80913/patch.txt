@@ -1,0 +1,51 @@
+/* Make sure we don't create a circular list.  xref_tag can end
+    	 up pushing the same artificial decl more than once.  We
+    	 should have already detected that in update_binding.  */
+          gcc_assert (b->names != decl);
+    
+
+      tree old_type = slot ? MAYBE_STAT_TYPE (*slot) : binding->type;
+      tree to_type = old_type;
+
+      if (TREE_CODE (decl) == TYPE_DECL && DECL_ARTIFICIAL (decl))
+        {
+          tree other = to_type;
+    
+          if (old && TREE_CODE (old) == TYPE_DECL && DECL_ARTIFICIAL (old))
+    	other = old;
+    
+          /* Pushing an artificial typedef.  See if this matches either
+    	 the type slot or the old value slot.  */
+          if (!other)
+    	;
+          else if (same_type_p (TREE_TYPE (other), TREE_TYPE (decl)))
+    	/* Two artificial decls to same type.  Do nothing.  */
+    	return other;
+          else
+    	goto conflict;
+    
+          if (old)
+    	{
+    	  /* Slide decl into the type slot, keep old unaltered  */
+    	  to_type = decl;
+    	  to_val = old;
+    	  goto done;
+    	}
+        }
+    
+
+          /* Slide old into the type slot.  */
+
+          if (same_type_p (TREE_TYPE (old), TREE_TYPE (decl)))
+
+     done:
+
+          if (to_type != old_type)
+
+    	  gcc_checking_assert (!old_type
+    			       && TREE_CODE (to_type) == TYPE_DECL
+
+    	      STAT_TYPE (*slot) = to_type;
+
+    	  binding->type = to_type;
+

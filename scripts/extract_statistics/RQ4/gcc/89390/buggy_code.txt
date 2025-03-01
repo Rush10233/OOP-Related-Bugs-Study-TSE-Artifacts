@@ -1,0 +1,18 @@
+if (SCOPED_ENUM_P (scope))
+
+token = cp_lexer_peek_token (parser->lexer);
+
+    	    return build_nt (BIT_NOT_EXPR, scope);
+
+    	      pedwarn (input_location, 0,
+
+    	    return build_nt (BIT_NOT_EXPR, make_auto ());
+
+    		return type_decl;
+
+    	      error_at (token->location,
+
+    	  error_at (token->location,
+
+    	return build_nt (BIT_NOT_EXPR, TREE_TYPE (type_decl));
+

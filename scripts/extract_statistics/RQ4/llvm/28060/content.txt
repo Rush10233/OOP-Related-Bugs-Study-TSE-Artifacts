@@ -1,0 +1,8 @@
+Instantiation->getTemplateInstantiationPattern();
+            DeclContext::lookup_result Lookup =
+                ClassPattern->lookup(Field->getDeclName());
+
+            InstantiateInClassInitializer(PointOfInstantiation, Field, Pattern,
+                                          TemplateArgs);
+          }
+

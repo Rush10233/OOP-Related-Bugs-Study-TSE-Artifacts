@@ -1,0 +1,59 @@
+So tell check_explicit_specialization to look for a match.  */
+
+          matched = function;
+
+      tree orig_declarator = declarator;
+
+      /* CLASS_TEMPLATE_DEPTH counts the number of template headers for
+         the enclosing class.  FRIEND_DEPTH counts the number of template
+         headers used for this friend declaration.  TEMPLATE_MEMBER_P is
+         true if a template header in FRIEND_DEPTH is intended for
+         DECLARATOR.  For example, the code
+    
+         template <class T> struct A {
+           template <class U> struct B {
+    	 template <class V> template <class W>
+    	   friend void C<V>::f(W);
+           };
+         };
+    
+         will eventually give the following results
+    
+         1. CLASS_TEMPLATE_DEPTH equals 2 (for `T' and `U').
+         2. FRIEND_DEPTH equals 2 (for `V' and `W').
+         3. CTYPE_DEPTH equals 1 (for `V').
+         4. TEMPLATE_MEMBER_P is true (for `W').  */
+    
+      int class_template_depth = template_class_depth (current_class_type);
+      int friend_depth = current_template_depth - class_template_depth;
+      int ctype_depth = num_template_headers_for_class (ctype);
+      bool template_member_p = friend_depth > ctype_depth;
+    
+
+    		      && ! funcdef_flag && ! friend_depth
+
+    	  if (friend_depth || class_template_depth)
+
+        }
+
+      if (decl == error_mark_node)
+        return error_mark_node;
+    
+      if (!class_template_depth && DECL_IMPLICIT_INSTANTIATION (decl))
+        /* "[if no non-template match is found,] each remaining function template
+           is replaced with the specialization chosen by deduction from the
+           friend declaration or discarded if deduction fails."
+    
+           set_decl_namespace or check_classfn set DECL_IMPLICIT_INSTANTIATION to
+           indicate that we need a template match, so ask
+           check_explicit_specialization to find one.  */
+        decl = (check_explicit_specialization
+    	    (orig_declarator, decl, ctype_depth,
+    	     2 * funcdef_flag + 4));
+    
+      add_friend (current_class_type,
+    	      (!ctype && friend_depth) ? DECL_TI_TEMPLATE (decl) : decl,
+    	      /*complain=*/true);
+
+if (!class_template_depth && DECL_IMPLICIT_INSTANTIATION (decl))
+

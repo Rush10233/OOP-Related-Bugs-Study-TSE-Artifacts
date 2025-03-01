@@ -1,0 +1,24 @@
+rettype, totype);
+    	    }
+    	  else if (TYPE_REF_P (totype) && !ics->rvaluedness_matches_p
+
+    		   && TREE_CODE (TREE_TYPE (totype)) != FUNCTION_TYPE)
+    	    {
+    	      /* If we are called to convert to a reference type, we are trying
+
+EXPR_LOCATION (expr));
+    	    }
+    	  else if (TYPE_REF_P (totype) && !ics->rvaluedness_matches_p
+
+    		   && TREE_CODE (TREE_TYPE (totype)) != FUNCTION_TYPE)
+    	    {
+    	      /* If we are called to convert to a reference type, we are trying
+
+EXPR_LOCATION (expr));
+    	    }
+    	  else if (TYPE_REF_P (totype) && !ics->rvaluedness_matches_p
+
+    		   && TREE_CODE (TREE_TYPE (totype)) != FUNCTION_TYPE)
+    	    {
+    	      /* If we are called to convert to a reference type, we are trying
+

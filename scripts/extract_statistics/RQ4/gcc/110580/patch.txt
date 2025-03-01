@@ -1,0 +1,4 @@
+tree gen_templ = most_general_template (templ);
+      tree parms = DECL_INNERMOST_TEMPLATE_PARMS (gen_templ);
+      arglist = add_outermost_template_args (templ, arglist);
+

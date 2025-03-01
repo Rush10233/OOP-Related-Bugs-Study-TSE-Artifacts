@@ -1,0 +1,8 @@
+/* If FBASE and TBASE are equivalent but incomplete, DERIVED_FROM_P
+    	 yields false.  But a pointer to member of incomplete class is OK.  */
+          if (!same_type_p (fbase, tbase) && !DERIVED_FROM_P (fbase, tbase))
+
+/* If FBASE and TBASE are equivalent but incomplete, DERIVED_FROM_P
+    	 yields false.  But a pointer to member of incomplete class is OK.  */
+          if (!same_type_p (fbase, tbase) && !DERIVED_FROM_P (fbase, tbase))
+

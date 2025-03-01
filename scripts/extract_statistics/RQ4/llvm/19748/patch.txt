@@ -1,0 +1,33 @@
+ExprResult ParseCXXAmbiguousParenExpression(
+          ParenParseOption &ExprType, ParsedType &CastTy,
+          BalancedDelimiterTracker &Tracker, ColonProtectionRAIIObject &ColonProt);
+
+        Res = ParseParenExpression(ParenExprType, false/*stopIfCastExr*/,
+                                   isTypeCast == IsTypeCast, CastTy, RParenLoc);
+
+      ColonProtectionRAIIObject ColonProtection(*this, false);
+
+        ColonProtection.restore();
+
+          ExprResult res = ParseCXXAmbiguousParenExpression(ExprType, CastTy, T,
+                                                            ColonProtection);
+
+          ColonProtection.restore();
+
+                                             BalancedDelimiterTracker &Tracker,
+                                             ColonProtectionRAIIObject &ColonProt) {
+
+          ColonProt.restore();
+
+        {
+          ColonProtectionRAIIObject InnerColonProtection(*this);
+          ParseSpecifierQualifierList(DS);
+          ParseDeclarator(DeclaratorInfo);
+        }
+
+        ColonProt.restore();
+
+          // FIXME: This is entirely wrong.
+
+          return ParseCompoundLiteralExpression(Ty.get(),
+

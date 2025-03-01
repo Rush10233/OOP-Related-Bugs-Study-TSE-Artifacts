@@ -1,0 +1,2 @@
+if (*init && (array_p || (nelts && cxx_dialect >= cxx20)))
+

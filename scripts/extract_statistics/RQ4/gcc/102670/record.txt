@@ -1,0 +1,5 @@
+Commit:	e3dbd2e
+./gcc/cp/pt.c	20270,20270
+./gcc/testsuite/g++.dg/cpp2a/concepts-recursive-sat1.C	6,8
+./gcc/testsuite/g++.dg/cpp2a/concepts-recursive-sat1.C	10,10
+./gcc/testsuite/g++.dg/cpp2a/concepts-recursive-sat1.C	15,15

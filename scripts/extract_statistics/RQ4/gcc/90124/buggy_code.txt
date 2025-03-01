@@ -1,0 +1,2 @@
+if (!dependent_type_p (object_type)
+

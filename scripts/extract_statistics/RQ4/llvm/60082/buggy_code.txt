@@ -1,0 +1,17 @@
+- Work around with a clang coverage crash which happens when visiting
+      expressions/statements with invalid source locations in non-assert builds. 
+
+      MarkDeclarationsReferencedInExpr(Init, /*SkipLocalVariables*/ true);
+
+          ExprResult Res = Immediate.TransformInitializer(Param->getInit(),
+                                                          /*NotCopy=*/false);
+
+    
+        ExprResult Res =
+            Immediate.TransformInitializer(Field->getInClassInitializer(),
+                                           /*CXXDirectInit=*/false);
+
+          MarkDeclarationsReferencedInExpr(E, /*SkipLocalVariables=*/false);
+
+            MarkDeclarationsReferencedInExpr(Init->getInit());
+

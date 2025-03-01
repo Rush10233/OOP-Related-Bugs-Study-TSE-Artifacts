@@ -1,0 +1,137 @@
+
+      /* The number of bytes to add to or subtract from the size of the provided
+         buffer based on an offset into an array or an array element reference.
+
+      /* True when the size of the entire destination object should be used
+         to compute the possibly optimistic estimate of the available space.  */
+      bool use_obj_size = false;
+
+         is a constant.  */
+      if (TREE_CODE (oper) == POINTER_PLUS_EXPR)
+        {
+
+    	 accurate estimate of the size of the buffer.  Since the operand
+    	 of POINTER_PLUS_EXPR is represented as an unsigned type, convert
+    	 it to signed first.
+    	 Otherwise, use the size of the entire array as an optimistic
+    	 estimate (this may lead to false negatives).  */
+          tree adj = TREE_OPERAND (oper, 1);
+          if (CONSTANT_CLASS_P (adj))
+
+          else
+    	use_obj_size = true;
+    
+
+    	 not a compile-time constant, use the index to determine the
+    	 size of the buffer.  Otherwise, use the entire array as
+    	 an optimistic estimate of the size.  */
+
+          if (!use_obj_size && CONSTANT_CLASS_P (adj))
+
+          else
+    	{
+    	  use_obj_size = true;
+
+         members from arrays of unspecified size.  */
+      bool compref = TREE_CODE (oper) == COMPONENT_REF;
+    
+
+      /* Descend into a struct or union to find the member whose address
+         is being used as the argument.  */
+      if (TREE_CODE (oper) == COMPONENT_REF)
+        {
+
+          tree op0 = oper;
+          while (TREE_CODE (op0 = TREE_OPERAND (op0, 0)) == COMPONENT_REF);
+          if (VAR_P (op0))
+    	var_decl = op0;
+          oper = TREE_OPERAND (oper, 1);
+        }
+    
+
+          && (VAR_P (oper)
+    	  || TREE_CODE (oper) == FIELD_DECL
+    	  || TREE_CODE (oper) == PARM_DECL))
+        {
+          /* A possibly optimistic estimate of the number of bytes available
+    	 in the destination buffer.  */
+
+          /* True when the estimate above is in fact the exact size
+    	 of the destination buffer rather than an estimate.  */
+          bool exact_size = true;
+
+    	  /* Use the size of the entire array object when the expression
+    	     refers to a variable or its size depends on an expression
+    	     that's not a compile-time constant.  */
+
+    	  exact_size = !use_obj_size;
+    	}
+
+    	{
+    	  /* Use the size of the type of the destination buffer object
+
+    	}
+
+    	{
+
+    	}
+    
+
+    
+          if (compref && oper_code == ARRAY_TYPE)
+    	{
+
+    	  tree nelts_cst = maybe_constant_value (nelts);
+    	  if (TREE_CODE (nelts_cst) == INTEGER_CST
+    	      && integer_onep (nelts_cst)
+
+    	    return;
+    	}
+    
+          /* Reduce the size of the buffer by the adjustment computed above
+    	 from the offset and/or the index into the array.  */
+
+    	bytes_avail = 0;
+          else
+
+    
+          /* The minimum amount of space needed for the allocation.  This
+    	 is an optimistic estimate that makes it possible to detect
+    	 placement new invocation for some undersize buffers but not
+    	 others.  */
+
+    
+          if (CONSTANT_CLASS_P (size))
+
+          else if (nelts && CONSTANT_CLASS_P (nelts))
+
+          else if (tree_fits_uhwi_p (TYPE_SIZE_UNIT (type)))
+
+          else
+    	{
+    	  /* The type is a VLA.  */
+
+    			  : "placement new constructing an object of type "
+    			  "%<%T [%wu]%> and size %qwu in a region of type %qT "
+    			  "and size at most %qwu",
+
+    	    else
+    	      warning_at (loc, OPT_Wplacement_new_,
+    			  exact_size ?
+
+    			  : "placement new constructing an array of objects "
+    			  "of type %qT and size %qwu in a region of type %qT "
+    			  "and size at most %qwu",
+
+    	  else
+    	    warning_at (loc, OPT_Wplacement_new_,
+    			exact_size ?
+
+    			: "placement new constructing an object of type %qT "
+    			"and size %qwu in a region of type %qT and size "
+    			"at most %qwu",
+
+    	}
+        }
+    }
+

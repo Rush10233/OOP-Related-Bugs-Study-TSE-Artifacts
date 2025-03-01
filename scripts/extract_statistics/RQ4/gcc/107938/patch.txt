@@ -1,0 +1,10 @@
+/* We could be called while processing a template and RHS could be
+    	     a functor.  In that case it's a class, not a pointer.  */
+    	  if (!POINTER_TYPE_P (rhs))
+    	    return NULL_TREE;
+
+/* We could be called while processing a template and RHS could be
+    	     a functor.  In that case it's a class, not a pointer.  */
+    	  if (!POINTER_TYPE_P (rhs))
+    	    return NULL_TREE;
+

@@ -1,0 +1,63 @@
+if (TREE_SIDE_EFFECTS (expr) && (null_test || virtual_access))
+        expr = save_expr (expr);
+    
+
+      if (null_test)
+
+    
+      /* If this is a simple base reference, express it as a COMPONENT_REF.  */
+      if (code == PLUS_EXPR && !virtual_access
+
+    
+     out:
+      if (null_test)
+
+    
+      return expr;
+    }
+
+    extern bool emit_tinfo_decl			(tree);
+    extern unsigned get_pseudo_tinfo_index		(tree);
+    extern tree get_pseudo_tinfo_type		(unsigned);
+
+    
+    /* in search.c */
+    extern tree get_parent_with_private_access 	(tree decl, tree binfo);
+
+       and are generated as needed. */
+    static GTY (()) vec<tinfo_s, va_gc> *tinfo_descs;
+    
+    static tree tinfo_name (tree, bool);
+    static tree build_dynamic_cast_1 (location_t, tree, tree, tsubst_flags_t);
+    static tree throw_bad_cast (void);
+
+    
+       RESULT, it must have previously had a save_expr applied to it.  */
+    
+
+    {
+
+      /* This is a compiler generated comparison, don't emit
+         e.g. -Wnonnull-compare warning for it.  */
+      TREE_NO_WARNING (cond) = 1;
+
+    }
+    
+    /* Execute a dynamic cast, as described in section 5.2.6 of the 9/93 working
+
+    	  expr1 = build_headof (expr);
+    	  if (TREE_TYPE (expr1) != type)
+    	    expr1 = build1 (NOP_EXPR, type, expr1);
+
+    	}
+          else
+    	{
+
+    
+    	  /* Now back to the type we want from a void*.  */
+    	  result = cp_convert (type, result, complain);
+
+    	}
+        }
+      else
+

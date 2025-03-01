@@ -1,0 +1,27 @@
+if (!Old->isExternallyVisible())
+          Filter.erase();
+
+      if (!shouldLinkPossiblyHiddenDecl(Old, New))
+        return;
+    
+
+      NamedDecl *PrevDecl = LookupSingleName(S, Alias, AliasLoc, LookupOrdinaryName,
+                                             ForRedeclaration);
+      if (PrevDecl && !isDeclInScope(PrevDecl, CurContext, S))
+
+LookupQualifiedName(PrevR, CurContext->getRedeclContext());
+      NamedDecl *PrevDecl = PrevR.getAsSingle<NamedDecl>();
+      if (PrevDecl && !isVisible(PrevDecl))
+        PrevDecl = nullptr;
+
+      NamedDecl *ND = R.getFoundDecl();
+
+      if (PrevDecl) {
+
+          if (!AD->getNamespace()->Equals(getNamespaceDecl(ND))) {
+
+        } else {
+
+      if (PrevDecl)
+        AliasDecl->setPreviousDecl(cast<NamespaceAliasDecl>(PrevDecl));
+

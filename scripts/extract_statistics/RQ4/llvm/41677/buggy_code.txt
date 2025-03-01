@@ -1,0 +1,36 @@
+collectVarDeclProps(VD, Unit, Line, T, Name, LinkageName, DContext);
+
+          !VD->isExternallyVisible(), nullptr, Align);
+
+      collectVarDeclProps(D, Unit, LineNo, T, DeclName, LinkageName, DContext);
+
+            getOrCreateStaticDataMemberDeclarationOrNull(D), Align);
+
+          Align));
+
+                               StringRef &LinkageName, llvm::DIScope *&VDContext);
+
+llvm::DIFile *Unit) {
+      if (auto *TS = dyn_cast<VarTemplateSpecializationDecl>(VL)) {
+        auto T = TS->getSpecializedTemplateOrPartial();
+        auto TA = TS->getTemplateArgs().asArray();
+        // Collect parameters for a partial specialization
+        if (T.is<VarTemplatePartialSpecializationDecl *>()) {
+          const TemplateParameterList *TList =
+            T.get<VarTemplatePartialSpecializationDecl *>()
+            ->getTemplateParameters();
+          return CollectTemplateParams(TList, TA, Unit);
+        }
+    
+        // Collect parameters for an explicit specialization
+        if (T.is<VarTemplateDecl *>()) {
+          const TemplateParameterList *TList = T.get<VarTemplateDecl *>()
+            ->getTemplateParameters();
+          return CollectTemplateParams(TList, TA, Unit);
+        }
+      }
+      return llvm::DINodeArray();
+
+      // Always get the full list of parameters, not just the ones from
+      // the specialization.
+

@@ -1,0 +1,4 @@
+Commit:	5837edc
+./gcc/cp/decl.c	5311,5311
+./gcc/cp/parser.c	22104,22105
+./gcc/cp/typeck2.c	1308,1317

@@ -1,0 +1,23 @@
+if (!is_instantiation_of_constexpr (current_function_decl))
+
+    	    if (!var_in_maybe_constexpr_fn (x))
+
+    	  if (!is_instantiation_of_constexpr (current_function_decl))
+    	    error_at (DECL_SOURCE_LOCATION (decl),
+    		      "uninitialized variable %qD in %<constexpr%> function",
+    		      decl);
+
+if (!is_instantiation_of_constexpr (current_function_decl))
+
+    	    if (!var_in_maybe_constexpr_fn (x))
+
+    	  if (!is_instantiation_of_constexpr (current_function_decl))
+    	    error_at (DECL_SOURCE_LOCATION (decl),
+    		      "uninitialized variable %qD in %<constexpr%> function",
+    		      decl);
+
+if (!is_instantiation_of_constexpr (current_function_decl))
+    	    error_at (DECL_SOURCE_LOCATION (decl),
+    		      "uninitialized variable %qD in %<constexpr%> function",
+    		      decl);
+

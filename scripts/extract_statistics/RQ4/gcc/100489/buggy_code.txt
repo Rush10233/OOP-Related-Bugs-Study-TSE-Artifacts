@@ -1,0 +1,70 @@
+gcc_assert (TREE_CODE (index) == FIELD_DECL
+    		  && (same_type_ignoring_top_level_qualifiers_p
+    		      (DECL_CONTEXT (index), TREE_TYPE (ctor))));
+
+tree id = DECL_NAME (d->cur->index);
+    		  gcc_assert (id);
+    		  gcc_checking_assert (d->cur->index
+    				       == get_class_binding (type, id));
+
+    	      else if (ANON_AGGR_TYPE_P (fldtype)
+    		       && search_anon_aggr (fldtype,
+    					    TREE_CODE (ce->index) == FIELD_DECL
+    					    ? DECL_NAME (ce->index)
+    					    : ce->index))
+    		/* If the element is an anonymous union object and the
+    		   initializer list is a designated-initializer-list, the
+    		   anonymous union object is initialized by the
+    		   designated-initializer-list { D }, where D is the
+    		   designated-initializer-clause naming a member of the
+    		   anonymous union object.  */
+    		next = build_constructor_single (init_list_type_node,
+    						 ce->index, ce->value);
+
+    		  if (ANON_AGGR_TYPE_P (TREE_TYPE (field)))
+    		    {
+    		      tree t
+    			= search_anon_aggr (TREE_TYPE (field),
+    					    TREE_CODE (ce->index) == FIELD_DECL
+    					    ? DECL_NAME (ce->index)
+    					    : ce->index);
+    		      if (t)
+    			{
+    			  field = t;
+    			  break;
+    			}
+    		    }
+
+tree id = DECL_NAME (d->cur->index);
+    		  gcc_assert (id);
+    		  gcc_checking_assert (d->cur->index
+    				       == get_class_binding (type, id));
+
+    	      else if (ANON_AGGR_TYPE_P (fldtype)
+    		       && search_anon_aggr (fldtype,
+    					    TREE_CODE (ce->index) == FIELD_DECL
+    					    ? DECL_NAME (ce->index)
+    					    : ce->index))
+    		/* If the element is an anonymous union object and the
+    		   initializer list is a designated-initializer-list, the
+    		   anonymous union object is initialized by the
+    		   designated-initializer-list { D }, where D is the
+    		   designated-initializer-clause naming a member of the
+    		   anonymous union object.  */
+    		next = build_constructor_single (init_list_type_node,
+    						 ce->index, ce->value);
+
+    		  if (ANON_AGGR_TYPE_P (TREE_TYPE (field)))
+    		    {
+    		      tree t
+    			= search_anon_aggr (TREE_TYPE (field),
+    					    TREE_CODE (ce->index) == FIELD_DECL
+    					    ? DECL_NAME (ce->index)
+    					    : ce->index);
+    		      if (t)
+    			{
+    			  field = t;
+    			  break;
+    			}
+    		    }
+

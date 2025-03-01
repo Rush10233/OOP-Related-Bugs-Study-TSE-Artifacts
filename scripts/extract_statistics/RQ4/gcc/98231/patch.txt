@@ -1,0 +1,17 @@
+/* Wrapper around push_local_binding to push the bindings for
+       a non-member USING_DECL DECL that was found during template parsing.  */
+    
+    void
+    push_using_decl_bindings (tree decl)
+    {
+      push_local_binding (DECL_NAME (decl), USING_DECL_DECLS (decl),
+    		      /*using*/true);
+    }
+    
+
+    extern void push_using_decl_bindings (tree);
+
+    	    /* We still need to push the bindings so that we can look up
+    	       this name later.  */
+    	    push_using_decl_bindings (decl);
+

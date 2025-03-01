@@ -1,0 +1,24 @@
+/* -fpermissive might allow this; recurse.  */
+
+    		    return convert_for_assignment (type, r, errtype, fndecl,
+    						   parmnum, complain, flags);
+
+{
+    		  tree r = instantiate_type (type, rhs, tf_warning_or_error);
+    		  /* -fpermissive might allow this.  */
+    		  if (!seen_error ())
+    		    return r;
+    		}
+
+/* -fpermissive might allow this; recurse.  */
+
+    		    return convert_for_assignment (type, r, errtype, fndecl,
+    						   parmnum, complain, flags);
+
+{
+    		  tree r = instantiate_type (type, rhs, tf_warning_or_error);
+    		  /* -fpermissive might allow this.  */
+    		  if (!seen_error ())
+    		    return r;
+    		}
+

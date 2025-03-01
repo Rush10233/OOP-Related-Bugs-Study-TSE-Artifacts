@@ -1,0 +1,6 @@
+Commit:	72d03be
+./clang/lib/AST/ASTImporter.cpp	2961,2963
+./clang/lib/Sema/SemaDecl.cpp	3726,3729
+./clang/lib/Sema/SemaTemplateInstantiateDecl.cpp	656,659
+./clang/test/Misc/ast-dump-attr.cpp	1,1
+Commit:	32972ef

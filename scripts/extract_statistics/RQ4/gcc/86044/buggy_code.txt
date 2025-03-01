@@ -1,0 +1,30 @@
+/* Returns true if T is a valid subexpression of a constant expression,
+       even if it isn't itself a constant expression.  */
+    
+    bool
+    is_sub_constant_expr (tree t)
+    {
+      bool non_constant_p = false;
+      bool overflow_p = false;
+      hash_map <tree, tree> map;
+      HOST_WIDE_INT constexpr_ops_count = 0;
+    
+      constexpr_ctx ctx
+        = { NULL, &map, NULL, NULL, NULL, NULL, &constexpr_ops_count,
+    	true, true, false };
+    
+      instantiate_constexpr_fns (t);
+      cxx_eval_constant_expression (&ctx, t, false, &non_constant_p,
+    				&overflow_p);
+      return !non_constant_p && !overflow_p;
+    }
+    
+
+    extern bool is_sub_constant_expr                (tree);
+
+    	  /* A call to a constexpr function is noexcept if the call
+    	     is a constant expression.  */
+    	  if (DECL_DECLARED_CONSTEXPR_P (fn)
+    	      && is_sub_constant_expr (t))
+    	    return NULL_TREE;
+

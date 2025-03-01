@@ -1,0 +1,32 @@
+access_path, flags, candidates, complain);
+    }
+    
+
+    /* Returns the best overload candidate to perform the requested
+       conversion.  This function is used for three the overloading situations
+       described in [over.match.copy], [over.match.conv], and [over.match.ref].
+
+          return cand;
+        }
+    
+
+      tree convtype;
+      if (!DECL_CONSTRUCTOR_P (cand->fn))
+        convtype = non_reference (TREE_TYPE (TREE_TYPE (cand->fn)));
+
+    extern bool is_global_friend			(tree);
+    
+    /* in init.cc */
+
+    extern tree expand_member_init			(tree);
+    extern void emit_mem_initializers		(tree);
+    extern tree build_aggr_init			(tree, tree, int,
+
+      location_t finish_loc = cp_lexer_peek_token (parser->lexer)->location;
+      braces.require_close (parser);
+      TREE_TYPE (initializer) = init_list_type_node;
+
+    
+      cp_expr result (initializer);
+      /* Build a location of the form:
+

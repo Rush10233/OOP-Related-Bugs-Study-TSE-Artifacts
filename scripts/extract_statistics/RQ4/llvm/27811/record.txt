@@ -1,0 +1,10 @@
+Commit:	14aa2ad
+./clang/lib/Sema/SemaTemplate.cpp	7500,7500
+./clang/lib/Sema/SemaTemplate.cpp	7504,7504
+./clang/test/CodeGenCXX/dllexport.cpp	961,968
+./clang/test/CodeGenCXX/dllimport.cpp	659,659
+./clang/test/CodeGenCXX/dllimport.cpp	670,670
+./clang/test/CodeGenCXX/dllimport.cpp	701,701
+./clang/test/CodeGenCXX/dllimport.cpp	707,707
+./clang/test/CodeGenCXX/dllimport.cpp	713,713
+./clang/test/CodeGenCXX/dllimport.cpp	719,720

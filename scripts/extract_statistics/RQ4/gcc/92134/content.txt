@@ -1,0 +1,8 @@
+else
+        flags = LOOKUP_IMPLICIT;
+    
+
+      switch (TREE_CODE (value))
+        {
+        case VAR_DECL:
+

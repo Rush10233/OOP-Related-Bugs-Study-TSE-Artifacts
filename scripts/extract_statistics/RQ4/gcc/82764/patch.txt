@@ -1,0 +1,18 @@
+if (is_empty_class (basetype))
+        /* CLASSTYPE_SIZE is one byte, but the field needs to have size zero.  */
+        DECL_SIZE (decl) = DECL_SIZE_UNIT (decl) = size_zero_node;
+      else
+        {
+          DECL_SIZE (decl) = CLASSTYPE_SIZE (basetype);
+          DECL_SIZE_UNIT (decl) = CLASSTYPE_SIZE_UNIT (basetype);
+        }
+
+if (is_empty_class (basetype))
+        /* CLASSTYPE_SIZE is one byte, but the field needs to have size zero.  */
+        DECL_SIZE (decl) = DECL_SIZE_UNIT (decl) = size_zero_node;
+      else
+        {
+          DECL_SIZE (decl) = CLASSTYPE_SIZE (basetype);
+          DECL_SIZE_UNIT (decl) = CLASSTYPE_SIZE_UNIT (basetype);
+        }
+

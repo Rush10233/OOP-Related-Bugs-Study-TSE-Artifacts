@@ -1,0 +1,13 @@
+auto *DeclAsWritten = this;
+        if (auto *Pattern = getTemplateInstantiationPattern())
+          DeclAsWritten = cast<CXXMethodDecl>(Pattern);
+        return !(DeclAsWritten->isDeleted() ||
+                 DeclAsWritten->getCanonicalDecl()->isDefaulted());
+
+      // Non-user-provided functions get emitted as weak definitions with every
+      // use, no matter whether they've been explicitly instantiated etc.
+      if (auto *MD = dyn_cast<CXXMethodDecl>(FD))
+        if (!MD->isUserProvided())
+          return GVA_DiscardableODR;
+    
+

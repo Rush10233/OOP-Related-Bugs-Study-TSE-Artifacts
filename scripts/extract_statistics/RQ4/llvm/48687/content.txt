@@ -1,0 +1,8 @@
+dllExportImportClassTemplateSpecialization(*this, Def);
+        }
+    
+
+        //
+        // instantiating the members which will trigger ASTConsumer callbacks.
+        Specialization->setTemplateSpecializationKind(TSK);
+

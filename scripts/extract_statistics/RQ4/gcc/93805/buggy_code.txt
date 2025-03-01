@@ -1,0 +1,4 @@
+it can't throw.  */
+
+    			   && !expr_noexcept_p (nsdmi, complain))
+

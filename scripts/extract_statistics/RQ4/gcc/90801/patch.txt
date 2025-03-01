@@ -1,0 +1,45 @@
+unsigned HOST_WIDE_INT idx, tidx = HOST_WIDE_INT_M1U;
+
+    		{
+    		  /* Mark element for removal.  */
+    		  CONSTRUCTOR_ELT (init, idx)->index = NULL_TREE;
+    		  if (idx < tidx)
+    		    tidx = idx;
+    		  num_split_elts++;
+    		}
+
+    	      if (idx < tidx)
+    		tidx = idx;
+
+          if (num_split_elts == 1)
+    	CONSTRUCTOR_ELTS (init)->ordered_remove (tidx);
+          else if (num_split_elts > 1)
+
+    	  for (idx = tidx; idx < CONSTRUCTOR_NELTS (init); ++idx)
+
+    		*CONSTRUCTOR_ELT (init, tidx) = *CONSTRUCTOR_ELT (init, idx);
+
+unsigned HOST_WIDE_INT idx, tidx;
+
+    		/* Mark element for removal.  */
+    		CONSTRUCTOR_ELT (init, idx)->index = NULL_TREE;
+
+    	      /* Mark element for removal.  */
+    	      CONSTRUCTOR_ELT (init, idx)->index = NULL_TREE;
+
+          if (num_split_elts != 0)
+    	{
+    	  /* Perform the delayed ordered removal of non-constant elements
+    	     we split out.  */
+    	  for (tidx = 0, idx = 0; idx < CONSTRUCTOR_NELTS (init); ++idx)
+    	    if (CONSTRUCTOR_ELT (init, idx)->index == NULL_TREE)
+    	      ;
+    	    else
+    	      {
+    		if (tidx != idx)
+    		  *CONSTRUCTOR_ELT (init, tidx) = *CONSTRUCTOR_ELT (init, idx);
+    		++tidx;
+    	      }
+    	  vec_safe_truncate (CONSTRUCTOR_ELTS (init), tidx);
+    	}
+

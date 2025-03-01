@@ -1,0 +1,6 @@
+Commit:	aa8f424
+./gcc/cp/pt.cc	30126,30127
+./gcc/cp/pt.cc	30145,30145
+./gcc/cp/pt.cc	30150,30150
+./gcc/cp/pt.cc	30160,30160
+./gcc/cp/pt.cc	30264,30272

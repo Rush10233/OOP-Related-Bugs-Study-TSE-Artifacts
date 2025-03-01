@@ -1,0 +1,13 @@
+Commit:	0a8f5ec
+./clang/lib/CodeGen/CGCXXABI.h	261,264
+./clang/lib/CodeGen/CGExprCXX.cpp	223,224
+./clang/lib/CodeGen/ItaniumCXXABI.cpp	937,939
+./clang/lib/CodeGen/MicrosoftCXXABI.cpp	151,153
+./clang/lib/CodeGen/MicrosoftCXXABI.cpp	585,586
+./clang/lib/CodeGen/MicrosoftCXXABI.cpp	589,590
+./clang/lib/CodeGen/MicrosoftCXXABI.cpp	617,659
+./clang/lib/CodeGen/MicrosoftCXXABI.cpp	719,733
+./clang/lib/CodeGen/MicrosoftCXXABI.cpp	739,756
+./clang/lib/CodeGen/MicrosoftCXXABI.cpp	836,837
+./clang/lib/CodeGen/MicrosoftCXXABI.cpp	961,961
+./clang/lib/CodeGen/MicrosoftCXXABI.cpp	991,991

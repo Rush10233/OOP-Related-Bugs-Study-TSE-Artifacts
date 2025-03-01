@@ -1,0 +1,24 @@
+else if (TREE_CODE (expr) == PTRMEM_CST
+    	   || (TREE_CODE (expr) == CONSTRUCTOR
+    	       && TYPE_PTRMEMFUNC_P (type)))
+
+    	  else if (integer_zerop (n))
+
+          if (TARGET_PTRMEMFUNC_VBIT_LOCATION == ptrmemfunc_vbit_in_delta)
+    	n = cp_build_binary_op (input_location,
+    				LSHIFT_EXPR, n, integer_one_node,
+    				complain);
+          delta = cp_build_binary_op (input_location,
+    				  PLUS_EXPR, delta, n, complain);
+
+else if (integer_zerop (n))
+
+          if (TARGET_PTRMEMFUNC_VBIT_LOCATION == ptrmemfunc_vbit_in_delta)
+    	n = cp_build_binary_op (input_location,
+    				LSHIFT_EXPR, n, integer_one_node,
+    				complain);
+          delta = cp_build_binary_op (input_location,
+    				  PLUS_EXPR, delta, n, complain);
+
+else if (TREE_CODE (expr) == PTRMEM_CST)
+

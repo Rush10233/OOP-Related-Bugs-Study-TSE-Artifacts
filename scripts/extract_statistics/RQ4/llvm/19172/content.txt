@@ -1,0 +1,25 @@
+typedef llvm::DenseMap<GlobalDecl, MethodVFTableLocation>
+        MethodVFTableLocationsTy;
+    
+
+    private:
+      /// VTables - Global vtable information.
+      MicrosoftVTableContext &VTables;
+
+    
+      ThunksMapTy::const_iterator thunks_end() const { return Thunks.end(); }
+    
+
+      }
+    
+      uint64_t getNumVTableComponents() const { return Components.size(); }
+
+        VFTableLayouts[id] = new VTableLayout(
+            Builder.getNumVTableComponents(), Builder.vtable_component_begin(),
+            VTableThunks.size(), VTableThunks.data(), EmptyAddressPointsMap, true);
+        Thunks.insert(Builder.thunks_begin(), Builder.thunks_end());
+
+      }
+    
+      MethodVFTableLocations.insert(NewMethodLocations.begin(),
+

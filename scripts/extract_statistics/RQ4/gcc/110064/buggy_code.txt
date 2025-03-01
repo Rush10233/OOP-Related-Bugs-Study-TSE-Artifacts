@@ -1,0 +1,2 @@
+&& !EMPTY_CONSTRUCTOR_P (init))
+

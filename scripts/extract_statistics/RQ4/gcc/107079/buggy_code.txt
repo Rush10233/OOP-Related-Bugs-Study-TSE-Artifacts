@@ -1,0 +1,4 @@
+init = maybe_constant_init (expr);
+
+init = maybe_constant_init (expr);
+

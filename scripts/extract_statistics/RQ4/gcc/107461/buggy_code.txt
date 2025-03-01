@@ -1,0 +1,34 @@
+orig_fn = CALL_EXPR_FN (result);
+    	  if (TREE_CODE (orig_fn) == COMPONENT_REF)
+
+    	      orig_fn = TREE_OPERAND (orig_fn, 1);
+    	      gcc_assert (BASELINK_P (orig_fn));
+    	    }
+
+if (tree name = dependent_name (fn))
+
+    /* Subroutine of cp_tree_equal: t1 and t2 are the CALL_EXPR_FNs of two
+       CALL_EXPRS.  Return whether they are equivalent.  */
+
+      tree name1 = dependent_name (t1);
+      tree name2 = dependent_name (t2);
+
+    	if (!called_fns_equal (CALL_EXPR_FN (t1), CALL_EXPR_FN (t2)))
+
+orig_fn = CALL_EXPR_FN (result);
+    	  if (TREE_CODE (orig_fn) == COMPONENT_REF)
+
+    	      orig_fn = TREE_OPERAND (orig_fn, 1);
+    	      gcc_assert (BASELINK_P (orig_fn));
+    	    }
+
+if (tree name = dependent_name (fn))
+
+    /* Subroutine of cp_tree_equal: t1 and t2 are the CALL_EXPR_FNs of two
+       CALL_EXPRS.  Return whether they are equivalent.  */
+
+      tree name1 = dependent_name (t1);
+      tree name2 = dependent_name (t2);
+
+    	if (!called_fns_equal (CALL_EXPR_FN (t1), CALL_EXPR_FN (t2)))
+

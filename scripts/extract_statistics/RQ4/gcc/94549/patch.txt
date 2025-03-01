@@ -1,0 +1,20 @@
+if (!DECL_TEMPLATE_INFO (t))
+        /* For inherited constructors without template information, consider
+           the original declaration; it has the correct template information
+           attached.  */
+
+const tree saved_t = t;
+
+      /* For inherited constructors, consider the original declaration;
+         it has the correct template information attached. */
+      t = strip_inheriting_ctors (t);
+      tree inh_ctor_targs = NULL_TREE;
+      if (t != saved_t)
+        if (tree ti = DECL_TEMPLATE_INFO (saved_t))
+          /* The inherited constructor points to an instantiation of a constructor
+    	 template; remember its template arguments.  */
+          inh_ctor_targs = TI_ARGS (ti);
+
+          if (inh_ctor_targs)
+    	args = add_outermost_template_args (args, inh_ctor_targs);
+

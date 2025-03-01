@@ -1,0 +1,113 @@
+else if (!constraints_satisfied_p (new_friend))
+    	/* Only define a constrained hidden friend when satisfied.  */
+    	return error_mark_node;
+
+extern bool member_like_constrained_friend_p	(tree);
+
+    extern bool uses_outer_template_parms_in_constraints (tree, tree = NULL_TREE);
+
+    /* True if DECL is a constrained hidden friend as per [temp.friend]/9:
+    
+       A non-template friend declaration with a requires-clause shall be a
+       definition. A friend function template with a constraint that depends on a
+       template parameter from an enclosing template shall be a definition. Such a
+       constrained friend function or function template declaration does not
+       declare the same function or function template as a declaration in any other
+       scope.
+    
+       The ABI calls this a "member-like constrained friend" and mangles it like a
+       member function to avoid collisions.  */
+    
+    bool
+    member_like_constrained_friend_p (tree decl)
+    {
+      return (TREE_CODE (decl) == FUNCTION_DECL
+    	  && DECL_UNIQUE_FRIEND_P (decl)
+    	  && DECL_FRIEND_CONTEXT (decl)
+    	  && get_constraints (decl)
+    	  && (!DECL_TEMPLATE_INFO (decl)
+    	      || !PRIMARY_TEMPLATE_P (DECL_TI_TEMPLATE (decl))
+    	      || (uses_outer_template_parms_in_constraints
+    		  (most_general_template (decl)))));
+    }
+
+      /* [temp.friend]/9 "Such a constrained friend function does not declare the
+         same function as a declaration in any other scope."  So no need to
+         actually compare the requirements.  */
+      if (member_like_constrained_friend_p (newfn)
+          || member_like_constrained_friend_p (oldfn))
+        return false;
+    
+
+    		   /* Let constrained hidden friends coexist for now, we'll
+    		      check satisfaction later.  */
+    		   && !member_like_constrained_friend_p (newdecl)
+    		   && !member_like_constrained_friend_p (olddecl)
+
+          /* [temp.friend]/9 A non-template friend declaration with a
+    	 requires-clause shall be a definition. A friend function template with
+    	 a constraint that depends on a template parameter from an enclosing
+    	 template shall be a definition. */
+
+    	  if (!friendp || !processing_template_decl)
+    	    error_at (location, "constraints on a non-templated function");
+    	  else
+    	    error_at (location, "constrained non-template friend declaration"
+    		      " must be a definition");
+
+          if (ci && friendp && memtmpl && !funcdef_flag
+    	  && uses_outer_template_parms_in_constraints (decl, ctx))
+    	error_at (location, "friend function template with constraints that "
+    		  "depend on outer template parameters must be a definition");
+
+      if (member_like_constrained_friend_p (decl))
+        tcontext = DECL_FRIEND_CONTEXT (decl);
+    
+
+    			::= F <source-name> # member-like constrained friend
+
+    
+          /* A constrained hidden friend is mangled like a member function, with
+    	 the name prefixed by 'F'.  */
+          if (member_like_constrained_friend_p (decl))
+    	write_char ('F');
+    
+
+    uses_outer_template_parms_in_constraints (tree decl, tree ctx/*=NULL_TREE*/)
+
+      if (!ctx)
+        {
+          if (tree fc = DECL_FRIEND_CONTEXT (decl))
+    	ctx = fc;
+          else
+    	ctx = CP_DECL_CONTEXT (decl);
+        }
+      int depth = template_class_depth (ctx);
+
+      /* A member-like friend function.  */
+      DEMANGLE_COMPONENT_FRIEND,
+
+        case DEMANGLE_COMPONENT_FRIEND:
+
+    		      ::= [<module-name>] F <source-name> [<abi-tags>]
+
+      int member_like_friend = 0;
+
+      if (peek == 'F')
+        {
+          member_like_friend = 1;
+          d_advance (di, 1);
+          peek = d_peek_char (di);
+        }
+
+      if (member_like_friend)
+        ret = d_make_comp (di, DEMANGLE_COMPONENT_FRIEND, ret, NULL);
+
+        case DEMANGLE_COMPONENT_FRIEND:
+
+        case DEMANGLE_COMPONENT_FRIEND:
+          d_print_comp (dpi, options, d_left (dc));
+          d_append_string (dpi, "[friend]");
+          return;
+    
+

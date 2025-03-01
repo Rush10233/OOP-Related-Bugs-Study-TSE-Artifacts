@@ -1,0 +1,24 @@
+tree a = instance;
+    		  if (TREE_THIS_VOLATILE (a))
+    		    a = build_this (a);
+
+    		}
+    	      else if (call != error_mark_node
+    		       && DECL_DESTRUCTOR_P (cand->fn)
+
+tree a = instance;
+    		  if (TREE_THIS_VOLATILE (a))
+    		    a = build_this (a);
+
+    		}
+    	      else if (call != error_mark_node
+    		       && DECL_DESTRUCTOR_P (cand->fn)
+
+tree a = instance;
+    		  if (TREE_THIS_VOLATILE (a))
+    		    a = build_this (a);
+
+    		}
+    	      else if (call != error_mark_node
+    		       && DECL_DESTRUCTOR_P (cand->fn)
+

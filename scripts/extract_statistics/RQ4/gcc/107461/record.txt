@@ -1,0 +1,16 @@
+Commit:	ed2b519
+./gcc/cp/semantics.cc	2960,2961
+./gcc/cp/semantics.cc	2964,2966
+Commit:	cbebc0a
+./gcc/cp/pt.cc	1913,1913
+./gcc/cp/tree.cc	3832,3833
+./gcc/cp/tree.cc	3840,3841
+./gcc/cp/tree.cc	3955,3955
+Commit:	a91c0d0
+./gcc/cp/semantics.cc	2923,2924
+./gcc/cp/semantics.cc	2927,2929
+Commit:	e4421a7
+./gcc/cp/pt.cc	1844,1844
+./gcc/cp/tree.cc	3873,3874
+./gcc/cp/tree.cc	3881,3882
+./gcc/cp/tree.cc	4040,4040

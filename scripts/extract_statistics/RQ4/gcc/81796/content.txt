@@ -1,0 +1,10 @@
+
+          if (check_vdtor && type_has_virtual_destructor (BINFO_TYPE (base_binfo)))
+    	{
+    	  /* Unlike for base ctor/op=/dtor, for operator delete it's fine
+    	     to have a null fn (no class-specific op delete).  */
+
+    	  check_vdtor = false;
+    	}
+        }
+

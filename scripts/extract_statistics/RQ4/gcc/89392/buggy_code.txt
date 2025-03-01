@@ -1,0 +1,40 @@
+symtab->process_new_functions ();
+    
+
+          if (gcond *cond_stmt = dyn_cast <gcond *> (stmt))
+
+      if (gimple_code (last) != GIMPLE_COND)
+
+    		    gimple_set_no_warning (stmt, true);
+
+    		      if (TREE_CODE_CLASS (rhs_code) == tcc_comparison)
+
+        locus = gimple_location (last_stmt (exit->src));
+
+            locus = gimple_location (last_stmt (exit->src));
+
+        for (gsi = gsi_start_phis (bb); !gsi_end_p (gsi); gsi_next (&gsi))
+          did_something |= propagate_with_phi (bb, gsi.phi (), phivn, n);
+
+symtab->process_new_functions ();
+    
+
+symtab->process_new_functions ();
+    
+
+    /* Determines whether the chrec contains symbolic names or not.  */
+
+    chrec_contains_symbols (const_tree chrec)
+
+        if (chrec_contains_symbols (TREE_OPERAND (chrec, i)))
+
+    extern bool chrec_contains_symbols (const_tree);
+
+    	   && !chrec_contains_symbols (chrec_a)
+
+    	   && !chrec_contains_symbols (chrec_b))
+
+    	    dump_printf_loc (MSG_MISSED_OPTIMIZATION, vect_location,
+
+    	  *max_vf = abs (dist);
+

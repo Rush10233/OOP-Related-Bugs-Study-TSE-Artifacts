@@ -1,0 +1,6 @@
+&& TREE_CODE (*jump_target) == RETURN_EXPR;
+
+          gcc_assert (breaks (jump_target) || continues (jump_target));
+
+        cdtor_label = create_artificial_label (input_location);
+

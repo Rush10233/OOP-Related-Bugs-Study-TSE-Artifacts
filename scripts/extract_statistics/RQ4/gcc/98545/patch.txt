@@ -1,0 +1,16 @@
+if (IDENTIFIER_ANY_OP_P (member))
+
+    	  if (abi_version_at_least (11))
+    	    write_string ("on");
+
+          if (IDENTIFIER_ANY_OP_P (name))
+    	{
+    	  if (abi_version_at_least (15))
+    	    write_string ("on");
+    	  if (abi_warn_or_compat_version_crosses (15))
+    	    G.need_abi_warning = 1;
+    	}
+
+    @code{__alignof__} to be distinct from that of @code{alignof}, and
+    dependent operator names.
+

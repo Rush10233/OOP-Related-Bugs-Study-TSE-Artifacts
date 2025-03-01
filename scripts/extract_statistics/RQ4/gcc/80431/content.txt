@@ -1,0 +1,8 @@
+else if (TREE_CODE (*t) == CONVERT_EXPR
+    	   && CONVERT_EXPR_VBASE_PATH (*t))
+        {
+
+    			    tf_warning_or_error);
+        }
+    
+

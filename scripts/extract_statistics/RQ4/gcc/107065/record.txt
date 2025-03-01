@@ -1,0 +1,16 @@
+Commit:	7e54e5a
+./gcc/cp/parser.cc	10160,10160
+./gcc/cp/typeck.cc	7090,7090
+./gcc/cp/typeck.cc	7092,7092
+Commit:	5589bb8
+./gcc/cp/parser.c	9692,9692
+./gcc/cp/typeck.c	6585,6585
+./gcc/cp/typeck.c	6587,6587
+Commit:	9b580f5
+./gcc/cp/parser.c	9971,9971
+./gcc/cp/typeck.c	6744,6744
+./gcc/cp/typeck.c	6746,6746
+Commit:	f5300d2
+./gcc/cp/parser.cc	10227,10227
+./gcc/cp/typeck.cc	7399,7399
+./gcc/cp/typeck.cc	7401,7401

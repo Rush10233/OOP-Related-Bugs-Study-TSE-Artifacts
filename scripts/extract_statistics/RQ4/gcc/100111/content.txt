@@ -1,0 +1,101 @@
+{
+          /* See above on initialization of empty bases.  */
+          gcc_assert (is_empty_class (TREE_TYPE (init)) && !lval);
+
+          return init;
+        }
+      else
+
+releasing_vec ctors, indexes;
+      auto_vec<int> index_pos_hints;
+      bool activated_union_member_p = false;
+
+      while (!refs->is_empty ())
+        {
+          if (*valp == NULL_TREE)
+
+          no_zero_init = CONSTRUCTOR_NO_CLEARING (*valp);
+    
+          enum tree_code code = TREE_CODE (type);
+
+          tree index = refs->pop();
+    
+          if (code == RECORD_TYPE && is_empty_field (index))
+
+    	   fields, which confuses the middle-end.  The code below will notice
+    	   that we don't have a CONSTRUCTOR for our inner target and just
+    	   return init.  */
+
+    
+          if (code == UNION_TYPE && CONSTRUCTOR_NELTS (*valp)
+    	  && CONSTRUCTOR_ELT (*valp, 0)->index != index)
+
+    	}
+        }
+    
+
+      /* Don't share a CONSTRUCTOR that might be changed later.  */
+      init = unshare_constructor (init);
+    
+
+        {
+          /* An outer ctx->ctor might be pointing to *valp, so replace
+    	 its contents.  */
+          CONSTRUCTOR_ELTS (*valp) = CONSTRUCTOR_ELTS (init);
+          TREE_CONSTANT (*valp) = TREE_CONSTANT (init);
+          TREE_SIDE_EFFECTS (*valp) = TREE_SIDE_EFFECTS (init);
+          CONSTRUCTOR_NO_CLEARING (*valp)
+    	= CONSTRUCTOR_NO_CLEARING (init);
+        }
+      else
+        *valp = init;
+    
+
+    	   constructor of a delegating constructor).  Leave it up to the
+    	   caller that set 'this' to set TREE_READONLY appropriately.  */
+    	gcc_checking_assert (same_type_ignoring_top_level_qualifiers_p
+
+          else
+    	TREE_READONLY (*valp) = true;
+        }
+
+    	  CONSTRUCTOR_NO_CLEARING (elt) = false;
+          }
+    
+
+        return target;
+      else
+        return init;
+
+{
+          /* See above on initialization of empty bases.  */
+          gcc_assert (is_empty_class (TREE_TYPE (init)) && !lval);
+
+          return init;
+        }
+      else
+
+CONSTRUCTOR_NO_CLEARING (*valp)
+    	= CONSTRUCTOR_NO_CLEARING (init);
+        }
+
+      else
+        *valp = init;
+    
+
+CONSTRUCTOR_NO_CLEARING (*valp)
+    	= CONSTRUCTOR_NO_CLEARING (init);
+        }
+
+      else
+        *valp = init;
+    
+
+{
+          /* See above on initialization of empty bases.  */
+          gcc_assert (is_empty_class (TREE_TYPE (init)) && !lval);
+
+          return init;
+        }
+      else
+

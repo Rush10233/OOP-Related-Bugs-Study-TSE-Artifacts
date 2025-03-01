@@ -1,0 +1,10 @@
+EmitAutoVarDecl(*S.getConditionVariable());
+
+        EmitAutoVarDecl(*S.getConditionVariable());
+
+          EmitAutoVarDecl(*S.getConditionVariable());
+
+            EmitAutoVarDecl(*S.getConditionVariable());
+
+        EmitAutoVarDecl(*S.getConditionVariable());
+

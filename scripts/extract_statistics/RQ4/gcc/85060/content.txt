@@ -1,0 +1,16 @@
+bool
+    any_dependent_bases_p (tree type)
+    {
+
+        return false;
+    
+      unsigned i;
+
+bool
+    any_dependent_bases_p (tree type)
+    {
+
+        return false;
+    
+      /* If we haven't set TYPE_BINFO yet, we don't know anything about the bases.
+

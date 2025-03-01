@@ -1,0 +1,24 @@
+by the front end.  Here we have e.g. {.__pfn=0B, .__delta=0},
+    	       which is missing outermost braces.  We should warn below, and
+    	       one of the routines below will wrap it in additional { }.  */;
+
+    	    {
+    	      ++d->cur;
+    	      gcc_assert (!BRACE_ENCLOSED_INITIALIZER_P (init));
+
+by the front end.  Here we have e.g. {.__pfn=0B, .__delta=0},
+    	       which is missing outermost braces.  We should warn below, and
+    	       one of the routines below will wrap it in additional { }.  */;
+
+    	    {
+    	      ++d->cur;
+    	      gcc_assert (!BRACE_ENCLOSED_INITIALIZER_P (stripped_init));
+
+by the front end.  Here we have e.g. {.__pfn=0B, .__delta=0},
+    	       which is missing outermost braces.  We should warn below, and
+    	       one of the routines below will wrap it in additional { }.  */;
+
+    	    {
+    	      ++d->cur;
+    	      gcc_assert (!BRACE_ENCLOSED_INITIALIZER_P (stripped_init));
+

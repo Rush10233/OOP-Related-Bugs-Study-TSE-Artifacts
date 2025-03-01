@@ -1,0 +1,9 @@
+tree init = DECL_INITIAL (base);
+    	      return maybe_warn_about_returning_address_of_local (init);
+
+tree init = DECL_INITIAL (base);
+    	      return maybe_warn_about_returning_address_of_local (init);
+
+tree init = DECL_INITIAL (base);
+    	      return maybe_warn_about_returning_address_of_local (init);
+

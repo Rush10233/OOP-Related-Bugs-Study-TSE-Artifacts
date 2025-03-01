@@ -1,0 +1,8 @@
+// Use guarded initialization if the global variable is weak. This
+      // occurs for, e.g., instantiated static data members and
+      // definitions explicitly marked weak.
+
+        EmitCXXGuardedInit(*D, Addr, PerformInit);
+      } else {
+        EmitCXXGlobalVarDeclInit(*D, Addr, PerformInit);
+

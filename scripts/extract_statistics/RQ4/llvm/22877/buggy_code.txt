@@ -1,0 +1,7 @@
+LValue elementLV =
+          CGF.MakeAddrLValue(Address(currentElement, elementAlign), elementType);
+        if (filler)
+          EmitInitializationToLValue(filler, elementLV);
+        else
+          EmitNullInitializationToLValue(elementLV);
+

@@ -1,0 +1,2 @@
+if (Addr->hasWeakLinkage() || Addr->hasLinkOnceLinkage()) {
+

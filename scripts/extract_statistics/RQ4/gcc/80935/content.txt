@@ -1,0 +1,56 @@
+}
+    	  else
+    	    {
+
+    		{
+    		  error ("variable %qD of non-literal type %qT in %<constexpr%> "
+    			 "function", decl, type);
+
+            STRIP_NOPS (x);
+            if (is_this_parameter (x) && !is_capture_proxy (x))
+    	  {
+
+    	      {
+    		if (flags & tf_error)
+    		  error_at (loc, "use of %<this%> in a constant expression");
+
+    		   "uninitialized const %qD", decl);
+          else
+    	{
+
+    	  cp_function_chain->invalid_constexpr = true;
+    	}
+    
+
+}
+    	  else
+    	    {
+
+    		{
+    		  error ("variable %qD of non-literal type %qT in %<constexpr%> "
+    			 "function", decl, type);
+
+            STRIP_NOPS (x);
+            if (is_this_parameter (x) && !is_capture_proxy (x))
+    	  {
+
+    	      {
+    		if (flags & tf_error)
+    		  error_at (loc, "use of %<this%> in a constant expression");
+
+    		   "uninitialized const %qD", decl);
+          else
+    	{
+
+    	  cp_function_chain->invalid_constexpr = true;
+    	}
+    
+
+"uninitialized const %qD", decl);
+          else
+    	{
+
+    	  cp_function_chain->invalid_constexpr = true;
+    	}
+    
+

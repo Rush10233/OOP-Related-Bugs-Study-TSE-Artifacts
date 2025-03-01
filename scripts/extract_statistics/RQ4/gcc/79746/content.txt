@@ -1,0 +1,8 @@
+/* C++14 DR1658 Means we do not have to construct vbases of
+    	   abstract classes.  */
+    	construct_virtual_base (subobject, arguments);
+
+    
+          if (inherited_base)
+    	pop_deferring_access_checks ();
+

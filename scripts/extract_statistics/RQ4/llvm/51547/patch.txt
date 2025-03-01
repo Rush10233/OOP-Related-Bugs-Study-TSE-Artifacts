@@ -1,0 +1,4 @@
+Diag(*ArraySize ? (*ArraySize)->getExprLoc() : TypeRange.getBegin(),
+
+              << (*ArraySize ? (*ArraySize)->getSourceRange() : TypeRange));
+

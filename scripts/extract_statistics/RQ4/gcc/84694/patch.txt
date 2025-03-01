@@ -1,0 +1,3 @@
+if (!identifier_p (declarator))
+    	declarator = OVL_NAME (declarator);
+

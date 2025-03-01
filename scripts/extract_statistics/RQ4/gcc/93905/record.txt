@@ -1,0 +1,6 @@
+Commit:	07a0e38
+Commit:	45d71b5
+Commit:	f52ec6b
+./gcc/cp/constexpr.c	5001,5001
+./gcc/cp/constexpr.c	5005,5005
+./gcc/cp/constexpr.c	5008,5009

@@ -1,0 +1,24 @@
+/* For a nested compound literal, proceed to specialized routines,
+    	     to handle initialization of arrays and similar.  */
+    	  else if (COMPOUND_LITERAL_P (init))
+    	    gcc_assert (!BRACE_ENCLOSED_INITIALIZER_P (init));
+    	  /* A CONSTRUCTOR of the target's type is a previously
+    	     digested initializer.  */
+    	  else if (same_type_ignoring_top_level_qualifiers_p (type, init_type))
+
+/* For a nested compound literal, proceed to specialized routines,
+    	     to handle initialization of arrays and similar.  */
+    	  else if (COMPOUND_LITERAL_P (stripped_init))
+    	    gcc_assert (!BRACE_ENCLOSED_INITIALIZER_P (stripped_init));
+    	  /* A CONSTRUCTOR of the target's type is a previously
+    	     digested initializer.  */
+    	  else if (same_type_ignoring_top_level_qualifiers_p (type, init_type))
+
+/* For a nested compound literal, proceed to specialized routines,
+    	     to handle initialization of arrays and similar.  */
+    	  else if (COMPOUND_LITERAL_P (stripped_init))
+    	    gcc_assert (!BRACE_ENCLOSED_INITIALIZER_P (stripped_init));
+    	  /* A CONSTRUCTOR of the target's type is a previously
+    	     digested initializer.  */
+    	  else if (same_type_ignoring_top_level_qualifiers_p (type, init_type))
+

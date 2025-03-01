@@ -1,0 +1,4 @@
+Commit:	4d69799
+./gcc/cp/name-lookup.c	3456,3457
+Commit:	8ff22ea
+./gcc/cp/name-lookup.c	4170,4171

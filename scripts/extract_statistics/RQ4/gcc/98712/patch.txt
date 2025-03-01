@@ -1,0 +1,16 @@
+/* ...except handle comparisons later, in finish_struct_1.  */
+    	if (special_function_p (fn) == sfk_comparison)
+    	  continue;
+    
+
+          {
+    	/* Synthesize constexpr defaulted comparisons.  */
+    	if (!DECL_ARTIFICIAL (x)
+    	    && DECL_DEFAULTED_IN_CLASS_P (x)
+    	    && special_function_p (x) == sfk_comparison)
+    	  defaulted_late_check (x);
+    	DECL_IN_AGGR_P (x) = false;
+          }
+
+    extern void maybe_synthesize_method		(tree);
+

@@ -1,0 +1,24 @@
+ExprResult ActOnUnaryOp(Scope *S, SourceLocation OpLoc,
+                              tok::TokenKind Op, Expr *Input);
+    
+
+      QualType CheckAddressOfOperand(ExprResult &Operand, SourceLocation OpLoc);
+    
+      ExprResult CreateUnaryExprOrTypeTraitExpr(TypeSourceInfo *TInfo,
+
+    /// Determine whether the given expression is a qualified member
+    /// access expression, of a form that could be turned into a pointer to member
+    /// with the address-of operator.
+
+      if (DeclRefExpr *DRE = dyn_cast<DeclRefExpr>(E)) {
+        if (!DRE->getQualifier())
+          return false;
+
+        // -> is never a builtin operation.
+        return SemaRef.BuildOverloadedArrowExpr(nullptr, First, OpLoc);
+      } else if (Second == nullptr || isPostIncDec) {
+
+          UnaryOperatorKind Opc
+            = UnaryOperator::getOverloadedOpcode(Op, isPostIncDec);
+    
+

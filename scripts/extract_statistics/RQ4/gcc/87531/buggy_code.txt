@@ -1,0 +1,38 @@
+
+          if (val && TREE_CODE (val) == OVERLOAD
+    	  && TREE_CODE (OVL_FUNCTION (val)) == USING_DECL)
+    	{
+    	  /* An overload with a dependent USING_DECL.  Does the caller
+    	     want the USING_DECL or the functions?  */
+    	  if (type_or_fns < 0)
+    	    val = OVL_CHAIN (val);
+    	  else
+    	    val = OVL_FUNCTION (val);  
+    	}
+
+    		    if (!DECL_FUNCTION_MEMBER_P (fn)
+    			&& !DECL_LOCAL_FUNCTION_P (fn))
+
+    	      && TREE_CODE (first_fn) == FUNCTION_DECL
+    	      && DECL_FUNCTION_MEMBER_P (first_fn)
+    	      && !shared_member_p (decl))
+
+
+          if (val && TREE_CODE (val) == OVERLOAD
+    	  && TREE_CODE (OVL_FUNCTION (val)) == USING_DECL)
+    	{
+    	  /* An overload with a dependent USING_DECL.  Does the caller
+    	     want the USING_DECL or the functions?  */
+    	  if (type_or_fns < 0)
+    	    val = OVL_CHAIN (val);
+    	  else
+    	    val = OVL_FUNCTION (val);  
+    	}
+
+    		    if (!DECL_FUNCTION_MEMBER_P (fn)
+    			&& !DECL_LOCAL_FUNCTION_P (fn))
+
+    	      && TREE_CODE (first_fn) == FUNCTION_DECL
+    	      && DECL_FUNCTION_MEMBER_P (first_fn)
+    	      && !shared_member_p (decl))
+

@@ -1,0 +1,2 @@
+if (!fn || DECL_HAS_VTT_PARM_P (fn))
+

@@ -1,0 +1,7 @@
+/* In a local class, a friend function declaration must
+    		   find a matching decl in the innermost non-class scope.
+    		   [class.friend/11] */
+    		error ("friend declaration %qD in local class without "
+    		       "prior local declaration", decl);
+    	      else if (!flag_friend_injection)
+

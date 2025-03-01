@@ -1,0 +1,5 @@
+declared inside a class.  */
+
+      while (ovl && TREE_CODE (ovl) == OVERLOAD && OVL_HIDDEN_P (ovl))
+        ovl = OVL_CHAIN (ovl);
+

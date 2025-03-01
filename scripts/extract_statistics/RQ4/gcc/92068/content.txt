@@ -1,0 +1,45 @@
+return decl;
+        }
+    
+
+      /* If we aren't in a dependent class, we can actually try deduction.  */
+      else if (tpd.level == 1
+    	   /* FIXME we should be able to handle a partial specialization of a
+
+    
+         Also, we verify that pack expansions only occur at the
+         end of the argument list.  */
+      tpd2.parms = 0;
+      for (i = 0; i < nargs; ++i)
+        {
+
+return decl;
+        }
+    
+
+      /* If we aren't in a dependent class, we can actually try deduction.  */
+      else if (tpd.level == 1
+    	   /* FIXME we should be able to handle a partial specialization of a
+
+    
+         Also, we verify that pack expansions only occur at the
+         end of the argument list.  */
+      tpd2.parms = 0;
+      for (i = 0; i < nargs; ++i)
+        {
+
+return decl;
+        }
+    
+
+      /* If we aren't in a dependent class, we can actually try deduction.  */
+      else if (tpd.level == 1
+    	   /* FIXME we should be able to handle a partial specialization of a
+
+    
+         Also, we verify that pack expansions only occur at the
+         end of the argument list.  */
+      tpd2.parms = 0;
+      for (i = 0; i < nargs; ++i)
+        {
+

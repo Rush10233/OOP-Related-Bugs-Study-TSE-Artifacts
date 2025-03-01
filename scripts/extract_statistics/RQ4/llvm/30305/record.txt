@@ -1,0 +1,4 @@
+Commit:	f51ba1e
+./clang/test/CXX/dcl.dcl/basic.namespace/namespace.udecl/p15.cpp	37,37
+./clang/test/CXX/dcl.dcl/basic.namespace/namespace.udecl/p15.cpp	47,47
+./clang/test/CXX/dcl.dcl/basic.namespace/namespace.udecl/p15.cpp	78,78

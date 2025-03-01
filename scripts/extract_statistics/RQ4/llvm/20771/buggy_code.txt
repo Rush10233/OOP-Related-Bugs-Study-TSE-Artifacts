@@ -1,0 +1,21 @@
+if (isa<UndefValue>(Ops[0])) {
+        // Compute the (pointer) type returned by the GEP instruction.
+        Type *LastType = GetElementPtrInst::getIndexedType(PtrTy, Ops.slice(1));
+        Type *GEPTy = PointerType::get(LastType, PtrTy->getAddressSpace());
+        if (VectorType *VT = dyn_cast<VectorType>(Ops[0]->getType()))
+          GEPTy = VectorType::get(GEPTy, VT->getNumElements());
+
+      }
+
+        // getelementptr P, N -> P if P points to a type of zero size.
+        if (Q.DL) {
+          Type *Ty = PtrTy->getElementType();
+          if (Ty->isSized() && Q.DL->getTypeAllocSize(Ty) == 0)
+
+ErrorOr<Module *> MOrErr =
+          getLazyBitcodeModule(MemBuf.get(), getGlobalContext());
+
+      M->materializeAllPermanently(true);
+
+return Temp;
+

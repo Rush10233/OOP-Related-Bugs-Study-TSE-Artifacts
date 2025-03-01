@@ -1,0 +1,3 @@
+void MemberExpr::setMemberDecl(ValueDecl *D) {
+      MemberDecl = D;
+

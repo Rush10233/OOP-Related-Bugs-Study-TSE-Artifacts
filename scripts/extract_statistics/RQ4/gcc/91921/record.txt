@@ -1,0 +1,6 @@
+Commit:	028c9b3
+./gcc/cp/class.c	2918,2922
+./gcc/testsuite/g++.dg/warn/pr61945.C	10,10
+./gcc/testsuite/g++.old-deja/g++.mike/warn6.C	33,33
+./gcc/testsuite/g++.old-deja/g++.mike/warn6.C	38,38
+./gcc/testsuite/g++.old-deja/g++.mike/warn6.C	40,40

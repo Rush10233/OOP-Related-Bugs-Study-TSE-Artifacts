@@ -1,0 +1,3 @@
+Commit:	760a2ac
+./clang/lib/AST/ExprConstant.cpp	5120,5129
+./clang/lib/AST/ExprConstant.cpp	5609,5621

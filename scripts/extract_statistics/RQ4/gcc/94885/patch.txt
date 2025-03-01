@@ -1,0 +1,12 @@
+if (next == error_mark_node)
+    	/* We skip initializers for empty bases/fields, so skipping an invalid
+    	   one could make us accept invalid code.  */
+    	return PICFLAG_ERRONEOUS;
+          else if (next)
+
+if (next == error_mark_node)
+    	/* We skip initializers for empty bases/fields, so skipping an invalid
+    	   one could make us accept invalid code.  */
+    	return PICFLAG_ERRONEOUS;
+          else if (next)
+

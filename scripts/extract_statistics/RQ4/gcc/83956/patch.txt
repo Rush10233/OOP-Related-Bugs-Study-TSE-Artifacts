@@ -1,0 +1,12 @@
+/* Variant members only affect deletedness.  In particular, they don't
+    	 affect the exception-specification of a user-provided destructor,
+    	 which we're figuring out via get_defaulted_eh_spec.  So if we aren't
+    	 asking if this is deleted, don't even look up the function; we don't
+    	 want an error about a deleted function we aren't actually calling.  */
+          if (sfk == sfk_destructor && deleted_p == NULL
+    	  && TREE_CODE (DECL_CONTEXT (field)) == UNION_TYPE)
+    	break;
+    
+
+    				       NULL, NULL, &deleted_p, NULL, true,
+

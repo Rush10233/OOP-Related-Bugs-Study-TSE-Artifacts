@@ -1,0 +1,28 @@
+continue;
+          }
+    
+
+              !S.Context.getTargetInfo().getCXXABI().isMicrosoft()) {
+
+            continue;
+          }
+        }
+
+"%select{|implicit default |inheriting }0constructor for %1 must explicitly "
+      "initialize the %select{base class|member}2 %3 which does not have a default "
+      "constructor">;
+
+    
+    def err_illegal_union_or_anon_struct_member : Error<
+      "%select{anonymous struct|union}0 member %1 has a non-trivial "
+
+            // defaulted methods, and the copy and move assignment operators. The
+            // latter are exported even if they are trivial, because the address of
+            // an operator can be taken and should compare equal accross libraries.
+
+            S.MarkFunctionReferenced(Class->getLocation(), MD);
+
+    
+            // There is no later point when we will see the definition of this
+            // function, so pass it to the consumer now.
+

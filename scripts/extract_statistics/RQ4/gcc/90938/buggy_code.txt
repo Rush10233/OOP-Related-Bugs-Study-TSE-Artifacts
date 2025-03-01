@@ -1,0 +1,4 @@
+return initializer_zerop (init);
+
+return initializer_zerop (init);
+

@@ -1,0 +1,88 @@
+}
+    }
+    
+
+    /* Subroutine of cxx_eval_constant_expression.
+       Evaluate the call expression tree T in the context of OLD_CALL expression
+       evaluation.  */
+
+    
+      depth_ok = push_cx_call_context (t);
+    
+
+      tree result = NULL_TREE;
+    
+      constexpr_call *entry = NULL;
+
+    		}
+    	    }
+    
+
+    	  /* Forget the saved values of the callee's SAVE_EXPRs.  */
+    	  unsigned int i;
+    	  tree save_expr;
+
+        }
+    }
+    
+
+    /* Evaluate an INIT_EXPR or MODIFY_EXPR.  */
+    
+    static tree
+
+      /* Find the underlying variable.  */
+      releasing_vec refs;
+      tree object = NULL_TREE;
+
+      for (tree probe = target; object == NULL_TREE; )
+        {
+          switch (TREE_CODE (probe))
+
+    	  {
+    	    tree ob = TREE_OPERAND (probe, 0);
+    	    tree elt = TREE_OPERAND (probe, 1);
+
+    	    if (TREE_CODE (probe) == ARRAY_REF)
+    	      {
+    		elt = eval_and_check_array_index (ctx, probe, false,
+
+    	}
+        }
+    
+
+      /* And then find/build up our initializer for the path to the subobject
+         we're initializing.  */
+      tree *valp;
+
+          valp = &cep->value;
+        }
+    
+
+      if (!preeval)
+        {
+          /* Create a new CONSTRUCTOR in case evaluation of the initializer
+
+        VERIFY_CONSTANT (mod);
+    
+      /* Storing the modified value.  */
+
+      cxx_eval_constant_expression (ctx, store,
+    				true, non_constant_p, overflow_p);
+      ggc_free (store);
+
+    						 non_constant_p, overflow_p);
+    	    /* Don't share a CONSTRUCTOR that might be changed.  */
+    	    init = unshare_constructor (init);
+
+    	    ctx->values->put (r, init);
+    	  }
+    	else if (ctx == &new_ctx)
+
+/*lval*/false,
+    						     non_constant_p,
+    						     overflow_p);
+
+    	    }
+    
+    	  /* Forget the saved values of the callee's SAVE_EXPRs and
+

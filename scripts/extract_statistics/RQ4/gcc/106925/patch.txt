@@ -1,0 +1,14 @@
+const bool function_body
+
+           && current_binding_level->level_chain->kind == sk_function_parms
+          /* When we're processing a default argument, c_f_d may not have been
+    	 set.  */
+           && current_function_decl);
+
+const bool function_body
+
+           && current_binding_level->level_chain->kind == sk_function_parms
+          /* When we're processing a default argument, c_f_d may not have been
+    	 set.  */
+           && current_function_decl);
+

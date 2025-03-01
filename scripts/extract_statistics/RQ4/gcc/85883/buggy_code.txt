@@ -1,0 +1,2 @@
+if (vec_safe_length (*init) == 1)
+

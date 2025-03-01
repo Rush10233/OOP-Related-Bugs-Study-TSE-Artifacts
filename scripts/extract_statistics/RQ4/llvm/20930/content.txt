@@ -1,0 +1,26 @@
+}
+    
+      IndirectFieldDecl *ToIndirectField = IndirectFieldDecl::Create(
+
+      ToIndirectField->setAccess(D->getAccess());
+      ToIndirectField->setLexicalDeclContext(LexicalDC);
+      Importer.Imported(D, ToIndirectField);
+
+            for (unsigned i = 0; i < Chaining.size(); i++)
+              NamedChain[i] = Chaining[i];
+    
+
+    
+            IndirectField->setAccess(AS);
+            IndirectField->setImplicit();
+
+      }
+    
+      QualType T = cast<FieldDecl>(NamedChain[i-1])->getType();
+
+    
+
+    
+      IndirectField->setImplicit(D->isImplicit());
+      IndirectField->setAccess(D->getAccess());
+

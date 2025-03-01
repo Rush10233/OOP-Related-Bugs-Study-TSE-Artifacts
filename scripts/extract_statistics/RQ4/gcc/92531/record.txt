@@ -1,0 +1,6 @@
+Commit:	5c7938e
+./gcc/cp/pt.c	10124,10132
+./gcc/cp/pt.c	10135,10139
+Commit:	c60a18f
+./gcc/cp/pt.c	10540,10548
+./gcc/cp/pt.c	10551,10555

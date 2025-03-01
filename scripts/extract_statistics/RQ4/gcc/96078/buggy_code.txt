@@ -1,0 +1,6 @@
+warning_at (DECL_SOURCE_LOCATION (node->decl), OPT_Wattributes,
+    		      "%<flatten%> attribute is ignored on aliases");
+
+warning_at (DECL_SOURCE_LOCATION (node->decl), OPT_Wattributes,
+    		      "%<flatten%> attribute is ignored on aliases");
+

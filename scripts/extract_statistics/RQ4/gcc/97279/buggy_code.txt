@@ -1,0 +1,18 @@
+/* This is only useful in a generic lambda.  */
+
+      /* Do this for lambdas and code that will emit a CMI.  In a module's
+         GMF we don't yet know whether there will be a CMI.  */
+      if (!module_has_cmi_p () && !global_purview_p () && !current_lambda_expr())
+         return;
+    
+      tree fnname = ovl_op_identifier (false, TREE_CODE (e));
+      if (!fnname)
+
+    	return build_min_nt_loc (loc, COMPOUND_EXPR, op1, op2);
+
+      tree op = build_nt (modifycode, NULL_TREE, NULL_TREE);
+
+            return build_min_nt_loc (loc, MODOP_EXPR, lhs,
+    				 build_min_nt_loc (loc, modifycode, NULL_TREE,
+    						   NULL_TREE), rhs);
+

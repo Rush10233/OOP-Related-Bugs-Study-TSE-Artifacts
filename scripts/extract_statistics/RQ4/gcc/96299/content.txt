@@ -1,0 +1,200 @@
+overflow_p);
+      else if (code == SPACESHIP_EXPR)
+        {
+
+          return cxx_eval_constant_expression (ctx, r, lval, non_constant_p,
+    					   overflow_p);
+        }
+
+      tree type = TREE_TYPE (expr);
+      tree op0 = TREE_OPERAND (expr, 0);
+      tree op1 = TREE_OPERAND (expr, 1);
+
+    }
+    
+    /* If EXPR involves an anonymous VLA type, prepend a DECL_EXPR for that type
+
+    						 enum tree_code,
+    						 int, tree, tree, tree, tree *,
+    						 tsubst_flags_t);
+
+    extern tree build_op_call			(tree, vec<tree, va_gc> **,
+    						 tsubst_flags_t);
+    extern bool aligned_allocation_fn_p		(tree);
+
+    extern tree strip_array_domain			(tree);
+    extern tree check_return_expr			(tree, bool *);
+    extern tree spaceship_type			(tree, tsubst_flags_t = tf_warning_or_error);
+
+    extern tree cp_build_binary_op                  (const op_location_t &,
+    						 enum tree_code, tree, tree,
+    						 tsubst_flags_t);
+
+      return lookup_comparison_category (tag, complain);
+    }
+    
+
+    
+    tree
+
+    {
+      /* ??? maybe optimize based on knowledge of representation? */
+      comp_cat_tag tag = cat_tag_for (type);
+
+      gcc_checking_assert (tag < cc_last);
+    
+      tree r;
+
+    
+      tree gt = lookup_comparison_result (tag, type, 1);
+    
+
+      if (tag == cc_partial_ordering)
+        {
+          /* op0 == op1 ? equivalent : op0 < op1 ? less :
+
+          tree uo = lookup_comparison_result (tag, type, 3);
+
+        }
+      else
+        /* op0 == op1 ? equal : op0 < op1 ? less : greater */
+        r = gt;
+    
+      tree lt = lookup_comparison_result (tag, type, 2);
+
+    
+      tree eq = lookup_comparison_result (tag, type, 0);
+
+    
+      return r;
+    }
+
+      if (!info.defining && !(complain & tf_error) && !DECL_MAYBE_DELETED (fndecl))
+        return;
+    
+
+      const ovl_op_info_t *op = IDENTIFIER_OVL_OP_INFO (DECL_NAME (fndecl));
+      tree_code code = op->tree_code;
+    
+
+    
+      if (code == EQ_EXPR || code == SPACESHIP_EXPR)
+        {
+
+          bool bad = false;
+          auto_vec<tree> comps;
+    
+
+    	{
+    	  tree expr_type = TREE_TYPE (field);
+    
+
+    	  /* A defaulted comparison operator function for class C is defined as
+    	     deleted if any non-static data member of C is of reference type or
+    	     C has variant members.  */
+    	  if (TREE_CODE (expr_type) == REFERENCE_TYPE)
+    	    {
+    	      if (complain & tf_error)
+
+    			"reference member %qD", field);
+    	      bad = true;
+    	      continue;
+
+    		   && next_initializable_field (TYPE_FIELDS (expr_type)))
+    	    {
+    	      if (complain & tf_error)
+
+    			"anonymous union member");
+    	      bad = true;
+    	      continue;
+
+    				 NULL_TREE);
+    	  tree rhs_mem = build3 (COMPONENT_REF, expr_type, rhs, field,
+    				 NULL_TREE);
+
+    	  if (comp == error_mark_node)
+    	    {
+
+    	    }
+
+    	    {
+    	      /* The operator function is defined as deleted if ... Ri is not a
+    		 comparison category type.  */
+    	      if (complain & tf_error)
+
+    			"three-way comparison of %qD has type %qT, not a "
+    			"comparison category type", field, TREE_TYPE (comp));
+    	      bad = true;
+    	      continue;
+    	    }
+
+    	  comps.safe_push (comp);
+    	}
+          if (code == SPACESHIP_EXPR && is_auto (rettype))
+
+gcc_checking_assert (tag < cc_last);
+    
+      tree r;
+
+        {
+          op0 = save_expr (op0);
+          op1 = save_expr (op1);
+
+    
+      int flags = LOOKUP_NORMAL;
+      tsubst_flags_t complain = tf_none;
+
+    
+      if (tag == cc_partial_ordering)
+        {
+          /* op0 == op1 ? equivalent : op0 < op1 ? less :
+    	 op1 < op0 ? greater : unordered */
+          tree uo = lookup_comparison_result (tag, type, 3);
+
+        }
+      else
+        /* op0 == op1 ? equal : op0 < op1 ? less : greater */
+        r = gt;
+    
+      tree lt = lookup_comparison_result (tag, type, 2);
+
+    
+      tree eq = lookup_comparison_result (tag, type, 0);
+
+    
+      return r;
+    }
+
+gcc_checking_assert (tag < cc_last);
+    
+      tree r;
+
+        {
+          op0 = save_expr (op0);
+          op1 = save_expr (op1);
+
+    
+      int flags = LOOKUP_NORMAL;
+      tsubst_flags_t complain = tf_none;
+
+    
+      if (tag == cc_partial_ordering)
+        {
+          /* op0 == op1 ? equivalent : op0 < op1 ? less :
+    	 op1 < op0 ? greater : unordered */
+          tree uo = lookup_comparison_result (tag, type, 3);
+
+        }
+      else
+        /* op0 == op1 ? equal : op0 < op1 ? less : greater */
+        r = gt;
+    
+      tree lt = lookup_comparison_result (tag, type, 2);
+
+    
+      tree eq = lookup_comparison_result (tag, type, 0);
+
+    
+      return r;
+    }
+

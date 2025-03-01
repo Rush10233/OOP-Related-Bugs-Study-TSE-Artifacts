@@ -1,0 +1,64 @@
+max_index = fold_build2_loc (input_location, MINUS_EXPR,
+    				     TREE_TYPE (nelts), nelts,
+    				     build_one_cst (TREE_TYPE (nelts)));
+          /* Treat flexible array members like [0] arrays.  */
+          else if (TYPE_DOMAIN (type) == NULL_TREE)
+    	max_index = build_minus_one_cst (sizetype);
+
+          if (!integer_minus_onep (max_index))
+
+    	  if (integer_zerop (max_index))
+
+    			       max_index);
+
+    	  ce.value = build_zero_init_1 (TREE_TYPE (type), /*nelts=*/NULL_TREE,
+    					static_storage_p, NULL_TREE);
+
+max_index = fold_build2_loc (input_location, MINUS_EXPR,
+    				     TREE_TYPE (nelts), nelts,
+    				     build_one_cst (TREE_TYPE (nelts)));
+          /* Treat flexible array members like [0] arrays.  */
+          else if (TYPE_DOMAIN (type) == NULL_TREE)
+    	max_index = build_minus_one_cst (sizetype);
+
+          if (!integer_minus_onep (max_index))
+
+    	  if (integer_zerop (max_index))
+
+    			       max_index);
+
+    	  ce.value = build_zero_init_1 (TREE_TYPE (type), /*nelts=*/NULL_TREE,
+    					static_storage_p, NULL_TREE);
+
+max_index = fold_build2_loc (input_location, MINUS_EXPR,
+    				     TREE_TYPE (nelts), nelts,
+    				     build_one_cst (TREE_TYPE (nelts)));
+          /* Treat flexible array members like [0] arrays.  */
+          else if (TYPE_DOMAIN (type) == NULL_TREE)
+    	max_index = build_minus_one_cst (sizetype);
+
+          if (!integer_minus_onep (max_index))
+
+    	  if (integer_zerop (max_index))
+
+    			       max_index);
+
+    	  ce.value = build_zero_init_1 (TREE_TYPE (type), /*nelts=*/NULL_TREE,
+    					static_storage_p, NULL_TREE);
+
+max_index = fold_build2_loc (input_location, MINUS_EXPR,
+    				     TREE_TYPE (nelts), nelts,
+    				     build_one_cst (TREE_TYPE (nelts)));
+          /* Treat flexible array members like [0] arrays.  */
+          else if (TYPE_DOMAIN (type) == NULL_TREE)
+    	max_index = build_minus_one_cst (sizetype);
+
+          if (!integer_minus_onep (max_index))
+
+    	  if (integer_zerop (max_index))
+
+    			       max_index);
+
+    	  ce.value = build_zero_init_1 (TREE_TYPE (type), /*nelts=*/NULL_TREE,
+    					static_storage_p, NULL_TREE);
+

@@ -1,0 +1,12 @@
+|| !int_fits_type_p (init, type)))
+    	ok = false;
+        }
+
+      else if (TREE_CODE (ftype) == REAL_TYPE
+    	   && TREE_CODE (type) == REAL_TYPE)
+        {
+
+    	{
+    	  if (TREE_CODE (init) == REAL_CST)
+    	    {
+

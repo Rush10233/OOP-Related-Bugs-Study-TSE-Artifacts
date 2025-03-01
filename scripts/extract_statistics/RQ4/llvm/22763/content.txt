@@ -1,0 +1,16 @@
+/// True if this method is user-declared and was not
+      /// deleted or defaulted on its first declaration.
+      bool isUserProvided() const {
+
+      }
+    
+      void addOverriddenMethod(const CXXMethodDecl *MD);
+
+      if (!FD->isExternallyVisible())
+        return GVA_Internal;
+    
+
+      GVALinkage External;
+      switch (FD->getTemplateSpecializationKind()) {
+      case TSK_Undeclared:
+

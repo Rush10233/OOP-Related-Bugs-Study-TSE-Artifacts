@@ -1,0 +1,10 @@
+static void
+    cp_genericize_target_expr (tree *stmt_p)
+    {
+
+      cp_genericize_init (&TARGET_EXPR_INITIAL (*stmt_p),
+
+    }
+    
+    /* Genericization context.  */
+

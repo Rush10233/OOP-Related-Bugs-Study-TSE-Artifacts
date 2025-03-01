@@ -1,0 +1,5 @@
+{
+          pop_deferring_access_checks ();
+          return templ;
+        }
+

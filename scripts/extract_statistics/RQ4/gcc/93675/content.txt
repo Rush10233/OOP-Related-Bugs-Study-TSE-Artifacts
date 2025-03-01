@@ -1,0 +1,114 @@
+{
+    	tree eq = implicitly_declare_fn (sfk_comparison, t, false, space,
+    					 NULL_TREE);
+
+          }
+    
+      while (*access_decls)
+
+    extern bool maybe_explain_implicit_delete	(tree);
+    extern void explain_implicit_non_constexpr	(tree);
+    extern void deduce_inheriting_ctor		(tree);
+
+    extern void synthesize_method			(tree);
+    extern tree lazily_declare_fn			(special_function_kind,
+    						 tree);
+
+          /* Remember the current location for a function we will end up
+    	 synthesizing.  Then we can inform the user where it was
+    	 required in the case of error.  */
+
+    	DECL_SOURCE_LOCATION (decl) = input_location;
+    
+          /* Synthesizing an implicitly defined member function will result in
+
+        --cp_unevaluated_operand;
+    }
+    
+
+    /* Synthesize FNDECL, a non-static member function.   */
+    
+    void
+
+    
+      /* Reset the source location, we might have been previously
+         deferred, and thus have saved where we were first needed.  */
+
+        DECL_SOURCE_LOCATION (fndecl)
+          = DECL_SOURCE_LOCATION (TYPE_NAME (DECL_CONTEXT (fndecl)));
+    
+
+        type_set_nontrivial_flag (type, kind);
+    
+      /* Create the function.  */
+
+      if (raises)
+        {
+          if (raises != error_mark_node)
+
+    	 inheriting constructor doesn't satisfy the requirements.  */
+          constexpr_p = DECL_DECLARED_CONSTEXPR_P (inherited_ctor);
+        }
+    
+
+      DECL_IN_AGGR_P (fn) = 1;
+      DECL_ARTIFICIAL (fn) = 1;
+      DECL_DEFAULTED_FN (fn) = 1;
+
+{
+    	tree eq = implicitly_declare_fn (sfk_comparison, t, false, space,
+    					 NULL_TREE);
+
+          }
+    
+      while (*access_decls)
+
+    extern bool maybe_explain_implicit_delete	(tree);
+    extern void explain_implicit_non_constexpr	(tree);
+    extern void deduce_inheriting_ctor		(tree);
+
+    extern void synthesize_method			(tree);
+    extern tree lazily_declare_fn			(special_function_kind,
+    						 tree);
+
+          /* Remember the current location for a function we will end up
+    	 synthesizing.  Then we can inform the user where it was
+    	 required in the case of error.  */
+
+    	DECL_SOURCE_LOCATION (decl) = input_location;
+    
+          /* Synthesizing an implicitly defined member function will result in
+
+        --cp_unevaluated_operand;
+    }
+    
+
+    /* Synthesize FNDECL, a non-static member function.   */
+    
+    void
+
+    
+      /* Reset the source location, we might have been previously
+         deferred, and thus have saved where we were first needed.  */
+
+        DECL_SOURCE_LOCATION (fndecl)
+          = DECL_SOURCE_LOCATION (TYPE_NAME (DECL_CONTEXT (fndecl)));
+    
+
+        type_set_nontrivial_flag (type, kind);
+    
+      /* Create the function.  */
+
+      if (raises)
+        {
+          if (raises != error_mark_node)
+
+    	 inheriting constructor doesn't satisfy the requirements.  */
+          constexpr_p = DECL_DECLARED_CONSTEXPR_P (inherited_ctor);
+        }
+    
+
+      DECL_IN_AGGR_P (fn) = 1;
+      DECL_ARTIFICIAL (fn) = 1;
+      DECL_DEFAULTED_FN (fn) = 1;
+

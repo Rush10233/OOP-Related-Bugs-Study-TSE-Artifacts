@@ -1,0 +1,6 @@
+if (CALL_EXPR_FN (instance)
+    	  && TREE_HAS_CONSTRUCTOR (instance))
+
+if (CALL_EXPR_FN (instance)
+    	  && TREE_HAS_CONSTRUCTOR (instance))
+

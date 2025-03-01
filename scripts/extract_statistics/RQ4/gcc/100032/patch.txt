@@ -1,0 +1,15 @@
+/* Does the alias add cv-quals?  */
+          if (TYPE_QUALS (TREE_TYPE (underlying)) != TYPE_QUALS (TREE_TYPE (tmpl)))
+    	break;
+    
+
+/* Does the alias add cv-quals?  */
+          if (TYPE_QUALS (TREE_TYPE (underlying)) != TYPE_QUALS (TREE_TYPE (tmpl)))
+    	break;
+    
+
+/* Does the alias add cv-quals?  */
+          if (TYPE_QUALS (TREE_TYPE (underlying)) != TYPE_QUALS (TREE_TYPE (tmpl)))
+    	break;
+    
+

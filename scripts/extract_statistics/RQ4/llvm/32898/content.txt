@@ -1,0 +1,11 @@
+return Result;
+      }
+    
+
+      return FinishTemplateArgumentDeduction(
+          FunctionTemplate, Deduced, NumExplicitlySpecified, Specialization, Info,
+
+    }
+    
+    QualType Sema::adjustCCAndNoReturn(QualType ArgFunctionType,
+

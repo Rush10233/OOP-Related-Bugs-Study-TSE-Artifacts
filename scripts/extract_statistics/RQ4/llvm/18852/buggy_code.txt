@@ -1,0 +1,11 @@
+bool HasExplicitTemplateArgs);
+
+                                                 bool HasExplicitTemplateArgs)
+        : NumArgs(NumArgs), HasExplicitTemplateArgs(HasExplicitTemplateArgs) {
+
+        if (FD && FD->getNumParams() >= NumArgs &&
+            FD->getMinRequiredArguments() <= NumArgs)
+          return true;
+
+                                      ExplicitTemplateArgs != 0);
+

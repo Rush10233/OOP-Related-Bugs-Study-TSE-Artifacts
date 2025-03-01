@@ -1,0 +1,19 @@
+/* If totype isn't a reference, and LOOKUP_ONLYCONVERTING is
+
+    	      && cxx_dialect < cxx17
+    	      && (flags & LOOKUP_ONLYCONVERTING)
+
+    			    c_cast_p, complain & ~tf_no_cleanup);
+
+&& cxx_dialect < cxx17
+    	      && (flags & LOOKUP_ONLYCONVERTING)
+
+    		       c_cast_p, complain & ~tf_no_cleanup);
+
+/* If totype isn't a reference, and LOOKUP_ONLYCONVERTING is
+
+    	      && cxx_dialect < cxx17
+    	      && (flags & LOOKUP_ONLYCONVERTING)
+
+    			    c_cast_p, complain & ~tf_no_cleanup);
+

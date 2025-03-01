@@ -1,0 +1,18 @@
+&& !COMPLETE_TYPE_P (LAMBDA_EXPR_CLOSURE (tlambda))
+
+    		 in scope_chain.  But if the closure is already complete, we're
+    	         in an instantiation of a generic lambda, and the fake 'this'
+    	         is gone.  */
+
+&& !COMPLETE_TYPE_P (LAMBDA_EXPR_CLOSURE (tlambda))
+
+    		 in scope_chain.  But if the closure is already complete, we're
+    	         in an instantiation of a generic lambda, and the fake 'this'
+    	         is gone.  */
+
+&& !COMPLETE_TYPE_P (LAMBDA_EXPR_CLOSURE (tlambda))
+
+    		 in scope_chain.  But if the closure is already complete, we're
+    	         in an instantiation of a generic lambda, and the fake 'this'
+    	         is gone.  */
+

@@ -1,0 +1,18 @@
+{
+          if (block_may_fallthru (then_))
+    	stmt = build3 (COND_EXPR, void_type_node, boolean_false_node,
+    		       void_node, else_);
+          else
+    	stmt = else_;
+        }
+      else if (IF_STMT_CONSTEXPR_P (stmt))
+        stmt = integer_nonzerop (cond) ? then_ : else_;
+
+          if (IF_STMT_CONSTEXPR_P (stmt))
+    	{
+    	  if (integer_nonzerop (IF_COND (stmt)))
+    	    return block_may_fallthru (THEN_CLAUSE (stmt));
+    	  if (integer_zerop (IF_COND (stmt)))
+    	    return block_may_fallthru (ELSE_CLAUSE (stmt));
+    	}
+

@@ -1,0 +1,8 @@
+}
+    
+      bool TraverseTemplateName(TemplateName Template) {
+
+          if (TTP->getDepth() == Depth)
+            Used[TTP->getIndex()] = true;
+        RecursiveASTVisitor<MarkUsedTemplateParameterVisitor>::
+

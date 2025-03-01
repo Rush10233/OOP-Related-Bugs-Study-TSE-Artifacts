@@ -1,0 +1,27 @@
+tree outer_targs = NULL_TREE;
+          if (flag_concepts
+    	  && PLACEHOLDER_TYPE_CONSTRAINTS_INFO (auto_node)
+    	  && VAR_P (decl)
+    	  && DECL_LANG_SPECIFIC (decl)
+    	  && DECL_TEMPLATE_INFO (decl)
+    	  && !DECL_FUNCTION_SCOPE_P (decl))
+    	/* The outer template arguments might be needed for satisfaction.
+    	   (For function scope variables, do_auto_deduction will obtain the
+    	   outer template arguments from current_function_decl.)  */
+    	outer_targs = DECL_TI_ARGS (decl);
+
+    						   outer_targs, flags);
+
+tree outer_targs = NULL_TREE;
+          if (PLACEHOLDER_TYPE_CONSTRAINTS_INFO (auto_node)
+    	  && VAR_P (decl)
+    	  && DECL_LANG_SPECIFIC (decl)
+    	  && DECL_TEMPLATE_INFO (decl)
+    	  && !DECL_FUNCTION_SCOPE_P (decl))
+    	/* The outer template arguments might be needed for satisfaction.
+    	   (For function scope variables, do_auto_deduction will obtain the
+    	   outer template arguments from current_function_decl.)  */
+    	outer_targs = DECL_TI_ARGS (decl);
+
+    						   outer_targs, flags);
+

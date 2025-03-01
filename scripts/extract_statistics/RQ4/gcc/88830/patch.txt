@@ -1,0 +1,4 @@
+&& !CLASSTYPE_LAZY_DESTRUCTOR (ctype)
+          && DECL_DEFAULTED_IN_CLASS_P (CLASSTYPE_DESTRUCTOR (ctype)))
+        note_vague_linkage_fn (CLASSTYPE_DESTRUCTOR (ctype));
+

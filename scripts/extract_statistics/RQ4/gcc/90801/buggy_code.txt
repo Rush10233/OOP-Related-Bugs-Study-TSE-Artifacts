@@ -1,0 +1,27 @@
+unsigned HOST_WIDE_INT idx, tidx;
+
+    		/* Mark element for removal.  */
+    		CONSTRUCTOR_ELT (init, idx)->index = NULL_TREE;
+    	      num_split_elts++;
+
+          if (num_split_elts != 0)
+
+    	  for (tidx = 0, idx = 0; idx < CONSTRUCTOR_NELTS (init); ++idx)
+
+    		if (tidx != idx)
+    		  *CONSTRUCTOR_ELT (init, tidx) = *CONSTRUCTOR_ELT (init, idx);
+
+unsigned HOST_WIDE_INT idx;
+
+    		CONSTRUCTOR_ELTS (init)->ordered_remove (idx--);
+
+    	      /* FIXME: Ordered removal is O(1) so the whole function is
+    		 worst-case quadratic. This could be fixed using an aside
+    		 bitmap to record which elements must be removed and remove
+    		 them all at the same time. Or by merging
+    		 split_non_constant_init into process_init_constructor_array,
+    		 that is separating constants from non-constants while building
+    		 the vector.  */
+    	      CONSTRUCTOR_ELTS (init)->ordered_remove (idx);
+    	      --idx;
+

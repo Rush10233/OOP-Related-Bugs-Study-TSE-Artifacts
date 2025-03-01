@@ -1,0 +1,8 @@
+<< isClangCL;
+      }
+    
+
+      // Done. Everything else is run-time checks.
+      Kind = CK_Dynamic;
+    }
+

@@ -1,0 +1,16 @@
+looked up by digest_init.  */
+    	process_index_p = !(type && MAYBE_CLASS_TYPE_P (type));
+    
+
+    	n = vec_safe_copy (CONSTRUCTOR_ELTS (t));
+            newlen = vec_safe_length (n);
+    	FOR_EACH_VEC_SAFE_ELT (n, idx, ce)
+
+looked up by digest_init.  */
+    	process_index_p = !(type && MAYBE_CLASS_TYPE_P (type));
+    
+
+    	n = vec_safe_copy (CONSTRUCTOR_ELTS (t));
+            newlen = vec_safe_length (n);
+    	FOR_EACH_VEC_SAFE_ELT (n, idx, ce)
+

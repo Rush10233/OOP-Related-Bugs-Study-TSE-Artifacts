@@ -1,0 +1,8 @@
+Commit:	4971b40
+./clang/include/clang/Parse/Parser.h	1394,1396
+./clang/lib/Parse/ParseExpr.cpp	644,652
+./clang/lib/Parse/ParseExpr.cpp	2026,2026
+./clang/lib/Parse/ParseExprCXX.cpp	2912,2912
+./clang/lib/Parse/ParseExprCXX.cpp	2986,2986
+./clang/lib/Parse/ParseExprCXX.cpp	2988,2988
+./clang/lib/Parse/ParseExprCXX.cpp	2996,2996

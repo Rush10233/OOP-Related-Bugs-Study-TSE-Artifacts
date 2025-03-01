@@ -1,0 +1,8 @@
+Commit:	73e86b6
+./gcc/cp/parser.cc	26098,26099
+./gcc/cp/parser.cc	26175,26176
+./gcc/testsuite/g++.dg/lookup/name-clash11.C	10,10
+Commit:	1f641d6
+./gcc/cp/parser.cc	26372,26373
+./gcc/cp/parser.cc	26499,26500
+./gcc/testsuite/g++.dg/lookup/name-clash11.C	10,10

@@ -1,0 +1,9 @@
+"deduction guide template contains "
+        "%select{a template parameter|template parameters}0 that cannot be "
+        "deduced">;
+
+        if (FunctionTemplateDecl *FunTmpl = dyn_cast<FunctionTemplateDecl>(Member))
+          FunTmpl->getTemplatedDecl()->setAccess(AS);
+        else if (VarTemplateDecl *VarTmpl = dyn_cast<VarTemplateDecl>(Member))
+          VarTmpl->getTemplatedDecl()->setAccess(AS);
+

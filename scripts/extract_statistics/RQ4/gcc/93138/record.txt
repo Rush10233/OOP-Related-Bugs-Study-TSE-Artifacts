@@ -1,0 +1,3 @@
+Commit:	5205a44
+./gcc/cp/parser.c	30668,30669
+./gcc/testsuite/ChangeLog	1,1

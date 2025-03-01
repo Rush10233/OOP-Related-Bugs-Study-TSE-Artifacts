@@ -1,0 +1,51 @@
+"%select{non-struct type|non-class type|non-union type|non-enum "
+      "type|typedef|type alias|template|type alias template|template "
+      "template argument}1 %0 cannot be referenced with a "
+      "%select{struct|interface|union|class|enum}2 specifier">;
+
+      "implicit declaration introduced by elaborated type conflicts with a "
+      "%select{non-struct type|non-class type|non-union type|non-enum "
+      "type|typedef|type alias|template|type alias template|template "
+      "template argument}0 of the same name">;
+
+        NTK_NonStruct,
+        NTK_NonClass,
+        NTK_NonUnion,
+        NTK_NonEnum,
+
+      NonTagKind getNonTagTypeDeclKind(const Decl *D, TagTypeKind TTK);
+
+    Sema::NonTagKind Sema::getNonTagTypeDeclKind(const Decl *PrevDecl,
+                                                 TagTypeKind TTK) {
+
+      switch (TTK) {
+      case TTK_Struct:
+      case TTK_Interface:
+      case TTK_Class:
+        return getLangOpts().CPlusPlus ? NTK_NonClass : NTK_NonStruct;
+      case TTK_Union:
+        return NTK_NonUnion;
+      case TTK_Enum:
+        return NTK_NonEnum;
+      }
+      llvm_unreachable("invalid TTK");
+
+            NonTagKind NTK = getNonTagTypeDeclKind(PrevDecl, Kind);
+            Diag(NameLoc, diag::err_tag_reference_non_tag) << PrevDecl << NTK
+                                                           << Kind;
+
+            NonTagKind NTK = getNonTagTypeDeclKind(PrevDecl, Kind);
+
+        Diag(TemplateLoc, diag::err_tag_reference_non_tag)
+            << TAT << NTK_TypeAliasTemplate << TagKind;
+
+        NonTagKind NTK = getNonTagTypeDeclKind(TD, Kind);
+        Diag(TemplateNameLoc, diag::err_tag_reference_non_tag) << TD << NTK << Kind;
+
+              Sema::NonTagKind NTK = SemaRef.getNonTagTypeDeclKind(SomeDecl, Kind);
+              SemaRef.Diag(IdLoc, diag::err_tag_reference_non_tag) << SomeDecl
+                                                                   << NTK << Kind;
+
+                << TAT << Sema::NTK_TypeAliasTemplate
+                << ElaboratedType::getTagTypeKindForKeyword(T->getKeyword());
+

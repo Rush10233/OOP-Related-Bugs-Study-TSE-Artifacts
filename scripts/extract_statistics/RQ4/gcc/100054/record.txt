@@ -1,0 +1,10 @@
+Commit:	474cb5a
+./gcc/cp/init.c	589,590
+./gcc/cp/init.c	592,592
+./gcc/cp/init.c	598,599
+./gcc/cp/init.c	622,622
+Commit:	d83c30e
+./gcc/cp/init.c	588,589
+./gcc/cp/init.c	591,591
+./gcc/cp/init.c	597,598
+./gcc/cp/init.c	621,621

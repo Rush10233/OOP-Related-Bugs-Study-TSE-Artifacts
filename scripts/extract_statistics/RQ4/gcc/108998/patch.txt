@@ -1,0 +1,39 @@
+/* The unevaluated contexts that we avoided walking.  */
+      auto_vec<tree> skipped_trees;
+
+          data.skipped_trees.safe_push (*tp);
+
+      /* Now walk the unevaluated contexts we skipped the first time around.  */
+
+      for (tree t : data.skipped_trees)
+        {
+          data.visited.remove (t);
+          cp_walk_tree (&t, extract_locals_r, &data, &data.visited);
+        }
+
+/* The unevaluated contexts that we avoided walking.  */
+      auto_vec<tree> skipped_trees;
+
+          data.skipped_trees.safe_push (*tp);
+
+      /* Now walk the unevaluated contexts we skipped the first time around.  */
+
+      for (tree t : data.skipped_trees)
+        {
+          data.visited.remove (t);
+          cp_walk_tree (&t, extract_locals_r, &data, &data.visited);
+        }
+
+/* The unevaluated contexts that we avoided walking.  */
+      auto_vec<tree> skipped_trees;
+
+          data.skipped_trees.safe_push (*tp);
+
+      /* Now walk the unevaluated contexts we skipped the first time around.  */
+
+      for (tree t : data.skipped_trees)
+        {
+          data.visited.remove (t);
+          cp_walk_tree (&t, extract_locals_r, &data, &data.visited);
+        }
+

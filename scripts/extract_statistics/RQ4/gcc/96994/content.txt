@@ -1,0 +1,16 @@
+}
+    	    }
+    	  call = cxx_constant_value (call, obj_arg);
+
+    	}
+        }
+      return call;
+
+}
+    	    }
+    	  call = cxx_constant_value (call, obj_arg);
+
+    	}
+        }
+      return call;
+

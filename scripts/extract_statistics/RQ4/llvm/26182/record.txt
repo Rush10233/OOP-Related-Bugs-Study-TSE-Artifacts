@@ -1,0 +1,16 @@
+Commit:	1f30dba
+./clang/lib/Sema/SemaLookup.cpp	2476,2479
+./clang/lib/Sema/SemaLookup.cpp	2481,2481
+./clang/lib/Sema/SemaLookup.cpp	2484,2485
+./clang/lib/Sema/SemaLookup.cpp	2488,2489
+./clang/lib/Sema/SemaLookup.cpp	2493,2493
+./clang/lib/Sema/SemaLookup.cpp	2497,2497
+./clang/lib/Sema/SemaLookup.cpp	2542,2544
+./clang/lib/Sema/SemaLookup.cpp	2553,2553
+./clang/lib/Sema/SemaLookup.cpp	2557,2559
+./clang/lib/Sema/SemaLookup.cpp	2685,2688
+./clang/lib/Sema/SemaLookup.cpp	2696,2699
+./clang/lib/Sema/SemaLookup.cpp	2707,2707
+./clang/test/CXX/basic/basic.lookup/basic.lookup.argdep/p2-associated-namespaces-classes.cpp	41,41
+./clang/test/CXX/basic/basic.lookup/basic.lookup.argdep/p2-associated-namespaces-classes.cpp	44,46
+./clang/test/CXX/basic/basic.lookup/basic.lookup.argdep/p2-associated-namespaces-classes.cpp	86,86

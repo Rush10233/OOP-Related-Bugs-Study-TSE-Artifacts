@@ -1,0 +1,10 @@
+|| !VAR_OR_FUNCTION_DECL_P (decl))
+        return true;
+    
+
+        {
+
+          /* Before we start optimizing unreachable code we can be sure all
+    	 static objects are defined.  */
+          if (symtab->function_flags_ready)
+

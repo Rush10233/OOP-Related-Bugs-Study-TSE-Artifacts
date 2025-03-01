@@ -1,0 +1,92 @@
+location_t);
+    extern tree finish_typeof			(tree);
+    extern tree finish_underlying_type	        (tree);
+
+    extern tree finish_bases                        (tree, bool);
+
+    extern tree finish_offsetof			(tree, tree, location_t);
+    extern void finish_decl_cleanup			(tree, tree);
+    extern void finish_eh_cleanup			(tree);
+
+          int level = 0;
+    
+          if (TREE_CODE (parm_pack) == BASES)
+
+          else if (builtin_pack_call_p (parm_pack))
+    	{
+    	  /* ??? Support use in other patterns.  */
+
+    }
+    
+    /* Implement the __direct_bases keyword: Return the direct base classes
+
+    
+    tree
+
+    {
+
+        return make_tree_vec (0);
+    
+
+    
+      /* Virtual bases are initialized first */
+      for (i = 0; base_binfos->iterate (i, &binfo); i++)
+
+    
+      /* Now non-virtuals */
+      for (i = 0; base_binfos->iterate (i, &binfo); i++)
+
+    
+
+    
+      for (i = 0; i < vector->length (); ++i)
+
+      return bases_vec;
+    }
+    
+
+    {
+      vec<tree, va_gc> **data = ((vec<tree, va_gc> **) data_);
+      if (!BINFO_VIRTUAL_P (binfo))
+
+      return NULL_TREE;
+    }
+    
+    /* Calculates the morally non-virtual base classes of a class */
+    static vec<tree, va_gc> *
+    calculate_bases_helper (tree type)
+    {
+
+    
+      /* Now add non-virtual base classes in order of construction */
+      if (TYPE_BINFO (type))
+
+    }
+    
+    tree
+
+    {
+
+      tree bases_vec = NULL_TREE;
+      unsigned i;
+      vec<tree, va_gc> *vbases;
+      vec<tree, va_gc> *nonvbases;
+      tree binfo;
+    
+      /* First go through virtual base classes */
+      for (vbases = CLASSTYPE_VBASECLASSES (type), i = 0;
+           vec_safe_iterate (vbases, i, &binfo); i++)
+        {
+
+          vec_safe_splice (vector, vbase_bases);
+          release_tree_vector (vbase_bases);
+        }
+
+      if (vector->length () > 1)
+        {
+          /* Last element is entire class, so don't copy */
+
+    
+          for (i = 0; i < vector->length () - 1; ++i)
+    	TREE_VEC_ELT (bases_vec, i) = (*vector)[i];
+

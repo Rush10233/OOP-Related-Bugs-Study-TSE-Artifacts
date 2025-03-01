@@ -1,0 +1,18 @@
+tree tmpl_args = DECL_TI_ARGS (DECL_TEMPLATE_RESULT (templ));
+      arglist = add_outermost_template_args (tmpl_args, arglist);
+    
+      templ = most_general_template (templ);
+
+         instantiate; do this relative to the scope of the class for
+         sake of access checking.  */
+      push_nested_class (type);
+
+      pop_nested_class ();
+
+          tree tid = lookup_template_variable (gen_tmpl, targ_ptr);
+
+          tree tid = lookup_template_variable (gen_tmpl, gen_args);
+          tree elt = most_specialized_partial_spec (tid, tf_warning_or_error);
+
+instantiate.  */
+

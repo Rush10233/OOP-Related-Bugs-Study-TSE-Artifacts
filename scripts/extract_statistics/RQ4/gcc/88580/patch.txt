@@ -1,0 +1,23 @@
+tree value;
+    		  if (TREE_CODE (TREE_VALUE (arg)) == EXPR_PACK_EXPANSION)
+    		    value = TREE_VALUE (arg);
+    		  else
+    		    {
+    		      value = expr;
+    		      SET_PACK_EXPANSION_PATTERN (value, TREE_VALUE (arg));
+    		    }
+
+    		    = tsubst_pack_expansion (value, argvec,
+
+    		    if (TREE_CODE (TREE_VALUE (arg)) == EXPR_PACK_EXPANSION)
+    		      for (int j = 0; j < TREE_VEC_LENGTH (expanded_exprs); j++)
+    			TREE_VEC_ELT (expanded_arguments, i)
+    			  = tree_cons (NULL_TREE,
+    				       TREE_VEC_ELT (expanded_exprs, j),
+    				       TREE_VEC_ELT (expanded_arguments, i));
+    		    else
+    		      TREE_VEC_ELT (expanded_arguments, i)
+    			= tree_cons (NULL_TREE,
+    				     TREE_VEC_ELT (expanded_exprs, i),
+    				     TREE_VEC_ELT (expanded_arguments, i));
+

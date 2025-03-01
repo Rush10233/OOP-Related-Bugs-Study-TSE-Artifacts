@@ -1,0 +1,14 @@
+Commit:	e7c12a9
+Commit:	3571cc9
+./gcc/cp/cp-tree.h	7388,7388
+./gcc/cp/decl.cc	10314,10314
+./gcc/cp/pt.cc	11052,11052
+./gcc/cp/pt.cc	11059,11059
+./gcc/cp/pt.cc	11396,11398
+./gcc/testsuite/g++.dg/cpp2a/concepts-friend11.C	6,7
+./gcc/testsuite/g++.dg/cpp2a/concepts-friend11.C	11,11
+./gcc/testsuite/g++.dg/cpp2a/concepts-friend11.C	15,17
+./gcc/testsuite/g++.dg/cpp2a/concepts-friend11.C	19,21
+Commit:	a645347
+./gcc/cp/pt.cc	11376,11378
+./gcc/testsuite/g++.dg/cpp2a/concepts-friend11.C	10,10

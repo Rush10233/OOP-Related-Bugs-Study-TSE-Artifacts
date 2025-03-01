@@ -1,0 +1,4 @@
+Commit:	5830fff
+./gcc/cp/decl.c	947,947
+Commit:	d5b1bb0
+./gcc/cp/decl.c	958,958

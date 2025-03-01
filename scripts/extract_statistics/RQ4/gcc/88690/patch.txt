@@ -1,0 +1,16 @@
+if (DECL_SIZE (field) && integer_zerop (DECL_SIZE (field))
+    	  && !TREE_SIDE_EFFECTS (next))
+    	/* Don't add trivial initialization of an empty base/field to the
+    	   constructor, as they might not be ordered the way the back-end
+    	   expects.  */
+    	continue;
+    
+
+if (DECL_SIZE (field) && integer_zerop (DECL_SIZE (field))
+    	  && !TREE_SIDE_EFFECTS (next))
+    	/* Don't add trivial initialization of an empty base/field to the
+    	   constructor, as they might not be ordered the way the back-end
+    	   expects.  */
+    	continue;
+    
+

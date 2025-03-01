@@ -1,0 +1,108 @@
+/* Helper function for cxx_fold_indirect_ref_1, called recursively.  */
+    
+    static tree
+    cxx_fold_indirect_ref_1 (location_t loc, tree type, tree op,
+    			 unsigned HOST_WIDE_INT off, bool *empty_base)
+    {
+      tree optype = TREE_TYPE (op);
+      unsigned HOST_WIDE_INT const_nunits;
+      if (off == 0)
+        {
+          if (similar_type_p (optype, type))
+    	return op;
+          /* Also handle conversion to an empty base class, which
+    	 is represented with a NOP_EXPR.  */
+          /* *(foo *)&complexfoo => __real__ complexfoo */
+          else if (TREE_CODE (optype) == COMPLEX_TYPE
+    	       && similar_type_p (type, TREE_TYPE (optype)))
+    	return build1_loc (loc, REALPART_EXPR, type, op);
+        }
+      /* ((foo*)&complexfoo)[1] => __imag__ complexfoo */
+      else if (TREE_CODE (optype) == COMPLEX_TYPE
+    	   && similar_type_p (type, TREE_TYPE (optype))
+    	   && tree_to_uhwi (TYPE_SIZE_UNIT (type)) == off)
+        return build1_loc (loc, IMAGPART_EXPR, type, op);
+      if (is_empty_class (type)
+          && CLASS_TYPE_P (optype)
+          && DERIVED_FROM_P (type, optype))
+        {
+          *empty_base = true;
+          return op;
+        }
+      /* ((foo*)&vectorfoo)[x] => BIT_FIELD_REF<vectorfoo,...> */
+      else if (VECTOR_TYPE_P (optype)
+    	   && similar_type_p (type, TREE_TYPE (optype))
+    	   && TYPE_VECTOR_SUBPARTS (optype).is_constant (&const_nunits))
+        {
+          unsigned HOST_WIDE_INT part_width = tree_to_uhwi (TYPE_SIZE_UNIT (type));
+          unsigned HOST_WIDE_INT max_offset = part_width * const_nunits;
+          if (off < max_offset && off % part_width == 0)
+    	{
+    	  tree index = bitsize_int (off * BITS_PER_UNIT);
+    	  return build3_loc (loc, BIT_FIELD_REF, type, op,
+    			     TYPE_SIZE (type), index);
+    	}
+        }
+      /* ((foo *)&fooarray)[x] => fooarray[x] */
+      else if (TREE_CODE (optype) == ARRAY_TYPE
+    	   && tree_fits_uhwi_p (TYPE_SIZE_UNIT (TREE_TYPE (optype)))
+    	   && !integer_zerop (TYPE_SIZE_UNIT (TREE_TYPE (optype))))
+        {
+          tree type_domain = TYPE_DOMAIN (optype);
+          tree min_val = size_zero_node;
+          if (type_domain && TYPE_MIN_VALUE (type_domain))
+    	min_val = TYPE_MIN_VALUE (type_domain);
+          unsigned HOST_WIDE_INT el_sz
+    	= tree_to_uhwi (TYPE_SIZE_UNIT (TREE_TYPE (optype)));
+          unsigned HOST_WIDE_INT idx = off / el_sz;
+          unsigned HOST_WIDE_INT rem = off % el_sz;
+          if (tree_fits_uhwi_p (min_val))
+    	{
+    	  tree index = size_int (idx + tree_to_uhwi (min_val));
+    	  op = build4_loc (loc, ARRAY_REF, TREE_TYPE (optype), op, index,
+    			   NULL_TREE, NULL_TREE);
+    	  return cxx_fold_indirect_ref_1 (loc, type, op, rem,
+    					  empty_base);
+    	}
+        }
+      /* ((foo *)&struct_with_foo_field)[x] => COMPONENT_REF */
+      else if (TREE_CODE (optype) == RECORD_TYPE)
+        {
+          for (tree field = TYPE_FIELDS (optype);
+    	   field; field = DECL_CHAIN (field))
+    	if (TREE_CODE (field) == FIELD_DECL
+    	    && TREE_TYPE (field) != error_mark_node
+    	    && tree_fits_uhwi_p (TYPE_SIZE_UNIT (TREE_TYPE (field))))
+    	  {
+    	    tree pos = byte_position (field);
+    	    if (!tree_fits_uhwi_p (pos))
+    	      continue;
+    	    unsigned HOST_WIDE_INT upos = tree_to_uhwi (pos);
+    	    unsigned el_sz
+    	      = tree_to_uhwi (TYPE_SIZE_UNIT (TREE_TYPE (field)));
+    	    if (upos <= off && off < upos + el_sz)
+    	      {
+    		tree cop = build3 (COMPONENT_REF, TREE_TYPE (field),
+    				   op, field, NULL_TREE);
+    		if (tree ret = cxx_fold_indirect_ref_1 (loc, type, cop,
+    							off - upos,
+    							empty_base))
+    		  return ret;
+    	      }
+    	  }
+        }
+    
+      return NULL_TREE;
+    }
+    
+
+       with TBAA in fold_indirect_ref_1.  */
+
+          else
+    	return cxx_fold_indirect_ref_1 (loc, type, op, 0, empty_base);
+
+    	   && tree_fits_uhwi_p (TREE_OPERAND (sub, 1)))
+
+    	return cxx_fold_indirect_ref_1 (loc, type, TREE_OPERAND (op00, 0),
+    					tree_to_uhwi (op01), empty_base);
+

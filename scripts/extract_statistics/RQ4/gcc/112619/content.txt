@@ -1,0 +1,8 @@
+if (block_may_fallthru (TREE_OPERAND (stmt, 0)))
+        return true;
+    
+
+      i = tsi_start (TREE_OPERAND (stmt, 1));
+      switch (TREE_CODE (tsi_stmt (i)))
+        {
+

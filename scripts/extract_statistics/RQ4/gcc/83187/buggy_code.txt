@@ -1,0 +1,55 @@
+tree t;
+    
+
+      t = make_node (COMPLEX_TYPE);
+
+      TREE_TYPE (t) = TYPE_MAIN_VARIANT (component_type);
+
+      hashval_t hash = type_hash_canon_hash (t);
+      t = type_hash_canon (hash, t);
+    
+      if (!COMPLETE_TYPE_P (t))
+        layout_type (t);
+
+      if (TYPE_CANONICAL (t) == t)
+
+          if (TYPE_STRUCTURAL_EQUALITY_P (component_type))
+
+          else if (TYPE_CANONICAL (component_type) != component_type)
+
+    	  = build_complex_type (TYPE_CANONICAL (component_type), named);
+        }
+    
+      /* We need to create a name, since complex is a fundamental type.  */
+      if (!TYPE_NAME (t) && named)
+        {
+          const char *name;
+          if (component_type == char_type_node)
+    	name = "complex char";
+          else if (component_type == signed_char_type_node)
+    	name = "complex signed char";
+          else if (component_type == unsigned_char_type_node)
+    	name = "complex unsigned char";
+          else if (component_type == short_integer_type_node)
+    	name = "complex short int";
+          else if (component_type == short_unsigned_type_node)
+    	name = "complex short unsigned int";
+          else if (component_type == integer_type_node)
+    	name = "complex int";
+          else if (component_type == unsigned_type_node)
+    	name = "complex unsigned int";
+          else if (component_type == long_integer_type_node)
+    	name = "complex long int";
+          else if (component_type == long_unsigned_type_node)
+    	name = "complex long unsigned int";
+          else if (component_type == long_long_integer_type_node)
+    	name = "complex long long int";
+          else if (component_type == long_long_unsigned_type_node)
+    	name = "complex long long unsigned int";
+          else
+    	name = 0;
+
+          if (name != 0)
+    	TYPE_NAME (t) = build_decl (UNKNOWN_LOCATION, TYPE_DECL,
+    	    			    get_identifier (name), t);
+

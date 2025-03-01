@@ -1,0 +1,48 @@
+{
+          if (!push_tinst_level (t))
+    	return result;
+
+          push_access_scope (t);
+          result = satisfy_normalized_constraints (norm, args, info);
+          pop_access_scope (t);
+
+          pop_tinst_level ();
+        }
+    
+
+          if (!push_tinst_level (t, args))
+    	return result;
+          tree pattern = DECL_TEMPLATE_RESULT (t);
+
+          push_access_scope (pattern);
+          result = satisfy_normalized_constraints (norm, args, info);
+          pop_access_scope (pattern);
+
+          pop_tinst_level ();
+        }
+    
+
+{
+          if (!push_tinst_level (t))
+    	return result;
+
+          push_access_scope (t);
+          result = satisfy_normalized_constraints (norm, args, info);
+          pop_access_scope (t);
+
+          pop_tinst_level ();
+        }
+    
+
+          if (!push_tinst_level (t, args))
+    	return result;
+          tree pattern = DECL_TEMPLATE_RESULT (t);
+
+          push_access_scope (pattern);
+          result = satisfy_normalized_constraints (norm, args, info);
+          pop_access_scope (pattern);
+
+          pop_tinst_level ();
+        }
+    
+

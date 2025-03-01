@@ -1,0 +1,52 @@
+	Issue ID	Title
+0	25689	defaulted destructor pervents using constexpr on defaulted copy/move-operator
+1	25692	User-declared destructor makes all the defaulted assignment operators non-constexpr defined
+2	23808	segmentation fault in std::unique_ptr virtual destructor
+3	24033	Redeclaration inconsistency between struct and int
+4	25472	__attribute__((deprecated)) doesn't appear for implicit construction of rvalues [-Wdeprecated-declarations]
+5	22759	(Brace-) Copy-Initialization of lambda-member variables of class-templates fails with “error: excess elements in struct initializer”
+6	24511	clang segfaults on anonymous struct code
+7	24440	Fold expressions not evaluated when directly cast with a C-style cast
+8	25513	is_constructible<int (int)> should be false
+9	22710	Valid return type deduction for lambda functions not valid in C++14
+10	24030	Class declaration in the same declarative region as using declaration - Missing diagnostic message
+11	24798	clang crashes on invalid code on x86_64-linux-gnu
+12	23828	"[ms] ""Expected MSInheritanceAttr on the CXXRecordDecl!"" assert when passing address of base class member function through subclass access path"
+13	23802	cast-expression from lvalue to rvalue reference fails while reinterpret_cast for the same conversion works
+14	23558	BOOST + MSVC
+15	22192	When printing an ambiguous-overload error that causes a substitution failure, print the candidates
+16	23107	Constructor inheritance on template not working correctly
+17	23602	clang++ fails to compile libstdc++ debug/vector with -D_GLIBCXX_DEBUG -std=c++11 with libstdc++ 5.1+
+18	24409	Linker error on Clang on Windows targeting gcc when exporting individual member functions
+19	23303	Default template argument not being picked up when there's a forward declaration with no default template argument
+20	22465	An extra InitListExpr in r227424 likely caused by DR1467
+21	24770	wrong template partial specialization instantiated in constexpr context
+22	23402	Variable template instantiations in template arguments not considered constant expression
+23	24893	Crash on class containing function named free()
+24	25542	Crash when deleting a member with an initialiser of a class template
+25	23824	clang allows invalid lambda expression in decltype
+26	24473	Variable template cannot be used as dependent name
+27	23657	no matching constructor for initialization of 'string' (aka 'basic_string<char>')
+28	22444	[MSVC] 'mutable' must be allowed to be applied to references
+29	23849	Implement CWG 1579: Return by converting move constructor
+30	22793	Crash when explicitly instantiating a class template with a protected defaulted dtor, after a use of that dtor
+31	24058	Suspicious warning on non-deducible parameter pack
+32	24857	Crash when building Qt code
+33	23629	Crash with constexpr virtual function
+34	22257	Assertion failed: (DISubprogram(Scope).describes(MF->getFunction())), function getOrCreateRegularScope, file LexicalScopes.cpp, line 179
+35	23853	"Assertion `isa<LabelDecl>(D) && ""declaration not instantiated in this scope""' failed -- in instantiation of struct inside lambda inside template struct"
+36	22491	"[cwg948] ""type name does not allow constexpr specifier to be specified"" using constexpr in condition"
+37	22809	struct type alias with 'using' doesn't match correct constructor when defined inside the class
+38	24070	"crash Assertion failed: ((isDependent || !ObjectType->isIncompleteType()) && ""Caller should have completed object type"")"
+39	22763	Explicit template instantiations do not instantiate explicitly defaulted special members
+40	22310	incorrect function overloading resolution with initializer-list param
+41	25529	fatal error: error in backend: Starting a function before ending the previous one! (MinGW64/MSYS2)
+42	24863	"crasher: ""typedef &decltype(auto)::x T;"""
+43	22307	Template may multiply define friend function
+44	23840	SFINAE failure with variadic non-type template parameter
+45	24077	Corrupted member initialization via initialization list when in a lambda nested in a templated function
+46	24121	[OPENMP] canonical loop rejected when comparison has implicit conversions or destruction
+47	25857	Clang hangs in template instantiation after diagnosing C++11 narrowing in NTTP.
+48	23421	ICE when using __underlying_type builtin trait in template alias or function template signature
+49	22492	[cwg1204] Range-for rejects constexpr on loop variable
+50	22493	"Assertion `VD->isThisDeclarationADefinition() && !VD->isExternallyVisible() && ""Broken AliasAttr handled late!"""

@@ -1,0 +1,145 @@
+ArrayRef<NamedDecl *> Ctors,
+                               OverloadCandidateSet::iterator &Best,
+                               bool CopyInitializing, bool AllowExplicit,
+
+      CandidateSet.clear();
+    
+      for (ArrayRef<NamedDecl *>::iterator
+
+          Constructor = cast<CXXConstructorDecl>(D);
+    
+          // C++11 [over.best.ics]p4:
+
+            SuppressUserConversions = true;
+        }
+    
+
+      OverloadCandidateSet::iterator Best;
+      bool AsInitializerList = false;
+    
+
+      //   When objects of non-aggregate type T are list-initialized, such that
+      //   8.5.4 [dcl.init.list] specifies that overload resolution is performed
+      //   according to the rules in this section, overload resolution selects
+      //   the constructor in two phases:
+      //
+      //   - Initially, the candidate functions are the initializer-list
+      //     constructors of the class T and the argument list consists of the
+      //     initializer list as a single argument.
+
+          Result = ResolveConstructorOverload(S, Kind.getLocation(), Args,
+                                              CandidateSet, Ctors, Best,
+                                              CopyInitialization, AllowExplicit,
+
+    
+        // Time to unwrap the init list.
+        Args = MultiExprArg(ILE->getInits(), ILE->getNumInits());
+
+        Result = ResolveConstructorOverload(S, Kind.getLocation(), Args,
+                                            CandidateSet, Ctors, Best,
+                                            CopyInitialization, AllowExplicit,
+
+      }
+      if (Result) {
+        Sequence.SetOverloadFailure(InitListSyntax ?
+
+        return;
+      }
+    
+
+      // - If T is a class type and the initializer list has a single element of
+      //   type cv U, where U is T or a class derived from T, the object is
+      //   initialized from that element (by copy-initialization for
+
+      //   single element that is an appropriately-typed string literal
+      //   (8.5.2 [dcl.init.string]), initialization is performed as described
+      //   in that section.
+
+        if (DestType->isRecordType()) {
+          QualType InitType = InitList->getInit(0)->getType();
+          if (S.Context.hasSameUnqualifiedType(InitType, DestType) ||
+
+          InitList->getInit(0)->getType()->isRecordType()) {
+        //   - Otherwise, if the initializer list has a single element of type E
+        //     [...references are handled above...], the object or reference is
+        //     initialized from that element (by copy-initialization for
+        //     copy-list-initialization, or by direct-initialization for
+        //     direct-list-initialization); if a narrowing conversion is required
+
+      // Two implicit conversion sequences of the same form are
+      // indistinguishable conversion sequences unless one of the
+      // following rules apply: (C++ 13.3.3.2p3):
+
+      if (ICS1.isStandard())
+
+        Result = CompareStandardConversionSequences(S,
+                                                    ICS1.Standard, ICS2.Standard);
+      else if (ICS1.isUserDefined()) {
+
+                                              ICS2.UserDefined.ConversionFunction);
+      }
+    
+      return Result;
+    }
+    
+
+      if (S.RequireCompleteType(From->getLocStart(), ToType, 0))
+        return Result;
+    
+
+      // C++11 [over.ics.list]p2:
+      //   If the parameter type is std::initializer_list<X> or "array of X" and
+      //   all the elements can be implicitly converted to X, the implicit
+      //   conversion sequence is the worst conversion necessary to convert an
+      //   element of the list to X.
+
+      bool toStdInitializerList = false;
+      QualType X;
+      if (ToType->isArrayType())
+
+        return Result;
+      }
+    
+
+      // C++11 [over.ics.list]p3:
+      //   Otherwise, if the parameter is a non-aggregate class X and overload
+      //   resolution chooses a single best constructor [...] the implicit
+
+                                        /*AllowObjCConversionOnExplicit=*/false);
+      }
+    
+
+      // C++11 [over.ics.list]p4:
+      //   Otherwise, if the parameter has an aggregate type which can be
+      //   initialized from the initializer list [...] the implicit conversion
+
+        return Result;
+      }
+    
+
+      // C++11 [over.ics.list]p5:
+      //   Otherwise, if the parameter is a reference, see 13.3.3.1.4.
+      if (ToType->isReferenceType()) {
+
+        return Result;
+      }
+    
+
+      // C++11 [over.ics.list]p6:
+      //   Otherwise, if the parameter type is not a class:
+      if (!ToType->isRecordType()) {
+
+        unsigned NumInits = From->getNumInits();
+
+          Result = TryCopyInitialization(S, From->getInit(0), ToType,
+                                         SuppressUserConversions,
+                                         InOverloadResolution,
+
+        return Result;
+      }
+    
+
+      // C++11 [over.ics.list]p7:
+      //   In all cases other than those enumerated above, no conversion is possible
+      return Result;
+

@@ -1,0 +1,8 @@
+// This should never be overloaded and so should never return null.
+        CalleeType = Expr::findBoundMemberType(Callee);
+        assert(!CalleeType.isNull());
+
+      } else if (CalleeType->isDependentType() ||
+                 CalleeType->isSpecificPlaceholderType(BuiltinType::Overload)) {
+        return Ctx.DependentTy;
+

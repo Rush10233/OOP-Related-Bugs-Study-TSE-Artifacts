@@ -1,0 +1,32 @@
+targs = template_parms_to_args (tparms);
+    	  fparms = tsubst_arg_types (fparms, tsubst_args, NULL_TREE,
+    				     complain, ctor);
+
+    	  fargs = tsubst (fargs, tsubst_args, complain, ctor);
+    	  if (ci)
+    	    ci = tsubst_constraint_info (ci, tsubst_args, complain, ctor);
+
+      bool any_structural_p, any_noncanonical_p;
+      tree canon_argtypes;
+    
+
+      if (TREE_CODE (value_type) == FUNCTION_TYPE)
+        {
+          error ("function return type cannot be function");
+
+targs = template_parms_to_args (tparms);
+    	  fparms = tsubst_arg_types (fparms, tsubst_args, NULL_TREE,
+    				     complain, ctor);
+
+    	  fargs = tsubst (fargs, tsubst_args, complain, ctor);
+    	  if (ci)
+    	    ci = tsubst_constraint_info (ci, tsubst_args, complain, ctor);
+
+      bool any_structural_p, any_noncanonical_p;
+      tree canon_argtypes;
+    
+
+      if (TREE_CODE (value_type) == FUNCTION_TYPE)
+        {
+          error ("function return type cannot be function");
+

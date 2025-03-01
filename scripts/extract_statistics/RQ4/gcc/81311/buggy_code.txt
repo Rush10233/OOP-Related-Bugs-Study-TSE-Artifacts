@@ -1,0 +1,35 @@
+/* FIXME P0135 doesn't say what to do in C++17 about list-initialization from
+    
+         consider conversion operators from the element.  */
+      if (cxx_dialect >= cxx17
+          && BRACE_ENCLOSED_INITIALIZER_P (expr)
+          && CONSTRUCTOR_NELTS (expr) == 1)
+        fromtype = TREE_TYPE (CONSTRUCTOR_ELT (expr, 0)->value);
+    
+
+    	/* FIXME see above about C++17.  */
+
+      if (! flag_elide_constructors)
+
+    	   && cp_noexcept_operand == 0)
+
+          if (!trivial)
+
+          /* FIXME P0135 doesn't say how to handle direct initialization from a
+    	 type with a suitable conversion operator.  Let's handle it like
+    	 copy-initialization, but allowing explict conversions.  */
+          tsubst_flags_t sub_complain = tf_warning;
+          if (!is_dummy_object (instance))
+    	/* If we're using this to initialize a non-temporary object, don't
+    	   require the destructor to be accessible.  */
+    	sub_complain |= tf_no_cleanup;
+
+    	  && !CONSTRUCTOR_IS_DIRECT_INIT (arg))
+    	/* An init-list arg needs to convert to the parm type (83937), so fall
+    	   through to normal processing.  */
+    	arg = error_mark_node;
+          else if (!reference_related_p (class_type, TREE_TYPE (arg)))
+    	arg = perform_implicit_conversion_flags (class_type, arg,
+    						 sub_complain,
+    						 flags);
+

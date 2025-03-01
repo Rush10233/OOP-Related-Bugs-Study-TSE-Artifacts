@@ -1,0 +1,2 @@
+return R.empty() ? nullptr : dyn_cast<CXXDestructorDecl>(R.front());
+

@@ -1,0 +1,20 @@
+|| uses_template_parms (TREE_CHAIN (t)));
+      else if (TREE_CODE (t) == TYPE_DECL)
+        dependent_p = dependent_type_p (TREE_TYPE (t));
+
+        dependent_p = (type_dependent_expression_p (t)
+    		   || value_dependent_expression_p (t));
+    
+      processing_template_decl = saved_processing_template_decl;
+    
+
+|| uses_template_parms (TREE_CHAIN (t)));
+      else if (TREE_CODE (t) == TYPE_DECL)
+        dependent_p = dependent_type_p (TREE_TYPE (t));
+
+        dependent_p = (type_dependent_expression_p (t)
+    		   || value_dependent_expression_p (t));
+    
+      processing_template_decl = saved_processing_template_decl;
+    
+

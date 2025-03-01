@@ -1,0 +1,16 @@
+static bool
+
+    	  else if (non_const)
+    	    require_potential_rvalue_constant_expression (designator);
+
+          if (ce->index)
+    	{
+    	  gcc_assert (TREE_CODE (ce->index) == INTEGER_CST);
+    	  if (compare_tree_int (ce->index, i) != 0)
+    	    {
+    	      ce->value = error_mark_node;
+    	      sorry ("non-trivial designated initializers not supported");
+    	    }
+    	}
+          else
+

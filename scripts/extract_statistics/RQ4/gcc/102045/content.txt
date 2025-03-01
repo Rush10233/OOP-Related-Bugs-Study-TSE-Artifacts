@@ -1,0 +1,16 @@
+call target.  It would be possible to splice in the appropriate
+           arguments, but probably not worth the complexity.  */
+        return false;
+
+      AGGR_INIT_EXPR_FN (exp) = build_address (fn);
+      return true;
+    }
+
+call target.  It would be possible to splice in the appropriate
+           arguments, but probably not worth the complexity.  */
+        return false;
+
+      AGGR_INIT_EXPR_FN (exp) = build_address (fn);
+      return true;
+    }
+

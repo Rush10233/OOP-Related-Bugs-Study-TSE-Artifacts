@@ -1,0 +1,30 @@
+if (current_class_type)
+    	if (tree ti = CLASSTYPE_TEMPLATE_INFO (current_class_type))
+
+    	    return current_class_type;
+
+          arglist = coerce_template_parms (parmlist, arglist, gen_tmpl, complain);
+
+if (current_class_type)
+    	if (tree ti = CLASSTYPE_TEMPLATE_INFO (current_class_type))
+
+    	    return current_class_type;
+
+          arglist = coerce_template_parms (parmlist, arglist, gen_tmpl, complain);
+
+&& DECL_TEMPLOID_INSTANTIATION (fun)
+
+          instantiate_decl (fun, /*defer_ok*/false, /*expl_inst*/false);
+
+          && DECL_TEMPLOID_INSTANTIATION (*tp)
+
+          instantiate_decl (*tp, /*defer_ok*/false, /*expl_inst*/false);
+
+&& DECL_TEMPLOID_INSTANTIATION (fun)
+
+          instantiate_decl (fun, /*defer_ok*/false, /*expl_inst*/false);
+
+          && DECL_TEMPLOID_INSTANTIATION (*tp)
+
+          instantiate_decl (*tp, /*defer_ok*/false, /*expl_inst*/false);
+

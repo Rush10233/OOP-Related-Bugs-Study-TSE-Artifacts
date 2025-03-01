@@ -1,0 +1,94 @@
+extern int shared_member_p			(tree);
+
+    			    member_p, friend_p, /*static_p=*/false);
+
+    		  if (memfn)
+
+    /* Nonzero for a class member means that it is shared between all objects
+
+    int
+
+      if (VAR_P (t) || TREE_CODE (t) == TYPE_DECL \
+
+        return 1;
+
+    	  /* We don't expect or support dependent decls.  */
+    	  gcc_assert (TREE_CODE (decl) != USING_DECL);
+
+    	    return 0;
+
+          return 1;
+
+      return 0;
+
+          if ((type_dependent_expression_p (expr)
+    	   || !shared_member_p (expr))
+
+cp_debug_print_flag (file, "Local names and 'this' forbidden in "
+    			      "current context",
+    			      parser->local_variables_forbidden_p);
+
+       bool, bool);
+
+      (cp_parser *, cp_parser_declarator_kind, cp_parser_flags, int *, bool, bool);
+
+      parser->local_variables_forbidden_p = false;
+
+    	  if (parser->local_variables_forbidden_p)
+
+    		     
+
+    	    if (parser->local_variables_forbidden_p
+
+      bool local_variables_forbidden_p = parser->local_variables_forbidden_p;
+
+      parser->local_variables_forbidden_p = false;
+
+    					 /*friend_p=*/false);
+
+    				/*friend_p=*/false);
+
+    			    member_p, friend_p);
+
+       FRIEND_P is true iff this declarator is a friend.  */
+
+    		      bool member_p, bool friend_p)
+
+    					 friend_p);
+
+    						member_p, friend_p);
+
+       CTOR_DTOR_OR_CONV_P, MEMBER_P, and FRIEND_P are
+
+    			     bool member_p, bool friend_p)
+
+    					member_p, friend_p);
+
+    			    /*friend_p=*/false);
+
+    					 /*friend_p=*/false);
+
+      bool saved_local_variables_forbidden_p;
+
+      parser->local_variables_forbidden_p = true;
+
+    					friend_p);
+
+    				       /*friend_p=*/false);
+
+      bool saved_local_variables_forbidden_p;
+
+      parser->local_variables_forbidden_p = true;
+
+    					    /*friend_p=*/false);
+
+    					/*friend_p=*/false);
+
+    					 NULL, NULL, false, false);
+
+    					 /*friend_p=*/false);
+
+      /* TRUE if local variable names and `this' are forbidden in the
+         current context.  */
+      bool local_variables_forbidden_p;
+

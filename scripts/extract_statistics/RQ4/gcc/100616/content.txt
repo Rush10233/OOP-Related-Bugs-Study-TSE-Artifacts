@@ -1,0 +1,32 @@
+tt_tinfo_var,		/* Typeinfo object. */
+      tt_tinfo_typedef,	/* Typeinfo typedef.  */
+      tt_ptrmem_type,	/* Pointer to member type.  */
+
+    
+      tt_parm,		/* Function parameter or result.  */
+      tt_enum_value,	/* An enum value.  */
+
+    	    }
+    	  return false;
+    	}
+
+          break;
+    
+        case TYPE_DECL:
+
+          }
+          break;
+    
+
+        case tt_enum_value:
+          /* An enum const value.  */
+          {
+
+    	/* Ignore TINFO things.  */
+    	return false;
+    
+
+          if (!(flags & WMB_Using) && CP_DECL_CONTEXT (decl) != data->ns)
+    	{
+    	  /* A using that lost its wrapper or an unscoped enum
+

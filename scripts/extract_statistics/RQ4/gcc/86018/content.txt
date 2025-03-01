@@ -1,0 +1,48 @@
+implementation of the conversion operator.  */
+    
+          tree instance = cp_build_fold_indirect_ref (thisarg);
+
+          int nargs = list_length (DECL_ARGUMENTS (callop)) - 1;
+    
+          call = prepare_op_call (objfn, nargs);
+
+    
+    	if (generic_lambda_p)
+    	  {
+
+    	    CALL_EXPR_ARG (call, ix) = a;
+    
+
+    
+    	    ++ix;
+    	  }
+
+    	      }
+    	  }
+    
+
+    	/* We do not perform argument-dependent lookup if normal
+    	   lookup finds a non-function, in accordance with the
+    	   expected resolution of DR 218.  */
+
+    	    bool op = CALL_EXPR_OPERATOR_SYNTAX (t);
+    	    bool ord = CALL_EXPR_ORDERED_ARGS (t);
+    	    bool rev = CALL_EXPR_REVERSE_ARGS (t);
+
+    	      {
+    		function = extract_call_expr (ret);
+    		CALL_EXPR_OPERATOR_SYNTAX (function) = op;
+    		CALL_EXPR_ORDERED_ARGS (function) = ord;
+    		CALL_EXPR_REVERSE_ARGS (function) = rev;
+    	      }
+    	  }
+    
+
+    	    }
+    	}
+    
+
+          /* First convert the value to the function's return type, then
+    	 to the type of return value's location to handle the
+    	 case that functype is smaller than the valtype.  */
+

@@ -1,0 +1,8 @@
+if (FOffset < FirstFieldOffset) {
+            FirstField = F;
+            FirstFieldOffset = FOffset;
+
+            LastField = F;
+            LastFieldOffset = FOffset;
+          }
+

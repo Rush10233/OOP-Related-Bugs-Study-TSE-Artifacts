@@ -1,0 +1,12 @@
+get_or_insert_ctor_field (tree ctor, tree index, int pos_hint = -1)
+
+    	  constructor_elt *cep = get_or_insert_ctor_field (ctx->ctor, index);
+    	  cep->value = new_ctx.ctor;
+    	  pos_hint = cep - (*p)->begin();
+
+    	get_or_insert_ctor_field (ctx->ctor, index);
+
+      if (DECL_P (object))
+
+    	= get_or_insert_ctor_field (*valp, index);
+

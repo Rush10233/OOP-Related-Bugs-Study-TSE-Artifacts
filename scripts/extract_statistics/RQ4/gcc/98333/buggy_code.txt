@@ -1,0 +1,50 @@
+/* Now parse any NSDMIs.  */
+          save_ccp = current_class_ptr;
+          save_ccr = current_class_ref;
+          FOR_EACH_VEC_SAFE_ELT (unparsed_nsdmis, ix, decl)
+    	{
+    	  if (class_type != DECL_CONTEXT (decl))
+    	    {
+    	      if (pushed_scope)
+    		pop_scope (pushed_scope);
+    	      class_type = DECL_CONTEXT (decl);
+    	      pushed_scope = push_scope (class_type);
+    	    }
+    	  inject_this_parameter (class_type, TYPE_UNQUALIFIED);
+    	  cp_parser_late_parsing_nsdmi (parser, decl);
+    	}
+          vec_safe_truncate (unparsed_nsdmis, 0);
+          current_class_ptr = save_ccp;
+          current_class_ref = save_ccr;
+          if (pushed_scope)
+    	pop_scope (pushed_scope);
+
+    	 take care of them now.  */
+          class_type = NULL_TREE;
+          pushed_scope = NULL_TREE;
+
+/* Now parse any NSDMIs.  */
+          save_ccp = current_class_ptr;
+          save_ccr = current_class_ref;
+          FOR_EACH_VEC_SAFE_ELT (unparsed_nsdmis, ix, decl)
+    	{
+    	  if (class_type != DECL_CONTEXT (decl))
+    	    {
+    	      if (pushed_scope)
+    		pop_scope (pushed_scope);
+    	      class_type = DECL_CONTEXT (decl);
+    	      pushed_scope = push_scope (class_type);
+    	    }
+    	  inject_this_parameter (class_type, TYPE_UNQUALIFIED);
+    	  cp_parser_late_parsing_nsdmi (parser, decl);
+    	}
+          vec_safe_truncate (unparsed_nsdmis, 0);
+          current_class_ptr = save_ccp;
+          current_class_ref = save_ccr;
+          if (pushed_scope)
+    	pop_scope (pushed_scope);
+
+    	 take care of them now.  */
+          class_type = NULL_TREE;
+          pushed_scope = NULL_TREE;
+

@@ -1,0 +1,21 @@
+/* Clear TREE_ADDRESSABLE on thunk arguments.  */
+    	TREE_ADDRESSABLE (new_node) = 0;
+    
+
+    		  /* Clear TREE_ADDRESSABLE on thunk arguments.  */
+    		  TREE_ADDRESSABLE (clone_parm) = 0;
+
+/* Clear TREE_ADDRESSABLE on thunk arguments.  */
+    	TREE_ADDRESSABLE (new_node) = 0;
+    
+
+    		  /* Clear TREE_ADDRESSABLE on thunk arguments.  */
+    		  TREE_ADDRESSABLE (clone_parm) = 0;
+
+/* Clear TREE_ADDRESSABLE on thunk arguments.  */
+    	TREE_ADDRESSABLE (new_node) = 0;
+    
+
+    		  /* Clear TREE_ADDRESSABLE on thunk arguments.  */
+    		  TREE_ADDRESSABLE (clone_parm) = 0;
+

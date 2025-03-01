@@ -1,0 +1,17 @@
+bool do_adl_p = true;
+    		    tree fns = get_fns (postfix_expression);
+    		    for (lkp_iterator iter (fns); iter; ++iter)
+    		      {
+    			tree fn = STRIP_TEMPLATE (*iter);
+    			if ((TREE_CODE (fn) == USING_DECL
+    			     && DECL_DEPENDENT_P (fn))
+    			    || DECL_FUNCTION_MEMBER_P (fn)
+    			    || DECL_LOCAL_FUNCTION_P (fn))
+    			  {
+    			    do_adl_p = false;
+    			    break;
+    			  }
+    		      }
+    
+    		    if (do_adl_p)
+

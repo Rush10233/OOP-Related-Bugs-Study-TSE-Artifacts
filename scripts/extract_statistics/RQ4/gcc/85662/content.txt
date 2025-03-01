@@ -1,0 +1,234 @@
+
+    /* Fold an offsetof-like expression.  EXPR is a nested sequence of component
+       references with an INDIRECT_REF of a constant at the bottom; much like the
+
+    
+    tree
+
+    {
+      tree base, off, t;
+      tree_code code = TREE_CODE (expr);
+
+    	  error ("cannot apply %<offsetof%> to a non constant address");
+    	  return error_mark_node;
+    	}
+
+    
+        case COMPONENT_REF:
+
+          if (base == error_mark_node)
+    	return base;
+    
+
+          break;
+    
+        case ARRAY_REF:
+
+          if (base == error_mark_node)
+    	return base;
+    
+
+          /* Handle static members of volatile structs.  */
+          t = TREE_OPERAND (expr, 1);
+          gcc_assert (VAR_P (t));
+
+    
+        default:
+          gcc_unreachable ();
+        }
+    
+
+      return fold_build_pointer_plus (base, off);
+    }
+    
+    /* *PTYPE is an incomplete array.  Complete it with a domain based on
+       INITIAL_VALUE.  If INITIAL_VALUE is not present, use 1 if DO_DEFAULT
+
+    
+    extern void verify_sequence_points (tree);
+    
+
+    
+    extern int complete_array_type (tree *, tree, bool);
+    
+
+    	  && (op1 = get_base_address (op0)) != NULL_TREE
+    	  && INDIRECT_REF_P (op1)
+    	  && TREE_CONSTANT (TREE_OPERAND (op1, 0)))
+
+          else if (op0 != orig_op0 || in_init)
+    	ret = in_init
+    	  ? fold_build1_initializer_loc (loc, code, TREE_TYPE (expr), op0)
+
+          if (val && INDIRECT_REF_P (val)
+              && TREE_CONSTANT (TREE_OPERAND (val, 0)))
+    	{
+
+    	  goto return_build_unary_op;
+    	}
+    
+
+    	      val = TREE_OPERAND (val, 0);
+    	      STRIP_NOPS (val);
+    	      if (TREE_CODE (val) == INTEGER_CST)
+
+    	    }
+    	}
+          goto finish_unary;
+
+
+    /* Fold an offsetof-like expression.  EXPR is a nested sequence of component
+       references with an INDIRECT_REF of a constant at the bottom; much like the
+
+    
+    tree
+
+    {
+      tree base, off, t;
+      tree_code code = TREE_CODE (expr);
+
+    	  error ("cannot apply %<offsetof%> to a non constant address");
+    	  return error_mark_node;
+    	}
+
+    
+        case COMPONENT_REF:
+
+          if (base == error_mark_node)
+    	return base;
+    
+
+          break;
+    
+        case ARRAY_REF:
+
+          if (base == error_mark_node)
+    	return base;
+    
+
+          /* Handle static members of volatile structs.  */
+          t = TREE_OPERAND (expr, 1);
+          gcc_checking_assert (VAR_P (get_base_address (t)));
+
+    
+        default:
+          gcc_unreachable ();
+        }
+    
+
+      return fold_build_pointer_plus (base, off);
+    }
+    
+    /* *PTYPE is an incomplete array.  Complete it with a domain based on
+       INITIAL_VALUE.  If INITIAL_VALUE is not present, use 1 if DO_DEFAULT
+
+    
+    extern void verify_sequence_points (tree);
+    
+
+    
+    extern int complete_array_type (tree *, tree, bool);
+    
+
+    	  && (op1 = get_base_address (op0)) != NULL_TREE
+    	  && INDIRECT_REF_P (op1)
+    	  && TREE_CONSTANT (TREE_OPERAND (op1, 0)))
+
+          else if (op0 != orig_op0 || in_init)
+    	ret = in_init
+    	  ? fold_build1_initializer_loc (loc, code, TREE_TYPE (expr), op0)
+
+          if (val && INDIRECT_REF_P (val)
+              && TREE_CONSTANT (TREE_OPERAND (val, 0)))
+    	{
+
+    	  goto return_build_unary_op;
+    	}
+    
+
+    	      val = TREE_OPERAND (val, 0);
+    	      STRIP_NOPS (val);
+    	      if (TREE_CODE (val) == INTEGER_CST)
+
+    	    }
+    	}
+          goto finish_unary;
+
+
+    /* Fold an offsetof-like expression.  EXPR is a nested sequence of component
+       references with an INDIRECT_REF of a constant at the bottom; much like the
+
+    
+    tree
+
+    {
+      tree base, off, t;
+      tree_code code = TREE_CODE (expr);
+
+    	  error ("cannot apply %<offsetof%> to a non constant address");
+    	  return error_mark_node;
+    	}
+
+    
+        case COMPONENT_REF:
+
+          if (base == error_mark_node)
+    	return base;
+    
+
+          break;
+    
+        case ARRAY_REF:
+
+          if (base == error_mark_node)
+    	return base;
+    
+
+          /* Handle static members of volatile structs.  */
+          t = TREE_OPERAND (expr, 1);
+          gcc_checking_assert (VAR_P (get_base_address (t)));
+
+    
+        default:
+          gcc_unreachable ();
+        }
+    
+
+      return fold_build_pointer_plus (base, off);
+    }
+    
+    /* *PTYPE is an incomplete array.  Complete it with a domain based on
+       INITIAL_VALUE.  If INITIAL_VALUE is not present, use 1 if DO_DEFAULT
+
+    
+    extern void verify_sequence_points (tree);
+    
+
+    
+    extern int complete_array_type (tree *, tree, bool);
+    
+
+    	  && (op1 = get_base_address (op0)) != NULL_TREE
+    	  && INDIRECT_REF_P (op1)
+    	  && TREE_CONSTANT (TREE_OPERAND (op1, 0)))
+
+          else if (op0 != orig_op0 || in_init)
+    	ret = in_init
+    	  ? fold_build1_initializer_loc (loc, code, TREE_TYPE (expr), op0)
+
+          if (val && INDIRECT_REF_P (val)
+              && TREE_CONSTANT (TREE_OPERAND (val, 0)))
+    	{
+
+    	  goto return_build_unary_op;
+    	}
+    
+
+    	      val = TREE_OPERAND (val, 0);
+    	      STRIP_NOPS (val);
+    	      if (TREE_CODE (val) == INTEGER_CST)
+
+    	    }
+    	}
+          goto finish_unary;
+

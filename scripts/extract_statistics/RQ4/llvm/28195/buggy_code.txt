@@ -1,0 +1,33 @@
+DeduceTemplateArguments(Sema &S,
+                            TemplateParameterList *TemplateParams,
+
+                            SmallVectorImpl<DeducedTemplateArgument> &Deduced);
+
+        return DeduceTemplateArguments(S, TemplateParams,
+                                       Param->getArgs(), Param->getNumArgs(),
+                                       SpecArg->getArgs(), SpecArg->getNumArgs(),
+                                       Info, Deduced);
+
+      return DeduceTemplateArguments(S, TemplateParams,
+                                     Param->getArgs(), Param->getNumArgs(),
+                                     SpecArg->getTemplateArgs().data(),
+                                     SpecArg->getTemplateArgs().size(),
+                                     Info, Deduced);
+
+                DeducedOrig.clear();
+                DeducedOrig.append(Deduced.begin(), Deduced.end());
+
+              } else
+                Deduced = DeducedOrig;
+
+          if (Successful)
+
+    DeduceTemplateArguments(Sema &S,
+                            TemplateParameterList *TemplateParams,
+
+                            SmallVectorImpl<DeducedTemplateArgument> &Deduced) {
+
+            return Sema::TDK_Success;
+
+                                     Info, Deduced);
+

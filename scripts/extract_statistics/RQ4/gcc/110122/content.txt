@@ -1,0 +1,88 @@
+template.  */
+    
+          /* Shortcut looking up the current class scope again.  */
+
+    	  if (gen_tmpl == most_general_template (TI_TEMPLATE (ti))
+    	      && comp_template_args (arglist, TI_ARGS (ti)))
+
+    
+          /* Calculate the BOUND_ARGS.  These will be the args that are
+    	 actually tsubst'd into the definition to create the
+    	 instantiation.  */
+
+    
+          if (arglist == error_mark_node)
+    	/* We were unable to bind the arguments.  */
+
+template.  */
+    
+          /* Shortcut looking up the current class scope again.  */
+
+    	  if (gen_tmpl == most_general_template (TI_TEMPLATE (ti))
+    	      && comp_template_args (arglist, TI_ARGS (ti)))
+
+    
+          /* Calculate the BOUND_ARGS.  These will be the args that are
+    	 actually tsubst'd into the definition to create the
+    	 instantiation.  */
+
+    
+          if (arglist == error_mark_node)
+    	/* We were unable to bind the arguments.  */
+
+
+      /* We can't defer instantiating the function any longer.  */
+      if (!DECL_INITIAL (fun)
+
+          && !uid_sensitive_constexpr_evaluation_p ())
+        {
+          location_t save_loc = input_location;
+          input_location = loc;
+          ++function_depth;
+          if (ctx->manifestly_const_eval == mce_true)
+    	FNDECL_MANIFESTLY_CONST_EVALUATED (fun) = true;
+
+          --function_depth;
+          input_location = save_loc;
+        }
+
+          && DECL_DECLARED_CONSTEXPR_P (*tp)
+          && !DECL_INITIAL (*tp)
+          && !trivial_fn_p (*tp)
+
+          && !uid_sensitive_constexpr_evaluation_p ())
+        {
+          ++function_depth;
+
+          --function_depth;
+        }
+      else if (TREE_CODE (*tp) == CALL_EXPR
+
+
+      /* We can't defer instantiating the function any longer.  */
+      if (!DECL_INITIAL (fun)
+
+          && !uid_sensitive_constexpr_evaluation_p ())
+        {
+          location_t save_loc = input_location;
+          input_location = loc;
+          ++function_depth;
+          if (ctx->manifestly_const_eval == mce_true)
+    	FNDECL_MANIFESTLY_CONST_EVALUATED (fun) = true;
+
+          --function_depth;
+          input_location = save_loc;
+        }
+
+          && DECL_DECLARED_CONSTEXPR_P (*tp)
+          && !DECL_INITIAL (*tp)
+          && !trivial_fn_p (*tp)
+
+          && !uid_sensitive_constexpr_evaluation_p ())
+        {
+          ++function_depth;
+
+          --function_depth;
+        }
+      else if (TREE_CODE (*tp) == CALL_EXPR
+

@@ -1,0 +1,78 @@
+tsubst_flags_t complain;
+      /* True iff we don't want to walk into unevaluated contexts.  */
+      bool skip_unevaluated_operands = false;
+
+    
+      el_data (tsubst_flags_t c)
+        : extra (NULL_TREE), complain (c) {}
+
+      if (data.skip_unevaluated_operands
+          && unevaluated_p (TREE_CODE (*tp)))
+        {
+
+          *walk_subtrees = 0;
+          return NULL_TREE;
+        }
+
+         context).  */
+      data.skip_unevaluated_operands = true;
+      cp_walk_tree (&pattern, extract_locals_r, &data, &data.visited);
+
+      data.skip_unevaluated_operands = false;
+
+      return data.extra;
+    }
+    
+
+tsubst_flags_t complain;
+      /* True iff we don't want to walk into unevaluated contexts.  */
+      bool skip_unevaluated_operands = false;
+
+    
+      el_data (tsubst_flags_t c)
+        : extra (NULL_TREE), complain (c) {}
+
+      if (data.skip_unevaluated_operands
+          && unevaluated_p (TREE_CODE (*tp)))
+        {
+
+          *walk_subtrees = 0;
+          return NULL_TREE;
+        }
+
+         context).  */
+      data.skip_unevaluated_operands = true;
+      cp_walk_tree (&pattern, extract_locals_r, &data, &data.visited);
+
+      data.skip_unevaluated_operands = false;
+
+      return data.extra;
+    }
+    
+
+tsubst_flags_t complain;
+      /* True iff we don't want to walk into unevaluated contexts.  */
+      bool skip_unevaluated_operands = false;
+
+    
+      el_data (tsubst_flags_t c)
+        : extra (NULL_TREE), complain (c) {}
+
+      if (data.skip_unevaluated_operands
+          && unevaluated_p (TREE_CODE (*tp)))
+        {
+
+          *walk_subtrees = 0;
+          return NULL_TREE;
+        }
+
+         context).  */
+      data.skip_unevaluated_operands = true;
+      cp_walk_tree (&pattern, extract_locals_r, &data, &data.visited);
+
+      data.skip_unevaluated_operands = false;
+
+      return data.extra;
+    }
+    
+

@@ -1,0 +1,10 @@
+{
+    	  scope = context_for_name_lookup (decl);
+    	  if (!TYPE_P (scope))
+    	    {
+    	      /* Can happen during error recovery (c++/85014).  */
+    	      gcc_assert (seen_error ());
+    	      return error_mark_node;
+    	    }
+    	}
+

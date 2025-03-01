@@ -1,0 +1,52 @@
+/* True if NODE represents a conversion forced to be represented in
+       maybe_convert_nontype_argument, i.e. for an alias template.  */
+    #define IMPLICIT_CONV_EXPR_FORCED(NODE) \
+      (TREE_LANG_FLAG_3 (IMPLICIT_CONV_EXPR_CHECK (NODE)))
+    
+
+    	if (!optype)
+    	  optype = unknown_type_node;
+
+    	else if (!same_type_p (optype, ttype))
+
+    maybe_convert_nontype_argument (tree type, tree arg, bool force)
+
+      /* ??? Do we need to push the IMPLICIT_CONV_EXPR into the pack expansion?
+         That would complicate other things, and it doesn't seem necessary.  */
+      if (TREE_CODE (arg) == EXPR_PACK_EXPANSION)
+        return arg;
+
+      if (!value_dependent_expression_p (arg))
+        force = false;
+      else if (!force)
+
+      if (argtype && same_type_p (type, argtype))
+
+      IMPLICIT_CONV_EXPR_FORCED (arg) = force;
+
+          /* We need to handle arguments for alias or concept templates
+    	 differently: we need to force building an IMPLICIT_CONV_EXPR, because
+    	 these arguments are going to be substituted directly into the
+    	 dependent type; they might not get another chance at
+    	 convert_nontype_argument.  But if the argument ends up here again for
+    	 a template that isn't one of those, remove the conversion for
+    	 consistency between naming the same dependent type directly or through
+    	 an alias.  */
+          bool force_conv = in_decl && (DECL_ALIAS_TEMPLATE_P (in_decl)
+    				    || concept_definition_p (in_decl));
+          if (!force_conv
+    	  && TREE_CODE (orig_arg) == IMPLICIT_CONV_EXPR
+    	  && IMPLICIT_CONV_EXPR_FORCED (orig_arg)
+    	  && same_type_p (TREE_TYPE (orig_arg), t))
+    	orig_arg = TREE_OPERAND (orig_arg, 0);
+    
+
+    	  val = maybe_convert_nontype_argument (t, val, force_conv);
+
+    	  {
+    	    tree r = convert_nontype_argument (type, expr, complain);
+    	    if (r == NULL_TREE)
+    	      r = error_mark_node;
+    	    RETURN (r);
+    	  }
+

@@ -1,0 +1,7 @@
+tree lhs_mem = build3 (COMPONENT_REF, expr_type, lhs, field,
+    				 NULL_TREE);
+    	  tree rhs_mem = build3 (COMPONENT_REF, expr_type, rhs, field,
+    				 NULL_TREE);
+
+    	    if_ = begin_if_stmt ();
+

@@ -1,0 +1,16 @@
+/*done=*/false,
+    					    /*address_p=*/false);
+    	  }
+
+    	  {
+    	    /* Do nothing; calling tsubst_copy_and_build on an identifier
+    	       would incorrectly perform unqualified lookup again.
+
+    	       FIXME but doing that causes c++/15272, so we need to stop
+    	       using IDENTIFIER_NODE in that situation.  */
+    	    qualified_p = false;
+
+    	  }
+    	else
+    	  {
+

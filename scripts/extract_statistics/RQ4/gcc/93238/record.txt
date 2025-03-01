@@ -1,0 +1,4 @@
+Commit:	33742a0
+./gcc/cp/typeck.c	4851,4851
+./gcc/cp/typeck.c	5609,5609
+./gcc/cp/typeck.c	5612,5612

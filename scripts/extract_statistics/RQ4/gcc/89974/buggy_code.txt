@@ -1,0 +1,16 @@
+vec<constructor_elt, va_gc> *elts = CONSTRUCTOR_ELTS (expr);
+          unsigned i; tree val;
+
+          if (BRACE_ENCLOSED_INITIALIZER_P (expr))
+
+    	  write_type (TREE_TYPE (expr));
+
+          FOR_EACH_CONSTRUCTOR_VALUE (elts, i, val)
+    	write_expression (val);
+
+      write_char ('L');
+      write_type (TREE_TYPE (value));
+
+    	sorry ("string literal in function template signature");
+    	break;
+

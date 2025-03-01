@@ -1,0 +1,4 @@
+if (MD->isInlined() && ClassImported &&
+
+            // MinGW does not import inline functions.
+

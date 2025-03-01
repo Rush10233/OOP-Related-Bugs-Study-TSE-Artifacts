@@ -1,0 +1,5 @@
+Commit:	c167fb2
+./gcc/cp/decl.c	13941,13941
+Commit:	b57e6e1
+./gcc/cp/decl.c	14357,14357
+./gcc/testsuite/g++.dg/opt/flifetime-dse5.C	13,13

@@ -1,0 +1,6 @@
+CXXMethodDecl *T = this->getCorrespondingMethodInClass(Base);
+        if (T)
+          return T;
+
+      return nullptr;
+

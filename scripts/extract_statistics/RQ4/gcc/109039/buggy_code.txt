@@ -1,0 +1,4 @@
+offset = size_binop (PLUS_EXPR, byte_position (field), size);
+
+offset = size_binop (PLUS_EXPR, byte_position (field), size);
+

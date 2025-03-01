@@ -1,0 +1,48 @@
+static void
+    maybe_push_temp_cleanup (tree sub, vec<tree,va_gc> **flags)
+    {
+
+      if (tree cleanup
+          = cxx_maybe_build_cleanup (sub, tf_warning_or_error))
+        {
+
+      bool array_type_p = false;
+      bool complete_p = true;
+      HOST_WIDE_INT num_split_elts = 0;
+
+    
+      switch (TREE_CODE (type))
+        {
+
+    	      else
+    		{
+    		  /* Mark element for removal.  */
+
+    		  CONSTRUCTOR_ELT (init, idx)->index = NULL_TREE;
+    		  if (idx < tidx)
+    		    tidx = idx;
+
+    					      flags));
+    
+    	      /* Mark element for removal.  */
+
+    	      CONSTRUCTOR_ELT (init, idx)->index = NULL_TREE;
+    	      if (idx < tidx)
+    		tidx = idx;
+
+    	    {
+    	      tree code;
+    
+
+    	      /* Mark element for removal.  */
+    	      CONSTRUCTOR_ELT (init, idx)->index = NULL_TREE;
+    	      if (idx < tidx)
+
+    		    maybe_push_temp_cleanup (sub, flags);
+    		}
+    
+
+    	      num_split_elts++;
+    	    }
+    	}
+

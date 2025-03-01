@@ -1,0 +1,8 @@
+}
+        TemplateParameterList *TemplateParams = TemplateParamLists[0];
+    
+
+        // Only consider previous declarations in the same scope.
+        FilterLookupForScope(Previous, CurContext, S, /*ConsiderLinkage*/false,
+                             /*ExplicitInstantiationOrSpecialization*/false);
+

@@ -1,0 +1,24 @@
+while (!tsi_end_p (iter)
+    	     && TREE_CODE (tsi_stmt (iter)) == DECL_EXPR)
+
+    
+          if (tsi_end_p (iter))
+    	/* Nothing to wrap.  */
+    	return;
+
+while (!tsi_end_p (iter)
+    	     && TREE_CODE (tsi_stmt (iter)) == DECL_EXPR)
+
+    
+          if (tsi_end_p (iter))
+    	/* Nothing to wrap.  */
+    	return;
+
+while (!tsi_end_p (iter)
+    	     && TREE_CODE (tsi_stmt (iter)) == DECL_EXPR)
+
+    
+          if (tsi_end_p (iter))
+    	/* Nothing to wrap.  */
+    	return;
+

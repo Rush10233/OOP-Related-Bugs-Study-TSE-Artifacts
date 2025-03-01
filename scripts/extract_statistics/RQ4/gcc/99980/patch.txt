@@ -1,0 +1,8 @@
+int flags = CP_PARSER_FLAGS_TYPENAME_OPTIONAL;
+          /* We don't delay parsing for friends, though CWG 2510 may change
+    	 that.  */
+          if (member_p && !(friend_p && *friend_p))
+    	flags |= CP_PARSER_FLAGS_DELAY_NOEXCEPT;
+
+    					flags,
+

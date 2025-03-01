@@ -1,0 +1,16 @@
+TemplateParams(nullptr) {}
+    
+      // Construct a template decl with the given name and parameters.
+
+      TemplateDecl(Kind DK, DeclContext *DC, SourceLocation L,
+                   DeclarationName Name, TemplateParameterList *Params)
+        : NamedDecl(DK, DC, L, Name), TemplatedDecl(nullptr),
+
+        auto *TD = TST->getTemplateName().getAsTemplateDecl();
+        if (!TD)
+          continue;
+
+        // FIXME: Allow lookup into non-dependent bases of dependent bases, possibly
+        // by calling or integrating with the main LookupQualifiedName mechanism.
+        for (NamedDecl *ND : BasePrimaryTemplate->lookup(&II)) {
+

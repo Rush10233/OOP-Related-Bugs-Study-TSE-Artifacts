@@ -1,0 +1,6 @@
+assert(DD && "record without a destructor");
+
+        Result->setKind(DD->isDeleted() ?
+                        SpecialMemberOverloadResult::NoMemberOrDeleted :
+                        SpecialMemberOverloadResult::Success);
+

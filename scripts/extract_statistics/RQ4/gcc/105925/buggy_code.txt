@@ -1,0 +1,38 @@
+/* We already called reshape_init in implicit_conversion.  */
+
+      if (CONSTRUCTOR_IS_DESIGNATED_INIT (ctor))
+
+          tree idx, val;
+          FOR_EACH_CONSTRUCTOR_ELT (CONSTRUCTOR_ELTS (ctor), i, idx, val)
+    	{
+    	  if (idx && TREE_CODE (idx) == FIELD_DECL)
+    	    {
+    	      tree ftype = TREE_TYPE (idx);
+    	      bool ok;
+
+    	      if (TREE_CODE (ftype) == ARRAY_TYPE)
+    		ok = can_convert_array (ftype, val, flags, complain);
+    	      else
+    		ok = can_convert_arg (ftype, TREE_TYPE (val), val, flags,
+    				      complain);
+
+    	      if (!ok)
+    		return NULL;
+    	      /* For unions, there should be just one initializer.  */
+    	      if (TREE_CODE (type) == UNION_TYPE)
+    		{
+    		  field = NULL_TREE;
+    		  i = 1;
+    		  break;
+    		}
+    	      pset.add (idx);
+    	    }
+    	  else
+    	    return NULL;
+
+          tree val;
+
+    	  val = CONSTRUCTOR_ELT (ctor, i)->value;
+
+CONSTRUCTOR_IS_DESIGNATED_INIT (new_init) = true;
+

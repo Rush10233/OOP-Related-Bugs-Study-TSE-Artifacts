@@ -1,0 +1,4 @@
+tree store = build2 (MODIFY_EXPR, type, op, mod);
+
+TREE_READONLY (e) = true;
+

@@ -1,0 +1,4 @@
+result = cxx_constant_value (result);
+
+result = cxx_constant_value (result);
+

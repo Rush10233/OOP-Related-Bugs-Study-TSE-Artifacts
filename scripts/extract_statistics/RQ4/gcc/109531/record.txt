@@ -1,0 +1,6 @@
+Commit:	85b95ea
+./gcc/cp/pt.cc	16235,16235
+./gcc/cp/pt.cc	16277,16294
+Commit:	60524be
+./gcc/cp/pt.cc	16235,16235
+./gcc/cp/pt.cc	16277,16294

@@ -1,0 +1,214 @@
+HOST_WIDE_INT num_initialized_elts = 0;
+
+    	      HOST_WIDE_INT last = tree_to_shwi (maxindex);
+    	      if (num_initialized_elts <= last)
+
+    		  if (num_initialized_elts != last)
+    		    field = build2 (RANGE_EXPR, sizetype, field,
+    				    size_int (last));
+
+HOST_WIDE_INT *p_unique_nz_elts,
+
+      HOST_WIDE_INT nz_elts, unique_nz_elts, init_elts, num_fields;
+
+      unique_nz_elts = 0;
+
+    	    HOST_WIDE_INT nz = 0, unz = 0, ic = 0;
+
+    	    bool const_elt_p = categorize_ctor_elements_1 (value, &nz, &unz,
+    							   &ic, p_complete);
+
+    	    unique_nz_elts += unz;
+
+    	    {
+    	      nz_elts += mult;
+    	      unique_nz_elts++;
+    	    }
+
+    	  unique_nz_elts += TREE_STRING_LENGTH (value);
+
+    	    {
+    	      nz_elts += mult;
+    	      unique_nz_elts++;
+    	    }
+
+    	    {
+    	      nz_elts += mult;
+    	      unique_nz_elts++;
+    	    }
+    	  init_elts += 2 * mult;
+
+    		  {
+    		    nz_elts += mult;
+    		    unique_nz_elts++;
+    		  }
+
+    	    unique_nz_elts += tc;
+
+      *p_unique_nz_elts += unique_nz_elts;
+
+       * the same, but counting RANGE_EXPRs as multiplier of 1 instead of
+         high - low + 1 (this can be useful for callers to determine ctors
+         that could be cheaply initialized with - perhaps nested - loops
+         compared to copied from huge read-only data),
+         and place it in *P_UNIQUE_NZ_ELTS;
+
+    			  HOST_WIDE_INT *p_unique_nz_elts,
+
+      *p_unique_nz_elts = 0;
+
+      return categorize_ctor_elements_1 (ctor, p_nz_elts, p_unique_nz_elts,
+    				     p_init_elts, p_complete);
+
+    /* Return 1 if EXP contains mostly (3/4) zeros.  */
+
+          HOST_WIDE_INT nz_elts, unz_elts, init_elts;
+
+          categorize_ctor_elements (exp, &nz_elts, &unz_elts, &init_elts,
+    				&complete_p);
+
+          HOST_WIDE_INT nz_elts, unz_elts, init_elts;
+
+          categorize_ctor_elements (exp, &nz_elts, &unz_elts, &init_elts,
+    				&complete_p);
+
+    				      HOST_WIDE_INT *, HOST_WIDE_INT *,
+    				      bool *);
+
+    	HOST_WIDE_INT num_unique_nonzero_elements;
+
+    	/* Use readonly data for initializers of this or smaller size
+    	   regardless of the num_nonzero_elements / num_unique_nonzero_elements
+    	   ratio.  */
+    	const HOST_WIDE_INT min_unique_size = 64;
+    	/* If num_nonzero_elements / num_unique_nonzero_elements ratio
+    	   is smaller than this, use readonly data.  */
+    	const int unique_nonzero_ratio = 8;
+
+    				      &num_unique_nonzero_elements,
+
+    	    && (flag_merge_constants >= 2 || !TREE_ADDRESSABLE (object))
+    	    /* For ctors that have many repeated nonzero elements
+    	       represented through RANGE_EXPRs, prefer initializing
+    	       those through runtime loops over copies of large amounts
+    	       of data from readonly data section.  */
+    	    && (num_unique_nonzero_elements
+    		> num_nonzero_elements / unique_nonzero_ratio
+    		|| ((unsigned HOST_WIDE_INT) int_size_in_bytes (type)
+    		    <= (unsigned HOST_WIDE_INT) min_unique_size)))
+
+    		/* For ctors that have many repeated nonzero elements
+    		   represented through RANGE_EXPRs, prefer initializing
+    		   those through runtime loops over copies of large amounts
+    		   of data from readonly data section.  */
+    		&& (num_unique_nonzero_elements
+    		    > num_nonzero_elements / unique_nonzero_ratio
+    		    || size <= min_unique_size)
+
+HOST_WIDE_INT *p_unique_nz_elts,
+
+      HOST_WIDE_INT nz_elts, unique_nz_elts, init_elts, num_fields;
+
+      unique_nz_elts = 0;
+
+    	    HOST_WIDE_INT nz = 0, unz = 0, ic = 0;
+
+    	    bool const_elt_p = categorize_ctor_elements_1 (value, &nz, &unz,
+    							   &ic, p_complete);
+
+    	    unique_nz_elts += unz;
+
+    	    {
+    	      nz_elts += mult;
+    	      unique_nz_elts++;
+    	    }
+
+    	  unique_nz_elts += TREE_STRING_LENGTH (value);
+
+    	    {
+    	      nz_elts += mult;
+    	      unique_nz_elts++;
+    	    }
+
+    	    {
+    	      nz_elts += mult;
+    	      unique_nz_elts++;
+    	    }
+    	  init_elts += 2 * mult;
+
+    		  {
+    		    nz_elts += mult;
+    		    unique_nz_elts++;
+    		  }
+
+    	    unique_nz_elts += tc;
+
+      *p_unique_nz_elts += unique_nz_elts;
+
+       * the same, but counting RANGE_EXPRs as multiplier of 1 instead of
+         high - low + 1 (this can be useful for callers to determine ctors
+         that could be cheaply initialized with - perhaps nested - loops
+         compared to copied from huge read-only data),
+         and place it in *P_UNIQUE_NZ_ELTS;
+
+    			  HOST_WIDE_INT *p_unique_nz_elts,
+
+      *p_unique_nz_elts = 0;
+
+      return categorize_ctor_elements_1 (ctor, p_nz_elts, p_unique_nz_elts,
+    				     p_init_elts, p_complete);
+
+    /* Return 1 if EXP contains mostly (3/4) zeros.  */
+
+          HOST_WIDE_INT nz_elts, unz_elts, init_elts;
+
+          categorize_ctor_elements (exp, &nz_elts, &unz_elts, &init_elts,
+    				&complete_p);
+
+          HOST_WIDE_INT nz_elts, unz_elts, init_elts;
+
+          categorize_ctor_elements (exp, &nz_elts, &unz_elts, &init_elts,
+    				&complete_p);
+
+    				      HOST_WIDE_INT *, HOST_WIDE_INT *,
+    				      bool *);
+
+    	HOST_WIDE_INT num_unique_nonzero_elements;
+
+    	/* Use readonly data for initializers of this or smaller size
+    	   regardless of the num_nonzero_elements / num_unique_nonzero_elements
+    	   ratio.  */
+    	const HOST_WIDE_INT min_unique_size = 64;
+    	/* If num_nonzero_elements / num_unique_nonzero_elements ratio
+    	   is smaller than this, use readonly data.  */
+    	const int unique_nonzero_ratio = 8;
+
+    				      &num_unique_nonzero_elements,
+
+    	    && (flag_merge_constants >= 2 || !TREE_ADDRESSABLE (object))
+    	    /* For ctors that have many repeated nonzero elements
+    	       represented through RANGE_EXPRs, prefer initializing
+    	       those through runtime loops over copies of large amounts
+    	       of data from readonly data section.  */
+    	    && (num_unique_nonzero_elements
+    		> num_nonzero_elements / unique_nonzero_ratio
+    		|| ((unsigned HOST_WIDE_INT) int_size_in_bytes (type)
+    		    <= (unsigned HOST_WIDE_INT) min_unique_size)))
+
+    		/* For ctors that have many repeated nonzero elements
+    		   represented through RANGE_EXPRs, prefer initializing
+    		   those through runtime loops over copies of large amounts
+    		   of data from readonly data section.  */
+    		&& (num_unique_nonzero_elements
+    		    > num_nonzero_elements / unique_nonzero_ratio
+    		    || size <= min_unique_size)
+
+HOST_WIDE_INT num_initialized_elts = 0;
+
+    	      HOST_WIDE_INT last = tree_to_shwi (maxindex);
+    	      if (num_initialized_elts <= last)
+
+    		  if (num_initialized_elts != last)
+    		    field = build2 (RANGE_EXPR, sizetype, field,
+    				    size_int (last));
+

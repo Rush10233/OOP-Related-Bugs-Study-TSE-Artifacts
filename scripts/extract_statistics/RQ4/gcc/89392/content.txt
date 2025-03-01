@@ -1,0 +1,171 @@
+gimplify_function_tree (vtv_fndecl);
+          cgraph_node::add_new_function (vtv_fndecl, false);
+    
+          if (flag_vtable_verify == VTV_PREINIT_PRIORITY && !TARGET_PECOFF)
+            assemble_vtv_preinit_initializer (vtv_fndecl);
+    
+
+          gimple *stmt;
+    
+          stmt = last_stmt (exit_edge->src);
+
+    	res = cond_stmt;
+        }
+    
+
+        }
+    
+      last = last_stmt (header);
+
+        {
+          if (dump_file && (dump_flags & TDF_DETAILS))
+    	fprintf (dump_file,
+
+    		{
+    		  gimple *stmt = gsi_stmt (bsi);
+    		  if (gimple_code (stmt) == GIMPLE_COND)
+
+    		  else if (is_gimple_assign (stmt))
+    		    {
+    		      enum tree_code rhs_code = gimple_assign_rhs_code (stmt);
+
+    			gimple_set_no_warning (stmt, true);
+    		    }
+    		}
+
+      niter = number_of_latch_executions (loop);
+      exit = single_exit (loop);
+      if (TREE_CODE (niter) == INTEGER_CST)
+
+      else
+        {
+          /* If the loop has more than one exit, try checking all of them
+
+    	niter = find_loop_niter_by_eval (loop, &exit);
+    
+          if (exit)
+
+    
+          if (TREE_CODE (niter) != INTEGER_CST)
+    	exit = NULL;
+
+      bbs = get_all_dominated_blocks (CDI_DOMINATORS,
+    				  single_succ (ENTRY_BLOCK_PTR_FOR_FN (fun)));
+      FOR_EACH_VEC_ELT (bbs, i, bb)
+
+    
+      if (did_something)
+        gsi_commit_edge_inserts ();
+
+gimplify_function_tree (vtv_fndecl);
+          cgraph_node::add_new_function (vtv_fndecl, false);
+    
+          if (flag_vtable_verify == VTV_PREINIT_PRIORITY && !TARGET_PECOFF)
+            assemble_vtv_preinit_initializer (vtv_fndecl);
+    
+
+gimplify_function_tree (vtv_fndecl);
+          cgraph_node::add_new_function (vtv_fndecl, false);
+    
+          if (flag_vtable_verify == VTV_PREINIT_PRIORITY && !TARGET_PECOFF)
+            assemble_vtv_preinit_initializer (vtv_fndecl);
+    
+
+        return false;
+    }
+    
+
+    
+    bool
+
+    {
+      int i, n;
+    
+
+          || TREE_CODE (chrec) == FIELD_DECL)
+        return true;
+    
+
+      n = TREE_OPERAND_LENGTH (chrec);
+      for (i = 0; i < n; i++)
+
+          return true;
+      return false;
+    }
+
+    /* Observers.  */
+    extern bool eq_evolutions_p (const_tree, const_tree);
+    extern bool is_multivariate_chrec (const_tree);
+
+    extern bool chrec_contains_symbols_defined_in_loop (const_tree, unsigned);
+    extern bool chrec_contains_undetermined (const_tree);
+    extern bool tree_contains_chrecs (const_tree, int *);
+
+        }
+    
+      else if (evolution_function_is_affine_multivariate_p (chrec_a, loop_nest->num)
+
+    	   && evolution_function_is_affine_multivariate_p (chrec_b, loop_nest->num)
+
+        {
+          /* testsuite/.../ssa-chrec-35.c
+    	 {0, +, 1}_2  vs.  {0, +, 1}_3
+
+    {
+      unsigned i;
+      lambda_vector init_v = lambda_vector_new (DDR_NB_LOOPS (ddr));
+
+    
+      for (i = 0; i < DDR_NUM_SUBSCRIPTS (ddr); i++)
+        {
+
+    	      return false;
+    	    }
+    
+
+    	  dist = int_cst_value (SUB_DISTANCE (subscript));
+    	  index = index_in_loop_nest (var_a, DDR_LOOP_NEST (ddr));
+    	  *index_carry = MIN (index, *index_carry);
+
+      unsigned i;
+      int index_carry = DDR_NB_LOOPS (ddr);
+      subscript *sub;
+
+    
+      FOR_EACH_VEC_ELT (DDR_SUBSCRIPTS (ddr), i, sub)
+        {
+
+    	      return;
+    	    }
+    
+
+    	  index_carry = MIN (index_carry,
+    			     index_in_loop_nest (CHREC_VARIABLE (access_fun),
+    						 DDR_LOOP_NEST (ddr)));
+
+          if (rhs < lhs)
+            scalar_type = rhs_type;
+        }
+
+    
+      *lhs_size_unit = lhs;
+      *rhs_size_unit = rhs;
+
+    	     reversed (to make distance vector positive), and the actual
+    	     distance is negative.  */
+    	  if (dump_enabled_p ())
+
+    	                     "dependence distance negative.\n");
+
+    	  /* Record a negative dependence distance to later limit the
+    	     amount of stmt copying / unrolling we can perform.
+    	     Only need to handle read-after-write dependence.  */
+
+    	{
+    	  /* The dependence distance requires reduction of the maximal
+    	     vectorization factor.  */
+
+    	  if (dump_enabled_p ())
+    	    dump_printf_loc (MSG_NOTE, vect_location,
+    	                     "adjusting maximal vectorization factor to %i\n",
+

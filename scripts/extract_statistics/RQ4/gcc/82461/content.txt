@@ -1,0 +1,16 @@
+return RECUR (TREE_OPERAND (t, 1), want_rval);
+    
+        case TARGET_EXPR:
+
+    	{
+    	  if (flags & tf_error)
+    	    {
+
+return RECUR (TREE_OPERAND (t, 1), want_rval);
+    
+        case TARGET_EXPR:
+
+    	{
+    	  if (flags & tf_error)
+    	    {
+

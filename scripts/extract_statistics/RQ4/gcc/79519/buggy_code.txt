@@ -1,0 +1,8 @@
+&& (!friendp || funcdef_flag))
+
+    	      error (funcdef_flag
+
+&& (!friendp || funcdef_flag))
+
+    	      error (funcdef_flag
+

@@ -1,0 +1,4 @@
+gcc_assert (handled_component_p (x));
+
+gcc_assert (handled_component_p (x));
+

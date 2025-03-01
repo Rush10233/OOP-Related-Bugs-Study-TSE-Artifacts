@@ -1,0 +1,6 @@
+Commit:	0bdb049
+./gcc/cp/pt.cc	26143,26143
+./gcc/cp/pt.cc	26146,26156
+./gcc/testsuite/g++.dg/cpp0x/noexcept34.C	10,11
+./gcc/testsuite/g++.dg/cpp0x/noexcept34.C	14,14
+./gcc/testsuite/g++.dg/cpp0x/noexcept34.C	16,16

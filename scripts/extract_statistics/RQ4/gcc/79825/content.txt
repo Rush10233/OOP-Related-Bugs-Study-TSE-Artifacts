@@ -1,0 +1,8 @@
+return
+        ((TREE_CODE (op) == COMPOUND_EXPR
+          && simple_empty_class_p (type, TREE_OPERAND (op, 1)))
+
+         || is_gimple_lvalue (op)
+         || INDIRECT_REF_P (op)
+         || (TREE_CODE (op) == CONSTRUCTOR
+

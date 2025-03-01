@@ -1,0 +1,2 @@
+return TREE_CODE (ovl) == OVERLOAD && OVL_USING_P (ovl);
+

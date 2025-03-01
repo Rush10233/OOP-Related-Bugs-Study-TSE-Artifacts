@@ -1,0 +1,6 @@
+Commit:	2afe882
+./gcc/cp/class.c	4223,4223
+./gcc/cp/constexpr.c	4452,4452
+Commit:	9067848
+./gcc/cp/class.c	4252,4252
+./gcc/cp/constexpr.c	4441,4441

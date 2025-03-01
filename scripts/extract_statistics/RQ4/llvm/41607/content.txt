@@ -1,0 +1,32 @@
+return getSpecializationKind() == TSK_ExplicitSpecialization;
+      }
+    
+
+      /// True if this declaration is an explicit specialization,
+      /// explicit instantiation declaration, or explicit instantiation
+      /// definition.
+
+        return getSpecializationKind() == TSK_ExplicitSpecialization;
+      }
+    
+
+      /// True if this declaration is an explicit specialization,
+      /// explicit instantiation declaration, or explicit instantiation
+      /// definition.
+
+      if (!Ctx) {
+        Ctx = D->getDeclContext();
+    
+
+          // We're done when we hit an explicit specialization.
+          if (Spec->getSpecializationKind() == TSK_ExplicitSpecialization &&
+              !isa<VarTemplatePartialSpecializationDecl>(Spec))
+
+    
+      while (!Ctx->isFileContext()) {
+        // Add template arguments from a class template instantiation.
+
+          // We're done when we hit an explicit specialization.
+          if (Spec->getSpecializationKind() == TSK_ExplicitSpecialization &&
+              !isa<ClassTemplatePartialSpecializationDecl>(Spec))
+

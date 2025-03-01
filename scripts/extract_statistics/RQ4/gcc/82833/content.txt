@@ -1,0 +1,63 @@
+TREE_PURPOSE (p) = TMPL_ARG (args, level, index);
+          }
+        else
+
+    
+      return parms;
+    }
+
+    
+      /* Get the argument and overload used for the requirement
+         and adjust it if we're going to expand later.  */
+
+      if (apply_to_each_p && declared_pack_p)
+        arg = PACK_EXPANSION_PATTERN (TREE_VEC_ELT (ARGUMENT_PACK_ARGS (arg), 0));
+    
+
+      current_template_parms = TREE_CHAIN (current_template_parms);
+    }
+    
+
+    
+    tree
+    template_parm_to_arg (tree t)
+    {
+
+    
+
+    
+
+        return error_mark_node;
+    
+
+        {
+
+    
+
+          if (TEMPLATE_TYPE_PARAMETER_PACK (t))
+    	{
+    	  /* Turn this argument into a TYPE_ARGUMENT_PACK
+
+        }
+      else
+        {
+          if (TEMPLATE_PARM_PARAMETER_PACK (t))
+    	{
+    	  /* Turn this argument into a NONTYPE_ARGUMENT_PACK
+
+      if (level > ftpi->max_depth)
+        return 0;
+    
+
+      /* Arguments like const T yield parameters like const T. This means that
+         a template-id like X<T, const T> would yield two distinct parameters:
+         T and const T. Adjust types to their unqualified versions.  */
+
+          if (tree constr = TEMPLATE_PARM_CONSTRAINTS (node))
+    	{
+    	  tree id = unpack_concept_check (constr);
+
+    	  tree fold = finish_left_unary_fold_expr (constr, TRUTH_ANDIF_EXPR);
+    	  TEMPLATE_PARM_CONSTRAINTS (node) = fold;
+    
+

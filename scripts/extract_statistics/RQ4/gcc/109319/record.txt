@@ -1,0 +1,4 @@
+Commit:	429a7a8
+./gcc/cp/decl2.cc	477,481
+Commit:	2d96422
+./gcc/cp/decl2.cc	444,448

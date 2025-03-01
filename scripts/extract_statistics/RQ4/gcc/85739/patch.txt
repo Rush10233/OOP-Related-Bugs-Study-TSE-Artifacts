@@ -1,0 +1,10 @@
+the conversion was impossible.  Since this is only used by
+       convert_nontype_argument, we fold the conversion.  */
+
+        return cp_fold_convert (type, expr);
+
+the conversion was impossible.  Since this is only used by
+       convert_nontype_argument, we fold the conversion.  */
+
+        return cp_fold_convert (type, expr);
+

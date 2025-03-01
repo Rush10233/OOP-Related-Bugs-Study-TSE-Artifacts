@@ -1,0 +1,8 @@
+never get generated.  */
+      if (CLASSTYPE_PURE_VIRTUALS (ctype)
+          && TYPE_HAS_NONTRIVIAL_DESTRUCTOR (ctype)
+
+    
+      /* Since we're writing out the vtable here, also write the debug
+         info.  */
+

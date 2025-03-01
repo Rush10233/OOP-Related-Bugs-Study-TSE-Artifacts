@@ -1,0 +1,33 @@
+complain, ctor);
+    	  if (fparms == error_mark_node)
+    	    ok = false;
+    	  if (ci)
+    	    ci = tsubst_constraint_info (ci, tsubst_args, complain, ctor);
+    
+
+    	  current_template_parms = save_parms;
+    	}
+    
+
+complain, ctor);
+    	  if (fparms == error_mark_node)
+    	    ok = false;
+    	  if (ci)
+    	    ci = tsubst_constraint_info (ci, tsubst_args, complain, ctor);
+    
+
+    	  current_template_parms = save_parms;
+    	}
+    
+
+complain, ctor);
+    	  if (fparms == error_mark_node)
+    	    ok = false;
+    	  if (ci)
+    	    ci = tsubst_constraint_info (ci, tsubst_args, complain, ctor);
+    
+
+    	  current_template_parms = save_parms;
+    	}
+    
+

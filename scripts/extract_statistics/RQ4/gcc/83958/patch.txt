@@ -1,0 +1,14 @@
+if (!COMPLETE_TYPE_P (type))
+    	{
+    	  error_at (loc, "structured binding refers to incomplete type %qT",
+    		    type);
+    	  goto error_out;
+    	}
+
+if (!COMPLETE_TYPE_P (type))
+    	{
+    	  error_at (loc, "structured binding refers to incomplete type %qT",
+    		    type);
+    	  goto error_out;
+    	}
+

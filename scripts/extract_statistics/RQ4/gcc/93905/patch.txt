@@ -1,0 +1,4 @@
+else if (TREE_CODE (t) != CONSTRUCTOR)
+
+      return r;
+

@@ -1,0 +1,8 @@
+return error_mark_node;
+    
+      if (want_template)
+
+    
+      if (DECL_ARTIFICIAL (t) || !(complain & tf_keep_type_decl))
+        t = TREE_TYPE (t);
+

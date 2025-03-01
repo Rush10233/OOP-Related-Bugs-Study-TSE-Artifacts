@@ -1,0 +1,16 @@
+}
+    }
+    
+
+    // Warns when the loop variable can be changed to a reference type to
+    // prevent a copy.  For instance, if given "for (const Foo x : Range)" suggest
+    // "for (const Foo &x : Range)" if this form does not make a copy.
+
+        return;
+      }
+    
+
+        return;
+    
+      // Suggest changing from a const variable to a const reference variable
+

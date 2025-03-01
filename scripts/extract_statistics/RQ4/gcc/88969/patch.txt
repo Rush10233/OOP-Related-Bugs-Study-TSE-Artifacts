@@ -1,0 +1,18 @@
+/* -- If any of the deallocation functions is a destroying
+    	       operator delete, all deallocation functions that are not
+    	       destroying operator deletes are eliminated from further
+    	       consideration.  */
+    	    bool fn_destroying = destroying_delete_p (fn);
+    	    bool elt_destroying = destroying_delete_p (elt);
+    	    if (elt_destroying != fn_destroying)
+    	      {
+    		if (elt_destroying)
+    		  fn = elt;
+    		continue;
+    	      }
+    
+
+    	/* If the function is a destroying operator delete declared in class
+    	   type C, the type of its first parameter shall be C*.  */
+    	ptrtype = build_pointer_type (DECL_CONTEXT (decl));
+

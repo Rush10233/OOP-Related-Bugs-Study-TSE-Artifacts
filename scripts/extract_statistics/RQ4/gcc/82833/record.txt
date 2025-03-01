@@ -1,0 +1,10 @@
+Commit:	dea470d
+./gcc/cp/constraint.cc	557,557
+./gcc/cp/constraint.cc	1495,1495
+./gcc/cp/pt.c	4707,4710
+./gcc/cp/pt.c	4716,4718
+./gcc/cp/pt.c	4720,4720
+./gcc/cp/pt.c	4723,4726
+./gcc/cp/pt.c	4728,4728
+./gcc/cp/pt.c	4746,4747
+./gcc/cp/pt.c	29451,29451

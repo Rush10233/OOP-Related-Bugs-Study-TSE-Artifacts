@@ -1,0 +1,11 @@
+if (TryAnnotateTypeConstraint())
+          return true;
+
+        return isTypeConstraintAnnotation() &&
+
+      case tok::annot_cxxscope:
+        if (NextToken().is(tok::identifier) && TryAnnotateTypeConstraint())
+          return true;
+        return isTypeConstraintAnnotation() &&
+            GetLookAheadToken(2).isOneOf(tok::kw_auto, tok::kw_decltype);
+

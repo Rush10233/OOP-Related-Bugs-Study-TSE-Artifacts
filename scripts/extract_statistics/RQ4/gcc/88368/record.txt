@@ -1,0 +1,4 @@
+Commit:	8dca1dc
+./gcc/cp/method.c	1370,1370
+./gcc/cp/pt.c	24202,24203
+./gcc/testsuite/g++.dg/cpp0x/nsdmi3.C	16,16

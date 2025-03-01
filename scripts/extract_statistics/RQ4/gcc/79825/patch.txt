@@ -1,0 +1,2 @@
+|| TREE_CODE (op) == EMPTY_CLASS_EXPR
+

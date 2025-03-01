@@ -1,0 +1,32 @@
+if (non_dep)
+        expr = instantiate_non_dependent_expr_internal (expr, complain);
+    
+
+      if (val_dep_p)
+        expr = canonicalize_expr_argument (expr, complain);
+    
+
+    	  expr = maybe_constant_value (expr, NULL_TREE,
+    				       /*manifestly_const_eval=*/true);
+    	  expr = convert_from_reference (expr);
+
+    	}
+          else if (TYPE_PTR_OR_PTRMEM_P (type))
+    	{
+
+if (non_dep)
+        expr = instantiate_non_dependent_expr_internal (expr, complain);
+    
+
+      if (val_dep_p)
+        expr = canonicalize_expr_argument (expr, complain);
+      else
+
+    	  expr = maybe_constant_value (expr, NULL_TREE,
+    				       /*manifestly_const_eval=*/true);
+    	  expr = convert_from_reference (expr);
+
+    	}
+          else if (TYPE_PTR_OR_PTRMEM_P (type))
+    	{
+

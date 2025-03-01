@@ -1,0 +1,6 @@
+if (!operand_equal_p (DECL_FIELD_OFFSET (field0),
+    					  DECL_FIELD_OFFSET (field1), flags)
+
+if (!operand_equal_p (DECL_FIELD_OFFSET (field0),
+    					  DECL_FIELD_OFFSET (field1), flags)
+

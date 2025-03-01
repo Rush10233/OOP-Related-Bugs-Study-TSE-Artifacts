@@ -1,0 +1,78 @@
+tree sel_fn = CALL_EXPR_FN (result);
+    	  if (TREE_CODE (sel_fn) == COMPONENT_REF)
+
+    	      sel_fn = TREE_OPERAND (sel_fn, 1);
+    	      gcc_assert (BASELINK_P (sel_fn));
+    	    }
+    	  else if (TREE_CODE (sel_fn) == ADDR_EXPR)
+    	    /* Our original callee wasn't wrapped in an ADDR_EXPR,
+    	       so strip this ADDR_EXPR added by build_over_call.  */
+    	    sel_fn = TREE_OPERAND (sel_fn, 0);
+    	  orig_fn = sel_fn;
+
+extern tree call_expr_dependent_name		(tree);
+
+    	if (tree name = call_expr_dependent_name (arg))
+
+    /* Like dependent_name, but instead takes a CALL_EXPR and also checks
+       its dependence.  */
+    
+    tree
+    call_expr_dependent_name (tree x)
+    {
+      if (TREE_TYPE (x) != NULL_TREE)
+        /* X isn't dependent, so its callee isn't a dependent name.  */
+        return NULL_TREE;
+      return dependent_name (CALL_EXPR_FN (x));
+    }
+    
+
+    /* Subroutine of cp_tree_equal: t1 and t2 are two CALL_EXPRs.
+       Return whether their CALL_EXPR_FNs are equivalent.  */
+
+      tree name1 = call_expr_dependent_name (t1);
+      tree name2 = call_expr_dependent_name (t2);
+      t1 = CALL_EXPR_FN (t1);
+      t2 = CALL_EXPR_FN (t2);
+
+    	if (!called_fns_equal (t1, t2))
+
+tree sel_fn = CALL_EXPR_FN (result);
+    	  if (TREE_CODE (sel_fn) == COMPONENT_REF)
+
+    	      sel_fn = TREE_OPERAND (sel_fn, 1);
+    	      gcc_assert (BASELINK_P (sel_fn));
+    	    }
+    	  else if (TREE_CODE (sel_fn) == ADDR_EXPR)
+    	    /* Our original callee wasn't wrapped in an ADDR_EXPR,
+    	       so strip this ADDR_EXPR added by build_over_call.  */
+    	    sel_fn = TREE_OPERAND (sel_fn, 0);
+    	  orig_fn = sel_fn;
+
+extern tree call_expr_dependent_name		(tree);
+
+    	if (tree name = call_expr_dependent_name (arg))
+
+    /* Like dependent_name, but instead takes a CALL_EXPR and also checks
+       its dependence.  */
+    
+    tree
+    call_expr_dependent_name (tree x)
+    {
+      if (TREE_TYPE (x) != NULL_TREE)
+        /* X isn't dependent, so its callee isn't a dependent name.  */
+        return NULL_TREE;
+      return dependent_name (CALL_EXPR_FN (x));
+    }
+    
+
+    /* Subroutine of cp_tree_equal: t1 and t2 are two CALL_EXPRs.
+       Return whether their CALL_EXPR_FNs are equivalent.  */
+
+      tree name1 = call_expr_dependent_name (t1);
+      tree name2 = call_expr_dependent_name (t2);
+      t1 = CALL_EXPR_FN (t1);
+      t2 = CALL_EXPR_FN (t2);
+
+    	if (!called_fns_equal (t1, t2))
+

@@ -1,0 +1,156 @@
+def note_local_var_initializer : Note<
+      "%select{via initialization of|binding reference}0 variable "
+      "%select{%2 |}1here">;
+
+    def note_init_with_default_member_initalizer : Note<
+      "initializing field %0 with default member initializer">;
+    
+
+      }
+    }
+    
+
+    } // end namespace clang
+    
+    #endif
+
+        VarInit,
+        LValToRVal,
+        LifetimeBoundCall,
+
+        GslReferenceInit,
+        GslPointerInit
+      } Kind;
+      Expr *E;
+
+      IndirectLocalPathEntry() {}
+      IndirectLocalPathEntry(EntryKind K, Expr *E) : Kind(K), E(E) {}
+      IndirectLocalPathEntry(EntryKind K, Expr *E, const Decl *D)
+          : Kind(K), E(E), D(D) {}
+
+    };
+    
+    using IndirectLocalPath = llvm::SmallVectorImpl<IndirectLocalPathEntry>;
+
+        if (ATL.getAttrAs<LifetimeBoundAttr>())
+          return true;
+      }
+
+      return false;
+    }
+    
+
+      // The lifetime of an init-capture is that of the closure object constructed
+      // by a lambda-expression.
+      if (auto *LE = dyn_cast<LambdaExpr>(Init)) {
+
+        for (Expr *E : LE->capture_inits()) {
+
+          if (!E)
+            continue;
+
+          if (E->isGLValue())
+            visitLocalsRetainedByReferenceBinding(Path, E, RK_ReferenceBinding,
+                                                  Visit, EnableLifetimeWarnings);
+          else
+            visitLocalsRetainedByInitializer(Path, E, Visit, true,
+                                             EnableLifetimeWarnings);
+
+        }
+      }
+    
+
+      }
+    }
+    
+
+    /// Determine whether this is an indirect path to a temporary that we are
+
+      for (auto Elem : Path) {
+
+      }
+
+    }
+    
+    /// Find the range for the first interesting entry in the path at or after I.
+
+        case IndirectLocalPathEntry::AddressOf:
+        case IndirectLocalPathEntry::LValToRVal:
+        case IndirectLocalPathEntry::LifetimeBoundCall:
+
+        case IndirectLocalPathEntry::GslReferenceInit:
+        case IndirectLocalPathEntry::GslPointerInit:
+          // These exist primarily to mark the path as not permitting or
+
+          LLVM_FALLTHROUGH;
+        case IndirectLocalPathEntry::DefaultInit:
+          return Path[I].E->getSourceRange();
+
+        }
+      }
+      return E->getSourceRange();
+
+            return false;
+          }
+    
+
+            // Update the storage duration of the materialized temporary.
+            // FIXME: Rebuild the expression instead of mutating it.
+            MTE->setExtendingDecl(ExtendingEntity->getDecl(),
+                                  ExtendingEntity->allocateManglingNumber());
+            // Also visit the temporaries lifetime-extended by this initializer.
+            return true;
+    
+
+            // We're supposed to lifetime-extend the temporary along this path (per
+            // the resolution of DR1815), but we don't support that yet.
+            //
+
+            // lifetime extend its temporaries.
+            Diag(DiagLoc, diag::warn_unsupported_lifetime_extension)
+                << RK << DiagRange;
+
+            // If the path goes through the initialization of a variable or field,
+            // it can't possibly reach a temporary created in this full-expression.
+            // We will have already diagnosed any problems with the initializer.
+
+                << RK << !Entity.getParent()
+                << ExtendingEntity->getDecl()->isImplicit()
+                << ExtendingEntity->getDecl() << Init->isGLValue() << DiagRange;
+
+          }
+          break;
+        }
+
+                return false;
+              }
+              bool IsSubobjectMember = ExtendingEntity != &Entity;
+
+                                ? diag::err_dangling_member
+                                : diag::warn_dangling_member)
+                  << ExtendingDecl << IsSubobjectMember << RK << DiagRange;
+
+            break;
+    
+          case IndirectLocalPathEntry::LifetimeBoundCall:
+
+          case IndirectLocalPathEntry::GslPointerInit:
+          case IndirectLocalPathEntry::GslReferenceInit:
+            // FIXME: Consider adding a note for these.
+
+            break;
+          }
+    
+
+            const VarDecl *VD = cast<VarDecl>(Elem.D);
+            Diag(VD->getLocation(), diag::note_local_var_initializer)
+                << VD->getType()->isReferenceType()
+                << VD->isImplicit() << VD->getDeclName()
+                << nextPathEntryRange(Path, I + 1, L);
+            break;
+          }
+
+        }
+    
+        // We didn't lifetime-extend, so don't go any further; we don't need more
+

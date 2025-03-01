@@ -1,0 +1,12 @@
+if (!getDeclContext()->getRedeclContext()->isTranslationUnit())
+        return false;
+
+    
+      // This can only fail for an invalid 'operator new' declaration.
+      if (!getDeclContext()->getRedeclContext()->isTranslationUnit())
+        return false;
+
+    
+      if (!getDeclContext()->getRedeclContext()->isTranslationUnit())
+        return 0;
+

@@ -1,0 +1,4 @@
+Commit:	206c830
+./gcc/cp/name-lookup.c	1523,1524
+./gcc/cp/name-lookup.c	1715,1716
+./gcc/cp/name-lookup.c	1744,1745

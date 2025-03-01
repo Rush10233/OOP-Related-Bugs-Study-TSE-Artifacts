@@ -1,0 +1,6 @@
+if (instantiation_dependent_expression_p (expr))
+
+      expr = instantiate_non_dependent_expr_sfinae (expr, complain);
+      /* Don't let convert_like_real create more template codes.  */
+      processing_template_decl_sentinel s;
+

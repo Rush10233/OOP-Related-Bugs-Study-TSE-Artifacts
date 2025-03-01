@@ -1,0 +1,5 @@
+if (!late_return_type && funcdecl_p)
+
+    		    if (current_class_type
+    			&& LAMBDA_TYPE_P (current_class_type))
+

@@ -1,0 +1,7 @@
+{
+          lra_assert
+    	(GET_MODE (*curr_id->operand_loc[in]) == VOIDmode
+    	 || GET_MODE (new_in_reg) == GET_MODE (*curr_id->operand_loc[in]));
+
+        }
+

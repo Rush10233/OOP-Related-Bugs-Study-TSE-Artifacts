@@ -1,0 +1,2 @@
+Commit:	cb2380c
+./clang/include/clang/Basic/DiagnosticSemaKinds.td	15,15

@@ -1,0 +1,9 @@
+Context.getCanonicalType(ClassType));
+    
+      DeclContext::lookup_result R = lookup(Name);
+    
+
+    }
+    
+    bool CXXRecordDecl::isAnyDestructorNoReturn() const {
+

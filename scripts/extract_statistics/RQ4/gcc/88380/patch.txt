@@ -1,0 +1,18 @@
+/* Do nothing for flexible array members since they need not have any
+    	     elements.  Don't worry about 'skipped' because a flexarray has to
+    	     be the last field.  */
+    	  else if (TREE_CODE (fldtype) == ARRAY_TYPE && !TYPE_DOMAIN (fldtype))
+    	    continue;
+
+    	     to zero.  */
+    	  if ((complain & tf_warning)
+
+/* Do nothing for flexible array members since they need not have any
+    	     elements.  Don't worry about 'skipped' because a flexarray has to
+    	     be the last field.  */
+    	  else if (TREE_CODE (fldtype) == ARRAY_TYPE && !TYPE_DOMAIN (fldtype))
+    	    continue;
+
+    	     to zero.  */
+    	  if ((complain & tf_warning)
+

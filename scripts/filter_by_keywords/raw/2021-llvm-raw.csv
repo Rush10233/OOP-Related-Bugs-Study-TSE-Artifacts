@@ -1,0 +1,58 @@
+50043	[ObjC ARC][Objc block][noescape][rvalue] Objects captured by objc blocks get destructed before the block invocation
+50371	Clang crashes on xds_cluster_resolver.cc from grpc project on Windows for Release builds
+51440	clang9 and clang10 got LLVM error: out of memory on compiling std::get<> calls with undefined sanitizer
+48656	"front end crash when using variadic concepts requirement with ""or"" statement (trunk/11)"
+48687	Compiler frontend segfault on explicit template instantiation
+48801	clang doesn't accept `const char *` value as a non-type template argument anymore
+51874	[C++20] Wrongly worded warning on defaulted-as-deleted operator!=
+48848	recoverFromMSUnqualifiedLookup encounters assertion failure on erroneous program instead of reporting an error
+50025	"Attribute target(""ssse3"") results in undefined reference to _mm_set_epi8"
+50618	Binary inconsistency problems with occasional precedence
+52073	Incorrect ODR error with lambda of unevaluated context of c++20
+50641	"Marking all returns from constexpr function as [[likely]]/[[unlikely]] leads to ""error: no return statement in constexpr function"""
+50263	Default comparison is not a use of private field
+50779	regression Clang >= 11 rejects consteval subscript operator use
+52537	operator== is not emitted when != is used with templates/member variables involved.
+51079	constinit thread_local not destroyed when type incomplete at odr-use
+51105	wchar_t initializer causes an assert in isa
+50369	Initializing shared_ptr with make_shared should not call destructor
+51142	Compiler crashes processing incorrect suffix operator
+51282	Type deduction loses alignment
+49660	Concept C++20 - Just a syntax error that makes the clang crash
+49724	Partial template specialization error with member function
+50497	ICE with lambda capture & typeid of polymorphic class
+51484	Consteval returning struct/class causes frontend error.
+50561	Concepts overload check not considered?
+51547	ICE attempting to deduce array of class template in new-expression
+51572	clang-11.0.1 crashes on FreeBSD 14-CURRENT on the minitube project
+48712	[coroutines] Merging frame variables drops alignment information
+50591	wrong comparison category/crash involving user-defined conversions to builtin types
+51862	[clang] After 7d2d5a3a6d7, Assertion failed: (getContext().hasSameUnqualifiedType(E->getType(), E->getArg(0)->getType())), function EmitCXXConstructExpr, file clang/lib/CodeGen/CGExprCXX.cpp, line 616
+49954	Assertion failed: should not perform lookups into transparent contexts
+48856	"Assertion failed: Cat && ""no category for builtin comparison?"", file clang\lib\Sema\SemaDeclCXX.cpp, line 7792"
+52103	Wunreachable-code warns that [[likely]] and [[unlikely]] are unreachable
+49002	Incorrect computation of trivially copyable for class with user-declared move assignment operator, defined as deleted
+50181	const clang::ArrayType *clang::Type::castAsArrayTypeUnsafe() const: Assertion `isa<ArrayType>(CanonicalType)' failed.
+50644	"User-defined literals generate false-positive ""Wreserved-identifier"""
+52183	Linking error for immediate functions returning void in Clang
+49020	Allowing brace elision even with desgnated initializers
+50656	Frontend crashes while parsing invalid string literal operator template
+52206	Clang allow inconsistent deduction for auto return type when using if consteval
+49107	clang crashes on invalid code with concepts
+50306	[concepts] abbreviated concept syntax triggers ambiguous overload error
+49260	Better error message when missing #include<new> and using placement new
+50328	clang12 fails to compile <ranges> from Gcc 11.1
+50787	non-constexpr dereferencing a constexpr reference to extern crashes the compiler
+49342	-Wdangling-gsl incorrectly warns on return by value of `std::string::iterator() -= n`
+50337	Concept subsumption broken with constrained + unconstrained parameter with terse syntax
+49369	__cpp_nontype_template_args >= 201907L but floating-point template arguments rejected
+49465	std::allocator{}.deallocate permits deallocation of null pointers during constant evaluation
+51176	Segmentation fault in `PerformMoveOrCopyInitialization` with `clang++-12`
+49598	Immediate function in requires-expression not found by ADL
+50402	__builtin_is_constant_evaluated() evaluates to false in concept satisfaction check
+50406	Compiler crashing when compiling coroutine intrinsic with coroutine disabled
+49736	[P1102R2] acceptance of invalid lambda syntax in C++23
+49797	SVE ACLE prefetch functions in C++ result in compilation error
+50590	"Assertion `!A->getDeducedType().isNull() && ""cannot request the size of an undeduced or dependent auto type""' failed"
+49883	missing-braces warning for empty aggregates inhering from aggregates
+50592	"Assertion `(ID || !Mod) && ""asked for module ID for non-local, non-imported module""' failed"

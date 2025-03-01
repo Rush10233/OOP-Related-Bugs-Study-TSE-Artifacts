@@ -1,0 +1,9 @@
+if (DECL_BIT_FIELD_TYPE (decl))
+        type = DECL_BIT_FIELD_TYPE (decl);
+
+if (DECL_BIT_FIELD_TYPE (decl))
+        type = DECL_BIT_FIELD_TYPE (decl);
+
+if (DECL_BIT_FIELD_TYPE (decl))
+        type = DECL_BIT_FIELD_TYPE (decl);
+

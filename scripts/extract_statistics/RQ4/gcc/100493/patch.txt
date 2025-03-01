@@ -1,0 +1,14 @@
+if (cxx_dialect < cxx20 && pedantic
+
+    	    pedwarn (loc, 0,
+    		     "explicit by-copy capture of %<this%> "
+    		     "with by-copy capture default only available with "
+    		     "%<-std=c++20%> or %<-std=gnu++20%>");
+
+if (cxx_dialect < cxx20 && pedantic
+
+    	    pedwarn (loc, OPT_Wc__20_extensions,
+    		     "explicit by-copy capture of %<this%> "
+    		     "with by-copy capture default only available with "
+    		     "%<-std=c++20%> or %<-std=gnu++20%>");
+

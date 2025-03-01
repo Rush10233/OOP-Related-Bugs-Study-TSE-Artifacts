@@ -1,0 +1,30 @@
+if (SCOPED_ENUM_P (scope) && TREE_CODE (name) == IDENTIFIER_NODE)
+
+location_t tilde_loc = token->location;
+
+    	token = cp_lexer_peek_token (parser->lexer);
+    
+    	/* Create a location with caret == start at the tilde,
+    	   finishing at the end of the peeked token, e.g:
+    	   ~token
+    	   ^~~~~~.  */
+    	location_t loc
+    	  = make_location (tilde_loc, tilde_loc, token->location);
+    
+
+    
+
+    	    return cp_expr (build_nt (BIT_NOT_EXPR, scope), loc);
+
+    	      pedwarn (loc, 0,
+
+    	    return cp_expr (build_nt (BIT_NOT_EXPR, make_auto (), loc));
+
+    		return cp_expr (type_decl, loc);
+
+    	      error_at (loc,
+
+    	  error_at (loc,
+
+    	return cp_expr (build_nt (BIT_NOT_EXPR, TREE_TYPE (type_decl), loc));
+

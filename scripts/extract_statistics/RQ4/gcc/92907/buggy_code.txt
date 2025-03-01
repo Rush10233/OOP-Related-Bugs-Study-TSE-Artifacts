@@ -1,0 +1,39 @@
+(cp_parser *, tree);
+
+      (cp_parser *, cp_parser_flags);
+
+      (cp_parser *, cp_parser_flags, bool, bool *, bool);
+
+    	= cp_parser_exception_specification_opt (parser, CP_PARSER_FLAGS_NONE);
+
+        int quals;
+
+        quals = (LAMBDA_EXPR_MUTABLE_P (lambda_expr)
+    	     ? TYPE_UNQUALIFIED : TYPE_QUAL_CONST);
+
+    		    = cp_parser_exception_specification_opt (parser, flags);
+
+    	  spec = cp_parser_late_noexcept_specifier (parser, spec);
+
+       we saved for later; parse it now.  */
+
+    cp_parser_late_noexcept_specifier (cp_parser *parser, tree default_arg)
+
+    					    /*return_cond=*/false);
+
+       FLAGS is used to control parsing.  */
+
+    				      bool return_cond)
+
+    	    inject_this_parameter (current_class_type, TYPE_UNQUALIFIED);
+
+       control parsing.  */
+
+    cp_parser_exception_specification_opt (cp_parser* parser, cp_parser_flags flags)
+
+    					    /*return_cond=*/false);
+
+    						 /*return_cond=*/true);
+
+    					       /*return_cond=*/true);
+

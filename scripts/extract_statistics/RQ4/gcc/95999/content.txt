@@ -1,0 +1,16 @@
+
+    	  /* Update the minimum and maximum values, if appropriate.  */
+    	  value = DECL_INITIAL (decl);
+
+    	    value = integer_zero_node;
+    	  /* Figure out what the minimum and maximum values of the
+    	     enumerators are.  */
+
+    		 which case the type is an unspecified integral type
+    		 sufficient to contain the incremented value.  */
+    	      prev_value = DECL_INITIAL (TREE_VALUE (TYPE_VALUES (enumtype)));
+
+    		value = error_mark_node;
+    	      else
+    		{
+

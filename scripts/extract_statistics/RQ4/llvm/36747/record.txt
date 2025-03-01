@@ -1,0 +1,6 @@
+Commit:	36d6419
+./clang/lib/CodeGen/CGStmt.cpp	611,611
+./clang/lib/CodeGen/CGStmt.cpp	708,708
+./clang/lib/CodeGen/CGStmt.cpp	868,868
+./clang/lib/CodeGen/CGStmt.cpp	1577,1577
+./clang/lib/CodeGen/CGStmt.cpp	1606,1606

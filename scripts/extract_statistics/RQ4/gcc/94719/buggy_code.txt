@@ -1,0 +1,6 @@
+if (!DECL_TEMPLATE_INFO (t))
+        /* For inherited constructors without template information, consider
+           the original declaration; it has the correct template information
+           attached.  */
+        t = strip_inheriting_ctors (t);
+

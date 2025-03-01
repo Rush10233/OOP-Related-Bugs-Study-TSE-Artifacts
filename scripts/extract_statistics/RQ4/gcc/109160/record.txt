@@ -1,0 +1,10 @@
+Commit:	b5e38b1
+./gcc/cp/cp-tree.h	7329,7329
+./gcc/cp/pt.cc	8647,8647
+./gcc/cp/pt.cc	15255,15255
+./gcc/cp/pt.cc	24733,24733
+./gcc/cp/pt.cc	30782,30783
+./gcc/cp/pt.cc	30787,30788
+./gcc/cp/pt.cc	30824,30824
+./gcc/cp/pt.cc	30826,30826
+./gcc/cp/pt.cc	30978,30978

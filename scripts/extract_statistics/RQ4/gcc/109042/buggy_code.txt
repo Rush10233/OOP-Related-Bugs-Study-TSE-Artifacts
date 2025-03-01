@@ -1,0 +1,6 @@
+if (emit_tinfo_decl (t))
+
+    	  gcc_assert (unemitted_tinfo_decls->last () == tinfo);
+
+    	  unemitted_tinfo_decls->pop ();
+

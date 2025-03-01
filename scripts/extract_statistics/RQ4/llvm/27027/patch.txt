@@ -1,0 +1,3 @@
+R.setFindLocalExtern(R.getIdentifierNamespace() &
+                             (Decl::IDNS_Ordinary | Decl::IDNS_NonMemberOperator));
+

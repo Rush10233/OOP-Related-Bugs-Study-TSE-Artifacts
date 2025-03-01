@@ -1,0 +1,65 @@
+if (DECL_CLASS_SCOPE_P (decl)
+    	  && current_access_specifier != declared_access (TYPE_NAME (type)))
+    	{
+    	  error_at (location, "deduction guide %qD must have the same access "
+    			      "as %qT", decl, type);
+    	  inform (location_of (type), "  declared here");
+    	}
+
+      else if (decl_context == FIELD && sfk == sfk_deduction_guide)
+        /* Treat class-scope deduction guides as static member functions
+           so that they get a FUNCTION_TYPE instead of a METHOD_TYPE.  */
+        staticp = 2;
+
+      if (rval && is_overloaded_fn (rval)
+          /* Don't use a BASELINK for class-scope deduction guides since
+    	 they're not actually member functions.  */
+          && !dguide_name_p (name))
+
+/* If DECLARATOR with DECL_SPECS is a function declarator that has
+       the form of a deduction guide, tag it as such.  CTOR_DTOR_OR_CONV_P
+       has the same meaning as in cp_parser_declarator.  */
+    
+    static void
+    cp_parser_maybe_adjust_declarator_for_dguide (cp_parser *parser,
+    					      cp_decl_specifier_seq *decl_specs,
+    					      cp_declarator *declarator,
+    					      int *ctor_dtor_or_conv_p)
+    {
+      if (cxx_dialect >= cxx17
+          && *ctor_dtor_or_conv_p <= 0
+          && !decl_specs->type
+          && !decl_specs->any_type_specifiers_p
+          && function_declarator_p (declarator))
+        {
+          cp_declarator *id = get_id_declarator (declarator);
+          tree name = id->u.id.unqualified_name;
+          parser->scope = id->u.id.qualifying_scope;
+          tree tmpl = cp_parser_lookup_name_simple (parser, name, id->id_loc);
+          if (tmpl
+    	  && (DECL_CLASS_TEMPLATE_P (tmpl)
+    	      || DECL_TEMPLATE_TEMPLATE_PARM_P (tmpl)))
+    	{
+    	  id->u.id.unqualified_name = dguide_name (tmpl);
+    	  id->u.id.sfk = sfk_deduction_guide;
+    	  *ctor_dtor_or_conv_p = 1;
+    	}
+        }
+    }
+    
+
+          /* Handle C++17 deduction guides.  Note that class-scope
+    	 non-template deduction guides are instead handled in
+    	 cp_parser_member_declaration.  */
+          cp_parser_maybe_adjust_declarator_for_dguide (parser,
+    						    decl_specifiers,
+    						    declarator,
+    						    &ctor_dtor_or_conv_p);
+
+    	      /* Handle class-scope non-template C++17 deduction guides.  */
+    	      cp_parser_maybe_adjust_declarator_for_dguide (parser,
+    							    &decl_specifiers,
+    							    declarator,
+    							    &ctor_dtor_or_conv_p);
+    
+

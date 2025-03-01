@@ -1,0 +1,16 @@
+// Compute type- and value-dependence.
+          Expr *Index = IndexExprs[IndexIdx];
+          if (Index->isTypeDependent() || Index->isValueDependent())
+
+          if (Index->isInstantiationDependent())
+            ExprBits.InstantiationDependent = true;
+          // Propagate unexpanded parameter packs.
+
+          Expr *End = IndexExprs[IndexIdx + 1];
+          if (Start->isTypeDependent() || Start->isValueDependent() ||
+              End->isTypeDependent() || End->isValueDependent()) {
+
+            ExprBits.InstantiationDependent = true;
+          } else if (Start->isInstantiationDependent() || 
+                     End->isInstantiationDependent()) {
+
