@@ -1,6 +1,6 @@
 # OOP-Related-Bugs-Study-TSE-Artifacts
 This is the project repository of our TSE research paper: A Comprehensive Study of OOP-Related Bugs in C++ Compilers.
-The project is composed of the following 4 folders that record our empirical study result, scripts to reproduce the results, proof-of-concept application, and bug-finding experiment result respectively.
+The project is composed of the following 4 folders that record our empirical study result, scripts to reproduce the result, proof-of-concept application, and bug-finding experiment result respectively.
 
 ### Project Layout Overview
 ***
