@@ -1,6 +1,6 @@
 # OOP-Related-Bugs-Study-TSE-Artifacts
 This is the project repository of our TSE research paper: A Comprehensive Study of OOP-Related Bugs in C++ Compilers.
-The project is composed of the following 4 folders that record our empirical study result, scripts to reproduce the result, proof-of-concept application, and bug-finding experiment result respectively.
+The project comprises the following 4 folders that record our empirical study result, scripts to reproduce the result, bug-finding experiment result, and proof-of-concept application respectively.
 
 ### Project Layout Overview
 ***
@@ -13,15 +13,15 @@ Here are the main useful files:
         |-- filter_by_keywords/    ## Scripts to perform keyword filtering
         |-- extract_statistics/    ## Scripts to reproduce all the statistics in the paper
         |-- show_figures/  ## Scripts to draw the figures
+    |-- bug triggering inputs/    
+        |-- code/    ## The input test code triggering bugs reported via OOPFuzz
+        |-- record.xlsx    ## The detailed information summary of input tests 
     |-- OOPFuzz/
         |-- setup/    ## The entrance for running the application
             |-- startup.sh    ## The start script
             |-- config.json    ## The configuration file for the code mutation process
         |-- src/    ## The code implementation of mutation operators
         |-- README.md  ## The instructions for building and running the application
-    |-- bug triggering inputs/    
-        |-- code/    ## The input test code triggering bugs reported via OOPFuzz
-        |-- record.xlsx    ## The detailed information summary of input tests 
 ```
 
 ### About Bug Type Labeling
