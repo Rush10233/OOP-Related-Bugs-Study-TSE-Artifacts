@@ -37,7 +37,7 @@ As shown in the paper, to conduct the bug-type taxonomy, we have manually analyz
 ### Bug Number Distribution by Year
 ***
 
-The following table is the supplement to Table &#8544 that shows the bug distribution in each year:
+The following table is the supplement to Table 1 that shows the bug distribution in each year:
 
 |**Year**|**2014**|**2015**|**2016**|**2017**|**2018**|**2019**|**2020**|**2021**|**2022**|**2013**|
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
