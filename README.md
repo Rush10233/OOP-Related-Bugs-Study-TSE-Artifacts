@@ -10,7 +10,7 @@ Here are the main useful files:
     |-- dataset
         |-- dataset_TSE.xlsx    ## The analysis result summary of selected bug reports
     |-- scripts/
-        |-- filter_by_keywords/    ## The corresponding scripts to  perform keyword filtering
+        |-- filter_by_keywords/    ## The corresponding scripts to perform keyword filtering
         |-- extract_statistics/    ## The corresponding scripts to reproduce all the statistics in the paper
         |-- show_figures/  ## The corresponding scripts to draw the figures
     |-- OOPFuzz/
