@@ -1,6 +1,6 @@
 # OOP-Related-Bugs-Study-TSE-Artifacts
 This is the project repository of our TSE research paper: A Comprehensive Study of OOP-Related Bugs in C++ Compilers.
-The project is composed of the following 4 folders that record our empirical study result, scripts to reproduce the results, proof-of-concept application, and bug-finding experiment result respectively.
+The project is composed of the following 4 folders that record our empirical study result, scripts to reproduce the result, proof-of-concept application, and bug-finding experiment result respectively.
 
 ### Project Layout Overview
 ***
@@ -10,9 +10,9 @@ Here are the main useful files:
     |-- dataset
         |-- dataset_TSE.xlsx    ## The analysis result summary of selected bug reports
     |-- scripts/
-        |-- filter_by_keywords/    ## The corresponding scripts to perform keyword filtering
-        |-- extract_statistics/    ## The corresponding scripts to reproduce all the statistics in the paper
-        |-- show_figures/  ## The corresponding scripts to draw the figures
+        |-- filter_by_keywords/    ## Scripts to perform keyword filtering
+        |-- extract_statistics/    ## Scripts to reproduce all the statistics in the paper
+        |-- show_figures/  ## Scripts to draw the figures
     |-- OOPFuzz/
         |-- setup/    ## The entrance for running the application
             |-- startup.sh    ## The start script
